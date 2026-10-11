@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | Advertising Light Box, Bus Shelter, Digital Signage Manufacturer</title>
+<meta name="description" content="Our product range: LED light box, wayfinding sign, bus shelter, LCD advertising player, metal structure urban furniture. OEM ODM for Europe, USA, Middle East.">
+<meta name="keywords" content="China hardware manufacturer, advertising light box, bus shelter, metal urban furniture">
+<link rel="stylesheet" href="style.css">
+<script src="lang.js"></script>
+</head>
+<body>
+<header>
+  <div class="container header-wrap">
+    <a href="index.html" class="logo">YOURFACTORY</a>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html" data-i18n="home">Home</a></li>
+        <li><a href="products.html" data-i18n="products">Products</a></li>
+        <li><a href="about.html" data-i18n="about">About Us</a></li>
+        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="lang-select">
+      <select onchange="setLang(this.value)">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" data-i18n="productsTitle">Our Products</h2>
+    <div class="product-filter">
+      <select id="prodFilter">
+        <option value="all">All Categories</option>
+      </select>
+    </div>
+    <div class="grid-4" id="productGrid">
+      <!-- 产品由JS动态渲染 -->
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Your Factory. All rights reserved.</p>
+    <p><a href="privacy.html" style="color:#fff" data-i18n="privacy">Privacy Policy</a></p>
+  </div>
+</footer>
+<a href="https://wa.me/8613800000000" class="whatsapp-float" target="_blank">WA</a>
+
+<script>
+// 读取CMS产品，自动渲染产品卡片 + 自动生成分类下拉筛选
+async function loadProducts(){
+  const res = await fetch("/content/products/index.json").catch(()=>null);
+  const gridWrap = document.getElementById('productGrid');
+  const filterSelect = document.getElementById('prodFilter');
+  gridWrap.innerHTML = "";
+  filterSelect.innerHTML = `<option value="all">All Categories</option>`;
+
+  if(!res) return;
+  const items = await res.json();
+  const categorySet = new Set();
+
+  items.forEach(p=>{
+    const catId = p.category;
+    categorySet.add(catId);
+
+    const card = document.createElement('div');
+    card.className = "product-card";
+    card.dataset.cat = catId;
+    card.innerHTML = `
+      <img src="${p.image}" alt="${p.title}">
+      <div class="product-info">
+        <h4>${p.title}</h4>
+        <p>${p.spec}</p>
+        <a href="contact.html" class="btn">Inquire</a>
+      </div>
+    `;
+    gridWrap.appendChild(card);
+  })
+
+  // 自动填充分类下拉选项
+  const catList = Array.from(categorySet);
+  catList.forEach(cat=>{
+    filterSelect.innerHTML += `<option value="${cat}">${cat}</option>`;
+  })
+
+  // 筛选逻辑
+  filterSelect.onchange = function(){
+    const val = this.value;
+    document.querySelectorAll('.product-card').forEach(card=>{
+      if(val==="all" || card.dataset.cat === val) card.style.display="block";
+      else card.style.display="none";
+    })
+  }
+}
+loadProducts();
+</script>
+</body>
+</html>

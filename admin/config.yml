@@ -1,0 +1,58 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+locale: en
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Product Name", name: "title", widget: "string"}
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        allow_add: true
+        options:
+          - { label: "Advertising Light Box", value: "lightbox" }
+          - { label: "Wayfinding Signage", value: "sign" }
+          - { label: "Bus Shelter", value: "bus" }
+          - { label: "LED / LCD Screen", value: "display" }
+          - { label: "Metal Structure", value: "metal-structure" }
+          - { label: "Others", value: "other" }
+      - {label: "Cover Image", name: "image", widget: "image"}
+      - {label: "Material & Spec", name: "spec", widget: "text"}
+      - {label: "Short Description", name: "desc", widget: "text"}
+
+  - name: "homepage"
+    label: "Home Page Content"
+    files:
+      - file: "content/home.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {label: "Hero Title", name: "heroTitle", widget: "string"}
+          - {label: "Hero Description", name: "heroDesc", widget: "text"}
+          - {label: "Advantage 1 Title", name: "adv1Title", widget: "string"}
+          - {label: "Advantage 1 Text", name: "adv1Text", widget: "text"}
+          - {label: "Advantage 2 Title", name: "adv2Title", widget: "string"}
+          - {label: "Advantage 2 Text", name: "adv2Text", widget: "text"}
+          - {label: "Advantage 3 Title", name: "adv3Title", widget: "string"}
+          - {label: "Advantage 3 Text", name: "adv3Text", widget: "text"}
+
+  - name: "aboutpage"
+    label: "About Page Content"
+    files:
+      - file: "content/about.md"
+        label: "About Us"
+        name: "about"
+        fields:
+          - {label: "Company Intro", name: "intro", widget: "markdown"}
+          - {label: "QC Process", name: "qc", widget: "markdown"}
+          - {label: "Cert & OEM Info", name: "cert", widget: "markdown"}
