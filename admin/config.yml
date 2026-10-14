@@ -2,50 +2,42 @@ backend:
   name: github
   repo: WinstonYoung-zx/factory-site
   branch: main
+  api_root: https://cms-gateway.shzxin-cn.workers.dev/api
 media_folder: "uploads"
 public_folder: "/uploads"
+locale: en
 
 collections:
   - name: "products"
     label: "Products"
     folder: "content/products"
     create: true
+    slug: "{{slug}}"
     fields:
-      - {label: "Product Name", name: "name", widget: "string"}
-      - {label: "Category", name: "category", widget: "select", options: ["lightbox","sign","bus","display","metal-structure","other"], allow_add: true}
+      - {label: "Product Name", name: "title", widget: "string"}
       - {label: "Product Image", name: "image", widget: "image"}
-      - {label: "Short Description", name: "short_desc", widget: "string"}
-      - {label: "Full Description", name: "description", widget: "markdown"}
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Light Box", value: "lightbox" }
+          - { label: "Sign", value: "sign" }
+          - { label: "Bus Shelter", value: "bus" }
+          - { label: "Display Screen", value: "display" }
+          - { label: "Metal Structure", value: "metal-structure" }
+          - { label: "Other", value: "other" }
+        allow_add: true
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Price Info", name: "price", widget: "string", required: false}
+      - {label: "Specifications", name: "spec", widget: "text", required: false}
 
-  - name: "home"
-    label: "Home Page"
-    file: "content/home.md"
-    create: false
-    fields:
-      - {label: "Hero Title", name: "title", widget: "string"}
-      - {label: "Hero Slogan", name: "slogan", widget: "string"}
-      - {label: "Banner Image", name: "banner", widget: "image"}
-      - {label: "Advantage 1", name: "adv1", widget: "string"}
-      - {label: "Advantage 2", name: "adv2", widget: "string"}
-      - {label: "Advantage 3", name: "adv3", widget: "string"}
-
-  - name: "about"
-    label: "About Us"
-    file: "content/about.md"
-    create: false
-    fields:
-      - {label: "Page Title", name: "title", widget: "string"}
-      - {label: "Company Intro", name: "intro", widget: "markdown"}
-      - {label: "Quality Control", name: "qc", widget: "markdown"}
-      - {label: "OEM & Cert Info", name: "cert", widget: "markdown"}
-      - {label: "Factory Images", name: "gallery", widget: "list", field: {label: "Image", name: "img", widget: "image"}}
-
-  - name: "global"
-    label: "Global Site Settings"
-    file: "content/global.md"
-    create: false
-    fields:
-      - {label: "type", name: "type", widget: "string"}
-      - {label: "Website Logo", name: "site_logo", widget: "image"}
-      - {label: "Company Title", name: "site_title", widget: "string"}
-      - {label: "Slogan", name: "slogan", widget: "string"}
+  - name: "pages"
+    label: "Site Pages"
+    files:
+      - label: "Homepage"
+        name: "home"
+        file: "content/home.md"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Hero Slogan", name: "slogan", widget: "string"}
+          - {label: "Intro Text", name: "intro", widget: "markdown"}
