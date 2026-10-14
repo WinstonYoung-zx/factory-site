@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: WinstonYoung-zx/factory-site
   branch: main
   api_root: https://cms-gateway.shzxin-cn.workers.dev/api
