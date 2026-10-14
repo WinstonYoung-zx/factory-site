@@ -6,17 +6,10 @@
   <title>Website Admin</title>
 </head>
 <body>
+<!-- Decap CMS会自动挂载在这里 -->
 <div id="nc-root"></div>
-<!-- 使用稳定版 3.0.14，避开3.1.x的removeChild bug -->
+
+<!-- 稳定版3.0.14 -->
 <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.0.14/dist/decap-cms.js"></script>
-<script>
-window.addEventListener('load', function() {
-  CMS.init({
-    config: {
-      configPath: "/admin/config.yml"
-    }
-  })
-})
-</script>
 </body>
 </html>
