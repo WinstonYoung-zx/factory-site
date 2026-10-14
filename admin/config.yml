@@ -4,7 +4,7 @@ backend:
   branch: main
 media_folder: "uploads"
 public_folder: "/uploads"
-# 产品合集，分类下拉支持预设+手动新增 allow_add: true
+
 collections:
   - name: "products"
     label: "Products"
@@ -16,7 +16,7 @@ collections:
       - {label: "Product Image", name: "image", widget: "image"}
       - {label: "Short Description", name: "short_desc", widget: "string"}
       - {label: "Full Description", name: "description", widget: "markdown"}
-  # 首页内容管理
+
   - name: "home"
     label: "Home Page"
     file: "content/home.md"
@@ -28,22 +28,24 @@ collections:
       - {label: "Advantage 1", name: "adv1", widget: "string"}
       - {label: "Advantage 2", name: "adv2", widget: "string"}
       - {label: "Advantage 3", name: "adv3", widget: "string"}
-  # 工厂实力 / About页面
+
   - name: "about"
     label: "About Us"
     file: "content/about.md"
     create: false
     fields:
       - {label: "Page Title", name: "title", widget: "string"}
-      - {label: "Factory Intro", name: "intro", widget: "markdown"}
+      - {label: "Company Intro", name: "intro", widget: "markdown"}
+      - {label: "Quality Control", name: "qc", widget: "markdown"}
+      - {label: "OEM & Cert Info", name: "cert", widget: "markdown"}
       - {label: "Factory Images", name: "gallery", widget: "list", field: {label: "Image", name: "img", widget: "image"}}
-  # 全局站点设置（Logo、联系信息）
+
   - name: "global"
     label: "Global Site Settings"
     file: "content/global.md"
     create: false
     fields:
-      - {label: "Website Logo", name: "logo", widget: "image"}
-      - {label: "Company Name", name: "company", widget: "string"}
-      - {label: "Email", name: "email", widget: "string"}
-      - {label: "WhatsApp", name: "whatsapp", widget: "string"}
+      - {label: "type", name: "type", widget: "string"}
+      - {label: "Website Logo", name: "site_logo", widget: "image"}
+      - {label: "Company Title", name: "site_title", widget: "string"}
+      - {label: "Slogan", name: "slogan", widget: "string"}
