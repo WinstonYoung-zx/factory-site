@@ -1,13 +1,23 @@
 backend:
   name: git-gateway
   branch: main
-
 media_folder: "uploads"
 public_folder: "/uploads"
-
 locale: en
-
 collections:
+  # === 新增：网站全局设置（Logo + 网站标题）===
+  - name: "global"
+    label: "网站全局设置"
+    files:
+      - name: "global"
+        label: "全局信息"
+        file: "content/global.md"
+        fields:
+          - {label: "网站Logo图片", name: "site_logo", widget: "image"}
+          - {label: "网站标题(顶部文字)", name: "site_title", widget: "string"}
+          - {label: "首页标语", name: "slogan", widget: "string"}
+
+  # === 下面全部是你原来已有的配置，原样保留 ===
   - name: "products"
     label: "Products"
     folder: "content/products"
