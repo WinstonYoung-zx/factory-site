@@ -164,10 +164,9 @@ const i18n = {
   }
 };
 
-// 语言切换核心逻辑
 let currentLang = "en";
 
-// 页面加载绑定下拉切换事件
+// 页面加载完成执行渲染
 document.addEventListener("DOMContentLoaded", function () {
   const langSelect = document.querySelector(".lang-select");
   if(langSelect){
@@ -176,15 +175,20 @@ document.addEventListener("DOMContentLoaded", function () {
       updateAllText();
     })
   }
+  // 初始化渲染文字
   updateAllText();
 });
 
-// 更新页面所有带 data-i18n 属性的文字
+// 遍历所有data-i18n元素填充文字
 function updateAllText() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if(i18n[currentLang] && i18n[currentLang][key]){
       el.textContent = i18n[currentLang][key];
+    }else{
+      // 找不到key不显示undefined，改为空，方便调试
+      el.textContent = "";
+      console.warn("Missing i18n key:", key);
     }
   })
 }
