@@ -9,8 +9,8 @@ const i18n = {
     bannerDesc: "Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures",
     feat1Title: "Rich Experience",
     feat1Text: "Years of urban furniture & metal structure project manufacturing experience",
-    feat2Title: "Full Certifications",
-    feat2Text: "Complete export certifications for Europe, Middle East & American markets",
+    feat2Title: "Flexible Document Support",
+    feat2Text: "We can provide required test documents and cooperate with certification upon project demand",
     feat3Title: "Custom Service",
     feat3Text: "Custom design & fabrication according to your drawings and requirements",
     productsTitle: "Our Products",
@@ -25,7 +25,7 @@ const i18n = {
     aboutTitle: "About Us",
     introTitle: "Company Introduction",
     qcTitle: "QC & Production Process",
-    certTitle: "Certifications & OEM Service"
+    certTitle: "Documentation & Project Support"
   },
   es: {
     navHome: "Inicio",
@@ -36,8 +36,8 @@ const i18n = {
     bannerDesc: "Fabricante de cajas de luz publicitarias, señalización, pantallas LED/LCD, refugios de autobús y estructuras metálicas",
     feat1Title: "Amplia Experiencia",
     feat1Text: "Años de experiencia en fabricación de mobiliario urbano y estructuras metálicas",
-    feat2Title: "Certificaciones Completas",
-    feat2Text: "Certificados de exportación para mercados de Europa, Oriente Medio y América",
+    feat2Title: "Soporte Documental Flexible",
+    feat2Text: "Podemos suministrar los documentos de ensayo necesarios y colaborar en certificaciones según el proyecto",
     feat3Title: "Servicio Personalizado",
     feat3Text: "Diseño y fabricación personalizados según sus planos y requisitos",
     productsTitle: "Nuestros Productos",
@@ -52,7 +52,7 @@ const i18n = {
     aboutTitle: "Sobre Nosotros",
     introTitle: "Introducción de la Empresa",
     qcTitle: "Control de Calidad y Proceso de Producción",
-    certTitle: "Certificaciones y Servicio OEM"
+    certTitle: "Documentación y Soporte de Proyectos"
   },
   ar: {
     navHome: "الرئيسية",
@@ -63,8 +63,8 @@ const i18n = {
     bannerDesc: "مصنع صناديق الإعلان المضيئة، لوحات الإرشاد، شاشات LED/LCD، ملاجئ الحافلات والهياكل المعدنية",
     feat1Title: "خبرة واسعة",
     feat1Text: "سنوات من الخبرة في تصنيع أثاث المدن ومشاريع الهياكل المعدنية",
-    feat2Title: "شهادات كاملة",
-    feat2Text: "شهادات تصدير كاملة لأسواق أوروبا والشرق الأوسط وأمريكا",
+    feat2Title: "دعم وثائق مرن",
+    feat2Text: "يمكننا توفير وثائق الاختبار المطلوبة والتعاون في إصدار الشهادات حسب متطلبات المشروع",
     feat3Title: "خدمة مخصصة",
     feat3Text: "تصميم وتصنيع مخصص حسب رسوماتك ومتطلباتك",
     productsTitle: "منتجاتنا",
@@ -79,7 +79,7 @@ const i18n = {
     aboutTitle: "من نحن",
     introTitle: "مقدمة عن الشركة",
     qcTitle: "مراقبة الجودة وعملية الإنتاج",
-    certTitle: "الشهادات وخدمة التصنيع حسب الطلب OEM"
+    certTitle: "الوثائق ودعم المشاريع"
   },
   zh: {
     navHome: "首页",
@@ -90,8 +90,8 @@ const i18n = {
     bannerDesc: "广告灯箱、导向标识、LED/LCD屏、候车亭及金属结构产品制造商",
     feat1Title: "丰富经验",
     feat1Text: "多年城市家具与金属结构项目制造经验",
-    feat2Title: "全套认证",
-    feat2Text: "拥有出口欧美、中东市场全套产品认证",
+    feat2Title: "灵活资料支持",
+    feat2Text: "可根据项目需求，按需提供检测资料并配合完成相关认证工作",
     feat3Title: "定制服务",
     feat3Text: "可根据图纸和需求进行定制化设计生产",
     productsTitle: "产品展示",
@@ -106,7 +106,7 @@ const i18n = {
     aboutTitle: "关于我们",
     introTitle: "公司介绍",
     qcTitle: "质检与生产流程",
-    certTitle: "资质认证与OEM代工服务"
+    certTitle: "资料与项目配套支持"
   },
   de: {
     navHome: "Startseite",
@@ -117,8 +117,8 @@ const i18n = {
     bannerDesc: "Hersteller von Werbeleuchtkästen, Wegweisern, LED-/LCD-Bildschirmen, Wartehallen und Metallkonstruktionen",
     feat1Title: "Reiche Erfahrung",
     feat1Text: "Mehrjährige Erfahrung in der Herstellung von Stadtmöbeln und Metallbauprojekten",
-    feat2Title: "Vollständige Zertifizierungen",
-    feat2Text: "Komplette Exportzertifikate für Europa, den Nahen Osten und amerikanische Märkte",
+    feat2Title: "Flexible Dokumentenunterstützung",
+    feat2Text: "Wir liefern erforderliche Prüfunterlagen und unterstützen Zertifizierungen je nach Projektanforderung",
     feat3Title: "Individueller Service",
     feat3Text: "Individuelles Design und Fertigung nach Ihren Zeichnungen und Anforderungen",
     productsTitle: "Unsere Produkte",
@@ -133,7 +133,7 @@ const i18n = {
     aboutTitle: "Über Uns",
     introTitle: "Unternehmensvorstellung",
     qcTitle: "Qualitätskontrolle & Produktionsablauf",
-    certTitle: "Zertifizierungen & OEM-Service"
+    certTitle: "Dokumente und Projektunterstützung"
   },
   fr: {
     navHome: "Accueil",
@@ -144,11 +144,11 @@ const i18n = {
     bannerDesc: "Fabricant de caissons lumineux publicitaires, signalétique, écrans LED/LCD, abris-bus et structures métalliques",
     feat1Title: "Grande Expérience",
     feat1Text: "Des années d'expérience dans la fabrication de mobilier urbain et ouvrages métalliques",
-    feat2Title: "Certifications Complètes",
-    feat2Text: "Certificats d'export pour les marchés européens, moyen-orientaux et américains",
+    feat2Title: "Support Documentaire Flexible",
+    feat2Text: "Nous pouvons fournir les documents d'essai requis et accompagner les certifications selon le projet",
     feat3Title: "Service Personnalisé",
     feat3Text: "Conception et fabrication sur plan selon vos exigences",
-    productsTitle: "Nos Produits",
+    productsTitle: "Nos produits",
     allCategory: "Toutes les catégories",
     inquiryBtn: "Envoyer une demande",
     contactTitle: "Contactez-nous",
@@ -160,7 +160,7 @@ const i18n = {
     aboutTitle: "À propos de nous",
     introTitle: "Présentation de l'entreprise",
     qcTitle: "Contrôle qualité et processus de production",
-    certTitle: "Certifications et service OEM"
+    certTitle: "Documentation et accompagnement de projet"
   }
 };
 
