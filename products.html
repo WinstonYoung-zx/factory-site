@@ -1,103 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products | Advertising Light Box, Bus Shelter, Digital Signage Manufacturer</title>
-<meta name="description" content="Our product range: LED light box, wayfinding sign, bus shelter, LCD advertising player, metal structure urban furniture. OEM ODM for Europe, USA, Middle East.">
-<meta name="keywords" content="China hardware manufacturer, advertising light box, bus shelter, metal urban furniture">
-<link rel="stylesheet" href="style.css">
-<script src="lang.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Your Factory</title>
+  <style>
+    :root{--primary:#0F3460;--accent:#E94560;--light:#f8f9fa;--dark:#222}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{color:var(--dark);background:#fff;}
+    header{display:flex;justify-content:space-between;align-items:center;padding:1rem 5%;background:#fff;border-bottom:1px solid #eee;}
+    .logo{font-size:1.4rem;font-weight:bold;color:var(--primary);}
+    nav a{margin:0 12px;text-decoration:none;color:#333;}
+    .lang-select{padding:4px 8px;border:1px solid #ccc;border-radius:4px;}
+    .product-wrap{padding:3rem 5%;max-width:1400px;margin:0 auto;}
+    .product-wrap h2{text-align:center;font-size:2rem;margin-bottom:2rem;color:var(--primary);}
+    .filter-box{text-align:center;margin-bottom:2rem;}
+    #categoryFilter{padding:8px 12px;font-size:1rem;min-width:260px;}
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(280px,1fr));gap:2rem;}
+    .product-card{border:1px solid #eee;border-radius:8px;overflow:hidden;}
+    .product-card img{width:100%;height:200px;object-fit:cover;}
+    .card-body{padding:1rem;}
+    footer{background:#111;color:#fff;text-align:center;padding:2rem;margin-top:4rem;}
+    footer a{color:#fff;}
+    @media(max-width:768px){header{flex-direction:column;gap:1rem;}}
+  </style>
 </head>
 <body>
 <header>
-  <div class="container header-wrap">
-    <a href="index.html" class="logo">YOURFACTORY</a>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html" data-i18n="home">Home</a></li>
-        <li><a href="products.html" data-i18n="products">Products</a></li>
-        <li><a href="about.html" data-i18n="about">About Us</a></li>
-        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="lang-select">
-      <select onchange="setLang(this.value)">
-        <option value="en">English</option>
-        <option value="es">Español</option>
-        <option value="ar">العربية</option>
-      </select>
-    </div>
-  </div>
+  <div class="logo">YOURFACTORY</div>
+  <nav>
+    <a href="index.html" data-i18n="home">Home</a>
+    <a href="products.html" data-i18n="products">Products</a>
+    <a href="about.html" data-i18n="about">About Us</a>
+    <a href="contact.html" data-i18n="contact">Contact</a>
+  </nav>
+  <select class="lang-select">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="ar">العربية</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="zh">中文</option>
+  </select>
 </header>
 
-<section class="section">
-  <div class="container">
-    <h2 class="section-title" data-i18n="productsTitle">Our Products</h2>
-    <div class="product-filter">
-      <select id="prodFilter">
-        <option value="all">All Categories</option>
-      </select>
-    </div>
-    <div class="grid-4" id="productGrid">
-      <!-- 产品由JS动态渲染 -->
-    </div>
+<div class="product-wrap">
+  <h2 data-i18n="ourProducts">Our Products</h2>
+  <div class="filter-box">
+    <select id="categoryFilter">
+      <option value="" data-i18n="allCategories">All Categories</option>
+    </select>
   </div>
-</section>
+  <div class="product-grid" id="productGrid"></div>
+</div>
 
 <footer>
-  <div class="container">
-    <p>© 2026 Your Factory. All rights reserved.</p>
-    <p><a href="privacy.html" style="color:#fff" data-i18n="privacy">Privacy Policy</a></p>
-  </div>
+  <p>© 2026 Your Factory. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
 </footer>
-<a href="https://wa.me/8613800000000" class="whatsapp-float" target="_blank">WA</a>
 
+<script src="lang.js"></script>
 <script>
-// 读取CMS产品，自动渲染产品卡片 + 自动生成分类下拉筛选
+// 读取产品json渲染 + 分类筛选，增加异常捕获
+let allProducts = [];
+const categoryMap = {
+  "lightbox":"Advertising Light Box",
+  "sign":"Wayfinding Signage",
+  "display":"LED / LCD Screen",
+  "bus":"Bus Shelter",
+  "metal-structure":"Metal Structure",
+  "other":"Others"
+};
+
 async function loadProducts(){
-  const res = await fetch("/content/products/index.json").catch(()=>null);
-  const gridWrap = document.getElementById('productGrid');
-  const filterSelect = document.getElementById('prodFilter');
-  gridWrap.innerHTML = "";
-  filterSelect.innerHTML = `<option value="all">All Categories</option>`;
-
-  if(!res) return;
-  const items = await res.json();
-  const categorySet = new Set();
-
-  items.forEach(p=>{
-    const catId = p.category;
-    categorySet.add(catId);
-
-    const card = document.createElement('div');
-    card.className = "product-card";
-    card.dataset.cat = catId;
+  try {
+    const res = await fetch("content/product-index.json");
+    if (!res.ok) throw new Error("File not found");
+    allProducts = await res.json();
+    renderFilter();
+    renderProducts(allProducts);
+  } catch(err) {
+    console.log("产品数据加载失败", err);
+    const grid = document.getElementById("productGrid");
+    grid.innerHTML = "<p style='text-align:center; color:red;'>Product data load failed. Check product-index.json</p>";
+  }
+}
+function renderFilter(){
+  const sel = document.getElementById("categoryFilter");
+  Object.entries(categoryMap).forEach(([val,label])=>{
+    const opt = document.createElement("option");
+    opt.value = val;
+    opt.innerText = label;
+    sel.appendChild(opt);
+  });
+  sel.onchange = function(){
+    const v = this.value;
+    if(!v) renderProducts(allProducts);
+    else renderProducts(allProducts.filter(p=>p.category===v));
+  }
+}
+function renderProducts(list){
+  const grid = document.getElementById("productGrid");
+  grid.innerHTML="";
+  if(!list || list.length === 0){
+    grid.innerHTML = "<p style='text-align:center'>No products found</p>";
+    return;
+  }
+  list.forEach(item=>{
+    const card = document.createElement("div");
+    card.className="product-card";
     card.innerHTML = `
-      <img src="${p.image}" alt="${p.title}">
-      <div class="product-info">
-        <h4>${p.title}</h4>
-        <p>${p.spec}</p>
-        <a href="contact.html" class="btn">Inquire</a>
+      <img src="${item.image}" alt="${item.title}">
+      <div class="card-body">
+        <h3>${item.title}</h3>
+        <p>${item.desc}</p>
       </div>
     `;
-    gridWrap.appendChild(card);
+    grid.appendChild(card);
   })
-
-  // 自动填充分类下拉选项
-  const catList = Array.from(categorySet);
-  catList.forEach(cat=>{
-    filterSelect.innerHTML += `<option value="${cat}">${cat}</option>`;
-  })
-
-  // 筛选逻辑
-  filterSelect.onchange = function(){
-    const val = this.value;
-    document.querySelectorAll('.product-card').forEach(card=>{
-      if(val==="all" || card.dataset.cat === val) card.style.display="block";
-      else card.style.display="none";
-    })
-  }
 }
 loadProducts();
 </script>
