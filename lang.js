@@ -39,6 +39,14 @@ const translations = {
     contact: "Kontakt",
     allCategories: "Alle Kategorien",
     ourProducts: "Unsere Produkte"
+  },
+  zh: {
+    home: "首页",
+    products: "产品",
+    about: "关于我们",
+    contact: "联系我们",
+    allCategories: "全部分类",
+    ourProducts: "我们的产品"
   }
 };
 
