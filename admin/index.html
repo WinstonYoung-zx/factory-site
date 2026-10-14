@@ -7,8 +7,8 @@
 </head>
 <body>
 <div id="nc-root"></div>
-<script src="https://cdn.jsdelivr.net/npm/decap-cms@3.1.10/dist/decap-cms.js"></script>
-<!-- 等脚本加载完毕再初始化 -->
+<!-- 使用稳定版 3.0.14，避开3.1.x的removeChild bug -->
+<script src="https://cdn.jsdelivr.net/npm/decap-cms@3.0.14/dist/decap-cms.js"></script>
 <script>
 window.addEventListener('load', function() {
   CMS.init({
