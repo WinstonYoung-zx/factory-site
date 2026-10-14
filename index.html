@@ -1,85 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home | Your Factory</title>
-<style>
-:root{--primary:#0F3460;--accent:#ff7800;--light:#f8f9fa;--dark:#222}
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
-body{color:var(--dark);background:#fff;}
-.banner{background:var(--primary);color:white;padding:5rem 5%;text-align:center;}
-.banner h1{font-size:2.4rem;margin-bottom:1rem;}
-.features{padding:4rem 5%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit, minmax(260px,1fr));gap:2rem;}
-.feature-card{padding:2rem;border:1px solid #eee;border-radius:8px;text-align:center;}
-footer{background:#111;color:#fff;text-align:center;padding:2rem 5%;margin-top:4rem;}
-footer a{color:#fff;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shanghai ZhanXin Intelligent Equipment Co.,Ltd.</title>
+  <meta name="description" content="Advertising light box, guide sign, LED LCD screen, bus shelter & metal structure manufacturer for B2B export">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- 新版导航栏 Logo+文字 -->
-<header style="display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;border-bottom:1px solid #eee;flex-wrap:wrap;gap:1rem;">
-  <div style="display:flex;align-items:center;gap:0.8rem;">
-    <img id="site-logo" src="/uploads/logo.png" alt="logo" style="height:36px;object-fit:contain;">
-    <div id="site-title" style="font-size:1.4rem;font-weight:bold;color:#0F3460;">YOURFACTORY</div>
+<!-- Header 导航栏 -->
+<header class="site-header">
+  <div class="container nav-wrap">
+    <div class="logo-wrap">
+      <img id="site-logo" alt="Logo">
+      <span id="site-title"></span>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="navHome"></a>
+      <a href="products.html" data-i18n="navProducts"></a>
+      <a href="about.html" data-i18n="navAbout"></a>
+      <a href="contact.html" data-i18n="navContact"></a>
+    </nav>
+    <select class="lang-select">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="ar">العربية</option>
+      <option value="zh">中文</option>
+      <option value="de">Deutsch</option>
+      <option value="fr">Français</option>
+    </select>
   </div>
-  <nav style="display:flex;gap:2rem;flex-wrap:wrap;">
-    <a href="index.html" style="text-decoration:none;color:#333;">Home</a>
-    <a href="products.html" style="text-decoration:none;color:#333;">Products</a>
-    <a href="about.html" style="text-decoration:none;color:#333;">About Us</a>
-    <a href="contact.html" style="text-decoration:none;color:#333;">Contact</a>
-  </nav>
-  <select class="lang-select" style="padding:4px 8px;border:1px solid #ccc;border-radius:4px;">
-    <option value="en">English</option>
-    <option value="es">Español</option>
-    <option value="ar">العربية</option>
-    <option value="zh">中文</option>
-  </select>
 </header>
 
+<!-- Banner 首页轮播 -->
 <section class="banner">
-  <h1 data-i18n="slogan">您信赖的金属结构产品伙伴</h1>
-  <p>Advertising light box, guide sign, LED & LCD screen, bus shelter & metal structure manufacturer</p>
+  <div class="container banner-inner">
+    <h1 data-i18n="bannerSlogan"></h1>
+    <p data-i18n="bannerDesc"></p>
+    <a href="contact.html" class="btn-primary" data-i18n="inquiryBtn"></a>
+  </div>
 </section>
 
+<!-- 三大优势模块 -->
 <section class="features">
-  <div class="feature-card">
-    <h3>Rich Experience</h3>
-    <p>Many years of manufacturing experience for city furniture projects</p>
+  <div class="container">
+    <h2 data-i18n="productsTitle"></h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3 data-i18n="feat1Title"></h3>
+        <p data-i18n="feat1Text"></p>
+      </div>
+      <div class="feature-card">
+        <h3 data-i18n="feat2Title"></h3>
+        <p data-i18n="feat2Text"></p>
+      </div>
+      <div class="feature-card">
+        <h3 data-i18n="feat3Title"></h3>
+        <p data-i18n="feat3Text"></p>
+      </div>
+    </div>
   </div>
-  <div class="feature-card">
-    <h3>Full Certifications</h3>
-    <p>Complete international certificates for exporting to Europe, Middle East and America</p>
-  </div>
-  <div class="feature-card">
-    <h3>Customized Service</h3>
-    <p>Support custom design & production according your drawings and requirements</p>
+</section>
+
+<!-- 产品预览区，可自行调整 -->
+<section class="product-preview">
+  <div class="container">
+    <h2 data-i18n="productsTitle"></h2>
+    <div class="product-grid">
+      <!-- 产品卡片由Decap CMS动态渲染，这里仅占位 -->
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Your Factory. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
+  <div class="container">
+    <p>© 2026 Shanghai ZhanXin Intelligent Equipment Co.,Ltd. All rights reserved.</p>
+  </div>
 </footer>
 
+<!-- JS引入 -->
 <script src="lang.js"></script>
 <script>
-//读取全局配置：Logo + 网站标题
-async function loadGlobalConfig() {
+// ========== 读取全局设置 global.md（Logo+网站标题）==========
+async function loadGlobalSetting(){
   try{
     const res = await fetch("content/global.md");
     const raw = await res.text();
-    const front = raw.match(/---\n([\s\S]*?)\n---/)[1];
-    //提取logo图片路径
-    const logoSrc = front.match(/site_logo: (.*)/)[1];
-    document.getElementById("site-logo").src = logoSrc;
-    //提取网站标题文字
-    const siteTitle = front.match(/site_title: (.*)/)[1];
-    document.getElementById("site-title").innerText = siteTitle;
+    const parts = raw.split("---");
+    const front = parts[1];
+    const getField = (key)=>{
+      const reg = new RegExp(`^${key}:\\s*(.+)$`,"m");
+      const m = front.match(reg);
+      return m ? m[1] : "";
+    }
+    const logoUrl = getField("siteLogo");
+    const siteTitle = getField("siteTitle");
+    if(logoUrl){
+      document.getElementById("site-logo").src = logoUrl;
+    }
+    document.getElementById("site-title").textContent = siteTitle;
   }catch(e){
     console.log("全局配置读取失败",e);
   }
 }
-loadGlobalConfig();
+
+// ========== 【修复undefined】读取首页home.md内容 ==========
+async function loadHomeContent(){
+  try{
+    const res = await fetch("content/home.md");
+    const raw = await res.text();
+    const sections = raw.split("---");
+    const frontMatter = sections[1];
+
+    const getField = (fieldName) => {
+      const regExp = new RegExp(`^${fieldName}:\\s*(.+)$`, "m");
+      const result = frontMatter.match(regExp);
+      return result ? result[1] : "";
+    }
+
+    const heroTitle = getField("heroTitle");
+    const heroDesc = getField("heroDesc");
+    const adv1Title = getField("adv1Title");
+    const adv1Text = getField("adv1Text");
+    const adv2Title = getField("adv2Title");
+    const adv2Text = getField("adv2Text");
+    const adv3Title = getField("adv3Title");
+    const adv3Text = getField("adv3Text");
+
+    document.querySelector(".banner h1").textContent = heroTitle;
+    document.querySelector(".banner p").textContent = heroDesc;
+
+    const cards = document.querySelectorAll(".feature-card");
+    cards[0].querySelector("h3").textContent = adv1Title;
+    cards[0].querySelector("p").textContent = adv1Text;
+    cards[1].querySelector("h3").textContent = adv2Title;
+    cards[1].querySelector("p").textContent = adv2Text;
+    cards[2].querySelector("h3").textContent = adv3Title;
+    cards[2].querySelector("p").textContent = adv3Text;
+  }catch(error){
+    console.error("首页内容加载失败：",error);
+  }
+}
+
+// 页面加载执行
+document.addEventListener("DOMContentLoaded",function(){
+  loadGlobalSetting();
+  loadHomeContent();
+})
 </script>
 </body>
 </html>
