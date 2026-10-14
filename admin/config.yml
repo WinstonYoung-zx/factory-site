@@ -1,68 +1,55 @@
 backend:
   name: git-gateway
   branch: main
+
+# 图片上传目录
 media_folder: "uploads"
 public_folder: "/uploads"
-locale: en
+
+# CMS 内容集合定义
 collections:
-  # === 新增：网站全局设置（Logo + 网站标题）===
+  # 网站全局设置：Logo、站点名称
   - name: "global"
     label: "网站全局设置"
-    files:
-      - name: "global"
-        label: "全局信息"
-        file: "content/global.md"
-        fields:
-          - {label: "网站Logo图片", name: "site_logo", widget: "image"}
-          - {label: "网站标题(顶部文字)", name: "site_title", widget: "string"}
-          - {label: "首页标语", name: "slogan", widget: "string"}
+    file: "content/global.md"
+    fields:
+      - {label: "网站Logo", name: "siteLogo", widget: "image"}
+      - {label: "网站标题", name: "siteTitle", widget: "string"}
 
-  # === 下面全部是你原来已有的配置，原样保留 ===
+  # 产品管理，支持后台新增产品分类 allow_add: true
   - name: "products"
-    label: "Products"
+    label: "产品管理"
     folder: "content/products"
     create: true
-    slug: "{{slug}}"
     fields:
-      - {label: "Product Name", name: "title", widget: "string"}
-      - label: "Category"
+      - {label: "产品名称", name: "title", widget: "string"}
+      - {label: "产品图片", name: "image", widget: "image"}
+      - label: "产品分类"
         name: "category"
         widget: "select"
-        allow_add: true
         options:
-          - { label: "Advertising Light Box", value: "lightbox" }
-          - { label: "Wayfinding Signage", value: "sign" }
-          - { label: "LED / LCD Screen", value: "display" }
-          - { label: "Bus Shelter", value: "bus" }
-          - { label: "Custom Steel & Aluminum Structure", value: "custom-steel-aluminum" }
-          - { label: "Others", value: "other" }
-      - {label: "Cover Image", name: "image", widget: "image"}
-      - {label: "Material & Spec", name: "spec", widget: "text"}
-      - {label: "Short Description", name: "desc", widget: "text"}
+          - {label: "Lightbox 广告灯箱", value: "lightbox"}
+          - {label: "Sign 导向标识", value: "sign"}
+          - {label: "Bus 候车亭", value: "bus"}
+          - {label: "Display 显示屏", value: "display"}
+          - {label: "Metal Structure 金属结构", value: "metal-structure"}
+          - {label: "Other 其它", value: "other"}
+        allow_add: true
+      - {label: "产品简介", name: "desc", widget: "markdown"}
 
-  - name: "homepage"
-    label: "Home Page Content"
-    files:
-      - file: "content/home.md"
-        label: "Home"
-        name: "home"
-        fields:
-          - {label: "Hero Title", name: "heroTitle", widget: "string"}
-          - {label: "Hero Description", name: "heroDesc", widget: "text"}
-          - {label: "Advantage 1 Title", name: "adv1Title", widget: "string"}
-          - {label: "Advantage 1 Text", name: "adv1Text", widget: "text"}
-          - {label: "Advantage 2 Title", name: "adv2Title", widget: "string"}
-          - {label: "Advantage 2 Text", name: "adv2Text", widget: "text"}
-          - {label: "Advantage 3 Title", name: "adv3Title", widget: "string"}
-          - {label: "Advantage 3 Text", name: "adv3Text", widget: "text"}
+  # 关于我们页面
+  - name: "about"
+    label: "关于我们页面"
+    file: "content/about.md"
+    fields:
+      - {label: "公司介绍", name: "intro", widget: "markdown"}
+      - {label: "质检与生产流程", name: "qc", widget: "markdown"}
+      - {label: "资料与项目配套支持", name: "cert", widget: "markdown"}
 
-  - name: "aboutpage"
-    label: "About Page Content"
-    files:
-      - file: "content/about.md"
-        label: "About Us"
-        name: "about"
-        fields:
-          - {label: "Company Intro", name: "intro", widget: "markdown"}
-          - {label: "QC Process", name: "qc", widget: "markdown"}
-          - {label: "Cert & OEM Info", name: "cert", widget: "markdown"}
+  # 联系我们页面
+  - name: "contact"
+    label: "联系页面信息"
+    file: "content/contact.md"
+    fields:
+      - {label: "联系信息", name: "info", widget: "markdown"}
+      - {label: "询盘表单提示文字", name: "formTip", widget: "string"}
