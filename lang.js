@@ -58,7 +58,14 @@ function setLang(lang) {
     el.innerText = translations[lang][key];
   });
 }
-document.querySelector(".lang-select").addEventListener("change", e=>{
-  setLang(e.target.value);
+
+// 等待页面DOM全部加载完毕再执行，修复null报错
+document.addEventListener('DOMContentLoaded', function() {
+  const langSelector = document.querySelector(".lang-select");
+  if(langSelector){
+    langSelector.addEventListener("change", e=>{
+      setLang(e.target.value);
+    });
+    setLang(currentLang);
+  }
 });
-setLang(currentLang);
