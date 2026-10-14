@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Advertising Light Box",
+    "category": "lightbox",
+    "image": "/uploads/lightbox.jpg",
+    "desc": "Custom advertising lightbox for outdoor & indoor branding"
+  },
+  {
+    "title": "Wayfinding Signage",
+    "category": "sign",
+    "image": "/uploads/signage.jpg",
+    "desc": "Directional signage, metal sign structure for city projects"
+  },
+  {
+    "title": "LED / LCD Screen",
+    "category": "display",
+    "image": "/uploads/ledscreen.jpg",
+    "desc": "61–86 inch LED & LCD screen metal frames, our core advantage"
+  },
+  {
+    "title": "Bus Shelter",
+    "category": "bus",
+    "image": "/uploads/busshelter.jpg",
+    "desc": "Outdoor waiting bus shelter with advertising panel"
+  },
+  {
+    "title": "Custom Steel & Aluminum Structure",
+    "category": "custom-steel-aluminum",
+    "image": "/uploads/metal-struct.jpg",
+    "desc": "OEM custom metal fabrication, steel & aluminum structures"
+  },
+  {
+    "title": "Other Products",
+    "category": "other",
+    "image": "/uploads/other.jpg",
+    "desc": "Other custom metal & advertising products"
+  }
+]
