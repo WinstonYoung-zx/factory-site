@@ -12,14 +12,13 @@
 <header class="site-header">
   <div class="container nav-wrap">
     <div class="logo-wrap">
-      <img id="site-logo" alt="Logo">
-      <span id="site-title"></span>
+      <span>YOURFACTORY</span>
     </div>
     <nav class="main-nav">
-      <a href="index.html" data-i18n="navHome"></a>
-      <a href="products.html" data-i18n="navProducts"></a>
-      <a href="about.html" data-i18n="navAbout"></a>
-      <a href="contact.html" data-i18n="navContact"></a>
+      <a href="index.html" data-i18n="navHome">Home</a>
+      <a href="products.html" data-i18n="navProducts">Products</a>
+      <a href="about.html" data-i18n="navAbout">About Us</a>
+      <a href="contact.html" data-i18n="navContact">Contact</a>
     </nav>
     <select class="lang-select">
       <option value="en">English</option>
@@ -35,9 +34,9 @@
 <!-- Banner -->
 <section class="banner">
   <div class="container banner-inner">
-    <h1 data-i18n="bannerSlogan"></h1>
-    <p data-i18n="bannerDesc"></p>
-    <a href="contact.html" class="btn-primary" data-i18n="inquiryBtn"></a>
+    <h1 data-i18n="bannerSlogan">Your Reliable Metal Structure Partner</h1>
+    <p data-i18n="bannerDesc">Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures</p>
+    <a href="contact.html" class="btn-primary" data-i18n="inquiryBtn">Send Inquiry</a>
   </div>
 </section>
 
@@ -46,16 +45,16 @@
   <div class="container">
     <div class="feature-grid">
       <div class="feature-card">
-        <h3 data-i18n="feat1Title"></h3>
-        <p data-i18n="feat1Text"></p>
+        <h3 data-i18n="feat1Title">Rich Experience</h3>
+        <p data-i18n="feat1Text">Years of urban furniture & metal structure project manufacturing experience</p>
       </div>
       <div class="feature-card">
-        <h3 data-i18n="feat2Title"></h3>
-        <p data-i18n="feat2Text"></p>
+        <h3 data-i18n="feat2Title">Flexible Document Support</h3>
+        <p data-i18n="feat2Text">We can provide required test documents and cooperate with certification upon project demand</p>
       </div>
       <div class="feature-card">
-        <h3 data-i18n="feat3Title"></h3>
-        <p data-i18n="feat3Text"></p>
+        <h3 data-i18n="feat3Title">Custom Service</h3>
+        <p data-i18n="feat3Text">Custom design & fabrication according to your drawings and requirements</p>
       </div>
     </div>
   </div>
@@ -64,7 +63,7 @@
 <!-- 产品预览区 -->
 <section class="product-preview">
   <div class="container">
-    <h2 data-i18n="productsTitle"></h2>
+    <h2 data-i18n="productsTitle">Our Products</h2>
     <div class="product-grid">
       <!-- CMS产品卡片 -->
     </div>
@@ -77,34 +76,6 @@
   </div>
 </footer>
 
-<!-- ========= 把lang.js放在body最底部，保证DOM全部渲染完成再执行 ========= -->
 <script src="lang.js"></script>
-
-<!-- 仅保留全局Logo读取脚本 -->
-<script>
-async function loadGlobalSetting(){
-  try{
-    const res = await fetch("content/global.md");
-    const raw = await res.text();
-    const parts = raw.split("---");
-    const front = parts[1];
-    const getField = (key)=>{
-      const reg = new RegExp(`^${key}:\\s*(.+)$`,"m");
-      const m = front.match(reg);
-      return m ? m[1] : "";
-    }
-    const logoUrl = getField("siteLogo");
-    const siteTitle = getField("siteTitle");
-    if(logoUrl){
-      document.getElementById("site-logo").src = logoUrl;
-    }
-    document.getElementById("site-title").textContent = siteTitle;
-  }catch(e){
-    console.log("全局配置读取失败",e);
-  }
-}
-loadGlobalSetting();
-</script>
-
 </body>
 </html>
