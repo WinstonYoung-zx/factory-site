@@ -1,19 +1,10 @@
 ---
-heroTitle: Advertising Light Boxes, Wayfinding Signage & LED Display Structures
-  — Factory-Direct from Shanghai
-heroDesc: OEM/ODM manufacturer of advertising light boxes, wayfinding signage,
-  LED/LCD display structures, and transit media equipment. One-stop from design
-  to installation.
-adv1Title: Factory-Based Manufacturing
-adv1Text: In-house structural fabrication, assembly, and electrical testing — no
-  outsourcing of core processes. Custom sizes and structures built to your
-  drawings or samples.
-adv2Title: 10+ Years of Engineering Experience
-adv2Text: Our core team has engineered light box and signage structures since
-  2008, serving one of the world's leading outdoor advertising groups as a
-  qualified structural supplier.
-adv3Title: Proven Project Delivery
-adv3Text: Full-line advertising equipment and wayfinding signage for urban rail
-  lines, plus outdoor LED display structures (61"–86") co-developed with a
-  listed display manufacturer.
+heroTitle: Your Reliable Metal Structure Partner
+heroDesc: Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures
+adv1Title: Rich Experience
+adv1Text: Years of outdoor and urban furniture & metal structure project manufacturing experience
+adv2Title: Flexible Document Support
+adv2Text: We can provide required test documents and cooperate with certification upon project demand
+adv3Title: Custom Service
+adv3Text: Custom design & fabrication according to your drawings and requirements
 ---
