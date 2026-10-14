@@ -1,5 +1,6 @@
-/* style.css 完整文件 | 外贸B2B工厂独立站
-主色：深蓝 #0f3460，强调橙色 #e67e22，全站响应式，多语言适配 */
+/* style.css 外贸B2B独立站
+主色：深蓝 #0f3460，强调橙 #e67e22
+修复：a标签默认蓝色、导航链接、询盘按钮，hero无图片纯深蓝 */
 :root {
     --primary: #0f3460;
     --primary-light: #164075;
@@ -8,7 +9,7 @@
     --white: #ffffff;
     --gray-light: #f1f1f1;
     --gray: #cccccc;
-    --text-dark: #222222;
+    --text-dark: #333333;
 }
 
 * {
@@ -20,7 +21,7 @@
 body {
     background-color: var(--primary);
     color: var(--white);
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     line-height: 1.6;
 }
 
@@ -61,36 +62,34 @@ header {
 .nav-links a {
     color: var(--white);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 .nav-links a:hover {
     color: var(--accent);
 }
 .lang-switch {
-    padding: 6px 10px;
+    padding:6px 10px;
     border-radius:4px;
     border:none;
     background: var(--accent);
-    color:white;
+    color:var(--white);
     cursor:pointer;
 }
 .mobile-menu-btn {
     display: none;
     background: var(--accent);
     border: none;
-    color:#fff;
+    color:var(--white);
     padding:8px 12px;
 }
 
-/* 首页轮播 Hero */
+/* Hero首屏区块，纯深蓝无图片 */
 .hero {
     height: 85vh;
     display:flex;
     align-items:center;
     text-align:center;
-    background: linear-gradient(rgba(15,52,96,0.85), rgba(15,52,96,0.92)), url("/uploads/hero-factory.jpg");
-    background-size:cover;
-    background-position:center;
+    background: var(--primary);
 }
 .hero h1 {
     font-size: 2.8rem;
@@ -98,17 +97,16 @@ header {
 }
 .hero p {
     font-size:1.2rem;
-    max-width:700px;
+    max-width:900px;
     margin:0 auto 2rem;
 }
 .btn {
     display: inline-block;
     background: var(--accent);
-    color: white;
+    color: var(--white);
     padding:14px 30px;
     border-radius:4px;
     text-decoration:none;
-    font-weight:500;
     transition: background 0.3s;
     border:none;
     cursor:pointer;
@@ -119,7 +117,7 @@ header {
 
 /* 三大优势区块 */
 .features {
-    padding: 5rem 0;
+    padding:5rem 0;
     background-color: var(--primary-light);
 }
 .section-title {
@@ -129,7 +127,7 @@ header {
 }
 .feature-grid {
     display:grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap:2rem;
 }
 .feature-card {
@@ -171,7 +169,7 @@ header {
     margin-bottom:0.6rem;
 }
 
-/* 工厂实力 */
+/* 工厂实力板块 */
 .factory {
     padding:5rem 0;
     background-color: var(--primary-light);
@@ -227,7 +225,17 @@ footer {
     font-size:0.9rem;
 }
 
-/* 响应式适配 - 平板手机 */
+/* 全局：清除所有a标签浏览器默认蓝色 */
+a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--accent);
+}
+
+/* 移动端适配 */
 @media (max-width:768px) {
     .nav-links {
         display:none;
