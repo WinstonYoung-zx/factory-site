@@ -5,13 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products | Your Factory</title>
   <style>
-    :root{--primary:#0F3460;--accent:#E94560;--light:#f8f9fa;--dark:#222}
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    :root{--primary:#0F3460;--accent:#ff7800;--light:#f8f9fa;--dark:#222}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
     body{color:var(--dark);background:#fff;}
-    header{display:flex;justify-content:space-between;align-items:center;padding:1rem 5%;background:#fff;border-bottom:1px solid #eee;}
-    .logo{font-size:1.4rem;font-weight:bold;color:var(--primary);}
-    nav a{margin:0 12px;text-decoration:none;color:#333;}
-    .lang-select{padding:4px 8px;border:1px solid #ccc;border-radius:4px;}
     .product-wrap{padding:3rem 5%;max-width:1400px;margin:0 auto;}
     .product-wrap h2{text-align:center;font-size:2rem;margin-bottom:2rem;color:var(--primary);}
     .filter-box{text-align:center;margin-bottom:2rem;}
@@ -20,26 +16,27 @@
     .product-card{border:1px solid #eee;border-radius:8px;overflow:hidden;}
     .product-card img{width:100%;height:200px;object-fit:cover;}
     .card-body{padding:1rem;}
-    footer{background:#111;color:#fff;text-align:center;padding:2rem;margin-top:4rem;}
+    footer{background:#111;color:#fff;text-align:center;padding:2rem 5%;margin-top:4rem;}
     footer a{color:#fff;}
-    @media(max-width:768px){header{flex-direction:column;gap:1rem;}}
   </style>
 </head>
 <body>
-<header>
-  <div class="logo">YOURFACTORY</div>
-  <nav>
-    <a href="index.html" data-i18n="home">Home</a>
-    <a href="products.html" data-i18n="products">Products</a>
-    <a href="about.html" data-i18n="about">About Us</a>
-    <a href="contact.html" data-i18n="contact">Contact</a>
+<!-- 新版导航栏 Logo+文字 -->
+<header style="display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;border-bottom:1px solid #eee;flex-wrap:wrap;gap:1rem;">
+  <div style="display:flex;align-items:center;gap:0.8rem;">
+    <img id="site-logo" src="/uploads/logo.png" alt="logo" style="height:36px;object-fit:contain;">
+    <div id="site-title" style="font-size:1.4rem;font-weight:bold;color:#0F3460;">YOURFACTORY</div>
+  </div>
+  <nav style="display:flex;gap:2rem;flex-wrap:wrap;">
+    <a href="index.html" style="text-decoration:none;color:#333;">Home</a>
+    <a href="products.html" style="text-decoration:none;color:#333;">Products</a>
+    <a href="about.html" style="text-decoration:none;color:#333;">About Us</a>
+    <a href="contact.html" style="text-decoration:none;color:#333;">Contact</a>
   </nav>
-  <select class="lang-select">
+  <select class="lang-select" style="padding:4px 8px;border:1px solid #ccc;border-radius:4px;">
     <option value="en">English</option>
     <option value="es">Español</option>
     <option value="ar">العربية</option>
-    <option value="fr">Français</option>
-    <option value="de">Deutsch</option>
     <option value="zh">中文</option>
   </select>
 </header>
@@ -59,6 +56,25 @@
 </footer>
 
 <script src="lang.js"></script>
+<script>
+//读取全局配置：Logo + 网站标题
+async function loadGlobalConfig() {
+  try{
+    const res = await fetch("content/global.md");
+    const raw = await res.text();
+    const front = raw.match(/---\n([\s\S]*?)\n---/)[1];
+    //提取logo图片路径
+    const logoSrc = front.match(/site_logo: (.*)/)[1];
+    document.getElementById("site-logo").src = logoSrc;
+    //提取网站标题文字
+    const siteTitle = front.match(/site_title: (.*)/)[1];
+    document.getElementById("site-title").innerText = siteTitle;
+  }catch(e){
+    console.log("全局配置读取失败",e);
+  }
+}
+loadGlobalConfig();
+</script>
 <script>
 // 读取产品json渲染 + 分类筛选，增加异常捕获
 let allProducts = [];
