@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shanghai ZhanXin Intelligent Equipment Co.,Ltd.</title>
+  <title>Zhanxin Intelligent | Metal Structure & Sign Manufacturer</title>
   <meta name="description" content="Advertising light box, guide sign, LED LCD screen, bus shelter & metal structure manufacturer for B2B export">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -32,7 +32,7 @@
   </div>
 </header>
 
-<!-- Banner区域，全部使用data-i18n，由lang.js渲染 -->
+<!-- Banner -->
 <section class="banner">
   <div class="container banner-inner">
     <h1 data-i18n="bannerSlogan"></h1>
@@ -66,20 +66,22 @@
   <div class="container">
     <h2 data-i18n="productsTitle"></h2>
     <div class="product-grid">
-      <!-- CMS动态渲染产品卡片 -->
+      <!-- CMS产品卡片 -->
     </div>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p>© 2026 Shanghai ZhanXin Intelligent Equipment Co.,Ltd. All rights reserved.</p>
+    <p>© 2026 Zhanxin Intelligent. All rights reserved.</p>
   </div>
 </footer>
 
+<!-- ========= 把lang.js放在body最底部，保证DOM全部渲染完成再执行 ========= -->
 <script src="lang.js"></script>
+
+<!-- 仅保留全局Logo读取脚本 -->
 <script>
-// 仅保留读取全局Logo和网站标题脚本，删除读取home.md的冲突代码
 async function loadGlobalSetting(){
   try{
     const res = await fetch("content/global.md");
@@ -101,7 +103,8 @@ async function loadGlobalSetting(){
     console.log("全局配置读取失败",e);
   }
 }
-document.addEventListener("DOMContentLoaded",loadGlobalSetting);
+loadGlobalSetting();
 </script>
+
 </body>
 </html>
