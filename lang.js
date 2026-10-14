@@ -1,4 +1,3 @@
-// 多语言翻译库 共6种语言 EN / ES / AR / ZH / DE / FR
 const i18n = {
   en: {
     navHome: "Home",
@@ -166,7 +165,7 @@ const i18n = {
 
 let currentLang = "en";
 
-// 页面加载完成执行渲染
+// DOM加载完成渲染
 document.addEventListener("DOMContentLoaded", function () {
   const langSelect = document.querySelector(".lang-select");
   if(langSelect){
@@ -175,20 +174,17 @@ document.addEventListener("DOMContentLoaded", function () {
       updateAllText();
     })
   }
-  // 初始化渲染文字
   updateAllText();
 });
 
-// 遍历所有data-i18n元素填充文字
 function updateAllText() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
-    if(i18n[currentLang] && i18n[currentLang][key]){
+    if (i18n[currentLang] && i18n[currentLang][key]) {
       el.textContent = i18n[currentLang][key];
-    }else{
-      // 找不到key不显示undefined，改为空，方便调试
+    } else {
       el.textContent = "";
-      console.warn("Missing i18n key:", key);
+      console.warn("Missing key: ", key);
     }
   })
 }
