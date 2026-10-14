@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Header 导航栏 -->
+<!-- Header 导航 -->
 <header class="site-header">
   <div class="container nav-wrap">
     <div class="logo-wrap">
@@ -32,7 +32,7 @@
   </div>
 </header>
 
-<!-- Banner 首页轮播 -->
+<!-- Banner区域，全部使用data-i18n，由lang.js渲染 -->
 <section class="banner">
   <div class="container banner-inner">
     <h1 data-i18n="bannerSlogan"></h1>
@@ -41,10 +41,9 @@
   </div>
 </section>
 
-<!-- 三大优势模块 -->
+<!-- 三大优势 -->
 <section class="features">
   <div class="container">
-    <h2 data-i18n="productsTitle"></h2>
     <div class="feature-grid">
       <div class="feature-card">
         <h3 data-i18n="feat1Title"></h3>
@@ -62,12 +61,12 @@
   </div>
 </section>
 
-<!-- 产品预览区，可自行调整 -->
+<!-- 产品预览区 -->
 <section class="product-preview">
   <div class="container">
     <h2 data-i18n="productsTitle"></h2>
     <div class="product-grid">
-      <!-- 产品卡片由Decap CMS动态渲染，这里仅占位 -->
+      <!-- CMS动态渲染产品卡片 -->
     </div>
   </div>
 </section>
@@ -78,10 +77,9 @@
   </div>
 </footer>
 
-<!-- JS引入 -->
 <script src="lang.js"></script>
 <script>
-// ========== 读取全局设置 global.md（Logo+网站标题）==========
+// 仅保留读取全局Logo和网站标题脚本，删除读取home.md的冲突代码
 async function loadGlobalSetting(){
   try{
     const res = await fetch("content/global.md");
@@ -103,50 +101,7 @@ async function loadGlobalSetting(){
     console.log("全局配置读取失败",e);
   }
 }
-
-// ========== 【修复undefined】读取首页home.md内容 ==========
-async function loadHomeContent(){
-  try{
-    const res = await fetch("content/home.md");
-    const raw = await res.text();
-    const sections = raw.split("---");
-    const frontMatter = sections[1];
-
-    const getField = (fieldName) => {
-      const regExp = new RegExp(`^${fieldName}:\\s*(.+)$`, "m");
-      const result = frontMatter.match(regExp);
-      return result ? result[1] : "";
-    }
-
-    const heroTitle = getField("heroTitle");
-    const heroDesc = getField("heroDesc");
-    const adv1Title = getField("adv1Title");
-    const adv1Text = getField("adv1Text");
-    const adv2Title = getField("adv2Title");
-    const adv2Text = getField("adv2Text");
-    const adv3Title = getField("adv3Title");
-    const adv3Text = getField("adv3Text");
-
-    document.querySelector(".banner h1").textContent = heroTitle;
-    document.querySelector(".banner p").textContent = heroDesc;
-
-    const cards = document.querySelectorAll(".feature-card");
-    cards[0].querySelector("h3").textContent = adv1Title;
-    cards[0].querySelector("p").textContent = adv1Text;
-    cards[1].querySelector("h3").textContent = adv2Title;
-    cards[1].querySelector("p").textContent = adv2Text;
-    cards[2].querySelector("h3").textContent = adv3Title;
-    cards[2].querySelector("p").textContent = adv3Text;
-  }catch(error){
-    console.error("首页内容加载失败：",error);
-  }
-}
-
-// 页面加载执行
-document.addEventListener("DOMContentLoaded",function(){
-  loadGlobalSetting();
-  loadHomeContent();
-})
+document.addEventListener("DOMContentLoaded",loadGlobalSetting);
 </script>
 </body>
 </html>
