@@ -1,7 +1,3 @@
-backend:
-  name: git-gateway
-  branch: main
-
 media_folder: "uploads"
 public_folder: "/uploads"
 
@@ -22,9 +18,9 @@ collections:
         options:
           - { label: "Advertising Light Box", value: "lightbox" }
           - { label: "Wayfinding Signage", value: "sign" }
-          - { label: "Bus Shelter", value: "bus" }
           - { label: "LED / LCD Screen", value: "display" }
-          - { label: "Metal Structure", value: "metal-structure" }
+          - { label: "Bus Shelter", value: "bus" }
+          - { label: "Custom Steel & Aluminum Structure", value: "custom-steel-aluminum" }
           - { label: "Others", value: "other" }
       - {label: "Cover Image", name: "image", widget: "image"}
       - {label: "Material & Spec", name: "spec", widget: "text"}
