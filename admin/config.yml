@@ -3,6 +3,9 @@ backend:
   repo: WinstonYoung-zx/factory-site
   branch: main
 
+media_library:
+  name: media_folder
+
 media_folder: "uploads"
 public_folder: "/uploads"
 
