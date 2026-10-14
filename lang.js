@@ -165,26 +165,25 @@ const i18n = {
 
 let currentLang = "en";
 
-// DOM加载完成渲染
-document.addEventListener("DOMContentLoaded", function () {
-  const langSelect = document.querySelector(".lang-select");
-  if(langSelect){
-    langSelect.addEventListener("change", function () {
-      currentLang = this.value;
-      updateAllText();
-    })
-  }
-  updateAllText();
-});
-
+// 渲染函数
 function updateAllText() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if (i18n[currentLang] && i18n[currentLang][key]) {
       el.textContent = i18n[currentLang][key];
-    } else {
-      el.textContent = "";
-      console.warn("Missing key: ", key);
     }
   })
 }
+
+// 语言切换下拉事件
+document.querySelector(".lang-select").addEventListener("change", function () {
+  currentLang = this.value;
+  updateAllText();
+});
+
+// 页面加载后延迟200ms执行渲染，兜底方案
+window.addEventListener('load', function() {
+  setTimeout(()=>{
+    updateAllText();
+  },200)
+})
