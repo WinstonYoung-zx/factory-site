@@ -1,15 +1,10 @@
+cms_name: Static CMS
 backend:
-  name: github
-  repo: WinstonYoung-zx/factory-site
+  name: git-gateway
   branch: main
-
-media_library:
-  name: media_folder
 
 media_folder: "uploads"
 public_folder: "/uploads"
-
-locale: en
 
 collections:
   - name: "products"
@@ -18,37 +13,42 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Product Name", name: "name", widget: "string"}
-      - {label: "Product Image", name: "image", widget: "image"}
-      - label: "Category"
-        name: "category"
-        widget: "select"
-        options:
-          - { label: "Lightbox", value: "lightbox" }
-          - { label: "Sign", value: "sign" }
-          - { label: "Bus", value: "bus" }
-          - { label: "Display", value: "display" }
-          - { label: "Metal Structure", value: "metal-structure" }
-          - { label: "Other", value: "other" }
-        allow_add: true
-      - {label: "Short Description", name: "short_desc", widget: "text"}
-      - {label: "Full Description", name: "description", widget: "markdown"}
-      - {label: "Specification", name: "spec", widget: "markdown"}
+      - {label: "Product Name", name: "title", widget: "string"}
+      - {label: "Product Category", name: "category", widget: "select", options: ["lightbox", "sign", "bus", "display", "metal-structure", "other"], allow_add: true}
+      - {label: "Cover Image", name: "image", widget: "image"}
+      - {label: "Brief Description", name: "excerpt", widget: "text"}
+      - {label: "Detailed Description", name: "body", widget: "markdown"}
+      - {label: "Specifications", name: "spec", widget: "markdown"}
       - {label: "Sort Order", name: "sort", widget: "number", default: 10}
-      - {label: "Published", name: "published", widget: "boolean", default: true}
 
-  - name: "settings"
-    label: "Site Settings"
-    files:
-      - label: "Home Page"
-        name: "home"
-        file: "content/home.json"
-        fields:
-          - {label: "Hero Title", name: "hero_title", widget: "string"}
-          - {label: "Hero Slogan", name: "hero_slogan", widget: "string"}
-          - label: "Advantages"
-            name: "advantages"
-            widget: "list"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "desc", widget: "text"}
+  - name: "homepage"
+    label: "Homepage Settings"
+    file: "content/home.md"
+    create: false
+    fields:
+      - {label: "Banner Image", name: "banner_img", widget: "image"}
+      - {label: "Slogan", name: "slogan", widget: "string", default: "Your trusted partner for metal structure products"}
+      - {label: "Advantage 1 Title", name: "adv1_title", widget: "string", default: "Rich Industry Experience"}
+      - {label: "Advantage 1 Content", name: "adv1_desc", widget: "text"}
+      - {label: "Advantage 2 Title", name: "adv2_title", widget: "string", default: "Full Certifications"}
+      - {label: "Advantage 2 Content", name: "adv2_desc", widget: "text"}
+      - {label: "Advantage 3 Title", name: "adv3_title", widget: "string", default: "Custom Manufacturing"}
+      - {label: "Advantage 3 Content", name: "adv3_desc", widget: "text"}
+
+  - name: "about"
+    label: "About / Factory Page"
+    file: "content/about.md"
+    create: false
+    fields:
+      - {label: "Page Title", name: "title", widget: "string"}
+      - {label: "Page Body", name: "body", widget: "markdown"}
+
+  - name: "global"
+    label: "Global Site Settings"
+    file: "content/global.md"
+    create: false
+    fields:
+      - {label: "Website Title", name: "site_title", widget: "string"}
+      - {label: "Contact Email", name: "email", widget: "string"}
+      - {label: "WhatsApp", name: "whatsapp", widget: "string"}
+      - {label: "Address", name: "address", widget: "text"}
