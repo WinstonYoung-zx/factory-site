@@ -4,9 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Admin</title>
-  <!-- 增加 ?v=20261014 强制刷新CDN缓存 -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js?v=20261014"></script>
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.1.10/dist/decap-cms.js"></script>
 </head>
 <body>
+<script>
+// 强制指定配置文件地址，防止路径解析错误
+CMS.init({
+  config: {
+    configPath: "/admin/config.yml"
+  }
+})
+</script>
 </body>
 </html>
