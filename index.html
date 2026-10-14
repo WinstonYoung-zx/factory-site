@@ -13,14 +13,18 @@
     <div class="container nav-wrap">
         <a href="#" class="logo">YOUR<span>FACTORY</span></a>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#inquiry">Contact</a></li>
+            <li><a href="#home" data-i18n="nav.home">Home</a></li>
+            <li><a href="#products" data-i18n="nav.products">Products</a></li>
+            <li><a href="#about" data-i18n="nav.about">About Us</a></li>
+            <li><a href="#inquiry" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <select class="lang-switch" id="langSelect">
             <option value="en">English</option>
+            <option value="zh">中文</option>
             <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
             <option value="ar">العربية</option>
         </select>
         <button class="mobile-menu-btn">Menu</button>
@@ -30,9 +34,9 @@
 <!-- Hero首屏 -->
 <section class="hero" id="home">
     <div class="container">
-        <h1>Your Reliable Metal Structure Partner</h1>
-        <p>Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures</p>
-        <a href="#inquiry" class="btn">Send Inquiry</a>
+        <h1 data-i18n="hero.title">Your Reliable Metal Structure Partner</h1>
+        <p data-i18n="hero.desc">Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures</p>
+        <a href="#inquiry" class="btn" data-i18n="hero.btn">Send Inquiry</a>
     </div>
 </section>
 
@@ -41,16 +45,16 @@
     <div class="container">
         <div class="feature-grid">
             <div class="feature-card">
-                <h3>Rich Experience</h3>
-                <p>Years of urban furniture & metal structure project manufacturing experience</p>
+                <h3 data-i18n="feat1.title">Rich Experience</h3>
+                <p data-i18n="feat1.desc">Years of outdoor, airport and urban furniture & metal structure manufacturing experience</p>
             </div>
             <div class="feature-card">
-                <h3>Certified</h3>
-                <p>We have complete industry certificates and quality control system</p>
+                <h3 data-i18n="feat2.title">Certified</h3>
+                <p data-i18n="feat2.desc">We have complete industry certificates and quality control system</p>
             </div>
             <div class="feature-card">
-                <h3>Custom Service</h3>
-                <p>Custom design & fabrication according to your drawings and requirements</p>
+                <h3 data-i18n="feat3.title">Custom Service</h3>
+                <p data-i18n="feat3.desc">Custom design & fabrication according to your drawings and requirements</p>
             </div>
         </div>
     </div>
@@ -58,43 +62,43 @@
 
 <!-- 产品展示 -->
 <section class="products container" id="products">
-    <h2 class="section-title">Our Products</h2>
+    <h2 class="section-title" data-i18n="product.title">Our Products</h2>
     <div class="product-grid">
         <!-- CMS后台添加产品，这里自动渲染 -->
         <div class="product-card">
             <div class="card-body">
-                <h3>Advertising Lightbox</h3>
-                <p>Custom advertising light box for commercial signage</p>
+                <h3 data-i18n="prod.lightbox">Advertising Lightbox</h3>
+                <p data-i18n="prod.lightbox_desc">Custom advertising light box for commercial signage</p>
             </div>
         </div>
         <div class="product-card">
             <div class="card-body">
-                <h3>Guide Sign</h3>
-                <p>Directional signage & wayfinding metal signs</p>
+                <h3 data-i18n="prod.sign">Guide Sign</h3>
+                <p data-i18n="prod.sign_desc">Directional signage & wayfinding metal signs</p>
             </div>
         </div>
         <div class="product-card">
             <div class="card-body">
-                <h3>Bus Shelter</h3>
-                <p>City furniture bus stop waiting shelter</p>
+                <h3 data-i18n="prod.bus">Bus Shelter</h3>
+                <p data-i18n="prod.bus_desc">City furniture bus stop waiting shelter</p>
             </div>
         </div>
         <div class="product-card">
             <div class="card-body">
-                <h3>LED & LCD Display</h3>
-                <p>LED screen, LCD advertising display machine</p>
+                <h3 data-i18n="prod.led">LED & LCD Display</h3>
+                <p data-i18n="prod.led_desc">LED screen, LCD advertising display machine</p>
             </div>
         </div>
         <div class="product-card">
             <div class="card-body">
-                <h3>Metal Structure</h3>
-                <p>Custom metal fabrication & steel structure</p>
+                <h3 data-i18n="prod.metal">Metal Structure</h3>
+                <p data-i18n="prod.metal_desc">Custom metal fabrication & steel structure</p>
             </div>
         </div>
         <div class="product-card">
             <div class="card-body">
-                <h3>Others</h3>
-                <p>Other customized urban furniture products</p>
+                <h3 data-i18n="prod.other">Others</h3>
+                <p data-i18n="prod.other_desc">Other customized urban furniture products</p>
             </div>
         </div>
     </div>
@@ -103,36 +107,36 @@
 <!-- 工厂实力 About Us -->
 <section class="factory" id="about">
     <div class="container">
-        <h2 class="section-title">Our Factory</h2>
-        <p>We are a professional manufacturer for city furniture, metal structures, advertising signage and display equipment. We support full custom design, production and global delivery for Europe, Middle East and America clients.</p>
+        <h2 class="section-title" data-i18n="about.title">Our Factory</h2>
+        <p data-i18n="about.desc">We are a professional manufacturer for city furniture, metal structures, advertising signage and display equipment. We support full custom design, production and global delivery for Europe, Middle East and America clients.</p>
     </div>
 </section>
 
 <!-- 询盘表单 -->
 <section class="inquiry container" id="inquiry">
-    <h2 class="section-title">Send Your Inquiry</h2>
+    <h2 class="section-title" data-i18n="inq.title">Send Your Inquiry</h2>
     <div class="form-box">
         <div class="form-group">
-            <label>Company Name</label>
+            <label data-i18n="inq.company">Company Name</label>
             <input type="text" name="company">
         </div>
         <div class="form-group">
-            <label>Contact Person</label>
+            <label data-i18n="inq.person">Contact Person</label>
             <input type="text" name="name">
         </div>
         <div class="form-group">
-            <label>Email</label>
+            <label data-i18n="inq.email">Email</label>
             <input type="email" name="email">
         </div>
         <div class="form-group">
-            <label>Product Interest</label>
+            <label data-i18n="inq.interest">Product Interest</label>
             <input type="text" name="product">
         </div>
         <div class="form-group">
-            <label>Message / Requirements</label>
+            <label data-i18n="inq.msg">Message / Requirements</label>
             <textarea name="message"></textarea>
         </div>
-        <button class="btn">Submit Inquiry</button>
+        <button class="btn" data-i18n="inq.submit">Submit Inquiry</button>
     </div>
 </section>
 
@@ -145,19 +149,287 @@
     </div>
 </footer>
 
-<!-- 多语言切换JS -->
+<!-- 多语言切换JS【新版，无404！】 -->
 <script>
+const translations = {
+    en: {
+        "nav.home":"Home",
+        "nav.products":"Products",
+        "nav.about":"About Us",
+        "nav.contact":"Contact",
+        "hero.title":"Your Reliable Metal Structure Partner",
+        "hero.desc":"Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures",
+        "hero.btn":"Send Inquiry",
+        "feat1.title":"Rich Experience",
+        "feat1.desc":"Years of outdoor, airport and urban furniture & metal structure manufacturing experience",
+        "feat2.title":"Certified",
+        "feat2.desc":"We have complete industry certificates and quality control system",
+        "feat3.title":"Custom Service",
+        "feat3.desc":"Custom design & fabrication according to your drawings and requirements",
+        "product.title":"Our Products",
+        "prod.lightbox":"Advertising Lightbox",
+        "prod.lightbox_desc":"Custom advertising light box for commercial signage",
+        "prod.sign":"Guide Sign",
+        "prod.sign_desc":"Directional signage & wayfinding metal signs",
+        "prod.bus":"Bus Shelter",
+        "prod.bus_desc":"City furniture bus stop waiting shelter",
+        "prod.led":"LED & LCD Display",
+        "prod.led_desc":"LED screen, LCD advertising display machine",
+        "prod.metal":"Metal Structure",
+        "prod.metal_desc":"Custom metal fabrication & steel structure",
+        "prod.other":"Others",
+        "prod.other_desc":"Other customized urban furniture products",
+        "about.title":"Our Factory",
+        "about.desc":"We are a professional manufacturer for city furniture, metal structures, advertising signage and display equipment. We support full custom design, production and global delivery for Europe, Middle East and America clients.",
+        "inq.title":"Send Your Inquiry",
+        "inq.company":"Company Name",
+        "inq.person":"Contact Person",
+        "inq.email":"Email",
+        "inq.interest":"Product Interest",
+        "inq.msg":"Message / Requirements",
+        "inq.submit":"Submit Inquiry"
+    },
+    zh: {
+        "nav.home":"首页",
+        "nav.products":"产品",
+        "nav.about":"工厂介绍",
+        "nav.contact":"联系我们",
+        "hero.title":"您信赖的金属结构产品伙伴",
+        "hero.desc":"广告灯箱、导向标识、LED/LCD屏、候车亭与金属结构专业制造商",
+        "hero.btn":"提交询盘",
+        "feat1.title":"丰富经验",
+        "feat1.desc":"拥有多年户外、机场及城市家具与金属结构制造经验",
+        "feat2.title":"资质齐全",
+        "feat2.desc":"全套行业认证与完善品控体系",
+        "feat3.title":"定制服务",
+        "feat3.desc":"根据图纸与需求定制设计生产",
+        "product.title":"产品中心",
+        "prod.lightbox":"广告灯箱",
+        "prod.lightbox_desc":"商用定制广告灯箱",
+        "prod.sign":"导向标识",
+        "prod.sign_desc":"导向标牌、金属导视标识",
+        "prod.bus":"候车亭",
+        "prod.bus_desc":"城市家具公交候车亭",
+        "prod.led":"LED/LCD广告屏",
+        "prod.led_desc":"LED大屏、LCD广告机",
+        "prod.metal":"金属结构",
+        "prod.metal_desc":"定制钢结构、金属件加工",
+        "prod.other":"其他产品",
+        "prod.other_desc":"其他定制城市家具产品",
+        "about.title":"工厂实力",
+        "about.desc":"专业生产城市家具、金属结构、广告标识与显示设备。支持定制设计、生产，面向欧美中东全球客户交付。",
+        "inq.title":"发送询盘",
+        "inq.company":"公司名称",
+        "inq.person":"联系人",
+        "inq.email":"邮箱",
+        "inq.interest":"意向产品",
+        "inq.msg":"留言/需求说明",
+        "inq.submit":"提交询盘"
+    },
+    es: {
+        "nav.home":"Inicio",
+        "nav.products":"Productos",
+        "nav.about":"Sobre Nosotros",
+        "nav.contact":"Contacto",
+        "hero.title":"Su socio confiable en estructuras metálicas",
+        "hero.desc":"Fabricante de cajas de luz publicitarias, señales de guía, pantallas LED/LCD, refugios de autobús y estructuras metálicas",
+        "hero.btn":"Enviar consulta",
+        "feat1.title":"Amplia Experiencia",
+        "feat1.desc":"Años de experiencia en la fabricación de mobiliario exterior, aeroportuario y urbano, además de estructuras metálicas",
+        "feat2.title":"Certificado",
+        "feat2.desc":"Contamos con certificados industriales completos y sistema de control de calidad",
+        "feat3.title":"Servicio Personalizado",
+        "feat3.desc":"Diseño y fabricación según sus dibujos y requisitos",
+        "product.title":"Nuestros Productos",
+        "prod.lightbox":"Caja de luz publicitaria",
+        "prod.lightbox_desc":"Caja de luz personalizada para señalización comercial",
+        "prod.sign":"Señal de guía",
+        "prod.sign_desc":"Señalización direccional y señales metálicas de orientación",
+        "prod.bus":"Refugio de autobús",
+        "prod.bus_desc":"Mobiliario urbano para paradas de autobús",
+        "prod.led":"Pantallas LED y LCD",
+        "prod.led_desc":"Pantalla LED, máquina de publicidad LCD",
+        "prod.metal":"Estructura Metálica",
+        "prod.metal_desc":"Fabricación de metal y estructura de acero personalizada",
+        "prod.other":"Otros",
+        "prod.other_desc":"Otros productos de mobiliario urbano personalizados",
+        "about.title":"Nuestra Fábrica",
+        "about.desc":"Somos fabricante profesional de mobiliario urbano, estructuras metálicas, señalización publicitaria y equipos de visualización. Ofrecemos diseño completo, fabricación y entrega global para clientes de Europa, Oriente Medio y América.",
+        "inq.title":"Enviar Consulta",
+        "inq.company":"Nombre de la Empresa",
+        "inq.person":"Persona de Contacto",
+        "inq.email":"Correo electrónico",
+        "inq.interest":"Producto de interés",
+        "inq.msg":"Mensaje / Requisitos",
+        "inq.submit":"Enviar"
+    },
+    fr: {
+        "nav.home":"Accueil",
+        "nav.products":"Produits",
+        "nav.about":"À propos",
+        "nav.contact":"Contact",
+        "hero.title":"Votre partenaire fiable pour les structures métalliques",
+        "hero.desc":"Fabricant de caissons lumineux publicitaires, signalétique, écrans LED/LCD, abris de bus et structures métalliques",
+        "hero.btn":"Envoyer une demande",
+        "feat1.title":"Grande Expérience",
+        "feat1.desc":"Des années d'expérience dans la fabrication de mobilier extérieur, aéroportuaire, urbain et de structures métalliques",
+        "feat2.title":"Certifié",
+        "feat2.desc":"Certificats industriels complets et système de contrôle qualité",
+        "feat3.title":"Service Sur-Mesure",
+        "feat3.desc":"Conception et fabrication selon vos plans et exigences",
+        "product.title":"Nos Produits",
+        "prod.lightbox":"Caisson lumineux publicitaire",
+        "prod.lightbox_desc":"Caisson lumineux personnalisé pour signalisation commerciale",
+        "prod.sign":"Signal de guidage",
+        "prod.sign_desc":"Signalétique directionnelle et panneaux métalliques",
+        "prod.bus":"Abri de bus",
+        "prod.bus_desc":"Mobilier urbain pour arrêt de bus",
+        "prod.led":"Écrans LED & LCD",
+        "prod.led_desc":"Écran LED, écran publicitaire LCD",
+        "prod.metal":"Structure métallique",
+        "prod.metal_desc":"Fabrication métallique et structure acier sur mesure",
+        "prod.other":"Autres",
+        "prod.other_desc":"Autres produits de mobilier urbain personnalisés",
+        "about.title":"Notre Usine",
+        "about.desc":"Fabricant professionnel de mobilier urbain, structures métalliques, signalétique publicitaire et équipements d'affichage. Conception, fabrication et livraison mondiale pour clients Europe, Moyen-Orient, Amérique.",
+        "inq.title":"Envoyer une demande",
+        "inq.company":"Nom de l'entreprise",
+        "inq.person":"Contact",
+        "inq.email":"Email",
+        "inq.interest":"Produit souhaité",
+        "inq.msg":"Message / Besoins",
+        "inq.submit":"Envoyer"
+    },
+    de: {
+        "nav.home":"Startseite",
+        "nav.products":"Produkte",
+        "nav.about":"Über uns",
+        "nav.contact":"Kontakt",
+        "hero.title":"Ihr zuverlässiger Partner für Metallkonstruktionen",
+        "hero.desc":"Hersteller von Werbeleuchtkästen, Wegweisern, LED/LCD-Bildschirmen, Bushäuschen und Metallkonstruktionen",
+        "hero.btn":"Anfrage senden",
+        "feat1.title":"Langjährige Erfahrung",
+        "feat1.desc":"Mehrjährige Erfahrung in der Fertigung von Außen-, Flughafen- und Stadtmöbeln sowie Metallkonstruktionen",
+        "feat2.title":"Zertifiziert",
+        "feat2.desc":"Vollständige Branchenzertifikate und Qualitätskontrollsystem",
+        "feat3.title":"Individueller Service",
+        "feat3.desc":"Konstruktion und Fertigung nach Ihren Zeichnungen und Anforderungen",
+        "product.title":"Unsere Produkte",
+        "prod.lightbox":"Werbeleuchtkasten",
+        "prod.lightbox_desc":"Individueller Leuchtkasten für gewerbliche Beschilderung",
+        "prod.sign":"Wegweiser",
+        "prod.sign_desc":"Richtungsweisende Metallschilder",
+        "prod.bus":"Bushäuschen",
+        "prod.bus_desc":"Stadtmöbel für Bushaltestellen",
+        "prod.led":"LED & LCD Displays",
+        "prod.led_desc":"LED Bildschirm, LCD Werbedisplay",
+        "prod.metal":"Metallkonstruktion",
+        "prod.metal_desc":"Individuelle Metall- und Stahlbaufertigung",
+        "prod.other":"Weitere",
+        "prod.other_desc":"Andere individuelle Stadtmöbel-Produkte",
+        "about.title":"Unsere Fabrik",
+        "about.desc":"Professioneller Hersteller von Stadtmöbeln, Metallkonstruktionen, Werbeschildern und Displaygeräten. Individuelle Planung, Fertigung und weltweite Lieferung für Kunden aus Europa, Naher Osten und Amerika.",
+        "inq.title":"Anfrage senden",
+        "inq.company":"Firmenname",
+        "inq.person":"Ansprechpartner",
+        "inq.email":"E-Mail",
+        "inq.interest":"Interessiertes Produkt",
+        "inq.msg":"Nachricht / Anforderungen",
+        "inq.submit":"Absenden"
+    },
+    ja: {
+        "nav.home":"ホーム",
+        "nav.products":"製品",
+        "nav.about":"会社紹介",
+        "nav.contact":"お問い合わせ",
+        "hero.title":"金属構造物の信頼できるパートナー",
+        "hero.desc":"広告ライトボックス、案内標識、LED/LCDディスプレイ、バス待合シェルター、金属構造物メーカー",
+        "hero.btn":"問い合わせ送信",
+        "feat1.title":"豊富な経験",
+        "feat1.desc":"屋外・空港・都市家具および金属構造物製造の長年の実績",
+        "feat2.title":"認証取得",
+        "feat2.desc":"業界認証一式と品質管理体制を保有",
+        "feat3.title":"受注生産サービス",
+        "feat3.desc":"図面やご要望に応じた設計・製作",
+        "product.title":"製品一覧",
+        "prod.lightbox":"広告ライトボックス",
+        "prod.lightbox_desc":"業務用カスタムライトボックス",
+        "prod.sign":"案内標識",
+        "prod.sign_desc":"誘導サイン、金属製案内看板",
+        "prod.bus":"バス待合シェルター",
+        "prod.bus_desc":"都市家具 バス停シェルター",
+        "prod.led":"LED・LCD広告ディスプレイ",
+        "prod.led_desc":"LEDパネル、LCD広告機",
+        "prod.metal":"金属構造物",
+        "prod.metal_desc":"オーダーメイド鉄骨・金属加工",
+        "prod.other":"その他",
+        "prod.other_desc":"その他カスタム都市家具製品",
+        "about.title":"工場紹介",
+        "about.desc":"都市家具、金属構造物、広告標識、ディスプレイ機器の専門メーカー。カスタム設計・製造し、欧州・中東・米国顧客向けにグローバル納品可能。",
+        "inq.title":"お問い合わせ",
+        "inq.company":"会社名",
+        "inq.person":"担当者名",
+        "inq.email":"メールアドレス",
+        "inq.interest":"興味のある製品",
+        "inq.msg":"メッセージ / ご要望",
+        "inq.submit":"送信"
+    },
+    ar: {
+        "nav.home":"الرئيسية",
+        "nav.products":"المنتجات",
+        "nav.about":"من نحن",
+        "nav.contact":"اتصل بنا",
+        "hero.title":"شريكك الموثوق للهياكل المعدنية",
+        "hero.desc":"مصنع صناديق الإعلان المضيئة، لوحات الإرشاد، شاشات LED/LCD، ملاجئ الحافلات والهياكل المعدنية",
+        "hero.btn":"إرسال استفسار",
+        "feat1.title":"خبرة واسعة",
+        "feat1.desc":"سنوات من الخبرة في تصنيع الأثاث الخارجي والمطاري والحضري والهياكل المعدنية",
+        "feat2.title":"معتمد",
+        "feat2.desc":"لدينا شهادات صناعية كاملة ونظام مراقبة جودة",
+        "feat3.title":"خدمة مخصصة",
+        "feat3.desc":"التصميم والتصنيع حسب رسوماتك ومتطلباتك",
+        "product.title":"منتجاتنا",
+        "prod.lightbox":"صندوق إعلان مضيء",
+        "prod.lightbox_desc":"صندوق مضيء مخصص لللافتات التجارية",
+        "prod.sign":"لوحة إرشادية",
+        "prod.sign_desc":"لوحات توجيه وإشارات معدنية",
+        "prod.bus":"مأوى الحافلات",
+        "prod.bus_desc":"أثاث مدني لمحطات الحافلات",
+        "prod.led":"شاشات LED و LCD",
+        "prod.led_desc":"شاشة LED ، جهاز إعلان LCD",
+        "prod.metal":"هيكل معدني",
+        "prod.metal_desc":"تصنيع معدن وهياكل فولاذية مخصصة",
+        "prod.other":"أخرى",
+        "prod.other_desc":"منتجات أثاث مدني مخصص أخرى",
+        "about.title":"مصنعنا",
+        "about.desc":"مصنع متخصص في أثاث المدن والهياكل المعدنية واللوحات الإعلانية وأجهزة العرض. نوفر التصميم والتصنيع والتسليم العالمي لعملاء أوروبا والشرق الأوسط وأمريكا.",
+        "inq.title":"إرسال استفسار",
+        "inq.company":"اسم الشركة",
+        "inq.person":"الشخص المسؤول",
+        "inq.email":"البريد الإلكتروني",
+        "inq.interest":"المنتج المطلوب",
+        "inq.msg":"الرسالة / المتطلبات",
+        "inq.submit":"إرسال"
+    }
+};
+
+// 语言切换函数
+function setLang(langKey){
+    const trans = translations[langKey];
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(trans[key]) el.innerText = trans[key];
+    })
+}
+
+// 下拉切换事件
 const langSelect = document.getElementById('langSelect');
 langSelect.addEventListener('change', function(){
     const val = this.value;
-    if(val === 'es'){
-        window.location.href = 'index-es.html';
-    }else if(val === 'ar'){
-        window.location.href = 'index-ar.html';
-    }else{
-        window.location.href = 'index.html';
-    }
+    setLang(val);
 })
+// 默认英文
+setLang('en');
 </script>
 </body>
 </html>
