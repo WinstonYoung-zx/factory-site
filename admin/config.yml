@@ -2,16 +2,12 @@ backend:
   name: github
   repo: WinstonYoung-zx/factory-site
   branch: main
-  site_url: https://factory-site-six.vercel.app
 
-# 媒体文件上传路径（图片存仓库uploads文件夹）
 media_folder: "uploads"
 public_folder: "/uploads"
 
-# 语言
 locale: en
 
-# 集合：产品管理（支持动态新增产品分类，allow_add:true）
 collections:
   - name: "products"
     label: "Products"
@@ -38,7 +34,6 @@ collections:
       - {label: "Sort Order", name: "sort", widget: "number", default: 10}
       - {label: "Published", name: "published", widget: "boolean", default: true}
 
-  # 网站基础设置（首页标语、优势内容）
   - name: "settings"
     label: "Site Settings"
     files:
