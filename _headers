@@ -1,11 +1,3 @@
 /admin/*
   X-Frame-Options: SAMEORIGIN
-  Content-Security-Policy:
-    default-src 'self';
-    script-src 'self' https://cdn.jsdelivr.net 'unsafe-eval';
-    style-src 'self' 'unsafe-inline';
-    img-src 'self' data:;
-    connect-src 'self' https://cms-gateway.shzxin-cn.workers.dev https://api.github.com;
-    font-src 'self';
-    object-src 'none';
-    base-uri 'self';
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cms-gateway.shzxin-cn.workers.dev https://api.github.com; font-src 'self'; object-src 'none'; base-uri 'self';
