@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZHANXIN - Metal Structure & Signage Manufacturer</title>
     <meta name="description" content="Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures">
-    <!-- 修复路径：加上 ./ 从根目录读取 -->
     <link rel="stylesheet" href="./style.css">
     <style>
-        /* 轮播样式 */
         .hero {
             position: relative;
             height: 85vh;
@@ -31,6 +29,7 @@
         }
         .slide-item.active {
             opacity:1;
+            z-index:2;
         }
         .slide-overlay{
             width:100%;
@@ -40,7 +39,7 @@
         }
         .slide-text-wrap{
             position:relative;
-            z-index:2;
+            z-index:3;
             height:100%;
             display:flex;
             flex-direction:column;
@@ -53,7 +52,7 @@
             transform:translateX(-50%);
             display:flex;
             gap:10px;
-            z-index:3;
+            z-index:4;
         }
         .dot{
             width:12px;height:12px;border-radius:50%;
@@ -67,7 +66,7 @@
             position:absolute;
             top:50%;
             transform:translateY(-50%);
-            z-index:3;
+            z-index:4;
             width:44px;height:44px;
             border-radius:50%;
             background:rgba(255,255,255,0.25);
@@ -76,12 +75,16 @@
         }
         .arrow-prev{left:20px;}
         .arrow-next{right:20px;}
-        /* ==========修复Logo：图片显示，文字隐藏========== */
+        /* Logo兜底样式 */
         .zhanxin-logo {
             height: 44px;
             width: auto;
             display: block;
             object-fit: contain;
+        }
+        .zhanxin-logo::after {
+            content:"ZHANXIN";
+            color:#fff;
         }
         .logo-text{
             display:none !important;
@@ -101,7 +104,6 @@
         .site-logo{
             display:block;
         }
-        /*页脚联系信息*/
         .footer-info {
             margin-top:16px;
             line-height:1.8;
@@ -125,11 +127,9 @@
     </style>
 </head>
 <body>
-<!-- 导航栏 -->
 <header>
     <div class="container nav-wrap">
         <a href="./#home" class="logo-link">
-            <!-- 修复图片路径 -->
             <img id="headerLogo" class="site-logo zhanxin-logo" src="./uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo">
             <span id="logoText" class="logo-text">ZHAN<span>XIN</span></span>
         </a>
@@ -151,7 +151,6 @@
         <button class="mobile-menu-btn">Menu</button>
     </div>
 </header>
-<!-- Hero首屏【轮播滚动大图】 -->
 <section class="hero" id="home">
     <div class="hero-slider">
         <div class="slide-item active" style="background-image:url('./uploads/banner1.jpg')">
@@ -182,12 +181,11 @@
     <button class="slider-arrow arrow-prev">‹</button>
     <button class="slider-arrow arrow-next">›</button>
     <div class="slider-dots">
-        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="0"></span>
         <span class="dot" data-index="1"></span>
         <span class="dot" data-index="2"></span>
     </div>
 </section>
-<!-- 三大优势 -->
 <section class="features">
     <div class="container">
         <div class="feature-grid">
@@ -206,7 +204,6 @@
         </div>
     </div>
 </section>
-<!-- 产品展示 -->
 <section class="products container" id="products">
     <h2 class="section-title" data-i18n="product.title">Our Products</h2>
     <div class="product-grid">
@@ -248,14 +245,12 @@
         </div>
     </div>
 </section>
-<!-- 工厂实力 About Us -->
 <section class="factory" id="about">
     <div class="container">
         <h2 class="section-title" data-i18n="about.title">Our Factory</h2>
         <p data-i18n="about.desc">We are a professional manufacturer for city furniture, metal structures, advertising signage and display equipment. We support full custom design, production and global delivery for Europe, Middle East and America clients.</p>
     </div>
 </section>
-<!-- 询盘表单 -->
 <section class="inquiry container" id="inquiry">
     <h2 class="section-title" data-i18n="inq.title">Send Your Inquiry</h2>
     <div class="form-box">
@@ -282,7 +277,6 @@
         <button class="btn" data-i18n="inq.submit">Submit Inquiry</button>
     </div>
 </section>
-<!-- 页脚 -->
 <footer>
     <div class="container">
         <div class="copyright">
@@ -303,19 +297,22 @@
     </div>
 </footer>
 <script>
-// ==========轮播逻辑==========
+// =========轮播【修复版】，防止定时器重复叠加==========
 let slideIndex = 0;
+let slideTimer = null;
 const slides = document.querySelectorAll('.slide-item');
 const dots = document.querySelectorAll('.dot');
 const prevBtn = document.querySelector('.arrow-prev');
 const nextBtn = document.querySelector('.arrow-next');
-let slideTimer;
+
 function showSlide(idx){
     slides.forEach((s,i)=>{
-        s.classList.toggle('active', i===idx);
+        s.classList.remove('active');
+        if(i===idx) s.classList.add('active');
     })
     dots.forEach((d,i)=>{
-        d.classList.toggle('active', i===idx);
+        d.classList.remove('active');
+        if(i===idx) d.classList.add('active');
     })
 }
 function nextSlide(){
@@ -326,31 +323,32 @@ function prevSlide(){
     slideIndex = (slideIndex -1 + slides.length) % slides.length;
     showSlide(slideIndex);
 }
-function autoSlide(){
+function startAutoSlide(){
+    // 先清除旧定时器，避免多个定时器同时跑
+    if(slideTimer) clearInterval(slideTimer);
     slideTimer = setInterval(nextSlide,5000);
 }
+// 点击圆点
 dots.forEach(dot=>{
     dot.onclick = ()=>{
         slideIndex = Number(dot.dataset.index);
         showSlide(slideIndex);
-        clearInterval(slideTimer);
-        autoSlide();
+        startAutoSlide();
     }
 })
 prevBtn.onclick = ()=>{
     prevSlide();
-    clearInterval(slideTimer);
-    autoSlide();
+    startAutoSlide();
 };
 nextBtn.onclick = ()=>{
     nextSlide();
-    clearInterval(slideTimer);
-    autoSlide();
+    startAutoSlide();
 };
+//初始化
 showSlide(slideIndex);
-autoSlide();
+startAutoSlide();
 
-// =========翻译对象，补充新增轮播文案key=========
+// =========多语言翻译=========
 const translations = {
     en: {
         "nav.home":"Home",
@@ -652,7 +650,6 @@ langSelect.addEventListener('change', function(){
     const val = this.value;
     setLang(val);
 })
-//初始化
 setLang('en');
 </script>
 </body>
