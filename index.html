@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZHANXIN - Metal Structure & Signage Manufacturer</title>
     <meta name="description" content="Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures">
-    <link rel="stylesheet" href="style.css">
+    <!-- 修复路径：加上 ./ 从根目录读取 -->
+    <link rel="stylesheet" href="./style.css">
     <style>
         /* 轮播样式 */
         .hero {
@@ -75,7 +76,6 @@
         }
         .arrow-prev{left:20px;}
         .arrow-next{right:20px;}
-
         /* ==========修复Logo：图片显示，文字隐藏========== */
         .zhanxin-logo {
             height: 44px;
@@ -101,7 +101,6 @@
         .site-logo{
             display:block;
         }
-
         /*页脚联系信息*/
         .footer-info {
             margin-top:16px;
@@ -129,15 +128,16 @@
 <!-- 导航栏 -->
 <header>
     <div class="container nav-wrap">
-        <a href="#" class="logo-link">
-            <img id="headerLogo" class="site-logo zhanxin-logo" src="uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo">
+        <a href="./#home" class="logo-link">
+            <!-- 修复图片路径 -->
+            <img id="headerLogo" class="site-logo zhanxin-logo" src="./uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo">
             <span id="logoText" class="logo-text">ZHAN<span>XIN</span></span>
         </a>
         <ul class="nav-links">
-            <li><a href="#home" data-i18n="nav.home">Home</a></li>
-            <li><a href="#products" data-i18n="nav.products">Products</a></li>
-            <li><a href="#about" data-i18n="nav.about">About Us</a></li>
-            <li><a href="#inquiry" data-i18n="nav.contact">Contact</a></li>
+            <li><a href="./#home" data-i18n="nav.home">Home</a></li>
+            <li><a href="./#products" data-i18n="nav.products">Products</a></li>
+            <li><a href="./#about" data-i18n="nav.about">About Us</a></li>
+            <li><a href="./#inquiry" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <select class="lang-switch" id="langSelect">
             <option value="en">English</option>
@@ -154,28 +154,28 @@
 <!-- Hero首屏【轮播滚动大图】 -->
 <section class="hero" id="home">
     <div class="hero-slider">
-        <div class="slide-item active" style="background-image:url('uploads/banner1.jpg')">
+        <div class="slide-item active" style="background-image:url('./uploads/banner1.jpg')">
             <div class="slide-overlay"></div>
             <div class="container slide-text-wrap">
                 <h1 data-i18n="hero.title">Your Reliable Metal Structure Partner</h1>
                 <p data-i18n="hero.desc">Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures</p>
-                <a href="#inquiry" class="btn" data-i18n="hero.btn">Send Inquiry</a>
+                <a href="./#inquiry" class="btn" data-i18n="hero.btn">Send Inquiry</a>
             </div>
         </div>
-        <div class="slide-item" style="background-image:url('uploads/banner2.jpg')">
+        <div class="slide-item" style="background-image:url('./uploads/banner2.jpg')">
             <div class="slide-overlay"></div>
             <div class="container slide-text-wrap">
                 <h1 data-i18n="hero.title2">Custom Fabrication & Engineering</h1>
                 <p data-i18n="hero.desc2">One‑stop solution for urban furniture, signage, LED screen & metal structure projects</p>
-                <a href="#inquiry" class="btn" data-i18n="hero.btn">Send Inquiry</a>
+                <a href="./#inquiry" class="btn" data-i18n="hero.btn">Send Inquiry</a>
             </div>
         </div>
-        <div class="slide-item" style="background-image:url('uploads/banner3.jpg')">
+        <div class="slide-item" style="background-image:url('./uploads/banner3.jpg')">
             <div class="slide-overlay"></div>
             <div class="container slide-text-wrap">
                 <h1 data-i18n="hero.title3">Export to Europe, Middle East & America</h1>
                 <p data-i18n="hero.desc3">Certified factory with rich experience in international B2B orders</p>
-                <a href="#inquiry" class="btn" data-i18n="hero.btn">Send Inquiry</a>
+                <a href="./#inquiry" class="btn" data-i18n="hero.btn">Send Inquiry</a>
             </div>
         </div>
     </div>
