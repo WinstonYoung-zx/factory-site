@@ -1,137 +1,47 @@
 backend:
   name: git-gateway
   branch: main
-  gateway_url: https://cms-gateway.shzxin-cn.workers.dev
-  auth_type: github
 
-media_folder: "uploads/images"
-public_folder: "/uploads/images"
+media_folder: "uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "products"
-    label: "Products 产品管理"
+    label: "Products"
     folder: "content/products"
     create: true
-    delete: true
-    slug: "{{slug}}"
     fields:
-      - {label: "产品名称(中文)", name: "name_cn", widget: "string"}
-      - {label: "产品名称(英文)", name: "name_en", widget: "string"}
-      - {label: "产品名称(西语)", name: "name_es", widget: "string"}
-      - {label: "产品名称(阿拉伯语)", name: "name_ar", widget: "string"}
-      - {label: "产品名称(德语)", name: "name_de", widget: "string"}
-      - {label: "产品名称(法语)", name: "name_fr", widget: "string"}
-      - {label: "产品名称(日语)", name: "name_jp", widget: "string"}
-
-      - {label: "产品分类", name: "category", widget: "select", options: ["lightbox", "sign", "bus", "display", "metal-structure", "other"], allow_add: true}
-      - {label: "封面图", name: "image", widget: "image"}
-
-      - {label: "简介(中文)", name: "desc_cn", widget: "text"}
-      - {label: "简介(英文)", name: "desc_en", widget: "text"}
-      - {label: "简介(西语)", name: "desc_es", widget: "text"}
-      - {label: "简介(阿拉伯语)", name: "desc_ar", widget: "text"}
-      - {label: "简介(德语)", name: "desc_de", widget: "text"}
-      - {label: "简介(法语)", name: "desc_fr", widget: "text"}
-      - {label: "简介(日语)", name: "desc_jp", widget: "text"}
-
-      - {label: "详细介绍(中文)", name: "detail_cn", widget: "markdown"}
-      - {label: "详细介绍(英文)", name: "detail_en", widget: "markdown"}
-      - {label: "详细介绍(西语)", name: "detail_es", widget: "markdown"}
-      - {label: "详细介绍(阿拉伯语)", name: "detail_ar", widget: "markdown"}
-      - {label: "详细介绍(德语)", name: "detail_de", widget: "markdown"}
-      - {label: "详细介绍(法语)", name: "detail_fr", widget: "markdown"}
-      - {label: "详细介绍(日语)", name: "detail_jp", widget: "markdown"}
-
-      - {label: "排序权重（数字越大越靠前）", name: "sort", widget: "number", value_type: "int", default: 10}
+      - {label: "Product Name", name: "title", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["lightbox", "sign", "bus", "display", "metal-structure", "other"], allow_add: true}
+      - {label: "Cover Image", name: "image", widget: "image"}
+      - {label: "Short Description", name: "desc", widget: "text"}
+      - {label: "Details", name: "body", widget: "markdown"}
 
   - name: "pages"
-    label: "页面管理"
+    label: "Site Pages"
     folder: "content/pages"
-    create: true
-    delete: true
-    slug: "{{slug}}"
+    create: false
     fields:
-      - {label: "页面标题(中文)", name: "title_cn", widget: "string"}
-      - {label: "页面标题(英文)", name: "title_en", widget: "string"}
-      - {label: "页面标题(西语)", name: "title_es", widget: "string"}
-      - {label: "页面标题(阿拉伯语)", name: "title_ar", widget: "string"}
-      - {label: "页面标题(德语)", name: "title_de", widget: "string"}
-      - {label: "页面标题(法语)", name: "title_fr", widget: "string"}
-      - {label: "页面标题(日语)", name: "title_jp", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Content", name: "body", widget: "markdown"}
 
-      - {label: "页面内容(中文)", name: "content_cn", widget: "markdown"}
-      - {label: "页面内容(英文)", name: "content_en", widget: "markdown"}
-      - {label: "页面内容(西语)", name: "content_es", widget: "markdown"}
-      - {label: "页面内容(阿拉伯语)", name: "content_ar", widget: "markdown"}
-      - {label: "页面内容(德语)", name: "content_de", widget: "markdown"}
-      - {label: "页面内容(法语)", name: "content_fr", widget: "markdown"}
-      - {label: "页面内容(日语)", name: "content_jp", widget: "markdown"}
+  - name: "settings"
+    label: "Website Settings"
+    files:
+      - label: "Global Site Config"
+        name: "global"
+        file: "content/settings/global.yml"
+        fields:
+          - {label: "Site Title", name: "site_title", widget: "string"}
+          - {label: "Meta Description", name: "site_desc", widget: "text"}
 
   - name: "inquiry"
-    label: "询盘设置"
-    file: "content/inquiry.yml"
-    create: false
+    label: "Inquiry Messages"
+    folder: "content/inquiry"
+    create: true
     fields:
-      - {label: "询盘接收邮箱", name: "email", widget: "string"}
-      - {label: "表单提示文字(中文)", name: "tip_cn", widget: "string"}
-      - {label: "表单提示文字(英文)", name: "tip_en", widget: "string"}
-      - {label: "表单提示文字(西语)", name: "tip_es", widget: "string"}
-      - {label: "表单提示文字(阿拉伯语)", name: "tip_ar", widget: "string"}
-      - {label: "表单提示文字(德语)", name: "tip_de", widget: "string"}
-      - {label: "表单提示文字(法语)", name: "tip_fr", widget: "string"}
-      - {label: "表单提示文字(日语)", name: "tip_jp", widget: "string"}
-
-  - name: "site"
-    label: "网站全局设置"
-    file: "content/site.yml"
-    create: false
-    fields:
-      - {label: "网站标题(中文)", name: "site_title_cn", widget: "string"}
-      - {label: "网站标题(英文)", name: "site_title_en", widget: "string"}
-      - {label: "网站标题(西语)", name: "site_title_es", widget: "string"}
-      - {label: "网站标题(阿拉伯语)", name: "site_title_ar", widget: "string"}
-      - {label: "网站标题(德语)", name: "site_title_de", widget: "string"}
-      - {label: "网站标题(法语)", name: "site_title_fr", widget: "string"}
-      - {label: "网站标题(日语)", name: "site_title_jp", widget: "string"}
-
-      - {label: "网站Logo", name: "logo", widget: "image"}
-
-      - {label: "首页轮播图", name: "banners", widget: "list", fields:
-          [
-            {label: "图片", name: "img", widget: "image"},
-            {label: "标语(中文)", name: "text_cn", widget: "string"},
-            {label: "标语(英文)", name: "text_en", widget: "string"},
-            {label: "标语(西语)", name: "text_es", widget: "string"},
-            {label: "标语(阿拉伯语)", name: "text_ar", widget: "string"},
-            {label: "标语(德语)", name: "text_de", widget: "string"},
-            {label: "标语(法语)", name: "text_fr", widget: "string"},
-            {label: "标语(日语)", name: "text_jp", widget: "string"}
-          ]
-      }
-      - {label: "三大优势", name: "advantages", widget: "list", fields:
-          [
-            {label: "标题(中文)", name: "title_cn", widget: "string"},
-            {label: "标题(英文)", name: "title_en", widget: "string"},
-            {label: "标题(西语)", name: "title_es", widget: "string"},
-            {label: "标题(阿拉伯语)", name: "title_ar", widget: "string"},
-            {label: "标题(德语)", name: "title_de", widget: "string"},
-            {label: "标题(法语)", name: "title_fr", widget: "string"},
-            {label: "标题(日语)", name: "title_jp", widget: "string"},
-
-            {label: "描述(中文)", name: "desc_cn", widget: "string"},
-            {label: "描述(英文)", name: "desc_en", widget: "string"},
-            {label: "描述(西语)", name: "desc_es", widget: "string"},
-            {label: "描述(阿拉伯语)", name: "desc_ar", widget: "string"},
-            {label: "描述(德语)", name: "desc_de", widget: "string"},
-            {label: "描述(法语)", name: "desc_fr", widget: "string"},
-            {label: "描述(日语)", name: "desc_jp", widget: "string"}
-          ]
-      }
-      - {label: "公司联系信息", name: "contact", widget: "object", fields:
-          [
-            {label: "公司名称", name: "company", widget: "string"},
-            {label: "邮箱", name: "mail", widget: "string"},
-            {label: "WhatsApp", name: "whatsapp", widget: "string"},
-            {label: "地址英文", name: "address_en", widget: "string"}
-          ]
-      }
+      - {label: "Company", name: "company", widget: "string"}
+      - {label: "Contact Name", name: "name", widget: "string"}
+      - {label: "Email", name: "email", widget: "string"}
+      - {label: "Product Interest", name: "product", widget: "string"}
+      - {label: "Message", name: "msg", widget: "text"}
