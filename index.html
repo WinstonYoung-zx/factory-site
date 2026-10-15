@@ -7,9 +7,9 @@
     <meta name="description" content="Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures">
     <link rel="stylesheet" href="./style.css">
     <style>
-        /* Logo：临时使用文字Logo，图片后续再启用 */
+        /* Logo：图片优先，文字作为降级备用 */
         .logo-text{
-            display:block;
+            display:none;
             font-size:28px;
             font-weight:bold;
             color:#fff;
@@ -22,6 +22,12 @@
             display:flex;
             align-items:center;
             gap:8px;
+        }
+        .site-logo {
+            height: 42px;
+            width: auto;
+            display:block;
+            object-fit:contain;
         }
         .footer-info {
             margin-top:16px;
@@ -49,9 +55,9 @@
 <header>
     <div class="container nav-wrap">
         <a href="./#home" class="logo-link">
-            <!-- 图片Logo暂时注释，图片准备好再取消注释 -->
-            <!-- <img id="headerLogo" class="site-logo zhanxin-logo" src="./uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo"> -->
-            <span class="logo-text">ZHAN<span>XIN</span></span>
+            <!-- 图片Logo启用，如果图片404，注释img，打开下面文字 -->
+            <img id="headerLogo" class="site-logo" src="./uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo">
+            <!-- <span class="logo-text">ZHAN<span>XIN</span></span> -->
         </a>
         <ul class="nav-links">
             <li><a href="./#home" data-i18n="nav.home">Home</a></li>
@@ -223,7 +229,6 @@ const slides = document.querySelectorAll('.slide-item');
 const dots = document.querySelectorAll('.dot');
 const prevBtn = document.querySelector('.arrow-prev');
 const nextBtn = document.querySelector('.arrow-next');
-
 function showSlide(idx){
     slides.forEach((s,i)=>{
         s.classList.remove('active');
@@ -263,7 +268,6 @@ nextBtn.onclick = ()=>{
 };
 showSlide(slideIndex);
 startAutoSlide();
-
 const translations = {
     en: {
         "nav.home":"Home",
