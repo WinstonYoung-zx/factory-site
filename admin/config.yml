@@ -37,8 +37,8 @@ collections:
         file: "content/home.md"
         fields:
           - {label: "Hero Title", name: "title", widget: "string"}
-          - {label: "Hero Subtitle", name: "subtitle", widget: "string"}
           - {label: "Banner Image", name: "banner", widget: "image"}
+          - {label: "Hero Subtitle", name: "subtitle", widget: "string"}
           - {label: "Advantage 1", name: "adv1", widget: "string"}
           - {label: "Advantage 2", name: "adv2", widget: "string"}
           - {label: "Advantage 3", name: "adv3", widget: "string"}
