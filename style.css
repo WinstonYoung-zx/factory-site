@@ -50,7 +50,7 @@ header {
     text-decoration: none;
 }
 .site-logo {
-    height: 42px;
+    height: 44px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -104,7 +104,6 @@ header {
     color:var(--white);
     padding:8px 12px;
 }
-
 /* ========== Hero轮播【修复背景图渲染】 ========== */
 .hero {
     height: 85vh;
@@ -185,7 +184,6 @@ header {
 }
 .slider-arrow.arrow-prev { left:16px; }
 .slider-arrow.arrow-next { right:16px; }
-
 .btn {
     display: inline-block;
     background: var(--accent);
@@ -200,7 +198,6 @@ header {
 .btn:hover {
     background: var(--accent-dark);
 }
-
 /* 三大优势区块 */
 .features {
     padding:5rem 0;
@@ -227,7 +224,6 @@ header {
     margin-bottom:1rem;
     font-size:1.3rem;
 }
-
 /* 产品列表 */
 .products {
     padding:5rem 0;
@@ -249,13 +245,11 @@ header {
     color:var(--accent);
     margin-bottom:0.6rem;
 }
-
 /* about板块 */
 .factory {
     padding:5rem 0;
     background-color: var(--primary-light);
 }
-
 /* 询盘表单 */
 .inquiry {
     padding:5rem 0;
@@ -287,7 +281,6 @@ header {
     min-height:140px;
     resize: vertical;
 }
-
 /* 页脚 */
 footer {
     background:#07203b;
@@ -334,7 +327,6 @@ footer {
     color:var(--gray);
     font-size:0.9rem;
 }
-
 /* 全局：清除所有a标签浏览器默认蓝色 */
 a {
     color: var(--white);
@@ -344,7 +336,6 @@ a {
 a:hover {
     color: var(--accent);
 }
-
 /* 移动端适配 */
 @media (max-width:768px) {
     .nav-links {
@@ -352,6 +343,9 @@ a:hover {
     }
     .mobile-menu-btn {
         display:block;
+    }
+    .site-logo {
+        height:36px;
     }
     .hero h1 {
         font-size:2rem;
