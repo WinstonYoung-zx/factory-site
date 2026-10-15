@@ -1,6 +1,6 @@
 /* style.css 外贸B2B独立站
 主色：深蓝 #0f3460，强调橙 #e67e22
-修复：a标签默认蓝色、导航链接、询盘按钮，轮播、logo图片、移动端菜单
+修复：a标签默认蓝色、导航链接、询盘按钮，轮播背景图渲染bug、logo图片、移动端菜单
 */
 :root {
     --primary: #0f3460;
@@ -28,7 +28,6 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
 /* 导航栏 */
 header {
     background-color: rgba(15, 52, 96, 0.95);
@@ -43,8 +42,7 @@ header {
     align-items: center;
     padding:1rem 20px;
 }
-
-/* ========== Logo 新增 ========== */
+/* ========== Logo ========== */
 .logo-link {
     display: flex;
     align-items: center;
@@ -66,7 +64,6 @@ header {
 .logo-text span {
     color: var(--accent);
 }
-
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -80,7 +77,6 @@ header {
 .nav-links a:hover {
     color: var(--accent);
 }
-
 /* 移动端展开菜单 */
 .nav-links.mobile-open {
     position: absolute;
@@ -93,7 +89,6 @@ header {
     gap: 1rem;
     padding: 1rem 20px;
 }
-
 .lang-switch {
     padding:6px 10px;
     border-radius:4px;
@@ -110,7 +105,7 @@ header {
     padding:8px 12px;
 }
 
-/* ========== Hero轮播样式（index.html轮播必须） ========== */
+/* ========== Hero轮播【修复背景图渲染】 ========== */
 .hero {
     height: 85vh;
     position: relative;
@@ -126,25 +121,26 @@ header {
     background-size: cover;
     background-position: center center;
     opacity: 0;
-    transition: opacity 0.7s ease;
+    visibility: hidden;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
 }
 .slide-item.active {
     opacity: 1;
+    visibility: visible;
+    z-index:2;
 }
 .slide-overlay {
     position:absolute;
     inset:0;
     background-color: rgba(15, 52, 96, 0.65);
 }
-.hero-content {
+.slide-text-wrap {
     position: relative;
-    z-index:2;
+    z-index:3;
     height:100%;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    align-items:center;
-    text-align:center;
 }
 .hero h1 {
     font-size: 2.8rem;
@@ -162,7 +158,7 @@ header {
     transform: translateX(-50%);
     display:flex;
     gap:10px;
-    z-index:3;
+    z-index:4;
 }
 .dot {
     width:12px;
@@ -178,7 +174,7 @@ header {
     position:absolute;
     top:50%;
     transform: translateY(-50%);
-    z-index:3;
+    z-index:4;
     background:rgba(255,255,255,0.2);
     color:#fff;
     border:none;
@@ -187,10 +183,10 @@ header {
     font-size:22px;
     cursor:pointer;
 }
-.slider-arrow.prev { left:16px; }
-.slider-arrow.next { right:16px; }
+.slider-arrow.arrow-prev { left:16px; }
+.slider-arrow.arrow-next { right:16px; }
 
-.btn-orange {
+.btn {
     display: inline-block;
     background: var(--accent);
     color: var(--white);
@@ -201,7 +197,7 @@ header {
     border:none;
     cursor:pointer;
 }
-.btn-orange:hover {
+.btn:hover {
     background: var(--accent-dark);
 }
 
@@ -215,7 +211,6 @@ header {
     font-size:2rem;
     margin-bottom:3rem;
 }
-/* 修复类名：html用 features‑grid */
 .features-grid {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -234,7 +229,7 @@ header {
 }
 
 /* 产品列表 */
-.product-preview {
+.products {
     padding:5rem 0;
 }
 .product-grid {
@@ -247,54 +242,40 @@ header {
     border-radius:8px;
     overflow:hidden;
 }
-.product-card img {
-    width:100%;
-    height:200px;
-    object-fit:cover;
+.product-card .card-body {
+    padding:1.2rem;
 }
 .product-card h3 {
-    padding:1.2rem 1.2rem 0;
     color:var(--accent);
     margin-bottom:0.6rem;
 }
-.center-btn {
-    text-align:center;
-    margin-top:2.5rem;
-}
 
 /* about板块 */
-.about {
+.factory {
     padding:5rem 0;
     background-color: var(--primary-light);
 }
-.about-text {
-    max-width:800px;
-    margin:0 auto;
-    text-align:center;
-}
-.about-text p {
-    margin-bottom:2rem;
-}
 
 /* 询盘表单 */
-.contact {
+.inquiry {
     padding:5rem 0;
 }
-.inquiry-form {
+.form-box {
     max-width:700px;
     margin:0 auto;
     background:rgba(255,255,255,0.08);
     padding:2.5rem;
     border-radius:8px;
 }
-.form-row {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:1rem;
+.form-group {
     margin-bottom:1.2rem;
 }
-.inquiry-form input,
-.inquiry-form textarea {
+.form-group label {
+    display:block;
+    margin-bottom:0.4rem;
+}
+.form-group input,
+.form-group textarea {
     width:100%;
     padding:12px;
     border-radius:4px;
@@ -302,10 +283,9 @@ header {
     font-size:1rem;
     color:var(--text-dark);
 }
-.inquiry-form textarea {
+.form-group textarea {
     min-height:140px;
     resize: vertical;
-    margin-bottom:1.2rem;
 }
 
 /* 页脚 */
@@ -327,6 +307,26 @@ footer {
 }
 .footer-col li {
     margin: 6px 0;
+}
+.footer-info {
+    margin-top:16px;
+    line-height:1.8;
+    font-size:14px;
+}
+.footer-info a{
+    color:#ff7800;
+    text-decoration:none;
+}
+.footer-info a:hover{
+    text-decoration:underline;
+}
+.social-links{
+    margin-top:12px;
+}
+.social-links a{
+    display:inline-block;
+    margin-right:12px;
+    color:#fff;
 }
 .copyright {
     text-align:center;
@@ -361,9 +361,6 @@ a:hover {
     }
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
-    }
-    .form-row {
-        grid-template-columns:1fr;
     }
 }
 @media (max-width:480px) {
