@@ -1,9 +1,12 @@
 backend:
-  name: file-system
+  name: git-gateway
+  branch: main
+  gateway_url: https://cms-gateway.shzxin-cn.workers.dev
+
 media_folder: "uploads"
 public_folder: "/uploads"
 locale: en
-site_url: "https://www.zhanxinglobal.com"
+site_url: "https://factory-site.pages.dev"
 
 collections:
   - name: "products"
@@ -37,8 +40,8 @@ collections:
         file: "content/home.md"
         fields:
           - {label: "Hero Title", name: "title", widget: "string"}
-          - {label: "Banner Image", name: "banner", widget: "image"}
           - {label: "Hero Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Banner Image", name: "banner", widget: "image"}
           - {label: "Advantage 1", name: "adv1", widget: "string"}
           - {label: "Advantage 2", name: "adv2", widget: "string"}
           - {label: "Advantage 3", name: "adv3", widget: "string"}
