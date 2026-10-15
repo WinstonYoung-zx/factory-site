@@ -23,12 +23,14 @@
             width:100%;
             height:100%;
             opacity:0;
-            transition: opacity 0.8s ease;
+            visibility:hidden;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
             background-size: cover;
             background-position: center;
         }
         .slide-item.active {
             opacity:1;
+            visibility:visible;
             z-index:2;
         }
         .slide-overlay{
@@ -75,20 +77,11 @@
         }
         .arrow-prev{left:20px;}
         .arrow-next{right:20px;}
-        /* Logo兜底样式 */
-        .zhanxin-logo {
-            height: 44px;
-            width: auto;
-            display: block;
-            object-fit: contain;
-        }
-        .zhanxin-logo::after {
-            content:"ZHANXIN";
-            color:#fff;
-        }
+
+        /* Logo：临时使用文字Logo，图片后续再启用 */
         .logo-text{
-            display:none !important;
-            font-size:42px;
+            display:block;
+            font-size:28px;
             font-weight:bold;
             color:#fff;
         }
@@ -100,9 +93,6 @@
             display:flex;
             align-items:center;
             gap:8px;
-        }
-        .site-logo{
-            display:block;
         }
         .footer-info {
             margin-top:16px;
@@ -130,8 +120,9 @@
 <header>
     <div class="container nav-wrap">
         <a href="./#home" class="logo-link">
-            <img id="headerLogo" class="site-logo zhanxin-logo" src="./uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo">
-            <span id="logoText" class="logo-text">ZHAN<span>XIN</span></span>
+            <!-- 图片Logo暂时注释，图片准备好再取消注释 -->
+            <!-- <img id="headerLogo" class="site-logo zhanxin-logo" src="./uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo"> -->
+            <span class="logo-text">ZHAN<span>XIN</span></span>
         </a>
         <ul class="nav-links">
             <li><a href="./#home" data-i18n="nav.home">Home</a></li>
@@ -297,7 +288,6 @@
     </div>
 </footer>
 <script>
-// =========轮播【修复版】，防止定时器重复叠加==========
 let slideIndex = 0;
 let slideTimer = null;
 const slides = document.querySelectorAll('.slide-item');
@@ -324,11 +314,9 @@ function prevSlide(){
     showSlide(slideIndex);
 }
 function startAutoSlide(){
-    // 先清除旧定时器，避免多个定时器同时跑
     if(slideTimer) clearInterval(slideTimer);
     slideTimer = setInterval(nextSlide,5000);
 }
-// 点击圆点
 dots.forEach(dot=>{
     dot.onclick = ()=>{
         slideIndex = Number(dot.dataset.index);
@@ -344,11 +332,9 @@ nextBtn.onclick = ()=>{
     nextSlide();
     startAutoSlide();
 };
-//初始化
 showSlide(slideIndex);
 startAutoSlide();
 
-// =========多语言翻译=========
 const translations = {
     en: {
         "nav.home":"Home",
