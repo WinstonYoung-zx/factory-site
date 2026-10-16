@@ -83,9 +83,8 @@
         #formTip.error {
             color:#ff8888;
         }
-        /* turnstile间距 */
         .cf-turnstile {
-            margin:1rem 0;
+            margin: 1rem 0;
         }
     </style>
 </head>
@@ -239,9 +238,8 @@
                 <label data-i18n="inq.msg">Message / Requirements</label>
                 <textarea name="message" required></textarea>
             </div>
-            <!-- Turnstile 人机验证组件，替换data-sitekey为你自己的Sitekey -->
+            <!-- 替换为你的Turnstile Sitekey -->
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu" data-theme="light"></div>
-
             <button type="submit" class="btn" data-i18n="inq.submit">Submit Inquiry</button>
         </form>
         <div id="formTip" style="margin-top:1rem;"></div>
@@ -313,14 +311,13 @@ nextBtn.onclick = ()=>{
 showSlide(slideIndex);
 startAutoSlide();
 
-// ========== Turnstile新版表单提交JS（发送JSON，携带turnstileToken） ==========
+// ========== Turnstile新版表单提交JS 修复Content‑Type短横线 ==========
 document.querySelector("#inquiryForm").addEventListener("submit", async function (e) {
     e.preventDefault();
     const tipDom = document.querySelector("#formTip");
     tipDom.className = "";
     tipDom.innerText = "Submitting...";
 
-    // 获取表单字段
     const company = this.querySelector('[name="company"]').value.trim();
     const contact = this.querySelector('[name="name"]').value.trim();
     const email = this.querySelector('[name="email"]').value.trim();
@@ -333,7 +330,7 @@ document.querySelector("#inquiryForm").addEventListener("submit", async function
         const res = await fetch(workerUrl, {
             method: "POST",
             headers: {
-                "Content‑Type": "application/json"
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 company,
