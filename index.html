@@ -71,6 +71,16 @@
             margin-right:12px;
             color:#fff;
         }
+        /* 表单提示文字颜色 */
+        #formTip {
+            margin-top:1rem;
+        }
+        #formTip.success {
+            color:#72e072;
+        }
+        #formTip.error {
+            color:#ff8888;
+        }
     </style>
 </head>
 <body>
@@ -136,7 +146,7 @@
 </section>
 <section class="features">
     <div class="container">
-        <div class="feature-grid">
+        <div class="features-grid">
             <div class="feature-card">
                 <h3 data-i18n="feat1.title">Rich Experience</h3>
                 <p data-i18n="feat1.desc">Years of outdoor, airport and urban furniture & metal structure manufacturing experience</p>
@@ -294,27 +304,32 @@ nextBtn.onclick = ()=>{
 showSlide(slideIndex);
 startAutoSlide();
 
-// 表单提交
+// ========== 修改后的表单提交JS ==========
 document.querySelector("#inquiryForm").addEventListener("submit", async function (e) {
     e.preventDefault();
     const tipDom = document.querySelector("#formTip");
+    tipDom.className = "";
     tipDom.innerText = "Submitting...";
     const formData = new FormData(this);
+    const workerUrl = "https://zhanxin-form.shzxin-cn.workers.dev";
     try {
-        const workerUrl = "https://zhanxin-form.shzxin-cn.workers.dev";
         const res = await fetch(workerUrl, {
             method: "POST",
             body: formData
         });
         const ret = await res.json();
         if (ret.ok) {
+            tipDom.className = "success";
             tipDom.innerText = "✅ Inquiry sent successfully! We will contact you soon.";
             this.reset();
         } else {
-            tipDom.innerText = "❌ Submit failed, please try again later.";
+            tipDom.className = "error";
+            tipDom.innerText = "❌ " + (ret.msg || "Submit failed, please try again later.");
         }
     } catch (err) {
+        tipDom.className = "error";
         tipDom.innerText = "❌ Network error, please try again.";
+        console.error(err);
     }
 })
 
