@@ -22,6 +22,8 @@
         "email":"sales@zhanxinglobal.com"
     }
     </script>
+    <!-- Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
         /* Logo：图片优先，文字作为降级备用 */
         .logo-text{
@@ -80,6 +82,10 @@
         }
         #formTip.error {
             color:#ff8888;
+        }
+        /* turnstile间距 */
+        .cf-turnstile {
+            margin:1rem 0;
         }
     </style>
 </head>
@@ -233,6 +239,9 @@
                 <label data-i18n="inq.msg">Message / Requirements</label>
                 <textarea name="message" required></textarea>
             </div>
+            <!-- Turnstile 人机验证组件，替换data-sitekey为你自己的Sitekey -->
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu" data-theme="light"></div>
+
             <button type="submit" class="btn" data-i18n="inq.submit">Submit Inquiry</button>
         </form>
         <div id="formTip" style="margin-top:1rem;"></div>
@@ -304,31 +313,52 @@ nextBtn.onclick = ()=>{
 showSlide(slideIndex);
 startAutoSlide();
 
-// ========== 修改后的表单提交JS ==========
+// ========== Turnstile新版表单提交JS（发送JSON，携带turnstileToken） ==========
 document.querySelector("#inquiryForm").addEventListener("submit", async function (e) {
     e.preventDefault();
     const tipDom = document.querySelector("#formTip");
     tipDom.className = "";
     tipDom.innerText = "Submitting...";
-    const formData = new FormData(this);
+
+    // 获取表单字段
+    const company = this.querySelector('[name="company"]').value.trim();
+    const contact = this.querySelector('[name="name"]').value.trim();
+    const email = this.querySelector('[name="email"]').value.trim();
+    const product = this.querySelector('[name="product"]').value.trim();
+    const message = this.querySelector('[name="message"]').value.trim();
+    const turnstileToken = document.querySelector('input[name="cf-turnstile-response"]')?.value || "";
+
     const workerUrl = "https://zhanxin-form.shzxin-cn.workers.dev";
     try {
         const res = await fetch(workerUrl, {
             method: "POST",
-            body: formData
+            headers: {
+                "Content‑Type": "application/json"
+            },
+            body: JSON.stringify({
+                company,
+                contact,
+                email,
+                product,
+                message,
+                turnstileToken
+            })
         });
         const ret = await res.json();
-        if (ret.ok) {
+        if (ret.success) {
             tipDom.className = "success";
             tipDom.innerText = "✅ Inquiry sent successfully! We will contact you soon.";
             this.reset();
+            if(window.turnstile) window.turnstile.reset();
         } else {
             tipDom.className = "error";
-            tipDom.innerText = "❌ " + (ret.msg || "Submit failed, please try again later.");
+            tipDom.innerText = "❌ " + (ret.error || "Submit failed, please try again later.");
+            if(window.turnstile) window.turnstile.reset();
         }
     } catch (err) {
         tipDom.className = "error";
         tipDom.innerText = "❌ Network error, please try again.";
+        if(window.turnstile) window.turnstile.reset();
         console.error(err);
     }
 })
