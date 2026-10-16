@@ -12,10 +12,13 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#0F3460',
-                        accent: '#ff7800',
-                        dark: '#0A2442',
-                        light: '#ffffff'
+                        primary: '#0F2A44',      /*主色：深海军蓝 稳重工业风*/
+                        accent: '#D4750B',       /*强调色：低饱和橙，仅小面积点缀*/
+                        secondaryBlue: '#1367B2',/*辅助蓝，链接/图标*/
+                        bodyText: '#333333',     /*正文颜色*/
+                        mutedText: '#555555',    /*辅助说明文字*/
+                        borderGrayBlue: '#D9DEE3',/*蓝灰色边框*/
+                        footerBg: '#0B1F33'      /*页脚背景，低饱和深蓝*/
                     },
                     fontFamily: {
                         inter: ['Inter', 'sans-serif'],
@@ -26,33 +29,27 @@
     </script>
     <style>
         body {
-            background-color: #fff;
+            background-color: #ffffff;
+            color: #333333;
         }
-        .card-header-blue {
-            background-color: #0F3460;
-            color:white;
-            padding:12px 20px;
-            font-weight:600;
-            font-size:1.1rem;
-            border-radius: 8px 8px 0 0;
-        }
-        .card-header-orange {
-            background-color: #ff7800;
-            color:white;
+        /*卡片头部统一深海军蓝，取消橙色大块头部 */
+        .card-header {
+            background-color: #0F2A44;
+            color:#ffffff;
             padding:12px 20px;
             font-weight:600;
             font-size:1.1rem;
             border-radius: 8px 8px 0 0;
         }
         .card-body-primary {
-            border:1px solid #e8e8e8;
+            border:1px solid #D9DEE3;
             border-top:none;
             padding:24px;
             border-radius:0 0 8px 8px;
             height:100%;
         }
         .card-mini {
-            border:1px solid #e8e8e8;
+            border:1px solid #D9DEE3;
             border-radius:8px;
             padding:26px;
             background:#fff;
@@ -60,22 +57,22 @@
         }
     </style>
 </head>
-<body class="font-inter text-gray-700 bg-white">
-    <!-- 顶部导航栏 -->
-    <header class="w-full bg-primary">
+<body class="font-inter">
+    <!-- 顶部导航：白色背景，去除满版深蓝色 -->
+    <header class="w-full bg-white border-b border-borderGrayBlue shadow-sm">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <a href="/" class="flex items-center gap-2">
                     <img src="/uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo" class="h-9">
                 </a>
-                <nav class="hidden md:flex items-center gap-8 text-white text-base">
-                    <a href="/" data-i18n="nav.home" class="hover:text-orange-400 transition-colors">Home</a>
-                    <a href="/products" data-i18n="nav.products" class="hover:text-orange-400 transition-colors">Products</a>
-                    <a href="/about" data-i18n="nav.about" class="text-accent font-semibold border-b-2 border-accent pb-1">About</a>
-                    <a href="/contact" data-i18n="nav.quote" class="hover:text-orange-400 transition-colors">Get a Quote</a>
+                <nav class="hidden md:flex items-center gap-8 text-base">
+                    <a href="/" data-i18n="nav.home" class="text-bodyText hover:text-secondaryBlue transition-colors">Home</a>
+                    <a href="/products" data-i18n="nav.products" class="text-bodyText hover:text-secondaryBlue transition-colors">Products</a>
+                    <a href="/about" data-i18n="nav.about" class="text-primary font-semibold border-b-2 border-accent pb-1">About</a>
+                    <a href="/contact" data-i18n="nav.quote" class="text-bodyText hover:text-secondaryBlue transition-colors">Get a Quote</a>
                 </nav>
                 <div>
-                    <select id="langSelect" class="text-sm rounded px-2 py-1 bg-white">
+                    <select id="langSelect" class="text-sm rounded px-2 py-1 bg-white border border-borderGrayBlue">
                         <option value="en">English</option>
                         <option value="zh">中文</option>
                         <option value="fr">Français</option>
@@ -93,7 +90,7 @@
         <!-- 页面标题区域 -->
         <section class="mb-10 text-center">
             <h1 data-i18n="about.page_title" class="text-[clamp(1.8rem,4vw,2.4rem)] font-bold text-primary">About SHANGHAI ZHANXIN</h1>
-            <p data-i18n="about.page_subtitle" class="text-lg text-gray-600 mt-3 max-w-4xl mx-auto">Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects</p>
+            <p data-i18n="about.page_subtitle" class="text-lg text-mutedText mt-3 max-w-4xl mx-auto">Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects</p>
         </section>
 
         <!-- 工厂大图 -->
@@ -101,22 +98,22 @@
             <img src="/uploads/factory-wide.jpg" alt="Zhanxin manufacturing workshop" class="w-full h-auto object-cover">
         </div>
 
-        <!-- 顶部三栏卡片 Company Profile / Our Strength / Quality & Compliance【等高】 -->
+        <!-- 顶部三栏卡片【全部统一深蓝色头部，等高布局】 -->
         <div class="grid md:grid-cols-3 gap-6 mb-12">
             <!-- Company Profile -->
             <div class="flex flex-col">
-                <div class="card-header-blue">Company Profile</div>
+                <div class="card-header">Company Profile</div>
                 <div class="card-body-primary">
-                    <p data-i18n="about.card1_text" class="text-gray-700 leading-relaxed">
+                    <p data-i18n="about.card1_text" class="text-bodyText leading-relaxed">
                         We are a factory specialized in outdoor, airport and urban furniture and metal structure project manufacturing.
                     </p>
                 </div>
             </div>
             <!-- Our Strength -->
             <div class="flex flex-col">
-                <div class="card-header-orange">Our Strength</div>
+                <div class="card-header">Our Strength</div>
                 <div class="card-body-primary">
-                    <ul class="space-y-2.5 text-gray-700">
+                    <ul class="space-y-2.5 text-bodyText">
                         <li data-i18n="about.str1">• Custom steel & aluminum structure solution</li>
                         <li data-i18n="about.str2">• Large size LED/LCD screen mounting structure</li>
                         <li data-i18n="about.str3">• Urban & airport furniture and bus shelter</li>
@@ -126,95 +123,94 @@
             </div>
             <!-- Quality & Compliance -->
             <div class="flex flex-col">
-                <div class="card-header-blue">Quality & Compliance</div>
+                <div class="card-header">Quality & Compliance</div>
                 <div class="card-body-primary">
-                    <ul class="space-y-2 text-sm text-gray-700">
+                    <ul class="space-y-2 text-sm text-mutedText">
                         <li data-i18n="about.qua1">• Work Safety Production License (China) — licensed manufacturer for metal fabrication</li>
                         <li data-i18n="about.qua2">• Quality management system aligned in accordance with ISO 9001 / 14001 / 45001</li>
                         <li data-i18n="about.qua3">• Incoming material inspection, in process check and 100% final inspection before shipment</li>
                         <li data-i18n="about.qua4">• Material certificates EN 10204 & 3.1 available from the steel mill</li>
                         <li data-i18n="about.qua5">• Welding procedure qualification (WPS/PQR) and welder qualification records available</li>
-                        <li data-i18n="about.qua6">• Third-party lab reports (IEC 60529) for outdoor enclosures available on project basis</li>
+                        <li data-i18n="about.qua6">• Third‑party lab reports (IEC 60529) for outdoor enclosures available on project basis</li>
                         <li data-i18n="about.qua7">• Pre shipment Inspection by a third party can be arranged at buyer's request</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- 第二排三栏小卡片【等高】 -->
+        <!-- 第二排三栏小卡片【等高，橙色仅用于图标小面积】 -->
         <div class="grid md:grid-cols-3 gap-6 mb-12">
             <div class="card-mini flex flex-col">
                 <div class="flex items-center gap-2 mb-3">
                     <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     <h4 data-i18n="about.mini1_title" class="font-semibold text-primary">Custom fabrication & production</h4>
                 </div>
-                <p data-i18n="about.mini1_text" class="text-sm text-gray-600 leading-relaxed flex-grow">Quality management system standard, reliable airport and furniture manufacturing and metal & project manufacturing.</p>
+                <p data-i18n="about.mini1_text" class="text-sm text-mutedText leading-relaxed flex-grow">Quality management system standard, reliable airport and furniture manufacturing and metal & project manufacturing.</p>
             </div>
             <div class="card-mini flex flex-col">
                 <div class="flex items-center gap-2 mb-3">
                     <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     <h4 data-i18n="about.mini2_title" class="font-semibold text-primary">Custom manufacture for custom solution</h4>
                 </div>
-                <p data-i18n="about.mini2_text" class="text-sm text-gray-600 leading-relaxed flex-grow">Customized manufacture equipment, with comprehensive customization capability, and Support OEM / ODM.</p>
+                <p data-i18n="about.mini2_text" class="text-sm text-mutedText leading-relaxed flex-grow">Customized manufacture equipment, with comprehensive customization capability, and Support OEM / ODM.</p>
             </div>
             <div class="card-mini flex flex-col">
                 <div class="flex items-center gap-2 mb-3">
                     <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    <h4 data-i18n="about.mini3_title" class="font-semibold text-accent">Compliance</h4>
+                    <h4 data-i18n="about.mini3_title" class="font-semibold text-primary">Compliance</h4>
                 </div>
-                <p data-i18n="about.mini3_text" class="text-sm text-gray-600 leading-relaxed flex-grow">Work Safety Production License, Certified systems, testing, Reports. Support: WhatsApp & ODM @zhanxinglobal.com</p>
+                <p data-i18n="about.mini3_text" class="text-sm text-mutedText leading-relaxed flex-grow">Work Safety Production License, Certified systems, testing, Reports. Support: WhatsApp & ODM @zhanxinglobal.com</p>
             </div>
         </div>
 
         <!-- Google Map + Contact Info 等高区域 -->
         <div class="grid md:grid-cols-2 gap-8 items-stretch">
-            <div class="rounded-lg overflow-hidden border border-gray-200">
+            <div class="rounded-lg overflow-hidden border border-borderGrayBlue">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.806466665293!2d121.05610507459158!3d30.89207457791617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b2e614fbbfa149%3A0x189a3684b8d9e343!2s3%2C%201275%20Qianming%20E%20Rd%2C%20Jin%20Shan%20Qu%2C%20Shang%20Hai%20Shi%2C%20China%2C%20201502!5e0!3m2!1sen!2sus!4v1792156311648!5m2!1sen!2sus" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
-            <div class="border border-gray-200 rounded-lg p-8 h-full">
+            <div class="border border-borderGrayBlue rounded-lg p-8 h-full">
                 <h3 data-i18n="about.contact_title" class="text-xl font-bold text-primary mb-6">SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</h3>
-                <ul class="space-y-5 text-gray-700 text-base">
-                    <li><strong>Tel:</strong> <a href="tel:+862157223755" class="hover:text-primary">+862157223755</a></li>
-                    <li><strong>M.P./WhatsApp:</strong> <a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline">https://wa.me/8619301179802</a></li>
-                    <li><strong>Web:</strong> <a href="https://www.zhanxinglobal.com/" target="_blank" class="hover:text-primary">https://www.zhanxinglobal.com/</a></li>
+                <ul class="space-y-5 text-bodyText text-base">
+                    <li><strong>Tel:</strong> <a href="tel:+862157223755" class="hover:text-secondaryBlue transition-colors">+862157223755</a></li>
+                    <li><strong>M.P./WhatsApp:</strong> <a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline transition-colors">https://wa.me/8619301179802</a></li>
+                    <li><strong>Web:</strong> <a href="https://www.zhanxinglobal.com/" target="_blank" class="hover:text-secondaryBlue transition-colors">https://www.zhanxinglobal.com/</a></li>
                     <li><strong>Addr：</strong> Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District, Shanghai</li>
-                    <li><strong>E‑mail：</strong> <a href="mailto:sales@zhanxinglobal.com" class="hover:text-primary">sales@zhanxinglobal.com</a></li>
+                    <li><strong>E‑mail：</strong> <a href="mailto:sales@zhanxinglobal.com" class="hover:text-secondaryBlue transition-colors">sales@zhanxinglobal.com</a></li>
                 </ul>
             </div>
         </div>
     </main>
 
-    <!-- 页脚 -->
-    <footer class="bg-primary text-white py-10">
+    <!-- 页脚：低饱和深海军蓝，降低视觉冲击 -->
+    <footer class="bg-footerBg text-gray-300 py-10">
         <div class="container mx-auto px-6 max-w-6xl">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
-                    <h4 data-i18n="footer.nav_title" class="text-xl font-semibold mb-4">Navigation</h4>
-                    <ul class="space-y-2 text-gray-200">
-                        <li><a href="/" data-i18n="nav.home" class="hover:text-orange-400">Home</a></li>
-                        <li><a href="/products" data-i18n="nav.products" class="hover:text-orange-400">Products</a></li>
-                        <li><a href="/about" data-i18n="nav.about" class="hover:text-orange-400">About</a></li>
-                        <li><a href="/contact" data-i18n="nav.quote" class="hover:text-orange-400">Get a Quote</a></li>
+                    <h4 data-i18n="footer.nav_title" class="text-xl font-semibold mb-4 text-white">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" data-i18n="nav.home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/products" data-i18n="nav.products" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="/about" data-i18n="nav.about" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="/contact" data-i18n="nav.quote" class="hover:text-white transition-colors">Get a Quote</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 data-i18n="footer.contact_title" class="text-xl font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-200">
+                    <h4 data-i18n="footer.contact_title" class="text-xl font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2">
                         <li>Tel: +862157223755</li>
-                        <li><a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline">WhatsApp: +8619301179802</a></li>
-                        <li><a href="mailto:sales@zhanxinglobal.com" class="hover:text-orange-400">sales@zhanxinglobal.com</a></li>
+                        <li><a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline transition-colors">WhatsApp: +86‑19301179802</a></li>
+                        <li><a href="mailto:sales@zhanxinglobal.com" class="hover:text-white transition-colors">sales@zhanxinglobal.com</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 data-i18n="footer.copyright_title" class="text-xl font-semibold mb-4">Copyright</h4>
-                    <p data-i18n="footer.copyright_text" class="text-gray-200">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. All rights reserved.</p>
+                    <h4 data-i18n="footer.copyright_title" class="text-xl font-semibold mb-4 text-white">Copyright</h4>
+                    <p data-i18n="footer.copyright_text" class="text-sm">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // 完整7国语言翻译库
         const translations = {
             en: {
                 "nav.home":"Home",
@@ -236,7 +232,7 @@
                 "about.qua3":"Incoming material inspection, in process check and 100% final inspection before shipment",
                 "about.qua4":"Material certificates EN 10204 & 3.1 available from the steel mill",
                 "about.qua5":"Welding procedure qualification (WPS/PQR) and welder qualification records available",
-                "about.qua6":"Third-party lab reports (IEC 60529) for outdoor enclosures available on project basis",
+                "about.qua6":"Third‑party lab reports (IEC 60529) for outdoor enclosures available on project basis",
                 "about.qua7":"Pre shipment Inspection by a third party can be arranged at buyer's request",
                 "about.mini1_title":"Custom fabrication & production",
                 "about.mini1_text":"Quality management system standard, reliable airport and furniture manufacturing and metal & project manufacturing.",
@@ -297,7 +293,7 @@
                 "about.card1_text":"Nous sommes une usine spécialisée dans la fabrication de mobilier extérieur, aéroportuaire, urbain et structures métalliques pour projets.",
                 "about.str1":"Solution de structure acier et aluminium sur mesure",
                 "about.str2":"Structure de support pour écrans LED/LCD grand format",
-                "about.str3":"Mobilier urbain & aéroportuaire et abri-bus",
+                "about.str3":"Mobilier urbain & aéroportuaire et abri‑bus",
                 "about.str4":"Support OEM & ODM pour acheteurs du monde entier",
                 "about.qua1":"Licence de production de sécurité au travail (Chine) — fabricant agréé pour la fabrication métallique",
                 "about.qua2":"Système de gestion qualité conforme à ISO 9001 / 14001 / 45001",
@@ -324,24 +320,24 @@
                 "nav.about":"Über uns",
                 "nav.quote":"Angebot anfordern",
                 "about.meta_title":"Über uns - ZHANXIN Intelligent Equipment",
-                "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. Zuverlässiger Hersteller für Außen-, Flughafen- und Stadtmöbel sowie Metallstrukturprojekte",
+                "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. Zuverlässiger Hersteller für Außen‑, Flughafen‑ und Stadtmöbel sowie Metallstrukturprojekte",
                 "about.page_title":"Über SHANGHAI ZHANXIN",
-                "about.page_subtitle":"Zuverlässiger Hersteller für Außen-, Flughafen- und Stadtmöbel & Metallstrukturprojekte",
+                "about.page_subtitle":"Zuverlässiger Hersteller für Außen‑, Flughafen‑ und Stadtmöbel & Metallstrukturprojekte",
                 "about.factory_img_alt":"Zhanxin Fertigungswerkstatt",
-                "about.card1_text":"Wir sind eine Fabrik spezialisiert auf Fertigung von Außen-, Flughafen- und Stadtmöbeln sowie Metallstrukturprojekten.",
-                "about.str1":"Kundenspezifische Stahl- und Aluminiumstrukturlösungen",
-                "about.str2":"Montagestrukturen für großformatige LED/LCD-Bildschirme",
-                "about.str3":"Stadt- und Flughafenmöbel sowie Wartehallen",
+                "about.card1_text":"Wir sind eine Fabrik spezialisiert auf Fertigung von Außen‑, Flughafen‑ und Stadtmöbeln sowie Metallstrukturprojekten.",
+                "about.str1":"Kundenspezifische Stahl‑ und Aluminiumstrukturlösungen",
+                "about.str2":"Montagestrukturen für großformatige LED/LCD‑Bildschirme",
+                "about.str3":"Stadt‑ und Flughafenmöbel sowie Wartehallen",
                 "about.str4":"OEM & ODM Unterstützung für weltweite Käufer",
-                "about.qua1":"Arbeitssicherheits-Produktionslizenz (China) — lizenzierter Hersteller für Metallverarbeitung",
+                "about.qua1":"Arbeitssicherheits‑Produktionslizenz (China) — lizenzierter Hersteller für Metallverarbeitung",
                 "about.qua2":"Qualitätsmanagementsystem nach ISO 9001 / 14001 / 45001",
-                "about.qua3":"Eingangsmaterialprüfung, laufende Kontrolle und 100% Endprüfung vor Versand",
-                "about.qua4":"Materialzertifikate EN 10204 & 3.1 vom Stahlwerk verfügbar",
+                "about.qua3":"Eingangsmaterialprüfung, laufende Kontrolle und 100 % Endprüfung vor Versand",
+                "about.qua4":"Materialzertifikate EN 10204 & 3.1 vom Stahlwerk verfügbar",
                 "about.qua5":"Schweißverfahrensqualifikation (WPS/PQR) und Schweißerqualifikationsaufzeichnungen vorhanden",
-                "about.qua6":"Drittlaborberichte (IEC 60529) für Außengehäuse projektbezogen verfügbar",
+                "about.qua6":"Drittlaborberichte (IEC 60529) für Außengehäuse projektbezogen verfügbar",
                 "about.qua7":"Vorversandprüfung durch Dritte auf Wunsch des Käufers organisierbar",
                 "about.mini1_title":"Kundenspezifische Fertigung & Produktion",
-                "about.mini1_text":"Standard-Qualitätsmanagementsystem, zuverlässige Fertigung von Flughafen-, Stadtmöbeln und Metallprojekten",
+                "about.mini1_text":"Standard‑Qualitätsmanagementsystem, zuverlässige Fertigung von Flughafen‑, Stadtmöbeln und Metallprojekten",
                 "about.mini2_title":"Kundenspezifische Fertigung für individuelle Lösungen",
                 "about.mini2_text":"Kundenspezifische Fertigungsanlagen, umfassende Individualisierung, OEM/ODM Unterstützung",
                 "about.mini3_title":"Konformität",
@@ -458,12 +454,11 @@
 
         function setLang(langKey){
             const trans = translations[langKey] || translations.en;
-            document.querySelectorAll('[data-i18n]').forEach(el=>{
-                const key = el.getAttribute('data-i18n');
+            document.querySelectorAll('[data‑i18n]').forEach(el=>{
+                const key = el.getAttribute('data‑i18n');
                 if(trans[key]) el.innerText = trans[key];
             });
             document.documentElement.lang = langKey;
-            //阿拉伯语RTL适配
             if(langKey === 'ar'){
                 document.documentElement.dir = "rtl";
             }else{
