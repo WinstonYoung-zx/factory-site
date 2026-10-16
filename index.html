@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZHANXIN - Metal Structure & Outdoor, Urban and Airport Furniture Manufacturer</title>
+    <title>ZHANXIN GLOBAL‑Metal Structure & Outdoor, Urban and Airport Furniture Manufacturer</title>
     <meta name="description" content="Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures, outdoor, urban and airport furniture, export to Europe, Middle East & America.">
     <link rel="stylesheet" href="./style.css">
     <link rel="canonical" href="https://zhanxinglobal.com/">
-    <meta property="og:title" content="ZHANXIN - Metal Structure & Outdoor, Urban and Airport Furniture Manufacturer">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta property="og:title" content="ZHANXIN GLOBAL - SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD.">
     <meta property="og:description" content="Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures, outdoor, urban and airport furniture, export to Europe, Middle East & America.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zhanxinglobal.com/">
+    <meta property="og:site_name" content="ZHANXIN GLOBAL">
     <script type="application/ld+json">
     {
         "@context":"https://schema.org",
         "@type":"Manufacturer",
         "name":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD.",
+        "alternateName":"ZHANXIN GLOBAL",
         "description":"Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures, outdoor, urban and airport furniture",
         "url":"https://zhanxinglobal.com",
         "telephone":"+86‑21‑57223755",
-        "email":"sales@zhanxinglobal.com"
+        "email":"sales@zhanxinglobal.com",
+        "address":{
+            "@type":"PostalAddress",
+            "streetAddress":"Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District",
+            "addressLocality":"Shanghai",
+            "addressCountry":"CN"
+        }
     }
     </script>
     <!-- Cloudflare Turnstile -->
@@ -86,6 +95,13 @@
         .cf-turnstile {
             margin: 1rem 0;
         }
+        button.btn:disabled{
+            opacity:0.6;
+            cursor:not-allowed;
+        }
+        .form-group{
+            margin-bottom:1rem;
+        }
     </style>
 </head>
 <body>
@@ -119,7 +135,7 @@
         <div class="slide-item active" style="background-image:url('./uploads/banner1.jpg')">
             <div class="slide-overlay"></div>
             <div class="container slide-text-wrap">
-                <h1 data-i18n="hero.title">Your Reliable Metal Structure Partner</h1>
+                <h2 data-i18n="hero.title">Your Reliable Metal Structure Partner</h2>
                 <p data-i18n="hero.desc">Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures</p>
                 <a href="./#inquiry" class="btn" data-i18n="hero.btn">Send Inquiry</a>
             </div>
@@ -127,7 +143,7 @@
         <div class="slide-item" style="background-image:url('./uploads/banner2.jpg')">
             <div class="slide-overlay"></div>
             <div class="container slide-text-wrap">
-                <h1 data-i18n="hero.title2">Custom Fabrication & Engineering</h1>
+                <h2 data-i18n="hero.title2">Custom Fabrication & Engineering</h2>
                 <p data-i18n="hero.desc2">One‑stop solution for urban furniture, signage, LED screen & metal structure projects</p>
                 <a href="./#inquiry" class="btn" data-i18n="hero.btn">Send Inquiry</a>
             </div>
@@ -135,7 +151,7 @@
         <div class="slide-item" style="background-image:url('./uploads/banner3.jpg')">
             <div class="slide-overlay"></div>
             <div class="container slide-text-wrap">
-                <h1 data-i18n="hero.title3">Export to Europe, Middle East & America</h1>
+                <h2 data-i18n="hero.title3">Export to Europe, Middle East & America</h2>
                 <p data-i18n="hero.desc3">Certified factory with rich experience in international B2B orders</p>
                 <a href="./#inquiry" class="btn" data-i18n="hero.btn">Send Inquiry</a>
             </div>
@@ -223,8 +239,32 @@
                 <input type="text" name="company">
             </div>
             <div class="form-group">
+                <label data-i18n="inq.country">Country</label>
+                <select name="country">
+                    <option value="">Select your country</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Spain">Spain</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="UAE">UAE</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label data-i18n="inq.person">Contact Person</label>
                 <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label data-i18n="inq.phone">WhatsApp / Phone Number</label>
+                <input type="text" name="phone" placeholder="+XX ......">
             </div>
             <div class="form-group">
                 <label data-i18n="inq.email">Email</label>
@@ -235,12 +275,16 @@
                 <input type="text" name="product">
             </div>
             <div class="form-group">
-                <label data-i18n="inq.msg">Message / Requirements</label>
-                <textarea name="message" required></textarea>
+                <label>Drawings / Reference File (Max 5MB, pdf/png/jpg)</label>
+                <input type="file" name="attach" accept=".pdf,.jpg,.jpeg,.png">
             </div>
-            <!-- 替换为你的Turnstile Sitekey -->
+            <div class="form-group">
+                <label data-i18n="inq.msg">Message / Requirements</label>
+                <textarea name="message" required rows="6"></textarea>
+            </div>
+            <!-- Turnstile Sitekey沿用你现有 -->
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu" data-theme="light"></div>
-            <button type="submit" class="btn" data-i18n="inq.submit">Submit Inquiry</button>
+            <button id="submitBtn" type="submit" class="btn" data-i18n="inq.submit">Submit Inquiry</button>
         </form>
         <div id="formTip" style="margin-top:1rem;"></div>
     </div>
@@ -311,19 +355,29 @@ nextBtn.onclick = ()=>{
 showSlide(slideIndex);
 startAutoSlide();
 
-// ========== Turnstile新版表单提交JS 修复Content‑Type短横线 ==========
+// ========== 表单提交：防重复提交，携带国家/电话/附件文件名 ==========
 document.querySelector("#inquiryForm").addEventListener("submit", async function (e) {
     e.preventDefault();
     const tipDom = document.querySelector("#formTip");
+    const submitBtn = document.getElementById("submitBtn");
+
+    submitBtn.disabled = true;
     tipDom.className = "";
     tipDom.innerText = "Submitting...";
 
-    const company = this.querySelector('[name="company"]').value.trim();
-    const contact = this.querySelector('[name="name"]').value.trim();
-    const email = this.querySelector('[name="email"]').value.trim();
-    const product = this.querySelector('[name="product"]').value.trim();
-    const message = this.querySelector('[name="message"]').value.trim();
-    const turnstileToken = document.querySelector('input[name="cf-turnstile-response"]')?.value || "";
+    const formDataObj = {};
+    const formElems = new FormData(this);
+    let attachFileName = "";
+
+    formElems.forEach((val, key) => {
+        if(key === "attach"){
+            if(val.name) attachFileName = val.name;
+        }else{
+            formDataObj[key] = val.trim();
+        }
+    });
+    formDataObj.attachFileName = attachFileName;
+    formDataObj.turnstileToken = document.querySelector('input[name="cf-turnstile-response"]')?.value || "";
 
     const workerUrl = "https://zhanxin-form.shzxin-cn.workers.dev";
     try {
@@ -332,14 +386,7 @@ document.querySelector("#inquiryForm").addEventListener("submit", async function
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                company,
-                contact,
-                email,
-                product,
-                message,
-                turnstileToken
-            })
+            body: JSON.stringify(formDataObj)
         });
         const ret = await res.json();
         if (ret.success) {
@@ -357,6 +404,8 @@ document.querySelector("#inquiryForm").addEventListener("submit", async function
         tipDom.innerText = "❌ Network error, please try again.";
         if(window.turnstile) window.turnstile.reset();
         console.error(err);
+    } finally {
+        submitBtn.disabled = false;
     }
 })
 
@@ -396,7 +445,9 @@ const translations = {
         "about.desc":"We are a professional manufacturer for city furniture, metal structures, advertising signage and display equipment. We support full custom design, production and global delivery for Europe, Middle East and America clients.",
         "inq.title":"Send Your Inquiry",
         "inq.company":"Company Name",
+        "inq.country":"Country",
         "inq.person":"Contact Person",
+        "inq.phone":"WhatsApp / Phone Number",
         "inq.email":"Email",
         "inq.interest":"Product Interest",
         "inq.msg":"Message / Requirements",
@@ -437,7 +488,9 @@ const translations = {
         "about.desc":"专业生产城市家具、金属结构、广告标识与显示设备。支持定制设计、生产，面向欧美中东全球客户交付。",
         "inq.title":"发送询盘",
         "inq.company":"公司名称",
+        "inq.country":"国家",
         "inq.person":"联系人",
+        "inq.phone":"WhatsApp / 联系电话",
         "inq.email":"邮箱",
         "inq.interest":"意向产品",
         "inq.msg":"留言/需求说明",
@@ -478,7 +531,9 @@ const translations = {
         "about.desc":"Somos fabricante profesional de mobiliario urbano, estructuras metálicas, señalización publicitaria y equipos de visualización. Ofrecemos diseño completo, fabricación y entrega global para clientes de Europa, Oriente Medio y América.",
         "inq.title":"Enviar Consulta",
         "inq.company":"Nombre de la Empresa",
+        "inq.country":"País",
         "inq.person":"Persona de Contacto",
+        "inq.phone":"WhatsApp / Teléfono",
         "inq.email":"Correo electrónico",
         "inq.interest":"Producto de interés",
         "inq.msg":"Mensaje / Requisitos",
@@ -519,7 +574,9 @@ const translations = {
         "about.desc":"Fabricant professionnel de mobilier urbain, structures métalliques, signalétique publicitaire et équipements d'affichage. Conception, fabrication et livraison mondiale pour clients Europe, Moyen‑Orient, Amérique.",
         "inq.title":"Envoyer une demande",
         "inq.company":"Nom de l'entreprise",
+        "inq.country":"Pays",
         "inq.person":"Contact",
+        "inq.phone":"WhatsApp / Téléphone",
         "inq.email":"Email",
         "inq.interest":"Produit souhaité",
         "inq.msg":"Message / Besoins",
@@ -560,7 +617,9 @@ const translations = {
         "about.desc":"Professioneller Hersteller von Stadtmöbeln, Metallkonstruktionen, Werbeschildern und Displaygeräten. Individuelle Planung, Fertigung und weltweite Lieferung für Kunden aus Europa, Nahem Osten und Amerika.",
         "inq.title":"Anfrage senden",
         "inq.company":"Firmenname",
+        "inq.country":"Land",
         "inq.person":"Ansprechpartner",
+        "inq.phone":"WhatsApp / Telefon",
         "inq.email":"E‑Mail",
         "inq.interest":"Interessiert an Produkt",
         "inq.msg":"Nachricht / Anforderungen",
@@ -601,7 +660,9 @@ const translations = {
         "about.desc":"都市家具、金属構造物、広告標識、ディスプレイ機器の専門メーカー。カスタム設計・製造し、欧州・中東・米国顧客向けにグローバル納品可能。",
         "inq.title":"お問い合わせ",
         "inq.company":"会社名",
+        "inq.country":"国",
         "inq.person":"担当者名",
+        "inq.phone":"WhatsApp / 電話番号",
         "inq.email":"メールアドレス",
         "inq.interest":"興味のある製品",
         "inq.msg":"メッセージ / ご要望",
@@ -642,7 +703,9 @@ const translations = {
         "about.desc":"مصنع متخصص في أثاث المدن والهياكل المعدنية واللوحات الإعلانية وأجهزة العرض. نوفر التصميم والتصنيع والتسليم العالمي لعملاء أوروبا والشرق الأوسط وأمريكا.",
         "inq.title":"إرسال استفسار",
         "inq.company":"اسم الشركة",
+        "inq.country":"البلد",
         "inq.person":"الشخص المسؤول",
+        "inq.phone":"واتساب / رقم الهاتف",
         "inq.email":"البريد الإلكتروني",
         "inq.interest":"المنتج المطلوب",
         "inq.msg":"الرسالة / المتطلبات",
