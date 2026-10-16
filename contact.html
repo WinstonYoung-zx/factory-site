@@ -3,83 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Get Quote for Light Box & Bus Shelter</title>
-<meta name="description" content="Send inquiry for advertising light box, bus shelter, LCD player and metal structure. Upload drawings, we reply within 12 hours. WhatsApp available.">
-<link rel="stylesheet" href="style.css">
-<script src="lang.js"></script>
+<title data-i18n="meta.contactTitle">Contact Us | ZHANXIN</title>
+<meta name="description" data-i18n="meta.contactDesc" content="SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. - Outdoor, airport and urban furniture & metal structure manufacturer. Get in touch for custom advertising light box, wayfinding signage, bus shelter and steel aluminum structures.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header>
-  <div class="container header-wrap">
-    <a href="index.html" class="logo">YOURFACTORY</a>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html" data-i18n="home">Home</a></li>
-        <li><a href="products.html" data-i18n="products">Products</a></li>
-        <li><a href="about.html" data-i18n="about">About Us</a></li>
-        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
-      </ul>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="/index.html" class="logo">
+      <img src="/uploads/logo.png" alt="ZHANXIN Logo">
+    </a>
+    <nav class="main-nav">
+      <a href="/index.html" data-i18n="nav.home">Home</a>
+      <a href="/products.html" data-i18n="nav.products">Products</a>
+      <a href="/about.html" data-i18n="nav.about">About Us</a>
+      <a href="/contact.html" data-i18n="nav.quote">Get a Quote</a>
     </nav>
-    <div class="lang-select">
-      <select onchange="setLang(this.value)">
-        <option value="en">English</option>
-        <option value="es">Español</option>
-        <option value="ar">العربية</option>
-      </select>
-    </div>
+    <select id="langSelect" class="lang-select">
+      <option value="en">English</option>
+      <option value="zh">中文</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ja">日本語</option>
+    </select>
   </div>
 </header>
 
-<section class="section">
-  <div class="container">
-    <h2 class="section-title" data-i18n="contactTitle">Contact Us</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
-      <div>
-        <form action="https://formspree.io/f/xxxxxxx" method="POST" enctype="multipart/form-data">
-          <div class="form-group">
-            <label data-i18n="formName">Your Name</label>
-            <input type="text" name="name" required>
-          </div>
-          <div class="form-group">
-            <label data-i18n="formEmail">Email</label>
-            <input type="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label data-i18n="formTel">Phone / WhatsApp</label>
-            <input type="text" name="phone">
-          </div>
-          <div class="form-group">
-            <label data-i18n="formMsg">Message (product requirements, size, quantity)</label>
-            <textarea rows="5" name="message"></textarea>
-          </div>
-          <div class="form-group">
-            <label data-i18n="formAttach">Attach drawing / specification file</label>
-            <input type="file" name="attachment">
-          </div>
-          <button class="btn" type="submit" data-i18n="submit">Submit Inquiry</button>
-        </form>
-        <p style="margin-top:20px;" data-i18n="replyPromise">We reply within 12 hours.</p>
-      </div>
-      <div>
-        <h3>Our Factory Address</h3>
-        <p>Your Factory Address, City, China</p>
-        <p>WhatsApp: +86 13800000000</p>
-        <p>Email: sales@yourfactory.com</p>
-        <div style="height:300px;background:#ddd;margin-top:20px;">
-          <!-- Google Map iframe here -->
-          Google Map Embed Area
+<main class="container page-content">
+  <h1 data-i18n="contact.title">Contact Us</h1>
+  <div class="contact-grid">
+    <div class="contact-form-card">
+      <h2 data-i18n="contact.formTitle">Send Inquiry</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label data-i18n="inq.company">Company Name</label>
+          <input type="text" name="company" required>
         </div>
+        <div class="form-group">
+          <label data-i18n="inq.name">Contact Person</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.country">Select your country</label>
+          <select name="country">
+            <option value="">--</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>Germany</option>
+            <option>France</option>
+            <option>Japan</option>
+            <option>Australia</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.phone">WhatsApp / Phone Number</label>
+          <input type="tel" name="phone" placeholder="+XX ......">
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.email">Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.product">Product Interest</label>
+          <input type="text" name="product">
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.attachLabel">Drawings / Reference File (Max 5MB, pdf/png/jpg)</label>
+          <div class="file-upload-wrap">
+            <input type="file" id="attachFile" name="attach" accept=".pdf,.jpg,.jpeg,.png" hidden>
+            <button type="button" class="file-btn" id="selectFileBtn" data-i18n="inq.selectFile">Select File</button>
+            <span class="file-name" id="fileNameText" data-i18n="inq.noFile">No file selected</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.msg">Message / Requirements</label>
+          <textarea name="msg" rows="5"></textarea>
+        </div>
+        <button type="submit" class="submit-btn" data-i18n="inq.submit">Submit Inquiry</button>
+      </form>
+    </div>
+    <div class="contact-info-card">
+      <h2 data-i18n="contact.infoTitle">Our Contact Info</h2>
+      <p><strong>SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</strong></p>
+      <p>Tel: <a href="tel:+862157223755">+86‑21‑57223755</a></p>
+      <p>M.P./WhatsApp: <a href="https://wa.me/8619301179802" target="_blank">+86‑19301179802</a></p>
+      <p>Web: <a href="https://www.zhanxinglobal.com/" target="_blank">https://www.zhanxinglobal.com/</a></p>
+      <p>Addr：Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District, Shanghai</p>
+      <p>E‑mail：<a href="mailto:sales@zhanxinglobal.com">sales@zhanxinglobal.com</a></p>
+      <div class="social-links">
+        <a href="https://wa.me/8619301179802" target="_blank">WhatsApp</a>
       </div>
     </div>
   </div>
-</section>
+</main>
 
-<footer>
-  <div class="container">
-    <p>© 2026 Your Factory. All rights reserved.</p>
-    <p><a href="privacy.html" style="color:#fff" data-i18n="privacy">Privacy Policy</a></p>
+<footer class="site-footer">
+  <div class="container footer-wrap">
+    <div class="footer-col">
+      <h3>ZHANXIN</h3>
+      <p data-i18n="footer.desc">Outdoor, airport and urban furniture & metal structure manufacturer.</p>
+    </div>
+    <div class="footer-col">
+      <h3 data-i18n="footer.nav">Navigation</h3>
+      <a href="/index.html" data-i18n="nav.home">Home</a>
+      <a href="/products.html" data-i18n="nav.products">Products</a>
+      <a href="/about.html" data-i18n="nav.about">About Us</a>
+      <a href="/contact.html" data-i18n="nav.quote">Get a Quote</a>
+    </div>
+    <div class="footer-col">
+      <h3 data-i18n="footer.contact">Contact</h3>
+      <p><strong>SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</strong></p>
+      <p>Tel: <a href="tel:+862157223755">+86‑21‑57223755</a></p>
+      <p>M.P./WhatsApp: <a href="https://wa.me/8619301179802" target="_blank">+86‑19301179802</a></p>
+      <p>E‑mail：<a href="mailto:sales@zhanxinglobal.com">sales@zhanxinglobal.com</a></p>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>©2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. <a href="/privacy.html" data-i18n="footer.privacy">Privacy Policy</a></p>
   </div>
 </footer>
-<a href="https://wa.me/8613800000000" class="whatsapp-float" target="_blank">WA</a>
+<script src="/lang.js"></script>
 </body>
 </html>
