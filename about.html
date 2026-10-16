@@ -1,75 +1,873 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="meta.aboutTitle">About Us | ZHANXIN</title>
-<meta name="description" data-i18n="meta.aboutDesc" content="SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. is professional manufacturer for outdoor, airport and urban furniture, custom steel & aluminum structure, advertising light box, LED/LCD screen structure and bus shelter.">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="about.meta_title">About Us - ZHANXIN Intelligent Equipment</title>
+    <meta name="description" data-i18n="about.meta_desc" content="Shanghai Zhanxin Intelligent Equipment Co., Ltd. Founded in August 2023 by industry veteran team, specialized in advertising light boxes, wayfinding signage, LED display enclosures, bus shelters and custom metal structures.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F3460',
+                        secondary: '#E94560',
+                        dark: '#1A1A2E',
+                        light: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a href="/index.html" class="logo">
-      <img src="/uploads/logo.png" alt="ZHANXIN Logo">
-    </a>
-    <nav class="main-nav">
-      <a href="/index.html" data-i18n="nav.home">Home</a>
-      <a href="/products.html" data-i18n="nav.products">Products</a>
-      <a href="/about.html" data-i18n="nav.about">About Us</a>
-      <a href="/contact.html" data-i18n="nav.quote">Get a Quote</a>
-    </nav>
-    <select id="langSelect" class="lang-select">
-      <option value="en">English</option>
-      <option value="zh">中文</option>
-      <option value="fr">Français</option>
-      <option value="de">Deutsch</option>
-      <option value="ja">日本語</option>
-    </select>
-  </div>
-</header>
+<body class="font-inter text-gray-700 bg-white">
+    <!-- 导航栏 -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="/" class="flex items-center">
+                    <span class="text-2xl font-bold text-primary">ZHANXIN</span>
+                </a>
+                
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/" data-i18n="nav.home" class="text-gray-600 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="/products" data-i18n="nav.products" class="text-gray-600 hover:text-primary font-medium transition-colors">Products</a>
+                    <a href="/about" data-i18n="nav.about" class="text-primary font-semibold border-b-2 border-secondary pb-1">About Us</a>
+                    <a href="/contact" data-i18n="nav.contact" class="text-gray-600 hover:text-primary font-medium transition-colors">Contact</a>
+                </nav>
 
-<main class="container page-content">
-  <h1 data-i18n="about.title">About SHANGHAI ZHANXIN</h1>
-  <div class="about-block">
-    <p data-i18n="about.p1">We are a factory specialized in outdoor, airport and urban furniture and metal structure project manufacturing. Our core products include Advertising Light Box, Wayfinding Signage, 61–86 inch LED / LCD Screen support structure, Bus Shelter, and Custom Steel & Aluminum Structure.</p>
-    <p data-i18n="about.p2">We focus on custom metal fabrication for global customers, providing one-stop service from design, production to packaging and shipment.</p>
-    <h2 data-i18n="about.advantage">Our Strength</h2>
-    <ul>
-      <li data-i18n="about.adv1">Custom steel & aluminum structure solution</li>
-      <li data-i18n="about.adv2">Large size LED/LCD screen mounting structure (differentiated product)</li>
-      <li data-i18n="about.adv3">Urban & airport furniture and bus shelter manufacturing</li>
-      <li data-i18n="about.adv4">Support OEM & ODM for worldwide buyers</li>
-    </ul>
-  </div>
-</main>
+                <div class="hidden md:flex items-center space-x-4">
+                    <select id="langSelect" class="text-sm border border-gray-200 rounded px-2 py-1 bg-white focus:outline-none focus:border-primary">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                    <a href="/contact" data-i18n="nav.quote" class="bg-secondary hover:bg-secondary/90 text-white px-5 py-2 rounded font-medium transition-colors">Get Quote</a>
+                </div>
 
-<footer class="site-footer">
-  <div class="container footer-wrap">
-    <div class="footer-col">
-      <h3>ZHANXIN</h3>
-      <p data-i18n="footer.desc">Outdoor, airport and urban furniture & metal structure manufacturer.</p>
-    </div>
-    <div class="footer-col">
-      <h3 data-i18n="footer.nav">Navigation</h3>
-      <a href="/index.html" data-i18n="nav.home">Home</a>
-      <a href="/products.html" data-i18n="nav.products">Products</a>
-      <a href="/about.html" data-i18n="nav.about">About Us</a>
-      <a href="/contact.html" data-i18n="nav.quote">Get a Quote</a>
-    </div>
-    <div class="footer-col">
-      <h3 data-i18n="footer.contact">Contact</h3>
-      <p><strong>SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</strong></p>
-      <p>Tel: <a href="tel:+862157223755">+86‑21‑57223755</a></p>
-      <p>M.P./WhatsApp: <a href="https://wa.me/8619301179802" target="_blank">+86‑19301179802</a></p>
-      <p>E‑mail：<a href="mailto:sales@zhanxinglobal.com">sales@zhanxinglobal.com</a></p>
-    </div>
-  </div>
-  <div class="copyright">
-    <p>©2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. <a href="/privacy.html" data-i18n="footer.privacy">Privacy Policy</a></p>
-  </div>
-</footer>
-<script src="/lang.js"></script>
+                <button class="md:hidden text-gray-700" aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 区域 -->
+        <section class="pt-32 pb-20 bg-gradient-to-r from-primary to-dark text-white">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p data-i18n="about.slogan" class="text-secondary font-medium uppercase tracking-[0.2em] text-sm mb-4">Exclusive Creation · Intelligent Future</p>
+                    <h1 data-i18n="about.hero_title" class="text-[clamp(2rem,5vw,3.5rem)] font-bold mb-6 leading-tight">About Zhanxin</h1>
+                    <p data-i18n="about.hero_subtitle" class="text-[clamp(1rem,2vw,1.25rem)] text-gray-200 leading-relaxed text-balance">
+                        Founded in 2023 by an industry veteran team, delivering premium metal fabrication and LED display enclosure solutions with 15+ years of cumulative industry expertise.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 公司简介 -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div>
+                        <span data-i18n="about.who_label" class="text-secondary font-semibold uppercase tracking-wider text-sm">Who We Are</span>
+                        <h2 data-i18n="about.who_title" class="text-[clamp(1.5rem,3vw,2.25rem)] font-bold text-dark mt-2 mb-6">
+                            Engineering Excellence, Collective Expertise
+                        </h2>
+                        <p data-i18n="about.who_p1" class="text-gray-600 mb-4 leading-relaxed">
+                            Shanghai Zhanxin Intelligent Equipment Co., Ltd. was founded in August 2023. Our core team comes from leading enterprises in the outdoor advertising equipment industry, with over 15 years of cumulative hands-on experience in design, manufacturing and project delivery.
+                        </p>
+                        <p data-i18n="about.who_p2" class="text-gray-600 mb-6 leading-relaxed">
+                            We focus on advertising light boxes, wayfinding signage, large-size LED display enclosures, bus shelters and custom metal structures. Our standard production lead time is 15-30 days EXW. We have established long-term cooperative relations with multiple global top-tier outdoor media groups, and completed advertising facility projects for over 40 metro lines in China during our previous industry tenure.
+                        </p>
+                        <div class="grid grid-cols-3 gap-4 mt-8">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary">15+</div>
+                                <div data-i18n="about.stat_years" class="text-sm text-gray-500 mt-1">Years of Industry Expertise</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary">25+</div>
+                                <div data-i18n="about.stat_team" class="text-sm text-gray-500 mt-1">Team Members</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary">40+</div>
+                                <div data-i18n="about.stat_projects" class="text-sm text-gray-500 mt-1">Metro Line Projects</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-gray-100 rounded-lg overflow-hidden aspect-[4/3]">
+                            <img src="https://picsum.photos/id/1067/800/600" data-i18n="about.factory_img_alt" alt="Zhanxin production workshop" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-white shadow-xl rounded-lg p-6 max-w-xs hidden md:block">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div data-i18n="about.cert_title" class="font-semibold text-dark">ISO-Aligned Quality System</div>
+                                    <div data-i18n="about.cert_sub" class="text-sm text-gray-500">Recertification in progress</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 生产能力（原项目区块替换，无任何客户信息） -->
+        <section class="py-16 bg-light">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span data-i18n="about.cap_label" class="text-secondary font-semibold uppercase tracking-wider text-sm">Production Capabilities</span>
+                    <h2 data-i18n="about.cap_title" class="text-[clamp(1.5rem,3vw,2.25rem)] font-bold text-dark mt-2">
+                        In-House Manufacturing & Processing
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h10M9 19h6m-2-2v-2a2 2 0 01-2-2h-2m2 2v-2a2 2 0 012 2v-2m2 2h2a2 2 0 012 2h2v2a2 2 0 01-2 2v2m-2-2h2a2 2 0 00-2-2v2m2 2h-2a2 2 0 01-2-2h2m2 2v-2z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.cap1_title" class="text-xl font-semibold text-dark mb-3">Sheet Metal Fabrication</h3>
+                        <p data-i18n="about.cap1_desc" class="text-gray-600 leading-relaxed">
+                            CNC shearing, CNC bending, stamping and deep drawing for carbon steel, stainless steel and aluminum materials.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.cap2_title" class="text-xl font-semibold text-dark mb-3">Welding & Assembly</h3>
+                        <p data-i18n="about.cap2_desc" class="text-gray-600 leading-relaxed">
+                            MIG, TIG and spot welding with qualified procedures; full assembly of components, hardware and electrical fittings.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10M7 21v-2M17 21v-2M7 17h10M9 13h6M11 17V3M13 13v4M9 13v4M11 17v4" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.cap3_title" class="text-xl font-semibold text-dark mb-3">Surface Finishing</h3>
+                        <p data-i18n="about.cap3_desc" class="text-gray-600 leading-relaxed">
+                            Powder coating, painting and anodizing with corrosion resistance and weather resistance testing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心优势 -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span data-i18n="about.why_label" class="text-secondary font-semibold uppercase tracking-wider text-sm">Why Choose Us</span>
+                    <h2 data-i18n="about.why_title" class="text-[clamp(1.5rem,3vw,2.25rem)] font-bold text-dark mt-2">
+                        Our Core Strengths
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.strength1_title" class="text-xl font-semibold text-dark mb-3">Veteran Team</h3>
+                        <p data-i18n="about.strength1_desc" class="text-gray-600 leading-relaxed">
+                            Core team with 15+ years of industry experience from top-tier outdoor advertising equipment manufacturers.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.strength2_title" class="text-xl font-semibold text-dark mb-3">Reliable Lead Time</h3>
+                        <p data-i18n="about.strength2_desc" class="text-gray-600 leading-relaxed">
+                            15-30 days standard production lead time EXW, with stable global logistics and door-to-door options.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 01.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.strength3_title" class="text-xl font-semibold text-dark mb-3">Strict Quality Control</h3>
+                        <p data-i18n="about.strength3_desc" class="text-gray-600 leading-relaxed">
+                            3-stage inspection from raw material to finished goods, aligned with international project standards.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 01-6 0 3 3 0 016 0zm6 3a2 2 0 01-4 0 2 2 0 014 0zM7 10a2 2 0 01-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.strength4_title" class="text-xl font-semibold text-dark mb-3">Global Reach</h3>
+                        <p data-i18n="about.strength4_desc" class="text-gray-600 leading-relaxed">
+                            Long-term supplier for leading global outdoor media groups, serving 30+ countries and regions worldwide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 发展历程 -->
+        <section class="py-20 bg-light">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span data-i18n="about.journey_label" class="text-secondary font-semibold uppercase tracking-wider text-sm">Our Journey</span>
+                    <h2 data-i18n="about.journey_title" class="text-[clamp(1.5rem,3vw,2.25rem)] font-bold text-dark mt-2">
+                        Heritage & Milestones
+                    </h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="relative">
+                        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform md:-translate-x-1/2"></div>
+
+                        <div class="relative flex flex-col md:flex-row items-start mb-12">
+                            <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
+                                <h3 class="text-xl font-bold text-primary">2008</h3>
+                                <h4 data-i18n="about.milestone1_title" class="text-lg font-semibold text-dark mt-1">Industry Beginnings</h4>
+                                <p data-i18n="about.milestone1_desc" class="text-gray-600 mt-2">Core team members started their careers in the outdoor advertising equipment industry, building deep technical and project experience.</p>
+                            </div>
+                            <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-secondary rounded-full transform -translate-x-1/2 mt-1.5"></div>
+                            <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                        </div>
+
+                        <div class="relative flex flex-col md:flex-row items-start mb-12">
+                            <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
+                            <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-secondary rounded-full transform -translate-x-1/2 mt-1.5"></div>
+                            <div class="md:w-1/2 md:pl-12 pl-12">
+                                <h3 class="text-xl font-bold text-primary">2010–2020</h3>
+                                <h4 data-i18n="about.milestone2_title" class="text-lg font-semibold text-dark mt-1">Project Accumulation</h4>
+                                <p data-i18n="about.milestone2_desc" class="text-gray-600 mt-2">Completed advertising facility projects for over 40 metro lines across China, establishing a solid reputation in the segment.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex flex-col md:flex-row items-start mb-12">
+                            <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
+                                <h3 class="text-xl font-bold text-primary">2022</h3>
+                                <h4 data-i18n="about.milestone3_title" class="text-lg font-semibold text-dark mt-1">Industry Transition</h4>
+                                <p data-i18n="about.milestone3_desc" class="text-gray-600 mt-2">The previous operating entity ceased operations. The core team decided to carry forward the technical expertise and business legacy.</p>
+                            </div>
+                            <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-secondary rounded-full transform -translate-x-1/2 mt-1.5"></div>
+                            <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                        </div>
+
+                        <div class="relative flex flex-col md:flex-row items-start">
+                            <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
+                            <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-secondary rounded-full transform -translate-x-1/2 mt-1.5"></div>
+                            <div class="md:w-1/2 md:pl-12 pl-12">
+                                <h3 class="text-xl font-bold text-primary">2023</h3>
+                                <h4 data-i18n="about.milestone4_title" class="text-lg font-semibold text-dark mt-1">Zhanxin Founded</h4>
+                                <p data-i18n="about.milestone4_desc" class="text-gray-600 mt-2">Shanghai Zhanxin Intelligent Equipment Co., Ltd. was founded in August, focusing on custom metal fabrication and urban furniture solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA 区域 -->
+        <section class="py-16 bg-primary text-white">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="max-w-xl">
+                        <h2 data-i18n="about.cta_title" class="text-2xl md:text-3xl font-bold mb-3">Ready to discuss your project?</h2>
+                        <p data-i18n="about.cta_desc" class="text-gray-200">Contact our team today for a free consultation and custom quotation.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/products" data-i18n="about.cta_products" class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded font-semibold transition-colors text-center">
+                            View Products
+                        </a>
+                        <a href="/contact" data-i18n="about.cta_contact" class="bg-secondary hover:bg-secondary/90 text-white px-8 py-3 rounded font-semibold transition-colors text-center">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-gray-300 pt-16 pb-8">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="text-2xl font-bold text-white mb-4">ZHANXIN</div>
+                    <p data-i18n="footer.desc" class="text-gray-400 leading-relaxed mb-4">
+                        Professional manufacturer of metal structures, LED displays and urban street furniture.
+                    </p>
+                </div>
+                <div>
+                    <h4 data-i18n="footer.products" class="text-white font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" data-i18n="footer.p1" class="hover:text-white transition-colors">Advertising Light Boxes</a></li>
+                        <li><a href="#" data-i18n="footer.p2" class="hover:text-white transition-colors">LED Displays</a></li>
+                        <li><a href="#" data-i18n="footer.p3" class="hover:text-white transition-colors">Bus Shelters</a></li>
+                        <li><a href="#" data-i18n="footer.p4" class="hover:text-white transition-colors">Metal Structures</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 data-i18n="footer.company" class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about" data-i18n="nav.about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/contact" data-i18n="nav.contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 data-i18n="footer.contact_title" class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="mr-2">📍</span>
+                            <span data-i18n="footer.addr">Songjiang District, Shanghai, China</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">📧</span>
+                            <span>info@zhanxinglobal.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2026 Shanghai Zhanxin Intelligent Equipment Co., Ltd. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" data-i18n="footer.privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.terms" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // 多语言字典（全客户名称已脱敏，无NDA受限内容）
+    const translations = {
+        en: {
+            "nav.home":"Home",
+            "nav.products":"Products",
+            "nav.about":"About Us",
+            "nav.contact":"Contact",
+            "nav.quote":"Get Quote",
+            "about.meta_title":"About Us - ZHANXIN Intelligent Equipment",
+            "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. Founded in August 2023 by industry veteran team, specialized in advertising light boxes, wayfinding signage, LED display enclosures, bus shelters and custom metal structures.",
+            "about.slogan":"Exclusive Creation · Intelligent Future",
+            "about.hero_title":"About Zhanxin",
+            "about.hero_subtitle":"Founded in 2023 by an industry veteran team, delivering premium metal fabrication and LED display enclosure solutions with 15+ years of cumulative industry expertise.",
+            "about.who_label":"Who We Are",
+            "about.who_title":"Engineering Excellence, Collective Expertise",
+            "about.who_p1":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. was founded in August 2023. Our core team comes from leading enterprises in the outdoor advertising equipment industry, with over 15 years of cumulative hands-on experience in design, manufacturing and project delivery.",
+            "about.who_p2":"We focus on advertising light boxes, wayfinding signage, large-size LED display enclosures, bus shelters and custom metal structures. Our standard production lead time is 15-30 days EXW. We have established long-term cooperative relations with multiple global top-tier outdoor media groups, and completed advertising facility projects for over 40 metro lines in China during our previous industry tenure.",
+            "about.stat_years":"Years of Industry Expertise",
+            "about.stat_team":"Team Members",
+            "about.stat_projects":"Metro Line Projects",
+            "about.factory_img_alt":"Zhanxin production workshop",
+            "about.cert_title":"ISO-Aligned Quality System",
+            "about.cert_sub":"Recertification in progress",
+            "about.cap_label":"Production Capabilities",
+            "about.cap_title":"In-House Manufacturing & Processing",
+            "about.cap1_title":"Sheet Metal Fabrication",
+            "about.cap1_desc":"CNC shearing, CNC bending, stamping and deep drawing for carbon steel, stainless steel and aluminum materials.",
+            "about.cap2_title":"Welding & Assembly",
+            "about.cap2_desc":"MIG, TIG and spot welding with qualified procedures; full assembly of components, hardware and electrical fittings.",
+            "about.cap3_title":"Surface Finishing",
+            "about.cap3_desc":"Powder coating, painting and anodizing with corrosion resistance and weather resistance testing.",
+            "about.why_label":"Why Choose Us",
+            "about.why_title":"Our Core Strengths",
+            "about.strength1_title":"Veteran Team",
+            "about.strength1_desc":"Core team with 15+ years of industry experience from top-tier outdoor advertising equipment manufacturers.",
+            "about.strength2_title":"Reliable Lead Time",
+            "about.strength2_desc":"15-30 days standard production lead time EXW, with stable global logistics and door-to-door options.",
+            "about.strength3_title":"Strict Quality Control",
+            "about.strength3_desc":"3-stage inspection from raw material to finished goods, aligned with international project standards.",
+            "about.strength4_title":"Global Reach",
+            "about.strength4_desc":"Long-term supplier for leading global outdoor media groups, serving 30+ countries and regions worldwide.",
+            "about.journey_label":"Our Journey",
+            "about.journey_title":"Heritage & Milestones",
+            "about.milestone1_title":"Industry Beginnings",
+            "about.milestone1_desc":"Core team members started their careers in the outdoor advertising equipment industry, building deep technical and project experience.",
+            "about.milestone2_title":"Project Accumulation",
+            "about.milestone2_desc":"Completed advertising facility projects for over 40 metro lines across China, establishing a solid reputation in the segment.",
+            "about.milestone3_title":"Industry Transition",
+            "about.milestone3_desc":"The previous operating entity ceased operations. The core team decided to carry forward the technical expertise and business legacy.",
+            "about.milestone4_title":"Zhanxin Founded",
+            "about.milestone4_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. was founded in August, focusing on custom metal fabrication and urban furniture solutions.",
+            "about.cta_title":"Ready to discuss your project?",
+            "about.cta_desc":"Contact our team today for a free consultation and custom quotation.",
+            "about.cta_products":"View Products",
+            "about.cta_contact":"Contact Us",
+            "footer.desc":"Professional manufacturer of metal structures, LED displays and urban street furniture.",
+            "footer.products":"Products",
+            "footer.p1":"Advertising Light Boxes",
+            "footer.p2":"LED Displays",
+            "footer.p3":"Bus Shelters",
+            "footer.p4":"Metal Structures",
+            "footer.company":"Company",
+            "footer.contact_title":"Contact",
+            "footer.addr":"Songjiang District, Shanghai, China",
+            "footer.privacy":"Privacy Policy",
+            "footer.terms":"Terms of Service"
+        },
+        zh: {
+            "nav.home":"首页",
+            "nav.products":"产品",
+            "nav.about":"关于我们",
+            "nav.contact":"联系我们",
+            "nav.quote":"获取报价",
+            "about.meta_title":"关于我们 - 上海崭鑫智能设备",
+            "about.meta_desc":"上海崭鑫智能设备有限公司，由行业资深团队于2023年8月创立，专注广告灯箱、导向标识、LED屏箱体、候车亭及定制金属结构。",
+            "about.slogan":"专属创造 · 智领未来",
+            "about.hero_title":"关于崭鑫",
+            "about.hero_subtitle":"由行业资深团队创立，传承15年以上行业积淀，提供高品质金属制造与LED显示箱体解决方案。",
+            "about.who_label":"公司简介",
+            "about.who_title":"匠心传承 智造未来",
+            "about.who_p1":"上海崭鑫智能设备有限公司由行业资深核心团队于2023年8月创立。核心团队均来自户外广告设备行业头部企业，拥有15年以上设计、生产与项目交付的实战经验积累。",
+            "about.who_p2":"公司专注于广告灯箱、导向标识、大尺寸LED显示箱体、候车亭及定制金属结构。标准订单生产周期15-30天，EXW交货。团队曾与多家全球头部户外媒体集团建立长期合作关系，任职期间完成国内40余条地铁线路广告设施项目。",
+            "about.stat_years":"年行业积淀",
+            "about.stat_team":"团队成员",
+            "about.stat_projects":"地铁项目",
+            "about.factory_img_alt":"崭鑫生产车间",
+            "about.cert_title":"ISO体系对标管理",
+            "about.cert_sub":"重新认证进行中",
+            "about.cap_label":"生产能力",
+            "about.cap_title":"自有工厂 全工序制造",
+            "about.cap1_title":"钣金加工",
+            "about.cap1_desc":"碳钢、不锈钢、铝材的数控剪切、数控折弯、冲压与拉深成型。",
+            "about.cap2_title":"焊接装配",
+            "about.cap2_desc":"MIG、TIG、点焊等合格工艺焊接；零部件、五金件、电器件完整装配。",
+            "about.cap3_title":"表面处理",
+            "about.cap3_desc":"喷塑、喷涂、阳极氧化，配套耐腐蚀与耐候测试。",
+            "about.why_label":"核心优势",
+            "about.why_title":"为什么选择我们",
+            "about.strength1_title":"资深团队",
+            "about.strength1_desc":"核心团队来自行业头部户外广告设备制造企业，拥有15年以上行业经验。",
+            "about.strength2_title":"交期稳定",
+            "about.strength2_desc":"标准订单15-30天EXW交期，全球物流稳定，支持门到门配送。",
+            "about.strength3_title":"严格品控",
+            "about.strength3_desc":"从原材料到成品三步检验体系，品质标准与国际项目要求对齐。",
+            "about.strength4_title":"全球布局",
+            "about.strength4_desc":"全球头部户外媒体集团长期供应商，产品服务全球30多个国家和地区。",
+            "about.journey_label":"发展历程",
+            "about.journey_title":"传承与发展",
+            "about.milestone1_title":"行业起步",
+            "about.milestone1_desc":"核心团队成员陆续进入户外广告设备行业，积累深厚技术与项目经验。",
+            "about.milestone2_title":"项目积累",
+            "about.milestone2_desc":"完成国内40余条地铁线路广告设施项目，在细分领域建立了扎实口碑。",
+            "about.milestone3_title":"行业更迭",
+            "about.milestone3_desc":"原运营主体终止经营，核心团队决定延续技术沉淀与业务传承。",
+            "about.milestone4_title":"崭鑫成立",
+            "about.milestone4_desc":"2023年8月成立上海崭鑫智能设备有限公司，专注定制金属制造与城市家具解决方案。",
+            "about.cta_title":"准备好开启项目合作了吗？",
+            "about.cta_desc":"立即联系我们的团队，获取免费咨询与定制报价。",
+            "about.cta_products":"查看产品",
+            "about.cta_contact":"联系我们",
+            "footer.desc":"专业金属结构、LED显示与城市家具制造商。",
+            "footer.products":"产品中心",
+            "footer.p1":"广告灯箱",
+            "footer.p2":"LED显示屏",
+            "footer.p3":"候车亭",
+            "footer.p4":"金属结构",
+            "footer.company":"公司",
+            "footer.contact_title":"联系方式",
+            "footer.addr":"中国上海市松江区",
+            "footer.privacy":"隐私政策",
+            "footer.terms":"服务条款"
+        },
+        es: {
+            "nav.home":"Inicio",
+            "nav.products":"Productos",
+            "nav.about":"Sobre Nosotros",
+            "nav.contact":"Contacto",
+            "nav.quote":"Solicitar Presupuesto",
+            "about.meta_title":"Sobre Nosotros - ZHANXIN Equipos Inteligentes",
+            "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. fundada en agosto de 2023 por un equipo veterano de la industria, especializada en cajas de luz, señalización, cerramientos de pantallas LED, marquesinas y estructuras metálicas personalizadas.",
+            "about.slogan":"Creación Exclusiva · Futuro Inteligente",
+            "about.hero_title":"Sobre Zhanxin",
+            "about.hero_subtitle":"Fundada por un equipo veterano de la industria, ofrecemos fabricación metálica de alta calidad y soluciones de cerramientos de pantallas LED con más de 15 años de experiencia acumulada.",
+            "about.who_label":"Quiénes Somos",
+            "about.who_title":"Excelencia Ingenieril, Experiencia Colectiva",
+            "about.who_p1":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. fue fundada en agosto de 2023. Nuestro equipo núcleo proviene de empresas líderes del sector de equipos publicitarios exteriores, con más de 15 años de experiencia acumulada en diseño, fabricación y ejecución de proyectos.",
+            "about.who_p2":"Nos enfocamos en cajas de luz publicitarias, señalización direccional, cerramientos de pantallas LED de gran tamaño, marquesinas y estructuras metálicas personalizadas. El plazo de producción estándar es de 15-30 días EXW. Hemos establecido relaciones de cooperación a largo plazo con múltiples grupos mundiales de medios publicitarios exteriores líderes, y realizamos proyectos de instalaciones publicitarias para más de 40 líneas de metro en China durante nuestra trayectoria profesional.",
+            "about.stat_years":"Años de Experiencia Industrial",
+            "about.stat_team":"Miembros del Equipo",
+            "about.stat_projects":"Proyectos de Metro",
+            "about.factory_img_alt":"Taller de producción Zhanxin",
+            "about.cert_title":"Sistema de Calidad Alineado a ISO",
+            "about.cert_sub":"Recertificación en curso",
+            "about.cap_label":"Capacidades de Producción",
+            "about.cap_title":"Fabricación y Procesamiento Propio",
+            "about.cap1_title":"Fabricación de Chapa Metálica",
+            "about.cap1_desc":"Corte CNC, plegado CNC, estampado y embutido profundo en acero al carbono, acero inoxidable y aluminio.",
+            "about.cap2_title":"Soldadura y Montaje",
+            "about.cap2_desc":"Soldadura MIG, TIG y por puntos con procedimientos cualificados; montaje completo de componentes, herrajes y accesorios eléctricos.",
+            "about.cap3_title":"Acabado Superficial",
+            "about.cap3_desc":"Recubrimiento en polvo, pintura y anodizado con ensayos de resistencia a la corrosión y a la intemperie.",
+            "about.why_label":"Por Qué Elegirnos",
+            "about.why_title":"Nuestras Ventajas Principales",
+            "about.strength1_title":"Equipo Veterano",
+            "about.strength1_desc":"Equipo núcleo con más de 15 años de experiencia en la industria de fabricantes líderes de equipos publicitarios exteriores.",
+            "about.strength2_title":"Plazo Fiable",
+            "about.strength2_desc":"Plazo de producción estándar de 15-30 días EXW, con logística global estable y opciones puerta a puerta.",
+            "about.strength3_title":"Control de Calidad Estricto",
+            "about.strength3_desc":"Sistema de inspección de 3 etapas desde materia prima hasta producto terminado, alineado con estándares de proyectos internacionales.",
+            "about.strength4_title":"Alcance Global",
+            "about.strength4_desc":"Proveedor a largo plazo de grupos mundiales de medios publicitarios exteriores líderes, presente en más de 30 países y regiones.",
+            "about.journey_label":"Nuestra Trayectoria",
+            "about.journey_title":"Legado y Hitos",
+            "about.milestone1_title":"Inicios en la Industria",
+            "about.milestone1_desc":"Los miembros del equipo núcleo comenzaron su carrera en la industria de equipos publicitarios exteriores, acumulando una profunda experiencia técnica y de proyectos.",
+            "about.milestone2_title":"Acumulación de Proyectos",
+            "about.milestone2_desc":"Realizamos proyectos de instalaciones publicitarias para más de 40 líneas de metro en China, consolidando una sólida reputación en el segmento.",
+            "about.milestone3_title":"Transición Industrial",
+            "about.milestone3_desc":"La entidad operativa anterior cesó operaciones. El equipo núcleo decidió continuar el legado técnico y comercial.",
+            "about.milestone4_title":"Fundación de Zhanxin",
+            "about.milestone4_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. fue fundada en agosto, con foco en la fabricación metálica personalizada y soluciones de mobiliario urbano.",
+            "about.cta_title":"¿Listo para iniciar su proyecto?",
+            "about.cta_desc":"Contacte con nuestro equipo hoy mismo para una consulta gratuita y presupuesto personalizado.",
+            "about.cta_products":"Ver Productos",
+            "about.cta_contact":"Contactar",
+            "footer.desc":"Fabricante profesional de estructuras metálicas, pantallas LED y mobiliario urbano.",
+            "footer.products":"Productos",
+            "footer.p1":"Cajas de Luz Publicitarias",
+            "footer.p2":"Pantallas LED",
+            "footer.p3":"Marquesinas",
+            "footer.p4":"Estructuras Metálicas",
+            "footer.company":"Empresa",
+            "footer.contact_title":"Contacto",
+            "footer.addr":"Distrito de Songjiang, Shanghái, China",
+            "footer.privacy":"Política de Privacidad",
+            "footer.terms":"Términos de Servicio"
+        },
+        fr: {
+            "nav.home":"Accueil",
+            "nav.products":"Produits",
+            "nav.about":"À Propos",
+            "nav.contact":"Contact",
+            "nav.quote":"Demander un Devis",
+            "about.meta_title":"À Propos - ZHANXIN Équipements Intelligents",
+            "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. fondée en août 2023 par une équipe expérimentée, spécialisée dans les caissons lumineux, la signalétique, les caissons d'affichage LED, les abris de bus et les structures métalliques sur mesure.",
+            "about.slogan":"Création Exclusive · Avenir Intelligent",
+            "about.hero_title":"À Propos de Zhanxin",
+            "about.hero_subtitle":"Fondée par une équipe expérimentée de l'industrie, nous proposons une fabrication métallique haut de gamme et des solutions de caissons d'affichage LED avec plus de 15 ans d'expertise cumulée.",
+            "about.who_label":"Qui Sommes-Nous",
+            "about.who_title":"Excellence Ingénierie, Héritage d'Expertise",
+            "about.who_p1":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. a été fondée en août 2023. Notre équipe centrale provient d'entreprises leaders du secteur des équipements publicitaires extérieurs, avec plus de 15 ans d'expérience cumulée en conception, fabrication et réalisation de projets.",
+            "about.who_p2":"Nous nous spécialisons dans les caissons lumineux publicitaires, la signalétique directionnelle, les caissons d'affichage LED grand format, les abris de bus et les structures métalliques sur mesure. Notre délai de production standard est de 15-30 jours EXW. Nous avons établi des relations de coopération à long terme avec de multiples groupes mondiaux de médias publicitaires extérieurs leaders, et avons réalisé des projets d'installations publicitaires pour plus de 40 lignes de métro en Chine durant notre parcours professionnel.",
+            "about.stat_years":"Années d'Expérience Industrielle",
+            "about.stat_team":"Membres de l'Équipe",
+            "about.stat_projects":"Projets Métro",
+            "about.factory_img_alt":"Atelier de production Zhanxin",
+            "about.cert_title":"Système Qualité Conforme ISO",
+            "about.cert_sub":"Recertification en cours",
+            "about.cap_label":"Capacités de Production",
+            "about.cap_title":"Fabrication et Traitement Interne",
+            "about.cap1_title":"Tôlerie",
+            "about.cap1_desc":"Cisaillement CNC, pliage CNC, emboutissage et emboutissage profond sur acier carbone, acier inoxydable et aluminium.",
+            "about.cap2_title":"Soudage et Assemblage",
+            "about.cap2_desc":"Soudage MIG, TIG et par points avec procédures qualifiées ; assemblage complet de composants, quincaillerie et accessoires électriques.",
+            "about.cap3_title":"Finition de Surface",
+            "about.cap3_desc":"Revêtement par poudre, peinture et anodisation avec essais de résistance à la corrosion et aux intempéries.",
+            "about.why_label":"Pourquoi Nous Choisir",
+            "about.why_title":"Nos Atouts Clés",
+            "about.strength1_title":"Équipe Expérimentée",
+            "about.strength1_desc":"Équipe centrale avec plus de 15 ans d'expérience industrielle auprès de fabricants leaders d'équipements publicitaires extérieurs.",
+            "about.strength2_title":"Délais Fiables",
+            "about.strength2_desc":"Délai de production standard 15-30 jours EXW, avec logistique mondiale fiable et options porte-à-porte.",
+            "about.strength3_title":"Contrôle Qualité Rigoureux",
+            "about.strength3_desc":"Système d'inspection en 3 étapes de la matière première au produit fini, aligné sur les normes de projets internationaux.",
+            "about.strength4_title":"Rayonnement Mondial",
+            "about.strength4_desc":"Fournisseur de longue durée de grands groupes mondiaux de médias publicitaires extérieurs, présent dans plus de 30 pays et régions.",
+            "about.journey_label":"Notre Parcours",
+            "about.journey_title":"Héritage et Jalons",
+            "about.milestone1_title":"Débuts dans l'Industrie",
+            "about.milestone1_desc":"Les membres de l'équipe centrale ont débuté leur carrière dans l'industrie des équipements publicitaires extérieurs, accumulant une solide expérience technique et projet.",
+            "about.milestone2_title":"Accumulation de Projets",
+            "about.milestone2_desc":"Réalisation de projets d'installations publicitaires pour plus de 40 lignes de métro en Chine, forgeant une solide réputation dans le segment.",
+            "about.milestone3_title":"Transition Industrielle",
+            "about.milestone3_desc":"L'entité opérationnelle précédente a cessé son activité. L'équipe centrale a décidé de perpétuer l'héritage technique et commercial.",
+            "about.milestone4_title":"Fondation de Zhanxin",
+            "about.milestone4_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. a été fondée en août, avec un focus sur la fabrication métallique sur mesure et les solutions de mobilier urbain.",
+            "about.cta_title":"Prêt à lancer votre projet ?",
+            "about.cta_desc":"Contactez notre équipe dès aujourd'hui pour une consultation gratuite et un devis personnalisé.",
+            "about.cta_products":"Voir les Produits",
+            "about.cta_contact":"Nous Contacter",
+            "footer.desc":"Fabricant professionnel de structures métalliques, d'écrans LED et de mobilier urbain.",
+            "footer.products":"Produits",
+            "footer.p1":"Caissons Lumineux Publicitaires",
+            "footer.p2":"Écrans LED",
+            "footer.p3":"Abris de Bus",
+            "footer.p4":"Structures Métalliques",
+            "footer.company":"Entreprise",
+            "footer.contact_title":"Contact",
+            "footer.addr":"District de Songjiang, Shanghai, Chine",
+            "footer.privacy":"Politique de Confidentialité",
+            "footer.terms":"Conditions Générales"
+        },
+        de: {
+            "nav.home":"Startseite",
+            "nav.products":"Produkte",
+            "nav.about":"Über Uns",
+            "nav.contact":"Kontakt",
+            "nav.quote":"Angebot Anfordern",
+            "about.meta_title":"Über Uns - ZHANXIN Intelligente Geräte",
+            "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. gegründet im August 2023 von einem erfahrenen Branchenteam, spezialisiert auf Werbeleuchtkästen, Wegweiser, LED-Anzeigegehäuse, Bushäuschen und kundenspezifische Metallkonstruktionen.",
+            "about.slogan":"Exklusive Kreation · Intelligente Zukunft",
+            "about.hero_title":"Über Zhanxin",
+            "about.hero_subtitle":"Gegründet von einem erfahrenen Branchenteam, liefern wir hochwertige Metallfertigung und LED-Anzeigegehäuselösungen mit über 15 Jahren kumulierter Branchenerfahrung.",
+            "about.who_label":"Wer Wir Sind",
+            "about.who_title":"Ingenieurqualität, Gemeinsames Fachwissen",
+            "about.who_p1":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. wurde im August 2023 gegründet. Unser Kernteam stammt von führenden Unternehmen der Außenwerbungsgerätebranche und verfügt über mehr als 15 Jahre kumulierte Praxiserfahrung in Konstruktion, Fertigung und Projektabwicklung.",
+            "about.who_p2":"Wir konzentrieren uns auf Werbeleuchtkästen, Wegweiser, großformatige LED-Anzeigegehäuse, Bushäuschen und kundenspezifische Metallkonstruktionen. Die Standardproduktionszeit beträgt 15-30 Tage EXW. Wir unterhalten langfristige Kooperationen mit mehreren weltweit führenden Außenwerbemedienkonzernen und realisierten Werbeanlagen für über 40 U-Bahn-Linien in China während unserer beruflichen Laufbahn.",
+            "about.stat_years":"Jahre Branchenerfahrung",
+            "about.stat_team":"Mitarbeiter",
+            "about.stat_projects":"U-Bahn-Projekte",
+            "about.factory_img_alt":"Werkstatt der Fabrik Zhanxin",
+            "about.cert_title":"ISO-ausgerichtetes Qualitätsmanagementsystem",
+            "about.cert_sub":"Rezertifizierung in Bearbeitung",
+            "about.cap_label":"Produktionskapazitäten",
+            "about.cap_title":"Eigene Fertigung & Verarbeitung",
+            "about.cap1_title":"Blechverarbeitung",
+            "about.cap1_desc":"CNC-Schneiden, CNC-Biegen, Stanzen und Tiefziehen für Kohlenstoffstahl, Edelstahl und Aluminium.",
+            "about.cap2_title":"Schweißen & Montage",
+            "about.cap2_desc":"MIG-, WIG- und Punktschweißen mit qualifizierten Verfahren; Vollmontage von Bauteilen, Beschlägen und Elektrokomponenten.",
+            "about.cap3_title":"Oberflächenveredelung",
+            "about.cap3_desc":"Pulverbeschichtung, Lackierung und Eloxierung mit Korrosions- und Witterungsbeständigkeitsprüfungen.",
+            "about.why_label":"Warum Uns",
+            "about.why_title":"Unsere Kernstärken",
+            "about.strength1_title":"Erfahrenes Team",
+            "about.strength1_desc":"Kernteam mit über 15 Jahren Branchenerfahrung von führenden Herstellern für Außenwerbungsgeräte.",
+            "about.strength2_title":"Zuverlässige Lieferzeiten",
+            "about.strength2_desc":"Standardproduktionszeit 15-30 Tage EXW, mit stabiler weltweiter Logistik und Haus-zu-Haus-Optionen.",
+            "about.strength3_title":"Strenge Qualitätskontrolle",
+            "about.strength3_desc":"3-stufiges Inspektionssystem vom Rohmaterial bis Fertigware, abgestimmt auf internationale Projektstandards.",
+            "about.strength4_title":"Weltweite Reichweite",
+            "about.strength4_desc":"Langzeitlieferant für weltweit führende Außenwerbemedienkonzerne, aktiv in über 30 Ländern und Regionen.",
+            "about.journey_label":"Unser Weg",
+            "about.journey_title":"Erbe und Meilensteine",
+            "about.milestone1_title":"Branchenanfänge",
+            "about.milestone1_desc":"Die Kernteammitglieder begannen ihre Karriere in der Außenwerbungsgerätebranche und sammelten fundierte Technik- und Projekterfahrung.",
+            "about.milestone2_title":"Projektakkumulation",
+            "about.milestone2_desc":"Realisierung von Werbeanlagen für über 40 U-Bahn-Linien in China, mit solidem Ruf im Segment.",
+            "about.milestone3_title":"Branchenwandel",
+            "about.milestone3_desc":"Die vorherige Betreibereinheit stellte den Betrieb ein. Das Kernteam beschloss, das technische und geschäftliche Erbe fortzuführen.",
+            "about.milestone4_title":"Gründung von Zhanxin",
+            "about.milestone4_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. wurde im August gegründet, mit Fokus auf kundenspezifische Metallfertigung und städtische Möbellösungen.",
+            "about.cta_title":"Bereit Ihr Projekt zu starten?",
+            "about.cta_desc":"Kontaktieren Sie noch heute unser Team für eine kostenlose Beratung und individuelles Angebot.",
+            "about.cta_products":"Produkte Ansehen",
+            "about.cta_contact":"Kontakt Aufnehmen",
+            "footer.desc":"Professioneller Hersteller von Metallkonstruktionen, LED-Anzeigen und städtischen Straßenmöbeln.",
+            "footer.products":"Produkte",
+            "footer.p1":"Werbeleuchtkästen",
+            "footer.p2":"LED-Anzeigen",
+            "footer.p3":"Bushäuschen",
+            "footer.p4":"Metallkonstruktionen",
+            "footer.company":"Unternehmen",
+            "footer.contact_title":"Kontakt",
+            "footer.addr":"Bezirk Songjiang, Shanghai, China",
+            "footer.privacy":"Datenschutz",
+            "footer.terms":"Nutzungsbedingungen"
+        },
+        ja: {
+            "nav.home":"ホーム",
+            "nav.products":"製品",
+            "nav.about":"会社紹介",
+            "nav.contact":"お問い合わせ",
+            "nav.quote":"見積もり依頼",
+            "about.meta_title":"会社紹介 - 上海崭鑫インテリジェント機器",
+            "about.meta_desc":"上海崭鑫インテリジェント機器有限公司は業界経験豊富なチームにより2023年8月設立、広告灯箱・案内標識・LED表示筐体・バスシェルター・特注金属構造物を専門としています。",
+            "about.slogan":"専属創造・インテリジェントフューチャー",
+            "about.hero_title":"崭鑫について",
+            "about.hero_subtitle":"業界経験豊富なチームが創業、15年以上の業界蓄積で高品質な金属加工・LED表示筐体ソリューションを提供。",
+            "about.who_label":"私たちについて",
+            "about.who_title":"エンジニアリングの卓越性、集合的専門知識",
+            "about.who_p1":"上海崭鑫インテリジェント機器有限公司は2023年8月に設立されました。コアチームは屋外広告機器業界のトップ企業出身で、設計・製造・プロジェクトデリバリーにおいて15年以上の実務経験を蓄積しています。",
+            "about.who_p2":"私たちは広告灯箱、案内標識、大型LED表示筐体、バスシェルター、特注金属構造物に特化しています。標準生産リードタイムは15～30日EXWです。複数の世界トップ屋外メディアグループと長期的な協力関係を構築し、在職中に中国国内で40路線以上の地下鉄広告施設プロジェクトを完成させてきました。",
+            "about.stat_years":"年の業界蓄積",
+            "about.stat_team":"チーム人員",
+            "about.stat_projects":"地下鉄プロジェクト",
+            "about.factory_img_alt":"崭鑫生産工場",
+            "about.cert_title":"ISO準拠品質システム",
+            "about.cert_sub":"再認証進行中",
+            "about.cap_label":"生産能力",
+            "about.cap_title":"自社工場 全工程製造",
+            "about.cap1_title":"板金加工",
+            "about.cap1_desc":"炭素鋼、ステンレス、アルミのCNC切断、CNC曲げ、プレス、絞り成形。",
+            "about.cap2_title":"溶接・組立",
+            "about.cap2_desc":"MIG、TIG、スポット溶接などの合格工法溶接；部品、金物、電装品の完全組立。",
+            "about.cap3_title":"表面処理",
+            "about.cap3_desc":"粉体塗装、塗装、アルマイト、耐食性・耐候試験対応。",
+            "about.why_label":"選ばれる理由",
+            "about.why_title":"私たちの強み",
+            "about.strength1_title":"ベテランチーム",
+            "about.strength1_desc":"コアチームは業界トップの屋外広告機器メーカー出身、15年以上の業界経験。",
+            "about.strength2_title":"リードタイム安定",
+            "about.strength2_desc":"標準品は15～30日EXW、グローバル物流が安定、戸別配達も対応可能。",
+            "about.strength3_title":"厳しい品質管理",
+            "about.strength3_desc":"素材から完成品まで3段階検査システム、品質基準は国際プロジェクト基準に準拠。",
+            "about.strength4_title":"グローバル展開",
+            "about.strength4_desc":"世界トップ屋外メディアグループの長期サプライヤー、世界30カ国以上に展開。",
+            "about.journey_label":"沿革",
+            "about.journey_title":"歩みとあゆみ",
+            "about.milestone1_title":"業界スタート",
+            "about.milestone1_desc":"コアチームメンバーが屋外広告機器業界にキャリアをスタートし、技術・プロジェクト経験を深く蓄積。",
+            "about.milestone2_title":"プロジェクト蓄積",
+            "about.milestone2_desc":"中国国内で40路線以上の地下鉄広告施設プロジェクトを実施、细分野で確かな評判を構築。",
+            "about.milestone3_title":"業界変革",
+            "about.milestone3_desc":"旧運営主体が営業終了。コアチームは技術と事業の遺産を継承することを決定。",
+            "about.milestone4_title":"崭鑫設立",
+            "about.milestone4_desc":"2023年8月、上海崭鑫インテリジェント機器有限公司を設立。特注金属加工と都市家具ソリューションに注力。",
+            "about.cta_title":"プロジェクトのご相談はまだですか？",
+            "about.cta_desc":"無料相談・お見積もりは、今すぐ弊社チームまでお問い合わせください。",
+            "about.cta_products":"製品を見る",
+            "about.cta_contact":"お問い合わせ",
+            "footer.desc":"金属構造物・LED表示・都市家具の専門メーカー。",
+            "footer.products":"製品",
+            "footer.p1":"広告灯箱",
+            "footer.p2":"LEDディスプレイ",
+            "footer.p3":"バスシェルター",
+            "footer.p4":"金属構造物",
+            "footer.company":"会社",
+            "footer.contact_title":"連絡先",
+            "footer.addr":"中国上海市松江区",
+            "footer.privacy":"プライバシーポリシー",
+            "footer.terms":"利用規約"
+        },
+        ar: {
+            "nav.home":"الرئيسية",
+            "nav.products":"المنتجات",
+            "nav.about":"من نحن",
+            "nav.contact":"اتصل بنا",
+            "nav.quote":"اطلب عرض سعر",
+            "about.meta_title":"من نحن - شركة جانشين للمعدات الذكية",
+            "about.meta_desc":"شركة شانغهاي جانشين للمعدات الذكية، تأسست في أغسطس 2023 على يد فريق من خبراء الصناعة، متخصصة في صناديق الإضاءة الإعلانية واللوحات الإرشادية وأغلفة شاشات العرض وملاجئ الحافلات والهياكل المعدنية المخصصة.",
+            "about.slogan":"إبداع خاص · مستقبل ذكي",
+            "about.hero_title":"عن جانشين",
+            "about.hero_subtitle":"تأسست من قبل فريق من خبراء في المجال، نقدم تصنيع معدن عالي الجودة وحلول أغلفة شاشات العرض بخبرة تراكمية تمتد لأكثر من 15 عاماً.",
+            "about.who_label":"من نحن",
+            "about.who_title":"تميز هندسي، تراث خبرة",
+            "about.who_p1":"تأسست شركة شانغهاي جانشين للمعدات الذكية في أغسطس 2023. فريقنا الأساسي يأتي من شركات رائدة في قطاع معدات الإعلان الخارجي، ويمتلك أكثر من 15 عاماً من الخبرة التراكمية في التصميم والتصنيع وتنفيذ المشاريع.",
+            "about.who_p2":"نحن نركز على صناديق الإضاءة الإعلانية واللوحات الإرشادية وأغلفة شاشات العرض كبيرة الحجم وملاجئ الحافلات والهياكل المعدنية المخصصة. مدة الإنتاج القياسية من 15 إلى 30 يومًا EXW. أقمنا علاقات تعاون طويلة الأمد مع مجموعات إعلام خارجية عالمية رائدة متعددة، وأنجزنا مشاريع منشآت إعلانية لأكثر من 40 خط مترو في الصين خلال مسيرتنا المهنية.",
+            "about.stat_years":"سنوات خبرة صناعية",
+            "about.stat_team":"أعضاء الفريق",
+            "about.stat_projects":"مشاريع المترو",
+            "about.factory_img_alt":"مصنع جانشين",
+            "about.cert_title":"نظام جودة مطابق لمواصفات آيزو",
+            "about.cert_sub":"إعادة اعتماد قيد الإجراء",
+            "about.cap_label":"القدرات الإنتاجية",
+            "about.cap_title":"التصنيع والمعالجة الداخلية",
+            "about.cap1_title":"تصنيع الصفائح المعدنية",
+            "about.cap1_desc":"قص CNC، ثني CNC، ختم وسحب عميق لفولاذ الكربوني والستانلس والألومنيوم.",
+            "about.cap2_title":"لحام وتجميع",
+            "about.cap2_desc":"لحام MIG و TIG ونقطي بإجراءات مؤهلة؛ تجميع كامل للمكونات والتركيبات والملحقات الكهربائية.",
+            "about.cap3_title":"تشطيب السطوح",
+            "about.cap3_desc":"طلاء مسحوبي ودهان وأكسدة مع اختبارات مقاومة التآكل والمناخ.",
+            "about.why_label":"لماذا تختارنا",
+            "about.why_title":"مميزاتنا الأساسية",
+            "about.strength1_title":"فريق محترف",
+            "about.strength1_desc":"فريق أساسي بخبرة تمتد لأكثر من 15 عاماً في قطاع مصنعي معدات الإعلان الخارجي الرائدة.",
+            "about.strength2_title":"مواعيد موثوقة",
+            "about.strength2_desc":"مدة إنتاج قياسية 15-30 يومًا EXW، مع لوجستيات عالمية مستقرة وخيارات توصيل حتى الباب.",
+            "about.strength3_title":"مراقبة جودة صارمة",
+            "about.strength3_desc":"نظام فحص من ثلاث مراحل من المادة الخام إلى المنتج النهائي، يتوافق مع معايير المشاريع الدولية.",
+            "about.strength4_title":"تواجد عالمي",
+            "about.strength4_desc":"مورد طويل الأمد لمجموعات إعلام خارجية عالمية رائدة، يخدم أكثر من 30 دولة ومنطقة حول العالم.",
+            "about.journey_label":"رحلتنا",
+            "about.journey_title":"إرثنا والمعالم الزمنية",
+            "about.milestone1_title":"البدايات الصناعية",
+            "about.milestone1_desc":"بدأ أعضاء الفريق الأساسي مسيرتهم المهنية في قطاع معدات الإعلان الخارجي، وجمعوا خبرة تقنية ومشاريع عميقة.",
+            "about.milestone2_title":"تراكم المشاريع",
+            "about.milestone2_desc":"إنجاز مشاريع منشآت إعلانية لأكثر من 40 خط مترو في الصين، وبناء سمعة قوية في القطاع.",
+            "about.milestone3_title":"تحول صناعي",
+            "about.milestone3_desc":"توقفت الكيان التشغيلي السابق. قرر الفريق الأساسي استمرار التراث التقني والتجاري.",
+            "about.milestone4_title":"تأسيس جانشين",
+            "about.milestone4_desc":"تأسست شركة شانغهاي جانشين للمعدات الذكية في أغسطس، مع التركيز على التصنيع المعدني المخصص وحلول أثاث المدن.",
+            "about.cta_title":"مستعد لبدء مشروعك؟",
+            "about.cta_desc":"اتصل بفريقنا اليوم للحصول على استشارة مجانية وعرض سعر مخصص.",
+            "about.cta_products":"عرض المنتجات",
+            "about.cta_contact":"اتصل بنا",
+            "footer.desc":"شركة مصنعة محترفة للهياكل المعدنية وشاشات العرض وأثاث المدن.",
+            "footer.products":"المنتجات",
+            "footer.p1":"صناديق الإضاءة الإعلانية",
+            "footer.p2":"شاشات العرض LED",
+            "footer.p3":"ملاجئ الحافلات",
+            "footer.p4":"الهياكل المعدنية",
+            "footer.company":"الشركة",
+            "footer.contact_title":"اتصل بنا",
+            "footer.addr":"منطقة سونجيانغ، شانغهاي، الصين",
+            "footer.privacy":"سياسة الخصوصية",
+            "footer.terms":"شروط الخدمة"
+        }
+    };
+
+    // 语言切换函数
+    function setLang(langKey){
+        const trans = translations[langKey] || translations.en;
+        document.querySelectorAll('[data-i18n]').forEach(el=>{
+            const key = el.getAttribute('data-i18n');
+            if(trans[key]) el.innerText = trans[key];
+        });
+        document.documentElement.lang = langKey;
+    }
+
+    // 初始化
+    const langSelect = document.getElementById('langSelect');
+    langSelect.addEventListener('change', function(){
+        setLang(this.value);
+    });
+    setLang('en');
+
+    // 滚动导航效果
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('shadow-md');
+            header.classList.remove('shadow-sm');
+        } else {
+            header.classList.remove('shadow-md');
+            header.classList.add('shadow-sm');
+        }
+    });
+    </script>
 </body>
 </html>
