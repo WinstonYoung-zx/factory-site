@@ -31,34 +31,40 @@
         .card-header-blue {
             background-color: #0F3460;
             color:white;
-            padding:8px 16px;
-            font-weight:bold;
-            font-size:1.25rem;
-            border-radius: 6px 6px 0 0;
+            padding:10px 18px;
+            font-weight:600;
+            font-size:1.15rem;
+            border-radius: 8px 8px 0 0;
         }
         .card-header-orange {
             background-color: #ff7800;
             color:white;
-            padding:8px 16px;
-            font-weight:bold;
-            font-size:1.25rem;
-            border-radius: 6px 6px 0 0;
+            padding:10px 18px;
+            font-weight:600;
+            font-size:1.15rem;
+            border-radius: 8px 8px 0 0;
         }
-        .card-body {
+        .card-body-primary {
             border:1px solid #e8e8e8;
             border-top:none;
-            padding:20px;
-            border-radius:0 0 6px 6px;
+            padding:22px;
+            border-radius:0 0 8px 8px;
+        }
+        .card-mini {
+            border:1px solid #e8e8e8;
+            border-radius:8px;
+            padding:24px;
+            background:#fff;
         }
     </style>
 </head>
 <body class="font-inter text-gray-700 bg-white">
-    <!-- 顶部导航栏，和截图完全一致 -->
+    <!-- 顶部导航栏 -->
     <header class="w-full bg-primary">
-        <div class="container mx-auto px-6 py-3">
+        <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <a href="/" class="flex items-center gap-2">
-                    <img src="/uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo" class="h-8">
+                    <img src="/uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo" class="h-9">
                 </a>
                 <nav class="hidden md:flex items-center gap-8 text-white text-base">
                     <a href="/" data-i18n="nav.home" class="hover:text-orange-400 transition-colors">Home</a>
@@ -81,24 +87,24 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-10">
+    <main class="container mx-auto px-6 py-12">
         <!-- 页面标题区域 -->
-        <section class="mb-6">
+        <section class="mb-8">
             <h1 data-i18n="about.page_title" class="text-[clamp(1.8rem,4vw,2.4rem)] font-bold text-primary">About SHANGHAI ZHANXIN</h1>
-            <p data-i18n="about.page_subtitle" class="text-lg text-gray-600 mt-2">Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects</p>
+            <p data-i18n="about.page_subtitle" class="text-lg text-gray-600 mt-3">Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects</p>
         </section>
 
         <!-- 工厂大图 -->
-        <div class="w-full rounded-lg overflow-hidden mb-8">
-            <img src="/uploads/factory-wide.jpg" alt="Zhanxin manufacturing workshop" data-i18n="about.factory_img_alt" class="w-full h-auto">
+        <div class="w-full rounded-lg overflow-hidden mb-10">
+            <img src="/uploads/factory-wide.jpg" alt="Zhanxin manufacturing workshop" class="w-full h-auto">
         </div>
 
-        <!-- 顶部三栏卡片 Company Profile / Our Strength / Quality & Compliance（完全复刻截图布局） -->
-        <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <!-- 顶部三栏卡片 Company Profile / Our Strength / Quality & Compliance -->
+        <div class="grid md:grid-cols-3 gap-6 mb-10">
             <!-- Company Profile -->
             <div>
                 <div class="card-header-blue">Company Profile</div>
-                <div class="card-body">
+                <div class="card-body-primary">
                     <p data-i18n="about.card1_text" class="text-gray-700 leading-relaxed">
                         We are a factory specialized in outdoor, airport and urban furniture and metal structure project manufacturing.
                     </p>
@@ -107,8 +113,8 @@
             <!-- Our Strength -->
             <div>
                 <div class="card-header-orange">Our Strength</div>
-                <div class="card-body">
-                    <ul class="space-y-2 text-gray-700">
+                <div class="card-body-primary">
+                    <ul class="space-y-2.5 text-gray-700">
                         <li data-i18n="about.str1">• Custom steel & aluminum structure solution</li>
                         <li data-i18n="about.str2">• Large size LED/LCD screen mounting structure</li>
                         <li data-i18n="about.str3">• Urban & airport furniture and bus shelter</li>
@@ -119,7 +125,7 @@
             <!-- Quality & Compliance -->
             <div>
                 <div class="card-header-blue">Quality & Compliance</div>
-                <div class="card-body">
+                <div class="card-body-primary">
                     <ul class="space-y-2 text-sm text-gray-700">
                         <li data-i18n="about.qua1">• Work Safety Production License (China) — licensed manufacturer for metal fabrication</li>
                         <li data-i18n="about.qua2">• Quality management system aligned in accordance with ISO 9001 / 14001 / 45001</li>
@@ -133,39 +139,39 @@
             </div>
         </div>
 
-        <!-- 第二排三栏小卡片（截图下方3个卡片） -->
+        <!-- 第二排三栏小卡片 -->
         <div class="grid md:grid-cols-3 gap-6 mb-10">
-            <div class="border border-gray-200 rounded-lg p-5">
+            <div class="card-mini">
                 <div class="flex items-center gap-2 mb-3">
                     <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     <h4 data-i18n="about.mini1_title" class="font-semibold text-primary">Custom fabrication & production</h4>
                 </div>
-                <p data-i18n="about.mini1_text" class="text-sm text-gray-600">Quality management system standard, reliable airport and furniture manufacturing and metal & project manufacturing.</p>
+                <p data-i18n="about.mini1_text" class="text-sm text-gray-600 leading-relaxed">Quality management system standard, reliable airport and furniture manufacturing and metal & project manufacturing.</p>
             </div>
-            <div class="border border-gray-200 rounded-lg p-5">
+            <div class="card-mini">
                 <div class="flex items-center gap-2 mb-3">
                     <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     <h4 data-i18n="about.mini2_title" class="font-semibold text-primary">Custom manufacture for custom solution</h4>
                 </div>
-                <p data-i18n="about.mini2_text" class="text-sm text-gray-600">Customized manufacture equipment, with comprehensive customization capability, and Support OEM / ODM.</p>
+                <p data-i18n="about.mini2_text" class="text-sm text-gray-600 leading-relaxed">Customized manufacture equipment, with comprehensive customization capability, and Support OEM / ODM.</p>
             </div>
-            <div class="border border-gray-200 rounded-lg p-5">
+            <div class="card-mini">
                 <div class="flex items-center gap-2 mb-3">
                     <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     <h4 data-i18n="about.mini3_title" class="font-semibold text-accent">Compliance</h4>
                 </div>
-                <p data-i18n="about.mini3_text" class="text-sm text-gray-600">Work Safety Production License, Certified systems, testing, Reports. Support: WhatsApp & ODM @zhanxinglobal.com</p>
+                <p data-i18n="about.mini3_text" class="text-sm text-gray-600 leading-relaxed">Work Safety Production License, Certified systems, testing, Reports. Support: WhatsApp & ODM @zhanxinglobal.com</p>
             </div>
         </div>
 
-        <!-- Google Map + Contact Info 区域 -->
-        <div class="grid md:grid-cols-2 gap-6 mb-10">
+        <!-- Google Map + Contact Info 等高区域 -->
+        <div class="grid md:grid-cols-2 gap-6 items-stretch mb-12">
             <div class="rounded-lg overflow-hidden border border-gray-200">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.806466665293!2d121.05610507459158!3d30.89207457791617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b2e614fbbfa149%3A0x189a3684b8d9e343!2s3%2C%201275%20Qianming%20E%20Rd%2C%20Jin%20Shan%20Qu%2C%20Shang%20Hai%20Shi%2C%20China%2C%20201502!5e0!3m2!1sen!2sus!4v1792156311648!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.806466665293!2d121.05610507459158!3d30.89207457791617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b2e614fbbfa149%3A0x189a3684b8d9e343!2s3%2C%201275%20Qianming%20E%20Rd%2C%20Jin%20Shan%20Qu%2C%20Shang%20Hai%20Shi%2C%20China%2C%20201502!5e0!3m2!1sen!2sus!4v1792156311648!5m2!1sen!2sus" width="100%" height="100%" style="min-height:420px;border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
-            <div class="border border-gray-200 rounded-lg p-6">
-                <h3 data-i18n="about.contact_title" class="text-xl font-bold text-primary mb-4">SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</h3>
-                <ul class="space-y-3 text-gray-700">
+            <div class="border border-gray-200 rounded-lg p-7 h-full">
+                <h3 data-i18n="about.contact_title" class="text-xl font-bold text-primary mb-5">SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</h3>
+                <ul class="space-y-4 text-gray-700">
                     <li><strong>Tel:</strong> <a href="tel:+862157223755" class="hover:text-primary">+862157223755</a></li>
                     <li><strong>M.P./WhatsApp:</strong> <a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline">https://wa.me/8619301179802</a></li>
                     <li><strong>Web:</strong> <a href="https://www.zhanxinglobal.com/" target="_blank" class="hover:text-primary">https://www.zhanxinglobal.com/</a></li>
@@ -176,7 +182,7 @@
         </div>
     </main>
 
-    <!-- 页脚，完全匹配截图深蓝色三栏footer -->
+    <!-- 页脚 -->
     <footer class="bg-primary text-white py-10">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-8">
