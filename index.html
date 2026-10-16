@@ -354,7 +354,6 @@ nextBtn.onclick = ()=>{
 };
 showSlide(slideIndex);
 startAutoSlide();
-
 // ========== 表单提交（JSON模式，修复联系人，仅记录文件名，不启用R2） ==========
 document.querySelector("#inquiryForm").addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -363,11 +362,9 @@ document.querySelector("#inquiryForm").addEventListener("submit", async function
     submitBtn.disabled = true;
     tipDom.className = "";
     tipDom.innerText = "Submitting...";
-
     const formDataObj = {};
     const formElems = new FormData(this);
     let attachFileName = "";
-
     formElems.forEach((val, key) => {
         if(key === "attach"){
             if(val.name) attachFileName = val.name;
@@ -377,7 +374,6 @@ document.querySelector("#inquiryForm").addEventListener("submit", async function
     });
     formDataObj.attachFileName = attachFileName;
     formDataObj.turnstileToken = document.querySelector('input[name="cf-turnstile-response"]')?.value || "";
-
     const workerUrl = "https://zhanxin-form.shzxin-cn.workers.dev";
     try {
         const res = await fetch(workerUrl, {
@@ -407,7 +403,6 @@ document.querySelector("#inquiryForm").addEventListener("submit", async function
         submitBtn.disabled = false;
     }
 })
-
 const translations = {
     en: {
         "nav.home":"Home",
@@ -417,7 +412,7 @@ const translations = {
         "hero.title":"Your Reliable Metal Structure Partner",
         "hero.desc":"Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures",
         "hero.title2":"Custom Fabrication & Engineering",
-        "hero.desc2":"One‑stop solution for urban furniture, signage, LED screen & metal structure projects",
+        "hero.desc2":"One‑stop solution for airport, outdoor & urban furniture, signage, LED screen and metal structure projects",
         "hero.title3":"Export to Europe, Middle East & America",
         "hero.desc3":"Factory with rich experience in international B2B orders",
         "hero.btn":"Send Inquiry",
@@ -460,7 +455,7 @@ const translations = {
         "hero.title":"您信赖的金属结构产品伙伴",
         "hero.desc":"广告灯箱、导向标识、LED/LCD屏、候车亭与金属结构专业制造商",
         "hero.title2":"定制生产与工程落地",
-        "hero.desc2":"城市家具、标识、显示屏、金属结构一站式解决方案",
+        "hero.desc2":"机场、户外及城市家具、标识标牌、LED屏与钢结构项目一站式方案",
         "hero.title3":"出口欧美、中东市场",
         "hero.desc3":"自有工厂，拥有丰富外贸B2B项目经验",
         "hero.btn":"提交询盘",
@@ -503,7 +498,7 @@ const translations = {
         "hero.title":"Su socio confiable en estructuras metálicas",
         "hero.desc":"Fabricante de cajas de luz publicitarias, señales de guía, pantallas LED/LCD, refugios de autobús y estructuras metálicas",
         "hero.title2":"Fabricación e ingeniería personalizada",
-        "hero.desc2":"Solución integral para mobiliario urbano, señalización, pantallas LED y estructuras metálicas",
+        "hero.desc2":"Solución integral para mobiliario aeroportuario, exterior y urbano, señalización, pantallas LED y proyectos de estructuras metálicas",
         "hero.title3":"Exportación a Europa, Oriente Medio y América",
         "hero.desc3":"Fábrica con amplia experiencia en pedidos B2B internacionales",
         "hero.btn":"Enviar consulta",
@@ -546,7 +541,7 @@ const translations = {
         "hero.title":"Votre partenaire fiable pour les structures métalliques",
         "hero.desc":"Fabricant de caissons lumineux publicitaires, signalétique, écrans LED/LCD, abris de bus et structures métalliques",
         "hero.title2":"Fabrication et ingénierie sur‑mesure",
-        "hero.desc2":"Solution complète pour mobilier urbain, signalétique, écrans LED et structures métalliques",
+        "hero.desc2":"Solution complète pour mobilier aéroportuaire, extérieur et urbain, signalisation, écrans LED et projets de structures métalliques",
         "hero.title3":"Export vers l'Europe, le Moyen‑Orient et l'Amérique",
         "hero.desc3":"Usine avec grande expérience des commandes B2B internationales",
         "hero.btn":"Envoyer une demande",
@@ -589,7 +584,7 @@ const translations = {
         "hero.title":"Ihr zuverlässiger Partner für Metallkonstruktionen",
         "hero.desc":"Hersteller von Werbeleuchtkästen, Wegweisern, LED/LCD‑Bildschirmen, Bushäuschen und Metallkonstruktionen",
         "hero.title2":"Individuelle Fertigung & Ingenieurwesen",
-        "hero.desc2":"Komplettlösung für Stadtmöbel, Beschilderung, LED‑Bildschirme und Metallkonstruktionen",
+        "hero.desc2":"Komplettlösung für Flughafen‑, Außen‑ und Stadtmöbel, Beschilderung, LED‑Bildschirme und Metallkonstruktionsprojekte",
         "hero.title3":"Export nach Europa, Naher Osten und Amerika",
         "hero.desc3":"Fabrik mit reichhaltiger Erfahrung bei internationalen B2B‑Bestellungen",
         "hero.btn":"Anfrage senden",
@@ -632,7 +627,7 @@ const translations = {
         "hero.title":"金属構造物の信頼できるパートナー",
         "hero.desc":"広告ライトボックス、案内標識、LED/LCDディスプレイ、バス待合シェルター、金属構造物メーカー",
         "hero.title2":"カスタム製造・エンジニアリング",
-        "hero.desc2":"都市家具・サイン・LEDディスプレイ・金属構造物のワンストップソリューション",
+        "hero.desc2":"空港・屋外・都市家具、サイン、LEDスクリーン、金属構造物プロジェクトのワンストップソリューション",
         "hero.title3":"ヨーロッパ・中東・アメリカ向け輸出",
         "hero.desc3":"B2B海外受注実績豊富な工場",
         "hero.btn":"問い合わせ送信",
@@ -675,7 +670,7 @@ const translations = {
         "hero.title":"شريكك الموثوق للهياكل المعدنية",
         "hero.desc":"مصنع صناديق الإعلان المضيئة، لوحات الإرشاد، شاشات LED/LCD، ملاجئ الحافلات والهياكل المعدنية",
         "hero.title2":"التصنيع الهندسي المخصص",
-        "hero.desc2":"حل متكامل لأثاث المدن واللوحات الإرشادية وشاشات LED والهياكل المعدنية",
+        "hero.desc2":"حل متكامل لمشاريع الأثاث المطارى والخارجي والحضري واللوحات الإرشادية وشاشات LED والهياكل المعدنية",
         "hero.title3":"التصدير إلى أوروبا والشرق الأوسط وأمريكا",
         "hero.desc3":"مصنع ذو خبرة واسعة في طلبات B2B العالمية",
         "hero.btn":"إرسال استفسار",
