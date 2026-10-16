@@ -355,12 +355,11 @@ nextBtn.onclick = ()=>{
 showSlide(slideIndex);
 startAutoSlide();
 
-// ========== 表单提交：防重复提交，携带国家/电话/附件文件名 ==========
+// ========== 表单提交（JSON模式，修复联系人，仅记录文件名，不启用R2） ==========
 document.querySelector("#inquiryForm").addEventListener("submit", async function (e) {
     e.preventDefault();
     const tipDom = document.querySelector("#formTip");
     const submitBtn = document.getElementById("submitBtn");
-
     submitBtn.disabled = true;
     tipDom.className = "";
     tipDom.innerText = "Submitting...";
