@@ -11,18 +11,20 @@
 <script src="https://challenges.cloudflare.com/turnstile/v0/sitekey.js" defer></script>
 </head>
 <body>
-<header class="site-header">
+<!-- 修复点1：移除 site-header，直接使用header标签，匹配css -->
+<header>
   <div class="container nav-wrap">
     <a href="/index.html" class="logo">
       <img src="/uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo">
     </a>
-    <nav class="main-nav">
-      <a href="/index.html" data-i18n="nav.home">Home</a>
-      <a href="/products.html" data-i18n="nav.products">Products</a>
-      <a href="/about.html" data-i18n="nav.about">About Us</a>
-      <a href="/contact.html" data-i18n="nav.quote">Get a Quote</a>
-    </nav>
-    <select id="langSelect" class="lang-select">
+    <!-- 修复点2：main-nav → nav-links，和css类名统一 -->
+    <ul class="nav-links">
+      <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="/products.html" data-i18n="nav.products">Products</a></li>
+      <li><a href="/about.html" data-i18n="nav.about">About Us</a></li>
+      <li><a href="/contact.html" data-i18n="nav.quote">Get a Quote</a></li>
+    </ul>
+    <select id="langSelect" class="lang-switch">
       <option value="en">English</option>
       <option value="zh">中文</option>
       <option value="fr">Français</option>
@@ -31,6 +33,7 @@
       <option value="es">Español</option>
       <option value="ar">العربية</option>
     </select>
+    <button class="mobile-menu-btn">☰</button>
   </div>
 </header>
 <main class="container page-content">
@@ -140,6 +143,13 @@
   </div>
 </footer>
 <script>
+// 移动端菜单开关逻辑，补充进来，和首页一致
+const mobileBtn = document.querySelector('.mobile-menu-btn');
+const navList = document.querySelector('.nav-links');
+mobileBtn.addEventListener('click', ()=>{
+  navList.classList.toggle('mobile-open');
+})
+
 // 多语言翻译，新增西班牙语es、阿拉伯语ar
 const translations = {
 en: {
