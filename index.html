@@ -199,7 +199,6 @@
         </div>
     </div>
 </section>
-
 <!-- ✅ 已经替换为合规安全版本的Quality & Compliance -->
 <section class="compliance container">
     <h2 class="section-title">Quality & Compliance</h2>
@@ -215,7 +214,6 @@
         <li>Target‑market certifications (EN 1090 / CE / UL / SASO / ECAS / G‑Mark) can be arranged per project, with testing conducted by buyer‑nominated laboratories</li>
     </ul>
 </section>
-
 <section class="products container" id="products">
     <h2 class="section-title" data-i18n="product.title">Our Products</h2>
     <div class="product-grid">
@@ -763,18 +761,34 @@ const translations = {
         "inq.submit":"إرسال"
     }
 };
+
+// ✅ 修复：JS选择器使用标准键盘减号 data-i18n，增加alt翻译 + RTL双重兜底
 function setLang(langKey){
-    const trans = translations[langKey];
-    document.querySelectorAll('[data‑i18n]').forEach(el=>{
-        const key = el.getAttribute('data‑i18n');
+    const trans = translations[langKey] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
         if(trans[key]) el.innerText = trans[key];
-    })
+    });
+    // 图片alt多语言预埋
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    //阿拉伯语RTL双重兜底
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+    }
 }
 const langSelect = document.getElementById('langSelect');
 langSelect.addEventListener('change', function(){
-    const val = this.value;
-    setLang(val);
+    setLang(this.value);
 })
+//页面默认英文
 setLang('en');
 </script>
 </body>
