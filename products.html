@@ -76,6 +76,16 @@ nav a.active{
   border-radius:4px;
   border:none;
 }
+select,
+select option {
+  color: #222 !important;
+  background: #ffffff !important;
+}
+select option:hover,
+select option:focus {
+  background-color: #0F2A44 !important;
+  color: #fff !important;
+}
 
 /*面包屑 */
 .breadcrumb{
@@ -126,23 +136,12 @@ nav a.active{
   flex-wrap:wrap;
   align-items:center;
 }
-/*下拉修复配色 */
 .category-select{
   padding:10px 14px;
   border:1px solid var(--border-gray);
   border-radius:6px;
   font-size:1rem;
   min-width:220px;
-}
-select,
-select option {
-  color: #222 !important;
-  background: #ffffff !important;
-}
-select option:hover,
-select option:focus {
-  background-color: #0F2A44 !important;
-  color: #fff !important;
 }
 .search-input{
   padding:10px 14px;
@@ -151,162 +150,162 @@ select option:focus {
   min-width:260px;
   font-size:1rem;
 }
-.btn‑clear‑filter{
+.btn-clear-filter{
   padding:10px 16px;
-  border:1px solid var(--border‑gray);
+  border:1px solid var(--border-gray);
   background:#fff;
-  border‑radius:6px;
+  border-radius:6px;
   cursor:pointer;
   transition:0.2s;
 }
-.btn‑clear‑filter:hover{
+.btn-clear-filter:hover{
   background:#f1f3f6;
 }
-.active‑filter‑tags{
-  margin‑top:1rem;
+.active-filter-tags{
+  margin-top:1rem;
   display:flex;
   gap:0.7rem;
-  flex‑wrap:wrap;
-  justify‑content:center;
+  flex-wrap:wrap;
+  justify-content:center;
 }
-.filter‑tag{
+.filter-tag{
   background:#e8edf3;
   color:var(--primary);
   padding:6px 12px;
-  border‑radius:20px;
-  font‑size:0.9rem;
+  border-radius:20px;
+  font-size:0.9rem;
 }
 
 /*产品网格响应式优化 */
 .product-grid{
   display:grid;
-  grid-template-columns:repeat(auto‑fill, minmax(270px,1fr));
+  grid-template-columns:repeat(auto-fill, minmax(270px,1fr));
   gap:2rem;
 }
 .product-card{
-  border:1px solid var(--border‑gray);
-  border‑radius:12px;
+  border:1px solid var(--border-gray);
+  border-radius:12px;
   overflow:hidden;
   background:#fff;
-  transition:transform 0.24s ease, box‑shadow 0.24s ease;
+  transition:transform 0.24s ease, box-shadow 0.24s ease;
   cursor:pointer;
 }
-.product‑card:hover{
+.product-card:hover{
   transform:translateY(-5px);
-  box‑shadow:0 10px 24px rgba(15,42,68,0.14);
+  box-shadow:0 10px 24px rgba(15,42,68,0.14);
 }
-.product‑card img{
+.product-card img{
   width:100%;
   height:230px;
-  object‑fit:cover;
+  object-fit:cover;
   display:block;
   background:#f1f3f6;
 }
-.card‑body{
+.card-body{
   padding:1.3rem;
 }
-.card‑body h3{
+.card-body h3{
   color:var(--primary);
-  margin‑bottom:0.7rem;
-  font‑size:1.15rem;
-  line‑height:1.4;
+  margin-bottom:0.7rem;
+  font-size:1.15rem;
+  line-height:1.4;
 }
-.card‑body p{
+.card-body p{
   color:#555;
-  line‑height:1.65;
-  font‑size:0.96rem;
-  display:‑webkit‑box;
-  ‑webkit‑line‑clamp:3;
-  ‑webkit‑box‑orient:vertical;
+  line-height:1.65;
+  font-size:0.96rem;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
   overflow:hidden;
 }
 
 /*状态提示 */
-.loading‑tip{
-  text‑align:center;padding:5rem 0;color:#555;font‑size:1.1rem;
+.loading-tip{
+  text-align:center;padding:5rem 0;color:#555;font-size:1.1rem;
 }
-.error‑tip{
-  text‑align:center;padding:5rem 0;color:#c0392b;font‑size:1.1rem;
+.error-tip{
+  text-align:center;padding:5rem 0;color:#c0392b;font-size:1.1rem;
 }
-.empty‑tip{
-  text‑align:center;padding:5rem 0;color:#666;font‑size:1.1rem;
+.empty-tip{
+  text-align:center;padding:5rem 0;color:#666;font-size:1.1rem;
 }
 
 /*悬浮询盘按钮 */
-.float‑inquiry{
+.float-inquiry{
   position:fixed;
   right:20px;
   bottom:30px;
   background:var(--accent);
   color:#fff;
   padding:12px 18px;
-  border‑radius:50px;
-  text‑decoration:none;
-  box‑shadow:0 4px 12px rgba(255,120,0,0.35);
-  z‑index:99;
+  border-radius:50px;
+  text-decoration:none;
+  box-shadow:0 4px 12px rgba(255,120,0,0.35);
+  z-index:99;
 }
-.float‑inquiry:hover{
+.float-inquiry:hover{
   opacity:0.92;
 }
 
 footer{
-  background:var(--footer‑bg);
+  background:var(--footer-bg);
   color:#cccccc;
-  text‑align:center;
+  text-align:center;
   padding:2.2rem 5%;
-  margin‑top:5rem;
+  margin-top:5rem;
 }
 footer a{
   color:#ffb040;
-  text‑decoration:none;
+  text-decoration:none;
 }
 footer a:hover{
-  text‑decoration:underline;
+  text-decoration:underline;
 }
 
 /*RTL阿拉伯语适配 */
 [dir="rtl"] .breadcrumb,
-[dir="rtl"] .product‑intro,
-[dir="rtl"] .filter‑bar,
-[dir="rtl"] .active‑filter‑tags,
-[dir="rtl"] .card‑body{
-  text‑align:right;
+[dir="rtl"] .product-intro,
+[dir="rtl"] .filter-bar,
+[dir="rtl"] .active-filter-tags,
+[dir="rtl"] .card-body{
+  text-align:right;
 }
-[dir="rtl"] .filter‑bar{
-  flex‑direction:row‑reverse;
+[dir="rtl"] .filter-bar{
+  flex-direction:row-reverse;
 }
 
-@media(max‑width:992px){
-  .product‑grid{
-    grid‑template‑columns:repeat(auto‑fill, minmax(240px,1fr));
+@media(max-width:992px){
+  .product-grid{
+    grid-template-columns:repeat(auto-fill, minmax(240px,1fr));
     gap:1.6rem;
   }
 }
-@media(max‑width:768px){
-  header{flex‑direction:column;align‑items:flex‑start;}
-  nav{gap:1rem;width:100%;justify‑content:flex‑start;}
-  .filter‑bar{flex‑direction:column;align‑items:stretch;}
-  .product‑wrap{padding:1.8rem 3%;}
-  .product‑grid{
-    grid‑template‑columns:1fr;
+@media(max-width:768px){
+  header{flex-direction:column;align-items:flex-start;}
+  nav{gap:1rem;width:100%;justify-content:flex-start;}
+  .filter-bar{flex-direction:column;align-items:stretch;}
+  .product-wrap{padding:1.8rem 3%;}
+  .product-grid{
+    grid-template-columns:1fr;
   }
-  .float‑inquiry{right:15px;bottom:20px;font‑size:0.9rem;padding:10px 16px;}
-  .filter‑panel{padding:1.2rem;}
+  .float-inquiry{right:15px;bottom:20px;font-size:0.9rem;padding:10px 16px;}
+  .filter-panel{padding:1.2rem;}
 }
 </style>
 </head>
 <body>
 <header>
-  <div class="header‑logo‑wrap">
-    <img id="site‑logo" src="/uploads/logo.png" data‑i18n‑alt="site.logoAlt" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd." width="180" height="48">
+  <div class="header-logo-wrap">
+    <img id="site-logo" src="/uploads/logo.png" data-i18n-alt="site.logoAlt" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd." width="180" height="48">
   </div>
   <nav>
-    <a href="index.html" data‑i18n="nav.home">Home</a>
-    <a href="products.html" class="active" data‑i18n="nav.products">Products</a>
-    <a href="about.html" data‑i18n="nav.about">About Us</a>
-    <a href="index.html#inquiry" data‑i18n="nav.quote">Get a Quote</a>
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="products.html" class="active" data-i18n="nav.products">Products</a>
+    <a href="about.html" data-i18n="nav.about">About Us</a>
+    <a href="index.html#inquiry" data-i18n="nav.quote">Get a Quote</a>
   </nav>
-  <select class="lang‑select" id="langSelect">
+  <select class="lang-select" id="langSelect">
     <option value="en">English</option>
     <option value="zh">中文</option>
     <option value="es">Español</option>
@@ -318,59 +317,39 @@ footer a:hover{
 </header>
 
 <div class="breadcrumb">
-  <a href="index.html" data‑i18n="breadcrumb.home">Home</a>
+  <a href="index.html" data-i18n="breadcrumb.home">Home</a>
   <span>›</span>
-  <span data‑i18n="breadcrumb.products">Our Products</span>
+  <span data-i18n="breadcrumb.products">Our Products</span>
 </div>
 
-<section class="product‑wrap">
-  <h1 data‑i18n="products.pageTitle">Our Products</h1>
-  <p class="product‑intro" data‑i18n="products.pageIntro">We supply custom‑made bus shelters, advertising light boxes, way‑finding signage, LED‑LCD displays and metal‑structure solutions for global urban & airport projects.</p>
+<section class="product-wrap">
+  <h1 data-i18n="products.pageTitle">Our Products</h1>
+  <p class="product-intro" data-i18n="products.pageIntro">We supply custom‑made bus shelters, advertising light boxes, way‑finding signage, LED‑LCD displays and metal‑structure solutions for global urban & airport projects.</p>
 
-  <div class="filter‑panel">
-    <div class="filter‑bar">
-      <select class="category‑select" id="categoryFilter">
-        <option value="" data‑i18n="products.allCategories">All Categories</option>
+  <div class="filter-panel">
+    <div class="filter-bar">
+      <select class="category-select" id="categoryFilter">
+        <option value="" data-i18n="products.allCategories">All Categories</option>
       </select>
-      <input type="text" class="search‑input" id="productSearch" placeholder="Search products..." data‑i18n‑placeholder="products.searchPlaceholder">
-      <button class="btn‑clear‑filter" id="clearFilterBtn" data‑i18n="products.clearFilter">Clear Filters</button>
+      <input type="text" class="search-input" id="productSearch" placeholder="Search products..." data-i18n-placeholder="products.searchPlaceholder">
+      <button class="btn-clear-filter" id="clearFilterBtn" data-i18n="products.clearFilter">Clear Filters</button>
     </div>
-    <div class="active‑filter‑tags" id="filterTagsBox"></div>
+    <div class="active-filter-tags" id="filterTagsBox"></div>
   </div>
 
-  <div class="product‑grid" id="productGrid">
-    <div class="loading‑tip" data‑i18n="products.loading">Loading products...</div>
+  <div class="product-grid" id="productGrid">
+    <div class="loading-tip" data-i18n="products.loading">Loading products...</div>
   </div>
 </section>
 
-<a href="index.html#inquiry" class="float‑inquiry" data‑i18n="products.inquiryBtn">Send Inquiry</a>
+<a href="index.html#inquiry" class="float-inquiry" data-i18n="products.inquiryBtn">Send Inquiry</a>
 
 <footer>
-  <p data‑i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
+  <p data-i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
 </footer>
 
 <script src="lang.js" defer></script>
 <script defer>
-async function loadGlobalConfig() {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(()=>controller.abort(), 6000);
-  try{
-    const res = await fetch("content/global.md", {signal:controller.signal});
-    clearTimeout(timeoutId);
-    if(!res.ok) throw new Error("global.md not found");
-    const raw = await res.text();
-    const match = raw.match(/---\n([\s\S]*?)\n---/);
-    if(!match) throw new Error("front‑matter parse error");
-    const front = match[1];
-    const logoMatch = front.match(/site_logo:\s*(.*)/);
-    if(logoMatch) document.getElementById("site‑logo").src = logoMatch[1].trim();
-  }catch(e){
-    clearTimeout(timeoutId);
-    console.log("全局配置读取失败", e);
-  }
-}
-loadGlobalConfig();
-
 function escapeHtml(str){
   if(!str) return "";
   return String(str)
@@ -406,13 +385,13 @@ function updateFilterTags(){
   filterTagsBox.innerHTML = "";
   if(currentCat){
     const span = document.createElement("span");
-    span.className = "filter‑tag";
+    span.className = "filter-tag";
     span.innerText = "Category: "+currentCat;
     filterTagsBox.appendChild(span);
   }
   if(currentKeyword){
     const span = document.createElement("span");
-    span.className = "filter‑tag";
+    span.className = "filter-tag";
     span.innerText = "Search: "+currentKeyword;
     filterTagsBox.appendChild(span);
   }
@@ -433,18 +412,18 @@ function renderProducts(){
   }
   updateFilterTags();
   if(!list.length){
-    productGrid.innerHTML = `<div class="empty‑tip" data‑i18n="products.noResult">No products found</div>`;
+    productGrid.innerHTML = `<div class="empty-tip" data-i18n="products.noResult">No products found</div>`;
     if(window.setLang) window.setLang(window.currentLang);
     return;
   }
   list.forEach(item=>{
-    const slug = item.slug || (item.title||"").toLowerCase().replace(/\s+/g,"‑");
+    const slug = item.slug || (item.title||"").toLowerCase().replace(/\s+/g,"-");
     const card = document.createElement("div");
-    card.className = "product‑card";
+    card.className = "product-card";
     card.onclick = ()=> window.location.href = `product.html?slug=${slug}`;
     card.innerHTML = `
       <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" loading="lazy" onerror="this.style.display='none'">
-      <div class="card‑body">
+      <div class="card-body">
         <h3>${escapeHtml(item.title)}</h3>
         <p>${escapeHtml(item.desc)}</p>
       </div>
@@ -475,7 +454,7 @@ async function loadProducts(){
   const controller = new AbortController();
   const timeoutId = setTimeout(()=>controller.abort(),6000);
   try{
-    const res = await fetch("content/product‑index.json", {signal:controller.signal});
+    const res = await fetch("content/product-index.json", {signal:controller.signal});
     clearTimeout(timeoutId);
     if(!res.ok) throw new Error("json not found");
     allProducts = await res.json();
@@ -484,8 +463,8 @@ async function loadProducts(){
   }catch(err){
     clearTimeout(timeoutId);
     console.log("产品加载异常",err);
-    productGrid.className = "error‑tip";
-    productGrid.innerHTML = `<p data‑i18n="products.loadFail">Failed to load product data</p>`;
+    productGrid.className = "error-tip";
+    productGrid.innerHTML = `<p data-i18n="products.loadFail">Failed to load product data</p>`;
     if(window.setLang) window.setLang(window.currentLang);
   }
 }
