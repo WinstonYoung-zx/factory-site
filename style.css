@@ -1,6 +1,6 @@
 /* style.css 外贸B2B独立站
 主色：深蓝 #0f3460，强调橙 #e67e22
-修复：a标签默认蓝色、导航链接、询盘按钮，轮播背景图渲染bug、logo图片、移动端菜单
+修复：a标签默认蓝色、导航链接、询盘按钮，轮播背景图渲染bug、logo图片比例、移动端菜单
 */
 :root {
     --primary: #0f3460;
@@ -42,14 +42,13 @@ header {
     align-items: center;
     padding:1rem 20px;
 }
-/* ========== Logo ========== */
-.logo-link {
+/* ========== Logo【已修复class匹配，锁定比例，不会拉伸压扁】 ========== */
+.logo {
     display: flex;
     align-items: center;
-    gap: 8px;
     text-decoration: none;
 }
-.site-logo {
+.logo img {
     height: 44px;
     width: auto;
     display: block;
@@ -344,7 +343,7 @@ a:hover {
     .mobile-menu-btn {
         display:block;
     }
-    .site-logo {
+    .logo img {
         height:36px;
     }
     .hero h1 {
