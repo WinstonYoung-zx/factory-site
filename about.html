@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="about.meta_title">About Us - ZHANXIN Intelligent Equipment</title>
-    <meta name="description" data-i18n="about.meta_desc" content="Shanghai Zhanxin Intelligent Equipment Co., Ltd. Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0F2A44',
-                        accent: '#D4750B',
-                        secondaryBlue: '#1367B2',
-                        bodyText: '#333333',
-                        mutedText: '#555555',
-                        borderGrayBlue: '#D9DEE3',
-                        footerBg: '#0B1F33'
-                    },
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                    },
-                }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="about.meta_title">About Us - ZHANXIN Intelligent Equipment</title>
+<meta name="description" data-i18n="about.meta_desc" content="Shanghai Zhanxin Intelligent Equipment Co., Ltd. Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#0F2A44',
+                    accent: '#D4750B',
+                    secondaryBlue: '#1367B2',
+                    bodyText: '#333333',
+                    mutedText: '#555555',
+                    borderGrayBlue: '#D9DEE3',
+                    footerBg: '#0B1F33'
+                },
+                fontFamily: {
+                    inter: ['Inter', 'sans-serif'],
+                },
             }
         }
-    </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            background-color: #ffffff;
-            color: #333333;
-        }
-        .card-header {
-            background-color: #0F2A44;
-            color:#ffffff;
-            padding:12px 20px;
-            font-weight:600;
-            font-size:1.1rem;
-            border-radius: 8px 8px 0 0;
-        }
-        .card-body-primary {
-            border:1px solid #D9DEE3;
-            border-top:none;
-            padding:24px;
-            border-radius:0 0 8px 8px;
-            height:100%;
-        }
-        .card-mini {
-            border:1px solid #D9DEE3;
-            border-radius:8px;
-            padding:26px;
-            background:#fff;
-            height:100%;
-            transition: 0.3s ease all;
-        }
-        .card-mini:hover {
-            box-shadow: 0 8px 20px rgba(15,42,68,0.08);
-            transform: translateY(-4px);
-        }
-    </style>
+    }
+</script>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        background-color: #ffffff;
+        color: #333333;
+    }
+    .card-header {
+        background-color: #0F2A44;
+        color:#ffffff;
+        padding:12px 20px;
+        font-weight:600;
+        font-size:1.1rem;
+        border-radius: 8px 8px 0 0;
+    }
+    .card-body-primary {
+        border:1px solid #D9DEE3;
+        border-top:none;
+        padding:24px;
+        border-radius:0 0 8px 8px;
+        height:100%;
+    }
+    .card-mini {
+        border:1px solid #D9DEE3;
+        border-radius:8px;
+        padding:26px;
+        background:#fff;
+        height:100%;
+        transition: 0.3s ease all;
+    }
+    .card-mini:hover {
+        box-shadow: 0 8px 20px rgba(15,42,68,0.08);
+        transform: translateY(-4px);
+    }
+    /* 灯箱全局样式 */
+    #lightbox{
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,0.92);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:9999;
+        cursor:pointer;
+        padding:1rem;
+    }
+    #lightbox img{
+        max-width:95%;
+        max-height:95vh;
+    }
+</style>
 </head>
 <body class="font-inter">
     <header class="w-full bg-primary shadow-md">
@@ -103,64 +119,63 @@
         <section class="mb-12">
             <h2 data-i18n="about.story_title" class="text-2xl font-bold text-primary mb-4">Our Story</h2>
             <p data-i18n="about.story_text" class="text-bodyText leading-relaxed">
-                Founded in August 2023, Shanghai Zhanxin Intelligent Equipment Co., Ltd. is a specialized manufacturer of metal structures, advertising light boxes, LED display frames and bus shelters. Our core team previously served global industry leaders. We bring decades of hands-on engineering & project experience to deliver custom metal fabrication for urban furniture, airport facilities and large screen mounting structures to worldwide clients.
+                Founded in August 2023, Shanghai Zhanxin Intelligent Equipment Co., Ltd. is a specialized manufacturer of metal structures, advertising light boxes, LED display frames and bus shelters. Our core team previously served global industry leaders. We bring decades of hands‑on engineering & project experience to deliver custom metal fabrication for urban furniture, airport facilities and large screen mounting structures to worldwide clients.
             </p>
         </section>
 
-        <!-- ========== Factory Gallery 工厂轮播板块【新增】 ========== -->
+        <!-- ========== Factory Gallery 工厂轮播板块【优化完整版】 ========== -->
         <section class="mb-12">
             <h2 data-i18n="about.factory_gallery_title" class="text-2xl font-bold text-primary mb-4 text-center">Factory Gallery</h2>
-            <p data-i18n="about.factory_gallery_sub" class="text-mutedText text-center mb-6">Advanced production workshop, equipment and quality control process</p>
-
-            <div class="relative overflow-hidden rounded-xl" id="factoryCarouselWrap">
-                <div class="flex transition-transform duration-500 ease-in-out" id="factoryCarousel">
+            <p data-i18n="about.factory_gallery_sub" class="text-mutedText text-center mb-8">Advanced production workshop, equipment and quality control process</p>
+            <div class="relative overflow-hidden rounded-xl shadow-lg" id="factoryCarouselWrap">
+                <div class="flex transition-transform duration‑500 ease‑in‑out" id="factoryCarousel">
                     <!-- 轮播项目 -->
-                    <div class="w-full flex-shrink-0 relative aspect-[16/9]">
-                        <a href="/uploads/factory/factory-01.jpg" class="factory-lightbox block w-full h-full">
-                            <img src="/uploads/factory/factory-01-thumb.jpg" data-i18n-alt="about.gal1_alt" alt="Production Workshop" loading="lazy" class="w-full h-full object-cover">
-                            <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-                                <span data-i18n="about.gal1_caption">Production Workshop</span>
+                    <div class="w-full flex‑shrink‑0 relative aspect‑[16/9]">
+                        <a href="/uploads/factory/factory‑01.jpg" class="factory‑lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory‑01‑thumb.jpg" data‑i18n‑alt="about.gal1_alt" alt="Production Workshop" loading="lazy" class="w-full h-full object‑cover">
+                            <div class="absolute bottom‑0 left‑0 w-full p‑5 bg‑gradient‑to‑t from‑black/80 via‑black/40 to‑transparent text‑white">
+                                <span data‑i18n="about.gal1_caption" class="text‑lg font‑medium">Production Workshop</span>
                             </div>
                         </a>
                     </div>
-                    <div class="w-full flex-shrink-0 relative aspect-[16/9]">
-                        <a href="/uploads/factory/factory-02.jpg" class="factory-lightbox block w-full h-full">
-                            <img src="/uploads/factory/factory-02-thumb.jpg" data-i18n-alt="about.gal2_alt" alt="CNC Cutting Equipment" loading="lazy" class="w-full h-full object-cover">
-                            <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-                                <span data-i18n="about.gal2_caption">CNC Cutting Equipment</span>
+                    <div class="w-full flex‑shrink‑0 relative aspect‑[16/9]">
+                        <a href="/uploads/factory/factory‑02.jpg" class="factory‑lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory‑02‑thumb.jpg" data‑i18n‑alt="about.gal2_alt" alt="CNC Cutting Equipment" loading="lazy" class="w-full h-full object‑cover">
+                            <div class="absolute bottom‑0 left‑0 w-full p‑5 bg‑gradient‑to‑t from‑black/80 via‑black/40 to‑transparent text‑white">
+                                <span data‑i18n="about.gal2_caption" class="text‑lg font‑medium">CNC Cutting Equipment</span>
                             </div>
                         </a>
                     </div>
-                    <div class="w-full flex-shrink-0 relative aspect-[16/9]">
-                        <a href="/uploads/factory/factory-03.jpg" class="factory-lightbox block w-full h-full">
-                            <img src="/uploads/factory/factory-03-thumb.jpg" data-i18n-alt="about.gal3_alt" alt="Quality Inspection" loading="lazy" class="w-full h-full object-cover">
-                            <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-                                <span data-i18n="about.gal3_caption">Quality Inspection</span>
+                    <div class="w-full flex‑shrink‑0 relative aspect‑[16/9]">
+                        <a href="/uploads/factory/factory‑03.jpg" class="factory‑lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory‑03‑thumb.jpg" data‑i18n‑alt="about.gal3_alt" alt="Quality Inspection" loading="lazy" class="w-full h-full object‑cover">
+                            <div class="absolute bottom‑0 left‑0 w-full p‑5 bg‑gradient‑to‑t from‑black/80 via‑black/40 to‑transparent text‑white">
+                                <span data‑i18n="about.gal3_caption" class="text‑lg font‑medium">Quality Inspection</span>
                             </div>
                         </a>
                     </div>
-                    <div class="w-full flex-shrink-0 relative aspect-[16/9]">
-                        <a href="/uploads/factory/factory-04.jpg" class="factory-lightbox block w-full h-full">
-                            <img src="/uploads/factory/factory-04-thumb.jpg" data-i18n-alt="about.gal4_alt" alt="Raw Material Warehouse" loading="lazy" class="w-full h-full object-cover">
-                            <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-                                <span data-i18n="about.gal4_caption">Raw Material Warehouse</span>
+                    <div class="w-full flex‑shrink‑0 relative aspect‑[16/9]">
+                        <a href="/uploads/factory/factory‑04.jpg" class="factory‑lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory‑04‑thumb.jpg" data‑i18n‑alt="about.gal4_alt" alt="Raw Material Warehouse" loading="lazy" class="w-full h-full object‑cover">
+                            <div class="absolute bottom‑0 left‑0 w-full p‑5 bg‑gradient‑to‑t from‑black/80 via‑black/40 to‑transparent text‑white">
+                                <span data‑i18n="about.gal4_caption" class="text‑lg font‑medium">Raw Material Warehouse</span>
                             </div>
                         </a>
                     </div>
-                    <div class="w-full flex-shrink-0 relative aspect-[16/9]">
-                        <a href="/uploads/factory/factory-05.jpg" class="factory-lightbox block w-full h-full">
-                            <img src="/uploads/factory/factory-05-thumb.jpg" data-i18n-alt="about.gal5_alt" alt="Assembly Line" loading="lazy" class="w-full h-full object-cover">
-                            <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
-                                <span data-i18n="about.gal5_caption">Assembly Line</span>
+                    <div class="w-full flex‑shrink‑0 relative aspect‑[16/9]">
+                        <a href="/uploads/factory/factory‑05.jpg" class="factory‑lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory‑05‑thumb.jpg" data‑i18n‑alt="about.gal5_alt" alt="Assembly Line" loading="lazy" class="w-full h-full object‑cover">
+                            <div class="absolute bottom‑0 left‑0 w-full p‑5 bg‑gradient‑to‑t from‑black/80 via‑black/40 to‑transparent text‑white">
+                                <span data‑i18n="about.gal5_caption" class="text‑lg font‑medium">Assembly Line</span>
                             </div>
                         </a>
                     </div>
                 </div>
-                <!-- Arrow -->
-                <button id="carouselPrev" class="absolute top-1/2 -translate-y-1/2 left-3 w-11 h-11 rounded-full bg-white/70 hover:bg-white text-primary text-xl flex items-center justify-center z-10">&lsaquo;</button>
-                <button id="carouselNext" class="absolute top-1/2 -translate-y-1/2 right-3 w-11 h-11 rounded-full bg-white/70 hover:bg-white text-primary text-xl flex items-center justify-center z-10">&rsaquo;</button>
-                <!-- Dots -->
-                <div class="flex justify-center gap-2 py-4" id="carouselDots"></div>
+                <!-- Prev / Next Button -->
+                <button id="carouselPrev" class="absolute top‑1/2 ‑translate‑y‑1/2 left‑3 md:left‑5 w‑10 h‑10 md:w‑12 md:h‑12 rounded‑full bg‑white/70 hover:bg‑white hover:shadow‑lg text‑primary text‑xl flex items‑center justify‑center z‑10 transition‑all duration‑300">&lsaquo;</button>
+                <button id="carouselNext" class="absolute top‑1/2 ‑translate‑y‑1/2 right‑3 md:right‑5 w‑10 h‑10 md:w‑12 md:h‑12 rounded‑full bg‑white/70 hover:bg‑white hover:shadow‑lg text‑primary text‑xl flex items‑center justify‑center z‑10 transition‑all duration‑300">&rsaquo;</button>
+                <!-- Dots Container -->
+                <div class="flex justify‑center gap‑2.5 py‑5" id="carouselDots"></div>
             </div>
         </section>
         <!-- ========== END Factory Gallery ========== -->
@@ -206,62 +221,62 @@
                     <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     <h4 data-i18n="about.mini1_title" class="font-semibold text-primary">Custom fabrication & production</h4>
                 </div>
-                <p data-i18n="about.mini1_text" class="text-sm text-mutedText leading-relaxed flex-grow">We provide full-cycle custom metal fabrication service, from engineering drawing, material cutting, welding, surface treatment to finished assembly.</p>
+                <p data-i18n="about.mini1_text" class="text-sm text-mutedText leading-relaxed flex-grow">We provide full‑cycle custom metal fabrication service, from engineering drawing, material cutting, welding, surface treatment to finished assembly.</p>
             </div>
             <div class="card-mini flex flex-col">
                 <div class="flex items-center gap-2 mb-3">
-                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426‑1.756 2.924‑1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543‑.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00‑1.066 2.573c.94 1.543‑.826 3.31‑2.37 2.37a1.724 1.724 0 00‑2.572 1.065c‑.426 1.756‑2.924 1.756‑3.35 0a1.724 1.724 0 00‑2.573‑1.066c‑1.543.94‑3.31‑.826‑2.37‑2.37a1.724 1.724 0 00‑1.065‑2.572c‑1.756‑.426‑1.756‑2.924 0‑3.35a1.724 1.724 0 001.066‑2.573c‑.94‑1.543.826‑3.31 2.37‑2.37.996.608 2.296.07 2.572‑1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11‑6 0 3 3 0 016 0z"></path></svg>
                     <h4 data-i18n="about.mini2_title" class="font-semibold text-primary">Custom engineered solutions</h4>
                 </div>
-                <p data-i18n="about.mini2_text" class="text-sm text-mutedText leading-relaxed flex-grow">Our engineering team develops project-specific designs. Flexible OEM & ODM to match your local urban & airport project requirements.</p>
+                <p data-i18n="about.mini2_text" class="text-sm text-mutedText leading‑relaxed flex‑grow">Our engineering team develops project‑specific designs. Flexible OEM & ODM to match your local urban & airport project requirements.</p>
             </div>
             <div class="card-mini flex flex-col">
                 <div class="flex items-center gap-2 mb-3">
-                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4‑4m5.618‑4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01‑8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176‑1.332 9‑6.03 9‑11.622 0‑1.042‑.133‑2.052‑.382‑3.016z"></path></svg>
                     <h4 data-i18n="about.mini3_title" class="font-semibold text-primary">Full compliance & testing</h4>
                 </div>
-                <p data-i18n="about.mini3_text" class="text-sm text-mutedText leading-relaxed flex-grow">Complete certification package, material traceability, welding qualification and third-party test reports available for tender & export projects.</p>
+                <p data-i18n="about.mini3_text" class="text-sm text-mutedText leading‑relaxed flex‑grow">Complete certification package, material traceability, welding qualification and third‑party test reports available for tender & export projects.</p>
             </div>
         </div>
         <div class="grid md:grid-cols-2 gap-8 items-stretch">
             <div class="rounded-lg overflow-hidden border border-borderGrayBlue">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.806466665293!2d121.05610507459158!3d30.89207457791617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b2e614fbbfa149%3A0x189a3684b8d9e343!2s3%2C%201275%20Qianming%20E%20Rd%2C%20Jin%20Shan%20Qu%2C%20Shang%20Hai%20Shi%2C%20China%2C%20201502!5e0!3m2!1sen!2sus!4v1792156311648!5m2!1sen!2sus" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <iframe title="Shanghai Zhanxin factory location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.806466665293!2d121.05610507459158!3d30.89207457791617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b2e614fbbfa149%3A0x189a3684b8d9e343!2s3%2C%201275%20Qianming%20E%20Rd%2C%20Jin%20Shan%20Qu%2C%20Shang%20Hai%20Shi%2C%20China%2C%20201502!5e0!3m2!1sen!2sus!4v1792156311648!5m2!1sen!2sus" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict‑origin‑when‑cross‑origin"></iframe>
             </div>
             <div class="border border-borderGrayBlue rounded-lg p-8 h-full">
                 <h3 data-i18n="about.contact_title" class="text-xl font-bold text-primary mb-6">SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</h3>
                 <ul class="space-y-5 text-bodyText text-base">
-                    <li><strong>Tel:</strong> <a href="tel:+862157223755" class="hover:text-secondaryBlue transition-colors">+862157223755</a></li>
-                    <li><strong>M.P./WhatsApp:</strong> <a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline transition-colors">https://wa.me/8619301179802</a></li>
-                    <li><strong>Web:</strong> <a href="https://www.zhanxinglobal.com/" target="_blank" class="hover:text-secondaryBlue transition-colors">https://www.zhanxinglobal.com/</a></li>
+                    <li><strong>Tel:</strong> <a href="tel:+862157223755" class="hover:text-secondaryBlue transition‑colours">+862157223755</a></li>
+                    <li><strong>M.P./WhatsApp:</strong> <a href="https://wa.me/8619301179802" target="_blank" class="text‑accent hover:underline transition‑colours">https://wa.me/8619301179802</a></li>
+                    <li><strong>Web:</strong> <a href="https://www.zhanxinglobal.com/" target="_blank" class="hover:text‑secondaryBlue transition‑colours">https://www.zhanxinglobal.com/</a></li>
                     <li><strong>Addr：</strong> Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District, Shanghai</li>
-                    <li><strong>E‑mail：</strong> <a href="mailto:sales@zhanxinglobal.com" class="hover:text-secondaryBlue transition-colors">sales@zhanxinglobal.com</a></li>
+                    <li><strong>E‑mail：</strong> <a href="mailto:sales@zhanxinglobal.com" class="hover:text‑secondaryBlue transition‑colours">sales@zhanxinglobal.com</a></li>
                 </ul>
             </div>
         </div>
     </main>
-    <footer class="bg-footerBg text-gray-300 py-10">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <div class="grid md:grid-cols-3 gap-8">
+    <footer class="bg-footerBg text-gray‑300 py‑10">
+        <div class="container mx-auto px‑6 max‑w‑6xl">
+            <div class="grid md:grid‑cols‑3 gap‑8">
                 <div>
-                    <h4 data-i18n="footer.nav_title" class="text-xl font-semibold mb-4 text-white">Navigation</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/" data-i18n="nav.home" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="/products" data-i18n="nav.products" class="hover:text-white transition-colors">Products</a></li>
-                        <li><a href="/about" data-i18n="nav.about" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="/contact" data-i18n="nav.quote" class="hover:text-white transition-colors">Get a Quote</a></li>
+                    <h4 data‑i18n="footer.nav_title" class="text‑xl font‑semibold mb‑4 text‑white">Navigation</h4>
+                    <ul class="space‑y‑2">
+                        <li><a href="/" data‑i18n="nav.home" class="hover:text‑white transition‑colours">Home</a></li>
+                        <li><a href="/products" data‑i18n="nav.products" class="hover:text‑white transition‑colours">Products</a></li>
+                        <li><a href="/about" data‑i18n="nav.about" class="hover:text‑white transition‑colours">About</a></li>
+                        <li><a href="/contact" data‑i18n="nav.quote" class="hover:text‑white transition‑colours">Get a Quote</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 data-i18n="footer.contact_title" class="text-xl font-semibold mb-4 text-white">Contact</h4>
-                    <ul class="space-y-2">
+                    <h4 data‑i18n="footer.contact_title" class="text‑xl font‑semibold mb‑4 text‑white">Contact</h4>
+                    <ul class="space‑y‑2">
                         <li>Tel: +862157223755</li>
-                        <li><a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline transition-colors">WhatsApp: +86‑19301179802</a></li>
-                        <li><a href="mailto:sales@zhanxinglobal.com" class="hover:text-white transition-colors">sales@zhanxinglobal.com</a></li>
+                        <li><a href="https://wa.me/8619301179802" target="_blank" class="text‑accent hover:underline transition‑colours">WhatsApp: +86‑19301179802</a></li>
+                        <li><a href="mailto:sales@zhanxinglobal.com" class="hover:text‑white transition‑colours">sales@zhanxinglobal.com</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 data-i18n="footer.copyright_title" class="text-xl font-semibold mb-4 text-white">Copyright</h4>
-                    <p data-i18n="footer.copyright_text" class="text-sm">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. All rights reserved.</p>
+                    <h4 data‑i18n="footer.copyright_title" class="text‑xl font‑semibold mb‑4 text‑white">Copyright</h4>
+                    <p data‑i18n="footer.copyright_text" class="text‑sm">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -279,8 +294,7 @@ const translations = {
         "about.page_subtitle":"Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects",
         "about.factory_img_alt":"Zhanxin manufacturing workshop",
         "about.story_title":"Our Story",
-        "about.story_text":"Founded in August 2023, Shanghai Zhanxin Intelligent Equipment Co., Ltd. is a specialized manufacturer of metal structures, advertising light boxes, LED display frames and bus shelters. Our core team previously served global industry leaders. We bring decades of hands-on engineering & project experience to deliver custom metal fabrication for urban furniture, airport facilities and large screen mounting structures to worldwide clients.",
-        // ========== Factory Gallery i18n EN ==========
+        "about.story_text":"Founded in August 2023, Shanghai Zhanxin Intelligent Equipment Co., Ltd. is a specialized manufacturer of metal structures, advertising light boxes, LED display frames and bus shelters. Our core team previously served global industry leaders. We bring decades of hands‑on engineering & project experience to deliver custom metal fabrication for urban furniture, airport facilities and large screen mounting structures to worldwide clients.",
         "about.factory_gallery_title":"Factory Gallery",
         "about.factory_gallery_sub":"Advanced production workshop, equipment and quality control process",
         "about.gal1_alt":"Production Workshop",
@@ -293,7 +307,6 @@ const translations = {
         "about.gal4_caption":"Raw Material Warehouse",
         "about.gal5_alt":"Assembly Line",
         "about.gal5_caption":"Assembly Line",
-        // =============================================
         "about.card1_text":"We are a factory specialized in outdoor, airport and urban furniture and metal structure project manufacturing.",
         "about.str1":"Custom steel & aluminum structure solution",
         "about.str2":"Large size LED/LCD screen mounting structure",
@@ -307,11 +320,11 @@ const translations = {
         "about.qua6":"Third‑party lab reports (IEC 60529) for outdoor enclosures available on project basis",
         "about.qua7":"Pre shipment Inspection by a third party can be arranged at buyer's request",
         "about.mini1_title":"Custom fabrication & production",
-        "about.mini1_text":"We provide full-cycle custom metal fabrication service, from engineering drawing, material cutting, welding, surface treatment to finished assembly.",
+        "about.mini1_text":"We provide full‑cycle custom metal fabrication service, from engineering drawing, material cutting, welding, surface treatment to finished assembly.",
         "about.mini2_title":"Custom engineered solutions",
-        "about.mini2_text":"Our engineering team develops project-specific designs. Flexible OEM & ODM to match your local urban & airport project requirements.",
+        "about.mini2_text":"Our engineering team develops project‑specific designs. Flexible OEM & ODM to match your local urban & airport project requirements.",
         "about.mini3_title":"Full compliance & testing",
-        "about.mini3_text":"Complete certification package, material traceability, welding qualification and third-party test reports available for tender & export projects.",
+        "about.mini3_text":"Complete certification package, material traceability, welding qualification and third‑party test reports available for tender & export projects.",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
         "footer.nav_title":"Navigation",
         "footer.contact_title":"Contact",
@@ -330,7 +343,6 @@ const translations = {
         "about.factory_img_alt":"崭鑫生产车间",
         "about.story_title":"企业故事",
         "about.story_text":"上海崭鑫智能设备有限公司成立于2023年8月，专业生产金属结构、广告灯箱、LED屏框架及公交候车亭。核心团队曾服务国际行业头部企业，拥有数十年工程与项目实战经验，面向全球客户提供城市家具、机场设施、大屏安装结构定制金属加工服务。",
-        // ========== Factory Gallery i18n ZH ==========
         "about.factory_gallery_title":"工厂相册",
         "about.factory_gallery_sub":"先进生产车间、设备与品控流程",
         "about.gal1_alt":"生产车间",
@@ -343,7 +355,6 @@ const translations = {
         "about.gal4_caption":"原材料仓库",
         "about.gal5_alt":"组装产线",
         "about.gal5_caption":"组装产线",
-        // =============================================
         "about.card1_text":"我们是一家专注户外、机场、城市家具及金属结构项目制造的工厂。",
         "about.str1":"定制钢铝结构解决方案",
         "about.str2":"大尺寸LED/LCD屏安装结构",
@@ -380,7 +391,6 @@ const translations = {
         "about.factory_img_alt":"Atelier de fabrication Zhanxin",
         "about.story_title":"Notre histoire",
         "about.story_text":"Fondée en août 2023, Shanghai Zhanxin Intelligent Equipment Co., Ltd. est un fabricant spécialisé dans les structures métalliques, caissons lumineux publicitaires, cadres pour écrans LED et abris bus. Notre équipe principale a travaillé pour des leaders mondiaux du secteur. Nous apportons des décennies d'expérience en ingénierie et gestion de projets pour la fabrication métallique sur mesure de mobilier urbain, équipements aéroportuaires et structures de support pour grands écrans pour nos clients internationaux.",
-        // ========== Factory Gallery i18n FR ==========
         "about.factory_gallery_title":"Galerie de l'usine",
         "about.factory_gallery_sub":"Atelier de production avancé, équipements et processus de contrôle qualité",
         "about.gal1_alt":"Atelier de production",
@@ -393,7 +403,6 @@ const translations = {
         "about.gal4_caption":"Entrepôt de matières premières",
         "about.gal5_alt":"Ligne d'assemblage",
         "about.gal5_caption":"Ligne d'assemblage",
-        // =============================================
         "about.card1_text":"Nous sommes une usine spécialisée dans la fabrication de mobilier extérieur, aéroportuaire, urbain et structures métalliques pour projets.",
         "about.str1":"Solution de structure acier et aluminium sur mesure",
         "about.str2":"Structure de support pour écrans LED/LCD grand format",
@@ -429,8 +438,7 @@ const translations = {
         "about.page_subtitle":"Zuverlässiger Hersteller für Außen‑, Flughafen‑ und Stadtmöbel & Metallstrukturprojekte",
         "about.factory_img_alt":"Zhanxin Fertigungswerkstatt",
         "about.story_title":"Unsere Geschichte",
-        "about.story_text":"Gegründet im August 2023 ist Shanghai Zhanxin Intelligent Equipment Co., Ltd. spezialisiert auf Metallkonstruktionen, Werbeleuchtkästen, LED-Bildschirmrahmen und Wartehallen. Unser Kernteam arbeitete früher für globale Branchenführer. Mit jahrzehntelanger Ingenieur- und Projekterfahrung liefern wir kundenspezifische Metallfertigung für Stadtmöbel, Flughafeneinrichtungen und Großbildschirm-Montagestrukturen an Kunden weltweit.",
-        // ========== Factory Gallery i18n DE ==========
+        "about.story_text":"Gegründet im August 2023 ist Shanghai Zhanxin Intelligent Equipment Co., Ltd. spezialisiert auf Metallkonstruktionen, Werbeleuchtkästen, LED‑Bildschirmrahmen und Wartehallen. Unser Kernteam arbeitete früher für globale Branchenführer. Mit jahrzehntelanger Ingenieur‑ und Projekterfahrung liefern wir kundenspezifische Metallfertigung für Stadtmöbel, Flughafeneinrichtungen und Großbildschirm‑Montagestrukturen an Kunden weltweit.",
         "about.factory_gallery_title":"Fabrik Galerie",
         "about.factory_gallery_sub":"Moderne Produktionshalle, Ausstattung und Qualitätskontrolle",
         "about.gal1_alt":"Produktionshalle",
@@ -443,7 +451,6 @@ const translations = {
         "about.gal4_caption":"Rohstofflager",
         "about.gal5_alt":"Montagelinie",
         "about.gal5_caption":"Montagelinie",
-        // =============================================
         "about.card1_text":"Wir sind eine Fabrik spezialisiert auf Fertigung von Außen‑, Flughafen‑ und Stadtmöbeln sowie Metallstrukturprojekten.",
         "about.str1":"Kundenspezifische Stahl‑ und Aluminiumstrukturlösungen",
         "about.str2":"Montagestrukturen für großformatige LED/LCD‑Bildschirme",
@@ -459,7 +466,7 @@ const translations = {
         "about.mini1_title":"Kundenspezifische Fertigung & Produktion",
         "about.mini1_text":"Wir bieten einen vollständigen Metallfertigungszyklus: technische Zeichnungen, Materialzuschnitt, Schweißen, Oberflächenbehandlung bis zur Endmontage.",
         "about.mini2_title":"Ingenieurtechnische Individuallösungen",
-        "about.mini2_text":"Unser Ingenieurteam erstellt projektspezifische Konstruktionen. Flexibles OEM/ODM passend zu lokalen Stadt- und Flughafenprojekten.",
+        "about.mini2_text":"Unser Ingenieurteam erstellt projektspezifische Konstruktionen. Flexibles OEM/ODM passend zu lokalen Stadt‑ und Flughafenprojekten.",
         "about.mini3_title":"Vollständige Konformität & Prüfungen",
         "about.mini3_text":"Vollständiges Zertifikatspaket, Materialrückverfolgbarkeit, Schweißqualifikationen und Drittprüfberichte für Ausschreibungen und Exportprojekte.",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
@@ -480,7 +487,6 @@ const translations = {
         "about.factory_img_alt":"崭鑫製造工場",
         "about.story_title":"会社の歴史",
         "about.story_text":"上海崭鑫智能設備有限公司は2023年8月設立。金属構造物、広告灯箱、LEDディスプレイフレーム、バスシェルターを専門に製造します。コアチームは世界的業界大手のプロジェクトに携わった実績を持ち、数十年のエンジニアリング経験を活かし、都市家具・空港施設・大型画面取付構造物の金属受注製作を世界各国の顧客に提供します。",
-        // ========== Factory Gallery i18n JA ==========
         "about.factory_gallery_title":"工場ギャラリー",
         "about.factory_gallery_sub":"先進的な生産工場、設備、品質管理プロセス",
         "about.gal1_alt":"生産工場",
@@ -493,7 +499,6 @@ const translations = {
         "about.gal4_caption":"原材料倉庫",
         "about.gal5_alt":"組立ライン",
         "about.gal5_caption":"組立ライン",
-        // =============================================
         "about.card1_text":"当社は屋外、空港、都市家具と金属構造物プロジェクト製造を専門とする工場です。",
         "about.str1":"鉄・アルミ構造のカスタムソリューション",
         "about.str2":"大型LED/LCDスクリーン取付構造",
@@ -530,7 +535,6 @@ const translations = {
         "about.factory_img_alt":"Taller de fabricación Zhanxin",
         "about.story_title":"Nuestra historia",
         "about.story_text":"Fundada en agosto de 2023, Shanghai Zhanxin Intelligent Equipment Co., Ltd. fabrica estructuras metálicas, cajas de luz publicitarias, marcos para pantallas LED y marquesinas de autobús. Nuestro equipo principal trabajó con líderes globales del sector. Con décadas de experiencia en ingeniería y proyectos, ofrecemos fabricación metálica personalizada de mobiliario urbano, instalaciones aeroportuarias y estructuras de soporte para pantallas grandes a clientes de todo el mundo.",
-        // ========== Factory Gallery i18n ES ==========
         "about.factory_gallery_title":"Galería de la fábrica",
         "about.factory_gallery_sub":"Taller de producción avanzado, equipos y proceso de control de calidad",
         "about.gal1_alt":"Taller de producción",
@@ -543,7 +547,205 @@ const translations = {
         "about.gal4_caption":"Almacén de materias primas",
         "about.gal5_alt":"Línea de ensamblaje",
         "about.gal5_caption":"Línea de ensamblaje",
-        // =============================================
         "about.card1_text":"Somos una fábrica especializada en fabricación de mobiliario exterior, aeroportuario, urbano y estructuras metálicas para proyectos.",
         "about.str1":"Soluciones de estructura de acero y aluminio personalizada",
-        "about.str2
+        "about.str2":"Estructura de montaje para pantallas LED/LCD de gran tamaño",
+        "about.str3":"Mobiliario urbano y aeroportuario y marquesinas de autobús",
+        "about.str4":"Soporte OEM y ODM para compradores mundiales",
+        "about.qua1":"Licencia de Producción de Seguridad Laboral (China) — fabricante autorizado para fabricación metálica",
+        "about.qua2":"Sistema de gestión de calidad alineado con ISO 9001 /14001 /45001",
+        "about.qua3":"Inspección de material entrante, control en proceso e inspección final 100% antes del envío",
+        "about.qua4":"Certificados de material EN 10204 &3.1 disponibles desde acería",
+        "about.qua5":"Calificación de procedimiento de soldadura (WPS/PQR) y registros de cualificación de soldadores disponibles",
+        "about.qua6":"Informes de laboratorio tercero (IEC 60529) para carcasas exteriores por proyecto",
+        "about.qua7":"Inspección previa al envío por tercero, organizable a petición del comprador",
+        "about.mini1_title":"Fabricación y producción personalizada",
+        "about.mini1_text":"Ofrecemos servicio completo de fabricación metálica personalizada: dibujos técnicos, corte, soldadura, tratamiento superficial y montaje final.",
+        "about.mini2_title":"Soluciones de ingeniería a medida",
+        "about.mini2_text":"Nuestro equipo de ingenieros diseña según cada proyecto. OEM/ODM flexible para cumplir requisitos locales de proyectos urbanos y aeroportuarios.",
+        "about.mini3_title":"Cumplimiento completo y ensayos",
+        "about.mini3_text":"Paquete completo de certificados, trazabilidad de materiales, cualificaciones de soldadura e informes de laboratorio tercero para licitaciones y exportación.",
+        "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
+        "footer.nav_title":"Navegación",
+        "footer.contact_title":"Contacto",
+        "footer.copyright_title":"Derechos de autor",
+        "footer.copyright_text":"© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. Todos los derechos reservados."
+    },
+    ar: {
+        "nav.home":"الرئيسية",
+        "nav.products":"المنتجات",
+        "nav.about":"من نحن",
+        "nav.quote":"طلب عرض سعر",
+        "about.meta_title":"من نحن - ZHANXIN Intelligent Equipment",
+        "about.meta_desc":"شركة شنغهاي زانكسين للمعدات الذكية، مصنع موثوق لأثاث الهواء الطلق والمطارات والمناطق الحضرية ومشاريع الهياكل المعدنية",
+        "about.page_title":"عن شنغهاي زانكسين",
+        "about.page_subtitle":"مصنع موثوق لمشاريع أثاث الهواء الطلق والمطارات والمناطق الحضرية والهياكل المعدنية",
+        "about.factory_img_alt":"ورشة تصنيع زانكسين",
+        "about.story_title":"قصتنا",
+        "about.story_text":"تأسست شركة شنغهاي زانكسين للمعدات الذكية في أغسطس 2023، وهي متخصصة في تصنيع الهياكل المعدنية، وصناديق الإضاءة الإعلانية، وأطر شاشات LED، وملاجئ الحافلات. عمل فريقنا الأساسي مع رواد عالميين في هذا المجال. نقدم عقودًا من الخبرة الهندسية وإدارة المشاريع لتصنيع المعادن المخصص لأثاث المدن، ومرافق المطارات، وهياكل تركيب الشاشات الكبيرة للعملاء في جميع أنحاء العالم.",
+        "about.factory_gallery_title":"معرض المصنع",
+        "about.factory_gallery_sub":"ورشة إنتاج متطورة، المعدات وعملية مراقبة الجودة",
+        "about.gal1_alt":"ورشة الإنتاج",
+        "about.gal1_caption":"ورشة الإنتاج",
+        "about.gal2_alt":"معدات القطع CNC",
+        "about.gal2_caption":"معدات القطع CNC",
+        "about.gal3_alt":"فحص الجودة",
+        "about.gal3_caption":"فحص الجودة",
+        "about.gal4_alt":"مستودع المواد الخام",
+        "about.gal4_caption":"مستودع المواد الخام",
+        "about.gal5_alt":"خط التجميع",
+        "about.gal5_caption":"خط التجميع",
+        "about.card1_text":"نحن مصنع متخصص في تصنيع أثاث الهواء الطلق والمطارات والمناطق الحضرية والهياكل المعدنية للمشاريع.",
+        "about.str1":"حلول الهياكل الفولاذية والألومنيوم المخصصة",
+        "about.str2":"هياكل تركيب شاشات LED/LCD كبيرة الحجم",
+        "about.str3":"أثاث المناطق الحضرية والمطارات وملاجئ الحافلات",
+        "about.str4":"ندعم التصنيع حسب الطلب OEM وODM للمشترين من جميع أنحاء العالم",
+        "about.qua1":"رخصة إنتاج السلامة المهنية (الصين) — مصنع مرخص لتصنيع المعادن",
+        "about.qua2":"نظام إدارة الجودة متوافق مع معايير ISO 9001 /14001 /45001",
+        "about.qua3":"فحص المواد الواردة، الفحص أثناء الإنتاج وفحص نهائي 100% قبل الشحن",
+        "about.qua4":"شهادات المواد EN 10204 &3.1 متاحة من مصنع الصلب",
+        "about.qua5":"تأهيل إجراءات اللحام WPS/PQR وسجلات تأهيل عمال اللحام متوفرة",
+        "about.qua6":"تقارير مختبرات طرف ثالث IEC 60529 للعلب الخارجية حسب المشروع",
+        "about.qua7":"يمكن ترتيب فحص ما قبل الشحن من طرف ثالث بناءً على طلب المشتري",
+        "about.mini1_title":"التصنيع والإنتاج المخصص",
+        "about.mini1_text":"نقدم خدمة تصنيع معادن كاملة: الرسومات الهندسية، القطع، اللحام، المعالجة السطحية والتجميع النهائي.",
+        "about.mini2_title":"حلول هندسية مخصصة",
+        "about.mini2_text":"يقوم فريقنا الهندسي بالتصميم لكل مشروع. دعم OEM وODM مرن ليتوافق مع متطلبات مشاريع المدن والمطارات المحلية.",
+        "about.mini3_title":"الامتثال الكامل والاختبارات",
+        "about.mini3_text":"حزمة شهادات كاملة، تتبع المواد، تأهيل اللحام، تقارير اختبار طرف ثالث للمناقصات ومشاريع التصدير.",
+        "about.contact_title":"شركة SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT المحدودة",
+        "footer.nav_title":"التصفح",
+        "footer.contact_title":"اتصل بنا",
+        "footer.copyright_title":"حقوق النشر",
+        "footer.copyright_text":"© 2026 شركة SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT المحدودة. جميع الحقوق محفوظة."
+    }
+};
+
+function setLang(langKey){
+    const trans = translations[langKey] || translations.en;
+    document.querySelectorAll('[data‑i18n]').forEach(el=>{
+        const key = el.getAttribute('data‑i18n');
+        if(trans[key]) el.innerText = trans[key];
+    });
+    document.querySelectorAll('[data‑i18n‑alt]').forEach(el=>{
+        const key = el.getAttribute('data‑i18n‑alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+    }
+}
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', function(){
+    setLang(this.value);
+});
+setLang('en');
+
+// ========= Factory Carousel + Lightbox Script =========
+document.addEventListener('DOMContentLoaded', function(){
+    const carousel = document.getElementById('factoryCarousel');
+    const carouselWrap = document.getElementById('factoryCarouselWrap');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const dotsWrapper = document.getElementById('carouselDots');
+    const slideCount = carousel.children.length;
+    let currentIndex = 0;
+    let autoPlayTimer;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    // 生成圆点
+    for(let i=0; i<slideCount; i++){
+        const dot = document.createElement('button');
+        dot.className = `w‑2.5 h‑2.5 rounded‑full transition‑all duration‑300 ${i===0 ? 'bg‑accent w‑8' : 'bg‑gray‑300'}`;
+        dot.dataset.index = i;
+        dot.addEventListener('click',()=>{
+            goToSlide(i);
+            resetAutoPlay();
+        })
+        dotsWrapper.appendChild(dot);
+    }
+    const dots = dotsWrapper.querySelectorAll('button');
+
+    function updateCarousel(){
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot,idx)=>{
+            if(idx === currentIndex){
+                dot.classList.add('bg‑accent','w‑8');
+                dot.classList.remove('bg‑gray‑300');
+            }else{
+                dot.classList.remove('bg‑accent','w‑8');
+                dot.classList.add('bg‑gray‑300');
+            }
+        })
+    }
+    function goToSlide(index){
+        currentIndex = (index + slideCount) % slideCount;
+        updateCarousel();
+    }
+    function nextSlide(){
+        goToSlide(currentIndex +1);
+    }
+    function prevSlide(){
+        goToSlide(currentIndex -1);
+    }
+    function startAutoPlay(){
+        autoPlayTimer = setInterval(nextSlide,4500);
+    }
+    function stopAutoPlay(){
+        clearInterval(autoPlayTimer);
+    }
+    function resetAutoPlay(){
+        stopAutoPlay();
+        startAutoPlay();
+    }
+    prevBtn.addEventListener('click',()=>{
+        prevSlide();
+        resetAutoPlay();
+    })
+    nextBtn.addEventListener('click',()=>{
+        nextSlide();
+        resetAutoPlay();
+    })
+    carouselWrap.addEventListener('mouseenter', stopAutoPlay);
+    carouselWrap.addEventListener('mouseleave', startAutoPlay);
+    //移动端触摸
+    carouselWrap.addEventListener('touchstart', e=>{
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoPlay();
+    },{passive:true});
+    carouselWrap.addEventListener('touchend', e=>{
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if(Math.abs(diff)>50){
+            if(diff>0) nextSlide();
+            else prevSlide();
+        }
+        resetAutoPlay();
+    },{passive:true});
+    startAutoPlay();
+
+    // Lightbox 大图弹窗
+    const lightboxLinks = document.querySelectorAll('.factory‑lightbox');
+    lightboxLinks.forEach(link=>{
+        link.addEventListener('click',function(e){
+            e.preventDefault();
+            const imgSrc = this.getAttribute('href');
+            const lb = document.createElement('div');
+            lb.id = 'lightbox';
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            lb.appendChild(img);
+            document.body.appendChild(lb);
+            lb.onclick = ()=> lb.remove();
+        })
+    })
+})
+</script>
+</body>
+</html>
