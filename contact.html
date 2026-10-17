@@ -7,8 +7,6 @@
 <meta name="description" data-i18n="meta.contactDesc" content="SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. - Outdoor, airport and urban furniture & metal structure manufacturer. Get in touch for custom advertising light box, wayfinding signage, bus shelter and steel aluminum structures.">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/style.css">
-<!-- Cloudflare Turnstile 验证码 -->
-<script src="https://challenges.cloudflare.com/turnstile/v0/site.js" defer></script>
 </head>
 <body>
 <!-- 头部导航 -->
@@ -188,6 +186,8 @@
     <p>©2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. <a href="/privacy.html" data-i18n="footer.privacy">Privacy Policy</a></p>
   </div>
 </footer>
+<!-- Turnstile 官方api.js 脚本，放在body末尾 -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
 // 移动端菜单开关逻辑
 const mobileBtn = document.querySelector('.mobile-menu-btn');
