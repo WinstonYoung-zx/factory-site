@@ -3,137 +3,428 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | Your Factory</title>
+  <title data-i18n="products.metaTitle">Products | ZHANXIN Intelligent Equipment</title>
+  <meta name="description" data-i18n="products.metaDesc" content="Bus shelter, advertising light box, wayfinding signage, LED‑LCD display, custom metal‑structure manufacturer">
+  <link rel="canonical" href="https://www.zhanxinglobal.com/products.html">
+  <!-- 多语言hreflang -->
+  <link rel="alternate" hreflang="en" href="https://www.zhanxinglobal.com/products.html">
+  <link rel="alternate" hreflang="zh" href="https://www.zhanxinglobal.com/products.html">
+  <link rel="alternate" hreflang="es" href="https://www.zhanxinglobal.com/products.html">
+  <link rel="alternate" hreflang="fr" href="https://www.zhanxinglobal.com/products.html">
+  <link rel="alternate" hreflang="de" href="https://www.zhanxinglobal.com/products.html">
+  <link rel="alternate" hreflang="ja" href="https://www.zhanxinglobal.com/products.html">
+  <link rel="alternate" hreflang="ar" href="https://www.zhanxinglobal.com/products.html">
+
+  <!-- 结构化数据 Manufacturer 分类页 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": []
+  }
+  </script>
+
   <style>
-    :root{--primary:#0F3460;--accent:#ff7800;--light:#f8f9fa;--dark:#222}
+    :root{
+      --primary:#0F2A44;
+      --accent:#ff7800;
+      --light:#f8f9fa;
+      --dark:#222;
+      --border-gray:#D9DEE3;
+      --footer-bg:#0B1F33;
+    }
     *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
     body{color:var(--dark);background:#fff;}
-    .product-wrap{padding:3rem 5%;max-width:1400px;margin:0 auto;}
-    .product-wrap h2{text-align:center;font-size:2rem;margin-bottom:2rem;color:var(--primary);}
-    .filter-box{text-align:center;margin-bottom:2rem;}
-    #categoryFilter{padding:8px 12px;font-size:1rem;min-width:260px;}
-    .product-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(280px,1fr));gap:2rem;}
-    .product-card{border:1px solid #eee;border-radius:8px;overflow:hidden;}
-    .product-card img{width:100%;height:200px;object-fit:cover;}
-    .card-body{padding:1rem;}
-    footer{background:#111;color:#fff;text-align:center;padding:2rem 5%;margin-top:4rem;}
-    footer a{color:#fff;}
+
+    /* ========== 导航栏 全站统一（与index14保持一致） ========== */
+    header{
+      background-color: var(--primary);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:1rem 5%;
+      border-bottom:none;
+      flex-wrap:wrap;
+      gap:1rem;
+    }
+    .header-logo-wrap{
+      display:flex;
+      align-items:center;
+      gap:0.8rem;
+    }
+    #site-logo{
+      height:36px;
+      object-fit:contain;
+    }
+    #site-title{
+      font-size:1.4rem;
+      font-weight:bold;
+      color:#ffffff;
+    }
+    nav{
+      display:flex;
+      gap:2rem;
+      flex-wrap:wrap;
+    }
+    nav a{
+      text-decoration:none;
+      color:#ffffff;
+      transition:color 0.2s;
+    }
+    nav a:hover{
+      color:var(--accent);
+    }
+    nav a.active{
+      border-bottom:2px solid var(--accent);
+      padding-bottom:4px;
+      color:#fff;
+    }
+    .lang-select{
+      padding:4px 8px;
+      border-radius:4px;
+      border:none;
+      background:#fff;
+      color:#222;
+    }
+    #langSelect{
+      min-width:130px;
+    }
+
+    /* 面包屑 */
+    .breadcrumb{
+      padding:1.5rem 5%;
+      background:#f7f8fa;
+      font-size:0.9rem;
+    }
+    .breadcrumb a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+    .breadcrumb span{
+      margin:0 6px;color:#888;
+    }
+
+    .product-wrap{
+      padding:2rem 5%;
+      max-width:1400px;
+      margin:0 auto;
+    }
+    h1.section-title{
+      text-align:center;
+      font-size:2rem;
+      margin-bottom:2rem;
+      color:var(--primary);
+    }
+
+    /* 筛选区：分类下拉+搜索框 */
+    .filter-box{
+      display:flex;
+      justify-content:center;
+      gap:1rem;
+      flex-wrap:wrap;
+      margin-bottom:2.5rem;
+    }
+    #categoryFilter, #searchInput{
+      padding:10px 14px;
+      font-size:1rem;
+      border:1px solid var(--border-gray);
+      border-radius:6px;
+    }
+    #searchInput{
+      min-width:260px;
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(280px,1fr));
+      gap:2rem;
+    }
+    .product-card{
+      border:1px solid var(--border-gray);
+      border-radius:8px;
+      overflow:hidden;
+      background:#fff;
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+      cursor:pointer;
+    }
+    .product-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 18px rgba(15,42,68,0.12);
+    }
+    .product-card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      background:#f1f3f6;
+      /* 防止布局偏移 */
+      display:block;
+    }
+    .card-body{
+      padding:1.2rem;
+    }
+    .card-body h3{
+      color:var(--primary);
+      margin-bottom:0.6rem;
+      font-size:1.1rem;
+    }
+    .card-body p{
+      color:#444;
+      line-height:1.6;
+      font-size:0.95rem;
+      display:-webkit-box;
+      -webkit-line-clamp:3;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+
+    /* 状态提示 */
+    .loading-tip{text-align:center;padding:4rem 0;color:#555;}
+    .error-tip{text-align:center;padding:4rem 0;color:#c0392b;}
+    .empty-tip{text-align:center;padding:4rem 0;color:#666;}
+
+    /* 悬浮询盘按钮 */
+    .float-inquiry{
+      position:fixed;
+      right:20px;
+      bottom:30px;
+      background:var(--accent);
+      color:#fff;
+      padding:12px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      box-shadow:0 4px 12px rgba(255,120,0,0.35);
+      z-index:99;
+    }
+
+    footer{
+      background:var(--footer-bg);
+      color:#cccccc;
+      text-align:center;
+      padding:2rem 5%;
+      margin-top:4rem;
+    }
+    footer a{
+      color:#ff9c38;
+      text-decoration:none;
+    }
+    footer a:hover{
+      text-decoration:underline;
+    }
+
+    /* RTL阿拉伯语全局适配（和首页保持一致） */
+    [dir="rtl"] .breadcrumb,
+    [dir="rtl"] .filter-box,
+    [dir="rtl"] .card-body{
+      text-align:right;
+    }
+    [dir="rtl"] .filter-box{
+      flex-direction:row-reverse;
+    }
+
+    @media(max-width:768px){
+      header{flex-direction:column;align-items:flex-start;}
+      nav{gap:1rem;width:100%;justify-content:flex-start;}
+      .filter-box{flex-direction:column;align-items:center;}
+      .product-wrap{padding:1.5rem 3%;}
+      .float-inquiry{right:15px;bottom:20px;font-size:0.9rem;padding:10px 16px;}
+    }
   </style>
 </head>
 <body>
-<!-- 新版导航栏 Logo+文字 -->
-<header style="display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;border-bottom:1px solid #eee;flex-wrap:wrap;gap:1rem;">
-  <div style="display:flex;align-items:center;gap:0.8rem;">
-    <img id="site-logo" src="/uploads/logo.png" alt="logo" style="height:36px;object-fit:contain;">
-    <div id="site-title" style="font-size:1.4rem;font-weight:bold;color:#0F3460;">YOURFACTORY</div>
+<!-- 导航栏（与index14完全一致） -->
+<header>
+  <div class="header-logo-wrap">
+    <img id="site-logo" src="/uploads/logo.png" data-i18n-alt="site.logoAlt" alt="logo" width="44" height="36">
+    <div id="site-title">ZHANXIN GLOBAL</div>
   </div>
-  <nav style="display:flex;gap:2rem;flex-wrap:wrap;">
-    <a href="index.html" style="text-decoration:none;color:#333;">Home</a>
-    <a href="products.html" style="text-decoration:none;color:#333;">Products</a>
-    <a href="about.html" style="text-decoration:none;color:#333;">About Us</a>
-    <a href="contact.html" style="text-decoration:none;color:#333;">Contact</a>
+  <nav>
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="products.html" class="active" data-i18n="nav.products">Products</a>
+    <a href="about.html" data-i18n="nav.about">About Us</a>
+    <a href="index.html#inquiry" data-i18n="nav.quote">Get a Quote</a>
   </nav>
-  <select class="lang-select" style="padding:4px 8px;border:1px solid #ccc;border-radius:4px;">
+  <select class="lang-select" id="langSelect">
     <option value="en">English</option>
-    <option value="es">Español</option>
-    <option value="ar">العربية</option>
     <option value="zh">中文</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="ja">日本語</option>
+    <option value="ar">العربية</option>
   </select>
 </header>
 
-<div class="product-wrap">
-  <h2 data-i18n="ourProducts">Our Products</h2>
-  <div class="filter-box">
-    <select id="categoryFilter">
-      <option value="" data-i18n="allCategories">All Categories</option>
-    </select>
-  </div>
-  <div class="product-grid" id="productGrid"></div>
+<!-- 面包屑导航 -->
+<div class="breadcrumb">
+  <a href="index.html" data-i18n="breadcrumb.home">Home</a>
+  <span>›</span>
+  <span data-i18n="breadcrumb.products">Our Products</span>
 </div>
 
+<div class="product-wrap">
+  <h1 class="section-title" data-i18n="products.ourProducts">Our Products</h1>
+  <div class="filter-box">
+    <select id="categoryFilter">
+      <option value="" data-i18n="products.allCategories">All Categories</option>
+    </select>
+    <input type="text" id="searchInput" placeholder="" data-i18n-placeholder="products.searchPlaceholder">
+  </div>
+  <div class="product-grid" id="productGrid">
+    <div class="loading-tip" data-i18n="products.loading">Loading products...</div>
+  </div>
+</div>
+
+<!-- 悬浮询盘按钮 -->
+<a href="index.html#inquiry" class="float-inquiry" data-i18n="products.inquiryBtn">Send Inquiry</a>
+
 <footer>
-  <p>© 2026 Your Factory. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
+  <p data-i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
 </footer>
 
-<script src="lang.js"></script>
-<script>
-//读取全局配置：Logo + 网站标题
+<!-- 多语言脚本 defer延迟加载，不阻塞首屏 -->
+<script src="lang.js" defer></script>
+
+<script defer>
+/** 读取全局配置 global.md，带超时与容错 */
 async function loadGlobalConfig() {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(()=>controller.abort(), 6000);
   try{
-    const res = await fetch("content/global.md");
+    const res = await fetch("content/global.md", {signal:controller.signal});
+    clearTimeout(timeoutId);
+    if(!res.ok) throw new Error("global.md not found");
     const raw = await res.text();
-    const front = raw.match(/---\n([\s\S]*?)\n---/)[1];
-    //提取logo图片路径
-    const logoSrc = front.match(/site_logo: (.*)/)[1];
-    document.getElementById("site-logo").src = logoSrc;
-    //提取网站标题文字
-    const siteTitle = front.match(/site_title: (.*)/)[1];
-    document.getElementById("site-title").innerText = siteTitle;
+    const match = raw.match(/---\n([\s\S]*?)\n---/);
+    if(!match) throw new Error("front-matter parse error");
+    const front = match[1];
+    const logoMatch = front.match(/site_logo:\s*(.*)/);
+    const titleMatch = front.match(/site_title:\s*(.*)/);
+    if(logoMatch) document.getElementById("site-logo").src = logoMatch[1].trim();
+    if(titleMatch) document.getElementById("site-title").innerText = titleMatch[1].trim();
   }catch(e){
-    console.log("全局配置读取失败",e);
+    clearTimeout(timeoutId);
+    console.log("全局配置读取失败", e);
   }
 }
 loadGlobalConfig();
 </script>
-<script>
-// 读取产品json渲染 + 分类筛选，增加异常捕获
-let allProducts = [];
-const categoryMap = {
-  "lightbox":"Advertising Light Box",
-  "sign":"Wayfinding Signage",
-  "display":"LED / LCD Screen",
-  "bus":"Bus Shelter",
-  "metal-structure":"Metal Structure",
-  "other":"Others"
+
+<script defer>
+// 分类i18n键（和首页词条保持统一）
+const categoryI18nKeys = {
+  "lightbox":"prod.lightbox",
+  "sign":"prod.sign",
+  "display":"prod.led",
+  "bus":"prod.bus",
+  "metal-structure":"prod.metal",
+  "other":"prod.other"
 };
 
+let allProducts = [];
+let currentFilterCat = "";
+let currentKeyword = "";
+
+// HTML转义防XSS
+function escapeHtml(str){
+  if(!str) return "";
+  return String(str)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;");
+}
+
+// 加载产品JSON
 async function loadProducts(){
+  const grid = document.getElementById("productGrid");
+  const controller = new AbortController();
+  const timeoutId = setTimeout(()=>controller.abort(),6000);
   try {
-    const res = await fetch("content/product-index.json");
+    const res = await fetch("content/product-index.json", {signal:controller.signal});
+    clearTimeout(timeoutId);
     if (!res.ok) throw new Error("File not found");
     allProducts = await res.json();
     renderFilter();
-    renderProducts(allProducts);
+    renderProducts();
   } catch(err) {
+    clearTimeout(timeoutId);
     console.log("产品数据加载失败", err);
-    const grid = document.getElementById("productGrid");
-    grid.innerHTML = "<p style='text-align:center; color:red;'>Product data load failed. Check product-index.json</p>";
+    grid.innerHTML = `<p class="error-tip" data-i18n="products.loadFail">Product data load failed. Check product-index.json</p>`;
+    if(window.setLang && window.currentLang) window.setLang(window.currentLang);
   }
 }
+
+// 渲染分类下拉
 function renderFilter(){
   const sel = document.getElementById("categoryFilter");
-  Object.entries(categoryMap).forEach(([val,label])=>{
+  sel.innerHTML = `<option value="" data-i18n="products.allCategories">All Categories</option>`;
+  Object.entries(categoryI18nKeys).forEach(([val,i18nKey])=>{
     const opt = document.createElement("option");
     opt.value = val;
-    opt.innerText = label;
+    opt.setAttribute("data-i18n", i18nKey);
     sel.appendChild(opt);
   });
+
+  // 筛选事件
   sel.onchange = function(){
-    const v = this.value;
-    if(!v) renderProducts(allProducts);
-    else renderProducts(allProducts.filter(p=>p.category===v));
-  }
+    currentFilterCat = this.value;
+    renderProducts();
+  };
+  document.getElementById("searchInput").oninput = function(){
+    currentKeyword = this.value.trim().toLowerCase();
+    renderProducts();
+  };
+
+  // 刷新多语言
+  if(window.setLang && window.currentLang) window.setLang(window.currentLang);
 }
-function renderProducts(list){
+
+// 渲染产品列表（分类+关键词双重过滤）
+function renderProducts(){
   const grid = document.getElementById("productGrid");
   grid.innerHTML="";
+
+  // 过滤逻辑
+  let list = [...allProducts];
+  if(currentFilterCat) list = list.filter(p=>p.category === currentFilterCat);
+  if(currentKeyword){
+    list = list.filter(p=>{
+      const title = (p.title||"").toLowerCase();
+      const desc = (p.desc||"").toLowerCase();
+      return title.includes(currentKeyword) || desc.includes(currentKeyword);
+    });
+  }
+
+  // 空状态
   if(!list || list.length === 0){
-    grid.innerHTML = "<p style='text-align:center'>No products found</p>";
+    grid.innerHTML = `<p class="empty-tip" data-i18n="products.noResult">No products found</p>`;
+    if(window.setLang && window.currentLang) window.setLang(window.currentLang);
     return;
   }
+
+  // 循环生成卡片，点击跳转详情页
   list.forEach(item=>{
     const card = document.createElement("div");
     card.className="product-card";
+    const imgSrc = escapeHtml(item.image || "");
+    const title = escapeHtml(item.title || "");
+    const desc = escapeHtml(item.desc || "");
+    const slug = escapeHtml(item.slug || item.title.toLowerCase().replace(/\s+/g,"-"));
+
     card.innerHTML = `
-      <img src="${item.image}" alt="${item.title}">
+      <img src="${imgSrc}" alt="${title}" data-i18n-alt="product.imgAlt" width="280" height="200" loading="lazy" onerror="this.style.display='none'">
       <div class="card-body">
-        <h3>${item.title}</h3>
-        <p>${item.desc}</p>
+        <h3>${title}</h3>
+        <p>${desc}</p>
       </div>
     `;
+    // 跳转产品详情页
+    card.onclick = ()=> window.location.href = `product.html?slug=${slug}`;
     grid.appendChild(card);
   })
 }
+
 loadProducts();
 </script>
 </body>
