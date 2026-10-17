@@ -3,28 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="product.metaTitle">Product Detail | ZHANXIN Intelligent Equipment</title>
-<meta name="description" data-i18n="product.metaDesc">Custom metal‑structure, bus shelter, advertising light box, urban furniture manufacturer.</title>
-<link rel="canonical" href="https://www.zhanxinglobal.com/product.html">
-<link rel="alternate" hreflang="en" href="https://www.zhanxinglobal.com/product.html">
-<link rel="alternate" hreflang="zh" href="https://www.zhanxinglobal.com/product.html">
-<link rel="alternate" hreflang="es" href="https://www.zhanxinglobal.com/product.html">
-<link rel="alternate" hreflang="fr" href="https://www.zhanxinglobal.com/product.html">
-<link rel="alternate" hreflang="de" href="https://www.zhanxinglobal.com/product.html">
-<link rel="alternate" hreflang="ja" href="https://www.zhanxinglobal.com/product.html">
-<link rel="alternate" hreflang="ar" href="https://www.zhanxinglobal.com/product.html">
-
-<script type="application/ld+json" id="productSchema">
-{
-  "@context":"https://schema.org",
-  "@type":"Product",
-  "name":"",
-  "description":"",
-  "image":"",
-  "brand":{"@type":"Brand","name":"ZHANXIN Intelligent Equipment"}
-}
-</script>
-
+<title data-i18n="detail.metaTitle">Product Detail | ZHANXIN</title>
+<meta name="description" data-i18n="detail.metaDesc" content="Custom bus shelter, advertising light box, metal structure product">
+<link rel="canonical" href="">
 <style>
 :root{
   --primary:#0F2A44;
@@ -37,7 +18,6 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
 body{color:var(--dark);background:#fff;}
 
-/* 导航栏 全站统一 */
 header{
   background-color: var(--primary);
   color:#fff;
@@ -56,6 +36,15 @@ header{
   height:48px;
   width:auto;
   object-fit:contain;
+}
+.logo-text-fallback{
+  font-size:1.2rem;
+  font-weight:bold;
+  color:#fff;
+  display:none;
+}
+#site-logo:error + .logo-text-fallback{
+  display:block;
 }
 nav{
   display:flex;
@@ -79,131 +68,64 @@ nav a.active{
   border-radius:4px;
   border:none;
 }
-select,
-select option {
-  color: #222 !important;
-  background: #ffffff !important;
-}
-select option:hover,
-select option:focus {
-  background-color: #0F2A44 !important;
-  color: #fff !important;
-}
+select,select option {color:#222;background:#fff;}
 
-/*面包屑 */
 .breadcrumb{
   padding:1.2rem 5%;
   background:#f7f8fa;
   font-size:0.9rem;
 }
-.breadcrumb a{
-  color:var(--primary);
-  text-decoration:none;
-}
-.breadcrumb span{
-  margin:0 6px;color:#888;
-}
+.breadcrumb a{color:var(--primary);text-decoration:none;}
+.breadcrumb span{margin:0 6px;color:#888;}
 
-/*详情主容器 */
-.detail-wrap{
+.container{
   max-width:1400px;
   margin:0 auto;
-  padding:2.5rem 5%;
-}
-.detail-grid{
+  padding:3rem 5%;
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap:2.5rem;
-  align-items:start;
+  gap:3rem;
 }
-.detail-img-box{
-  border:1px solid var(--border-gray);
-  border-radius:12px;
-  overflow:hidden;
-  background:#f1f3f6;
-}
-.detail-img-box img{
+.img-box img{
   width:100%;
-  height:auto;
-  display:block;
+  border-radius:12px;
+  object-fit:cover;
 }
-.detail-info h1{
-  font-size:2rem;
+.info-box h1{
   color:var(--primary);
+  font-size:2rem;
   margin-bottom:1rem;
-  line-height:1.3;
 }
-.detail-meta{
-  border:1px solid var(--border-gray);
-  border-radius:10px;
-  padding:1.4rem;
-  margin-bottom:1.6rem;
-  background:#fff;
+.info-box .cate{
+  display:inline-block;
+  background:#e8edf3;
+  color:var(--primary);
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:0.9rem;
+  margin-bottom:1.5rem;
 }
-.detail-meta p{
-  margin-bottom:0.6rem;
-  line-height:1.6;
-}
-.detail-desc{
-  line-height:1.75;
+.info-box p{
+  line-height:1.8;
   color:#444;
   margin-bottom:2rem;
-  font-size:1.02rem;
-}
-.btn-group{
-  display:flex;
-  gap:1rem;
-  flex-wrap:wrap;
-}
-.btn-back{
-  display:inline-block;
-  padding:11px 20px;
-  border:1px solid var(--border-gray);
-  border-radius:8px;
-  text-decoration:none;
-  color:var(--primary);
-  transition:0.24s ease;
-}
-.btn-back:hover{
-  background:#f7f8fa;
+  font-size:1.05rem;
 }
 .btn-inquiry{
   display:inline-block;
-  padding:11px 24px;
   background:var(--accent);
   color:#fff;
+  padding:14px 28px;
   border-radius:8px;
   text-decoration:none;
-  transition:0.24s ease;
+  font-weight:bold;
 }
-.btn-inquiry:hover{
-  opacity:0.92;
+.loading, .error{
+  text-align:center;
+  padding:6rem 0;
+  font-size:1.1rem;
 }
-
-/*状态提示 */
-.loading-tip{
-  text-align:center;padding:5rem 0;color:#555;font-size:1.1rem;
-}
-.error-tip{
-  text-align:center;padding:5rem 0;color:#c0392b;font-size:1.1rem;
-}
-
-/*悬浮询盘按钮 */
-.float-inquiry{
-  position:fixed;
-  right:20px;
-  bottom:30px;
-  background:var(--accent);
-  color:#fff;
-  padding:12px 18px;
-  border-radius:50px;
-  text-decoration:none;
-  box-shadow:0 4px 12px rgba(255,120,0,0.35);
-  z-index:99;
-}
-.float-inquiry:hover{
-  opacity:0.92;
-}
+.error{color:#c0392b;}
 
 footer{
   background:var(--footer-bg);
@@ -212,45 +134,27 @@ footer{
   padding:2.2rem 5%;
   margin-top:5rem;
 }
-footer a{
-  color:#ffb040;
-  text-decoration:none;
-}
-footer a:hover{
-  text-decoration:underline;
-}
+footer a{color:#ffb040;text-decoration:none;}
 
-/*RTL阿拉伯语 */
 [dir="rtl"] .breadcrumb,
-[dir="rtl"] .detail-info{
-  text-align:right;
-}
-[dir="rtl"] .btn-group{
-  flex-direction:row-reverse;
-}
+[dir="rtl"] .info-box{text-align:right;}
+[dir="rtl"] .container{grid-template-columns:1fr 1fr;direction:rtl;}
 
-@media(max-width:992px){
-  .detail-grid{
-    grid-template-columns:1fr;
-  }
-}
 @media(max-width:768px){
   header{flex-direction:column;align-items:flex-start;}
-  nav{gap:1rem;width:100%;justify-content:flex-start;}
-  .detail-wrap{padding:1.8rem 3%;}
-  .float-inquiry{right:15px;bottom:20px;font-size:0.9rem;padding:10px 16px;}
+  .container{grid-template-columns:1fr;padding:2rem 3%;gap:2rem;}
 }
 </style>
 </head>
 <body>
 <header>
   <div class="header-logo-wrap">
-    <!-- 固定Logo，不再读取global.md，和index/about/products保持一致 -->
-    <img id="site-logo" src="/uploads/logo.png" data-i18n-alt="site.logoAlt" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd." width="180" height="48">
+    <img id="site-logo" src="/uploads/logo-zhanxin-blue.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" data-i18n-alt="site.logoAlt" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd." width="180" height="48">
+    <span class="logo-text-fallback">Shanghai ZhanXin Intelligent Equipment</span>
   </div>
   <nav>
     <a href="index.html" data-i18n="nav.home">Home</a>
-    <a href="products.html" data-i18n="nav.products">Products</a>
+    <a href="products.html" class="active" data-i18n="nav.products">Products</a>
     <a href="about.html" data-i18n="nav.about">About Us</a>
     <a href="index.html#inquiry" data-i18n="nav.quote">Get a Quote</a>
   </nav>
@@ -270,120 +174,195 @@ footer a:hover{
   <span>›</span>
   <a href="products.html" data-i18n="breadcrumb.products">Our Products</a>
   <span>›</span>
-  <span id="breadProductName">-</span>
+  <span data-i18n="breadcrumb.detail">Product Detail</span>
 </div>
 
-<div class="detail-wrap">
-  <div id="pageContent" class="loading-tip" data-i18n="product.loading">Loading product...</div>
+<div class="container" id="detailBox">
+  <div class="loading" data-i18n="detail.loading">Loading...</div>
 </div>
-
-<a href="index.html#inquiry" class="float-inquiry" data-i18n="products.inquiryBtn">Send Inquiry</a>
 
 <footer>
-  <p data-i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
+  <p data-i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved.</p>
 </footer>
 
-<script src="lang.js" defer></script>
-<script defer>
+<!-- 内嵌多语言JS，无lang.js -->
+<script>
+const translations = {
+  en: {
+    "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
+    "nav.home": "Home",
+    "nav.products": "Products",
+    "nav.about": "About Us",
+    "nav.quote": "Get a Quote",
+    "breadcrumb.home": "Home",
+    "breadcrumb.products": "Our Products",
+    "breadcrumb.detail": "Product Detail",
+    "detail.metaTitle": "Product Detail | ZHANXIN",
+    "detail.metaDesc": "Custom bus shelter, advertising light box, metal structure product",
+    "detail.loading": "Loading product info...",
+    "detail.error": "Product not found",
+    "detail.inquiry": "Send Inquiry Now",
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved."
+  },
+  zh: {
+    "site.logoAlt": "上海崭鑫智能设备有限公司",
+    "nav.home": "首页",
+    "nav.products": "产品",
+    "nav.about": "关于我们",
+    "nav.quote": "获取报价",
+    "breadcrumb.home": "首页",
+    "breadcrumb.products": "全部产品",
+    "breadcrumb.detail": "产品详情",
+    "detail.metaTitle": "产品详情 | 上海崭鑫智能设备",
+    "detail.metaDesc": "公交候车亭、广告灯箱、金属结构定制产品",
+    "detail.loading": "正在加载产品信息...",
+    "detail.error": "未找到该产品",
+    "detail.inquiry": "立即发送询价",
+    "footer.copyright": "© 2026 上海崭鑫智能设备有限公司 版权所有。"
+  },
+  es: {
+    "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
+    "nav.home": "Inicio",
+    "nav.products": "Productos",
+    "nav.about": "Nosotros",
+    "nav.quote": "Solicitar precio",
+    "breadcrumb.home": "Inicio",
+    "breadcrumb.products": "Nuestros productos",
+    "breadcrumb.detail": "Detalle del producto",
+    "detail.metaTitle": "Detalle del producto | ZHANXIN",
+    "detail.metaDesc": "Refugio autobús, caja de luz publicitaria, estructura metálica personalizada",
+    "detail.loading": "Cargando...",
+    "detail.error": "Producto no encontrado",
+    "detail.inquiry": "Enviar consulta",
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Todos los derechos reservados."
+  },
+  fr: {
+    "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
+    "nav.home": "Accueil",
+    "nav.products": "Produits",
+    "nav.about": "À propos",
+    "nav.quote": "Demander un devis",
+    "breadcrumb.home": "Accueil",
+    "breadcrumb.products": "Nos produits",
+    "breadcrumb.detail": "Détail du produit",
+    "detail.metaTitle": "Détail produit | ZHANXIN",
+    "detail.metaDesc": "Abri bus, caisson lumineux publicitaire, structure métallique sur mesure",
+    "detail.loading": "Chargement...",
+    "detail.error": "Produit introuvable",
+    "detail.inquiry": "Envoyer une demande",
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Tous droits réservés."
+  },
+  de: {
+    "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
+    "nav.home": "Startseite",
+    "nav.products": "Produkte",
+    "nav.about": "Über uns",
+    "nav.quote": "Angebot anfordern",
+    "breadcrumb.home": "Startseite",
+    "breadcrumb.products": "Unsere Produkte",
+    "breadcrumb.detail": "Produktdetails",
+    "detail.metaTitle": "Produktdetails | ZHANXIN",
+    "detail.metaDesc": "Bushaltestelle, Werbeleuchtkasten, Metallkonstruktion nach Maß",
+    "detail.loading": "Laden...",
+    "detail.error": "Produkt nicht gefunden",
+    "detail.inquiry": "Anfrage senden",
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Alle Rechte vorbehalten."
+  },
+  ja: {
+    "site.logoAlt": "上海崭鑫智能設備有限公司",
+    "nav.home": "ホーム",
+    "nav.products": "製品",
+    "nav.about": "会社概要",
+    "nav.quote": "見積もり依頼",
+    "breadcrumb.home": "ホーム",
+    "breadcrumb.products": "製品一覧",
+    "breadcrumb.detail": "製品詳細",
+    "detail.metaTitle": "製品詳細 | 上海崭鑫智能設備",
+    "detail.metaDesc": "バス待合所、広告灯箱、オーダーメイド金属構造物",
+    "detail.loading": "読み込み中...",
+    "detail.error": "製品が見つかりません",
+    "detail.inquiry": "お問い合わせ",
+    "footer.copyright": "© 2026 上海崭鑫智能設備有限公司 無断転載禁止。"
+  },
+  ar: {
+    "site.logoAlt": "شركة زانكسين للمعدات الذكية بشانغهاي",
+    "nav.home": "الرئيسية",
+    "nav.products": "المنتجات",
+    "nav.about": "من نحن",
+    "nav.quote": "طلب عرض سعر",
+    "breadcrumb.home": "الرئيسية",
+    "breadcrumb.products": "منتجاتنا",
+    "breadcrumb.detail": "تفاصيل المنتج",
+    "detail.metaTitle": "تفاصيل المنتج | زانكسين",
+    "detail.metaDesc": "ملجأ حافلة، صندوق إعلان مضيء، هيكل معدني مخصص",
+    "detail.loading": "جاري التحميل...",
+    "detail.error": "المنتج غير موجود",
+    "detail.inquiry": "إرسال استفسار الآن",
+    "footer.copyright": "© 2026 شركة زانكسين للمعدات الذكية بشانغهاي. جميع الحقوق محفوظة."
+  }
+};
+
+let currentLang = localStorage.getItem("preferredLang") || "en";
+const langSelect = document.getElementById("langSelect");
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem("preferredLang", lang);
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const k = el.getAttribute("data-i18n");
+    if(translations[lang][k]) el.textContent = translations[lang][k];
+  });
+  document.querySelectorAll("[data-i18n-alt]").forEach(el=>{
+    const k = el.getAttribute("data-i18n-alt");
+    if(translations[lang][k]) el.alt = translations[lang][k];
+  });
+  langSelect.value = lang;
+}
+langSelect.addEventListener("change", ()=>setLang(langSelect.value));
+setLang(currentLang);
+</script>
+
+<script>
 function escapeHtml(str){
   if(!str) return "";
-  return String(str)
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;");
+  return String(str).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 }
 
-// 获取url上slug参数
-function getUrlSlug(){
-  const params = new URLSearchParams(window.location.search);
-  return params.get("slug") || null;
-}
+const urlParams = new URLSearchParams(window.location.search);
+const slug = urlParams.get("slug");
+const box = document.getElementById("detailBox");
 
-// 更新Product结构化JSON‑LD
-function updateProductSchema(product){
-  const schemaEl = document.getElementById("productSchema");
-  const schema = JSON.parse(schemaEl.textContent);
-  schema.name = product.title || "";
-  schema.description = product.desc || "";
-  schema.image = product.image || "";
-  schemaEl.textContent = JSON.stringify(schema);
-}
-
-async function renderProduct(){
-  const pageContent = document.getElementById("pageContent");
-  const slug = getUrlSlug();
-  if(!slug){
-    pageContent.className="error-tip";
-    pageContent.innerHTML = `<p data-i18n="product.noSlug">Missing product identifier. <br><a href="products.html">← Back to product list</a></p>`;
-    if(window.setLang && window.currentLang) window.setLang(window.currentLang);
-    return;
-  }
-
-  const controller = new AbortController();
-  const timeoutId = setTimeout(()=>controller.abort(), 6000);
-  let productList;
+async function loadDetail(){
   try{
-    const res = await fetch("content/product-index.json", {signal:controller.signal});
-    clearTimeout(timeoutId);
-    if(!res.ok) throw new Error("json not found");
-    productList = await res.json();
+    const res = await fetch("content/product-index.json");
+    if(!res.ok) throw new Error();
+    const list = await res.json();
+    const item = list.find(p=>(p.slug || p.title.toLowerCase().replace(/\s+/g,"-")) === slug);
+    if(!item){
+      box.innerHTML = `<div class="error" data-i18n="detail.error">Product not found</div>`;
+      setLang(currentLang);
+      return;
+    }
+    box.innerHTML = `
+      <div class="img-box">
+        <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}">
+      </div>
+      <div class="info-box">
+        <h1>${escapeHtml(item.title)}</h1>
+        <span class="cate">${escapeHtml(item.category)}</span>
+        <p>${escapeHtml(item.desc)}</p>
+        <a href="index.html#inquiry" class="btn-inquiry" data-i18n="detail.inquiry">Send Inquiry Now</a>
+      </div>
+    `;
+    setLang(currentLang);
   }catch(err){
-    clearTimeout(timeoutId);
-    console.log("产品json读取异常",err);
-    pageContent.className="error-tip";
-    pageContent.innerHTML=`<p data-i18n="product.loadFail">Failed to load product data. <br><a href="products.html">← Back to product list</a></p>`;
-    if(window.setLang && window.currentLang) window.setLang(window.currentLang);
-    return;
+    box.innerHTML = `<div class="error" data-i18n="detail.error">Product not found</div>`;
+    setLang(currentLang);
   }
-
-  //匹配slug
-  const findProduct = productList.find(p=>{
-    const pSlug = p.slug || (p.title||"").toLowerCase().replace(/\s+/g,"-");
-    return pSlug === slug;
-  });
-
-  if(!findProduct){
-    pageContent.className="error-tip";
-    pageContent.innerHTML = `<p data-i18n="product.notFound">This product does not exist. <br><a href="products.html">← Back to product list</a></p>`;
-    if(window.setLang && window.currentLang) window.setLang(window.currentLang);
-    return;
-  }
-
-  const item = findProduct;
-  updateProductSchema(item);
-  document.getElementById("breadProductName").innerText = escapeHtml(item.title);
-
-  //渲染详情页面
-  const imgSrc = escapeHtml(item.image||"");
-  const title = escapeHtml(item.title||"");
-  const desc = escapeHtml(item.desc||"");
-  const cat = escapeHtml(item.category||"‑");
-
-  pageContent.className="";
-  pageContent.innerHTML = `
-    <div class="detail-grid">
-      <div class="detail-img-box">
-        <img src="${imgSrc}" alt="${title}" loading="lazy" onerror="this.style.display='none'">
-      </div>
-      <div class="detail-info">
-        <h1>${title}</h1>
-        <div class="detail‑meta">
-          <p><strong data‑i18n="product.categoryLabel">Category:</strong> ${cat}</p>
-        </div>
-        <div class="detail‑desc">${desc}</div>
-        <div class="btn-group">
-          <a href="products.html" class="btn‑back" data‑i18n="product.btnBack">← Back to list</a>
-          <a href="index.html#inquiry" class="btn‑inquiry" data‑i18n="product.btnInquiry">Send Inquiry</a>
-        </div>
-      </div>
-    </div>
-  `;
-  //触发多语言翻译刷新
-  if(window.setLang && window.currentLang) window.setLang(window.currentLang);
 }
-
-renderProduct();
+loadDetail();
 </script>
 </body>
 </html>
