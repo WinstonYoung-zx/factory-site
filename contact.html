@@ -8,13 +8,10 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/style.css">
 <!-- Cloudflare Turnstile 验证码 -->
-<script src="https://challenges.cloudflare.com/turnstile/v0/sitekey.js" defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/site.js" defer></script>
 </head>
 <body>
-<!-- ======================
-Header 已修复：和首页完全一致，class="logo"，nav-links，mobile-menu-btn，
-这一段是解决logo变大的唯一修改，页面其余代码全部保留原样
-====================== -->
+<!-- 头部导航 -->
 <header>
   <div class="container nav-wrap">
     <a href="/index.html" class="logo">
@@ -54,23 +51,70 @@ Header 已修复：和首页完全一致，class="logo"，nav-links，mobile-men
         </div>
         <div class="form-group">
           <label data-i18n="inq.country">Select your country</label>
-          <select name="country">
-            <option value="">-- Select Country --</option>
-            <option>USA</option>
-            <option>UK</option>
-            <option>Germany</option>
-            <option>France</option>
-            <option>Spain</option>
-            <option>Japan</option>
-            <option>Australia</option>
-            <option>UAE</option>
-            <option>Saudi Arabia</option>
-            <option>Netherlands</option>
-            <option>Belgium</option>
-            <option>Italy</option>
-            <option>Poland</option>
-            <option>Canada</option>
-            <option>Other</option>
+          <select name="country" required>
+            <option value="">-- Select Country / Region --</option>
+            <!-- Europe -->
+            <option value="Austria">Austria</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="Greece">Greece</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Italy">Italy</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Norway">Norway</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Romania">Romania</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Spain">Spain</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <!-- North America -->
+            <option value="Canada">Canada</option>
+            <option value="United States">United States</option>
+            <!-- Latin America -->
+            <option value="Brazil">Brazil</option>
+            <option value="Chile">Chile</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Peru">Peru</option>
+            <!-- Middle East -->
+            <option value="Bahrain">Bahrain</option>
+            <option value="Israel">Israel</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Oman">Oman</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="United Arab Emirates">United Arab Emirates</option>
+            <!-- Asia Pacific -->
+            <option value="Australia">Australia</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Japan">Japan</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Singapore">Singapore</option>
+            <option value="South Korea">South Korea</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Vietnam">Vietnam</option>
+            <!-- Africa -->
+            <option value="Egypt">Egypt</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Other">Other</option>
           </select>
         </div>
         <div class="form-group">
@@ -100,7 +144,7 @@ Header 已修复：和首页完全一致，class="logo"，nav-links，mobile-men
         </div>
         <!-- Cloudflare Turnstile -->
         <div class="form-group">
-          <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITEKEY"></div>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAAFYHVZ7gzDBGAi"></div>
         </div>
         <button type="submit" class="submit-btn" data-i18n="inq.submit">Submit Inquiry</button>
       </form>
@@ -151,7 +195,7 @@ const navList = document.querySelector('.nav-links');
 mobileBtn.addEventListener('click', ()=>{
   navList.classList.toggle('mobile-open');
 })
-// 多语言翻译，包含西班牙语es、阿拉伯语ar
+// 多语言翻译
 const translations = {
 en: {
 "meta.contactTitle":"Contact Us | ZHANXIN",
@@ -366,29 +410,33 @@ fileNameText.textContent = this.files[0].name;
 fileNameText.textContent = translations[currentLang]["inq.noFile"];
 }
 }
-// ========== 表单提交，对接Cloudflare Worker询盘接口 ==========
+// ========== 表单提交对接 zhanxin-form Worker ==========
 const contactForm = document.getElementById("contactForm");
 contactForm.addEventListener("submit", async function(e){
-e.preventDefault();
-const formData = new FormData(contactForm);
-// 👉 【重点】替换为你的Worker完整地址！！！
-const workerApiUrl = "https://你的worker域名.workers.dev/inquiry";
-try{
-const res = await fetch(workerApiUrl,{
-method:"POST",
-body:formData
-});
-const result = await res.json();
-if(res.ok){
-alert(currentLang==="zh"?"提交成功！":"Inquiry sent successfully!");
-contactForm.reset();
-fileNameText.textContent = translations[currentLang]["inq.noFile"];
-}else{
-alert(currentLang==="zh"?"提交失败，请重试！":"Failed to send, please try again.");
-}
-}catch(err){
-alert(currentLang==="zh"?"网络错误！":"Network error!");
-}
+  e.preventDefault();
+  const formData = new FormData(contactForm);
+  const token = formData.get("cf-turnstile-response");
+  if(!token){
+    alert(currentLang==="zh"?"请先完成人机验证！":"Please complete human verification first!");
+    return;
+  }
+  const workerApiUrl = "https://zhanxin-form.shzxin-cn.workers.dev/inquiry";
+  try{
+    const res = await fetch(workerApiUrl,{
+      method:"POST",
+      body:formData
+    });
+    const result = await res.json();
+    if(res.ok){
+      alert(currentLang==="zh"?"提交成功！":"Inquiry sent successfully!");
+      contactForm.reset();
+      fileNameText.textContent = translations[currentLang]["inq.noFile"];
+    }else{
+      alert(currentLang==="zh"?"提交失败，请重试！":"Failed to send, please try again.");
+    }
+  }catch(err){
+    alert(currentLang==="zh"?"网络错误！":"Network error!");
+  }
 })
 </script>
 </body>
