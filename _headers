@@ -1,3 +1,7 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://challenges.cloudflare.com https://static.cloudflareinsights.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cms-gateway.shzxin-cn.workers.dev https://api.github.com https://*.workers.dev; font-src 'self'; object-src 'none'; base-uri 'self';
+
 /admin/*
   X-Frame-Options: SAMEORIGIN
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://static.cloudflareinsights.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cms-gateway.shzxin-cn.workers.dev https://api.github.com https://cdn.jsdelivr.net; worker-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self';
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cms-gateway.shzxin-cn.workers.dev https://api.github.com; worker-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self';
