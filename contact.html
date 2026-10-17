@@ -7,6 +7,8 @@
 <meta name="description" data-i18n="meta.contactDesc" content="SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. - Outdoor, airport and urban furniture & metal structure manufacturer. Get in touch for custom advertising light box, wayfinding signage, bus shelter and steel aluminum structures.">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/style.css">
+<!-- Cloudflare Turnstile 验证码 -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/sitekey.js" defer></script>
 </head>
 <body>
 <header class="site-header">
@@ -26,6 +28,8 @@
       <option value="fr">Français</option>
       <option value="de">Deutsch</option>
       <option value="ja">日本語</option>
+      <option value="es">Español</option>
+      <option value="ar">العربية</option>
     </select>
   </div>
 </header>
@@ -46,13 +50,21 @@
         <div class="form-group">
           <label data-i18n="inq.country">Select your country</label>
           <select name="country">
-            <option value="">--</option>
+            <option value="">-- Select Country --</option>
             <option>USA</option>
             <option>UK</option>
             <option>Germany</option>
             <option>France</option>
+            <option>Spain</option>
             <option>Japan</option>
             <option>Australia</option>
+            <option>UAE</option>
+            <option>Saudi Arabia</option>
+            <option>Netherlands</option>
+            <option>Belgium</option>
+            <option>Italy</option>
+            <option>Poland</option>
+            <option>Canada</option>
             <option>Other</option>
           </select>
         </div>
@@ -68,6 +80,7 @@
           <label data-i18n="inq.product">Product Interest</label>
           <input type="text" name="product">
         </div>
+        <!-- 附件上传，如果你的Worker不支持接收文件，直接删除下面这个form-group整块 -->
         <div class="form-group">
           <label data-i18n="inq.attachLabel">Drawings / Reference File (Max 5MB, pdf/png/jpg)</label>
           <div class="file-upload-wrap">
@@ -80,6 +93,10 @@
           <label data-i18n="inq.msg">Message / Requirements</label>
           <textarea name="msg" rows="5"></textarea>
         </div>
+        <!-- Cloudflare Turnstile -->
+        <div class="form-group">
+          <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITEKEY"></div>
+        </div>
         <button type="submit" class="submit-btn" data-i18n="inq.submit">Submit Inquiry</button>
       </form>
     </div>
@@ -89,8 +106,8 @@
       <p>Tel: <a href="tel:+862157223755">+86‑21‑57223755</a></p>
       <p>M.P./WhatsApp: <a href="https://wa.me/8619301179802" target="_blank">+86‑19301179802</a></p>
       <p>Web: <a href="https://www.zhanxinglobal.com/" target="_blank">https://www.zhanxinglobal.com/</a></p>
-      <p>Addr：Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District, Shanghai</p>
-      <p>E‑mail：<a href="mailto:sales@zhanxinglobal.com">sales@zhanxinglobal.com</a></p>
+      <p>Addr: Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District, Shanghai</p>
+      <p>E-mail: <a href="mailto:sales@zhanxinglobal.com">sales@zhanxinglobal.com</a></p>
       <div class="social-links">
         <a href="https://wa.me/8619301179802" target="_blank">WhatsApp</a>
       </div>
@@ -115,16 +132,15 @@
       <p><strong>SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</strong></p>
       <p>Tel: <a href="tel:+862157223755">+86‑21‑57223755</a></p>
       <p>M.P./WhatsApp: <a href="https://wa.me/8619301179802" target="_blank">+86‑19301179802</a></p>
-      <p>E‑mail：<a href="mailto:sales@zhanxinglobal.com">sales@zhanxinglobal.com</a></p>
+      <p>E-mail: <a href="mailto:sales@zhanxinglobal.com">sales@zhanxinglobal.com</a></p>
     </div>
   </div>
   <div class="copyright">
     <p>©2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. <a href="/privacy.html" data-i18n="footer.privacy">Privacy Policy</a></p>
   </div>
 </footer>
-
 <script>
-// 多语言翻译
+// 多语言翻译，新增西班牙语es、阿拉伯语ar
 const translations = {
 en: {
 "meta.contactTitle":"Contact Us | ZHANXIN",
@@ -255,12 +271,62 @@ ja: {
 "footer.nav":"ナビゲーション",
 "footer.contact":"連絡先",
 "footer.privacy":"プライバシーポリシー"
+},
+es: {
+"meta.contactTitle":"Contáctenos | ZHANXIN",
+"meta.contactDesc":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. Fabricante de mobiliario urbano, aeroportuario y estructuras metálicas. Cajas de luz, señalización, marquesinas de autobús, estructuras acero-aluminio.",
+"nav.home":"Inicio",
+"nav.products":"Productos",
+"nav.about":"Sobre Nosotros",
+"nav.quote":"Solicitar Cotización",
+"contact.title":"Contáctenos",
+"contact.formTitle":"Enviar Consulta",
+"contact.infoTitle":"Nuestros Datos de Contacto",
+"inq.company":"Nombre de Empresa",
+"inq.name":"Persona de Contacto",
+"inq.country":"Seleccione su país",
+"inq.phone":"WhatsApp / Teléfono",
+"inq.email":"Correo electrónico",
+"inq.product":"Producto de interés",
+"inq.attachLabel":"Planos / Archivo referencia (Máx 5MB, pdf/png/jpg)",
+"inq.selectFile":"Elegir archivo",
+"inq.noFile":"Sin archivo seleccionado",
+"inq.msg":"Mensaje / Requisitos",
+"inq.submit":"Enviar",
+"footer.desc":"Fabricante de mobiliario urbano, aeroportuario y estructuras metálicas.",
+"footer.nav":"Navegación",
+"footer.contact":"Contacto",
+"footer.privacy":"Política de Privacidad"
+},
+ar: {
+"meta.contactTitle":"اتصل بنا | ZHANXIN",
+"meta.contactDesc":"شركة شنغهاي زانكسين للمعدات الذكية المحدودة. مصنع الأثاث الحضري والمطار والهياكل المعدنية. صناديق إضاءة، لوحات إرشادية، ملاجئ حافلات، هياكل حديد وألومنيوم.",
+"nav.home":"الرئيسية",
+"nav.products":"المنتجات",
+"nav.about":"من نحن",
+"nav.quote":"طلب عرض سعر",
+"contact.title":"اتصل بنا",
+"contact.formTitle":"إرسال استفسار",
+"contact.infoTitle":"بيانات الاتصال",
+"inq.company":"اسم الشركة",
+"inq.name":"الشخص المسؤول",
+"inq.country":"اختر الدولة",
+"inq.phone":"واتساب / رقم الهاتف",
+"inq.email":"البريد الإلكتروني",
+"inq.product":"المنتج المهتم به",
+"inq.attachLabel":"الرسومات / ملف مرجعي (الحد الأقصى 5 ميجا بايت، pdf/png/jpg)",
+"inq.selectFile":"اختر ملف",
+"inq.noFile":"لم يتم اختيار ملف",
+"inq.msg":"الرسالة / المتطلبات",
+"inq.submit":"إرسال",
+"footer.desc":"مصنع الأثاث الحضري والمطار والهياكل المعدنية.",
+"footer.nav":"التنقل",
+"footer.contact":"معلومات الاتصال",
+"footer.privacy":"سياسة الخصوصية"
 }
 };
-
 let currentLang = localStorage.getItem("preferredLang") || "en";
 const langSelect = document.getElementById("langSelect");
-
 function setLang(lang) {
 currentLang = lang;
 localStorage.setItem("preferredLang", lang);
@@ -277,7 +343,6 @@ langSelect.addEventListener("change", ()=>{
 setLang(langSelect.value);
 });
 setLang(currentLang);
-
 // 文件选择按钮逻辑
 const selectFileBtn = document.getElementById("selectFileBtn");
 const attachFile = document.getElementById("attachFile");
@@ -287,18 +352,18 @@ attachFile.onchange = function(){
 if(this.files.length>0){
 fileNameText.textContent = this.files[0].name;
 }else{
-fileNameText.setAttribute("data-i18n","inq.noFile");
 fileNameText.textContent = translations[currentLang]["inq.noFile"];
 }
 }
-
 // ========== 表单提交，对接Cloudflare Worker询盘接口 ==========
 const contactForm = document.getElementById("contactForm");
 contactForm.addEventListener("submit", async function(e){
 e.preventDefault();
 const formData = new FormData(contactForm);
+// 👉 【重点】替换为你的Worker完整地址！！！
+const workerApiUrl = "https://你的worker域名.workers.dev/inquiry";
 try{
-const res = await fetch("/api/inquiry",{
+const res = await fetch(workerApiUrl,{
 method:"POST",
 body:formData
 });
