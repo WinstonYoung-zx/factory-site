@@ -226,7 +226,7 @@ footer a:hover{
   text-align:right;
 }
 [dir="rtl"] .btn-group{
-  flex-direction:row‑reverse;
+  flex-direction:row-reverse;
 }
 
 @media(max-width:992px){
@@ -245,6 +245,7 @@ footer a:hover{
 <body>
 <header>
   <div class="header-logo-wrap">
+    <!-- 固定Logo，不再读取global.md，和index/about/products保持一致 -->
     <img id="site-logo" src="/uploads/logo.png" data-i18n-alt="site.logoAlt" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd." width="180" height="48">
   </div>
   <nav>
@@ -284,29 +285,6 @@ footer a:hover{
 
 <script src="lang.js" defer></script>
 <script defer>
-//读取全局配置 global.md
-async function loadGlobalConfig() {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(()=>controller.abort(), 6000);
-  try{
-    const res = await fetch("content/global.md", {signal:controller.signal});
-    clearTimeout(timeoutId);
-    if(!res.ok) throw new Error("global.md not found");
-    const raw = await res.text();
-    const match = raw.match(/---\n([\s\S]*?)\n---/);
-    if(!match) throw new Error("front‑matter parse error");
-    const front = match[1];
-    const logoMatch = front.match(/site_logo:\s*(.*)/);
-    if(logoMatch) document.getElementById("site-logo").src = logoMatch[1].trim();
-  }catch(e){
-    clearTimeout(timeoutId);
-    console.log("全局配置读取失败", e);
-  }
-}
-loadGlobalConfig();
-</script>
-
-<script defer>
 function escapeHtml(str){
   if(!str) return "";
   return String(str)
@@ -336,25 +314,25 @@ async function renderProduct(){
   const pageContent = document.getElementById("pageContent");
   const slug = getUrlSlug();
   if(!slug){
-    pageContent.className="error‑tip";
-    pageContent.innerHTML = `<p data‑i18n="product.noSlug">Missing product identifier. <br><a href="products.html">← Back to product list</a></p>`;
+    pageContent.className="error-tip";
+    pageContent.innerHTML = `<p data-i18n="product.noSlug">Missing product identifier. <br><a href="products.html">← Back to product list</a></p>`;
     if(window.setLang && window.currentLang) window.setLang(window.currentLang);
     return;
   }
 
   const controller = new AbortController();
-  const timeoutId = setTimeout(()=>controller.abort(),6000);
+  const timeoutId = setTimeout(()=>controller.abort(), 6000);
   let productList;
   try{
-    const res = await fetch("content/product‑index.json", {signal:controller.signal});
+    const res = await fetch("content/product-index.json", {signal:controller.signal});
     clearTimeout(timeoutId);
     if(!res.ok) throw new Error("json not found");
     productList = await res.json();
   }catch(err){
     clearTimeout(timeoutId);
     console.log("产品json读取异常",err);
-    pageContent.className="error‑tip";
-    pageContent.innerHTML=`<p data‑i18n="product.loadFail">Failed to load product data. <br><a href="products.html">← Back to product list</a></p>`;
+    pageContent.className="error-tip";
+    pageContent.innerHTML=`<p data-i18n="product.loadFail">Failed to load product data. <br><a href="products.html">← Back to product list</a></p>`;
     if(window.setLang && window.currentLang) window.setLang(window.currentLang);
     return;
   }
@@ -366,8 +344,8 @@ async function renderProduct(){
   });
 
   if(!findProduct){
-    pageContent.className="error‑tip";
-    pageContent.innerHTML = `<p data‑i18n="product.notFound">This product does not exist. <br><a href="products.html">← Back to product list</a></p>`;
+    pageContent.className="error-tip";
+    pageContent.innerHTML = `<p data-i18n="product.notFound">This product does not exist. <br><a href="products.html">← Back to product list</a></p>`;
     if(window.setLang && window.currentLang) window.setLang(window.currentLang);
     return;
   }
