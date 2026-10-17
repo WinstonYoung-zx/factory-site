@@ -54,6 +54,15 @@ header{
   width:auto;
   object-fit:contain;
 }
+.logo-text-fallback{
+  font-size:1.2rem;
+  font-weight:bold;
+  color:#fff;
+  display:none;
+}
+#site-logo:error + .logo-text-fallback{
+  display:block;
+}
 nav{
   display:flex;
   gap:2rem;
@@ -80,11 +89,6 @@ select,
 select option {
   color: #222 !important;
   background: #ffffff !important;
-}
-select option:hover,
-select option:focus {
-  background-color: #0F2A44 !important;
-  color: #fff !important;
 }
 
 /*面包屑 */
@@ -274,6 +278,10 @@ footer a:hover{
 [dir="rtl"] .filter-bar{
   flex-direction:row-reverse;
 }
+[dir="rtl"] .float-inquiry{
+  right:auto;
+  left:20px;
+}
 
 @media(max-width:992px){
   .product-grid{
@@ -297,7 +305,9 @@ footer a:hover{
 <body>
 <header>
   <div class="header-logo-wrap">
-    <img id="site-logo" src="/uploads/logo.png" data-i18n-alt="site.logoAlt" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd." width="180" height="48">
+    <!-- 修正为仓库真实logo文件名，加载失败自动显示文字 -->
+    <img id="site-logo" src="/uploads/logo-zhanxin-blue.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" data-i18n-alt="site.logoAlt" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd." width="180" height="48">
+    <span class="logo-text-fallback">Shanghai ZhanXin Intelligent Equipment</span>
   </div>
   <nav>
     <a href="index.html" data-i18n="nav.home">Home</a>
@@ -348,8 +358,207 @@ footer a:hover{
   <p data-i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
 </footer>
 
-<script src="lang.js" defer></script>
-<script defer>
+<!-- ========== 内嵌多语言JS（无外部lang.js，和首页保持一致） ========== -->
+<script>
+// 多语言词条内嵌在页面里
+const translations = {
+  en: {
+    "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
+    "nav.home": "Home",
+    "nav.products": "Products",
+    "nav.about": "About Us",
+    "nav.quote": "Get a Quote",
+    "breadcrumb.home": "Home",
+    "breadcrumb.products": "Our Products",
+    "products.metaTitle": "Products | ZHANXIN Intelligent Equipment",
+    "products.metaDesc": "Bus shelter, advertising light box, wayfinding signage, LED‑LCD display, custom metal‑structure manufacturer",
+    "products.pageTitle": "Our Products",
+    "products.pageIntro": "We supply custom-made bus shelters, advertising light boxes, way-finding signage, LED-LCD displays and metal-structure solutions for global urban & airport projects.",
+    "products.allCategories": "All Categories",
+    "products.searchPlaceholder": "Search products...",
+    "products.clearFilter": "Clear Filters",
+    "products.loading": "Loading products...",
+    "products.loadFail": "Failed to load product data",
+    "products.noResult": "No products found",
+    "products.inquiryBtn": "Send Inquiry",
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved."
+  },
+  zh: {
+    "site.logoAlt": "上海崭鑫智能设备有限公司",
+    "nav.home": "首页",
+    "nav.products": "产品",
+    "nav.about": "关于我们",
+    "nav.quote": "获取报价",
+    "breadcrumb.home": "首页",
+    "breadcrumb.products": "全部产品",
+    "products.metaTitle": "产品 | 上海崭鑫智能设备",
+    "products.metaDesc": "公交候车亭、广告灯箱、标识标牌、LED显示屏、金属结构定制生产厂家",
+    "products.pageTitle": "全部产品",
+    "products.pageIntro": "我们定制生产公交候车亭、广告灯箱、导视标识、LED显示屏及金属结构产品，服务全球城市与机场工程项目。",
+    "products.allCategories": "全部分类",
+    "products.searchPlaceholder": "搜索产品...",
+    "products.clearFilter": "清空筛选",
+    "products.loading": "产品加载中...",
+    "products.loadFail": "产品数据加载失败",
+    "products.noResult": "未找到对应产品",
+    "products.inquiryBtn": "立即询价",
+    "footer.copyright": "© 2026 上海崭鑫智能设备有限公司 版权所有。"
+  },
+  es: {
+    "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
+    "nav.home": "Inicio",
+    "nav.products": "Productos",
+    "nav.about": "Nosotros",
+    "nav.quote": "Solicitar precio",
+    "breadcrumb.home": "Inicio",
+    "breadcrumb.products": "Nuestros productos",
+    "products.metaTitle": "Productos | ZHANXIN Intelligent Equipment",
+    "products.metaDesc": "Refugios de autobús, cajas de luz publicitarias, señalización, pantallas LED, fabricante de estructuras metálicas personalizadas",
+    "products.pageTitle": "Nuestros Productos",
+    "products.pageIntro": "Fabricamos refugios de autobús, cajas de luz, señalización, pantallas LED y estructuras metálicas para proyectos urbanos y aeroportuarios globales.",
+    "products.allCategories": "Todas las categorías",
+    "products.searchPlaceholder": "Buscar productos...",
+    "products.clearFilter": "Borrar filtros",
+    "products.loading": "Cargando productos...",
+    "products.loadFail": "Error al cargar datos",
+    "products.noResult": "Sin resultados",
+    "products.inquiryBtn": "Enviar consulta",
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Todos los derechos reservados."
+  },
+  fr: {
+    "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
+    "nav.home": "Accueil",
+    "nav.products": "Produits",
+    "nav.about": "À propos",
+    "nav.quote": "Demander un devis",
+    "breadcrumb.home": "Accueil",
+    "breadcrumb.products": "Nos produits",
+    "products.metaTitle": "Produits | ZHANXIN Intelligent Equipment",
+    "products.metaDesc": "Abri bus, caisson lumineux publicitaire, signalétique, écran LED, fabricant de structures métalliques sur mesure",
+    "products.pageTitle": "Nos Produits",
+    "products.pageIntro": "Nous fabriquons des abris bus, caissons lumineux, signalétique, écrans LED et structures métalliques pour projets urbains et aéroportuaires mondiaux.",
+    "products.allCategories": "Toutes les catégories",
+    "products.searchPlaceholder": "Rechercher...",
+    "products.clearFilter": "Effacer les filtres",
+    "products.loading": "Chargement...",
+    "products.loadFail": "Échec du chargement",
+    "products.noResult": "Aucun produit trouvé",
+    "products.inquiryBtn": "Envoyer une demande",
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Tous droits réservés."
+  },
+  de: {
+    "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
+    "nav.home": "Startseite",
+    "nav.products": "Produkte",
+    "nav.about": "Über uns",
+    "nav.quote": "Angebot anfordern",
+    "breadcrumb.home": "Startseite",
+    "breadcrumb.products": "Unsere Produkte",
+    "products.metaTitle": "Produkte | ZHANXIN Intelligent Equipment",
+    "products.metaDesc": "Bushaltestellen, Werbeleuchtkästen, Wegweiser, LED-Displays, Hersteller für Metallkonstruktionen nach Maß",
+    "products.pageTitle": "Unsere Produkte",
+    "products.pageIntro": "Wir fertigen Bushaltestellen, Werbeleuchtkästen, Wegweiser, LED-Bildschirme und Metallkonstruktionen für weltweite Stadt- und Flughafenprojekte.",
+    "products.allCategories": "Alle Kategorien",
+    "products.searchPlaceholder": "Produkte suchen...",
+    "products.clearFilter": "Filter zurücksetzen",
+    "products.loading": "Laden...",
+    "products.loadFail": "Daten konnten nicht geladen werden",
+    "products.noResult": "Keine Ergebnisse",
+    "products.inquiryBtn": "Anfrage senden",
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Alle Rechte vorbehalten."
+  },
+  ja: {
+    "site.logoAlt": "上海崭鑫智能設備有限公司",
+    "nav.home": "ホーム",
+    "nav.products": "製品",
+    "nav.about": "会社概要",
+    "nav.quote": "見積もり依頼",
+    "breadcrumb.home": "ホーム",
+    "breadcrumb.products": "製品一覧",
+    "products.metaTitle": "製品 | 上海崭鑫智能設備",
+    "products.metaDesc": "バス待合所、広告照明箱、案内標識、LEDディスプレイ、オーダーメイド金属構造物メーカー",
+    "products.pageTitle": "製品一覧",
+    "products.pageIntro": "バス待合所、広告灯箱、案内サイン、LEDディスプレイ、金属構造物を製造し、都市・空港プロジェクトに対応します。",
+    "products.allCategories": "全カテゴリ",
+    "products.searchPlaceholder": "製品検索...",
+    "products.clearFilter": "条件クリア",
+    "products.loading": "読み込み中...",
+    "products.loadFail": "データ読み込み失敗",
+    "products.noResult": "該当製品なし",
+    "products.inquiryBtn": "お問い合わせ",
+    "footer.copyright": "© 2026 上海崭鑫智能設備有限公司 無断転載禁止。"
+  },
+  ar: {
+    "site.logoAlt": "شركة زانكسين للمعدات الذكية بشانغهاي",
+    "nav.home": "الرئيسية",
+    "nav.products": "المنتجات",
+    "nav.about": "من نحن",
+    "nav.quote": "طلب عرض سعر",
+    "breadcrumb.home": "الرئيسية",
+    "breadcrumb.products": "منتجاتنا",
+    "products.metaTitle": "المنتجات | زانكسين للمعدات الذكية",
+    "products.metaDesc": "ملاجئ الحافلات، صناديق الإعلان المضيئة، لوحات الإرشاد، شاشات LED، تصنيع الهياكل المعدنية المخصصة",
+    "products.pageTitle": "منتجاتنا",
+    "products.pageIntro": "نصنع ملاجئ الحافلات، صناديق الإعلان، لوحات الإرشاد، شاشات LED والهياكل المعدنية لمشاريع المدن والمطارات العالمية.",
+    "products.allCategories": "كل الفئات",
+    "products.searchPlaceholder": "البحث عن منتج...",
+    "products.clearFilter": "مسح الفلاتر",
+    "products.loading": "جاري التحميل...",
+    "products.loadFail": "فشل تحميل البيانات",
+    "products.noResult": "لا توجد نتائج",
+    "products.inquiryBtn": "إرسال استفسار",
+    "footer.copyright": "© 2026 شركة زانكسين للمعدات الذكية بشانغهاي. جميع الحقوق محفوظة."
+  }
+};
+
+// 语言切换核心函数
+let currentLang = localStorage.getItem("preferredLang") || "en";
+const langSelect = document.getElementById("langSelect");
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem("preferredLang", lang);
+  document.documentElement.lang = lang;
+  // 阿拉伯语开启RTL
+  if (lang === "ar") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+  // 替换所有文字
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+  // 替换placeholder
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (translations[lang] && translations[lang][key]) {
+      el.placeholder = translations[lang][key];
+    }
+  });
+  // 替换图片alt
+  document.querySelectorAll("[data-i18n-alt]").forEach(el => {
+    const key = el.getAttribute("data-i18n-alt");
+    if (translations[lang] && translations[lang][key]) {
+      el.alt = translations[lang][key];
+    }
+  });
+  langSelect.value = lang;
+}
+
+// 下拉切换事件
+langSelect.addEventListener("change", () => {
+  setLang(langSelect.value);
+});
+// 页面初始化自动加载语言
+setLang(currentLang);
+</script>
+
+<!-- 产品加载JS -->
+<script>
 function escapeHtml(str){
   if(!str) return "";
   return String(str)
@@ -369,7 +578,6 @@ const productGrid = document.getElementById("productGrid");
 const clearFilterBtn = document.getElementById("clearFilterBtn");
 const filterTagsBox = document.getElementById("filterTagsBox");
 
-//渲染分类下拉
 function renderCategoryOptions(products){
   const cats = [...new Set(products.map(p=>p.category))];
   cats.forEach(cat=>{
@@ -380,7 +588,6 @@ function renderCategoryOptions(products){
   })
 }
 
-//更新筛选标签展示
 function updateFilterTags(){
   filterTagsBox.innerHTML = "";
   if(currentCat){
@@ -397,7 +604,6 @@ function updateFilterTags(){
   }
 }
 
-//渲染产品
 function renderProducts(){
   productGrid.innerHTML = "";
   let list = [...allProducts];
@@ -413,7 +619,7 @@ function renderProducts(){
   updateFilterTags();
   if(!list.length){
     productGrid.innerHTML = `<div class="empty-tip" data-i18n="products.noResult">No products found</div>`;
-    if(window.setLang) window.setLang(window.currentLang);
+    setLang(currentLang);
     return;
   }
   list.forEach(item=>{
@@ -432,7 +638,6 @@ function renderProducts(){
   })
 }
 
-//清除筛选
 clearFilterBtn.addEventListener("click", ()=>{
   currentCat = "";
   currentKeyword = "";
@@ -463,9 +668,8 @@ async function loadProducts(){
   }catch(err){
     clearTimeout(timeoutId);
     console.log("产品加载异常",err);
-    productGrid.className = "error-tip";
-    productGrid.innerHTML = `<p data-i18n="products.loadFail">Failed to load product data</p>`;
-    if(window.setLang) window.setLang(window.currentLang);
+    productGrid.innerHTML = `<div class="error-tip" data-i18n="products.loadFail">Failed to load product data</div>`;
+    setLang(currentLang);
   }
 }
 loadProducts();
