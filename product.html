@@ -149,7 +149,7 @@ footer a{color:#ffb040;text-decoration:none;}
 <body>
 <header>
   <div class="header-logo-wrap">
-    <img id="site-logo" src="/uploads/logo-zhanxin-blue.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" data-i18n-alt="site.logoAlt" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd." width="180" height="48">
+    <img id="site-logo" src="/uploads/logo‑zhanxin‑blue.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" data-i18n-alt="site.logoAlt" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd." width="180" height="48">
     <span class="logo-text-fallback">Shanghai ZhanXin Intelligent Equipment</span>
   </div>
   <nav>
@@ -185,7 +185,6 @@ footer a{color:#ffb040;text-decoration:none;}
   <p data-i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved.</p>
 </footer>
 
-<!-- 内嵌多语言JS，无lang.js -->
 <script>
 const translations = {
   en: {
@@ -302,6 +301,73 @@ const translations = {
   }
 };
 
+// 【与products完全一致的品类多语言映射】
+const categoryI18n = {
+  en: {
+    "": "All Categories",
+    "lightbox": "Advertising Light Box",
+    "sign": "Wayfinding Signage",
+    "display": "LED & LCD Display",
+    "bus": "Bus Shelter",
+    "custom‑steel‑aluminum": "Custom Steel & Aluminum Structure",
+    "other": "Other Products"
+  },
+  zh: {
+    "": "全部分类",
+    "lightbox": "广告灯箱",
+    "sign": "导视标识标牌",
+    "display": "LED液晶显示屏",
+    "bus": "公交候车亭",
+    "custom‑steel‑aluminum": "定制钢铝金属结构",
+    "other": "其他产品"
+  },
+  es: {
+    "": "Todas las categorías",
+    "lightbox": "Caja de luz publicitaria",
+    "sign": "Señalización de orientación",
+    "display": "Pantalla LED y LCD",
+    "bus": "Refugio de autobús",
+    "custom‑steel‑aluminum": "Estructura personalizada acero y aluminio",
+    "other": "Otros productos"
+  },
+  fr: {
+    "": "Toutes les catégories",
+    "lightbox": "Caisson lumineux publicitaire",
+    "sign": "Signalétique d'orientation",
+    "display": "Écran LED et LCD",
+    "bus": "Abri bus",
+    "custom‑steel‑aluminum": "Structure acier aluminium sur mesure",
+    "other": "Autres produits"
+  },
+  de: {
+    "": "Alle Kategorien",
+    "lightbox": "Werbeleuchtkasten",
+    "sign": "Leitsystem‑Schilder",
+    "display": "LED‑ und LCD‑Displays",
+    "bus": "Bushaltestelle",
+    "custom‑steel‑aluminum": "Kundenspezifische Stahl‑Aluminium‑Konstruktion",
+    "other": "Sonstige Produkte"
+  },
+  ja: {
+    "": "全カテゴリ",
+    "lightbox": "広告照明ボックス",
+    "sign": "案内サイン",
+    "display": "LED・LCDディスプレイ",
+    "bus": "バス待合所",
+    "custom‑steel‑aluminum": "特注スチール・アルミ構造物",
+    "other": "その他製品"
+  },
+  ar: {
+    "": "كل الفئات",
+    "lightbox": "صندوق الإعلان المضيء",
+    "sign": "لوحات الإرشاد",
+    "display": "شاشات LED و LCD",
+    "bus": "ملجأ الحافلات",
+    "custom‑steel‑aluminum": "هياكل فولاذ وألومنيوم مخصصة",
+    "other": "منتجات أخرى"
+  }
+};
+
 let currentLang = localStorage.getItem("preferredLang") || "en";
 const langSelect = document.getElementById("langSelect");
 
@@ -310,12 +376,12 @@ function setLang(lang) {
   localStorage.setItem("preferredLang", lang);
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const k = el.getAttribute("data-i18n");
+  document.querySelectorAll("[data‑i18n]").forEach(el=>{
+    const k = el.getAttribute("data‑i18n");
     if(translations[lang][k]) el.textContent = translations[lang][k];
   });
-  document.querySelectorAll("[data-i18n-alt]").forEach(el=>{
-    const k = el.getAttribute("data-i18n-alt");
+  document.querySelectorAll("[data‑i18n‑alt]").forEach(el=>{
+    const k = el.getAttribute("data‑i18n‑alt");
     if(translations[lang][k]) el.alt = translations[lang][k];
   });
   langSelect.value = lang;
@@ -336,29 +402,31 @@ const box = document.getElementById("detailBox");
 
 async function loadDetail(){
   try{
-    const res = await fetch("content/product-index.json");
+    const res = await fetch("content/product‑index.json");
     if(!res.ok) throw new Error();
     const list = await res.json();
-    const item = list.find(p=>(p.slug || p.title.toLowerCase().replace(/\s+/g,"-")) === slug);
+    const item = list.find(p=>(p.slug || p.title.toLowerCase().replace(/\s+/g,"‑")) === slug);
     if(!item){
-      box.innerHTML = `<div class="error" data-i18n="detail.error">Product not found</div>`;
+      box.innerHTML = `<div class="error" data‑i18n="detail.error">Product not found</div>`;
       setLang(currentLang);
       return;
     }
+    // 使用品类多语言映射展示标签
+    const showCategory = categoryI18n[currentLang][item.category] || item.category;
     box.innerHTML = `
       <div class="img-box">
         <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}">
       </div>
       <div class="info-box">
         <h1>${escapeHtml(item.title)}</h1>
-        <span class="cate">${escapeHtml(item.category)}</span>
+        <span class="cate">${escapeHtml(showCategory)}</span>
         <p>${escapeHtml(item.desc)}</p>
-        <a href="index.html#inquiry" class="btn-inquiry" data-i18n="detail.inquiry">Send Inquiry Now</a>
+        <a href="index.html#inquiry" class="btn-inquiry" data‑i18n="detail.inquiry">Send Inquiry Now</a>
       </div>
     `;
     setLang(currentLang);
   }catch(err){
-    box.innerHTML = `<div class="error" data-i18n="detail.error">Product not found</div>`;
+    box.innerHTML = `<div class="error" data‑i18n="detail.error">Product not found</div>`;
     setLang(currentLang);
   }
 }
