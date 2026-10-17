@@ -1,38 +1,140 @@
 [
   {
-    "title": "Advertising Light Box",
+    "slug": "advertising-light-box",
     "category": "lightbox",
     "image": "/uploads/lightbox.jpg",
-    "desc": "Custom advertising lightbox for outdoor & indoor branding"
+    "title": {
+      "en": "Advertising Light Box",
+      "zh": "广告灯箱",
+      "es": "Caja de luz publicitaria",
+      "fr": "Caisson lumineux publicitaire",
+      "de": "Werbeleuchtkasten",
+      "ja": "広告照明ボックス",
+      "ar": "صندوق الإعلان المضيء"
+    },
+    "desc": {
+      "en": "Custom advertising lightbox for outdoor & indoor branding",
+      "zh": "定制室内外广告灯箱，适用于多种品牌展示项目",
+      "es": "Caja de luz publicitaria personalizada para marcas interiores y exteriores",
+      "fr": "Caisson lumineux publicitaire sur‑mesure pour signalisation intérieure et extérieure",
+      "de": "Individueller Werbeleuchtkasten für Innen‑ und Außenwerbung",
+      "ja": "屋内屋外ブランディング向け特注広告照明ボックス",
+      "ar": "صندوق إعلان مضيء مخصص للعلامات التجارية الداخلية والخارجية"
+    }
   },
   {
-    "title": "Wayfinding Signage",
+    "slug": "wayfinding-signage",
     "category": "sign",
     "image": "/uploads/signage.jpg",
-    "desc": "Directional signage, metal sign structure for city projects"
+    "title": {
+      "en": "Wayfinding Signage",
+      "zh": "导视标识标牌",
+      "es": "Señalización de orientación",
+      "fr": "Signalétique d'orientation",
+      "de": "Leitsystem‑Schilder",
+      "ja": "案内サイン",
+      "ar": "لوحات الإرشاد"
+    },
+    "desc": {
+      "en": "Directional signage, metal sign structure for city projects",
+      "zh": "城市项目用导向标识，金属标牌结构",
+      "es": "Señales direccionales y estructuras metálicas para proyectos urbanos",
+      "fr": "Panneaux indicateurs et structures métalliques pour projets urbains",
+      "de": "Orientierungsschilder und Metallkonstruktionen für Stadtprojekte",
+      "ja": "都市プロジェクト向け案内標識・金属構造",
+      "ar": "لوحات توجيه وهياكل معدنية لمشاريع المدن"
+    }
   },
   {
-    "title": "LED / LCD Screen",
+    "slug": "led‑lcd‑screen",
     "category": "display",
     "image": "/uploads/ledscreen.jpg",
-    "desc": "61–86 inch LED & LCD screen metal frames, our core advantage"
+    "title": {
+      "en": "LED / LCD Screen",
+      "zh": "LED / LCD显示屏",
+      "es": "Pantalla LED y LCD",
+      "fr": "Écran LED et LCD",
+      "de": "LED‑ und LCD‑Displays",
+      "ja": "LED・LCDディスプレイ",
+      "ar": "شاشات LED و LCD"
+    },
+    "desc": {
+      "en": "61‑86 inch LED & LCD screen metal frames, our core advantage",
+      "zh": "61‑86英寸LED/LCD显示屏金属框架，我厂核心优势产品",
+      "es": "Marcos metálicos para pantallas LED y LCD de 61‑86 pulgadas, nuestra principal ventaja",
+      "fr": "Cadres métalliques pour écrans LED‑LCD 61‑86 pouces, notre atout principal",
+      "de": "Metallrahmen für 61‑86 Zoll LED‑LCD‑Displays, unser Kernvorteil",
+      "ja": "61‑86インチLED・LCDディスプレイ用金属フレーム、強み製品",
+      "ar": "أطر معدنية لشاشات LED و LCD مقاس 61‑86 بوصة، ميزتنا الأساسية"
+    }
   },
   {
-    "title": "Bus Shelter",
+    "slug": "bus‑shelter",
     "category": "bus",
     "image": "/uploads/busshelter.jpg",
-    "desc": "Outdoor waiting bus shelter with advertising panel"
+    "title": {
+      "en": "Bus Shelter",
+      "zh": "公交候车亭",
+      "es": "Refugio de autobús",
+      "fr": "Abri bus",
+      "de": "Bushaltestelle",
+      "ja": "バス待合所",
+      "ar": "ملجأ الحافلات"
+    },
+    "desc": {
+      "en": "Outdoor waiting bus shelter with advertising panel",
+      "zh": "带广告面板的户外公交候车亭",
+      "es": "Refugio de autobús exterior con panel publicitario",
+      "fr": "Abri bus extérieur avec panneau publicitaire",
+      "de": "Bushaltestelle im Freien mit Werbetafel",
+      "ja": "広告パネル付き屋外バス待合所",
+      "ar": "مأوى حافلات في الهواء الطلق بلوحة إعلانية"
+    }
   },
   {
-    "title": "Custom Steel & Aluminum Structure",
-    "category": "custom-steel-aluminum",
-    "image": "/uploads/metal-struct.jpg",
-    "desc": "OEM custom metal fabrication, steel & aluminum structures"
+    "slug": "custom‑steel‑aluminum‑structure",
+    "category": "custom‑steel‑aluminum",
+    "image": "/uploads/metal‑struct.jpg",
+    "title": {
+      "en": "Custom Steel & Aluminum Structure",
+      "zh": "定制钢铝金属结构",
+      "es": "Estructura personalizada acero y aluminio",
+      "fr": "Structure acier aluminium sur mesure",
+      "de": "Kundenspezifische Stahl‑Aluminium‑Konstruktion",
+      "ja": "特注スチール・アルミ構造物",
+      "ar": "هياكل فولاذ وألومنيوم مخصصة"
+    },
+    "desc": {
+      "en": "OEM custom metal fabrication, steel & aluminum structures",
+      "zh": "OEM定制金属加工，钢铝各类结构件",
+      "es": "Fabricación metálica OEM personalizada, estructuras de acero y aluminio",
+      "fr": "Fabrication métallique OEM sur‑mesure, structures acier‑aluminium",
+      "de": "OEM Metallfertigung nach Kundenwunsch, Stahl‑Aluminium‑Konstruktionen",
+      "ja": "OEM特注金属製作、スチール・アルミ構造物",
+      "ar": "تصنيع معدني مخصص OEM، هياكل فولاذ وألومنيوم"
+    }
   },
   {
-    "title": "Other Products",
+    "slug": "other‑products",
     "category": "other",
-    "image": "/uploads/other.jpg",
-    "desc": "Other custom metal & advertising products"
+    "image": "/uploads/placeholder.jpg",
+    "title": {
+      "en": "Other Products",
+      "zh": "其他产品",
+      "es": "Otros productos",
+      "fr": "Autres produits",
+      "de": "Sonstige Produkte",
+      "ja": "その他製品",
+      "ar": "منتجات أخرى"
+    },
+    "desc": {
+      "en": "Custom outdoor, airport and urban furniture manufacturing",
+      "zh": "定制户外、机场、城市家具产品",
+      "es": "Fabricación de mobiliario urbano, aeroportuario y exterior personalizado",
+      "fr": "Fabrication mobilier urbain, aéroportuaire et extérieur sur‑mesure",
+      "de": "Fertigung von kundenspezifischen Stadt‑, Flughafen‑ und Außenmöbeln",
+      "ja": "屋外・空港・都市家具の特注製造",
+      "ar": "تصنيع أثاث حضري ومطار وخارجي مخصص"
+    }
   }
 ]
