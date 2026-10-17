@@ -6,9 +6,26 @@
 <title>404 - Page Not Found | ZHANXIN GLOBAL</title>
 <link rel="stylesheet" href="https://zhanxinglobal.com/style.css">
 <style>
-.error-404{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;}
-.error-404 h1{font-size:48px;color:#ff7800;margin:0 0 1rem;}
-.error-404 p{font-size:18px;margin-bottom:2rem;color:#444;}
+.error-404{
+    min-height:70vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:2rem;
+    background:#ffffff; /*修复：白色背景，解决深色body导致文字看不清 */
+}
+.error-404 h1{
+    font-size:48px;
+    color:#ff7800;
+    margin:0 0 1rem;
+}
+.error-404 p{
+    font-size:18px;
+    margin-bottom:2rem;
+    color:#444; /*黑色文字在白底正常显示 */
+}
 .lang-selector {
     margin-bottom:2rem;
 }
@@ -40,7 +57,6 @@
     <p id="errText">Sorry, the page you visited does not exist.</p>
     <a id="homeLink" href="https://zhanxinglobal.com/" class="btn">Back to Home Page</a>
 </div>
-
 <script>
 const texts = {
     en: {
@@ -79,11 +95,9 @@ const texts = {
         dir: "rtl"
     }
 };
-
 const sel = document.getElementById('langSwitch');
 const errText = document.getElementById('errText');
 const homeLink = document.getElementById('homeLink');
-
 function setLang(langKey){
     const t = texts[langKey];
     errText.innerText = t.err;
