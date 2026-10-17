@@ -28,6 +28,9 @@
         }
     </script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             background-color: #ffffff;
             color: #333333;
@@ -53,6 +56,11 @@
             padding:26px;
             background:#fff;
             height:100%;
+            transition: 0.3s ease all;
+        }
+        .card-mini:hover {
+            box-shadow: 0 8px 20px rgba(15,42,68,0.08);
+            transform: translateY(-4px);
         }
     </style>
 </head>
@@ -83,16 +91,22 @@
             </div>
         </div>
     </header>
-
     <main class="container mx-auto px-6 py-14 max-w-6xl">
         <section class="mb-10 text-center">
             <h1 data-i18n="about.page_title" class="text-[clamp(1.8rem,4vw,2.4rem)] font-bold text-primary">About SHANGHAI ZHANXIN</h1>
             <p data-i18n="about.page_subtitle" class="text-lg text-mutedText mt-3 max-w-4xl mx-auto">Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects</p>
         </section>
-
         <div class="w-full rounded-lg overflow-hidden mb-12">
             <img src="/uploads/factory-wide.jpg" data-i18n-alt="about.factory_img_alt" alt="Zhanxin manufacturing workshop" class="w-full h-auto object-cover">
         </div>
+
+        <!-- NEW: Our Story Section -->
+        <section class="mb-12">
+            <h2 data-i18n="about.story_title" class="text-2xl font-bold text-primary mb-4">Our Story</h2>
+            <p data-i18n="about.story_text" class="text-bodyText leading-relaxed">
+                Founded in August 2023, Shanghai Zhanxin Intelligent Equipment Co., Ltd. is a specialized manufacturer of metal structures, advertising light boxes, LED display frames and bus shelters. Our core team previously served global industry leaders including JCDecaux. We bring decades of hands-on engineering & project experience to deliver custom metal fabrication for urban furniture, airport facilities and large screen mounting structures to worldwide clients.
+            </p>
+        </section>
 
         <div class="grid md:grid-cols-3 gap-6 mb-12">
             <div class="flex flex-col">
@@ -129,31 +143,29 @@
                 </div>
             </div>
         </div>
-
         <div class="grid md:grid-cols-3 gap-6 mb-12">
             <div class="card-mini flex flex-col">
                 <div class="flex items-center gap-2 mb-3">
                     <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     <h4 data-i18n="about.mini1_title" class="font-semibold text-primary">Custom fabrication & production</h4>
                 </div>
-                <p data-i18n="about.mini1_text" class="text-sm text-mutedText leading-relaxed flex-grow">Quality management system standard, reliable airport and furniture manufacturing and metal & project manufacturing.</p>
+                <p data-i18n="about.mini1_text" class="text-sm text-mutedText leading-relaxed flex-grow">We provide full-cycle custom metal fabrication service, from engineering drawing, material cutting, welding, surface treatment to finished assembly.</p>
             </div>
             <div class="card-mini flex flex-col">
                 <div class="flex items-center gap-2 mb-3">
                     <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    <h4 data-i18n="about.mini2_title" class="font-semibold text-primary">Custom manufacture for custom solution</h4>
+                    <h4 data-i18n="about.mini2_title" class="font-semibold text-primary">Custom engineered solutions</h4>
                 </div>
-                <p data-i18n="about.mini2_text" class="text-sm text-mutedText leading-relaxed flex-grow">Customized manufacture equipment, with comprehensive customization capability, and Support OEM / ODM.</p>
+                <p data-i18n="about.mini2_text" class="text-sm text-mutedText leading-relaxed flex-grow">Our engineering team develops project-specific designs. Flexible OEM & ODM to match your local urban & airport project requirements.</p>
             </div>
             <div class="card-mini flex flex-col">
                 <div class="flex items-center gap-2 mb-3">
                     <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    <h4 data-i18n="about.mini3_title" class="font-semibold text-primary">Compliance</h4>
+                    <h4 data-i18n="about.mini3_title" class="font-semibold text-primary">Full compliance & testing</h4>
                 </div>
-                <p data-i18n="about.mini3_text" class="text-sm text-mutedText leading-relaxed flex-grow">Work Safety Production License, Certified systems, testing, Reports. Support: WhatsApp & ODM @zhanxinglobal.com</p>
+                <p data-i18n="about.mini3_text" class="text-sm text-mutedText leading-relaxed flex-grow">Complete certification package, material traceability, welding qualification and third-party test reports available for tender & export projects.</p>
             </div>
         </div>
-
         <div class="grid md:grid-cols-2 gap-8 items-stretch">
             <div class="rounded-lg overflow-hidden border border-borderGrayBlue">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.806466665293!2d121.05610507459158!3d30.89207457791617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b2e614fbbfa149%3A0x189a3684b8d9e343!2s3%2C%201275%20Qianming%20E%20Rd%2C%20Jin%20Shan%20Qu%2C%20Shang%20Hai%20Shi%2C%20China%2C%20201502!5e0!3m2!1sen!2sus!4v1792156311648!5m2!1sen!2sus" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -170,7 +182,6 @@
             </div>
         </div>
     </main>
-
     <footer class="bg-footerBg text-gray-300 py-10">
         <div class="container mx-auto px-6 max-w-6xl">
             <div class="grid md:grid-cols-3 gap-8">
@@ -198,7 +209,6 @@
             </div>
         </div>
     </footer>
-
 <script>
 const translations = {
     en: {
@@ -211,6 +221,8 @@ const translations = {
         "about.page_title":"About SHANGHAI ZHANXIN",
         "about.page_subtitle":"Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects",
         "about.factory_img_alt":"Zhanxin manufacturing workshop",
+        "about.story_title":"Our Story",
+        "about.story_text":"Founded in August 2023, Shanghai Zhanxin Intelligent Equipment Co., Ltd. is a specialized manufacturer of metal structures, advertising light boxes, LED display frames and bus shelters. Our core team previously served global industry leaders including JCDecaux. We bring decades of hands-on engineering & project experience to deliver custom metal fabrication for urban furniture, airport facilities and large screen mounting structures to worldwide clients.",
         "about.card1_text":"We are a factory specialized in outdoor, airport and urban furniture and metal structure project manufacturing.",
         "about.str1":"Custom steel & aluminum structure solution",
         "about.str2":"Large size LED/LCD screen mounting structure",
@@ -224,11 +236,11 @@ const translations = {
         "about.qua6":"Third‑party lab reports (IEC 60529) for outdoor enclosures available on project basis",
         "about.qua7":"Pre shipment Inspection by a third party can be arranged at buyer's request",
         "about.mini1_title":"Custom fabrication & production",
-        "about.mini1_text":"Quality management system standard, reliable airport and furniture manufacturing and metal & project manufacturing.",
-        "about.mini2_title":"Custom manufacture for custom solution",
-        "about.mini2_text":"Customized manufacture equipment, with comprehensive customization capability, and Support OEM / ODM.",
-        "about.mini3_title":"Compliance",
-        "about.mini3_text":"Work Safety Production License, Certified systems, testing, Reports. Support: WhatsApp & ODM @zhanxinglobal.com",
+        "about.mini1_text":"We provide full-cycle custom metal fabrication service, from engineering drawing, material cutting, welding, surface treatment to finished assembly.",
+        "about.mini2_title":"Custom engineered solutions",
+        "about.mini2_text":"Our engineering team develops project-specific designs. Flexible OEM & ODM to match your local urban & airport project requirements.",
+        "about.mini3_title":"Full compliance & testing",
+        "about.mini3_text":"Complete certification package, material traceability, welding qualification and third-party test reports available for tender & export projects.",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
         "footer.nav_title":"Navigation",
         "footer.contact_title":"Contact",
@@ -245,6 +257,8 @@ const translations = {
         "about.page_title":"关于上海崭鑫",
         "about.page_subtitle":"户外、机场、城市家具与金属结构项目可靠制造商",
         "about.factory_img_alt":"崭鑫生产车间",
+        "about.story_title":"企业故事",
+        "about.story_text":"上海崭鑫智能设备有限公司成立于2023年8月，专业生产金属结构、广告灯箱、LED屏框架及公交候车亭。核心团队曾服务于JCDecaux等国际行业龙头，拥有数十年工程与项目实战经验，面向全球客户提供城市家具、机场设施、大屏安装结构定制金属加工服务。",
         "about.card1_text":"我们是一家专注户外、机场、城市家具及金属结构项目制造的工厂。",
         "about.str1":"定制钢铝结构解决方案",
         "about.str2":"大尺寸LED/LCD屏安装结构",
@@ -258,11 +272,11 @@ const translations = {
         "about.qua6":"户外箱体可按项目提供第三方实验室IEC60529报告",
         "about.qua7":"可按客户要求安排第三方装船前检验",
         "about.mini1_title":"定制加工与生产",
-        "about.mini1_text":"标准质量管理体系，可靠机场与城市家具、金属项目制造服务",
-        "about.mini2_title":"定制化方案生产",
-        "about.mini2_text":"定制化生产设备，全维度定制能力，支持OEM/ODM",
-        "about.mini3_title":"合规资质",
-        "about.mini3_text":"安全生产许可证，认证体系，检测报告。支持WhatsApp与ODM定制",
+        "about.mini1_text":"提供全流程金属定制加工，从工程图纸、材料切割、焊接、表面处理到成品组装一站式服务。",
+        "about.mini2_title":"工程化定制方案",
+        "about.mini2_text":"工程团队可按项目单独设计，灵活OEM/ODM，适配各地城市与机场项目需求。",
+        "about.mini3_title":"完整资质与检测",
+        "about.mini3_text":"全套证书包、材料溯源、焊接评定、第三方检测报告，满足投标与出口项目要求。",
         "about.contact_title":"上海崭鑫智能设备有限公司",
         "footer.nav_title":"导航",
         "footer.contact_title":"联系我们",
@@ -279,6 +293,8 @@ const translations = {
         "about.page_title":"À propos de SHANGHAI ZHANXIN",
         "about.page_subtitle":"Fabricant fiable pour les projets de mobilier extérieur, aéroportuaire, urbain et structures métalliques",
         "about.factory_img_alt":"Atelier de fabrication Zhanxin",
+        "about.story_title":"Notre histoire",
+        "about.story_text":"Fondée en août 2023, Shanghai Zhanxin Intelligent Equipment Co., Ltd. est un fabricant spécialisé dans les structures métalliques, caissons lumineux publicitaires, cadres pour écrans LED et abris bus. Notre équipe principale a travaillé pour des leaders mondiaux du secteur comme JCDecaux. Nous apportons des décennies d'expérience en ingénierie et gestion de projets pour la fabrication métallique sur mesure de mobilier urbain, équipements aéroportuaires et structures de support pour grands écrans pour nos clients internationaux.",
         "about.card1_text":"Nous sommes une usine spécialisée dans la fabrication de mobilier extérieur, aéroportuaire, urbain et structures métalliques pour projets.",
         "about.str1":"Solution de structure acier et aluminium sur mesure",
         "about.str2":"Structure de support pour écrans LED/LCD grand format",
@@ -292,11 +308,11 @@ const translations = {
         "about.qua6":"Rapports laboratoire tiers (IEC 60529) pour enceintes extérieures sur demande projet",
         "about.qua7":"Inspection avant expédition par tiers possible à la demande de l'acheteur",
         "about.mini1_title":"Fabrication et production sur mesure",
-        "about.mini1_text":"Système de gestion qualité standard, fabrication fiable mobilier aéroportuaire, urbain et projets métalliques",
-        "about.mini2_title":"Fabrication personnalisée pour solution sur mesure",
-        "about.mini2_text":"Équipements de fabrication sur mesure, capacité de personnalisation complète, support OEM/ODM",
-        "about.mini3_title":"Conformité",
-        "about.mini3_text":"Licence sécurité travail, systèmes certifiés, essais, rapports. Support WhatsApp & ODM",
+        "about.mini1_text":"Nous offrons un service complet de fabrication métallique sur mesure: plans techniques, coupe, soudure, traitement de surface et assemblage final.",
+        "about.mini2_title":"Solutions techniques personnalisées",
+        "about.mini2_text":"Notre bureau d'étude conçoit selon chaque projet. OEM/ODM flexible pour répondre aux exigences locales des projets urbains et aéroportuaires.",
+        "about.mini3_title":"Conformité et essais complets",
+        "about.mini3_text":"Dossier de certification complet, traçabilité matière, qualifications soudure et rapports d'essais tiers pour appels d'offres et export.",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
         "footer.nav_title":"Navigation",
         "footer.contact_title":"Contact",
@@ -313,6 +329,8 @@ const translations = {
         "about.page_title":"Über SHANGHAI ZHANXIN",
         "about.page_subtitle":"Zuverlässiger Hersteller für Außen‑, Flughafen‑ und Stadtmöbel & Metallstrukturprojekte",
         "about.factory_img_alt":"Zhanxin Fertigungswerkstatt",
+        "about.story_title":"Unsere Geschichte",
+        "about.story_text":"Gegründet im August 2023 ist Shanghai Zhanxin Intelligent Equipment Co., Ltd. spezialisiert auf Metallkonstruktionen, Werbeleuchtkästen, LED-Bildschirmrahmen und Wartehallen. Unser Kernteam arbeitete früher für globale Branchenführer wie JCDecaux. Mit jahrzehntelanger Ingenieur- und Projekterfahrung liefern wir kundenspezifische Metallfertigung für Stadtmöbel, Flughafeneinrichtungen und Großbildschirm-Montagestrukturen an Kunden weltweit.",
         "about.card1_text":"Wir sind eine Fabrik spezialisiert auf Fertigung von Außen‑, Flughafen‑ und Stadtmöbeln sowie Metallstrukturprojekten.",
         "about.str1":"Kundenspezifische Stahl‑ und Aluminiumstrukturlösungen",
         "about.str2":"Montagestrukturen für großformatige LED/LCD‑Bildschirme",
@@ -326,11 +344,11 @@ const translations = {
         "about.qua6":"Drittlaborberichte (IEC 60529) für Außengehäuse projektbezogen verfügbar",
         "about.qua7":"Vorversandprüfung durch Dritte auf Wunsch des Käufers organisierbar",
         "about.mini1_title":"Kundenspezifische Fertigung & Produktion",
-        "about.mini1_text":"Standard‑Qualitätsmanagementsystem, zuverlässige Fertigung von Flughafen‑, Stadtmöbeln und Metallprojekten",
-        "about.mini2_title":"Kundenspezifische Fertigung für individuelle Lösungen",
-        "about.mini2_text":"Kundenspezifische Fertigungsanlagen, umfassende Individualisierung, OEM/ODM Unterstützung",
-        "about.mini3_title":"Konformität",
-        "about.mini3_text":"Arbeitssicherheitslizenz, zertifizierte Systeme, Tests, Berichte. WhatsApp & ODM möglich",
+        "about.mini1_text":"Wir bieten einen vollständigen Metallfertigungszyklus: technische Zeichnungen, Materialzuschnitt, Schweißen, Oberflächenbehandlung bis zur Endmontage.",
+        "about.mini2_title":"Ingenieurtechnische Individuallösungen",
+        "about.mini2_text":"Unser Ingenieurteam erstellt projektspezifische Konstruktionen. Flexibles OEM/ODM passend zu lokalen Stadt- und Flughafenprojekten.",
+        "about.mini3_title":"Vollständige Konformität & Prüfungen",
+        "about.mini3_text":"Vollständiges Zertifikatspaket, Materialrückverfolgbarkeit, Schweißqualifikationen und Drittprüfberichte für Ausschreibungen und Exportprojekte.",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
         "footer.nav_title":"Navigation",
         "footer.contact_title":"Kontakt",
@@ -347,6 +365,8 @@ const translations = {
         "about.page_title":"SHANGHAI ZHANXINについて",
         "about.page_subtitle":"屋外、空港、都市家具・金属構造物プロジェクトの信頼できる製造メーカー",
         "about.factory_img_alt":"崭鑫製造工場",
+        "about.story_title":"会社の歴史",
+        "about.story_text":"上海崭鑫智能設備有限公司は2023年8月設立。金属構造物、広告灯箱、LEDディスプレイフレーム、バスシェルターを専門に製造します。コアチームはJCDecauxをはじめ世界的業界大手のプロジェクトに携わった実績を持ち、数十年のエンジニアリング経験を活かし、都市家具・空港施設・大型画面取付構造物の金属受注製作を世界各国の顧客に提供します。",
         "about.card1_text":"当社は屋外、空港、都市家具と金属構造物プロジェクト製造を専門とする工場です。",
         "about.str1":"鉄・アルミ構造のカスタムソリューション",
         "about.str2":"大型LED/LCDスクリーン取付構造",
@@ -360,11 +380,11 @@ const translations = {
         "about.qua6":"屋外筐体は案件単位で第三者試験所IEC60529レポート提供可能",
         "about.qua7":"買主要望により第三者出荷前検査手配可能",
         "about.mini1_title":"カスタム製作・生産",
-        "about.mini1_text":"標準品質管理システム、空港・都市家具・金属案件の信頼製造",
-        "about.mini2_title":"個別ソリューション向け受注生産",
-        "about.mini2_text":"カスタム生産設備、フルカスタマイズ対応 OEM/ODM",
-        "about.mini3_title":"適合証明",
-        "about.mini3_text":"安全生産許可、認証システム、試験レポート。WhatsApp・ODM対応",
+        "about.mini1_text":"設計図作成、材料切断、溶接、表面処理、完成組立まで一貫した金属受託製造を提供。",
+        "about.mini2_title":"個別設計ソリューション",
+        "about.mini2_text":"エンジニアチームが案件ごと設計。OEM/ODMに柔軟対応し、各国都市・空港案件の仕様に対応。",
+        "about.mini3_title":"完全な適合性と試験",
+        "about.mini3_text":"証明書一式、材料トレーサビリティ、溶接資格、第三者試験レポート。入札・輸出案件に対応。",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
         "footer.nav_title":"ナビゲーション",
         "footer.contact_title":"お問い合わせ",
@@ -381,6 +401,8 @@ const translations = {
         "about.page_title":"Sobre SHANGHAI ZHANXIN",
         "about.page_subtitle":"Fabricante confiable para proyectos de mobiliario exterior, aeroportuario, urbano y estructuras metálicas",
         "about.factory_img_alt":"Taller de fabricación Zhanxin",
+        "about.story_title":"Nuestra historia",
+        "about.story_text":"Fundada en agosto de 2023, Shanghai Zhanxin Intelligent Equipment Co., Ltd. fabrica estructuras metálicas, cajas de luz publicitarias, marcos para pantallas LED y marquesinas de autobús. Nuestro equipo principal trabajó con líderes globales del sector como JCDecaux. Con décadas de experiencia en ingeniería y proyectos, ofrecemos fabricación metálica personalizada de mobiliario urbano, instalaciones aeroportuarias y estructuras de soporte para pantallas grandes a clientes de todo el mundo.",
         "about.card1_text":"Somos una fábrica especializada en fabricación de mobiliario exterior, aeroportuario, urbano y estructuras metálicas para proyectos.",
         "about.str1":"Soluciones de estructura de acero y aluminio personalizada",
         "about.str2":"Estructura de montaje para pantallas LED/LCD de gran tamaño",
@@ -394,11 +416,11 @@ const translations = {
         "about.qua6":"Informes de laboratorio tercero (IEC 60529) para carcasas exteriores por proyecto",
         "about.qua7":"Inspección previa al envío por tercero, organizable a petición del comprador",
         "about.mini1_title":"Fabricación y producción personalizada",
-        "about.mini1_text":"Sistema de gestión de calidad estándar, fabricación fiable de mobiliario aeroportuario, urbano y proyectos metálicos",
-        "about.mini2_title":"Fabricación personalizada para soluciones a medida",
-        "about.mini2_text":"Equipos de fabricación custom, capacidad completa de personalización, soporte OEM/ODM",
-        "about.mini3_title":"Cumplimiento",
-        "about.mini3_text":"Licencia de seguridad laboral, sistemas certificados, ensayos e informes. Soporte WhatsApp y ODM",
+        "about.mini1_text":"Servicio completo de fabricación metálica: planos de ingeniería, corte, soldadura, tratamiento superficial y ensamblaje final.",
+        "about.mini2_title":"Soluciones de ingeniería a medida",
+        "about.mini2_text":"Nuestro equipo de ingeniería diseña por proyecto. OEM y ODM flexible para cumplir requisitos locales de proyectos urbanos y aeroportuarios.",
+        "about.mini3_title":"Cumplimiento completo y ensayos",
+        "about.mini3_text":"Paquete completo de certificados, trazabilidad de materiales, cualificaciones de soldadura e informes de laboratorio tercero para licitaciones y exportación.",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
         "footer.nav_title":"Navegación",
         "footer.contact_title":"Contacto",
@@ -415,6 +437,8 @@ const translations = {
         "about.page_title":"عن شنغهاي زانكسين",
         "about.page_subtitle":"مصنع موثوق لمشاريع أثاث الهواء الطلق والمطارات والمناطق الحضرية والهياكل المعدنية",
         "about.factory_img_alt":"ورشة تصنيع زانكسين",
+        "about.story_title":"قصتنا",
+        "about.story_text":"تأسست شركة شنغهاي زانكسين للمعدات الذكية في أغسطس 2023، وهي متخصصة في تصنيع الهياكل المعدنية، وصناديق الإضاءة الإعلانية، وأطر شاشات LED، وملاجئ الحافلات. عمل فريقنا الأساسي مع رواد عالميين في هذا المجال مثل JCDecaux. نقدم عقودًا من الخبرة الهندسية وإدارة المشاريع لتصنيع المعادن المخصص لأثاث المدن، ومرافق المطارات، وهياكل تركيب الشاشات الكبيرة للعملاء في جميع أنحاء العالم.",
         "about.card1_text":"نحن مصنع متخصص في تصنيع أثاث الهواء الطلق والمطارات والمناطق الحضرية والهياكل المعدنية للمشاريع.",
         "about.str1":"حلول الهياكل الفولاذية والألومنيوم المخصصة",
         "about.str2":"هياكل تركيب شاشات LED/LCD كبيرة الحجم",
@@ -428,11 +452,11 @@ const translations = {
         "about.qua6":"تقارير مختبرات طرف ثالث IEC 60529 للعلب الخارجية حسب المشروع",
         "about.qua7":"يمكن ترتيب فحص ما قبل الشحن من طرف ثالث بناءً على طلب المشتري",
         "about.mini1_title":"التصنيع والإنتاج المخصص",
-        "about.mini1_text":"نظام إدارة جودة قياسي، تصنيع موثوق لأثاث المطارات والمناطق الحضرية ومشاريع المعادن",
-        "about.mini2_title":"تصنيع مخصص للحلول الفردية",
-        "about.mini2_text":"معدات تصنيع مخصصة، قدرة تخصيص كاملة، دعم OEM/ODM",
-        "about.mini3_title":"الامتثال",
-        "about.mini3_text":"رخصة السلامة المهنية، أنظمة معتمدة، اختبارات وتقارير. دعم الواتساب وODM",
+        "about.mini1_text":"نقدم خدمة تصنيع معادن كاملة: الرسومات الهندسية، القطع، اللحام، المعالجة السطحية والتجميع النهائي.",
+        "about.mini2_title":"حلول هندسية مخصصة",
+        "about.mini2_text":"يقوم فريقنا الهندسي بالتصميم لكل مشروع. دعم OEM وODM مرن ليتوافق مع متطلبات مشاريع المدن والمطارات المحلية.",
+        "about.mini3_title":"الامتثال الكامل والاختبارات",
+        "about.mini3_text":"حزمة شهادات كاملة، تتبع المواد، تأهيل اللحام، تقارير اختبار طرف ثالث للمناقصات ومشاريع التصدير.",
         "about.contact_title":"شركة SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT المحدودة",
         "footer.nav_title":"التصفح",
         "footer.contact_title":"اتصل بنا",
@@ -440,7 +464,6 @@ const translations = {
         "footer.copyright_text":"© 2026 شركة SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT المحدودة. جميع الحقوق محفوظة."
     }
 };
-
 function setLang(langKey){
     const trans = translations[langKey] || translations.en;
     //标准属性选择器
@@ -463,7 +486,6 @@ function setLang(langKey){
         document.body.style.direction = "ltr";
     }
 }
-
 const langSelect = document.getElementById('langSelect');
 langSelect.addEventListener('change', function(){
     setLang(this.value);
