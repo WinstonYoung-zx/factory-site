@@ -367,3 +367,127 @@ a:hover {
         font-size:1.6rem;
     }
 }
+/* Contact页面专用布局 */
+.page-content{
+    padding:4rem 0;
+}
+.contact-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2.5rem;
+    margin-top:2rem;
+}
+.contact-form-card, .contact-info-card{
+    background:rgba(255,255,255,0.08);
+    padding:2rem;
+    border-radius:8px;
+}
+.contact-info-card p{
+    margin-bottom:10px;
+}
+.file-upload-wrap{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+.file-btn{
+    background:var(--accent);
+    border:none;
+    color:white;
+    padding:8px 12px;
+    border-radius:4px;
+    cursor:pointer;
+}
+.submit-btn{
+    width:100%;
+    margin-top:12px;
+}
+/* 移动端contact适配 */
+@media(max-width:768px){
+    .contact-grid{
+        grid-template-columns: 1fr;
+    }
+}
+/* Contact页面专用布局 */
+.page-content{
+    padding:4rem 0;
+}
+.contact-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2.5rem;
+    margin-top:2rem;
+}
+.contact-form-card, .contact-info-card{
+    background:rgba(255,255,255,0.08);
+    padding:2rem;
+    border-radius:8px;
+}
+.contact-info-card p{
+    margin-bottom:10px;
+}
+.file-upload-wrap{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+.file-btn{
+    background:var(--accent);
+    border:none;
+    color:white;
+    padding:8px 12px;
+    border-radius:4px;
+    cursor:pointer;
+}
+.submit-btn{
+    width:100%;
+    margin-top:12px;
+}
+/* 移动端contact适配 */
+@media(max-width:768px){
+    .contact-grid{
+        grid-template-columns: 1fr;
+    }
+}
+/* Contact页面专用布局 */
+.page-content{
+    padding:4rem 0;
+}
+.contact-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2.5rem;
+    margin-top:2rem;
+}
+.contact-form-card, .contact-info-card{
+    background:rgba(255,255,255,0.08);
+    padding:2rem;
+    border-radius:8px;
+}
+.contact-info-card p{
+    margin-bottom:10px;
+}
+.file-upload-wrap{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+.file-btn{
+    background:var(--accent);
+    border:none;
+    color:white;
+    padding:8px 12px;
+    border-radius:4px;
+    cursor:pointer;
+}
+.submit-btn{
+    width:100%;
+    margin-top:12px;
+}
+/* 移动端contact适配 */
+@media(max-width:768px){
+    .contact-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
