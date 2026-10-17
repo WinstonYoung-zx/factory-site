@@ -761,7 +761,6 @@ const translations = {
         "inq.submit":"إرسال"
     }
 };
-
 // ✅ 修复：JS选择器使用标准键盘减号 data-i18n，增加alt翻译 + RTL双重兜底
 function setLang(langKey){
     const trans = translations[langKey] || translations.en;
@@ -790,6 +789,13 @@ langSelect.addEventListener('change', function(){
 })
 //页面默认英文
 setLang('en');
+
+// ========== 新增移动端菜单逻辑 ==========
+const mobileBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+mobileBtn.addEventListener('click', ()=>{
+    navLinks.classList.toggle('mobile-open');
+})
 </script>
 </body>
 </html>
