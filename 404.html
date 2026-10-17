@@ -4,18 +4,97 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 - Page Not Found | ZHANXIN GLOBAL</title>
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://zhanxinglobal.com/style.css">
 <style>
 .error-404{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;}
 .error-404 h1{font-size:48px;color:#ff7800;margin:0 0 1rem;}
 .error-404 p{font-size:18px;margin-bottom:2rem;color:#444;}
+.lang-selector {
+    margin-bottom:2rem;
+}
+.lang-selector select{
+    padding: 8px 12px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+[dir="rtl"] {
+    direction: rtl;
+}
 </style>
 </head>
 <body>
 <div class="error-404">
+    <div class="lang-selector">
+        <select id="langSwitch">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="ja">日本語</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
     <h1>404</h1>
-    <p>Sorry, the page you visited does not exist.</p>
-    <a href="./" class="btn">Back to Home Page</a>
+    <p id="errText">Sorry, the page you visited does not exist.</p>
+    <a id="homeLink" href="https://zhanxinglobal.com/" class="btn">Back to Home Page</a>
 </div>
+
+<script>
+const texts = {
+    en: {
+        err: "Sorry, the page you visited does not exist.",
+        btn: "Back to Home Page",
+        dir: "ltr"
+    },
+    zh: {
+        err: "抱歉，您访问的页面不存在。",
+        btn: "返回首页",
+        dir: "ltr"
+    },
+    de: {
+        err: "Entschuldigung, die von Ihnen besuchte Seite existiert nicht.",
+        btn: "Zur Startseite",
+        dir: "ltr"
+    },
+    fr: {
+        err: "Désolé, la page que vous avez visitée n'existe pas.",
+        btn: "Retour à l'accueil",
+        dir: "ltr"
+    },
+    es: {
+        err: "Lo sentimos, la página que visitaste no existe.",
+        btn: "Volver al inicio",
+        dir: "ltr"
+    },
+    ja: {
+        err: "申し訳ありません。アクセスしたページは存在しません。",
+        btn: "ホームへ戻る",
+        dir: "ltr"
+    },
+    ar: {
+        err: "عذرًا، الصفحة التي زرتها غير موجودة.",
+        btn: "العودة إلى الصفحة الرئيسية",
+        dir: "rtl"
+    }
+};
+
+const sel = document.getElementById('langSwitch');
+const errText = document.getElementById('errText');
+const homeLink = document.getElementById('homeLink');
+
+function setLang(langKey){
+    const t = texts[langKey];
+    errText.innerText = t.err;
+    homeLink.innerText = t.btn;
+    document.body.setAttribute('dir', t.dir);
+}
+sel.onchange = ()=>{
+    setLang(sel.value);
+}
+// 默认英文
+setLang("en");
+</script>
 </body>
 </html>
