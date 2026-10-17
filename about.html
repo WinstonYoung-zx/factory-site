@@ -12,13 +12,13 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#0F2A44',      /*主色：深海军蓝 稳重工业风*/
-                        accent: '#D4750B',       /*强调色：低饱和橙，仅小面积点缀*/
-                        secondaryBlue: '#1367B2',/*辅助蓝，链接/图标*/
-                        bodyText: '#333333',     /*正文颜色*/
-                        mutedText: '#555555',    /*辅助说明文字*/
-                        borderGrayBlue: '#D9DEE3',/*蓝灰色边框*/
-                        footerBg: '#0B1F33'      /*页脚背景，低饱和深蓝*/
+                        primary: '#0F2A44',
+                        accent: '#D4750B',
+                        secondaryBlue: '#1367B2',
+                        bodyText: '#333333',
+                        mutedText: '#555555',
+                        borderGrayBlue: '#D9DEE3',
+                        footerBg: '#0B1F33'
                     },
                     fontFamily: {
                         inter: ['Inter', 'sans-serif'],
@@ -32,7 +32,6 @@
             background-color: #ffffff;
             color: #333333;
         }
-        /*卡片头部统一深海军蓝*/
         .card-header {
             background-color: #0F2A44;
             color:#ffffff;
@@ -58,7 +57,6 @@
     </style>
 </head>
 <body class="font-inter">
-    <!-- 顶部导航：恢复深海军蓝背景 -->
     <header class="w-full bg-primary shadow-md">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
@@ -87,20 +85,16 @@
     </header>
 
     <main class="container mx-auto px-6 py-14 max-w-6xl">
-        <!-- 页面标题区域 -->
         <section class="mb-10 text-center">
             <h1 data-i18n="about.page_title" class="text-[clamp(1.8rem,4vw,2.4rem)] font-bold text-primary">About SHANGHAI ZHANXIN</h1>
             <p data-i18n="about.page_subtitle" class="text-lg text-mutedText mt-3 max-w-4xl mx-auto">Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects</p>
         </section>
 
-        <!-- 工厂大图 -->
         <div class="w-full rounded-lg overflow-hidden mb-12">
-            <img src="/uploads/factory-wide.jpg" alt="Zhanxin manufacturing workshop" class="w-full h-auto object-cover">
+            <img src="/uploads/factory-wide.jpg" data-i18n-alt="about.factory_img_alt" alt="Zhanxin manufacturing workshop" class="w-full h-auto object-cover">
         </div>
 
-        <!-- 顶部三栏卡片【全部统一深蓝色头部，等高布局】 -->
         <div class="grid md:grid-cols-3 gap-6 mb-12">
-            <!-- Company Profile -->
             <div class="flex flex-col">
                 <div class="card-header">Company Profile</div>
                 <div class="card-body-primary">
@@ -109,7 +103,6 @@
                     </p>
                 </div>
             </div>
-            <!-- Our Strength -->
             <div class="flex flex-col">
                 <div class="card-header">Our Strength</div>
                 <div class="card-body-primary">
@@ -121,7 +114,6 @@
                     </ul>
                 </div>
             </div>
-            <!-- Quality & Compliance -->
             <div class="flex flex-col">
                 <div class="card-header">Quality & Compliance</div>
                 <div class="card-body-primary">
@@ -138,7 +130,6 @@
             </div>
         </div>
 
-        <!-- 第二排三栏小卡片【等高，橙色仅用于图标小面积】 -->
         <div class="grid md:grid-cols-3 gap-6 mb-12">
             <div class="card-mini flex flex-col">
                 <div class="flex items-center gap-2 mb-3">
@@ -163,7 +154,6 @@
             </div>
         </div>
 
-        <!-- Google Map + Contact Info 等高区域 -->
         <div class="grid md:grid-cols-2 gap-8 items-stretch">
             <div class="rounded-lg overflow-hidden border border-borderGrayBlue">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.806466665293!2d121.05610507459158!3d30.89207457791617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b2e614fbbfa149%3A0x189a3684b8d9e343!2s3%2C%201275%20Qianming%20E%20Rd%2C%20Jin%20Shan%20Qu%2C%20Shang%20Hai%20Shi%2C%20China%2C%20201502!5e0!3m2!1sen!2sus!4v1792156311648!5m2!1sen!2sus" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -181,7 +171,6 @@
         </div>
     </main>
 
-    <!-- 页脚：低饱和深海军蓝，降低视觉冲击 -->
     <footer class="bg-footerBg text-gray-300 py-10">
         <div class="container mx-auto px-6 max-w-6xl">
             <div class="grid md:grid-cols-3 gap-8">
@@ -210,267 +199,277 @@
         </div>
     </footer>
 
-    <script>
-        const translations = {
-            en: {
-                "nav.home":"Home",
-                "nav.products":"Products",
-                "nav.about":"About",
-                "nav.quote":"Get a Quote",
-                "about.meta_title":"About Us - ZHANXIN Intelligent Equipment",
-                "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects",
-                "about.page_title":"About SHANGHAI ZHANXIN",
-                "about.page_subtitle":"Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects",
-                "about.factory_img_alt":"Zhanxin manufacturing workshop",
-                "about.card1_text":"We are a factory specialized in outdoor, airport and urban furniture and metal structure project manufacturing.",
-                "about.str1":"Custom steel & aluminum structure solution",
-                "about.str2":"Large size LED/LCD screen mounting structure",
-                "about.str3":"Urban & airport furniture and bus shelter",
-                "about.str4":"Support OEM & ODM for worldwide buyers",
-                "about.qua1":"Work Safety Production License (China) — licensed manufacturer for metal fabrication",
-                "about.qua2":"Quality management system aligned in accordance with ISO 9001 / 14001 / 45001",
-                "about.qua3":"Incoming material inspection, in process check and 100% final inspection before shipment",
-                "about.qua4":"Material certificates EN 10204 & 3.1 available from the steel mill",
-                "about.qua5":"Welding procedure qualification (WPS/PQR) and welder qualification records available",
-                "about.qua6":"Third‑party lab reports (IEC 60529) for outdoor enclosures available on project basis",
-                "about.qua7":"Pre shipment Inspection by a third party can be arranged at buyer's request",
-                "about.mini1_title":"Custom fabrication & production",
-                "about.mini1_text":"Quality management system standard, reliable airport and furniture manufacturing and metal & project manufacturing.",
-                "about.mini2_title":"Custom manufacture for custom solution",
-                "about.mini2_text":"Customized manufacture equipment, with comprehensive customization capability, and Support OEM / ODM.",
-                "about.mini3_title":"Compliance",
-                "about.mini3_text":"Work Safety Production License, Certified systems, testing, Reports. Support: WhatsApp & ODM @zhanxinglobal.com",
-                "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
-                "footer.nav_title":"Navigation",
-                "footer.contact_title":"Contact",
-                "footer.copyright_title":"Copyright",
-                "footer.copyright_text":"© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. All rights reserved."
-            },
-            zh: {
-                "nav.home":"首页",
-                "nav.products":"产品",
-                "nav.about":"关于我们",
-                "nav.quote":"获取报价",
-                "about.meta_title":"关于我们 - 上海崭鑫智能设备",
-                "about.meta_desc":"上海崭鑫智能设备有限公司，户外、机场、城市家具及金属结构项目可靠制造商",
-                "about.page_title":"关于上海崭鑫",
-                "about.page_subtitle":"户外、机场、城市家具与金属结构项目可靠制造商",
-                "about.factory_img_alt":"崭鑫生产车间",
-                "about.card1_text":"我们是一家专注户外、机场、城市家具及金属结构项目制造的工厂。",
-                "about.str1":"定制钢铝结构解决方案",
-                "about.str2":"大尺寸LED/LCD屏安装结构",
-                "about.str3":"城市、机场家具以及候车亭",
-                "about.str4":"面向全球买家，支持OEM与ODM",
-                "about.qua1":"中国安全生产许可证 — 持证金属结构制造厂商",
-                "about.qua2":"质量管理体系符合ISO 9001 / 14001 / 45001标准",
-                "about.qua3":"来料检验、过程巡检，出货前100%终检",
-                "about.qua4":"钢厂可提供EN 10204 & 3.1材质证书",
-                "about.qua5":"具备WPS/PQR焊接工艺评定及焊工资质记录",
-                "about.qua6":"户外箱体可按项目提供第三方实验室IEC60529报告",
-                "about.qua7":"可按客户要求安排第三方装船前检验",
-                "about.mini1_title":"定制加工与生产",
-                "about.mini1_text":"标准质量管理体系，可靠机场与城市家具、金属项目制造服务",
-                "about.mini2_title":"定制化方案生产",
-                "about.mini2_text":"定制化生产设备，全维度定制能力，支持OEM/ODM",
-                "about.mini3_title":"合规资质",
-                "about.mini3_text":"安全生产许可证，认证体系，检测报告。支持WhatsApp与ODM定制",
-                "about.contact_title":"上海崭鑫智能设备有限公司",
-                "footer.nav_title":"导航",
-                "footer.contact_title":"联系我们",
-                "footer.copyright_title":"版权信息",
-                "footer.copyright_text":"© 2026 上海崭鑫智能设备有限公司，保留所有权利。"
-            },
-            fr: {
-                "nav.home":"Accueil",
-                "nav.products":"Produits",
-                "nav.about":"À propos",
-                "nav.quote":"Demander un devis",
-                "about.meta_title":"À propos de nous - ZHANXIN Intelligent Equipment",
-                "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. Fabricant fiable de mobilier urbain, aéroportuaire et structures métalliques extérieures",
-                "about.page_title":"À propos de SHANGHAI ZHANXIN",
-                "about.page_subtitle":"Fabricant fiable pour les projets de mobilier extérieur, aéroportuaire, urbain et structures métalliques",
-                "about.factory_img_alt":"Atelier de fabrication Zhanxin",
-                "about.card1_text":"Nous sommes une usine spécialisée dans la fabrication de mobilier extérieur, aéroportuaire, urbain et structures métalliques pour projets.",
-                "about.str1":"Solution de structure acier et aluminium sur mesure",
-                "about.str2":"Structure de support pour écrans LED/LCD grand format",
-                "about.str3":"Mobilier urbain & aéroportuaire et abri‑bus",
-                "about.str4":"Support OEM & ODM pour acheteurs du monde entier",
-                "about.qua1":"Licence de production de sécurité au travail (Chine) — fabricant agréé pour la fabrication métallique",
-                "about.qua2":"Système de gestion qualité conforme à ISO 9001 / 14001 / 45001",
-                "about.qua3":"Contrôle matière entrante, contrôle en cours et inspection finale 100% avant expédition",
-                "about.qua4":"Certificats matériaux EN 10204 & 3.1 fournis par l'aciérie",
-                "about.qua5":"Qualification procédé soudage (WPS/PQR) et enregistrements qualification soudeurs disponibles",
-                "about.qua6":"Rapports laboratoire tiers (IEC 60529) pour enceintes extérieures sur demande projet",
-                "about.qua7":"Inspection avant expédition par tiers possible à la demande de l'acheteur",
-                "about.mini1_title":"Fabrication et production sur mesure",
-                "about.mini1_text":"Système de gestion qualité standard, fabrication fiable mobilier aéroportuaire, urbain et projets métalliques",
-                "about.mini2_title":"Fabrication personnalisée pour solution sur mesure",
-                "about.mini2_text":"Équipements de fabrication sur mesure, capacité de personnalisation complète, support OEM/ODM",
-                "about.mini3_title":"Conformité",
-                "about.mini3_text":"Licence sécurité travail, systèmes certifiés, essais, rapports. Support WhatsApp & ODM",
-                "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
-                "footer.nav_title":"Navigation",
-                "footer.contact_title":"Contact",
-                "footer.copyright_title":"Copyright",
-                "footer.copyright_text":"© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. Tous droits réservés."
-            },
-            de: {
-                "nav.home":"Startseite",
-                "nav.products":"Produkte",
-                "nav.about":"Über uns",
-                "nav.quote":"Angebot anfordern",
-                "about.meta_title":"Über uns - ZHANXIN Intelligent Equipment",
-                "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. Zuverlässiger Hersteller für Außen‑, Flughafen‑ und Stadtmöbel sowie Metallstrukturprojekte",
-                "about.page_title":"Über SHANGHAI ZHANXIN",
-                "about.page_subtitle":"Zuverlässiger Hersteller für Außen‑, Flughafen‑ und Stadtmöbel & Metallstrukturprojekte",
-                "about.factory_img_alt":"Zhanxin Fertigungswerkstatt",
-                "about.card1_text":"Wir sind eine Fabrik spezialisiert auf Fertigung von Außen‑, Flughafen‑ und Stadtmöbeln sowie Metallstrukturprojekten.",
-                "about.str1":"Kundenspezifische Stahl‑ und Aluminiumstrukturlösungen",
-                "about.str2":"Montagestrukturen für großformatige LED/LCD‑Bildschirme",
-                "about.str3":"Stadt‑ und Flughafenmöbel sowie Wartehallen",
-                "about.str4":"OEM & ODM Unterstützung für weltweite Käufer",
-                "about.qua1":"Arbeitssicherheits‑Produktionslizenz (China) — lizenzierter Hersteller für Metallverarbeitung",
-                "about.qua2":"Qualitätsmanagementsystem nach ISO 9001 / 14001 / 45001",
-                "about.qua3":"Eingangsmaterialprüfung, laufende Kontrolle und 100 % Endprüfung vor Versand",
-                "about.qua4":"Materialzertifikate EN 10204 & 3.1 vom Stahlwerk verfügbar",
-                "about.qua5":"Schweißverfahrensqualifikation (WPS/PQR) und Schweißerqualifikationsaufzeichnungen vorhanden",
-                "about.qua6":"Drittlaborberichte (IEC 60529) für Außengehäuse projektbezogen verfügbar",
-                "about.qua7":"Vorversandprüfung durch Dritte auf Wunsch des Käufers organisierbar",
-                "about.mini1_title":"Kundenspezifische Fertigung & Produktion",
-                "about.mini1_text":"Standard‑Qualitätsmanagementsystem, zuverlässige Fertigung von Flughafen‑, Stadtmöbeln und Metallprojekten",
-                "about.mini2_title":"Kundenspezifische Fertigung für individuelle Lösungen",
-                "about.mini2_text":"Kundenspezifische Fertigungsanlagen, umfassende Individualisierung, OEM/ODM Unterstützung",
-                "about.mini3_title":"Konformität",
-                "about.mini3_text":"Arbeitssicherheitslizenz, zertifizierte Systeme, Tests, Berichte. WhatsApp & ODM möglich",
-                "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
-                "footer.nav_title":"Navigation",
-                "footer.contact_title":"Kontakt",
-                "footer.copyright_title":"Urheberrecht",
-                "footer.copyright_text":"© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. Alle Rechte vorbehalten."
-            },
-            ja: {
-                "nav.home":"ホーム",
-                "nav.products":"製品",
-                "nav.about":"会社概要",
-                "nav.quote":"見積もり依頼",
-                "about.meta_title":"会社概要 - ZHANXIN Intelligent Equipment",
-                "about.meta_desc":"上海崭鑫智能設備有限公司 屋外・空港・都市家具及び金属構造物プロジェクトの信頼できるメーカー",
-                "about.page_title":"SHANGHAI ZHANXINについて",
-                "about.page_subtitle":"屋外、空港、都市家具・金属構造物プロジェクトの信頼できる製造メーカー",
-                "about.factory_img_alt":"崭鑫製造工場",
-                "about.card1_text":"当社は屋外、空港、都市家具と金属構造物プロジェクト製造を専門とする工場です。",
-                "about.str1":"鉄・アルミ構造のカスタムソリューション",
-                "about.str2":"大型LED/LCDスクリーン取付構造",
-                "about.str3":"都市・空港家具、バスシェルター",
-                "about.str4":"世界のバイヤー向けOEM・ODM対応",
-                "about.qua1":"中国 安全生産許可証 — 金属加工認定製造メーカー",
-                "about.qua2":"品質管理システム ISO9001 /14001 /45001適合",
-                "about.qua3":"入荷材料検査、工程検査、出荷前全数最終検査",
-                "about.qua4":"製鉄所よりEN10204 &3.1材料証明書発行可能",
-                "about.qua5":"溶接施工要領WPS/PQR、溶接士資格記録あり",
-                "about.qua6":"屋外筐体は案件単位で第三者試験所IEC60529レポート提供可能",
-                "about.qua7":"買主要望により第三者出荷前検査手配可能",
-                "about.mini1_title":"カスタム製作・生産",
-                "about.mini1_text":"標準品質管理システム、空港・都市家具・金属案件の信頼製造",
-                "about.mini2_title":"個別ソリューション向け受注生産",
-                "about.mini2_text":"カスタム生産設備、フルカスタマイズ対応 OEM/ODM",
-                "about.mini3_title":"適合証明",
-                "about.mini3_text":"安全生産許可、認証システム、試験レポート。WhatsApp・ODM対応",
-                "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
-                "footer.nav_title":"ナビゲーション",
-                "footer.contact_title":"お問い合わせ",
-                "footer.copyright_title":"著作権",
-                "footer.copyright_text":"© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. 全著作権所有。"
-            },
-            es: {
-                "nav.home":"Inicio",
-                "nav.products":"Productos",
-                "nav.about":"Nosotros",
-                "nav.quote":"Solicitar cotización",
-                "about.meta_title":"Sobre Nosotros - ZHANXIN Intelligent Equipment",
-                "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. Fabricante confiable de mobiliario urbano, aeroportuario y estructuras metálicas para exterior",
-                "about.page_title":"Sobre SHANGHAI ZHANXIN",
-                "about.page_subtitle":"Fabricante confiable para proyectos de mobiliario exterior, aeroportuario, urbano y estructuras metálicas",
-                "about.factory_img_alt":"Taller de fabricación Zhanxin",
-                "about.card1_text":"Somos una fábrica especializada en fabricación de mobiliario exterior, aeroportuario, urbano y estructuras metálicas para proyectos.",
-                "about.str1":"Soluciones de estructura de acero y aluminio personalizada",
-                "about.str2":"Estructura de montaje para pantallas LED/LCD de gran tamaño",
-                "about.str3":"Mobiliario urbano y aeroportuario y marquesinas de autobús",
-                "about.str4":"Soporte OEM y ODM para compradores mundiales",
-                "about.qua1":"Licencia de Producción de Seguridad Laboral (China) — fabricante autorizado para fabricación metálica",
-                "about.qua2":"Sistema de gestión de calidad alineado con ISO 9001 /14001 /45001",
-                "about.qua3":"Inspección de material entrante, control en proceso e inspección final 100% antes del envío",
-                "about.qua4":"Certificados de material EN 10204 &3.1 disponibles desde acería",
-                "about.qua5":"Calificación de procedimiento de soldadura (WPS/PQR) y registros de cualificación de soldadores disponibles",
-                "about.qua6":"Informes de laboratorio tercero (IEC 60529) para carcasas exteriores por proyecto",
-                "about.qua7":"Inspección previa al envío por tercero, organizable a petición del comprador",
-                "about.mini1_title":"Fabricación y producción personalizada",
-                "about.mini1_text":"Sistema de gestión de calidad estándar, fabricación fiable de mobiliario aeroportuario, urbano y proyectos metálicos",
-                "about.mini2_title":"Fabricación personalizada para soluciones a medida",
-                "about.mini2_text":"Equipos de fabricación custom, capacidad completa de personalización, soporte OEM/ODM",
-                "about.mini3_title":"Cumplimiento",
-                "about.mini3_text":"Licencia de seguridad laboral, sistemas certificados, ensayos e informes. Soporte WhatsApp y ODM",
-                "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
-                "footer.nav_title":"Navegación",
-                "footer.contact_title":"Contacto",
-                "footer.copyright_title":"Derechos de autor",
-                "footer.copyright_text":"© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. Todos los derechos reservados."
-            },
-            ar: {
-                "nav.home":"الرئيسية",
-                "nav.products":"المنتجات",
-                "nav.about":"من نحن",
-                "nav.quote":"طلب عرض سعر",
-                "about.meta_title":"من نحن - ZHANXIN Intelligent Equipment",
-                "about.meta_desc":"شركة شنغهاي زانكسين للمعدات الذكية، مصنع موثوق لأثاث الهواء الطلق والمطارات والمناطق الحضرية ومشاريع الهياكل المعدنية",
-                "about.page_title":"عن شنغهاي زانكسين",
-                "about.page_subtitle":"مصنع موثوق لمشاريع أثاث الهواء الطلق والمطارات والمناطق الحضرية والهياكل المعدنية",
-                "about.factory_img_alt":"ورشة تصنيع زانكسين",
-                "about.card1_text":"نحن مصنع متخصص في تصنيع أثاث الهواء الطلق والمطارات والمناطق الحضرية والهياكل المعدنية للمشاريع.",
-                "about.str1":"حلول الهياكل الفولاذية والألومنيوم المخصصة",
-                "about.str2":"هياكل تركيب شاشات LED/LCD كبيرة الحجم",
-                "about.str3":"أثاث المناطق الحضرية والمطارات وملاجئ الحافلات",
-                "about.str4":"ندعم التصنيع حسب الطلب OEM وODM للمشترين من جميع أنحاء العالم",
-                "about.qua1":"رخصة إنتاج السلامة المهنية (الصين) — مصنع مرخص لتصنيع المعادن",
-                "about.qua2":"نظام إدارة الجودة متوافق مع معايير ISO 9001 /14001 /45001",
-                "about.qua3":"فحص المواد الواردة، الفحص أثناء الإنتاج وفحص نهائي 100% قبل الشحن",
-                "about.qua4":"شهادات المواد EN 10204 &3.1 متاحة من مصنع الصلب",
-                "about.qua5":"تأهيل إجراءات اللحام WPS/PQR وسجلات تأهيل عمال اللحام متوفرة",
-                "about.qua6":"تقارير مختبرات طرف ثالث IEC 60529 للعلب الخارجية حسب المشروع",
-                "about.qua7":"يمكن ترتيب فحص ما قبل الشحن من طرف ثالث بناءً على طلب المشتري",
-                "about.mini1_title":"التصنيع والإنتاج المخصص",
-                "about.mini1_text":"نظام إدارة جودة قياسي، تصنيع موثوق لأثاث المطارات والمناطق الحضرية ومشاريع المعادن",
-                "about.mini2_title":"تصنيع مخصص للحلول الفردية",
-                "about.mini2_text":"معدات تصنيع مخصصة، قدرة تخصيص كاملة، دعم OEM/ODM",
-                "about.mini3_title":"الامتثال",
-                "about.mini3_text":"رخصة السلامة المهنية، أنظمة معتمدة، اختبارات وتقارير. دعم الواتساب وODM",
-                "about.contact_title":"شركة SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT المحدودة",
-                "footer.nav_title":"التصفح",
-                "footer.contact_title":"اتصل بنا",
-                "footer.copyright_title":"حقوق النشر",
-                "footer.copyright_text":"© 2026 شركة SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT المحدودة. جميع الحقوق محفوظة."
-            }
-        };
+<script>
+const translations = {
+    en: {
+        "nav.home":"Home",
+        "nav.products":"Products",
+        "nav.about":"About",
+        "nav.quote":"Get a Quote",
+        "about.meta_title":"About Us - ZHANXIN Intelligent Equipment",
+        "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects",
+        "about.page_title":"About SHANGHAI ZHANXIN",
+        "about.page_subtitle":"Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects",
+        "about.factory_img_alt":"Zhanxin manufacturing workshop",
+        "about.card1_text":"We are a factory specialized in outdoor, airport and urban furniture and metal structure project manufacturing.",
+        "about.str1":"Custom steel & aluminum structure solution",
+        "about.str2":"Large size LED/LCD screen mounting structure",
+        "about.str3":"Urban & airport furniture and bus shelter",
+        "about.str4":"Support OEM & ODM for worldwide buyers",
+        "about.qua1":"Work Safety Production License (China) — licensed manufacturer for metal fabrication",
+        "about.qua2":"Quality management system aligned in accordance with ISO 9001 / 14001 / 45001",
+        "about.qua3":"Incoming material inspection, in process check and 100% final inspection before shipment",
+        "about.qua4":"Material certificates EN 10204 & 3.1 available from the steel mill",
+        "about.qua5":"Welding procedure qualification (WPS/PQR) and welder qualification records available",
+        "about.qua6":"Third‑party lab reports (IEC 60529) for outdoor enclosures available on project basis",
+        "about.qua7":"Pre shipment Inspection by a third party can be arranged at buyer's request",
+        "about.mini1_title":"Custom fabrication & production",
+        "about.mini1_text":"Quality management system standard, reliable airport and furniture manufacturing and metal & project manufacturing.",
+        "about.mini2_title":"Custom manufacture for custom solution",
+        "about.mini2_text":"Customized manufacture equipment, with comprehensive customization capability, and Support OEM / ODM.",
+        "about.mini3_title":"Compliance",
+        "about.mini3_text":"Work Safety Production License, Certified systems, testing, Reports. Support: WhatsApp & ODM @zhanxinglobal.com",
+        "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
+        "footer.nav_title":"Navigation",
+        "footer.contact_title":"Contact",
+        "footer.copyright_title":"Copyright",
+        "footer.copyright_text":"© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. All rights reserved."
+    },
+    zh: {
+        "nav.home":"首页",
+        "nav.products":"产品",
+        "nav.about":"关于我们",
+        "nav.quote":"获取报价",
+        "about.meta_title":"关于我们 - 上海崭鑫智能设备",
+        "about.meta_desc":"上海崭鑫智能设备有限公司，户外、机场、城市家具及金属结构项目可靠制造商",
+        "about.page_title":"关于上海崭鑫",
+        "about.page_subtitle":"户外、机场、城市家具与金属结构项目可靠制造商",
+        "about.factory_img_alt":"崭鑫生产车间",
+        "about.card1_text":"我们是一家专注户外、机场、城市家具及金属结构项目制造的工厂。",
+        "about.str1":"定制钢铝结构解决方案",
+        "about.str2":"大尺寸LED/LCD屏安装结构",
+        "about.str3":"城市、机场家具以及候车亭",
+        "about.str4":"面向全球买家，支持OEM与ODM",
+        "about.qua1":"中国安全生产许可证 — 持证金属结构制造厂商",
+        "about.qua2":"质量管理体系符合ISO 9001 / 14001 / 45001标准",
+        "about.qua3":"来料检验、过程巡检，出货前100%终检",
+        "about.qua4":"钢厂可提供EN 10204 & 3.1材质证书",
+        "about.qua5":"具备WPS/PQR焊接工艺评定及焊工资质记录",
+        "about.qua6":"户外箱体可按项目提供第三方实验室IEC60529报告",
+        "about.qua7":"可按客户要求安排第三方装船前检验",
+        "about.mini1_title":"定制加工与生产",
+        "about.mini1_text":"标准质量管理体系，可靠机场与城市家具、金属项目制造服务",
+        "about.mini2_title":"定制化方案生产",
+        "about.mini2_text":"定制化生产设备，全维度定制能力，支持OEM/ODM",
+        "about.mini3_title":"合规资质",
+        "about.mini3_text":"安全生产许可证，认证体系，检测报告。支持WhatsApp与ODM定制",
+        "about.contact_title":"上海崭鑫智能设备有限公司",
+        "footer.nav_title":"导航",
+        "footer.contact_title":"联系我们",
+        "footer.copyright_title":"版权信息",
+        "footer.copyright_text":"© 2026 上海崭鑫智能设备有限公司，保留所有权利。"
+    },
+    fr: {
+        "nav.home":"Accueil",
+        "nav.products":"Produits",
+        "nav.about":"À propos",
+        "nav.quote":"Demander un devis",
+        "about.meta_title":"À propos de nous - ZHANXIN Intelligent Equipment",
+        "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. Fabricant fiable de mobilier urbain, aéroportuaire et structures métalliques extérieures",
+        "about.page_title":"À propos de SHANGHAI ZHANXIN",
+        "about.page_subtitle":"Fabricant fiable pour les projets de mobilier extérieur, aéroportuaire, urbain et structures métalliques",
+        "about.factory_img_alt":"Atelier de fabrication Zhanxin",
+        "about.card1_text":"Nous sommes une usine spécialisée dans la fabrication de mobilier extérieur, aéroportuaire, urbain et structures métalliques pour projets.",
+        "about.str1":"Solution de structure acier et aluminium sur mesure",
+        "about.str2":"Structure de support pour écrans LED/LCD grand format",
+        "about.str3":"Mobilier urbain & aéroportuaire et abri‑bus",
+        "about.str4":"Support OEM & ODM pour acheteurs du monde entier",
+        "about.qua1":"Licence de production de sécurité au travail (Chine) — fabricant agréé pour la fabrication métallique",
+        "about.qua2":"Système de gestion qualité conforme à ISO 9001 / 14001 / 45001",
+        "about.qua3":"Contrôle matière entrante, contrôle en cours et inspection finale 100% avant expédition",
+        "about.qua4":"Certificats matériaux EN 10204 & 3.1 fournis par l'aciérie",
+        "about.qua5":"Qualification procédé soudage (WPS/PQR) et enregistrements qualification soudeurs disponibles",
+        "about.qua6":"Rapports laboratoire tiers (IEC 60529) pour enceintes extérieures sur demande projet",
+        "about.qua7":"Inspection avant expédition par tiers possible à la demande de l'acheteur",
+        "about.mini1_title":"Fabrication et production sur mesure",
+        "about.mini1_text":"Système de gestion qualité standard, fabrication fiable mobilier aéroportuaire, urbain et projets métalliques",
+        "about.mini2_title":"Fabrication personnalisée pour solution sur mesure",
+        "about.mini2_text":"Équipements de fabrication sur mesure, capacité de personnalisation complète, support OEM/ODM",
+        "about.mini3_title":"Conformité",
+        "about.mini3_text":"Licence sécurité travail, systèmes certifiés, essais, rapports. Support WhatsApp & ODM",
+        "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
+        "footer.nav_title":"Navigation",
+        "footer.contact_title":"Contact",
+        "footer.copyright_title":"Copyright",
+        "footer.copyright_text":"© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. Tous droits réservés."
+    },
+    de: {
+        "nav.home":"Startseite",
+        "nav.products":"Produkte",
+        "nav.about":"Über uns",
+        "nav.quote":"Angebot anfordern",
+        "about.meta_title":"Über uns - ZHANXIN Intelligent Equipment",
+        "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. Zuverlässiger Hersteller für Außen‑, Flughafen‑ und Stadtmöbel sowie Metallstrukturprojekte",
+        "about.page_title":"Über SHANGHAI ZHANXIN",
+        "about.page_subtitle":"Zuverlässiger Hersteller für Außen‑, Flughafen‑ und Stadtmöbel & Metallstrukturprojekte",
+        "about.factory_img_alt":"Zhanxin Fertigungswerkstatt",
+        "about.card1_text":"Wir sind eine Fabrik spezialisiert auf Fertigung von Außen‑, Flughafen‑ und Stadtmöbeln sowie Metallstrukturprojekten.",
+        "about.str1":"Kundenspezifische Stahl‑ und Aluminiumstrukturlösungen",
+        "about.str2":"Montagestrukturen für großformatige LED/LCD‑Bildschirme",
+        "about.str3":"Stadt‑ und Flughafenmöbel sowie Wartehallen",
+        "about.str4":"OEM & ODM Unterstützung für weltweite Käufer",
+        "about.qua1":"Arbeitssicherheits‑Produktionslizenz (China) — lizenzierter Hersteller für Metallverarbeitung",
+        "about.qua2":"Qualitätsmanagementsystem nach ISO 9001 / 14001 / 45001",
+        "about.qua3":"Eingangsmaterialprüfung, laufende Kontrolle und 100 % Endprüfung vor Versand",
+        "about.qua4":"Materialzertifikate EN 10204 & 3.1 vom Stahlwerk verfügbar",
+        "about.qua5":"Schweißverfahrensqualifikation (WPS/PQR) und Schweißerqualifikationsaufzeichnungen vorhanden",
+        "about.qua6":"Drittlaborberichte (IEC 60529) für Außengehäuse projektbezogen verfügbar",
+        "about.qua7":"Vorversandprüfung durch Dritte auf Wunsch des Käufers organisierbar",
+        "about.mini1_title":"Kundenspezifische Fertigung & Produktion",
+        "about.mini1_text":"Standard‑Qualitätsmanagementsystem, zuverlässige Fertigung von Flughafen‑, Stadtmöbeln und Metallprojekten",
+        "about.mini2_title":"Kundenspezifische Fertigung für individuelle Lösungen",
+        "about.mini2_text":"Kundenspezifische Fertigungsanlagen, umfassende Individualisierung, OEM/ODM Unterstützung",
+        "about.mini3_title":"Konformität",
+        "about.mini3_text":"Arbeitssicherheitslizenz, zertifizierte Systeme, Tests, Berichte. WhatsApp & ODM möglich",
+        "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
+        "footer.nav_title":"Navigation",
+        "footer.contact_title":"Kontakt",
+        "footer.copyright_title":"Urheberrecht",
+        "footer.copyright_text":"© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. Alle Rechte vorbehalten."
+    },
+    ja: {
+        "nav.home":"ホーム",
+        "nav.products":"製品",
+        "nav.about":"会社概要",
+        "nav.quote":"見積もり依頼",
+        "about.meta_title":"会社概要 - ZHANXIN Intelligent Equipment",
+        "about.meta_desc":"上海崭鑫智能設備有限公司 屋外・空港・都市家具及び金属構造物プロジェクトの信頼できるメーカー",
+        "about.page_title":"SHANGHAI ZHANXINについて",
+        "about.page_subtitle":"屋外、空港、都市家具・金属構造物プロジェクトの信頼できる製造メーカー",
+        "about.factory_img_alt":"崭鑫製造工場",
+        "about.card1_text":"当社は屋外、空港、都市家具と金属構造物プロジェクト製造を専門とする工場です。",
+        "about.str1":"鉄・アルミ構造のカスタムソリューション",
+        "about.str2":"大型LED/LCDスクリーン取付構造",
+        "about.str3":"都市・空港家具、バスシェルター",
+        "about.str4":"世界のバイヤー向けOEM・ODM対応",
+        "about.qua1":"中国 安全生産許可証 — 金属加工認定製造メーカー",
+        "about.qua2":"品質管理システム ISO9001 /14001 /45001適合",
+        "about.qua3":"入荷材料検査、工程検査、出荷前全数最終検査",
+        "about.qua4":"製鉄所よりEN10204 &3.1材料証明書発行可能",
+        "about.qua5":"溶接施工要領WPS/PQR、溶接士資格記録あり",
+        "about.qua6":"屋外筐体は案件単位で第三者試験所IEC60529レポート提供可能",
+        "about.qua7":"買主要望により第三者出荷前検査手配可能",
+        "about.mini1_title":"カスタム製作・生産",
+        "about.mini1_text":"標準品質管理システム、空港・都市家具・金属案件の信頼製造",
+        "about.mini2_title":"個別ソリューション向け受注生産",
+        "about.mini2_text":"カスタム生産設備、フルカスタマイズ対応 OEM/ODM",
+        "about.mini3_title":"適合証明",
+        "about.mini3_text":"安全生産許可、認証システム、試験レポート。WhatsApp・ODM対応",
+        "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
+        "footer.nav_title":"ナビゲーション",
+        "footer.contact_title":"お問い合わせ",
+        "footer.copyright_title":"著作権",
+        "footer.copyright_text":"© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. 全著作権所有。"
+    },
+    es: {
+        "nav.home":"Inicio",
+        "nav.products":"Productos",
+        "nav.about":"Nosotros",
+        "nav.quote":"Solicitar cotización",
+        "about.meta_title":"Sobre Nosotros - ZHANXIN Intelligent Equipment",
+        "about.meta_desc":"Shanghai Zhanxin Intelligent Equipment Co., Ltd. Fabricante confiable de mobiliario urbano, aeroportuario y estructuras metálicas para exterior",
+        "about.page_title":"Sobre SHANGHAI ZHANXIN",
+        "about.page_subtitle":"Fabricante confiable para proyectos de mobiliario exterior, aeroportuario, urbano y estructuras metálicas",
+        "about.factory_img_alt":"Taller de fabricación Zhanxin",
+        "about.card1_text":"Somos una fábrica especializada en fabricación de mobiliario exterior, aeroportuario, urbano y estructuras metálicas para proyectos.",
+        "about.str1":"Soluciones de estructura de acero y aluminio personalizada",
+        "about.str2":"Estructura de montaje para pantallas LED/LCD de gran tamaño",
+        "about.str3":"Mobiliario urbano y aeroportuario y marquesinas de autobús",
+        "about.str4":"Soporte OEM y ODM para compradores mundiales",
+        "about.qua1":"Licencia de Producción de Seguridad Laboral (China) — fabricante autorizado para fabricación metálica",
+        "about.qua2":"Sistema de gestión de calidad alineado con ISO 9001 /14001 /45001",
+        "about.qua3":"Inspección de material entrante, control en proceso e inspección final 100% antes del envío",
+        "about.qua4":"Certificados de material EN 10204 &3.1 disponibles desde acería",
+        "about.qua5":"Calificación de procedimiento de soldadura (WPS/PQR) y registros de cualificación de soldadores disponibles",
+        "about.qua6":"Informes de laboratorio tercero (IEC 60529) para carcasas exteriores por proyecto",
+        "about.qua7":"Inspección previa al envío por tercero, organizable a petición del comprador",
+        "about.mini1_title":"Fabricación y producción personalizada",
+        "about.mini1_text":"Sistema de gestión de calidad estándar, fabricación fiable de mobiliario aeroportuario, urbano y proyectos metálicos",
+        "about.mini2_title":"Fabricación personalizada para soluciones a medida",
+        "about.mini2_text":"Equipos de fabricación custom, capacidad completa de personalización, soporte OEM/ODM",
+        "about.mini3_title":"Cumplimiento",
+        "about.mini3_text":"Licencia de seguridad laboral, sistemas certificados, ensayos e informes. Soporte WhatsApp y ODM",
+        "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
+        "footer.nav_title":"Navegación",
+        "footer.contact_title":"Contacto",
+        "footer.copyright_title":"Derechos de autor",
+        "footer.copyright_text":"© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. Todos los derechos reservados."
+    },
+    ar: {
+        "nav.home":"الرئيسية",
+        "nav.products":"المنتجات",
+        "nav.about":"من نحن",
+        "nav.quote":"طلب عرض سعر",
+        "about.meta_title":"من نحن - ZHANXIN Intelligent Equipment",
+        "about.meta_desc":"شركة شنغهاي زانكسين للمعدات الذكية، مصنع موثوق لأثاث الهواء الطلق والمطارات والمناطق الحضرية ومشاريع الهياكل المعدنية",
+        "about.page_title":"عن شنغهاي زانكسين",
+        "about.page_subtitle":"مصنع موثوق لمشاريع أثاث الهواء الطلق والمطارات والمناطق الحضرية والهياكل المعدنية",
+        "about.factory_img_alt":"ورشة تصنيع زانكسين",
+        "about.card1_text":"نحن مصنع متخصص في تصنيع أثاث الهواء الطلق والمطارات والمناطق الحضرية والهياكل المعدنية للمشاريع.",
+        "about.str1":"حلول الهياكل الفولاذية والألومنيوم المخصصة",
+        "about.str2":"هياكل تركيب شاشات LED/LCD كبيرة الحجم",
+        "about.str3":"أثاث المناطق الحضرية والمطارات وملاجئ الحافلات",
+        "about.str4":"ندعم التصنيع حسب الطلب OEM وODM للمشترين من جميع أنحاء العالم",
+        "about.qua1":"رخصة إنتاج السلامة المهنية (الصين) — مصنع مرخص لتصنيع المعادن",
+        "about.qua2":"نظام إدارة الجودة متوافق مع معايير ISO 9001 /14001 /45001",
+        "about.qua3":"فحص المواد الواردة، الفحص أثناء الإنتاج وفحص نهائي 100% قبل الشحن",
+        "about.qua4":"شهادات المواد EN 10204 &3.1 متاحة من مصنع الصلب",
+        "about.qua5":"تأهيل إجراءات اللحام WPS/PQR وسجلات تأهيل عمال اللحام متوفرة",
+        "about.qua6":"تقارير مختبرات طرف ثالث IEC 60529 للعلب الخارجية حسب المشروع",
+        "about.qua7":"يمكن ترتيب فحص ما قبل الشحن من طرف ثالث بناءً على طلب المشتري",
+        "about.mini1_title":"التصنيع والإنتاج المخصص",
+        "about.mini1_text":"نظام إدارة جودة قياسي، تصنيع موثوق لأثاث المطارات والمناطق الحضرية ومشاريع المعادن",
+        "about.mini2_title":"تصنيع مخصص للحلول الفردية",
+        "about.mini2_text":"معدات تصنيع مخصصة، قدرة تخصيص كاملة، دعم OEM/ODM",
+        "about.mini3_title":"الامتثال",
+        "about.mini3_text":"رخصة السلامة المهنية، أنظمة معتمدة، اختبارات وتقارير. دعم الواتساب وODM",
+        "about.contact_title":"شركة SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT المحدودة",
+        "footer.nav_title":"التصفح",
+        "footer.contact_title":"اتصل بنا",
+        "footer.copyright_title":"حقوق النشر",
+        "footer.copyright_text":"© 2026 شركة SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT المحدودة. جميع الحقوق محفوظة."
+    }
+};
 
-        function setLang(langKey){
-            const trans = translations[langKey] || translations.en;
-            document.querySelectorAll('[data‑i18n]').forEach(el=>{
-                const key = el.getAttribute('data‑i18n');
-                if(trans[key]) el.innerText = trans[key];
-            });
-            document.documentElement.lang = langKey;
-            if(langKey === 'ar'){
-                document.documentElement.dir = "rtl";
-            }else{
-                document.documentElement.dir = "ltr";
-            }
-        }
+function setLang(langKey){
+    const trans = translations[langKey] || translations.en;
+    //标准属性选择器
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(trans[key]) el.innerText = trans[key];
+    });
+    //图片alt多语言替换
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    //阿拉伯语RTL双重兜底
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+    }
+}
 
-        const langSelect = document.getElementById('langSelect');
-        langSelect.addEventListener('change', function(){
-            setLang(this.value);
-        });
-        setLang('en');
-    </script>
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', function(){
+    setLang(this.value);
+});
+//页面默认加载英文
+setLang('en');
+</script>
 </body>
 </html>
