@@ -496,7 +496,7 @@ const categoryI18n = {
     "sign": "Wayfinding Signage",
     "display": "LED & LCD Display",
     "bus": "Bus Shelter",
-    "custom-steel-aluminum": "Custom Steel & Aluminum Structure",
+    "customized-metal-structure": "Customized Metal Structure",
     "other": "Other Products"
   },
   zh: {
@@ -505,7 +505,7 @@ const categoryI18n = {
     "sign": "导视标识标牌",
     "display": "LED液晶显示屏",
     "bus": "公交候车亭",
-    "custom-steel-aluminum": "定制钢铝金属结构",
+    "customized-metal-structure": "定制金属结构",
     "other": "其他产品"
   },
   es: {
@@ -514,7 +514,7 @@ const categoryI18n = {
     "sign": "Señalización de orientación",
     "display": "Pantalla LED y LCD",
     "bus": "Refugio de autobús",
-    "custom-steel-aluminum": "Estructura personalizada acero y aluminio",
+    "customized-metal-structure": "Estructura metálica personalizada",
     "other": "Otros productos"
   },
   fr: {
@@ -523,7 +523,7 @@ const categoryI18n = {
     "sign": "Signalétique d'orientation",
     "display": "Écran LED et LCD",
     "bus": "Abri bus",
-    "custom-steel-aluminum": "Structure acier aluminium sur mesure",
+    "customized-metal-structure": "Structure métallique personnalisée",
     "other": "Autres produits"
   },
   de: {
@@ -532,7 +532,7 @@ const categoryI18n = {
     "sign": "Leitsystem‑Schilder",
     "display": "LED‑ und LCD‑Displays",
     "bus": "Bushaltestelle",
-    "custom-steel-aluminum": "Kundenspezifische Stahl‑Aluminium‑Konstruktion",
+    "customized-metal-structure": "Kundenspezifische Metallkonstruktion",
     "other": "Sonstige Produkte"
   },
   ja: {
@@ -541,7 +541,7 @@ const categoryI18n = {
     "sign": "案内サイン",
     "display": "LED・LCDディスプレイ",
     "bus": "バス待合所",
-    "custom-steel-aluminum": "特注スチール・アルミ構造物",
+    "customized-metal-structure": "特注金属構造物",
     "other": "その他製品"
   },
   ar: {
@@ -550,7 +550,7 @@ const categoryI18n = {
     "sign": "لوحات الإرشاد",
     "display": "شاشات LED و LCD",
     "bus": "ملجأ الحافلات",
-    "custom-steel-aluminum": "هياكل فولاذ وألومنيوم مخصصة",
+    "customized-metal-structure": "الهيكل المعدني المخصص",
     "other": "منتجات أخرى"
   }
 };
@@ -612,7 +612,6 @@ const productSearch = document.getElementById("productSearch");
 const productGrid = document.getElementById("productGrid");
 const clearFilterBtn = document.getElementById("clearFilterBtn");
 const filterTagsBox = document.getElementById("filterTagsBox");
-
 function renderCategoryOptions(products){
   const cats = [...new Set(products.map(p=>p.category))];
   cats.forEach(cat=>{
