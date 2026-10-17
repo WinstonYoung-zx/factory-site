@@ -57,9 +57,7 @@ header{
   color:#fff;
   display:none;
 }
-#site-logo:error + .logo-text-fallback{
-  display:block;
-}
+/* 删除无效伪类，改用img自带onerror */
 nav{
   display:flex;
   gap:2rem;
@@ -581,6 +579,7 @@ function setLang(lang) {
   });
   langSelect.value = lang;
   refreshCategoryDisplay();
+  renderProducts(); //切换语言，重新渲染产品卡片！！新增这一句，切换语言自动刷新产品
 }
 //刷新下拉选项文字
 function refreshCategoryDisplay() {
@@ -643,8 +642,9 @@ function renderProducts(){
   if(currentKeyword){
     const kw = currentKeyword.toLowerCase().trim();
     list = list.filter(p=>{
-      const t = (p.title||"").toLowerCase();
-      const d = (p.desc||"").toLowerCase();
+      //多语言标题+描述同时支持搜索
+      const t = ((p.title?.en || "") + " " + (p.title?.[currentLang] || "")).toLowerCase();
+      const d = ((p.desc?.en || "") + " " + (p.desc?.[currentLang] || "")).toLowerCase();
       return t.includes(kw) || d.includes(kw);
     })
   }
@@ -655,15 +655,19 @@ function renderProducts(){
     return;
   }
   list.forEach(item=>{
-    const slug = item.slug || (item.title||"").toLowerCase().replace(/\s+/g,"-");
+    // 【核心修复】读取多语言文本，修复[object Object]
+    const titleText = item.title?.[currentLang] || item.title?.en || "";
+    const descText = item.desc?.[currentLang] || item.desc?.en || "";
+    const imgSrc = item.image || "/uploads/placeholder.jpg";
+    const slug = item.slug || (titleText).toLowerCase().replace(/\s+/g,"-");
     const card = document.createElement("div");
     card.className = "product-card";
     card.onclick = ()=> window.location.href = `product.html?slug=${slug}`;
     card.innerHTML = `
-      <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" loading="lazy" onerror="this.style.display='none'">
+      <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(titleText)}" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=No+Image'">
       <div class="card-body">
-        <h3>${escapeHtml(item.title)}</h3>
-        <p>${escapeHtml(item.desc)}</p>
+        <h3>${escapeHtml(titleText)}</h3>
+        <p>${escapeHtml(descText)}</p>
       </div>
     `;
     productGrid.appendChild(card);
