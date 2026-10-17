@@ -11,13 +11,15 @@
 <script src="https://challenges.cloudflare.com/turnstile/v0/sitekey.js" defer></script>
 </head>
 <body>
-<!-- 修复点1：移除 site-header，直接使用header标签，匹配css -->
+<!-- ======================
+Header 已修复：和首页完全一致，class="logo"，nav-links，mobile-menu-btn，
+这一段是解决logo变大的唯一修改，页面其余代码全部保留原样
+====================== -->
 <header>
   <div class="container nav-wrap">
     <a href="/index.html" class="logo">
       <img src="/uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo">
     </a>
-    <!-- 修复点2：main-nav → nav-links，和css类名统一 -->
     <ul class="nav-links">
       <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
       <li><a href="/products.html" data-i18n="nav.products">Products</a></li>
@@ -83,7 +85,7 @@
           <label data-i18n="inq.product">Product Interest</label>
           <input type="text" name="product">
         </div>
-        <!-- 附件上传，如果你的Worker不支持接收文件，直接删除下面这个form-group整块 -->
+        <!-- 附件上传 -->
         <div class="form-group">
           <label data-i18n="inq.attachLabel">Drawings / Reference File (Max 5MB, pdf/png/jpg)</label>
           <div class="file-upload-wrap">
@@ -143,14 +145,13 @@
   </div>
 </footer>
 <script>
-// 移动端菜单开关逻辑，补充进来，和首页一致
+// 移动端菜单开关逻辑
 const mobileBtn = document.querySelector('.mobile-menu-btn');
 const navList = document.querySelector('.nav-links');
 mobileBtn.addEventListener('click', ()=>{
   navList.classList.toggle('mobile-open');
 })
-
-// 多语言翻译，新增西班牙语es、阿拉伯语ar
+// 多语言翻译，包含西班牙语es、阿拉伯语ar
 const translations = {
 en: {
 "meta.contactTitle":"Contact Us | ZHANXIN",
