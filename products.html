@@ -305,7 +305,6 @@ footer a:hover{
 <body>
 <header>
   <div class="header-logo-wrap">
-    <!-- 修正为仓库真实logo文件名，加载失败自动显示文字 -->
     <img id="site-logo" src="/uploads/logo-zhanxin-blue.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" data-i18n-alt="site.logoAlt" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd." width="180" height="48">
     <span class="logo-text-fallback">Shanghai ZhanXin Intelligent Equipment</span>
   </div>
@@ -358,9 +357,7 @@ footer a:hover{
   <p data-i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
 </footer>
 
-<!-- ========== 内嵌多语言JS（无外部lang.js，和首页保持一致） ========== -->
 <script>
-// 多语言词条内嵌在页面里
 const translations = {
   en: {
     "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
@@ -373,7 +370,7 @@ const translations = {
     "products.metaTitle": "Products | ZHANXIN Intelligent Equipment",
     "products.metaDesc": "Bus shelter, advertising light box, wayfinding signage, LED‑LCD display, custom metal‑structure manufacturer",
     "products.pageTitle": "Our Products",
-    "products.pageIntro": "We supply custom-made bus shelters, advertising light boxes, way-finding signage, LED-LCD displays and metal-structure solutions for global urban & airport projects.",
+    "products.pageIntro": "We supply custom‑made bus shelters, advertising light boxes, way‑finding signage, LED‑LCD displays and metal‑structure solutions for global urban & airport projects.",
     "products.allCategories": "All Categories",
     "products.searchPlaceholder": "Search products...",
     "products.clearFilter": "Clear Filters",
@@ -455,9 +452,9 @@ const translations = {
     "breadcrumb.home": "Startseite",
     "breadcrumb.products": "Unsere Produkte",
     "products.metaTitle": "Produkte | ZHANXIN Intelligent Equipment",
-    "products.metaDesc": "Bushaltestellen, Werbeleuchtkästen, Wegweiser, LED-Displays, Hersteller für Metallkonstruktionen nach Maß",
+    "products.metaDesc": "Bushaltestellen, Werbeleuchtkästen, Wegweiser, LED‑Displays, Hersteller für Metallkonstruktionen nach Maß",
     "products.pageTitle": "Unsere Produkte",
-    "products.pageIntro": "Wir fertigen Bushaltestellen, Werbeleuchtkästen, Wegweiser, LED-Bildschirme und Metallkonstruktionen für weltweite Stadt- und Flughafenprojekte.",
+    "products.pageIntro": "Wir fertigen Bushaltestellen, Werbeleuchtkästen, Wegweiser, LED‑Bildschirme und Metallkonstruktionen für weltweite Stadt‑ und Flughafenprojekte.",
     "products.allCategories": "Alle Kategorien",
     "products.searchPlaceholder": "Produkte suchen...",
     "products.clearFilter": "Filter zurücksetzen",
@@ -511,7 +508,73 @@ const translations = {
   }
 };
 
-// 语言切换核心函数
+// ========== 品类多语言映射，bus展示 Bus Shelter ==========
+const categoryI18n = {
+  en: {
+    "": "All Categories",
+    "lightbox": "Advertising Light Box",
+    "sign": "Wayfinding Signage",
+    "display": "LED & LCD Display",
+    "bus": "Bus Shelter",
+    "custom‑steel‑aluminum": "Custom Steel & Aluminum Structure",
+    "other": "Other Products"
+  },
+  zh: {
+    "": "全部分类",
+    "lightbox": "广告灯箱",
+    "sign": "导视标识标牌",
+    "display": "LED液晶显示屏",
+    "bus": "公交候车亭",
+    "custom‑steel‑aluminum": "定制钢铝金属结构",
+    "other": "其他产品"
+  },
+  es: {
+    "": "Todas las categorías",
+    "lightbox": "Caja de luz publicitaria",
+    "sign": "Señalización de orientación",
+    "display": "Pantalla LED y LCD",
+    "bus": "Refugio de autobús",
+    "custom‑steel‑aluminum": "Estructura personalizada acero y aluminio",
+    "other": "Otros productos"
+  },
+  fr: {
+    "": "Toutes les catégories",
+    "lightbox": "Caisson lumineux publicitaire",
+    "sign": "Signalétique d'orientation",
+    "display": "Écran LED et LCD",
+    "bus": "Abri bus",
+    "custom‑steel‑aluminum": "Structure acier aluminium sur mesure",
+    "other": "Autres produits"
+  },
+  de: {
+    "": "Alle Kategorien",
+    "lightbox": "Werbeleuchtkasten",
+    "sign": "Leitsystem‑Schilder",
+    "display": "LED‑ und LCD‑Displays",
+    "bus": "Bushaltestelle",
+    "custom‑steel‑aluminum": "Kundenspezifische Stahl‑Aluminium‑Konstruktion",
+    "other": "Sonstige Produkte"
+  },
+  ja: {
+    "": "全カテゴリ",
+    "lightbox": "広告照明ボックス",
+    "sign": "案内サイン",
+    "display": "LED・LCDディスプレイ",
+    "bus": "バス待合所",
+    "custom‑steel‑aluminum": "特注スチール・アルミ構造物",
+    "other": "その他製品"
+  },
+  ar: {
+    "": "كل الفئات",
+    "lightbox": "صندوق الإعلان المضيء",
+    "sign": "لوحات الإرشاد",
+    "display": "شاشات LED و LCD",
+    "bus": "ملجأ الحافلات",
+    "custom‑steel‑aluminum": "هياكل فولاذ وألومنيوم مخصصة",
+    "other": "منتجات أخرى"
+  }
+};
+
 let currentLang = localStorage.getItem("preferredLang") || "en";
 const langSelect = document.getElementById("langSelect");
 
@@ -519,45 +582,45 @@ function setLang(lang) {
   currentLang = lang;
   localStorage.setItem("preferredLang", lang);
   document.documentElement.lang = lang;
-  // 阿拉伯语开启RTL
-  if (lang === "ar") {
-    document.documentElement.dir = "rtl";
-  } else {
-    document.documentElement.dir = "ltr";
-  }
-  // 替换所有文字
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data‑i18n]").forEach(el => {
+    const key = el.getAttribute("data‑i18n");
     if (translations[lang] && translations[lang][key]) {
       el.textContent = translations[lang][key];
     }
   });
-  // 替换placeholder
-  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-    const key = el.getAttribute("data-i18n-placeholder");
+  document.querySelectorAll("[data‑i18n‑placeholder]").forEach(el => {
+    const key = el.getAttribute("data‑i18n‑placeholder");
     if (translations[lang] && translations[lang][key]) {
       el.placeholder = translations[lang][key];
     }
   });
-  // 替换图片alt
-  document.querySelectorAll("[data-i18n-alt]").forEach(el => {
-    const key = el.getAttribute("data-i18n-alt");
+  document.querySelectorAll("[data‑i18n‑alt]").forEach(el => {
+    const key = el.getAttribute("data‑i18n‑alt");
     if (translations[lang] && translations[lang][key]) {
       el.alt = translations[lang][key];
     }
   });
   langSelect.value = lang;
+  refreshCategoryDisplay();
 }
 
-// 下拉切换事件
+//刷新下拉选项文字
+function refreshCategoryDisplay() {
+  const options = categoryFilter.options;
+  for(let i=0; i<options.length; i++){
+    const val = options[i].value;
+    options[i].textContent = categoryI18n[currentLang][val] || val;
+  }
+}
+
 langSelect.addEventListener("change", () => {
   setLang(langSelect.value);
 });
-// 页面初始化自动加载语言
 setLang(currentLang);
 </script>
 
-<!-- 产品加载JS -->
 <script>
 function escapeHtml(str){
   if(!str) return "";
@@ -583,7 +646,7 @@ function renderCategoryOptions(products){
   cats.forEach(cat=>{
     const opt = document.createElement("option");
     opt.value = cat;
-    opt.textContent = cat;
+    opt.textContent = categoryI18n[currentLang][cat] || cat;
     categoryFilter.appendChild(opt);
   })
 }
@@ -592,13 +655,13 @@ function updateFilterTags(){
   filterTagsBox.innerHTML = "";
   if(currentCat){
     const span = document.createElement("span");
-    span.className = "filter-tag";
-    span.innerText = "Category: "+currentCat;
+    span.className = "filter‑tag";
+    span.innerText = "Category: "+ (categoryI18n[currentLang][currentCat] || currentCat);
     filterTagsBox.appendChild(span);
   }
   if(currentKeyword){
     const span = document.createElement("span");
-    span.className = "filter-tag";
+    span.className = "filter‑tag";
     span.innerText = "Search: "+currentKeyword;
     filterTagsBox.appendChild(span);
   }
@@ -618,18 +681,18 @@ function renderProducts(){
   }
   updateFilterTags();
   if(!list.length){
-    productGrid.innerHTML = `<div class="empty-tip" data-i18n="products.noResult">No products found</div>`;
+    productGrid.innerHTML = `<div class="empty‑tip" data‑i18n="products.noResult">No products found</div>`;
     setLang(currentLang);
     return;
   }
   list.forEach(item=>{
-    const slug = item.slug || (item.title||"").toLowerCase().replace(/\s+/g,"-");
+    const slug = item.slug || (item.title||"").toLowerCase().replace(/\s+/g,"‑");
     const card = document.createElement("div");
-    card.className = "product-card";
+    card.className = "product‑card";
     card.onclick = ()=> window.location.href = `product.html?slug=${slug}`;
     card.innerHTML = `
       <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" loading="lazy" onerror="this.style.display='none'">
-      <div class="card-body">
+      <div class="card‑body">
         <h3>${escapeHtml(item.title)}</h3>
         <p>${escapeHtml(item.desc)}</p>
       </div>
@@ -659,7 +722,7 @@ async function loadProducts(){
   const controller = new AbortController();
   const timeoutId = setTimeout(()=>controller.abort(),6000);
   try{
-    const res = await fetch("content/product-index.json", {signal:controller.signal});
+    const res = await fetch("content/product‑index.json", {signal:controller.signal});
     clearTimeout(timeoutId);
     if(!res.ok) throw new Error("json not found");
     allProducts = await res.json();
@@ -668,7 +731,7 @@ async function loadProducts(){
   }catch(err){
     clearTimeout(timeoutId);
     console.log("产品加载异常",err);
-    productGrid.innerHTML = `<div class="error-tip" data-i18n="products.loadFail">Failed to load product data</div>`;
+    productGrid.innerHTML = `<div class="error‑tip" data‑i18n="products.loadFail">Failed to load product data</div>`;
     setLang(currentLang);
   }
 }
