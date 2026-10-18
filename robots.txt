@@ -1,4 +1,4 @@
-# https://www.zhanxinglobal.com/robots.txt
+# https://zhanxinglobal.com/robots.txt
 # Last updated: 2026-10-18
 
 User-agent: *
@@ -17,4 +17,4 @@ Disallow: /
 # Allow Google-Extended (Google AI Overviews / Search snippets)
 # Do NOT block Google-Extended to keep your site eligible for AI search features
 
-Sitemap: https://www.zhanxinglobal.com/sitemap.xml
+Sitemap: https://zhanxinglobal.com/sitemap.xml
