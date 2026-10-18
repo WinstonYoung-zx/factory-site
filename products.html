@@ -668,7 +668,7 @@ function renderProducts(){
     // 【核心修复】读取多语言文本，修复[object Object]
     const titleText = item.title?.[currentLang] || item.title?.en || "";
     const descText = item.desc?.[currentLang] || item.desc?.en || "";
-    const imgSrc = item.image || "/uploads/placeholder.jpg";
+    const imgSrc = (item.image || "/uploads/placeholder.jpg") + "?v=20261018";
     const slug = item.slug || (titleText).toLowerCase().replace(/\s+/g,"-");
     const card = document.createElement("div");
     card.className = "product-card";
