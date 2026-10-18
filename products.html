@@ -5,14 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title data-i18n="products.metaTitle">Products | ZHANXIN Intelligent Equipment</title>
 <meta name="description" data-i18n="products.metaDesc" content="Bus shelter, advertising light box, wayfinding signage, LED-LCD display, custom metal-structure manufacturer">
-<link rel="canonical" href="https://www.zhanxinglobal.com/products.html">
-<link rel="alternate" hreflang="en" href="https://www.zhanxinglobal.com/products.html">
-<link rel="alternate" hreflang="zh" href="https://www.zhanxinglobal.com/products.html">
-<link rel="alternate" hreflang="es" href="https://www.zhanxinglobal.com/products.html">
-<link rel="alternate" hreflang="fr" href="https://www.zhanxinglobal.com/products.html">
-<link rel="alternate" hreflang="de" href="https://www.zhanxinglobal.com/products.html">
-<link rel="alternate" hreflang="ja" href="https://www.zhanxinglobal.com/products.html">
-<link rel="alternate" hreflang="ar" href="https://www.zhanxinglobal.com/products.html">
+<link rel="canonical" href="https://zhanxinglobal.com/products">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zhanxinglobal.com/products">
+<meta property="og:title" content="Products | ZHANXIN Intelligent Equipment">
+<meta property="og:description" content="Bus shelter, advertising light box, wayfinding signage, LED-LCD display, custom metal-structure manufacturer">
+<meta property="og:image" content="https://zhanxinglobal.com/uploads/factory-wide.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Products | ZHANXIN Intelligent Equipment">
+<meta name="twitter:description" content="Bus shelter, advertising light box, wayfinding signage, LED-LCD display, custom metal-structure manufacturer">
+<meta name="twitter:image" content="https://zhanxinglobal.com/uploads/factory-wide.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -295,10 +297,10 @@ footer a:hover{
     <span class="logo-text-fallback">Shanghai ZhanXin Intelligent Equipment</span>
   </div>
   <nav>
-    <a href="index.html" data-i18n="nav.home">Home</a>
-    <a href="products.html" class="active" data-i18n="nav.products">Products</a>
-    <a href="about.html" data-i18n="nav.about">About Us</a>
-    <a href="index.html#inquiry" data-i18n="nav.quote">Get a Quote</a>
+    <a href="/" data-i18n="nav.home">Home</a>
+    <a href="/products" class="active" data-i18n="nav.products">Products</a>
+    <a href="/about" data-i18n="nav.about">About Us</a>
+    <a href="/contact" data-i18n="nav.quote">Get a Quote</a>
   </nav>
   <select class="lang-select" id="langSelect">
     <option value="en">English</option>
@@ -311,7 +313,7 @@ footer a:hover{
   </select>
 </header>
 <div class="breadcrumb">
-  <a href="index.html" data-i18n="breadcrumb.home">Home</a>
+  <a href="/" data-i18n="breadcrumb.home">Home</a>
   <span>›</span>
   <span data-i18n="breadcrumb.products">Our Products</span>
 </div>
@@ -332,9 +334,9 @@ footer a:hover{
     <div class="loading-tip" data-i18n="products.loading">Loading products...</div>
   </div>
 </section>
-<a href="index.html#inquiry" class="float-inquiry" data-i18n="products.inquiryBtn">Send Inquiry</a>
+<a href="/contact" class="float-inquiry" data-i18n="products.inquiryBtn">Send Inquiry</a>
 <footer>
-  <p data-i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
+  <p data-i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/privacy">Privacy Policy</a></p>
 </footer>
 <script>
 const translations = {
@@ -662,7 +664,7 @@ function renderProducts(){
     const slug = item.slug || (titleText).toLowerCase().replace(/\s+/g,"-");
     const card = document.createElement("div");
     card.className = "product-card";
-    card.onclick = ()=> window.location.href = `product.html?slug=${slug}`;
+    card.onclick = ()=> window.location.href = `/product?slug=${slug}`;
     card.innerHTML = `
       <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(titleText)}" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=No+Image'">
       <div class="card-body">
