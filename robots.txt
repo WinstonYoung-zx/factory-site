@@ -1,19 +1,20 @@
+# https://www.zhanxinglobal.com/robots.txt
+# Last updated: 2026-10-18
+
 User-agent: *
 Allow: /
 
-# 屏蔽AI训练爬虫，保护网站内容版权
+# Block AI training crawlers (not AI search / overview)
 User-agent: GPTBot
 Disallow: /
+
 User-agent: ClaudeBot
 Disallow: /
-User-agent: Google-Extended
+
+User-agent: CCBot
 Disallow: /
 
-# AI搜索爬虫（OAI‑SearchBot、PerplexityBot）放开；如需屏蔽改为Disallow:/
-#User-agent: OAI-SearchBot
-#Disallow: /
-#User-agent: PerplexityBot
-#Disallow: /
+# Allow Google-Extended (Google AI Overviews / Search snippets)
+# Do NOT block Google-Extended to keep your site eligible for AI search features
 
-# 后续生成真实sitemap后，取消下面注释填入你的sitemap地址
-#Sitemap: https://zhanxinglobal.com/sitemap.xml
+Sitemap: https://www.zhanxinglobal.com/sitemap.xml
