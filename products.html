@@ -589,7 +589,7 @@ function setLang(lang) {
   });
   langSelect.value = lang;
   refreshCategoryDisplay();
-  renderProducts(); //切换语言，重新渲染产品卡片！！新增这一句，切换语言自动刷新产品
+  if (typeof renderProducts === "function") renderProducts(); //切换语言，重新渲染产品卡片
 }
 //刷新下拉选项文字
 function refreshCategoryDisplay() {
