@@ -913,6 +913,14 @@ async function loadProducts(){
   }
 }
 loadProducts();
+
+// GA4 跟踪浮动 Send Inquiry 按钮点击
+document.querySelector('.float-inquiry')?.addEventListener('click', function() {
+    gtag('event', 'inquiry_click', {
+        'event_category': 'button_click',
+        'event_label': 'products_page_float_inquiry'
+    });
+});
 </script>
 </body>
 </html>
