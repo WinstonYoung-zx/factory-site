@@ -1,32 +1,5 @@
 [
   {
-    "slug": "advertising-light-box",
-    "category": "lightbox",
-    "image": "/uploads/lightbox.jpg",
-    "title": {
-      "en": "Advertising Light Box",
-      "zh": "广告灯箱",
-      "es": "Caja de luz publicitaria",
-      "fr": "Caisson lumineux publicitaire",
-      "de": "Werbeleuchtkasten",
-      "ja": "広告照明ボックス",
-      "ar": "صندوق الإعلان المضيء"
-    },
-    "desc": {
-      "en": "Custom advertising light box for outdoor & indoor branding, widely used in metro, airport, shopping mall and urban furniture projects.",
-      "zh": "定制室内外广告灯箱，广泛应用于地铁、机场、商场及城市家具项目。",
-      "es": "Caja de luz publicitaria personalizada para marcas interiores y exteriores, ampliamente utilizada en metro, aeropuerto, centro comercial y mobiliario urbano.",
-      "fr": "Caisson lumineux publicitaire sur-mesure pour signalétique intérieure et extérieure, largement utilisé en métro, aéroport, centre commercial et mobilier urbain.",
-      "de": "Individueller Werbeleuchtkasten für Innen- und Außenwerbung, weit verbreitet in U-Bahn, Flughafen, Einkaufszentrum und Stadtmöbeln.",
-      "ja": "屋内屋外ブランディング向け特注広告照明ボックス、地下鉄・空港・ショッピングモール・都市家具プロジェクトで広く使用。",
-      "ar": "صندوق إعلان مضيء مخصص للعلامات التجارية الداخلية والخارجية، يستخدم على نطاق واسع في المترو والمطار ومركز التسوق وأثاث المدن."
-    },
-    "specs": {
-      "dimensions": "Custom size per project requirement",
-      "accessories": "Full custom OEM/ODM service"
-    }
-  },
-  {
     "slug": "recessed-lightbox",
     "category": "lightbox",
     "image": "/uploads/recessed-lightbox.jpg",
@@ -121,7 +94,7 @@
   {
     "slug": "outdoor-tension-lightbox",
     "category": "lightbox",
-    "image": "/uploads/outdoor-lightbox-1.jpg",
+    "image": "/uploads/lightbox.jpg",
     "title": {
       "en": "Outdoor Tension Fabric Light Box",
       "zh": "户外拉布灯箱",
