@@ -457,6 +457,11 @@ document.querySelector("#inquiryForm").addEventListener("submit", async function
             tipDom.innerText = "✅ Inquiry sent successfully! We will contact you soon.";
             this.reset();
             if(window.turnstile) window.turnstile.reset();
+            // GA4 表单提交成功事件
+            gtag('event', 'generate_lead', {
+                'event_category': 'inquiry_form',
+                'event_label': 'homepage_inquiry_form'
+            });
         } else {
             tipDom.className = "error";
             tipDom.innerText = "❌ " + (ret.error || "Submit failed, please try again later.");
@@ -471,6 +476,17 @@ document.querySelector("#inquiryForm").addEventListener("submit", async function
         submitBtn.disabled = false;
     }
 })
+
+// GA4 跟踪所有 Send Inquiry 按钮点击
+document.querySelectorAll('a[href="#inquiry"].btn, a[href="#inquiry"]').forEach(btn => {
+    btn.addEventListener('click', function() {
+        gtag('event', 'inquiry_click', {
+            'event_category': 'button_click',
+            'event_label': 'homepage_' + (this.textContent || '').trim()
+        });
+    });
+});
+
 const translations = {
     en: {
         "nav.home":"Home",
