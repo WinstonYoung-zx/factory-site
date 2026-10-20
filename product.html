@@ -420,6 +420,39 @@ async function loadDetail(){
         <a href="/contact" class="btn-inquiry" data-i18n="detail.inquiry">Send Inquiry Now</a>
       </div>
     `;
+
+    // GA4 跟踪产品详情页 Send Inquiry 按钮点击
+    document.querySelector('.btn-inquiry')?.addEventListener('click', function() {
+        gtag('event', 'inquiry_click', {
+            'event_category': 'button_click',
+            'event_label': 'product_detail_' + slug
+        });
+    });
+
+    // 动态生成 Product 结构化数据
+    const productLd = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": title,
+        "description": desc,
+        "image": "https://www.zhanxinglobal.com" + (item.image || "/uploads/placeholder.jpg"),
+        "url": "https://www.zhanxinglobal.com/product?slug=" + slug,
+        "category": showCategory,
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "ZHANXIN",
+            "url": "https://www.zhanxinglobal.com"
+        }
+    };
+    // 移除旧的 JSON-LD（如果有）
+    const oldLd = document.getElementById('product-jsonld');
+    if(oldLd) oldLd.remove();
+    // 插入新的 JSON-LD
+    const scriptLd = document.createElement('script');
+    scriptLd.type = 'application/ld+json';
+    scriptLd.id = 'product-jsonld';
+    scriptLd.textContent = JSON.stringify(productLd);
+    document.head.appendChild(scriptLd);
   }catch(err){
     box.innerHTML = `<div class="error" data-i18n="detail.error">Product not found</div>`;
   }
