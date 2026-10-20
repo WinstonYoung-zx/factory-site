@@ -187,6 +187,17 @@ select option {
   grid-template-columns:repeat(auto-fill, minmax(270px,1fr));
   gap:2rem;
 }
+.category-section{
+  margin-bottom:3rem;
+}
+.category-title{
+  font-size:1.5rem;
+  color:var(--primary);
+  margin-bottom:1.5rem;
+  padding-bottom:0.5rem;
+  border-bottom:2px solid var(--accent);
+  display:inline-block;
+}
 .product-card{
   border:1px solid var(--border-gray);
   border-radius:12px;
@@ -338,112 +349,155 @@ footer a:hover{
     </div>
     <div class="active-filter-tags" id="filterTagsBox"></div>
   </div>
-  <div class="product-grid" id="productGrid">
-    <!-- 静态产品列表，供搜索引擎抓取 -->
-    <div class="product-card">
-      <img src="/uploads/recessed-lightbox.jpg?v=20261020" alt="Wall-mounted Recessed Light Box" loading="lazy">
-      <div class="card-body">
-        <h3>Wall-mounted Recessed Light Box</h3>
-        <p>Aluminum profile frame, 6mm glass panel, galvanized steel back panel, powder coated. For metro, airport, shopping mall advertising.</p>
-        <a href="/product.html?slug=recessed-lightbox" class="card-link">View Details</a>
+  <div id="productGrid">
+    <!-- 静态产品列表，按品类分组，供搜索引擎抓取 -->
+
+    <!-- 1. Light Box 灯箱类 -->
+    <div class="category-section">
+      <h2 class="category-title">Light Box</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="/uploads/lightbox.jpg?v=20261020" alt="Advertising Light Box" loading="lazy">
+          <div class="card-body">
+            <h3>Advertising Light Box</h3>
+            <p>Outdoor, airport and urban furniture, custom advertising lightbox for outdoor & indoor branding</p>
+            <a href="/product.html?slug=advertising-light-box" class="card-link">View Details</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/uploads/recessed-lightbox.jpg?v=20261020" alt="Wall-mounted Recessed Light Box" loading="lazy">
+          <div class="card-body">
+            <h3>Wall-mounted Recessed Light Box</h3>
+            <p>Aluminum profile frame, 6mm glass panel, galvanized steel back panel, powder coated. For metro, airport, shopping mall advertising.</p>
+            <a href="/product.html?slug=recessed-lightbox" class="card-link">View Details</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/uploads/frameless-lightbox-front.jpg?v=20261020" alt="Frameless Tension Fabric Light Box" loading="lazy">
+          <div class="card-body">
+            <h3>Frameless Tension Fabric Light Box</h3>
+            <p>Aluminum profile 6063, slim frameless design, brightness 3000±500Lux. For metro, airport, shopping mall, supermarket advertising.</p>
+            <a href="/product.html?slug=frameless-tension-lightbox" class="card-link">View Details</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/uploads/recessed-tension-lightbox.jpg?v=20261020" alt="Recessed Tension Fabric Light Box" loading="lazy">
+          <div class="card-body">
+            <h3>Recessed Tension Fabric Light Box</h3>
+            <p>Large format recessed light box, aluminum frame 6063, mirror stainless steel ceiling. For metro, airport, large venues advertising.</p>
+            <a href="/product.html?slug=recessed-tension-lightbox" class="card-link">View Details</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/uploads/outdoor-lightbox-1.jpg?v=20261020" alt="Outdoor Tension Fabric Light Box" loading="lazy">
+          <div class="card-body">
+            <h3>Outdoor Tension Fabric Light Box</h3>
+            <p>IP54 waterproof, standing & wall-mounted options, hot-dip galvanized bracket. For airport parking, metro, outdoor advertising.</p>
+            <a href="/product.html?slug=outdoor-tension-lightbox" class="card-link">View Details</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/uploads/pillar-lightbox.jpg?v=20261020" alt="Pillar-wrapped Light Box" loading="lazy">
+          <div class="card-body">
+            <h3>Pillar-wrapped Light Box</h3>
+            <p>Custom size to fit any pillar, aluminum 6063, LED backlight with Osram/Philips chips. For metro, railway station, airport.</p>
+            <a href="/product.html?slug=pillar-wrapped-lightbox" class="card-link">View Details</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="product-card">
-      <img src="/uploads/frameless-lightbox-front.jpg?v=20261020" alt="Frameless Tension Fabric Light Box" loading="lazy">
-      <div class="card-body">
-        <h3>Frameless Tension Fabric Light Box</h3>
-        <p>Aluminum profile 6063, slim frameless design, brightness 3000±500Lux. For metro, airport, shopping mall, supermarket advertising.</p>
-        <a href="/product.html?slug=frameless-tension-lightbox" class="card-link">View Details</a>
+
+    <!-- 2. Wayfinding Signage 导向标识类 -->
+    <div class="category-section">
+      <h2 class="category-title">Wayfinding Signage</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="/uploads/signage.jpg?v=20261020" alt="Wayfinding Signage" loading="lazy">
+          <div class="card-body">
+            <h3>Wayfinding Signage</h3>
+            <p>Outdoor, airport and urban furniture, directional signage, metal sign structure for city projects</p>
+            <a href="/product.html?slug=wayfinding-signage" class="card-link">View Details</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/uploads/hanging-sign.jpg?v=20261020" alt="Hanging Wayfinding Sign" loading="lazy">
+          <div class="card-body">
+            <h3>Hanging Wayfinding Sign</h3>
+            <p>Aluminum profile frame 6063T5, 3mm PC panel. For metro, airport, shopping mall, parking wayfinding.</p>
+            <a href="/product.html?slug=hanging-wayfinding-sign" class="card-link">View Details</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="product-card">
-      <img src="/uploads/recessed-tension-lightbox.jpg?v=20261020" alt="Recessed Tension Fabric Light Box" loading="lazy">
-      <div class="card-body">
-        <h3>Recessed Tension Fabric Light Box</h3>
-        <p>Large format recessed light box, aluminum frame 6063, mirror stainless steel ceiling. For metro, airport, large venues advertising.</p>
-        <a href="/product.html?slug=recessed-tension-lightbox" class="card-link">View Details</a>
+
+    <!-- 3. Display Screen 显示屏类 -->
+    <div class="category-section">
+      <h2 class="category-title">Display Screen</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="/uploads/wall-mounted-led.jpg?v=20261020" alt="Wall-mounted LED Display Screen" loading="lazy">
+          <div class="card-body">
+            <h3>Wall-mounted LED Display Screen</h3>
+            <p>Pixel pitch P1.2-P2.5, COB packaging, custom size. High refresh rate, wide viewing angle. For metro, airport, exhibition hall.</p>
+            <a href="/product.html?slug=wall-mounted-led-display" class="card-link">View Details</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/uploads/ledscreen.jpg?v=20261020" alt="LED / LCD Screen" loading="lazy">
+          <div class="card-body">
+            <h3>LED / LCD Screen</h3>
+            <p>Outdoor, airport and urban furniture, 61-96 inch LED & LCD screen metal frames, our core advantage</p>
+            <a href="/product.html?slug=led-lcd-screen" class="card-link">View Details</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="product-card">
-      <img src="/uploads/outdoor-lightbox-1.jpg?v=20261020" alt="Outdoor Tension Fabric Light Box" loading="lazy">
-      <div class="card-body">
-        <h3>Outdoor Tension Fabric Light Box</h3>
-        <p>IP54 waterproof, standing & wall-mounted options, hot-dip galvanized bracket. For airport parking, metro, outdoor advertising.</p>
-        <a href="/product.html?slug=outdoor-tension-lightbox" class="card-link">View Details</a>
+
+    <!-- 4. Bus Shelter 公交候车亭类 -->
+    <div class="category-section">
+      <h2 class="category-title">Bus Shelter</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="/uploads/busshelter.jpg?v=20261020" alt="Bus Shelter" loading="lazy">
+          <div class="card-body">
+            <h3>Bus Shelter</h3>
+            <p>Outdoor, airport and urban furniture, outdoor waiting bus shelter with advertising panel</p>
+            <a href="/product.html?slug=bus-shelter" class="card-link">View Details</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="product-card">
-      <img src="/uploads/pillar-lightbox.jpg?v=20261020" alt="Pillar-wrapped Light Box" loading="lazy">
-      <div class="card-body">
-        <h3>Pillar-wrapped Light Box</h3>
-        <p>Custom size to fit any pillar, aluminum 6063, LED backlight with Osram/Philips chips. For metro, railway station, airport.</p>
-        <a href="/product.html?slug=pillar-wrapped-lightbox" class="card-link">View Details</a>
+
+    <!-- 5. Custom Metal Structure 定制金属结构类 -->
+    <div class="category-section">
+      <h2 class="category-title">Custom Metal Structure</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="/uploads/metal-struct.jpg?v=20261020" alt="Custom Steel & Aluminum Structure" loading="lazy">
+          <div class="card-body">
+            <h3>Custom Steel & Aluminum Structure</h3>
+            <p>Outdoor, airport and urban furniture, OEM custom metal fabrication, steel & aluminum structures</p>
+            <a href="/product.html?slug=custom-steel-aluminum-structure" class="card-link">View Details</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="product-card">
-      <img src="/uploads/wall-mounted-led.jpg?v=20261020" alt="Wall-mounted LED Display Screen" loading="lazy">
-      <div class="card-body">
-        <h3>Wall-mounted LED Display Screen</h3>
-        <p>Pixel pitch P1.2-P2.5, COB packaging, custom size. High refresh rate, wide viewing angle. For metro, airport, exhibition hall.</p>
-        <a href="/product.html?slug=wall-mounted-led-display" class="card-link">View Details</a>
+
+    <!-- 6. Other Products 其他类 -->
+    <div class="category-section">
+      <h2 class="category-title">Other Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="/uploads/placeholder.jpg?v=20261020" alt="Other Products" loading="lazy">
+          <div class="card-body">
+            <h3>Other Products</h3>
+            <p>Outdoor, airport and urban furniture, custom outdoor, airport and urban furniture manufacturing</p>
+            <a href="/product.html?slug=other-products" class="card-link">View Details</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="product-card">
-      <img src="/uploads/lightbox.jpg?v=20261020" alt="Advertising Light Box" loading="lazy">
-      <div class="card-body">
-        <h3>Advertising Light Box</h3>
-        <p>Outdoor, airport and urban furniture, custom advertising lightbox for outdoor & indoor branding</p>
-        <a href="/product.html?slug=advertising-light-box" class="card-link">View Details</a>
-      </div>
-    </div>
-    <div class="product-card">
-      <img src="/uploads/signage.jpg?v=20261020" alt="Wayfinding Signage" loading="lazy">
-      <div class="card-body">
-        <h3>Wayfinding Signage</h3>
-        <p>Outdoor, airport and urban furniture, directional signage, metal sign structure for city projects</p>
-        <a href="/product.html?slug=wayfinding-signage" class="card-link">View Details</a>
-      </div>
-    </div>
-    <div class="product-card">
-      <img src="/uploads/hanging-sign.jpg?v=20261020" alt="Hanging Wayfinding Sign" loading="lazy">
-      <div class="card-body">
-        <h3>Hanging Wayfinding Sign</h3>
-        <p>Aluminum profile frame 6063T5, 3mm PC panel. For metro, airport, shopping mall, parking wayfinding.</p>
-        <a href="/product.html?slug=hanging-wayfinding-sign" class="card-link">View Details</a>
-      </div>
-    </div>
-    <div class="product-card">
-      <img src="/uploads/ledscreen.jpg?v=20261020" alt="LED / LCD Screen" loading="lazy">
-      <div class="card-body">
-        <h3>LED / LCD Screen</h3>
-        <p>Outdoor, airport and urban furniture, 61-96 inch LED & LCD screen metal frames, our core advantage</p>
-        <a href="/product.html?slug=led-lcd-screen" class="card-link">View Details</a>
-      </div>
-    </div>
-    <div class="product-card">
-      <img src="/uploads/busshelter.jpg?v=20261020" alt="Bus Shelter" loading="lazy">
-      <div class="card-body">
-        <h3>Bus Shelter</h3>
-        <p>Outdoor, airport and urban furniture, outdoor waiting bus shelter with advertising panel</p>
-        <a href="/product.html?slug=bus-shelter" class="card-link">View Details</a>
-      </div>
-    </div>
-    <div class="product-card">
-      <img src="/uploads/metal-struct.jpg?v=20261020" alt="Custom Steel & Aluminum Structure" loading="lazy">
-      <div class="card-body">
-        <h3>Custom Steel & Aluminum Structure</h3>
-        <p>Outdoor, airport and urban furniture, OEM custom metal fabrication, steel & aluminum structures</p>
-        <a href="/product.html?slug=custom-steel-aluminum-structure" class="card-link">View Details</a>
-      </div>
-    </div>
-    <div class="product-card">
-      <img src="/uploads/placeholder.jpg?v=20261020" alt="Other Products" loading="lazy">
-      <div class="card-body">
-        <h3>Other Products</h3>
-        <p>Outdoor, airport and urban furniture, custom outdoor, airport and urban furniture manufacturing</p>
-        <a href="/product.html?slug=other-products" class="card-link">View Details</a>
-      </div>
-    </div>
+
   </div>
 </section>
 <a href="/contact" class="float-inquiry" data-i18n="products.inquiryBtn">Send Inquiry</a>
@@ -768,24 +822,52 @@ function renderProducts(){
     setLang(currentLang);
     return;
   }
+
+  // 按品类分组
+  const categoryOrder = ["lightbox", "sign", "display", "bus", "custom-steel-aluminum", "other"];
+  const grouped = {};
   list.forEach(item=>{
-    // 【核心修复】读取多语言文本，修复[object Object]
-    const titleText = item.title?.[currentLang] || item.title?.en || "";
-    const descText = item.desc?.[currentLang] || item.desc?.en || "";
-    const imgSrc = (item.image || "/uploads/placeholder.jpg") + "?v=20261020";
-    const slug = item.slug || (titleText).toLowerCase().replace(/\s+/g,"-");
-    const card = document.createElement("div");
-    card.className = "product-card";
-    card.onclick = ()=> window.location.href = `/product.html?slug=${slug}`;
-    card.innerHTML = `
-      <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(titleText)}" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=No+Image'">
-      <div class="card-body">
-        <h3>${escapeHtml(titleText)}</h3>
-        <p>${escapeHtml(descText)}</p>
-      </div>
-    `;
-    productGrid.appendChild(card);
-  })
+    if(!grouped[item.category]) grouped[item.category] = [];
+    grouped[item.category].push(item);
+  });
+
+  // 按固定顺序渲染每个品类
+  categoryOrder.forEach(cat=>{
+    if(!grouped[cat] || !grouped[cat].length) return;
+
+    const catSection = document.createElement("div");
+    catSection.className = "category-section";
+
+    const catTitle = document.createElement("h2");
+    catTitle.className = "category-title";
+    catTitle.textContent = categoryI18n[currentLang][cat] || cat;
+    catSection.appendChild(catTitle);
+
+    const catGrid = document.createElement("div");
+    catGrid.className = "product-grid";
+
+    grouped[cat].forEach(item=>{
+      const titleText = item.title?.[currentLang] || item.title?.en || "";
+      const descText = item.desc?.[currentLang] || item.desc?.en || "";
+      const imgSrc = (item.image || "/uploads/placeholder.jpg") + "?v=20261020";
+      const slug = item.slug || (titleText).toLowerCase().replace(/\s+/g,"-");
+      const card = document.createElement("div");
+      card.className = "product-card";
+      card.onclick = ()=> window.location.href = `/product.html?slug=${slug}`;
+      card.innerHTML = `
+        <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(titleText)}" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=No+Image'">
+        <div class="card-body">
+          <h3>${escapeHtml(titleText)}</h3>
+          <p>${escapeHtml(descText)}</p>
+          <a href="/product.html?slug=${slug}" class="card-link">View Details</a>
+        </div>
+      `;
+      catGrid.appendChild(card);
+    });
+
+    catSection.appendChild(catGrid);
+    productGrid.appendChild(catSection);
+  });
 }
 clearFilterBtn.addEventListener("click", ()=>{
   currentCat = "";
