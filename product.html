@@ -139,6 +139,50 @@ select,select option {color:#222;background:#fff;}
   font-size:1.1rem;
 }
 .error{color:#c0392b;}
+/* 规格参数样式 */
+.specs-box{
+  margin:1.5rem 0;
+  border:1px solid var(--border-gray);
+  border-radius:8px;
+  overflow:hidden;
+}
+.specs-title{
+  font-size:1.1rem;
+  font-weight:600;
+  color:var(--primary);
+  background:#f7f8fa;
+  padding:0.8rem 1.2rem;
+  border-bottom:1px solid var(--border-gray);
+  margin:0;
+}
+.specs-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:0.9rem;
+}
+.specs-table th,
+.specs-table td{
+  padding:0.7rem 1.2rem;
+  text-align:left;
+  border-bottom:1px solid #f0f1f3;
+}
+.specs-table th{
+  width:35%;
+  font-weight:500;
+  color:#666;
+  background:#fafbfc;
+}
+.specs-table td{
+  color:#333;
+}
+.specs-table tr:last-child th,
+.specs-table tr:last-child td{
+  border-bottom:none;
+}
+[dir="rtl"] .specs-table th,
+[dir="rtl"] .specs-table td{
+  text-align:right;
+}
 footer{
   background:var(--footer-bg);
   color:#cccccc;
@@ -409,6 +453,28 @@ async function loadDetail(){
     document.querySelector('meta[name="twitter:description"]').content = desc.substring(0, 160);
     document.querySelector('meta[name="twitter:image"]').content = "https://www.zhanxinglobal.com" + (item.image || "/uploads/placeholder.jpg");
 
+    // 生成规格参数 HTML
+    let specsHtml = '';
+    if(item.specs){
+      const specLabels = {
+        material: "Material",
+        thickness: "Thickness",
+        surface: "Surface Finish",
+        ipRating: "IP Rating",
+        dimensions: "Dimensions",
+        brightness: "Brightness",
+        power: "Power",
+        accessories: "Optional Accessories"
+      };
+      specsHtml = '<div class="specs-box"><h2 class="specs-title">Specifications</h2><table class="specs-table">';
+      for(const [key, label] of Object.entries(specLabels)){
+        if(item.specs[key]){
+          specsHtml += `<tr><th>${label}</th><td>${escapeHtml(item.specs[key])}</td></tr>`;
+        }
+      }
+      specsHtml += '</table></div>';
+    }
+
     box.innerHTML = `
       <div class="img-box">
         <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(title)}" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
@@ -417,6 +483,7 @@ async function loadDetail(){
         <h1>${escapeHtml(title)}</h1>
         <span class="cate">${escapeHtml(showCategory)}</span>
         <p>${escapeHtml(desc)}</p>
+        ${specsHtml}
         <a href="/contact" class="btn-inquiry" data-i18n="detail.inquiry">Send Inquiry Now</a>
       </div>
     `;
@@ -444,6 +511,32 @@ async function loadDetail(){
             "url": "https://www.zhanxinglobal.com"
         }
     };
+    // 添加规格参数到结构化数据
+    if(item.specs){
+        const additionalProperties = [];
+        const specLabels = {
+            material: "Material",
+            thickness: "Thickness",
+            surface: "Surface Finish",
+            ipRating: "IP Rating",
+            dimensions: "Dimensions",
+            brightness: "Brightness",
+            power: "Power",
+            accessories: "Optional Accessories"
+        };
+        for(const [key, label] of Object.entries(specLabels)){
+            if(item.specs[key]){
+                additionalProperties.push({
+                    "@type": "PropertyValue",
+                    "name": label,
+                    "value": item.specs[key]
+                });
+            }
+        }
+        if(additionalProperties.length > 0){
+            productLd.additionalProperty = additionalProperties;
+        }
+    }
     // 移除旧的 JSON-LD（如果有）
     const oldLd = document.getElementById('product-jsonld');
     if(oldLd) oldLd.remove();
