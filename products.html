@@ -672,7 +672,7 @@ function renderProducts(){
     const slug = item.slug || (titleText).toLowerCase().replace(/\s+/g,"-");
     const card = document.createElement("div");
     card.className = "product-card";
-    card.onclick = ()=> window.location.href = `/product?slug=${slug}`;
+    card.onclick = ()=> window.location.href = `/product.html?slug=${slug}`;
     card.innerHTML = `
       <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(titleText)}" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=No+Image'">
       <div class="card-body">
