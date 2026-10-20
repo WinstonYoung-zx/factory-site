@@ -3,112 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 - Page Not Found | ZHANXIN GLOBAL</title>
-<link rel="stylesheet" href="https://zhanxinglobal.com/style.css">
+<title>Page Not Found | ZHANXIN Intelligent Equipment</title>
+<meta name="description" content="The page you are looking for does not exist.">
+<link rel="canonical" href="https://www.zhanxinglobal.com/404">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2X92ECKW5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L2X92ECKW5');
+</script>
 <style>
-.error-404{
-    min-height:70vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:2rem;
-    background:#ffffff; /*修复：白色背景，解决深色body导致文字看不清 */
+:root{
+  --primary:#0F2A44;
+  --accent:#ff7800;
+  --light:#f8f9fa;
+  --dark:#222;
+  --border-gray:#D9DEE3;
+  --footer-bg:#0B1F33;
 }
-.error-404 h1{
-    font-size:48px;
-    color:#ff7800;
-    margin:0 0 1rem;
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+body{color:var(--dark);background:#fff;min-height:100vh;display:flex;flex-direction:column;}
+
+/* 导航栏 */
+header{
+  background-color:var(--primary);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem 5%;
+  flex-wrap:wrap;
+  gap:1rem;
 }
-.error-404 p{
-    font-size:18px;
-    margin-bottom:2rem;
-    color:#444; /*黑色文字在白底正常显示 */
+.header-logo-wrap{display:flex;align-items:center;}
+.logo img{max-height:44px;width:auto;display:block;}
+.logo-text-fallback{font-size:1.2rem;font-weight:bold;color:#fff;display:none;}
+nav{display:flex;gap:2rem;flex-wrap:wrap;align-items:center;}
+nav a{color:#ffffff;text-decoration:none;transition:color 0.2s;}
+nav a:hover{color:var(--accent);}
+.lang-select{padding:4px 8px;border-radius:4px;border:none;}
+select,select option{color:#222;background:#fff;}
+
+/* 404 主内容 */
+.error-container{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:3rem 5%;
 }
-.lang-selector {
-    margin-bottom:2rem;
+.error-code{
+  font-size:8rem;
+  font-weight:bold;
+  color:var(--accent);
+  line-height:1;
+  margin-bottom:1rem;
 }
-.lang-selector select{
-    padding: 8px 12px;
-    font-size:16px;
-    border:1px solid #ccc;
-    border-radius:4px;
+.error-title{
+  font-size:1.8rem;
+  color:var(--primary);
+  margin-bottom:1rem;
 }
-[dir="rtl"] {
-    direction: rtl;
+.error-desc{
+  color:#666;
+  font-size:1.1rem;
+  line-height:1.8;
+  max-width:500px;
+  margin-bottom:2.5rem;
+}
+.error-actions{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:opacity 0.2s;
+}
+.btn-primary{
+  background:var(--accent);
+  color:#fff;
+}
+.btn-secondary{
+  background:#fff;
+  color:var(--primary);
+  border:1px solid var(--border-gray);
+}
+.btn:hover{opacity:0.9;}
+
+/* 页脚 */
+footer{
+  background:var(--footer-bg);
+  color:#cccccc;
+  text-align:center;
+  padding:2.2rem 5%;
+}
+footer a{color:#ffb040;text-decoration:none;}
+
+@media(max-width:768px){
+  header{flex-direction:column;align-items:flex-start;}
+  .error-code{font-size:5rem;}
+  .error-title{font-size:1.4rem;}
+  .error-actions{flex-direction:column;width:100%;max-width:280px;}
 }
 </style>
 </head>
 <body>
-<div class="error-404">
-    <div class="lang-selector">
-        <select id="langSwitch">
-            <option value="en">English</option>
-            <option value="zh">中文</option>
-            <option value="de">Deutsch</option>
-            <option value="fr">Français</option>
-            <option value="es">Español</option>
-            <option value="ja">日本語</option>
-            <option value="ar">العربية</option>
-        </select>
-    </div>
-    <h1>404</h1>
-    <p id="errText">Sorry, the page you visited does not exist.</p>
-    <a id="homeLink" href="https://zhanxinglobal.com/" class="btn">Back to Home Page</a>
+
+<header>
+  <div class="header-logo-wrap">
+    <a href="/" class="logo">
+      <img src="/uploads/logo-zhanxin-blue.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd.">
+      <span class="logo-text-fallback">Shanghai ZhanXin Intelligent Equipment</span>
+    </a>
+  </div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/products">Products</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Get a Quote</a>
+  </nav>
+</header>
+
+<div class="error-container">
+  <div class="error-code">404</div>
+  <h1 class="error-title">Page Not Found</h1>
+  <p class="error-desc">
+    Sorry, the page you are looking for does not exist or has been moved.
+    Please check the URL or return to our homepage.
+  </p>
+  <div class="error-actions">
+    <a href="/" class="btn btn-primary">Back to Home</a>
+    <a href="/products" class="btn btn-secondary">View Products</a>
+  </div>
 </div>
+
+<footer>
+  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/privacy">Privacy Policy</a></p>
+</footer>
+
 <script>
-const texts = {
-    en: {
-        err: "Sorry, the page you visited does not exist.",
-        btn: "Back to Home Page",
-        dir: "ltr"
-    },
-    zh: {
-        err: "抱歉，您访问的页面不存在。",
-        btn: "返回首页",
-        dir: "ltr"
-    },
-    de: {
-        err: "Entschuldigung, die von Ihnen besuchte Seite existiert nicht.",
-        btn: "Zur Startseite",
-        dir: "ltr"
-    },
-    fr: {
-        err: "Désolé, la page que vous avez visitée n'existe pas.",
-        btn: "Retour à l'accueil",
-        dir: "ltr"
-    },
-    es: {
-        err: "Lo sentimos, la página que visitaste no existe.",
-        btn: "Volver al inicio",
-        dir: "ltr"
-    },
-    ja: {
-        err: "申し訳ありません。アクセスしたページは存在しません。",
-        btn: "ホームへ戻る",
-        dir: "ltr"
-    },
-    ar: {
-        err: "عذرًا، الصفحة التي زرتها غير موجودة.",
-        btn: "العودة إلى الصفحة الرئيسية",
-        dir: "rtl"
-    }
-};
-const sel = document.getElementById('langSwitch');
-const errText = document.getElementById('errText');
-const homeLink = document.getElementById('homeLink');
-function setLang(langKey){
-    const t = texts[langKey];
-    errText.innerText = t.err;
-    homeLink.innerText = t.btn;
-    document.body.setAttribute('dir', t.dir);
-}
-sel.onchange = ()=>{
-    setLang(sel.value);
-}
-// 默认英文
-setLang("en");
+// GDPR Cookie 弹窗
+(function() {
+    if (localStorage.getItem('cookieConsent')) return;
+    const cookieDiv = document.createElement('div');
+    cookieDiv.id = 'cookie-consent';
+    cookieDiv.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0F2A44;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
+    cookieDiv.innerHTML = '<div style="flex:1;min-width:250px;font-size:14px;">We use cookies to improve your experience. By continuing to browse, you agree to our use of cookies.<a href="/privacy" style="color:#ff7800;margin-left:5px;">Privacy Policy</a></div><button id="cookie-accept" style="background:#ff7800;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>';
+    document.body.appendChild(cookieDiv);
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'true');
+        document.getElementById('cookie-consent').remove();
+    });
+})();
 </script>
+
 </body>
 </html>
