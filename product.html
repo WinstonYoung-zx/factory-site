@@ -395,7 +395,7 @@ async function loadDetail(){
     const title = item.title?.[currentLang] || item.title?.en || "";
     const desc = item.desc?.[currentLang] || item.desc?.en || "";
     const showCategory = categoryI18n[currentLang][item.category] || item.category;
-    const imgSrc = (item.image || "/uploads/placeholder.jpg") + "?v=20261018";
+    const imgSrc = (item.image || "/uploads/placeholder.jpg") + "?v=20261020";
     box.innerHTML = `
       <div class="img-box">
         <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(title)}" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
