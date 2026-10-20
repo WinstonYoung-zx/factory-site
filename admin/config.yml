@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: WinstonYoung-zx/factory-site
   branch: main
+  base_url: https://cms-gateway.shzxin-cn.workers.dev
 
 media_folder: "uploads"
 public_folder: "/uploads"
