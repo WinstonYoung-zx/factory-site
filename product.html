@@ -3,6 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 自动跳转到新格式的服务端直出详情页 -->
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var slug = params.get('slug');
+  if (slug) {
+    // 301 跳转效果：替换当前历史记录
+    window.location.replace('/product/' + slug);
+  }
+})();
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2X92ECKW5"></script>
 <script>
