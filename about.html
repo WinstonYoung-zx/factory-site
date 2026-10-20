@@ -38,6 +38,68 @@
     body {
         background-color: #ffffff;
         color: #333333;
+        font-family: 'Inter', sans-serif;
+    }
+    /* ===== 原生CSS替代Tailwind类 ===== */
+    .w-full { width: 100%; }
+    .bg-primary { background-color: #0F2A44; }
+    .text-primary { color: #0F2A44; }
+    .text-accent { color: #D4750B; }
+    .bg-accent { background-color: #D4750B; }
+    .text-white { color: #ffffff; }
+    .shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); }
+    .transition-colors { transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out; }
+    .hover\:text-accent:hover { color: #D4750B; }
+    .hover\:underline:hover { text-decoration: underline; }
+    .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+    .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+    .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+    .text-base { font-size: 1rem; line-height: 1.5rem; }
+    .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+    .font-bold { font-weight: 700; }
+    .font-semibold { font-weight: 600; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mt-8 { margin-top: 2rem; }
+    .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .p-6 { padding: 1.5rem; }
+    .grid { display: grid; }
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .justify-between { justify-content: space-between; }
+    .text-center { text-align: center; }
+    .rounded-lg { border-radius: 0.5rem; }
+    .rounded-full { border-radius: 9999px; }
+    .absolute { position: absolute; }
+    .relative { position: relative; }
+    .top-1\/2 { top: 50%; }
+    .-translate-y-1\/2 { transform: translateY(-50%); }
+    .left-3 { left: 0.75rem; }
+    .right-3 { right: 0.75rem; }
+    .w-10 { width: 2.5rem; }
+    .h-10 { height: 2.5rem; }
+    .bg-white\/70 { background-color: rgba(255,255,255,0.7); }
+    .hover\:bg-white:hover { background-color: #ffffff; }
+    .hover\:shadow-lg:hover { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+    .z-10 { z-index: 10; }
+    .w-5 { width: 1.25rem; }
+    .h-5 { height: 1.25rem; }
+    .w-2\.5 { width: 0.625rem; }
+    .h-2\.5 { height: 0.625rem; }
+    .bg-gray-300 { background-color: #d1d5db; }
+    .w-8 { width: 2rem; }
+    .duration-300 { transition-duration: 300ms; }
+    @media (min-width: 768px) {
+        .md\:left-5 { left: 1.25rem; }
+        .md\:right-5 { right: 1.25rem; }
+        .md\:w-12 { width: 3rem; }
+        .md\:h-12 { height: 3rem; }
     }
     .card-header {
         background-color: #0F2A44;
@@ -84,7 +146,7 @@
     }
 </style>
 </head>
-<body class="font-inter">
+<body>
     <header class="w-full bg-primary shadow-md">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
@@ -771,6 +833,21 @@ document.addEventListener('DOMContentLoaded', function(){
         })
     })
 })
+</script>
+<script>
+// ========== GDPR Cookie 同意弹窗 ==========
+(function() {
+    if (localStorage.getItem('cookieConsent')) return;
+    const cookieDiv = document.createElement('div');
+    cookieDiv.id = 'cookie-consent';
+    cookieDiv.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0F2A44;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
+    cookieDiv.innerHTML = '<div style="flex:1;min-width:250px;font-size:14px;">We use cookies to improve your experience. By continuing to browse, you agree to our use of cookies.<a href="/privacy" style="color:#ff7800;margin-left:5px;">Privacy Policy</a></div><button id="cookie-accept" style="background:#ff7800;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>';
+    document.body.appendChild(cookieDiv);
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'true');
+        document.getElementById('cookie-consent').remove();
+    });
+})();
 </script>
 </body>
 </html>
