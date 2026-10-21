@@ -97,8 +97,17 @@ footer a{color:#ffb040;text-decoration:none;}
   <p>We have delivered custom-made light boxes, bus shelters, wayfinding signage and metal structures for metro, airport, shopping mall and urban furniture projects worldwide.</p>
 </div>
 <div class="cases-grid">
-  <div class="case-card">
-    <img src="/uploads/metro-lightbox-installed.jpg" alt="Metro Light Box Project">
+  <div class="case-card" style="grid-column: span 2;">
+    <div class="project-carousel" style="position: relative; overflow: hidden; height: 320px;">
+      <img src="/uploads/metro-lightbox-installed.jpg" alt="Metro Light Box Installed" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;">
+      <img src="/uploads/metro-lightbox-production.jpg" alt="Metro Light Box Production" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <img src="/uploads/metro-lightbox-products.jpg" alt="Metro Light Box Products" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <div style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:8px;">
+        <span class="carousel-dot active" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.8; cursor:pointer;"></span>
+        <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
+        <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
+      </div>
+    </div>
     <div class="case-body">
       <h3>Metro Advertising Light Box</h3>
       <p>600+ sets of custom light boxes for metro stations in Ningbo, Nanjing, Shenzhen and other cities.</p>
@@ -139,6 +148,35 @@ footer a{color:#ffb040;text-decoration:none;}
   <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/privacy">Privacy Policy</a></p>
 </footer>
 <script>
+// 轮播图功能
+(function() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let currentSlide = 0;
+    
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === index ? '1' : '0';
+        });
+        dots.forEach((dot, i) => {
+            dot.style.opacity = i === index ? '0.8' : '0.4';
+        });
+        currentSlide = index;
+    }
+    
+    // 自动轮播
+    setInterval(() => {
+        showSlide((currentSlide + 1) % slides.length);
+    }, 3000);
+    
+    // 点击圆点切换
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+})();
+
 // GDPR Cookie 弹窗
 (function() {
     if (localStorage.getItem('cookieConsent')) return;
