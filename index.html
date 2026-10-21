@@ -374,6 +374,10 @@
                 <label data-i18n="inq.msg">Message / Requirements</label>
                 <textarea name="message" required rows="6"></textarea>
             </div>
+            <div class="form-group" style="display:flex;align-items:flex-start;gap:8px;margin:1rem 0;">
+                <input type="checkbox" name="privacy_consent" id="privacyConsent" required style="margin-top:4px;">
+                <label for="privacyConsent" style="font-size:0.9rem;line-height:1.5;" data-i18n="inq.privacy">I agree to the <a href="/privacy" style="color:#ff7800;">Privacy Policy</a> and consent to my data being processed for inquiry purposes.</label>
+            </div>
             <!-- Turnstile Sitekey沿用你现有 -->
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu" data-theme="light"></div>
             <button id="submitBtn" type="submit" class="btn" data-i18n="inq.submit">Submit Inquiry</button>
@@ -570,7 +574,8 @@ const translations = {
         "inq.email":"Email",
         "inq.interest":"Product Interest",
         "inq.msg":"Message / Requirements",
-        "inq.submit":"Submit Inquiry"
+        "inq.submit":"Submit Inquiry",
+        "inq.privacy":"I agree to the Privacy Policy and consent to my data being processed for inquiry purposes."
     },
     zh: {
         "nav.home":"首页",
@@ -621,7 +626,8 @@ const translations = {
         "inq.email":"邮箱",
         "inq.interest":"意向产品",
         "inq.msg":"留言/需求说明",
-        "inq.submit":"提交询盘"
+        "inq.submit":"提交询盘",
+        "inq.privacy":"我同意隐私政策，并同意我的数据被用于询盘处理。"
     },
     es: {
         "nav.home":"Inicio",
@@ -672,7 +678,8 @@ const translations = {
         "inq.email":"Correo electrónico",
         "inq.interest":"Producto de interés",
         "inq.msg":"Mensaje / Requisitos",
-        "inq.submit":"Enviar"
+        "inq.submit":"Enviar",
+        "inq.privacy":"Acepto la Política de Privacidad y consiento que mis datos se procesen para fines de consulta."
     },
     fr: {
         "nav.home":"Accueil",
@@ -723,7 +730,8 @@ const translations = {
         "inq.email":"Email",
         "inq.interest":"Produit souhaité",
         "inq.msg":"Message / Besoins",
-        "inq.submit":"Envoyer"
+        "inq.submit":"Envoyer",
+        "inq.privacy":"J'accepte la politique de confidentialité et consens au traitement de mes données à des fins de demande."
     },
     de: {
         "nav.home":"Startseite",
@@ -774,7 +782,8 @@ const translations = {
         "inq.email":"E‑Mail",
         "inq.interest":"Interessiert an Produkt",
         "inq.msg":"Nachricht / Anforderungen",
-        "inq.submit":"Absenden"
+        "inq.submit":"Absenden",
+        "inq.privacy":"Ich stimme der Datenschutzerklärung zu und erkläre mich mit der Verarbeitung meiner Daten für Anfragezwecke einverstanden."
     },
     ja: {
         "nav.home":"ホーム",
@@ -825,7 +834,8 @@ const translations = {
         "inq.email":"メールアドレス",
         "inq.interest":"興味のある製品",
         "inq.msg":"メッセージ / ご要望",
-        "inq.submit":"送信"
+        "inq.submit":"送信",
+        "inq.privacy":"プライバシーポリシーに同意し、お問い合わせ処理のためのデータ処理に同意します。"
     },
     ar: {
         "nav.home":"الرئيسية",
@@ -876,7 +886,8 @@ const translations = {
         "inq.email":"البريد الإلكتروني",
         "inq.interest":"المنتج المطلوب",
         "inq.msg":"الرسالة / المتطلبات",
-        "inq.submit":"إرسال"
+        "inq.submit":"إرسال",
+        "inq.privacy":"أوافق على سياسة الخصوصية وأوافق على معالجة بياناتي لأغراض الاستفسار."
     }
 };
 // ✅ 修复：JS选择器使用标准键盘减号 data-i18n，增加alt翻译 + RTL双重兜底
