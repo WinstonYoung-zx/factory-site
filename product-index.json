@@ -1,0 +1,380 @@
+[
+  {
+    "slug": "recessed-lightbox",
+    "category": "lightbox",
+    "image": "/uploads/recessed-lightbox.jpg",
+    "title": {
+      "en": "Wall-mounted Recessed Light Box",
+      "zh": "壁挂式嵌入灯箱",
+      "es": "Caja de luz empotrada de pared",
+      "fr": "Caisson lumineux encastrable mural",
+      "de": "Wand-Einbau-Leuchtkasten",
+      "ja": "壁埋め込み型照明ボックス",
+      "ar": "صندوق ضوئي مدمج مثبت على الحائط"
+    },
+    "desc": {
+      "en": "Wall-mounted recessed light box with flush finish, ideal for metro, airport, shopping mall and underground passage advertising display.",
+      "zh": "壁挂式嵌入灯箱，表面平齐，适用于地铁、机场、商场及地下通道广告展示。",
+      "es": "Caja de luz empotrada de pared con acabado a ras, ideal para publicidad en metro, aeropuerto, centro comercial y pasaje subterráneo.",
+      "fr": "Caisson lumineux encastrable mural avec affleurement, idéal pour la publicité en métro, aéroport, centre commercial et passage souterrain.",
+      "de": "Wand-Einbau-Leuchtkasten mit bündigem Abschluss, ideal für Werbung in U-Bahn, Flughafen, Einkaufszentrum und unterirdischer Passage.",
+      "ja": "壁埋め込み型照明ボックス、フラッシュ仕上げ、地下鉄・空港・ショッピングモール・地下通路の広告表示に最適。",
+      "ar": "صندوق ضوئي مدمج مثبت على الحائط بسطح مستو، مثالي للإعلانات في المترو والمطار ومركز التسوق والممر تحت الأرض."
+    },
+    "specs": {
+      "material": "Aluminum profile frame & door, galvanized steel back panel",
+      "thickness": "Glass panel 6mm",
+      "surface": "Powder coated finish",
+      "dimensions": "L 1-3.2m × H 1.5-1.7m × D 120-180mm"
+    }
+  },
+  {
+    "slug": "frameless-tension-lightbox",
+    "category": "lightbox",
+    "image": "/uploads/frameless-lightbox-front.jpg",
+    "title": {
+      "en": "Frameless Tension Fabric Light Box",
+      "zh": "无边框卡布灯箱",
+      "es": "Caja de luz tensora sin marco",
+      "fr": "Caisson lumineux tendu sans cadre",
+      "de": "Randloser Textil-Leuchtkasten",
+      "ja": "フレームレステンションライトボックス",
+      "ar": "صندوق ضوئي قماشي بدون إطار"
+    },
+    "desc": {
+      "en": "Frameless tension fabric light box with slim design, ideal for metro, airport, shopping mall, supermarket and underground parking advertising & lighting.",
+      "zh": "无边框卡布灯箱，轻薄设计，适用于地铁、机场、商场、超市及地下停车场广告宣传及照明。",
+      "es": "Caja de luz tensora sin marco con diseño delgado, ideal para publicidad e iluminación en metro, aeropuerto, centro comercial, supermercado y parking.",
+      "fr": "Caisson lumineux tendu sans cadre avec design fin, idéal pour la publicité et l'éclairage en métro, aéroport, centre commercial, supermarché et parking.",
+      "de": "Randloser Textil-Leuchtkasten mit schlankem Design, ideal für Werbung und Beleuchtung in U-Bahn, Flughafen, Einkaufszentrum, Supermarkt und Parkhaus.",
+      "ja": "フレームレステンションライトボックス、スリムデザイン、地下鉄・空港・ショッピングモール・スーパー・地下駐車場の広告・照明に最適。",
+      "ar": "صندوق ضوئي قماشي بدون إطار بتصميم نحيف، مثالي للإعلانات والإضاءة في المترو والمطار ومركز التسوق والسوبر ماركت ومواقف السيارات تحت الأرض."
+    },
+    "specs": {
+      "material": "Aluminum profile 6063, tension fabric front, aluminum back panel",
+      "thickness": "Frame wall ≥2mm",
+      "surface": "Reflective film or white powder coating on back panel",
+      "dimensions": "Depth 120-150mm, custom size",
+      "brightness": "3000±500 Lux, uniformity >85%",
+      "power": "<45 W/sqm"
+    }
+  },
+  {
+    "slug": "recessed-tension-lightbox",
+    "category": "lightbox",
+    "image": "/uploads/recessed-tension-lightbox.jpg",
+    "title": {
+      "en": "Recessed Tension Fabric Light Box",
+      "zh": "嵌入式拉布灯箱",
+      "es": "Caja de luz tensora empotrada",
+      "fr": "Caisson lumineux tendu encastré",
+      "de": "Einbau-Textil-Leuchtkasten",
+      "ja": "埋め込み型テンションライトボックス",
+      "ar": "صندوق ضوئي قماشي مدمج"
+    },
+    "desc": {
+      "en": "Recessed tension fabric light box with large format display, ideal for metro, airport, large venues and underground parking advertising & lighting.",
+      "zh": "嵌入式拉布灯箱，大画面显示，适用于地铁、机场、大型场馆及地下停车场广告宣传及照明。",
+      "es": "Caja de luz tensora empotrada con gran formato, ideal para publicidad e iluminación en metro, aeropuerto, grandes recintos y parking subterráneo.",
+      "fr": "Caisson lumineux tendu encastré avec grand format, idéal pour la publicité et l'éclairage en métro, aéroport, grands lieux et parking souterrain.",
+      "de": "Einbau-Textil-Leuchtkasten mit Großformat, ideal für Werbung und Beleuchtung in U-Bahn, Flughafen, großen Veranstaltungsorten und Tiefgarage.",
+      "ja": "埋め込み型テンションライトボックス、大型画面、地下鉄・空港・大型施設・地下駐車場の広告・照明に最適。",
+      "ar": "صندوق ضوئي قماشي مدمج بتنسيق كبير، مثالي للإعلانات والإضاءة في المترو والمطار والقاعات الكبيرة ومواقف السيارات تحت الأرض."
+    },
+    "specs": {
+      "material": "Aluminum profile frame & cover 6063, tension fabric",
+      "thickness": "Frame wall >2mm",
+      "surface": "Reflective film or white powder coating on back panel",
+      "dimensions": "Depth 120-150mm, large format",
+      "brightness": "3000±500 Lux, uniformity >85%",
+      "power": "<45 W/sqm",
+      "accessories": "Mirror stainless steel ceiling trim available"
+    }
+  },
+  {
+    "slug": "outdoor-tension-lightbox",
+    "category": "lightbox",
+    "image": "/uploads/lightbox.jpg",
+    "title": {
+      "en": "Outdoor Tension Fabric Light Box",
+      "zh": "户外拉布灯箱",
+      "es": "Caja de luz tensora exterior",
+      "fr": "Caisson lumineux tendu extérieur",
+      "de": "Outdoor Textil-Leuchtkasten",
+      "ja": "屋外用テンションライトボックス",
+      "ar": "صندوق ضوئي قماشي خارجي"
+    },
+    "desc": {
+      "en": "Outdoor tension fabric light box with unique waterproof structure. Available in standing, wall-mounted, single-sided and double-sided models for metro, airport, large venues and underground parking.",
+      "zh": "户外拉布灯箱，独特防水结构设计，有立式、壁挂、单面、双面等多种款式，适用于地铁、机场、大型场馆及地下停车场。",
+      "es": "Caja de luz tensora exterior con estructura impermeable única. Disponible en modelos de pie, pared, simple y doble cara para metro, aeropuerto, grandes recintos y parking subterráneo.",
+      "fr": "Caisson lumineux tendu extérieur avec structure étanche unique. Disponible en modèles sur pied, mural, simple et double face pour métro, aéroport, grands lieux et parking souterrain.",
+      "de": "Outdoor Textil-Leuchtkasten mit einzigartiger wasserdichter Struktur. Erhältlich als stehend, wandmontiert, einseitig und zweiseitig für U-Bahn, Flughafen, große Veranstaltungsorte und Tiefgarage.",
+      "ja": "屋外用テンションライトボックス、独自の防水構造。自立式・壁付け・片面・両面モデル対応、地下鉄・空港・大型施設・地下駐車場用。",
+      "ar": "صندوق ضوئي قماشي خارجي بهيكل فريد مقاوم للماء. متوفر بنماذج قائمة ومثبتة على الحائط وأحادية وثنائية الجانب للمترو والمطار والقاعات الكبيرة ومواقف السيارات تحت الأرض."
+    },
+    "specs": {
+      "material": "Aluminum profile frame & cover 6063, hot-dip galvanized steel support bracket, tension fabric",
+      "thickness": "Frame wall >2mm, powder coating ≥60um",
+      "surface": "Full body powder coating, custom color",
+      "ipRating": "IP54 waterproof",
+      "dimensions": "Depth 120-180mm, single/double-sided, standing/wall-mounted options",
+      "brightness": "3000±500 Lux, uniformity >85%",
+      "power": "<45 W/sqm per side"
+    }
+  },
+  {
+    "slug": "pillar-wrapped-lightbox",
+    "category": "lightbox",
+    "image": "/uploads/pillar-lightbox.jpg",
+    "title": {
+      "en": "Pillar-wrapped Light Box",
+      "zh": "包柱灯箱",
+      "es": "Caja de luz envolvente para pilares",
+      "fr": "Caisson lumineux gainant de pilier",
+      "de": "Pillar-Umfassung-Leuchtkasten",
+      "ja": "柱巻きライトボックス",
+      "ar": "صندوق ضوئي محيط بالأعمدة"
+    },
+    "desc": {
+      "en": "Pillar-wrapped light box custom-fit for on-site pillar dimensions. Available in framed or frameless tension fabric options for rail transit, railway stations, airports, large venues and underground parking.",
+      "zh": "包柱灯箱，根据现场柱体尺寸定制，有带边框拉布、无边框卡布款式，适用于轨道交通、火车站、机场、大型场馆及地下停车场。",
+      "es": "Caja de luz envolvente para pilares, tamaño personalizado según dimensiones del pilar. Opciones con marco o sin marco para transporte ferroviario, estaciones, aeropuertos, grandes recintos y parking subterráneo.",
+      "fr": "Caisson lumineux gainant de pilier, taille personnalisée selon dimensions du pilier. Options avec cadre ou sans cadre pour transport ferroviaire, gares, aéroports, grands lieux et parking souterrain.",
+      "de": "Pillar-Umfassung-Leuchtkasten, maßgeschneidert für vorhandene Pfeiler. Gerahmte oder rahmenlose Textiloptionen für Bahnverkehr, Bahnhöfe, Flughäfen, große Veranstaltungsorte und Tiefgarage.",
+      "ja": "柱巻きライトボックス、現場の柱寸法に合わせてカスタム。有孔フレームまたはフレームレステンションオプション、鉄道・駅・空港・大型施設・地下駐車場用。",
+      "ar": "صندوق ضوئي محيط بالأعمدة، حجم مخصص ليناسب أبعاد الأعمدة الموجودة. خيارات بإطار أو بدون إطار لخطوط السكك الحديدية والمحطات والمطارات والقاعات الكبيرة ومواقف السيارات تحت الأرض."
+    },
+    "specs": {
+      "material": "Aluminum profile 6063 frame/cover/decorative edge trim, back panel options: galvanized steel / aluminum / aluminum honeycomb",
+      "surface": "White film or white powder coating on back panel",
+      "dimensions": "Custom to fit on-site pillar, typically 1.5-3m W × 2.5-5m H × 120-150mm D",
+      "brightness": "LED backlight with Osram/Philips/Nichia chips",
+      "power": "Meanwell driver, 100-240V wide voltage",
+      "accessories": "Framed tension fabric or frameless tension fabric options"
+    }
+  },
+  {
+    "slug": "wall-mounted-led-display",
+    "category": "display",
+    "image": "/uploads/wall-mounted-led.jpg",
+    "title": {
+      "en": "Wall-mounted LED Display Screen",
+      "zh": "壁挂式LED广告屏",
+      "es": "Pantalla LED montada en pared",
+      "fr": "Écran LED mural",
+      "de": "Wandmontierte LED-Anzeige",
+      "ja": "壁取り付け型LEDディスプレイ",
+      "ar": "شاشة LED مثبتة على الحائط"
+    },
+    "desc": {
+      "en": "Wall-mounted LED display screen with COB packaging, high refresh rate and wide viewing angle. For metro, airport, shopping mall, exhibition hall and conference room information display.",
+      "zh": "壁挂式LED广告屏，COB封装，高刷新率、广视角，适用于地铁站、机场、商场、展厅及会议室信息发布。",
+      "es": "Pantalla LED montada en pared con encapsulado COB, alta frecuencia de actualización y ángulo de visión amplio. Para metro, aeropuerto, centro comercial, sala de exposiciones y sala de conferencias.",
+      "fr": "Écran LED mural avec encapsulation COB, taux de rafraîchissement élevé et large angle de vision. Pour métro, aéroport, centre commercial, hall d'exposition et salle de conférence.",
+      "de": "Wandmontierte LED-Anzeige mit COB-Gehäuse, hoher Bildwiederholrate und weitem Betrachtungswinkel. Für U-Bahn, Flughafen, Einkaufszentrum, Ausstellungshalle und Konferenzraum.",
+      "ja": "壁取り付け型LEDディスプレイ、COBパッケージ、高リフレッシュレート・広視野角、地下鉄・空港・ショッピングモール・展示ホール・会議室の情報表示用。",
+      "ar": "شاشة LED مثبتة على الحائط بتغليف COB، معدل تحديث عالي وزاوية رؤية واسعة. للمترو والمطار ومركز التسوق وقاعة العرض وغرفة الاجتماعات."
+    },
+    "specs": {
+      "material": "Standard LED modules, COB packaging",
+      "dimensions": "Pixel pitch P1.2-P2.5, custom size from standard modules",
+      "brightness": "High refresh rate, high contrast, wide viewing angle",
+      "power": "Low power consumption, long lifespan"
+    }
+  },
+  {
+    "slug": "pillar-led-display",
+    "category": "display",
+    "image": "/uploads/pillar-led-display.jpg",
+    "title": {
+      "en": "Pillar-wrapped LED Display",
+      "zh": "包柱式LED显示屏",
+      "es": "Pantalla LED envolvente para pilares",
+      "fr": "Écran LED enveloppant pour piliers",
+      "de": "Umhüllende LED-Anzeige für Säulen",
+      "ja": "柱巻き型LEDディスプレイ",
+      "ar": "شاشة LED مغلفة للأعمدة"
+    },
+    "desc": {
+      "en": "Pillar-wrapped LED display screen with COB packaging, pixel pitch P1.2-P2.5. Borderless splicing design for metro, airport, high-speed rail station and large venues.",
+      "zh": "包柱式LED显示屏，COB封装，分辨率P1.2-2.5。无边框拼装设计，适用于机场、地铁、高铁站、大型场馆等。",
+      "es": "Pantalla LED envolvente para pilares con encapsulado COB, paso de píxel P1.2-P2.5. Diseño sin bordes para metro, aeropuerto, estación de tren de alta velocidad y grandes recintos.",
+      "fr": "Écran LED enveloppant pour piliers avec encapsulation COB, pas de pixel P1.2-P2.5. Conception sans bordure pour métro, aéroport, gare TGV et grands espaces.",
+      "de": "Umhüllende LED-Anzeige für Säulen mit COB-Gehäuse, Pixelabstand P1.2-P2.5. Randloses Design für U-Bahn, Flughafen, Hochgeschwindigkeitsbahnhof und große Veranstaltungsorte.",
+      "ja": "柱巻き型LEDディスプレイ、COBパッケージ、ピクセルピッチP1.2-P2.5。縁なし拼接設計、地下鉄・空港・高速鉄道駅・大型会場向け。",
+      "ar": "شاشة LED مغلفة للأعمدة بتغليف COB، درجة بكسل P1.2-P2.5. تصميم بلا حدود للمترو والمطار ومحطة السكك الحديدية عالية السرعة والأماكن الكبيرة."
+    },
+    "specs": {
+      "material": "COB LED modules, borderless splicing design",
+      "dimensions": "Length 1.5-3m, Width 1.5-3m, Height 2.5-5m",
+      "brightness": "High refresh rate, high contrast, wide viewing angle",
+      "power": "Low power consumption, long lifespan"
+    }
+  },
+  {
+    "slug": "wayfinding-signage",
+    "category": "sign",
+    "image": "/uploads/signage.jpg",
+    "title": {
+      "en": "Wayfinding Signage",
+      "zh": "导视标识标牌",
+      "es": "Señalización de orientación",
+      "fr": "Signalétique d'orientation",
+      "de": "Leitsystem-Schilder",
+      "ja": "案内サイン",
+      "ar": "لوحات الإرشاد"
+    },
+    "desc": {
+      "en": "Outdoor wayfinding signage and metal sign structure for city projects, airport and urban furniture.",
+      "zh": "户外导向标识及金属标牌结构，适用于城市项目、机场及城市家具。",
+      "es": "Señalización de orientación exterior y estructuras metálicas para proyectos urbanos, aeropuerto y mobiliario urbano.",
+      "fr": "Signalétique d'orientation extérieure et structures métalliques pour projets urbains, aéroport et mobilier urbain.",
+      "de": "Außen-Orientierungsschilder und Metallkonstruktionen für Stadtprojekte, Flughafen und Stadtmöbel.",
+      "ja": "屋外形案内標識・金属構造、都市プロジェクト・空港・都市家具向け。",
+      "ar": "لوحات إرشاد خارجية وهياكل معدنية لمشاريع المدن والمطار وأثاث المدن."
+    },
+    "specs": {
+      "material": "Metal sign structure",
+      "dimensions": "Custom per city project requirement"
+    }
+  },
+  {
+    "slug": "hanging-wayfinding-sign",
+    "category": "sign",
+    "image": "/uploads/hanging-sign.jpg",
+    "title": {
+      "en": "Hanging Wayfinding Sign",
+      "zh": "悬挂式导向标识",
+      "es": "Señal de orientación colgante",
+      "fr": "Panneau de signalétique suspendu",
+      "de": "Hängendes Leitsystem-Schild",
+      "ja": "吊り下げ式案内標識",
+      "ar": "لوحة إرشاد معلقة"
+    },
+    "desc": {
+      "en": "Hanging wayfinding sign for metro, airport, shopping mall, supermarket and underground parking directional guidance.",
+      "zh": "悬挂式导向标识，适用于地铁、机场、大型商场、超市及地下停车场导向。",
+      "es": "Señal de orientación colgante para metro, aeropuerto, centro comercial, supermercado y parking subterráneo.",
+      "fr": "Panneau de signalétique suspendu pour métro, aéroport, centre commercial, supermarché et parking souterrain.",
+      "de": "Hängendes Leitsystem-Schild für U-Bahn, Flughafen, Einkaufszentrum, Supermarkt und Tiefgarage.",
+      "ja": "吊り下げ式案内標識、地下鉄・空港・ショッピングモール・スーパー・地下駐車場用。",
+      "ar": "لوحة إرشاد معلقة للمترو والمطار ومركز التسوق والسوبر ماركت ومواقف السيارات تحت الأرض."
+    },
+    "specs": {
+      "material": "Aluminum profile frame 6063T5, 3mm PC panel",
+      "thickness": "PC panel 3mm",
+      "dimensions": "L 1-3m × H 330-500mm × D 90-100mm",
+      "brightness": ">800 Lux"
+    }
+  },
+  {
+    "slug": "led-lcd-screen",
+    "category": "display",
+    "image": "/uploads/ledscreen.jpg",
+    "title": {
+      "en": "LED / LCD Screen",
+      "zh": "LED / LCD显示屏",
+      "es": "Pantalla LED y LCD",
+      "fr": "Écran LED et LCD",
+      "de": "LED- und LCD-Displays",
+      "ja": "LED・LCDディスプレイ",
+      "ar": "شاشات LED و LCD"
+    },
+    "desc": {
+      "en": "Custom metal frames for 61-86 inch LED & LCD screens, our core advantage product for outdoor, airport and urban furniture projects.",
+      "zh": "61-86英寸LED/LCD显示屏金属框架，我厂核心优势产品，适用于户外、机场及城市家具项目。",
+      "es": "Marcos metálicos personalizados para pantallas LED y LCD de 61-86 pulgadas, nuestro producto principal para proyectos exteriores, aeroportuarios y urbanos.",
+      "fr": "Cadres métalliques sur-mesure pour écrans LED-LCD 61-86 pouces, notre produit phare pour projets extérieurs, aéroportuaires et urbains.",
+      "de": "Kundenspezifische Metallrahmen für 61-86 Zoll LED-LCD-Displays, unser Kernprodukt für Außen-, Flughafen- und Stadtprojekte.",
+      "ja": "61-86インチLED・LCDディスプレイ用特注金属フレーム、屋外・空港・都市プロジェクト向けの主力製品。",
+      "ar": "أطر معدنية مخصصة لشاشات LED و LCD مقاس 61-86 بوصة، منتجنا الأساسي للمشاريع الخارجية والمطارات والمدن."
+    },
+    "specs": {
+      "material": "Metal frame",
+      "dimensions": "Compatible with 61-86 inch LED/LCD screens"
+    }
+  },
+  {
+    "slug": "bus-shelter",
+    "category": "bus",
+    "image": "/uploads/busshelter.jpg",
+    "title": {
+      "en": "Bus Shelter",
+      "zh": "公交候车亭",
+      "es": "Refugio de autobús",
+      "fr": "Abri bus",
+      "de": "Bushaltestelle",
+      "ja": "バス待合所",
+      "ar": "ملجأ الحافلات"
+    },
+    "desc": {
+      "en": "Outdoor bus shelter with integrated advertising panel, widely used in urban furniture and city public space projects.",
+      "zh": "户外公交候车亭，带广告面板，广泛应用于城市家具及城市公共空间项目。",
+      "es": "Refugio de autobús exterior con panel publicitario integrado, ampliamente utilizado en mobiliario urbano y proyectos de espacio público.",
+      "fr": "Abri bus extérieur avec panneau publicitaire intégré, largement utilisé dans le mobilier urbain et les projets d'espace public.",
+      "de": "Außen-Bushaltestelle mit integrierter Werbetafel, weit verbreitet im Stadtmöbel- und öffentlichen Raumprojekten.",
+      "ja": "屋外用バス待合所、広告パネル一体型、都市家具・都市公共空間プロジェクトで広く使用。",
+      "ar": "مأوى حافلات خارجي بلوحة إعلانية مدمجة، يستخدم على نطاق واسع في أثاث المدن ومشاريع الفضاء العام."
+    },
+    "specs": {
+      "accessories": "Integrated advertising panel",
+      "dimensions": "Custom per project requirement"
+    }
+  },
+  {
+    "slug": "custom-steel-aluminum-structure",
+    "category": "custom-steel-aluminum",
+    "image": "/uploads/metal-struct.jpg",
+    "title": {
+      "en": "Custom Steel & Aluminum Structure",
+      "zh": "定制钢铝金属结构",
+      "es": "Estructura personalizada acero y aluminio",
+      "fr": "Structure acier aluminium sur mesure",
+      "de": "Kundenspezifische Stahl-Aluminium-Konstruktion",
+      "ja": "特注スチール・アルミ構造物",
+      "ar": "هياكل فولاذ وألومنيوم مخصصة"
+    },
+    "desc": {
+      "en": "OEM custom metal fabrication for steel & aluminum structures, serving outdoor, airport and urban furniture projects.",
+      "zh": "OEM定制金属加工，钢铝各类结构件，服务于户外、机场及城市家具项目。",
+      "es": "Fabricación metálica OEM personalizada para estructuras de acero y aluminio, al servicio de proyectos exteriores, aeroportuarios y urbanos.",
+      "fr": "Fabrication métallique OEM sur-mesure pour structures acier-aluminium, au service des projets extérieurs, aéroportuaires et urbains.",
+      "de": "OEM-Metallfertigung nach Kundenwunsch für Stahl-Aluminium-Konstruktionen, für Außen-, Flughafen- und Stadtprojekte.",
+      "ja": "OEM特注金属製作、スチール・アルミ各種構造物、屋外・空港・都市プロジェクト向け。",
+      "ar": "تصنيع معدني مخصص OEM لهياكل الفولاذ والألومنيوم، يخدم المشاريع الخارجية والمطارات والمدن."
+    },
+    "specs": {
+      "material": "Steel & aluminum",
+      "dimensions": "Fully custom per engineering drawing",
+      "accessories": "OEM custom metal fabrication service"
+    }
+  },
+  {
+    "slug": "other-products",
+    "category": "other",
+    "image": "/uploads/placeholder.jpg",
+    "title": {
+      "en": "Other Products",
+      "zh": "其他产品",
+      "es": "Otros productos",
+      "fr": "Autres produits",
+      "de": "Sonstige Produkte",
+      "ja": "その他製品",
+      "ar": "منتجات أخرى"
+    },
+    "desc": {
+      "en": "Custom outdoor, airport and urban furniture manufacturing service, covering various product types beyond our main product line.",
+      "zh": "定制户外、机场及城市家具制造服务，涵盖主营产品线以外的各类产品。",
+      "es": "Servicio de fabricación de mobiliario exterior, aeroportuario y urbano personalizado, cubriendo diversos tipos de productos más allá de nuestra línea principal.",
+      "fr": "Service de fabrication de mobilier extérieur, aéroportuaire et urbain sur-mesure, couvrant divers types de produits au-delà de notre gamme principale.",
+      "de": "Fertigungsservice für kundenspezifische Außen-, Flughafen- und Stadtmöbel, der verschiedene Produktarten außerhalb unserer Hauptlinie abdeckt.",
+      "ja": "屋外・空港・都市家具の特注製造サービス、主力製品以外の各種製品に対応。",
+      "ar": "خدمة تصنيع أثاث خارجي ومطار وحضري مخصص، تغطي أنواع المنتجات المختلفة بما يتجاوز خط إنتاجنا الرئيسي."
+    },
+    "specs": {
+      "dimensions": "Custom per product type",
+      "accessories": "Full custom OEM/ODM service"
+    }
+  }
+]
