@@ -861,15 +861,14 @@ function renderProducts(){
       const slug = item.slug || (titleText).toLowerCase().replace(/\s+/g,"-");
       const card = document.createElement("div");
       card.className = "product-card";
-      card.onclick = ()=> window.location.href = `/product/${slug}`;
-      card.innerHTML = `
-        <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(titleText)}" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=No+Image'">
-        <div class="card-body">
-          <h3>${escapeHtml(titleText)}</h3>
-          <p>${escapeHtml(descText)}</p>
-          <a href="/product/${slug}" class="card-link">View Details</a>
-        </div>
-      `;
+      card.onclick = function() { window.location.href = "/product/" + slug; };
+      card.innerHTML =
+        '<img src="' + escapeHtml(imgSrc) + '" alt="' + escapeHtml(titleText) + '" loading="lazy" onerror="this.src=\'https://via.placeholder.com/600x400?text=No+Image\'">' +
+        '<div class="card-body">' +
+        '<h3>' + escapeHtml(titleText) + '</h3>' +
+        '<p>' + escapeHtml(descText) + '</p>' +
+        '<a href="/product/' + slug + '" class="card-link">View Details</a>' +
+        '</div>';
       catGrid.appendChild(card);
     });
 
