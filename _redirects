@@ -1,2 +1,54 @@
+# 多语言 URL 重写规则（放在最前面，优先匹配）
+/zh / 200
+/es / 200
+/fr / 200
+/de / 200
+/ja / 200
+/ar / 200
+
+/products/zh /products 200
+/products/es /products 200
+/products/fr /products 200
+/products/de /products 200
+/products/ja /products 200
+/products/ar /products 200
+
+/cases/zh /cases 200
+/cases/es /cases 200
+/cases/fr /cases 200
+/cases/de /cases 200
+/cases/ja /cases 200
+/cases/ar /cases 200
+
+/certificates/zh /certificates 200
+/certificates/es /certificates 200
+/certificates/fr /certificates 200
+/certificates/de /certificates 200
+/certificates/ja /certificates 200
+/certificates/ar /certificates 200
+
+/faq/zh /faq 200
+/faq/es /faq 200
+/faq/fr /faq 200
+/faq/de /faq 200
+/faq/ja /faq 200
+/faq/ar /faq 200
+
+/about/zh /about 200
+/about/es /about 200
+/about/fr /about 200
+/about/de /about 200
+/about/ja /about 200
+/about/ar /about 200
+
+/contact/zh /contact 200
+/contact/es /contact 200
+/contact/fr /contact 200
+/contact/de /contact 200
+/contact/ja /contact 200
+/contact/ar /contact 200
+
+# 现有规则
+/product  /product.html  200
 /admin/*  /admin/index.html  200
 /*        /404.html  404

@@ -15,6 +15,15 @@
     <meta name="description" content="Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures, outdoor, urban and airport furniture, export to Europe, Middle East & America.">
     <link rel="stylesheet" href="./style.css">
     <link rel="canonical" href="https://www.zhanxinglobal.com/">
+    <!-- hreflang 多语言标签 -->
+    <link rel="alternate" hreflang="en" href="https://www.zhanxinglobal.com/">
+    <link rel="alternate" hreflang="zh" href="https://www.zhanxinglobal.com/zh">
+    <link rel="alternate" hreflang="es" href="https://www.zhanxinglobal.com/es">
+    <link rel="alternate" hreflang="fr" href="https://www.zhanxinglobal.com/fr">
+    <link rel="alternate" hreflang="de" href="https://www.zhanxinglobal.com/de">
+    <link rel="alternate" hreflang="ja" href="https://www.zhanxinglobal.com/ja">
+    <link rel="alternate" hreflang="ar" href="https://www.zhanxinglobal.com/ar">
+    <link rel="alternate" hreflang="x-default" href="https://www.zhanxinglobal.com/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta property="og:title" content="ZHANXIN GLOBAL - SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD.">
     <meta property="og:description" content="Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures, outdoor, urban and airport furniture, export to Europe, Middle East & America.">
@@ -916,8 +925,22 @@ const langSelect = document.getElementById('langSelect');
 langSelect.addEventListener('change', function(){
     setLang(this.value);
 })
-//页面默认英文
-setLang('en');
+
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
+}
+
+const initialLang = getLangFromPath();
+setLang(initialLang);
+langSelect.value = initialLang;
 // ========== 新增移动端菜单逻辑 ==========
 const mobileBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
