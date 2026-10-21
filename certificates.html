@@ -46,7 +46,7 @@ select,select option {color:#222;background:#fff;}
 .certs-grid{max-width:1200px;margin:0 auto;padding:2rem 5%;display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:2rem;}
 .cert-card{border:1px solid var(--border-gray);border-radius:12px;overflow:hidden;text-align:center;transition:transform 0.2s, box-shadow 0.2s;background:#fff;}
 .cert-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(15,42,68,0.12);}
-.cert-card img{width:100%;height:380px;object-fit:cover;display:block;background:#f7f8fa;cursor:pointer;}
+.cert-card img{width:100%;height:auto;max-height:500px;object-fit:contain;display:block;background:#fff;cursor:pointer;padding:1rem;}
 .cert-body{padding:1.2rem;}
 .cert-body h3{color:var(--primary);font-size:1.1rem;margin-bottom:0.3rem;}
 .cert-body p{color:#666;font-size:0.9rem;}
