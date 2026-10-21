@@ -298,33 +298,6 @@
     }
   },
   {
-    "slug": "led-lcd-screen",
-    "category": "display",
-    "image": "/uploads/ledscreen.jpg",
-    "title": {
-      "en": "LED / LCD Screen",
-      "zh": "LED / LCD显示屏",
-      "es": "Pantalla LED y LCD",
-      "fr": "Écran LED et LCD",
-      "de": "LED- und LCD-Displays",
-      "ja": "LED・LCDディスプレイ",
-      "ar": "شاشات LED و LCD"
-    },
-    "desc": {
-      "en": "Custom metal frames for 61-86 inch LED & LCD screens, our core advantage product for outdoor, airport and urban furniture projects.",
-      "zh": "61-86英寸LED/LCD显示屏金属框架，我厂核心优势产品，适用于户外、机场及城市家具项目。",
-      "es": "Marcos metálicos personalizados para pantallas LED y LCD de 61-86 pulgadas, nuestro producto principal para proyectos exteriores, aeroportuarios y urbanos.",
-      "fr": "Cadres métalliques sur-mesure pour écrans LED-LCD 61-86 pouces, notre produit phare pour projets extérieurs, aéroportuaires et urbains.",
-      "de": "Kundenspezifische Metallrahmen für 61-86 Zoll LED-LCD-Displays, unser Kernprodukt für Außen-, Flughafen- und Stadtprojekte.",
-      "ja": "61-86インチLED・LCDディスプレイ用特注金属フレーム、屋外・空港・都市プロジェクト向けの主力製品。",
-      "ar": "أطر معدنية مخصصة لشاشات LED و LCD مقاس 61-86 بوصة، منتجنا الأساسي للمشاريع الخارجية والمطارات والمدن."
-    },
-    "specs": {
-      "material": "Metal frame",
-      "dimensions": "Compatible with 61-86 inch LED/LCD screens"
-    }
-  },
-  {
     "slug": "bus-shelter",
     "category": "bus",
     "image": "/uploads/busshelter.jpg",
