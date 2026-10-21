@@ -184,6 +184,35 @@
     }
   },
   {
+    "slug": "pillar-led-display",
+    "category": "display",
+    "image": "/uploads/pillar-led-display.jpg",
+    "title": {
+      "en": "Pillar-wrapped LED Display",
+      "zh": "包柱式LED显示屏",
+      "es": "Pantalla LED envolvente para pilares",
+      "fr": "Écran LED enveloppant pour piliers",
+      "de": "Umhüllende LED-Anzeige für Säulen",
+      "ja": "柱巻き型LEDディスプレイ",
+      "ar": "شاشة LED مغلفة للأعمدة"
+    },
+    "desc": {
+      "en": "Pillar-wrapped LED display screen with COB packaging, pixel pitch P1.2-P2.5. Borderless splicing design for metro, airport, high-speed rail station and large venues.",
+      "zh": "包柱式LED显示屏，COB封装，分辨率P1.2-2.5。无边框拼装设计，适用于机场、地铁、高铁站、大型场馆等。",
+      "es": "Pantalla LED envolvente para pilares con encapsulado COB, paso de píxel P1.2-P2.5. Diseño sin bordes para metro, aeropuerto, estación de tren de alta velocidad y grandes recintos.",
+      "fr": "Écran LED enveloppant pour piliers avec encapsulation COB, pas de pixel P1.2-P2.5. Conception sans bordure pour métro, aéroport, gare TGV et grands espaces.",
+      "de": "Umhüllende LED-Anzeige für Säulen mit COB-Gehäuse, Pixelabstand P1.2-P2.5. Randloses Design für U-Bahn, Flughafen, Hochgeschwindigkeitsbahnhof und große Veranstaltungsorte.",
+      "ja": "柱巻き型LEDディスプレイ、COBパッケージ、ピクセルピッチP1.2-P2.5。縁なし拼接設計、地下鉄・空港・高速鉄道駅・大型会場向け。",
+      "ar": "شاشة LED مغلفة للأعمدة بتغليف COB، درجة بكسل P1.2-P2.5. تصميم بلا حدود للمترو والمطار ومحطة السكك الحديدية عالية السرعة والأماكن الكبيرة."
+    },
+    "specs": {
+      "material": "COB LED modules, borderless splicing design",
+      "dimensions": "Length 1.5-3m, Width 1.5-3m, Height 2.5-5m",
+      "brightness": "High refresh rate, high contrast, wide viewing angle",
+      "power": "Low power consumption, long lifespan"
+    }
+  },
+  {
     "slug": "wayfinding-signage",
     "category": "sign",
     "image": "/uploads/signage.jpg",
