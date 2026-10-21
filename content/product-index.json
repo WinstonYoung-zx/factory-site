@@ -192,7 +192,7 @@
       "zh": "导视标识标牌",
       "es": "Señalización de orientación",
       "fr": "Signalétique d'orientation",
-      "de": "Leitsystem‑Schilder",
+      "de": "Leitsystem-Schilder",
       "ja": "案内サイン",
       "ar": "لوحات الإرشاد"
     },
@@ -240,7 +240,7 @@
     }
   },
   {
-    "slug": "led‑lcd‑screen",
+    "slug": "led-lcd-screen",
     "category": "display",
     "image": "/uploads/ledscreen.jpg",
     "title": {
@@ -248,7 +248,7 @@
       "zh": "LED / LCD显示屏",
       "es": "Pantalla LED y LCD",
       "fr": "Écran LED et LCD",
-      "de": "LED‑ und LCD‑Displays",
+      "de": "LED- und LCD-Displays",
       "ja": "LED・LCDディスプレイ",
       "ar": "شاشات LED و LCD"
     },
@@ -267,7 +267,7 @@
     }
   },
   {
-    "slug": "bus‑shelter",
+    "slug": "bus-shelter",
     "category": "bus",
     "image": "/uploads/busshelter.jpg",
     "title": {
@@ -294,15 +294,15 @@
     }
   },
   {
-    "slug": "custom‑steel‑aluminum‑structure",
-    "category": "custom‑steel‑aluminum",
-    "image": "/uploads/metal‑struct.jpg",
+    "slug": "custom-steel-aluminum-structure",
+    "category": "custom-steel-aluminum",
+    "image": "/uploads/metal-struct.jpg",
     "title": {
       "en": "Custom Steel & Aluminum Structure",
       "zh": "定制钢铝金属结构",
       "es": "Estructura personalizada acero y aluminio",
       "fr": "Structure acier aluminium sur mesure",
-      "de": "Kundenspezifische Stahl‑Aluminium‑Konstruktion",
+      "de": "Kundenspezifische Stahl-Aluminium-Konstruktion",
       "ja": "特注スチール・アルミ構造物",
       "ar": "هياكل فولاذ وألومنيوم مخصصة"
     },
@@ -322,7 +322,7 @@
     }
   },
   {
-    "slug": "other‑products",
+    "slug": "other-products",
     "category": "other",
     "image": "/uploads/placeholder.jpg",
     "title": {
