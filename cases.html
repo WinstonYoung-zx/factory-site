@@ -115,11 +115,24 @@ footer a{color:#ffb040;text-decoration:none;}
     </div>
   </div>
   <div class="case-card">
-    <img src="/uploads/placeholder.jpg" alt="Airport Signage Project">
+    <div class="project-carousel" style="position: relative; overflow: hidden; height: 220px;">
+      <img src="/uploads/wayfinding-taizhou-airport.jpg" alt="Taizhou Airport Wayfinding" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;">
+      <img src="/uploads/wayfinding-metro-exit.jpg" alt="Metro Exit Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <img src="/uploads/wayfinding-hub-hanging.jpg" alt="Hub Hanging Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <img src="/uploads/wayfinding-metro-standing.jpg" alt="Metro Standing Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <img src="/uploads/wayfinding-platform-exit.jpg" alt="Station Platform Exit Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <div style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:8px;">
+        <span class="carousel-dot active" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.8; cursor:pointer;"></span>
+        <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
+        <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
+        <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
+        <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
+      </div>
+    </div>
     <div class="case-body">
-      <h3>Airport Wayfinding Signage</h3>
-      <p>Complete wayfinding system for international airport terminals.</p>
-      <span class="case-tag">Airport</span>
+      <h3>Metro, Airport & Venue Wayfinding Signage</h3>
+      <p>Complete wayfinding & signage systems for metro, airport, high-speed rail and large venue projects.</p>
+      <span class="case-tag">Wayfinding</span>
     </div>
   </div>
   <div class="case-card">
@@ -148,31 +161,33 @@ footer a{color:#ffb040;text-decoration:none;}
   <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/privacy">Privacy Policy</a></p>
 </footer>
 <script>
-// 轮播图功能
+// 轮播图功能（支持多个独立轮播）
 (function() {
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
-    let currentSlide = 0;
-    
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.opacity = i === index ? '1' : '0';
-        });
-        dots.forEach((dot, i) => {
-            dot.style.opacity = i === index ? '0.8' : '0.4';
-        });
-        currentSlide = index;
-    }
-    
-    // 自动轮播
-    setInterval(() => {
-        showSlide((currentSlide + 1) % slides.length);
-    }, 3000);
-    
-    // 点击圆点切换
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            showSlide(index);
+    document.querySelectorAll('.project-carousel').forEach(function(carousel) {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dots = carousel.querySelectorAll('.carousel-dot');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            slides.forEach(function(slide, i) {
+                slide.style.opacity = i === index ? '1' : '0';
+            });
+            dots.forEach(function(dot, i) {
+                dot.style.opacity = i === index ? '0.8' : '0.4';
+            });
+            currentSlide = index;
+        }
+        
+        // 自动轮播
+        setInterval(function() {
+            showSlide((currentSlide + 1) % slides.length);
+        }, 3000);
+        
+        // 点击圆点切换
+        dots.forEach(function(dot, index) {
+            dot.addEventListener('click', function() {
+                showSlide(index);
+            });
         });
     });
 })();
