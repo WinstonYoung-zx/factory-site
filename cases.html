@@ -158,11 +158,20 @@ footer a{color:#ffb040;text-decoration:none;}
       <span class="case-tag">LED Display</span>
     </div>
   </div>
-  <div class="case-card">
-    <img src="/uploads/busshelter.jpg" alt="Bus Shelter Project">
+  <div class="case-card" style="grid-column: span 2;">
+    <div class="project-carousel" style="position: relative; overflow: hidden; aspect-ratio: 3/2;">
+      <img src="/uploads/busshelter-battery.jpg" alt="City Bus Shelter Product" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;">
+      <img src="/uploads/busshelter-smart-carousel.jpg" alt="City Bus Shelter Diagram" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <img src="/uploads/busshelter-ship.jpg" alt="City Bus Shelter Shipping" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <div style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:8px;">
+        <span class="carousel-dot active" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.8; cursor:pointer;"></span>
+        <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
+        <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
+      </div>
+    </div>
     <div class="case-body">
       <h3>City Bus Shelter</h3>
-      <p>200+ bus shelters with integrated advertising panels for urban projects.</p>
+      <p>200+ bus shelters with integrated advertising panels, solar roofs and smart charging seats for urban projects.</p>
       <span class="case-tag">Urban Furniture</span>
     </div>
   </div>
