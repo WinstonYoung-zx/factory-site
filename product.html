@@ -461,7 +461,7 @@ const slug = urlParams.get("slug");
 const box = document.getElementById("detailBox");
 async function loadDetail(){
   try{
-    const res = await fetch("/content/product-index.json");
+    const res = await fetch("/content/product-index.json?v=20261101");
     if(!res.ok) throw new Error();
     const list = await res.json();
     const item = list.find(p=>(p.slug || p.title?.en?.toLowerCase().replace(/\s+/g,"-")) === slug);

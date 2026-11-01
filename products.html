@@ -917,7 +917,7 @@ productSearch.addEventListener("input",function(){
 // ========= 核心修改：请求 /content/product-index.json =========
 async function loadProducts(){
   try{
-    const res = await fetch("/content/product-index.json");
+    const res = await fetch("/content/product-index.json?v=20261101");
     if(!res.ok) throw new Error("json load fail");
     allProducts = await res.json();
     renderCategoryOptions(allProducts);
