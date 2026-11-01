@@ -213,6 +213,35 @@
     }
   },
   {
+    "slug": "hanging-led-display",
+    "category": "display",
+    "image": "/uploads/hanging-led-display.jpg",
+    "title": {
+      "en": "Hanging LED Display Screen",
+      "zh": "悬挂式LED显示屏",
+      "es": "Pantalla LED colgante",
+      "fr": "Écran LED suspendu",
+      "de": "Hängende LED-Anzeige",
+      "ja": "吊り下げ型LEDディスプレイ",
+      "ar": "شاشة LED معلقة"
+    },
+    "desc": {
+      "en": "Hanging LED display screen with COB packaging, ultra-thin and borderless design. Pixel pitch P1.2-P2.5. For airport, high-speed rail station, large venue advertising and promotion.",
+      "zh": "悬挂式LED显示屏，COB封装，超薄无边框设计，分辨率P1.2-2.5。适用于机场、高铁站、大型场馆宣传广告等。",
+      "es": "Pantalla LED colgante con encapsulado COB, diseño ultrafino sin bordes. Paso de píxel P1.2-P2.5. Para publicidad en aeropuertos, estaciones de tren de alta velocidad y grandes recintos.",
+      "fr": "Écran LED suspendu avec encapsulation COB, design ultra-fin sans bordure. Pas de pixel P1.2-P2.5. Pour la publicité dans les aéroports, gares TGV et grands espaces.",
+      "de": "Hängende LED-Anzeige mit COB-Gehäuse, ultradünnes randloses Design. Pixelabstand P1.2-P2.5. Für Werbung in Flughäfen, Hochgeschwindigkeitsbahnhöfen und großen Veranstaltungsorten.",
+      "ja": "吊り下げ型LEDディスプレイ、COBパッケージ、超薄型縁なしデザイン、ピクセルピッチP1.2-P2.5。空港・高速鉄道駅・大型会場での広告宣伝用。",
+      "ar": "شاشة LED معلقة بتغليف COB، تصميم رفيع جداً بلا حدود. درجة بكسل P1.2-P2.5. للإعلان في المطارات ومحطات السكك الحديدية عالية السرعة والأماكن الكبيرة."
+    },
+    "specs": {
+      "material": "COB LED modules, ultra-thin borderless design",
+      "dimensions": "Length 3-12m, Height 2.5-5m, Thickness 80-120mm",
+      "brightness": "High refresh rate, high contrast, wide viewing angle",
+      "power": "Low power consumption, long lifespan"
+    }
+  },
+  {
     "slug": "wayfinding-signage",
     "category": "sign",
     "image": "/uploads/signage.jpg",
