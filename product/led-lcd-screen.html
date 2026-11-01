@@ -97,9 +97,6 @@ select,select option {color:#222;background:#fff;}
 .breadcrumb span{margin:0 6px;color:#888;}
 .container{max-width:1400px;margin:0 auto;padding:3rem 5%;display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
 .img-box img{width:100%;border-radius:12px;object-fit:cover;}
-.thumb-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;}
-.thumb-item{width:92px;height:70px;object-fit:cover;border-radius:8px;cursor:pointer;border:2px solid transparent;opacity:.65;transition:opacity .2s,border-color .2s;}
-.thumb-item.active{opacity:1;border-color:var(--accent);}
 #mainImg{transition:opacity .4s ease;}
 .info-box h1{color:var(--primary);font-size:2rem;margin-bottom:1rem;}
 .info-box .cate{display:inline-block;background:#e8edf3;color:var(--primary);padding:6px 12px;border-radius:20px;font-size:0.9rem;margin-bottom:1.5rem;}
@@ -155,7 +152,6 @@ footer a{color:#ffb040;text-decoration:none;}
 <div class="container">
   <div class="img-box">
     <img id="mainImg" src="/uploads/led-lcd-airport.jpg?v=20261102" alt="LCD Advertising Machine" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
-    <div class="thumb-row" id="thumbRow"></div>
   </div>
   <div class="info-box">
     <h1>LCD Advertising Machine</h1>
@@ -258,20 +254,10 @@ function showGallery(i){
       img.style.opacity = 1;
     }, 200);
   }
-  document.querySelectorAll('.thumb-item').forEach(function(t, k){ t.classList.toggle('active', k === gIndex); });
 }
 function nextGallery(){ showGallery(gIndex + 1); }
 (function initGallery(){
-  const row = document.getElementById('thumbRow');
-  if(!row) return;
-  galleryImages.forEach(function(g, k){
-    const t = document.createElement('img');
-    t.className = 'thumb-item' + (k === 0 ? ' active' : '');
-    t.src = g.src; t.alt = g.alt;
-    t.onclick = function(){ showGallery(k); };
-    row.appendChild(t);
-  });
-  // 自动轮播
+  // 单窗口自动轮播：仅在同一个主图窗口中循环切换，无下方缩略图窗口
   gTimer = setInterval(nextGallery, 3500);
   const box = document.querySelector('.img-box');
   if(box){
