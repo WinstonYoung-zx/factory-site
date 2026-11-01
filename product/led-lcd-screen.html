@@ -100,6 +100,7 @@ select,select option {color:#222;background:#fff;}
 .thumb-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;}
 .thumb-item{width:92px;height:70px;object-fit:cover;border-radius:8px;cursor:pointer;border:2px solid transparent;opacity:.65;transition:opacity .2s,border-color .2s;}
 .thumb-item.active{opacity:1;border-color:var(--accent);}
+#mainImg{transition:opacity .4s ease;}
 .info-box h1{color:var(--primary);font-size:2rem;margin-bottom:1rem;}
 .info-box .cate{display:inline-block;background:#e8edf3;color:var(--primary);padding:6px 12px;border-radius:20px;font-size:0.9rem;margin-bottom:1.5rem;}
 .info-box p{line-height:1.8;color:#444;margin-bottom:2rem;font-size:1.05rem;}
@@ -154,10 +155,7 @@ footer a{color:#ffb040;text-decoration:none;}
 <div class="container">
   <div class="img-box">
     <img id="mainImg" src="/uploads/led-lcd-airport.jpg?v=20261101" alt="LCD Advertising Machine" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
-    <div class="thumb-row">
-      <img class="thumb-item active" src="/uploads/led-lcd-airport.jpg?v=20261101" alt="LCD Advertising Machine - Airport" onclick="setMainImg('/uploads/led-lcd-airport.jpg?v=20261101', 0)">
-      <img class="thumb-item" src="/uploads/led-lcd-parking.jpg?v=20261101" alt="LCD Advertising Machine - Parking" onclick="setMainImg('/uploads/led-lcd-parking.jpg?v=20261101', 1)">
-    </div>
+    <div class="thumb-row" id="thumbRow"></div>
   </div>
   <div class="info-box">
     <h1>LCD Advertising Machine</h1>
@@ -243,12 +241,44 @@ function setLang(lang) {
 
 langSelect.addEventListener('change', () => setLang(langSelect.value));
 
-// 选项卡图片轮播切换
-function setMainImg(src, idx){
+// 选项卡图片自动轮播（图列表集中管理，以后增加图片只需在 galleryImages 追加一项）
+const galleryImages = [
+  {src:'/uploads/led-lcd-airport.jpg?v=20261101', alt:'LCD Advertising Machine - Airport'},
+  {src:'/uploads/led-lcd-parking.jpg?v=20261101', alt:'LCD Advertising Machine - Parking'}
+];
+let gIndex = 0, gTimer = null;
+function showGallery(i){
+  gIndex = (i + galleryImages.length) % galleryImages.length;
   const img = document.getElementById('mainImg');
-  if(img) img.src = src;
-  document.querySelectorAll('.thumb-item').forEach(function(t, i){ t.classList.toggle('active', i === idx); });
+  if(img){
+    img.style.opacity = 0;
+    setTimeout(function(){
+      img.src = galleryImages[gIndex].src;
+      img.alt = galleryImages[gIndex].alt;
+      img.style.opacity = 1;
+    }, 200);
+  }
+  document.querySelectorAll('.thumb-item').forEach(function(t, k){ t.classList.toggle('active', k === gIndex); });
 }
+function nextGallery(){ showGallery(gIndex + 1); }
+(function initGallery(){
+  const row = document.getElementById('thumbRow');
+  if(!row) return;
+  galleryImages.forEach(function(g, k){
+    const t = document.createElement('img');
+    t.className = 'thumb-item' + (k === 0 ? ' active' : '');
+    t.src = g.src; t.alt = g.alt;
+    t.onclick = function(){ showGallery(k); };
+    row.appendChild(t);
+  });
+  // 自动轮播
+  gTimer = setInterval(nextGallery, 3500);
+  const box = document.querySelector('.img-box');
+  if(box){
+    box.addEventListener('mouseenter', function(){ clearInterval(gTimer); });
+    box.addEventListener('mouseleave', function(){ gTimer = setInterval(nextGallery, 3500); });
+  }
+})();
 
 // GDPR Cookie 弹窗
 (function() {
