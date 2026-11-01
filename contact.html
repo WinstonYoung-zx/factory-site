@@ -8,8 +8,30 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'functionality_storage': 'granted',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
   gtag('js', new Date());
   gtag('config', 'G-L2X92ECKW5');
+  // 若此前已同意过，恢复为 granted
+  if (localStorage.getItem('cookieConsent') === 'true') {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'analytics_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'functionality_storage': 'granted',
+      'personalization_storage': 'granted',
+      'security_storage': 'granted'
+    });
+  }
 </script>
 <title data-i18n="meta.contactTitle">Contact Us | ZHANXIN</title>
 <meta name="description" data-i18n="meta.contactDesc" content="SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. - Outdoor, airport and urban furniture & metal structure manufacturer. Get in touch for custom advertising light box, wayfinding signage, bus shelter and steel aluminum structures.">
@@ -532,11 +554,21 @@ document.querySelectorAll('a[href^="tel:"]').forEach(link => {
     const cookieDiv = document.createElement('div');
     cookieDiv.id = 'cookie-consent';
     cookieDiv.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0F2A44;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
-    cookieDiv.innerHTML = '<div style="flex:1;min-width:250px;font-size:14px;">We use cookies to improve your experience. By continuing to browse, you agree to our use of cookies.<a href="/privacy" style="color:#ff7800;margin-left:5px;">Privacy Policy</a></div><button id="cookie-accept" style="background:#ff7800;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>';
+    cookieDiv.innerHTML = '<div style="flex:1;min-width:250px;font-size:14px;">We use cookies to improve your experience. Click "Accept" to allow analytics tracking, or continue browsing without tracking.<a href="/privacy" style="color:#ff7800;margin-left:5px;">Privacy Policy</a></div><button id="cookie-accept" style="background:#ff7800;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>';
     document.body.appendChild(cookieDiv);
     document.getElementById('cookie-accept').addEventListener('click', function() {
         localStorage.setItem('cookieConsent', 'true');
-        document.getElementById('cookie-consent').remove();
+        // 依据明确同意更新 Consent Mode 为 granted
+        gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'granted',
+            'security_storage': 'granted'
+        });
+    document.getElementById('cookie-consent').remove();
     });
 })();
 </script>

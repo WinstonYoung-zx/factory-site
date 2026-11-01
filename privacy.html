@@ -8,8 +8,30 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'functionality_storage': 'granted',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
   gtag('js', new Date());
   gtag('config', 'G-L2X92ECKW5');
+  // 若此前已同意过，恢复为 granted
+  if (localStorage.getItem('cookieConsent') === 'true') {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'analytics_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'functionality_storage': 'granted',
+      'personalization_storage': 'granted',
+      'security_storage': 'granted'
+    });
+  }
 </script>
 <title>Privacy Policy | ZHANXIN</title>
 <meta name="description" content="Privacy Policy of SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. We collect contact information only to reply your inquiry.">
