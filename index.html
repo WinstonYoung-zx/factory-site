@@ -3,27 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) - Consent Mode v2：默认 denied，同意后更新 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2X92ECKW5"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'denied',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
       gtag('js', new Date());
       gtag('config', 'G-L2X92ECKW5');
+      // 若此前已同意过，恢复为 granted
+      if (localStorage.getItem('cookieConsent') === 'true') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'functionality_storage': 'granted',
+          'personalization_storage': 'granted',
+          'security_storage': 'granted'
+        });
+      }
     </script>
     <title>ZHANXIN GLOBAL‑Metal Structure & Outdoor, Urban and Airport Furniture Manufacturer</title>
     <meta name="description" content="Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures, outdoor, urban and airport furniture, export to Europe, Middle East & America.">
     <link rel="stylesheet" href="./style.css">
     <link rel="canonical" href="https://www.zhanxinglobal.com/">
-    <!-- hreflang 多语言标签 -->
-    <link rel="alternate" hreflang="en" href="https://www.zhanxinglobal.com/">
-    <link rel="alternate" hreflang="zh" href="https://www.zhanxinglobal.com/zh">
-    <link rel="alternate" hreflang="es" href="https://www.zhanxinglobal.com/es">
-    <link rel="alternate" hreflang="fr" href="https://www.zhanxinglobal.com/fr">
-    <link rel="alternate" hreflang="de" href="https://www.zhanxinglobal.com/de">
-    <link rel="alternate" hreflang="ja" href="https://www.zhanxinglobal.com/ja">
-    <link rel="alternate" hreflang="ar" href="https://www.zhanxinglobal.com/ar">
-    <link rel="alternate" hreflang="x-default" href="https://www.zhanxinglobal.com/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta property="og:title" content="ZHANXIN GLOBAL - SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD.">
     <meta property="og:description" content="Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures, outdoor, urban and airport furniture, export to Europe, Middle East & America.">
@@ -290,7 +303,7 @@
         <a href="/certificates" style="text-decoration:none;color:inherit;">
             <div class="feature-card" style="text-align:center;padding:2rem 1.5rem;border:1px solid #D9DEE3;border-radius:12px;transition:transform 0.2s, box-shadow 0.2s;">
                 <h3 data-i18n="whyus.certs.title">Certifications</h3>
-                <p data-i18n="whyus.certs.desc">ISO 9001, CE, ROHS certified quality management system</p>
+                <p data-i18n="whyus.certs.desc">Quality management system established in accordance with ISO 9001 / 14001 / 45001; target-market certifications arranged per project</p>
             </div>
         </a>
         <a href="/faq" style="text-decoration:none;color:inherit;">
@@ -570,7 +583,7 @@ const translations = {
         "whyus.projects.title":"Our Projects",
         "whyus.projects.desc":"Delivered projects for metro, airport, shopping mall and urban furniture worldwide",
         "whyus.certs.title":"Certifications",
-        "whyus.certs.desc":"ISO 9001, CE, ROHS certified quality management system",
+        "whyus.certs.desc":"Quality management system established in accordance with ISO 9001 / 14001 / 45001; target-market certifications arranged per project",
         "whyus.faq.title":"FAQ",
         "whyus.faq.desc":"Find answers to MOQ, customization, lead time, payment and warranty questions",
         "about.title":"Our Factory",
@@ -622,7 +635,7 @@ const translations = {
         "whyus.projects.title":"工程案例",
         "whyus.projects.desc":"已交付地铁、机场、商场及城市家具项目",
         "whyus.certs.title":"资质证书",
-        "whyus.certs.desc":"ISO 9001、CE、ROHS 认证质量管理体系",
+        "whyus.certs.desc":"依据 ISO 9001 / 14001 / 45001 建立的质量管理体系；目标市场认证可按项目办理",
         "whyus.faq.title":"常见问题",
         "whyus.faq.desc":"关于起订量、定制、交期、付款方式及质保的常见问题",
         "about.title":"工厂实力",
@@ -674,7 +687,7 @@ const translations = {
         "whyus.projects.title":"Nuestros Proyectos",
         "whyus.projects.desc":"Proyectos entregados para metro, aeropuerto, centro comercial y mobiliario urbano en todo el mundo",
         "whyus.certs.title":"Certificaciones",
-        "whyus.certs.desc":"Sistema de gestión de calidad certificado ISO 9001, CE, ROHS",
+        "whyus.certs.desc":"Sistema de gestión de calidad establecido conforme a ISO 9001 / 14001 / 45001; certificaciones de mercado objetivo gestionables por proyecto",
         "whyus.faq.title":"Preguntas Frecuentes",
         "whyus.faq.desc":"Encuentre respuestas sobre MOQ, personalización, plazo de entrega, pago y garantía",
         "about.title":"Nuestra Fábrica",
@@ -726,7 +739,7 @@ const translations = {
         "whyus.projects.title":"Nos Projets",
         "whyus.projects.desc":"Projets livrés pour métro, aéroport, centre commercial et mobilier urbain dans le monde entier",
         "whyus.certs.title":"Certifications",
-        "whyus.certs.desc":"Système de management de la qualité certifié ISO 9001, CE, ROHS",
+        "whyus.certs.desc":"Système de management de la qualité établi selon ISO 9001 / 14001 / 45001; certifications cibles du marché organisées par projet",
         "whyus.faq.title":"FAQ",
         "whyus.faq.desc":"Trouvez des réponses sur la MOQ, la personnalisation, les délais, le paiement et la garantie",
         "about.title":"Notre Usine",
@@ -778,7 +791,7 @@ const translations = {
         "whyus.projects.title":"Unsere Projekte",
         "whyus.projects.desc":"Gelieferte Projekte für U-Bahn, Flughafen, Einkaufszentrum und Stadtmöbel weltweit",
         "whyus.certs.title":"Zertifizierungen",
-        "whyus.certs.desc":"ISO 9001, CE, ROHS zertifiziertes Qualitätsmanagementsystem",
+        "whyus.certs.desc":"Qualitätsmanagementsystem etabliert gemäß ISO 9001 / 14001 / 45001; Zielmarkt-Zertifizierungen pro Projekt arrangierbar",
         "whyus.faq.title":"FAQ",
         "whyus.faq.desc":"Finden Sie Antworten zu MOQ, Individualisierung, Lieferzeit, Zahlung und Garantie",
         "about.title":"Unsere Fabrik",
@@ -830,7 +843,7 @@ const translations = {
         "whyus.projects.title":"導入事例",
         "whyus.projects.desc":"地下鉄、空港、ショッピングモール、都市家具の世界各国プロジェクト実績",
         "whyus.certs.title":"認証資格",
-        "whyus.certs.desc":"ISO 9001、CE、ROHS 認証品質管理システム",
+        "whyus.certs.desc":"ISO 9001 / 14001 / 45001 に基づき確立された品質マネジメントシステム；対象市場の認証はプロジェクト単位で手配可能",
         "whyus.faq.title":"よくある質問",
         "whyus.faq.desc":"最小ロット、カスタム、納期、支払い、保証に関する質問にお答えします",
         "about.title":"工場紹介",
@@ -882,7 +895,7 @@ const translations = {
         "whyus.projects.title":"مشاريعنا",
         "whyus.projects.desc":"مشاريع منفذة للمترو والمطار ومراكز التسوق والأثاث الحضري في جميع أنحاء العالم",
         "whyus.certs.title":"الشهادات",
-        "whyus.certs.desc":"نظام إدارة الجودة المعتمد ISO 9001، CE، ROHS",
+        "whyus.certs.desc":"نظام إدارة الجودة المُعتمد وفق ISO 9001 / 14001 / 45001؛ شهادات السوق المستهدف تُرتَّب حسب المشروع",
         "whyus.faq.title":"الأسئلة الشائعة",
         "whyus.faq.desc":"اعثر على إجابات حول الحد الأدنى للطلب، التخصيص، وقت التسليم، الدفع والضمان",
         "about.title":"مصنعنا",
@@ -957,7 +970,7 @@ mobileBtn.addEventListener('click', ()=>{
     cookieDiv.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0F2A44;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
     cookieDiv.innerHTML = `
         <div style="flex:1;min-width:250px;font-size:14px;">
-            We use cookies to improve your experience. By continuing to browse, you agree to our use of cookies.
+            We use cookies to improve your experience and analyse site traffic. Click "Accept" to consent to analytics cookies, or continue browsing without tracking.
             <a href="/privacy" style="color:#ff7800;margin-left:5px;">Privacy Policy</a>
         </div>
         <button id="cookie-accept" style="background:#ff7800;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>
@@ -966,6 +979,16 @@ mobileBtn.addEventListener('click', ()=>{
     
     document.getElementById('cookie-accept').addEventListener('click', function() {
         localStorage.setItem('cookieConsent', 'true');
+        // 依据明确同意更新 Consent Mode 为 granted
+        gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'granted',
+            'security_storage': 'granted'
+        });
         document.getElementById('cookie-consent').remove();
     });
 })();

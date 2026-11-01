@@ -176,5 +176,25 @@ footer a{color:#ffb040;text-decoration:none;}
     });
 })();
 </script>
+<script>
+// GA4 转化事件跟踪（Get a Quote / WhatsApp / Email）
+document.addEventListener('click', function(e) {
+    var el = e.target.closest('a,button');
+    if (!el) return;
+    var t = (el.textContent || '').trim();
+    var href = el.getAttribute('href') || '';
+    if (/Get a Quote|Send Inquiry|Contact Us/i.test(t) || href === '/contact' || href === '/#inquiry') {
+        gtag('event', 'inquiry_click', {'event_category':'button_click','event_label':document.title});
+        return;
+    }
+    if (/whatsapp|wa\.me/i.test(href) || /WhatsApp/i.test(t)) {
+        gtag('event', 'whatsapp_click', {'event_category':'contact_click','event_label':'whatsapp'});
+        return;
+    }
+    if (/^mailto:/i.test(href)) {
+        gtag('event', 'email_click', {'event_category':'contact_click','event_label':'email'});
+    }
+});
+</script>
 </body>
 </html>
