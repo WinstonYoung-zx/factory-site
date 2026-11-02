@@ -1,0 +1,366 @@
+[
+  {
+    "slug": "gulf-conformity-saso-saber-ecas-g-mark-guide",
+    "title": "Gulf Conformity for Gulf Projects: SASO, SABER, ECAS and G-Mark Explained",
+    "category": "Compliance",
+    "excerpt": "Which Gulf scheme applies to your shipment, why consignment certificates differ from factory ones, and how to avoid containers waiting for paperwork.",
+    "metaTitle": "SASO, SABER, ECAS, G-Mark: Gulf Conformity Guide",
+    "metaDescription": "Which Gulf scheme applies to your shipment, why consignment certificates differ from factory ones, and how to avoid containers waiting for paperwork.",
+    "date": "2027-01-24",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 9,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg",
+    "heroAlt": "Inspection documents and identification marks being checked on fabricated panels before container loading",
+    "tags": [
+      "SASO",
+      "SABER",
+      "ECAS",
+      "G-Mark",
+      "Gulf conformity",
+      "Middle East import"
+    ],
+    "relatedProducts": [
+      "/product/custom-steel-aluminum-structure",
+      "/product/bus-shelter",
+      "/product/outdoor-tension-lightbox"
+    ],
+    "relatedArticles": [
+      "/blog/ce-marking-process-eu-export-structures",
+      "/blog/en-1090-execution-classes-exc1-exc4",
+      "/blog/container-loading-estimate-light-box-bus-shelter"
+    ],
+    "relatedProjects": []
+  },
+  {
+    "slug": "ce-marking-process-eu-export-structures",
+    "title": "CE Marking for Export into the EU: What Actually Happens, and Who Carries the Obligation",
+    "category": "Compliance",
+    "excerpt": "CE is a declaration you make, not a certificate you receive. Who holds the obligation, what the file must contain, and what delays shipments.",
+    "metaTitle": "CE Marking for EU Export: Process and Ownership",
+    "metaDescription": "CE is a declaration you make, not a certificate you receive. Who holds the obligation, what the file must contain, and what delays shipments.",
+    "date": "2027-01-17",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 10,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/ce-marking-process-eu-export-structures.jpg",
+    "heroAlt": "Stacks of construction and testing documents next to steel components awaiting shipment preparation",
+    "tags": [
+      "CE marking",
+      "CPR 305/2011",
+      "EN 1090-1",
+      "declaration of performance",
+      "EU import",
+      "compliance"
+    ],
+    "relatedProducts": [
+      "/product/custom-steel-aluminum-structure",
+      "/product/bus-shelter",
+      "/product/wayfinding-signage"
+    ],
+    "relatedArticles": [
+      "/blog/en-1090-execution-classes-exc1-exc4",
+      "/blog/wps-pqr-welding-procedure-qualification-guide",
+      "/blog/en-10204-3-1-material-certificate-guide"
+    ],
+    "relatedProjects": []
+  },
+  {
+    "slug": "airport-terminal-wayfinding-signage-planning",
+    "title": "Airport Terminal Wayfinding: How to Plan Sign Structures That Still Work After Handover",
+    "category": "Application",
+    "excerpt": "How to specify terminal wayfinding that survives authority review and stays serviceable: legibility, fire class, modularity, airside maintenance.",
+    "metaTitle": "Airport Wayfinding Signs: A Planning Checklist",
+    "metaDescription": "How to specify terminal wayfinding that survives authority review and stays serviceable: legibility, fire class, modularity, airside maintenance.",
+    "date": "2027-01-10",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 9,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/airport-terminal-wayfinding-signage-planning.jpg",
+    "heroAlt": "Hanging wayfinding signs illuminated above the departures concourse of an airport terminal with directional arrows and ISO symbols",
+    "tags": [
+      "wayfinding",
+      "airport signage",
+      "terminal design",
+      "accessibility",
+      "public information"
+    ],
+    "relatedProducts": [
+      "/product/wayfinding-signage",
+      "/product/hanging-wayfinding-sign",
+      "/product/custom-steel-aluminum-structure"
+    ],
+    "relatedArticles": [
+      "/blog/outdoor-light-box-material-comparison",
+      "/blog/en-1090-execution-classes-exc1-exc4"
+    ],
+    "relatedProjects": []
+  },
+  {
+    "slug": "led-vs-lcd-outdoor-display-choice",
+    "title": "LED or LCD? Choosing the Right Screen Technology for Outdoor and Semi-Outdoor Sites",
+    "category": "Technical",
+    "excerpt": "Where large-format LED beats LCD outdoors and where it does not: size limits, sunlight damage, viewing distance, service life and running cost.",
+    "metaTitle": "LED vs LCD Displays: Choosing for Outdoor Sites",
+    "metaDescription": "Where large-format LED beats LCD outdoors and where it does not: size limits, sunlight damage, viewing distance, service life and running cost.",
+    "date": "2027-01-03",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 9,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/led-vs-lcd-outdoor-display-choice.jpg",
+    "heroAlt": "Side-by-side comparison of an outdoor LED wall and a freestanding LCD advertising kiosk in a station concourse",
+    "tags": [
+      "LED display",
+      "LCD display",
+      "digital signage",
+      "outdoor displays",
+      "procurement"
+    ],
+    "relatedProducts": [
+      "/product/led-lcd-screen",
+      "/product/wall-mounted-led-display",
+      "/product/pillar-led-display",
+      "/product/hanging-led-display"
+    ],
+    "relatedArticles": [
+      "/blog/outdoor-led-display-selection-guide",
+      "/blog/ip-rating-guide-outdoor-light-box-led-display"
+    ],
+    "relatedProjects": []
+  },
+  {
+    "slug": "container-loading-estimate-light-box-bus-shelter",
+    "title": "How Many Units Fit in a 20'GP? Loading Estimates for Light Boxes and Bus Shelters",
+    "category": "Procurement",
+    "excerpt": "Units per container is a function of unit size and packing volume, not a fixed number. How to estimate light box and bus shelter loading by dimension.",
+    "metaTitle": "Container Loading Estimates: Units per 20GP and 40HC",
+    "metaDescription": "Units per container is a function of unit size and packing volume, not a fixed number. How to estimate light box and bus shelter loading by dimension.",
+    "date": "2026-12-27",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 10,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/container-loading-estimate-light-box-bus-shelter.jpg",
+    "heroAlt": "Knock-down bus shelter components stacked and strapped on pallets inside a container before loading",
+    "tags": [
+      "container loading",
+      "freight",
+      "20GP",
+      "packed volume",
+      "knock-down packing",
+      "landed cost",
+      "logistics"
+    ],
+    "relatedProducts": [
+      "/product/bus-shelter",
+      "/product/recessed-lightbox",
+      "/product/outdoor-tension-lightbox"
+    ],
+    "relatedArticles": [
+      "/blog/smart-bus-shelter-configuration-checklist",
+      "/blog/outdoor-light-box-material-comparison"
+    ],
+    "relatedProjects": []
+  },
+  {
+    "slug": "outdoor-led-display-selection-guide",
+    "title": "Outdoor LED Display Specification: Brightness, Pixel Pitch, Heat and Access",
+    "category": "Technical",
+    "excerpt": "How to specify an outdoor LED screen: brightness in real sunlight, pixel pitch against viewing distance, thermal design and service access.",
+    "metaTitle": "Outdoor LED Display Spec: Pitch, Nits, Heat, Access",
+    "metaDescription": "How to specify an outdoor LED screen: brightness in real sunlight, pixel pitch against viewing distance, thermal design and service access.",
+    "date": "2026-12-20",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 9,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/outdoor-led-display-selection-guide.jpg",
+    "heroAlt": "Outdoor LED display modules being installed into a pillar-wrapped cabinet at a station concourse",
+    "tags": [
+      "LED display",
+      "pixel pitch",
+      "brightness",
+      "thermal management",
+      "outdoor"
+    ],
+    "relatedProducts": [
+      "/product/wall-mounted-led-display",
+      "/product/pillar-led-display",
+      "/product/hanging-led-display",
+      "/product/led-lcd-screen"
+    ],
+    "relatedArticles": [
+      "/blog/ip-rating-guide-outdoor-light-box-led-display",
+      "/blog/outdoor-light-box-material-comparison"
+    ],
+    "relatedProjects": []
+  },
+  {
+    "slug": "wps-pqr-welding-procedure-qualification-guide",
+    "title": "WPS, PQR and Welder Qualification: What Your RFQ Should Actually Ask For",
+    "category": "Compliance",
+    "excerpt": "WPS, PQR and welder qualification: what each one is, when it matters, and the variables to check before accepting welding documentation.",
+    "metaTitle": "WPS and PQR Explained: A Procurement Checklist Guide",
+    "metaDescription": "WPS, PQR and welder qualification: what each one is, when it matters, and the variables to check before accepting welding documentation.",
+    "date": "2026-12-13",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 8,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/wps-pqr-welding-procedure-qualification-guide.jpg",
+    "heroAlt": "Welder fabricating a steel frame joint in a Chinese workshop with WPS document clipped nearby",
+    "tags": [
+      "WPS",
+      "PQR",
+      "welding",
+      "ISO 15614",
+      "ISO 9606",
+      "steel fabrication"
+    ],
+    "relatedProducts": [
+      "/product/custom-steel-aluminum-structure",
+      "/product/bus-shelter"
+    ],
+    "relatedArticles": [
+      "/blog/en-1090-execution-classes-exc1-exc4",
+      "/blog/en-10204-3-1-material-certificate-guide"
+    ],
+    "relatedProjects": []
+  },
+  {
+    "slug": "en-10204-3-1-material-certificate-guide",
+    "title": "EN 10204 Material Certificates Explained: 2.1, 2.2, 3.1 and 3.2 Compared",
+    "category": "Compliance",
+    "excerpt": "What each EN 10204 inspection document proves, why type 3.1 is not third-party, and how to read one line by line before you accept it.",
+    "metaTitle": "EN 10204 Certificates: 2.1 vs 2.2 vs 3.1 vs 3.2 Guide",
+    "metaDescription": "What each EN 10204 inspection document proves, why type 3.1 is not third-party, and how to read one line by line before you accept it.",
+    "date": "2026-12-06",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 8,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/en-10204-3-1-material-certificate-guide.jpg",
+    "heroAlt": "Close-up of an EN 10204 type 3.1 inspection certificate alongside steel profile samples with heat number tags",
+    "tags": [
+      "EN 10204",
+      "material certificate",
+      "traceability",
+      "steel certification",
+      "procurement"
+    ],
+    "relatedProducts": [
+      "/product/custom-steel-aluminum-structure",
+      "/product/bus-shelter"
+    ],
+    "relatedArticles": [
+      "/blog/en-1090-execution-classes-exc1-exc4"
+    ],
+    "relatedProjects": []
+  },
+  {
+    "slug": "smart-bus-shelter-configuration-checklist",
+    "title": "Smart Bus Shelter Specification Checklist: Every Option You Need to Decide Before Requesting a Quote",
+    "category": "Application",
+    "excerpt": "A complete configuration checklist for urban shelter procurement: structure, glazing, lighting, smart modules, power, compliance, packing and installation support.",
+    "metaTitle": "Smart Bus Shelter Spec Checklist for Municipal Buyers",
+    "metaDescription": "A complete configuration checklist for urban shelter procurement: structure, glazing, lighting, smart modules, power, compliance, packing and installation support.",
+    "date": "2026-11-29",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 9,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/smart-bus-shelter-configuration-checklist.jpg",
+    "heroAlt": "Completed bus shelter with glass panels, LED display panel and charging column installed at an urban stop",
+    "tags": [
+      "bus shelter",
+      "urban furniture",
+      "smart city",
+      "procurement checklist",
+      "specification"
+    ],
+    "relatedProducts": [
+      "/product/bus-shelter",
+      "/product/other-products",
+      "/product/custom-steel-aluminum-structure"
+    ],
+    "relatedArticles": [],
+    "relatedProjects": [
+      "/cases"
+    ]
+  },
+  {
+    "slug": "outdoor-light-box-material-comparison",
+    "title": "Outdoor Light Box Materials: Aluminium Profile vs Galvanized Steel (and When Neither Is Right)",
+    "category": "Technical",
+    "excerpt": "A practical material comparison for outdoor light boxes and display frames: strength, corrosion, weight, tooling economics and 10-year cost of ownership.",
+    "metaTitle": "Aluminium vs Galvanized Steel for Outdoor Light Boxes",
+    "metaDescription": "A practical material comparison for outdoor light boxes and display frames: strength, corrosion, weight, tooling economics and 10-year cost of ownership.",
+    "date": "2026-11-22",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 9,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/outdoor-light-box-material-comparison.jpg",
+    "heroAlt": "Cutaway sample showing aluminium profile frame sections alongside galvanized steel panel components",
+    "tags": [
+      "material selection",
+      "aluminium profile",
+      "galvanized steel",
+      "corrosion",
+      "light box"
+    ],
+    "relatedProducts": [
+      "/product/recessed-lightbox",
+      "/product/pillar-wrapped-lightbox",
+      "/product/outdoor-tension-lightbox",
+      "/product/custom-steel-aluminum-structure"
+    ],
+    "relatedArticles": [],
+    "relatedProjects": [
+      "/cases"
+    ]
+  },
+  {
+    "slug": "ip-rating-guide-outdoor-light-box-led-display",
+    "title": "IP Ratings for Outdoor Displays and Enclosures: Choosing Between IP54, IP65, IP66 and IP67",
+    "category": "Technical",
+    "excerpt": "How to read IEC 60529 ratings, why IP67 does not replace IP66, and how to specify enclosure protection for outdoor light boxes and LED screens.",
+    "metaTitle": "IP Rating Guide: IP54 vs IP65 vs IP66 vs IP67 Outdoors",
+    "metaDescription": "How to read IEC 60529 ratings, why IP67 does not replace IP66, and how to specify enclosure protection for outdoor light boxes and LED screens.",
+    "date": "2026-11-15",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 8,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/ip-rating-guide-outdoor-light-box-led-display.jpg",
+    "heroAlt": "Outdoor light box housing with silicone gasket and drainage vent, close-up after assembly",
+    "tags": [
+      "IEC 60529",
+      "IP rating",
+      "outdoor enclosure",
+      "LED display",
+      "salt spray"
+    ],
+    "relatedProducts": [
+      "/product/outdoor-tension-lightbox",
+      "/product/pillar-wrapped-lightbox",
+      "/product/wall-mounted-led-display",
+      "/product/led-lcd-screen"
+    ],
+    "relatedArticles": [],
+    "relatedProjects": [
+      "/cases"
+    ]
+  },
+  {
+    "slug": "en-1090-execution-classes-exc1-exc4",
+    "title": "EN 1090 Execution Classes EXC1 to EXC4: What Buyers Outside the EU Need to Know",
+    "category": "Compliance",
+    "excerpt": "How EN 1090 execution classes are determined, who decides them, and what EXC1 to EXC4 actually require from a metal fabricator exporting to the EU.",
+    "metaTitle": "EN 1090 Execution Classes EXC1-EXC4: Buyer's Guide",
+    "metaDescription": "How EN 1090 execution classes are determined, who decides them, and what EXC1 to EXC4 actually require from a metal fabricator exporting to the EU.",
+    "date": "2026-11-08",
+    "author": "Engineering Team, ZhanXin",
+    "readMinutes": 8,
+    "heroImage": "https://www.zhanxinglobal.com/uploads/blog/en-1090-execution-classes-exc1-exc4.jpg",
+    "heroAlt": "Steel frame components for a bus shelter being assembled in a Chinese fabrication workshop",
+    "tags": [
+      "EN 1090",
+      "steel structure",
+      "EU export",
+      "certification",
+      "bus shelter",
+      "signage structure"
+    ],
+    "relatedProducts": [
+      "/product/custom-steel-aluminum-structure",
+      "/product/bus-shelter"
+    ],
+    "relatedArticles": [],
+    "relatedProjects": [
+      "/cases"
+    ]
+  }
+]
