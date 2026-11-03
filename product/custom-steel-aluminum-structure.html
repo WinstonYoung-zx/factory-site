@@ -125,11 +125,11 @@ footer a{color:#ffb040;text-decoration:none;}
     </a>
   </div>
   <nav>
-    <a href="/">Home</a>
-    <a href="/products" class="active">Products</a>
-    <a href="/cases">Projects</a>
-    <a href="/about">About Us</a>
-    <a href="/contact">Get a Quote</a>
+    <a href="/" data-i18n="nav.home">Home</a>
+    <a href="/products" class="active" data-i18n="nav.products">Products</a>
+    <a href="/cases" data-i18n="nav.projects">Projects</a>
+    <a href="/about" data-i18n="nav.about">About Us</a>
+    <a href="/contact" data-i18n="nav.quote">Get a Quote</a>
   </nav>
   <select class="lang-select" id="langSelect">
     <option value="en">English</option>
@@ -142,44 +142,44 @@ footer a{color:#ffb040;text-decoration:none;}
   </select>
 </header>
 <div class="breadcrumb">
-  <a href="/">Home</a>
+  <a href="/" data-i18n="bc.home">Home</a>
   <span>›</span>
-  <a href="/products">Our Products</a>
+  <a href="/products" data-i18n="bc.products">Our Products</a>
   <span>›</span>
-  <span>Custom Steel &amp; Aluminum Structure</span>
+  <span data-i18n="bc.title">Custom Steel &amp; Aluminum Structure</span>
 </div>
 <div class="container">
   <div class="img-box">
-    <img src="/uploads/metal-struct.jpg?v=20261020" alt="Custom Steel &amp; Aluminum Structure" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
+    <img src="/uploads/metal-struct.jpg?v=20261020" data-i18n-alt="prod.title" alt="Custom Steel &amp; Aluminum Structure" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
   </div>
   <div class="info-box">
-    <h1>Custom Steel &amp; Aluminum Structure</h1>
-    <span class="cate">Custom Metal Structure</span>
-    <p>OEM custom metal fabrication for steel &amp; aluminum structures, serving outdoor, airport and urban furniture projects.</p>
-    
+    <h1 data-i18n="prod.title">Custom Steel &amp; Aluminum Structure</h1>
+    <span class="cate" data-i18n="prod.cate">Custom Metal Structure</span>
+    <p data-i18n="prod.desc">OEM custom metal fabrication for steel &amp; aluminum structures, serving outdoor, airport and urban furniture projects.</p>
+
     <div class="specs-box">
-      <h2 class="specs-title">Specifications</h2>
+      <h2 class="specs-title" data-i18n="spec.title">Specifications</h2>
       <table class="specs-table">
-<tr><th>Material</th><td>Steel &amp; aluminum</td></tr>
-<tr><th>Dimensions</th><td>Fully custom per engineering drawing</td></tr>
-<tr><th>Optional Accessories</th><td>OEM custom metal fabrication service</td></tr>
+<tr><th data-i18n="spec.th.material">Material</th><td data-i18n="spec.val.material">Steel &amp; aluminum</td></tr>
+<tr><th data-i18n="spec.th.dimensions">Dimensions</th><td data-i18n="spec.val.dimensions">Fully custom per engineering drawing</td></tr>
+<tr><th data-i18n="spec.th.accessories">Optional Accessories</th><td data-i18n="spec.val.accessories">OEM custom metal fabrication service</td></tr>
       </table>
     </div>
-    <a href="/contact" class="btn-inquiry" id="inquiryBtn">Send Inquiry Now</a>
+    <a href="/contact" class="btn-inquiry" id="inquiryBtn" data-i18n="inq.btn">Send Inquiry Now</a>
   </div>
 </div>
 <section style="max-width:1400px;margin:2.5rem auto 0;padding:0 5%;">
   <div style="border:1px solid #D9DEE3;border-radius:8px;overflow:hidden;">
-    <h2 style="font-size:1.1rem;font-weight:600;color:#0F2A44;background:#f7f8fa;padding:0.8rem 1.2rem;border-bottom:1px solid #D9DEE3;margin:0;">Related articles</h2>
+    <h2 style="font-size:1.1rem;font-weight:600;color:#0F2A44;background:#f7f8fa;padding:0.8rem 1.2rem;border-bottom:1px solid #D9DEE3;margin:0;" data-i18n="related.title">Related articles</h2>
     <ul style="list-style:none;padding:0.8rem 1.2rem;margin:0;">
-      <li style="padding:0.55rem 0;border-bottom:1px solid #f0f1f3;"><a href="/blog/en-1090-execution-classes-exc1-exc4" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;">EN 1090 execution classes explained</a></li>
-      <li style="padding:0.55rem 0;border-bottom:1px solid #f0f1f3;"><a href="/blog/ce-marking-process-eu-export-structures" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;">CE marking process for EU export</a></li>
-      <li style="padding:0.55rem 0;"><a href="/blog/gulf-conformity-saso-saber-ecas-g-mark-guide" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;">Gulf conformity: SASO, SABER, ECAS, G-Mark</a></li>
+      <li style="padding:0.55rem 0;border-bottom:1px solid #f0f1f3;"><a href="/blog/en-1090-execution-classes-exc1-exc4" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;" data-i18n="related.1">EN 1090 execution classes explained</a></li>
+      <li style="padding:0.55rem 0;border-bottom:1px solid #f0f1f3;"><a href="/blog/ce-marking-process-eu-export-structures" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;" data-i18n="related.2">CE marking process for EU export</a></li>
+      <li style="padding:0.55rem 0;"><a href="/blog/gulf-conformity-saso-saber-ecas-g-mark-guide" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;" data-i18n="related.3">Gulf conformity: SASO, SABER, ECAS, G-Mark</a></li>
     </ul>
   </div>
 </section>
 <footer>
-  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/blog">Insights</a> &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a></p>
+  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. <span data-i18n="footer.copyright">All rights reserved.</span> <a href="/blog" data-i18n="footer.insights">Insights</a> &nbsp;·&nbsp; <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a></p>
 </footer>
 <script>
 // GA4 跟踪 Send Inquiry 按钮点击
@@ -191,52 +191,245 @@ document.getElementById('inquiryBtn').addEventListener('click', function() {
 });
 
 // 多语言切换
-const productData = {"slug": "custom-steel-aluminum-structure", "category": "custom-steel-aluminum", "image": "/uploads/metal-struct.jpg", "title": {"en": "Custom Steel & Aluminum Structure", "zh": "定制钢铝金属结构", "es": "Estructura personalizada acero y aluminio", "fr": "Structure acier aluminium sur mesure", "de": "Kundenspezifische Stahl-Aluminium-Konstruktion", "ja": "特注スチール・アルミ構造物", "ar": "هياكل فولاذ وألومنيوم مخصصة"}, "desc": {"en": "OEM custom metal fabrication for steel & aluminum structures, serving outdoor, airport and urban furniture projects.", "zh": "OEM定制金属加工，钢铝各类结构件，服务于户外、机场及城市家具项目。", "es": "Fabricación metálica OEM personalizada para estructuras de acero y aluminio, al servicio de proyectos exteriores, aeroportuarios y urbanos.", "fr": "Fabrication métallique OEM sur-mesure pour structures acier-aluminium, au service des projets extérieurs, aéroportuaires et urbains.", "de": "OEM-Metallfertigung nach Kundenwunsch für Stahl-Aluminium-Konstruktionen, für Außen-, Flughafen- und Stadtprojekte.", "ja": "OEM特注金属製作、スチール・アルミ各種構造物、屋外・空港・都市プロジェクト向け。", "ar": "تصنيع معدني مخصص OEM لهياكل الفولاذ والألومنيوم، يخدم المشاريع الخارجية والمطارات والمدن."}, "specs": {"material": "Steel & aluminum", "dimensions": "Fully custom per engineering drawing", "accessories": "OEM custom metal fabrication service"}};
-const categoryI18n = {"en": {"lightbox": "Light Box", "sign": "Wayfinding Signage", "display": "LED Display Screen", "bus": "Bus Shelter", "custom-steel-aluminum": "Custom Metal Structure", "other": "Other Products"}, "zh": {"lightbox": "灯箱", "sign": "导向标识", "display": "LED显示屏", "bus": "公交候车亭", "custom-steel-aluminum": "定制金属结构", "other": "其他产品"}, "es": {"lightbox": "Caja de luz", "sign": "Señalización de orientación", "display": "Pantalla LED", "bus": "Refugio de autobús", "custom-steel-aluminum": "Estructura metálica personalizada", "other": "Otros productos"}, "fr": {"lightbox": "Caisson lumineux", "sign": "Signalétique d'orientation", "display": "Écran LED", "bus": "Abri bus", "custom-steel-aluminum": "Structure métallique sur mesure", "other": "Autres produits"}, "de": {"lightbox": "Leuchtkasten", "sign": "Leitsystem-Schilder", "display": "LED-Displays", "bus": "Bushaltestelle", "custom-steel-aluminum": "Kundenspezifische Metallkonstruktion", "other": "Sonstige Produkte"}, "ja": {"lightbox": "ライトボックス", "sign": "案内サイン", "display": "LEDディスプレイ", "bus": "バス待合所", "custom-steel-aluminum": "特注金属構造物", "other": "その他製品"}, "ar": {"lightbox": "صندوق ضوئي", "sign": "لوحات الإرشاد", "display": "شاشات LED", "bus": "ملجأ الحافلات", "custom-steel-aluminum": "هياكل معدنية مخصصة", "other": "منتجات أخرى"}};
-const navI18n = {"en": {"home": "Home", "products": "Products", "about": "About Us", "quote": "Get a Quote", "inquiry": "Send Inquiry Now", "bc_home": "Home", "bc_products": "Our Products"}, "zh": {"home": "首页", "products": "产品", "about": "关于我们", "quote": "获取报价", "inquiry": "立即发送询价", "bc_home": "首页", "bc_products": "全部产品"}, "es": {"home": "Inicio", "products": "Productos", "about": "Nosotros", "quote": "Solicitar precio", "inquiry": "Enviar consulta", "bc_home": "Inicio", "bc_products": "Nuestros productos"}, "fr": {"home": "Accueil", "products": "Produits", "about": "À propos", "quote": "Demander un devis", "inquiry": "Envoyer une demande", "bc_home": "Accueil", "bc_products": "Nos produits"}, "de": {"home": "Startseite", "products": "Produkte", "about": "Über uns", "quote": "Angebot anfordern", "inquiry": "Anfrage senden", "bc_home": "Startseite", "bc_products": "Unsere Produkte"}, "ja": {"home": "ホーム", "products": "製品", "about": "会社概要", "quote": "見積もり依頼", "inquiry": "お問い合わせ", "bc_home": "ホーム", "bc_products": "製品一覧"}, "ar": {"home": "الرئيسية", "products": "المنتجات", "about": "من نحن", "quote": "طلب عرض سعر", "inquiry": "إرسال استفسار الآن", "bc_home": "الرئيسية", "bc_products": "منتجاتنا"}};
-const specLabelsI18n = {"en": {"title": "Specifications", "material": "Material", "thickness": "Thickness", "surface": "Surface Finish", "ipRating": "IP Rating", "dimensions": "Dimensions", "brightness": "Brightness", "power": "Power", "accessories": "Optional Accessories"}, "zh": {"title": "规格参数", "material": "材质", "thickness": "厚度", "surface": "表面处理", "ipRating": "防水等级", "dimensions": "尺寸", "brightness": "亮度", "power": "功耗", "accessories": "可选配件"}, "es": {"title": "Especificaciones", "material": "Material", "thickness": "Grosor", "surface": "Acabado superficial", "ipRating": "Grado IP", "dimensions": "Dimensiones", "brightness": "Brillo", "power": "Potencia", "accessories": "Accesorios opcionales"}, "fr": {"title": "Spécifications", "material": "Matériau", "thickness": "Épaisseur", "surface": "Finition de surface", "ipRating": "Indice IP", "dimensions": "Dimensions", "brightness": "Luminosité", "power": "Puissance", "accessories": "Accessoires optionnels"}, "de": {"title": "Technische Daten", "material": "Material", "thickness": "Dicke", "surface": "Oberflächenveredelung", "ipRating": "IP-Schutzart", "dimensions": "Abmessungen", "brightness": "Helligkeit", "power": "Leistung", "accessories": "Optionales Zubehör"}, "ja": {"title": "仕様", "material": "材質", "thickness": "厚さ", "surface": "表面処理", "ipRating": "IP等級", "dimensions": "寸法", "brightness": "明るさ", "power": "消費電力", "accessories": "オプション部品"}, "ar": {"title": "المواصفات", "material": "المادة", "thickness": "السماكة", "surface": "تشطيب السطح", "ipRating": "درجة الحماية IP", "dimensions": "الأبعاد", "brightness": "السطوع", "power": "القدرة", "accessories": "إكسسوارات اختيارية"}};
-
-const langSelect = document.getElementById('langSelect');
-
-function setLang(lang) {
-  localStorage.setItem('preferredLang', lang);
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
-  // 导航
-  const navLinks = document.querySelectorAll('nav a');
-  navLinks[0].textContent = navI18n[lang].home;
-  navLinks[1].textContent = navI18n[lang].products;
-  navLinks[2].textContent = navI18n[lang].about;
-  navLinks[3].textContent = navI18n[lang].quote;
-
-  // 面包屑
-  const bcLinks = document.querySelectorAll('.breadcrumb a');
-  bcLinks[0].textContent = navI18n[lang].bc_home;
-  bcLinks[1].textContent = navI18n[lang].bc_products;
-
-  // 产品标题、描述、分类
-  document.querySelector('.info-box h1').textContent = productData.title[lang] || productData.title.en;
-  document.querySelector('.info-box p').textContent = productData.desc[lang] || productData.desc.en;
-  document.querySelector('.info-box .cate').textContent = categoryI18n[lang][productData.category] || productData.category;
-  document.getElementById('inquiryBtn').textContent = navI18n[lang].inquiry;
-  document.querySelector('.img-box img').alt = productData.title[lang] || productData.title.en;
-
-  // 规格参数表标题和标签
-  const specsTitle = document.querySelector('.specs-title');
-  if (specsTitle && specLabelsI18n[lang]) {
-    specsTitle.textContent = specLabelsI18n[lang].title || 'Specifications';
-  }
-  const specRows = document.querySelectorAll('.specs-table tr');
-  const specKeys = Object.keys(productData.specs || {});
-  specRows.forEach((row, idx) => {
-    if (specKeys[idx] && specLabelsI18n[lang] && specLabelsI18n[lang][specKeys[idx]]) {
-      row.querySelector('th').textContent = specLabelsI18n[lang][specKeys[idx]];
+const translations = {
+    en: {
+        "nav.home":"Home",
+        "nav.products":"Products",
+        "nav.projects":"Projects",
+        "nav.about":"About Us",
+        "nav.quote":"Get a Quote",
+        "bc.home":"Home",
+        "bc.products":"Our Products",
+        "bc.title":"Custom Steel & Aluminum Structure",
+        "prod.title":"Custom Steel & Aluminum Structure",
+        "prod.cate":"Custom Metal Structure",
+        "prod.desc":"OEM custom metal fabrication for steel & aluminum structures, serving outdoor, airport and urban furniture projects.",
+        "spec.title":"Specifications",
+        "spec.th.material":"Material",
+        "spec.th.dimensions":"Dimensions",
+        "spec.th.accessories":"Optional Accessories",
+        "spec.val.material":"Steel & aluminum",
+        "spec.val.dimensions":"Fully custom per engineering drawing",
+        "spec.val.accessories":"OEM custom metal fabrication service",
+        "inq.btn":"Send Inquiry Now",
+        "related.title":"Related articles",
+        "related.1":"EN 1090 execution classes explained",
+        "related.2":"CE marking process for EU export",
+        "related.3":"Gulf conformity: SASO, SABER, ECAS, G-Mark",
+        "footer.copyright":"All rights reserved.",
+        "footer.insights":"Insights",
+        "footer.privacy":"Privacy Policy"
+    },
+    zh: {
+        "nav.home":"首页",
+        "nav.products":"产品",
+        "nav.projects":"工程案例",
+        "nav.about":"工厂介绍",
+        "nav.quote":"获取报价",
+        "bc.home":"首页",
+        "bc.products":"全部产品",
+        "bc.title":"定制钢铝金属结构",
+        "prod.title":"定制钢铝金属结构",
+        "prod.cate":"定制金属结构",
+        "prod.desc":"OEM定制金属加工，钢铝各类结构件，服务于户外、机场及城市家具项目。",
+        "spec.title":"规格参数",
+        "spec.th.material":"材质",
+        "spec.th.dimensions":"尺寸",
+        "spec.th.accessories":"可选配件",
+        "spec.val.material":"钢与铝",
+        "spec.val.dimensions":"完全按工程图纸定制",
+        "spec.val.accessories":"OEM定制金属加工服务",
+        "inq.btn":"立即发送询价",
+        "related.title":"相关文章",
+        "related.1":"EN 1090 执行等级解析",
+        "related.2":"出口欧盟 CE 标志流程",
+        "related.3":"海湾合规：SASO、SABER、ECAS、G-Mark",
+        "footer.copyright":"保留所有权利。",
+        "footer.insights":"行业洞察",
+        "footer.privacy":"隐私政策"
+    },
+    de: {
+        "nav.home":"Startseite",
+        "nav.products":"Produkte",
+        "nav.projects":"Projekte",
+        "nav.about":"Über uns",
+        "nav.quote":"Angebot anfordern",
+        "bc.home":"Startseite",
+        "bc.products":"Unsere Produkte",
+        "bc.title":"Kundenspezifische Stahl-Aluminium-Konstruktion",
+        "prod.title":"Kundenspezifische Stahl-Aluminium-Konstruktion",
+        "prod.cate":"Kundenspezifische Metallkonstruktion",
+        "prod.desc":"OEM-Metallfertigung nach Kundenwunsch für Stahl-Aluminium-Konstruktionen, für Außen-, Flughafen- und Stadtmöbelprojekte.",
+        "spec.title":"Technische Daten",
+        "spec.th.material":"Material",
+        "spec.th.dimensions":"Abmessungen",
+        "spec.th.accessories":"Optionales Zubehör",
+        "spec.val.material":"Stahl und Aluminium",
+        "spec.val.dimensions":"Vollständig kundenspezifisch nach Konstruktionszeichnung",
+        "spec.val.accessories":"OEM-Metallfertigung nach Kundenwunsch",
+        "inq.btn":"Anfrage senden",
+        "related.title":"Verwandte Artikel",
+        "related.1":"EN 1090-Ausführungsklassen erklärt",
+        "related.2":"CE-Kennzeichnungsprozess für EU-Export",
+        "related.3":"Golf-Konformität: SASO, SABER, ECAS, G-Mark",
+        "footer.copyright":"Alle Rechte vorbehalten.",
+        "footer.insights":"Artikel",
+        "footer.privacy":"Datenschutzerklärung"
+    },
+    es: {
+        "nav.home":"Inicio",
+        "nav.products":"Productos",
+        "nav.projects":"Proyectos",
+        "nav.about":"Nosotros",
+        "nav.quote":"Solicitar precio",
+        "bc.home":"Inicio",
+        "bc.products":"Nuestros productos",
+        "bc.title":"Estructura personalizada de acero y aluminio",
+        "prod.title":"Estructura personalizada de acero y aluminio",
+        "prod.cate":"Estructura metálica personalizada",
+        "prod.desc":"Fabricación metálica OEM personalizada para estructuras de acero y aluminio, al servicio de proyectos exteriores, aeroportuarios y de mobiliario urbano.",
+        "spec.title":"Especificaciones",
+        "spec.th.material":"Material",
+        "spec.th.dimensions":"Dimensiones",
+        "spec.th.accessories":"Accesorios opcionales",
+        "spec.val.material":"Acero y aluminio",
+        "spec.val.dimensions":"Totalmente personalizado según plano de ingeniería",
+        "spec.val.accessories":"Servicio de fabricación metálica OEM personalizada",
+        "inq.btn":"Enviar consulta",
+        "related.title":"Artículos relacionados",
+        "related.1":"Clases de ejecución EN 1090 explicadas",
+        "related.2":"Proceso de marcado CE para exportación a la UE",
+        "related.3":"Conformidad del Golfo: SASO, SABER, ECAS, G-Mark",
+        "footer.copyright":"Todos los derechos reservados.",
+        "footer.insights":"Artículos",
+        "footer.privacy":"Política de Privacidad"
+    },
+    fr: {
+        "nav.home":"Accueil",
+        "nav.products":"Produits",
+        "nav.projects":"Projets",
+        "nav.about":"À propos",
+        "nav.quote":"Demander un devis",
+        "bc.home":"Accueil",
+        "bc.products":"Nos produits",
+        "bc.title":"Structure acier-aluminium sur mesure",
+        "prod.title":"Structure acier-aluminium sur mesure",
+        "prod.cate":"Structure métallique sur mesure",
+        "prod.desc":"Fabrication métallique OEM sur mesure pour structures acier-aluminium, au service des projets d'aménagement extérieur, aéroportuaires et de mobilier urbain.",
+        "spec.title":"Spécifications",
+        "spec.th.material":"Matériau",
+        "spec.th.dimensions":"Dimensions",
+        "spec.th.accessories":"Accessoires optionnels",
+        "spec.val.material":"Acier et aluminium",
+        "spec.val.dimensions":"Entièrement personnalisé selon plan d'ingénierie",
+        "spec.val.accessories":"Service de fabrication métallique OEM sur mesure",
+        "inq.btn":"Envoyer une demande",
+        "related.title":"Articles connexes",
+        "related.1":"Classes d'exécution EN 1090 expliquées",
+        "related.2":"Processus de marquage CE pour l'exportation vers l'UE",
+        "related.3":"Conformité du Golfe : SASO, SABER, ECAS, G-Mark",
+        "footer.copyright":"Tous droits réservés.",
+        "footer.insights":"Articles",
+        "footer.privacy":"Politique de confidentialité"
+    },
+    ja: {
+        "nav.home":"ホーム",
+        "nav.products":"製品",
+        "nav.projects":"導入事例",
+        "nav.about":"会社概要",
+        "nav.quote":"見積もり依頼",
+        "bc.home":"ホーム",
+        "bc.products":"製品一覧",
+        "bc.title":"特注スチール・アルミ構造物",
+        "prod.title":"特注スチール・アルミ構造物",
+        "prod.cate":"特注金属構造物",
+        "prod.desc":"OEM特注金属製作、スチール・アルミ各種構造物。屋外・空港・都市家具プロジェクト向けです。",
+        "spec.title":"仕様",
+        "spec.th.material":"材質",
+        "spec.th.dimensions":"寸法",
+        "spec.th.accessories":"オプション部品",
+        "spec.val.material":"スチール・アルミ",
+        "spec.val.dimensions":"設計図面に基づき完全特注対応",
+        "spec.val.accessories":"OEM特注金属製作サービス",
+        "inq.btn":"お問い合わせ",
+        "related.title":"関連記事",
+        "related.1":"EN 1090 性能クラスの解説",
+        "related.2":"EU向け輸出におけるCEマーキング手続き",
+        "related.3":"湾岸適合性：SASO、SABER、ECAS、G-Mark",
+        "footer.copyright":"無断転載を禁じます。",
+        "footer.insights":"コラム",
+        "footer.privacy":"プライバシーポリシー"
+    },
+    ar: {
+        "nav.home":"الرئيسية",
+        "nav.products":"المنتجات",
+        "nav.projects":"المشاريع",
+        "nav.about":"من نحن",
+        "nav.quote":"طلب عرض سعر",
+        "bc.home":"الرئيسية",
+        "bc.products":"منتجاتنا",
+        "bc.title":"هياكل فولاذ وألومنيوم مخصصة",
+        "prod.title":"هياكل فولاذ وألومنيوم مخصصة",
+        "prod.cate":"هياكل معدنية مخصصة",
+        "prod.desc":"تصنيع معدني مخصص لهياكل الفولاذ والألومنيوم، يخدم مشاريع الأثاث الخارجي والمطارات والمدن.",
+        "spec.title":"المواصفات",
+        "spec.th.material":"المادة",
+        "spec.th.dimensions":"الأبعاد",
+        "spec.th.accessories":"إكسسوارات اختيارية",
+        "spec.val.material":"فولاذ وألومنيوم",
+        "spec.val.dimensions":"مخصص بالكامل وفقًا للرسومات الهندسية",
+        "spec.val.accessories":"خدمة تصنيع معدني مخصص OEM",
+        "inq.btn":"إرسال استفسار الآن",
+        "related.title":"مقالات ذات صلة",
+        "related.1":"شرح فئات التنفيذ EN 1090",
+        "related.2":"عملية وضع علامة CE للتصدير إلى الاتحاد الأوروبي",
+        "related.3":"مطابقة الخليج: SASO وSABER وECAS وG-Mark",
+        "footer.copyright":"جميع الحقوق محفوظة.",
+        "footer.insights":"المقالات",
+        "footer.privacy":"سياسة الخصوصية"
     }
-  });
+};
+function setLang(langKey){
+    const trans = translations[langKey] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(trans[key]) el.innerText = trans[key];
+    });
+    // 图片alt多语言预埋
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    //阿拉伯语RTL双重兜底
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+    }
+}
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', function(){
+    setLang(this.value);
+})
+
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
 }
 
-langSelect.addEventListener('change', () => setLang(langSelect.value));
+const initialLang = getLangFromPath();
+setLang(initialLang);
+langSelect.value = initialLang;
 
 // GDPR Cookie 弹窗
 (function() {

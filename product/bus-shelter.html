@@ -120,11 +120,11 @@ footer a{color:#ffb040;text-decoration:none;}
     </a>
   </div>
   <nav>
-    <a href="/">Home</a>
-    <a href="/products" class="active">Products</a>
-    <a href="/cases">Projects</a>
-    <a href="/about">About Us</a>
-    <a href="/contact">Get a Quote</a>
+    <a href="/" data-i18n="nav.home">Home</a>
+    <a href="/products" class="active" data-i18n="nav.products">Products</a>
+    <a href="/cases" data-i18n="nav.projects">Projects</a>
+    <a href="/about" data-i18n="nav.about">About Us</a>
+    <a href="/contact" data-i18n="nav.quote">Get a Quote</a>
   </nav>
   <select class="lang-select" id="langSelect">
     <option value="en">English</option>
@@ -137,42 +137,42 @@ footer a{color:#ffb040;text-decoration:none;}
   </select>
 </header>
 <div class="breadcrumb">
-  <a href="/">Home</a>
+  <a href="/" data-i18n="bc.home">Home</a>
   <span>›</span>
-  <a href="/products">Our Products</a>
+  <a href="/products" data-i18n="bc.products">Our Products</a>
   <span>›</span>
-  <span>Bus Shelter</span>
+  <span data-i18n="bc.title">Bus Shelter</span>
 </div>
 <div class="container">
   <div class="img-box">
-    <img src="/uploads/busshelter.jpg?v=20261020" alt="Bus Shelter" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
+    <img src="/uploads/busshelter.jpg?v=20261020" data-i18n-alt="prod.title" alt="Bus Shelter" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
   </div>
   <div class="info-box">
-    <h1>Bus Shelter</h1>
-    <span class="cate">Bus Shelter</span>
-    <p>Outdoor bus shelter with integrated advertising panel, widely used in urban furniture and city public space projects.</p>
+    <h1 data-i18n="prod.title">Bus Shelter</h1>
+    <span class="cate" data-i18n="prod.cate">Bus Shelter</span>
+    <p data-i18n="prod.desc">Outdoor bus shelter with integrated advertising panel, widely used in urban furniture and city public space projects.</p>
     
     <div class="specs-box">
-      <h2 class="specs-title">Specifications</h2>
+      <h2 class="specs-title" data-i18n="spec.title">Specifications</h2>
       <table class="specs-table">
-<tr><th>Dimensions</th><td>Custom per project requirement</td></tr>
-<tr><th>Optional Accessories</th><td>Integrated advertising panel</td></tr>
+<tr><th data-i18n="spec.th.dimensions">Dimensions</th><td data-i18n="spec.val.dimensions">Custom per project requirement</td></tr>
+<tr><th data-i18n="spec.th.accessories">Optional Accessories</th><td data-i18n="spec.val.accessories">Integrated advertising panel</td></tr>
       </table>
     </div>
-    <a href="/contact" class="btn-inquiry" id="inquiryBtn">Send Inquiry Now</a>
+    <a href="/contact" class="btn-inquiry" id="inquiryBtn" data-i18n="inq.btn">Send Inquiry Now</a>
   </div>
 </div>
 <section style="max-width:1400px;margin:2.5rem auto 0;padding:0 5%;">
   <div style="border:1px solid #D9DEE3;border-radius:8px;overflow:hidden;">
-    <h2 style="font-size:1.1rem;font-weight:600;color:#0F2A44;background:#f7f8fa;padding:0.8rem 1.2rem;border-bottom:1px solid #D9DEE3;margin:0;">Related articles</h2>
+    <h2 style="font-size:1.1rem;font-weight:600;color:#0F2A44;background:#f7f8fa;padding:0.8rem 1.2rem;border-bottom:1px solid #D9DEE3;margin:0;" data-i18n="related.title">Related articles</h2>
     <ul style="list-style:none;padding:0.8rem 1.2rem;margin:0;">
-      <li style="padding:0.55rem 0;border-bottom:1px solid #f0f1f3;"><a href="/blog/smart-bus-shelter-configuration-checklist" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;">Smart bus shelter specification checklist</a></li>
-      <li style="padding:0.55rem 0;"><a href="/blog/container-loading-estimate-light-box-bus-shelter" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;">Container loading estimates for shelters</a></li>
+      <li style="padding:0.55rem 0;border-bottom:1px solid #f0f1f3;"><a href="/blog/smart-bus-shelter-configuration-checklist" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;" data-i18n="related.1">Smart bus shelter specification checklist</a></li>
+      <li style="padding:0.55rem 0;"><a href="/blog/container-loading-estimate-light-box-bus-shelter" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;" data-i18n="related.2">Container loading estimates for shelters</a></li>
     </ul>
   </div>
 </section>
 <footer>
-  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/blog">Insights</a> &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a></p>
+  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. <span data-i18n="footer.copyright">All rights reserved.</span> <a href="/blog" data-i18n="footer.insights">Insights</a> &nbsp;·&nbsp; <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a></p>
 </footer>
 <script>
 // GA4 跟踪 Send Inquiry 按钮点击
@@ -184,52 +184,224 @@ document.getElementById('inquiryBtn').addEventListener('click', function() {
 });
 
 // 多语言切换
-const productData = {"slug": "bus-shelter", "category": "bus", "image": "/uploads/busshelter.jpg", "title": {"en": "Bus Shelter", "zh": "公交候车亭", "es": "Refugio de autobús", "fr": "Abri bus", "de": "Bushaltestelle", "ja": "バス待合所", "ar": "ملجأ الحافلات"}, "desc": {"en": "Outdoor bus shelter with integrated advertising panel, widely used in urban furniture and city public space projects.", "zh": "户外公交候车亭，带广告面板，广泛应用于城市家具及城市公共空间项目。", "es": "Refugio de autobús exterior con panel publicitario integrado, ampliamente utilizado en mobiliario urbano y proyectos de espacio público.", "fr": "Abri bus extérieur avec panneau publicitaire intégré, largement utilisé dans le mobilier urbain et les projets d'espace public.", "de": "Außen-Bushaltestelle mit integrierter Werbetafel, weit verbreitet im Stadtmöbel- und öffentlichen Raumprojekten.", "ja": "屋外用バス待合所、広告パネル一体型、都市家具・都市公共空間プロジェクトで広く使用。", "ar": "مأوى حافلات خارجي بلوحة إعلانية مدمجة، يستخدم على نطاق واسع في أثاث المدن ومشاريع الفضاء العام."}, "specs": {"accessories": "Integrated advertising panel", "dimensions": "Custom per project requirement"}};
-const categoryI18n = {"en": {"lightbox": "Light Box", "sign": "Wayfinding Signage", "display": "LED Display Screen", "bus": "Bus Shelter", "custom-steel-aluminum": "Custom Metal Structure", "other": "Other Products"}, "zh": {"lightbox": "灯箱", "sign": "导向标识", "display": "LED显示屏", "bus": "公交候车亭", "custom-steel-aluminum": "定制金属结构", "other": "其他产品"}, "es": {"lightbox": "Caja de luz", "sign": "Señalización de orientación", "display": "Pantalla LED", "bus": "Refugio de autobús", "custom-steel-aluminum": "Estructura metálica personalizada", "other": "Otros productos"}, "fr": {"lightbox": "Caisson lumineux", "sign": "Signalétique d'orientation", "display": "Écran LED", "bus": "Abri bus", "custom-steel-aluminum": "Structure métallique sur mesure", "other": "Autres produits"}, "de": {"lightbox": "Leuchtkasten", "sign": "Leitsystem-Schilder", "display": "LED-Displays", "bus": "Bushaltestelle", "custom-steel-aluminum": "Kundenspezifische Metallkonstruktion", "other": "Sonstige Produkte"}, "ja": {"lightbox": "ライトボックス", "sign": "案内サイン", "display": "LEDディスプレイ", "bus": "バス待合所", "custom-steel-aluminum": "特注金属構造物", "other": "その他製品"}, "ar": {"lightbox": "صندوق ضوئي", "sign": "لوحات الإرشاد", "display": "شاشات LED", "bus": "ملجأ الحافلات", "custom-steel-aluminum": "هياكل معدنية مخصصة", "other": "منتجات أخرى"}};
-const navI18n = {"en": {"home": "Home", "products": "Products", "about": "About Us", "quote": "Get a Quote", "inquiry": "Send Inquiry Now", "bc_home": "Home", "bc_products": "Our Products"}, "zh": {"home": "首页", "products": "产品", "about": "关于我们", "quote": "获取报价", "inquiry": "立即发送询价", "bc_home": "首页", "bc_products": "全部产品"}, "es": {"home": "Inicio", "products": "Productos", "about": "Nosotros", "quote": "Solicitar precio", "inquiry": "Enviar consulta", "bc_home": "Inicio", "bc_products": "Nuestros productos"}, "fr": {"home": "Accueil", "products": "Produits", "about": "À propos", "quote": "Demander un devis", "inquiry": "Envoyer une demande", "bc_home": "Accueil", "bc_products": "Nos produits"}, "de": {"home": "Startseite", "products": "Produkte", "about": "Über uns", "quote": "Angebot anfordern", "inquiry": "Anfrage senden", "bc_home": "Startseite", "bc_products": "Unsere Produkte"}, "ja": {"home": "ホーム", "products": "製品", "about": "会社概要", "quote": "見積もり依頼", "inquiry": "お問い合わせ", "bc_home": "ホーム", "bc_products": "製品一覧"}, "ar": {"home": "الرئيسية", "products": "المنتجات", "about": "من نحن", "quote": "طلب عرض سعر", "inquiry": "إرسال استفسار الآن", "bc_home": "الرئيسية", "bc_products": "منتجاتنا"}};
-const specLabelsI18n = {"en": {"title": "Specifications", "material": "Material", "thickness": "Thickness", "surface": "Surface Finish", "ipRating": "IP Rating", "dimensions": "Dimensions", "brightness": "Brightness", "power": "Power", "accessories": "Optional Accessories"}, "zh": {"title": "规格参数", "material": "材质", "thickness": "厚度", "surface": "表面处理", "ipRating": "防水等级", "dimensions": "尺寸", "brightness": "亮度", "power": "功耗", "accessories": "可选配件"}, "es": {"title": "Especificaciones", "material": "Material", "thickness": "Grosor", "surface": "Acabado superficial", "ipRating": "Grado IP", "dimensions": "Dimensiones", "brightness": "Brillo", "power": "Potencia", "accessories": "Accesorios opcionales"}, "fr": {"title": "Spécifications", "material": "Matériau", "thickness": "Épaisseur", "surface": "Finition de surface", "ipRating": "Indice IP", "dimensions": "Dimensions", "brightness": "Luminosité", "power": "Puissance", "accessories": "Accessoires optionnels"}, "de": {"title": "Technische Daten", "material": "Material", "thickness": "Dicke", "surface": "Oberflächenveredelung", "ipRating": "IP-Schutzart", "dimensions": "Abmessungen", "brightness": "Helligkeit", "power": "Leistung", "accessories": "Optionales Zubehör"}, "ja": {"title": "仕様", "material": "材質", "thickness": "厚さ", "surface": "表面処理", "ipRating": "IP等級", "dimensions": "寸法", "brightness": "明るさ", "power": "消費電力", "accessories": "オプション部品"}, "ar": {"title": "المواصفات", "material": "المادة", "thickness": "السماكة", "surface": "تشطيب السطح", "ipRating": "درجة الحماية IP", "dimensions": "الأبعاد", "brightness": "السطوع", "power": "القدرة", "accessories": "إكسسوارات اختيارية"}};
-
-const langSelect = document.getElementById('langSelect');
-
-function setLang(lang) {
-  localStorage.setItem('preferredLang', lang);
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
-  // 导航
-  const navLinks = document.querySelectorAll('nav a');
-  navLinks[0].textContent = navI18n[lang].home;
-  navLinks[1].textContent = navI18n[lang].products;
-  navLinks[2].textContent = navI18n[lang].about;
-  navLinks[3].textContent = navI18n[lang].quote;
-
-  // 面包屑
-  const bcLinks = document.querySelectorAll('.breadcrumb a');
-  bcLinks[0].textContent = navI18n[lang].bc_home;
-  bcLinks[1].textContent = navI18n[lang].bc_products;
-
-  // 产品标题、描述、分类
-  document.querySelector('.info-box h1').textContent = productData.title[lang] || productData.title.en;
-  document.querySelector('.info-box p').textContent = productData.desc[lang] || productData.desc.en;
-  document.querySelector('.info-box .cate').textContent = categoryI18n[lang][productData.category] || productData.category;
-  document.getElementById('inquiryBtn').textContent = navI18n[lang].inquiry;
-  document.querySelector('.img-box img').alt = productData.title[lang] || productData.title.en;
-
-  // 规格参数表标题和标签
-  const specsTitle = document.querySelector('.specs-title');
-  if (specsTitle && specLabelsI18n[lang]) {
-    specsTitle.textContent = specLabelsI18n[lang].title || 'Specifications';
-  }
-  const specRows = document.querySelectorAll('.specs-table tr');
-  const specKeys = Object.keys(productData.specs || {});
-  specRows.forEach((row, idx) => {
-    if (specKeys[idx] && specLabelsI18n[lang] && specLabelsI18n[lang][specKeys[idx]]) {
-      row.querySelector('th').textContent = specLabelsI18n[lang][specKeys[idx]];
+const translations = {
+    en: {
+        "nav.home":"Home",
+        "nav.products":"Products",
+        "nav.projects":"Projects",
+        "nav.about":"About Us",
+        "nav.quote":"Get a Quote",
+        "bc.home":"Home",
+        "bc.products":"Our Products",
+        "bc.title":"Bus Shelter",
+        "prod.title":"Bus Shelter",
+        "prod.cate":"Bus Shelter",
+        "prod.desc":"Outdoor bus shelter with integrated advertising panel, widely used in urban furniture and city public space projects.",
+        "spec.title":"Specifications",
+        "spec.th.dimensions":"Dimensions",
+        "spec.th.accessories":"Optional Accessories",
+        "spec.val.dimensions":"Custom per project requirement",
+        "spec.val.accessories":"Integrated advertising panel",
+        "inq.btn":"Send Inquiry Now",
+        "related.title":"Related articles",
+        "related.1":"Smart bus shelter specification checklist",
+        "related.2":"Container loading estimates for shelters",
+        "footer.copyright":"All rights reserved.",
+        "footer.insights":"Insights",
+        "footer.privacy":"Privacy Policy"
+    },
+    zh: {
+        "nav.home":"首页",
+        "nav.products":"产品",
+        "nav.projects":"工程案例",
+        "nav.about":"工厂介绍",
+        "nav.quote":"获取报价",
+        "bc.home":"首页",
+        "bc.products":"全部产品",
+        "bc.title":"公交候车亭",
+        "prod.title":"公交候车亭",
+        "prod.cate":"公交候车亭",
+        "prod.desc":"户外公交候车亭，集成广告面板，广泛应用于城市家具及城市公共空间项目。",
+        "spec.title":"规格参数",
+        "spec.th.dimensions":"尺寸",
+        "spec.th.accessories":"可选配件",
+        "spec.val.dimensions":"按项目定制",
+        "spec.val.accessories":"集成广告面板",
+        "inq.btn":"立即发送询价",
+        "related.title":"相关文章",
+        "related.1":"智能候车亭配置清单指南",
+        "related.2":"灯箱与候车亭集装箱装载量估算",
+        "footer.copyright":"保留所有权利。",
+        "footer.insights":"行业洞察",
+        "footer.privacy":"隐私政策"
+    },
+    es: {
+        "nav.home":"Inicio",
+        "nav.products":"Productos",
+        "nav.projects":"Proyectos",
+        "nav.about":"Nosotros",
+        "nav.quote":"Solicitar precio",
+        "bc.home":"Inicio",
+        "bc.products":"Nuestros productos",
+        "bc.title":"Refugio de autobús",
+        "prod.title":"Refugio de autobús",
+        "prod.cate":"Refugio de autobús",
+        "prod.desc":"Refugio de autobús exterior con panel publicitario integrado, ampliamente utilizado en mobiliario urbano y proyectos de espacio público.",
+        "spec.title":"Especificaciones",
+        "spec.th.dimensions":"Dimensiones",
+        "spec.th.accessories":"Accesorios opcionales",
+        "spec.val.dimensions":"Personalizado según requisitos del proyecto",
+        "spec.val.accessories":"Panel publicitario integrado",
+        "inq.btn":"Enviar consulta",
+        "related.title":"Artículos relacionados",
+        "related.1":"Lista de verificación de especificaciones para refugios inteligentes",
+        "related.2":"Estimaciones de carga en contenedores para refugios",
+        "footer.copyright":"Todos los derechos reservados.",
+        "footer.insights":"Artículos",
+        "footer.privacy":"Política de Privacidad"
+    },
+    fr: {
+        "nav.home":"Accueil",
+        "nav.products":"Produits",
+        "nav.projects":"Projets",
+        "nav.about":"À propos",
+        "nav.quote":"Demander un devis",
+        "bc.home":"Accueil",
+        "bc.products":"Nos produits",
+        "bc.title":"Abri bus",
+        "prod.title":"Abri bus",
+        "prod.cate":"Abri bus",
+        "prod.desc":"Abri bus extérieur avec panneau publicitaire intégré, largement utilisé dans le mobilier urbain et les projets d'espace public.",
+        "spec.title":"Spécifications",
+        "spec.th.dimensions":"Dimensions",
+        "spec.th.accessories":"Accessoires optionnels",
+        "spec.val.dimensions":"Personnalisé selon le projet",
+        "spec.val.accessories":"Panneau publicitaire intégré",
+        "inq.btn":"Envoyer une demande",
+        "related.title":"Articles connexes",
+        "related.1":"Liste de contrôle des spécifications pour abris intelligents",
+        "related.2":"Estimations de chargement conteneur pour abris",
+        "footer.copyright":"Tous droits réservés.",
+        "footer.insights":"Articles",
+        "footer.privacy":"Politique de confidentialité"
+    },
+    de: {
+        "nav.home":"Startseite",
+        "nav.products":"Produkte",
+        "nav.projects":"Projekte",
+        "nav.about":"Über uns",
+        "nav.quote":"Angebot anfordern",
+        "bc.home":"Startseite",
+        "bc.products":"Unsere Produkte",
+        "bc.title":"Bushaltestelle",
+        "prod.title":"Bushaltestelle",
+        "prod.cate":"Bushaltestelle",
+        "prod.desc":"Außen-Bushaltestelle mit integrierter Werbetafel, weit verbreitet im Stadtmöbel- und öffentlichen Raumprojekten.",
+        "spec.title":"Technische Daten",
+        "spec.th.dimensions":"Abmessungen",
+        "spec.th.accessories":"Optionales Zubehör",
+        "spec.val.dimensions":"Kundenspezifisch nach Projektanforderung",
+        "spec.val.accessories":"Integrierte Werbetafel",
+        "inq.btn":"Anfrage senden",
+        "related.title":"Verwandte Artikel",
+        "related.1":"Konfigurations-Checkliste für intelligente Bushaltestellen",
+        "related.2":"Container-Ladekapazität für Haltestellen schätzen",
+        "footer.copyright":"Alle Rechte vorbehalten.",
+        "footer.insights":"Artikel",
+        "footer.privacy":"Datenschutzerklärung"
+    },
+    ja: {
+        "nav.home":"ホーム",
+        "nav.products":"製品",
+        "nav.projects":"導入事例",
+        "nav.about":"会社概要",
+        "nav.quote":"見積もり依頼",
+        "bc.home":"ホーム",
+        "bc.products":"製品一覧",
+        "bc.title":"バス待合所",
+        "prod.title":"バス待合所",
+        "prod.cate":"バス待合所",
+        "prod.desc":"屋外用バス待合所、広告パネル一体型、都市家具・都市公共空間プロジェクトで広く使用されています。",
+        "spec.title":"仕様",
+        "spec.th.dimensions":"寸法",
+        "spec.th.accessories":"オプション部品",
+        "spec.val.dimensions":"プロジェクト要件に応じてカスタム対応",
+        "spec.val.accessories":"広告パネル一体型",
+        "inq.btn":"お問い合わせ",
+        "related.title":"関連記事",
+        "related.1":"スマートバス待合所の仕様チェックリスト",
+        "related.2":"バス待合所のコンテナ積載量の見積もり",
+        "footer.copyright":"無断転載を禁じます。",
+        "footer.insights":"コラム",
+        "footer.privacy":"プライバシーポリシー"
+    },
+    ar: {
+        "nav.home":"الرئيسية",
+        "nav.products":"المنتجات",
+        "nav.projects":"المشاريع",
+        "nav.about":"من نحن",
+        "nav.quote":"طلب عرض سعر",
+        "bc.home":"الرئيسية",
+        "bc.products":"منتجاتنا",
+        "bc.title":"ملجأ الحافلات",
+        "prod.title":"ملجأ الحافلات",
+        "prod.cate":"ملجأ الحافلات",
+        "prod.desc":"مأوى حافلات خارجي بلوحة إعلانية مدمجة، يستخدم على نطاق واسع في أثاث المدن ومشاريع الفضاء العام.",
+        "spec.title":"المواصفات",
+        "spec.th.dimensions":"الأبعاد",
+        "spec.th.accessories":"إكسسوارات اختيارية",
+        "spec.val.dimensions":"حسب متطلبات المشروع",
+        "spec.val.accessories":"لوحة إعلانية مدمجة",
+        "inq.btn":"إرسال استفسار الآن",
+        "related.title":"مقالات ذات صلة",
+        "related.1":"قائمة فحص مواصفات مأوى الحافلات الذكي",
+        "related.2":"تقديرات تحميل الحاويات لمآوي الحافلات",
+        "footer.copyright":"جميع الحقوق محفوظة.",
+        "footer.insights":"المقالات",
+        "footer.privacy":"سياسة الخصوصية"
     }
-  });
+};
+function setLang(langKey){
+    const trans = translations[langKey] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(trans[key]) el.innerText = trans[key];
+    });
+    // 图片alt多语言预埋
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    //阿拉伯语RTL双重兜底
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+    }
+}
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', function(){
+    setLang(this.value);
+})
+
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
 }
 
-langSelect.addEventListener('change', () => setLang(langSelect.value));
+const initialLang = getLangFromPath();
+setLang(initialLang);
+langSelect.value = initialLang;
 
 // GDPR Cookie 弹窗
 (function() {

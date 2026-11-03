@@ -268,7 +268,7 @@ footer a{color:#ffb040;text-decoration:none;}
   <div class="loading" data-i18n="detail.loading">Loading...</div>
 </div>
 <footer>
-  <p data-i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/privacy">Privacy Policy</a></p>
+  <p><span data-i18n="footer.copyright">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved.</span> <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a></p>
 </footer>
 <script>
 const translations = {
@@ -286,7 +286,8 @@ const translations = {
     "detail.loading": "Loading product info...",
     "detail.error": "Product not found",
     "detail.inquiry": "Send Inquiry Now",
-    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved."
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved.",
+    "footer.privacy": "Privacy Policy"
   },
   zh: {
     "site.logoAlt": "上海崭鑫智能设备有限公司",
@@ -302,7 +303,8 @@ const translations = {
     "detail.loading": "正在加载产品信息...",
     "detail.error": "未找到该产品",
     "detail.inquiry": "立即发送询价",
-    "footer.copyright": "© 2026 上海崭鑫智能设备有限公司 版权所有。"
+    "footer.copyright": "© 2026 上海崭鑫智能设备有限公司 版权所有。",
+    "footer.privacy": "隐私政策"
   },
   es: {
     "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
@@ -318,7 +320,8 @@ const translations = {
     "detail.loading": "Cargando...",
     "detail.error": "Producto no encontrado",
     "detail.inquiry": "Enviar consulta",
-    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Todos los derechos reservados."
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Todos los derechos reservados.",
+    "footer.privacy": "Política de Privacidad"
   },
   fr: {
     "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
@@ -334,7 +337,8 @@ const translations = {
     "detail.loading": "Chargement...",
     "detail.error": "Produit introuvable",
     "detail.inquiry": "Envoyer une demande",
-    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Tous droits réservés."
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Tous droits réservés.",
+    "footer.privacy": "Politique de confidentialité"
   },
   de: {
     "site.logoAlt": "Shanghai ZhanXin Intelligent Equipment Co.,Ltd.",
@@ -350,7 +354,8 @@ const translations = {
     "detail.loading": "Laden...",
     "detail.error": "Produkt nicht gefunden",
     "detail.inquiry": "Anfrage senden",
-    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Alle Rechte vorbehalten."
+    "footer.copyright": "© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. Alle Rechte vorbehalten.",
+    "footer.privacy": "Datenschutz"
   },
   ja: {
     "site.logoAlt": "上海崭鑫智能設備有限公司",
@@ -366,7 +371,8 @@ const translations = {
     "detail.loading": "読み込み中...",
     "detail.error": "製品が見つかりません",
     "detail.inquiry": "お問い合わせ",
-    "footer.copyright": "© 2026 上海崭鑫智能設備有限公司 無断転載禁止。"
+    "footer.copyright": "© 2026 上海崭鑫智能設備有限公司 無断転載禁止。",
+    "footer.privacy": "プライバシーポリシー"
   },
   ar: {
     "site.logoAlt": "شركة زانكسين للمعدات الذكية بشانغهاي",
@@ -382,7 +388,8 @@ const translations = {
     "detail.loading": "جاري التحميل...",
     "detail.error": "المنتج غير موجود",
     "detail.inquiry": "إرسال استفسار الآن",
-    "footer.copyright": "© 2026 شركة زانكسين للمعدات الذكية بشانغهاي. جميع الحقوق محفوظة."
+    "footer.copyright": "© 2026 شركة زانكسين للمعدات الذكية بشانغهاي. جميع الحقوق محفوظة.",
+    "footer.privacy": "سياسة الخصوصية"
   }
 };
 const categoryI18n = {
@@ -450,7 +457,18 @@ const categoryI18n = {
     "other": "منتجات أخرى"
   }
 };
-let currentLang = localStorage.getItem("preferredLang") || "en";
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
+}
+let currentLang = getLangFromPath() || localStorage.getItem("preferredLang") || "en";
 const langSelect = document.getElementById("langSelect");
 function escapeHtml(str){
   if(!str) return "";

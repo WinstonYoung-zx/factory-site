@@ -38,38 +38,192 @@
 <link rel="canonical" href="https://www.zhanxinglobal.com/privacy">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="stylesheet" href="/style.css">
+<style>
+header{display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;flex-wrap:wrap;gap:1rem;}
+.header-logo-wrap{display:flex;align-items:center;}
+.logo img{max-height:44px;width:auto;display:block;}
+.logo-text-fallback{font-size:1.2rem;font-weight:bold;color:#fff;display:none;}
+nav{display:flex;gap:2rem;flex-wrap:wrap;align-items:center;}
+nav a{color:#fff;text-decoration:none;}
+nav a:hover{color:#ff7800;}
+.lang-select{padding:4px 8px;border-radius:4px;border:none;}
+select,select option{color:#222;background:#fff;}
+</style>
 </head>
 <body>
 <header>
-  <div class="container header-wrap">
+  <div class="header-logo-wrap">
     <a href="/" class="logo">
-      <img src="/uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo">
+      <img src="/uploads/logo-zhanxin-blue.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" alt="Shanghai ZhanXin Intelligent Equipment Co.,Ltd.">
+      <span class="logo-text-fallback">Shanghai ZhanXin Intelligent Equipment</span>
     </a>
-    <nav class="nav">
-      <ul>
-        <li><a href="/" data-i18n="home">Home</a></li>
-        <li><a href="/products" data-i18n="products">Products</a></li>
-        <li><a href="/about" data-i18n="about">About Us</a></li>
-        <li><a href="/contact" data-i18n="contact">Contact</a></li>
-      </ul>
-    </nav>
   </div>
+  <nav>
+    <a href="/" data-i18n="nav.home">Home</a>
+    <a href="/products" data-i18n="nav.products">Products</a>
+    <a href="/cases" data-i18n="nav.projects">Projects</a>
+    <a href="/about" data-i18n="nav.about">About Us</a>
+    <a href="/contact" data-i18n="nav.quote">Get a Quote</a>
+  </nav>
+  <select class="lang-select" id="langSelect">
+    <option value="en">English</option>
+    <option value="zh">中文</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="ja">日本語</option>
+    <option value="ar">العربية</option>
+  </select>
 </header>
 <section class="section">
   <div class="container">
-    <h2 class="section-title">Privacy Policy</h2>
+    <h2 class="section-title" data-i18n="page.title">Privacy Policy</h2>
     <div class="card">
-      <p>We collect your contact information only to reply your inquiry. Your personal data will not be sold or shared with third parties for marketing purposes. Cookies are used for website traffic analytics. You can disable cookies in your browser.</p>
-      <p>By submitting the inquiry form, you agree we store your message for business communication.</p>
+      <p data-i18n="page.desc1">We collect your contact information only to reply your inquiry. Your personal data will not be sold or shared with third parties for marketing purposes. Cookies are used for website traffic analytics. You can disable cookies in your browser.</p>
+      <p data-i18n="page.desc2">By submitting the inquiry form, you agree we store your message for business communication.</p>
     </div>
   </div>
 </section>
 <footer>
   <div class="container">
-    <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. All rights reserved.</p>
-    <p><a href="/blog" style="color:#fff">Insights</a></p>
-    <p><a href="/privacy" style="color:#fff" data-i18n="privacy">Privacy Policy</a></p>
+    <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. <span data-i18n="footer.copyright">All rights reserved.</span></p>
+    <p><a href="/blog" style="color:#fff" data-i18n="footer.insights">Insights</a></p>
+    <p><a href="/privacy" style="color:#fff" data-i18n="footer.privacy">Privacy Policy</a></p>
   </div>
 </footer>
+<script>
+// 多语言切换
+const translations = {
+    en: {
+        "nav.home":"Home",
+        "nav.products":"Products",
+        "nav.projects":"Projects",
+        "nav.about":"About Us",
+        "nav.quote":"Get a Quote",
+        "page.title":"Privacy Policy",
+        "page.desc1":"We collect your contact information only to reply your inquiry. Your personal data will not be sold or shared with third parties for marketing purposes. Cookies are used for website traffic analytics. You can disable cookies in your browser.",
+        "page.desc2":"By submitting the inquiry form, you agree we store your message for business communication.",
+        "footer.copyright":"All rights reserved.",
+        "footer.insights":"Insights",
+        "footer.privacy":"Privacy Policy"
+    },
+    zh: {
+        "nav.home":"首页",
+        "nav.products":"产品",
+        "nav.projects":"工程案例",
+        "nav.about":"工厂介绍",
+        "nav.quote":"获取报价",
+        "page.title":"隐私政策",
+        "page.desc1":"我们仅收集您的联系信息以回复您的询价。您的个人数据不会被出售或用于向第三方营销。网站使用 Cookie 进行流量分析，您可在浏览器中禁用 Cookie。",
+        "page.desc2":"提交询价表单即表示您同意我们为业务沟通存储您的留言。",
+        "footer.copyright":"保留所有权利。",
+        "footer.insights":"行业洞察",
+        "footer.privacy":"隐私政策"
+    },
+    es: {
+        "nav.home":"Inicio",
+        "nav.products":"Productos",
+        "nav.projects":"Proyectos",
+        "nav.about":"Nosotros",
+        "nav.quote":"Solicitar precio",
+        "page.title":"Política de Privacidad",
+        "page.desc1":"Recopilamos su información de contacto únicamente para responder a su consulta. Sus datos personales no se venderán ni se compartirán con terceros con fines de marketing. Utilizamos cookies para el análisis del tráfico del sitio web; puede desactivarlas en su navegador.",
+        "page.desc2":"Al enviar el formulario de consulta, usted acepta que almacenemos su mensaje para la comunicación comercial.",
+        "footer.copyright":"Todos los derechos reservados.",
+        "footer.insights":"Artículos",
+        "footer.privacy":"Política de Privacidad"
+    },
+    fr: {
+        "nav.home":"Accueil",
+        "nav.products":"Produits",
+        "nav.projects":"Projets",
+        "nav.about":"À propos",
+        "nav.quote":"Demander un devis",
+        "page.title":"Politique de confidentialité",
+        "page.desc1":"Nous collectons vos coordonnées uniquement pour répondre à votre demande. Vos données personnelles ne seront ni vendues ni partagées avec des tiers à des fins de marketing. Des cookies sont utilisés pour l'analyse du trafic du site ; vous pouvez les désactiver dans votre navigateur.",
+        "page.desc2":"En soumettant le formulaire de demande, vous acceptez que nous conservions votre message pour la communication commerciale.",
+        "footer.copyright":"Tous droits réservés.",
+        "footer.insights":"Articles",
+        "footer.privacy":"Politique de confidentialité"
+    },
+    de: {
+        "nav.home":"Startseite",
+        "nav.products":"Produkte",
+        "nav.projects":"Projekte",
+        "nav.about":"Über uns",
+        "nav.quote":"Angebot anfordern",
+        "page.title":"Datenschutzerklärung",
+        "page.desc1":"Wir erheben Ihre Kontaktdaten nur, um Ihre Anfrage zu beantworten. Ihre personenbezogenen Daten werden nicht verkauft oder für Marketingzwecke an Dritte weitergegeben. Cookies dienen der Website-Traffic-Analyse; Sie können Cookies in Ihrem Browser deaktivieren.",
+        "page.desc2":"Mit Absenden des Anfrageformulars erklären Sie sich damit einverstanden, dass wir Ihre Nachricht für die geschäftliche Kommunikation speichern.",
+        "footer.copyright":"Alle Rechte vorbehalten.",
+        "footer.insights":"Artikel",
+        "footer.privacy":"Datenschutzerklärung"
+    },
+    ja: {
+        "nav.home":"ホーム",
+        "nav.products":"製品",
+        "nav.projects":"導入事例",
+        "nav.about":"会社紹介",
+        "nav.quote":"見積もり依頼",
+        "page.title":"プライバシーポリシー",
+        "page.desc1":"お問い合わせへの回答のためのみ、連絡先情報を取得します。個人データを販売したり、マーケティング目的で第三者に共有することはありません。アクセス解析のために Cookie を使用します。ブラウザで Cookie を無効にすることができます。",
+        "page.desc2":"お問い合わせフォームを送信することで、業務連絡のためにメッセージを保存することにご同意いただいたものとします。",
+        "footer.copyright":"無断転載を禁じます。",
+        "footer.insights":"コラム",
+        "footer.privacy":"プライバシーポリシー"
+    },
+    ar: {
+        "nav.home":"الرئيسية",
+        "nav.products":"المنتجات",
+        "nav.projects":"المشاريع",
+        "nav.about":"من نحن",
+        "nav.quote":"طلب عرض سعر",
+        "page.title":"سياسة الخصوصية",
+        "page.desc1":"نجمع معلومات الاتصال الخاصة بك فقط للرد على استفسارك. لن تُباع بياناتك الشخصية أو تُشارك مع أطراف ثالثة لأغراض التسويق. نستخدم ملفات تعريف الارتباط (كوكيز) لتحليل حركة زيارات الموقع، ويمكنك تعطيلها في متصفحك.",
+        "page.desc2":"بإرسالك نموذج الاستفسار، فإنك توافق على تخزيننا لرسالتك لأغراض التواصل التجاري.",
+        "footer.copyright":"جميع الحقوق محفوظة.",
+        "footer.insights":"المقالات",
+        "footer.privacy":"سياسة الخصوصية"
+    }
+};
+function setLang(langKey){
+    const trans = translations[langKey] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(trans[key]) el.innerText = trans[key];
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+    }
+}
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', function(){
+    setLang(this.value);
+})
+
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
+}
+
+const initialLang = getLangFromPath();
+setLang(initialLang);
+langSelect.value = initialLang;
+</script>
 </body>
 </html>

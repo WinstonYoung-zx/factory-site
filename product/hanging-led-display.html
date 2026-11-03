@@ -130,55 +130,55 @@ footer a{color:#ffb040;text-decoration:none;}
     </a>
   </div>
   <nav>
-    <a href="/">Home</a>
-    <a href="/products" class="active">Products</a>
-    <a href="/cases">Projects</a>
-    <a href="/about">About Us</a>
-    <a href="/contact">Get a Quote</a>
+    <a href="/" data-i18n="nav.home">Home</a>
+    <a href="/products" class="active" data-i18n="nav.products">Products</a>
+    <a href="/cases" data-i18n="nav.projects">Projects</a>
+    <a href="/about" data-i18n="nav.about">About Us</a>
+    <a href="/contact" data-i18n="nav.quote">Get a Quote</a>
   </nav>
   <select class="lang-select" id="langSelect">
     <option value="en">English</option>
-    <option value="zh">涓枃</option>
-    <option value="es">Espa帽ol</option>
-    <option value="fr">Fran莽ais</option>
+    <option value="zh">中文</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
     <option value="de">Deutsch</option>
-    <option value="ja">鏃ユ湰瑾?/option>
-    <option value="ar">丕賱毓乇亘賷丞</option>
+    <option value="ja">日本語</option>
+    <option value="ar">العربية</option>
   </select>
 </header>
 <div class="breadcrumb">
-  <a href="/">Home</a>
-  <span>鈥?/span>
-  <a href="/products">Our Products</a>
-  <span>鈥?/span>
-  <span>Hanging LED Display Screen</span>
+  <a href="/" data-i18n="bc.home">Home</a>
+  <span>›</span>
+  <a href="/products" data-i18n="bc.products">Our Products</a>
+  <span>›</span>
+  <span data-i18n="bc.title">Hanging LED Display Screen</span>
 </div>
 <div class="container">
   <div class="img-box">
-    <img src="/uploads/hanging-led-display.jpg?v=20261020" alt="Hanging LED Display Screen" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
+    <img src="/uploads/hanging-led-display.jpg?v=20261020" data-i18n-alt="prod.title" alt="Hanging LED Display Screen" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
   </div>
   <div class="info-box">
-    <h1>Hanging LED Display Screen</h1>
-    <span class="cate">LED Display Screen</span>
-    <p>Hanging LED Display Screen with COB packaging, high refresh rate and wide viewing angle. For metro, airport, shopping mall, exhibition hall and conference room information display.</p>
-    
+    <h1 data-i18n="prod.title">Hanging LED Display Screen</h1>
+    <span class="cate" data-i18n="prod.cate">LED Display Screen</span>
+    <p data-i18n="prod.desc">Hanging LED Display Screen with COB packaging, high refresh rate and wide viewing angle. For metro, airport, shopping mall, exhibition hall and conference room information display.</p>
+
     <div class="specs-box">
-      <h2 class="specs-title">Specifications</h2>
+      <h2 class="specs-title" data-i18n="spec.title">Specifications</h2>
       <table class="specs-table">
-<tr><th>Material</th><td>COB LED modules, ultra-thin borderless design</td></tr>
-<tr><th>Dimensions</th><td>Length 3-12m, Height 2.5-5m, Thickness 80-120mm</td></tr>
-<tr><th>Brightness</th><td>High refresh rate, high contrast, wide viewing angle</td></tr>
-<tr><th>Power</th><td>Low power consumption, long lifespan</td></tr>
+<tr><th data-i18n="spec.th.material">Material</th><td data-i18n="spec.val.material">COB LED modules, ultra-thin borderless design</td></tr>
+<tr><th data-i18n="spec.th.dimensions">Dimensions</th><td data-i18n="spec.val.dimensions">Length 3-12m, Height 2.5-5m, Thickness 80-120mm</td></tr>
+<tr><th data-i18n="spec.th.brightness">Brightness</th><td data-i18n="spec.val.brightness">High refresh rate, high contrast, wide viewing angle</td></tr>
+<tr><th data-i18n="spec.th.power">Power</th><td data-i18n="spec.val.power">Low power consumption, long lifespan</td></tr>
       </table>
     </div>
-    <a href="/contact" class="btn-inquiry" id="inquiryBtn">Send Inquiry Now</a>
+    <a href="/contact" class="btn-inquiry" id="inquiryBtn" data-i18n="inq.btn">Send Inquiry Now</a>
   </div>
 </div>
 <footer>
-  <p>漏 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/blog">Insights</a> &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a></p>
+  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. <span data-i18n="footer.copyright">All rights reserved.</span> <a href="/blog" data-i18n="footer.insights">Insights</a> &nbsp;·&nbsp; <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a></p>
 </footer>
 <script>
-// GA4 璺熻釜 Send Inquiry 鎸夐挳鐐瑰嚮
+// GA4 跟踪 Send Inquiry 按钮点击
 document.getElementById('inquiryBtn').addEventListener('click', function() {
     gtag('event', 'inquiry_click', {
         'event_category': 'button_click',
@@ -186,55 +186,234 @@ document.getElementById('inquiryBtn').addEventListener('click', function() {
     });
 });
 
-// 澶氳瑷€鍒囨崲
-const productData = {"slug": "hanging-led-display", "category": "display", "image": "/uploads/hanging-led-display.jpg", "title": {"en": "Hanging LED Display Screen", "zh": "澹佹寕寮廘ED骞垮憡灞?, "es": "Pantalla LED montada en pared", "fr": "脡cran LED mural", "de": "Wandmontierte LED-Anzeige", "ja": "澹佸彇銈婁粯銇戝瀷LED銉囥偅銈广儣銉偆", "ar": "卮丕卮丞 LED 賲孬亘鬲丞 毓賱賶 丕賱丨丕卅胤"}, "desc": {"en": "Hanging LED Display Screen with COB packaging, high refresh rate and wide viewing angle. For metro, airport, shopping mall, exhibition hall and conference room information display.", "zh": "澹佹寕寮廘ED骞垮憡灞忥紝COB灏佽锛岄珮鍒锋柊鐜囥€佸箍瑙嗚锛岄€傜敤浜庡湴閾佺珯銆佹満鍦恒€佸晢鍦恒€佸睍鍘呭強浼氳瀹や俊鎭彂甯冦€?, "es": "Pantalla LED montada en pared con encapsulado COB, alta frecuencia de actualizaci贸n y 谩ngulo de visi贸n amplio. Para metro, aeropuerto, centro comercial, sala de exposiciones y sala de conferencias.", "fr": "脡cran LED mural avec encapsulation COB, taux de rafra卯chissement 茅lev茅 et large angle de vision. Pour m茅tro, a茅roport, centre commercial, hall d'exposition et salle de conf茅rence.", "de": "Wandmontierte LED-Anzeige mit COB-Geh盲use, hoher Bildwiederholrate und weitem Betrachtungswinkel. F眉r U-Bahn, Flughafen, Einkaufszentrum, Ausstellungshalle und Konferenzraum.", "ja": "澹佸彇銈婁粯銇戝瀷LED銉囥偅銈广儣銉偆銆丆OB銉戙儍銈便兗銈搞€侀珮銉儠銉儍銈枫儱銉兗銉堛兓搴冭閲庤銆佸湴涓嬮墑銉荤┖娓兓銈枫儳銉冦償銉炽偘銉兗銉兓灞曠ず銉涖兗銉兓浼氳瀹ゃ伄鎯呭牨琛ㄧず鐢ㄣ€?, "ar": "卮丕卮丞 LED 賲孬亘鬲丞 毓賱賶 丕賱丨丕卅胤 亘鬲睾賱賷賮 COB貙 賲毓丿賱 鬲丨丿賷孬 毓丕賱賷 賵夭丕賵賷丞 乇丐賷丞 賵丕爻毓丞. 賱賱賲鬲乇賵 賵丕賱賲胤丕乇 賵賲乇賰夭 丕賱鬲爻賵賯 賵賯丕毓丞 丕賱毓乇囟 賵睾乇賮丞 丕賱丕噩鬲賲丕毓丕鬲."}, "specs": {"material": "COB LED modules, ultra-thin borderless design", "dimensions": "Length 3-12m, Height 2.5-5m, Thickness 80-120mm", "brightness": "High refresh rate, high contrast, wide viewing angle", "power": "Low power consumption, long lifespan"}};
-const categoryI18n = {"en": {"lightbox": "Light Box", "sign": "Wayfinding Signage", "display": "LED Display Screen", "bus": "Bus Shelter", "custom-steel-aluminum": "Custom Metal Structure", "other": "Other Products"}, "zh": {"lightbox": "鐏", "sign": "瀵煎悜鏍囪瘑", "display": "LED鏄剧ず灞?, "bus": "鍏氦鍊欒溅浜?, "custom-steel-aluminum": "瀹氬埗閲戝睘缁撴瀯", "other": "鍏朵粬浜у搧"}, "es": {"lightbox": "Caja de luz", "sign": "Se帽alizaci贸n de orientaci贸n", "display": "Pantalla LED", "bus": "Refugio de autob煤s", "custom-steel-aluminum": "Estructura met谩lica personalizada", "other": "Otros productos"}, "fr": {"lightbox": "Caisson lumineux", "sign": "Signal茅tique d'orientation", "display": "脡cran LED", "bus": "Abri bus", "custom-steel-aluminum": "Structure m茅tallique sur mesure", "other": "Autres produits"}, "de": {"lightbox": "Leuchtkasten", "sign": "Leitsystem-Schilder", "display": "LED-Displays", "bus": "Bushaltestelle", "custom-steel-aluminum": "Kundenspezifische Metallkonstruktion", "other": "Sonstige Produkte"}, "ja": {"lightbox": "銉┿偆銉堛儨銉冦偗銈?, "sign": "妗堝唴銈点偆銉?, "display": "LED銉囥偅銈广儣銉偆", "bus": "銉愩偣寰呭悎鎵€", "custom-steel-aluminum": "鐗规敞閲戝睘妲嬮€犵墿", "other": "銇濄伄浠栬＝鍝?}, "ar": {"lightbox": "氐賳丿賵賯 囟賵卅賷", "sign": "賱賵丨丕鬲 丕賱廿乇卮丕丿", "display": "卮丕卮丕鬲 LED", "bus": "賲賱噩兀 丕賱丨丕賮賱丕鬲", "custom-steel-aluminum": "賴賷丕賰賱 賲毓丿賳賷丞 賲禺氐氐丞", "other": "賲賳鬲噩丕鬲 兀禺乇賶"}};
-const navI18n = {"en": {"home": "Home", "products": "Products", "about": "About Us", "quote": "Get a Quote", "inquiry": "Send Inquiry Now", "bc_home": "Home", "bc_products": "Our Products"}, "zh": {"home": "棣栭〉", "products": "浜у搧", "about": "鍏充簬鎴戜滑", "quote": "鑾峰彇鎶ヤ环", "inquiry": "绔嬪嵆鍙戦€佽浠?, "bc_home": "棣栭〉", "bc_products": "鍏ㄩ儴浜у搧"}, "es": {"home": "Inicio", "products": "Productos", "about": "Nosotros", "quote": "Solicitar precio", "inquiry": "Enviar consulta", "bc_home": "Inicio", "bc_products": "Nuestros productos"}, "fr": {"home": "Accueil", "products": "Produits", "about": "脌 propos", "quote": "Demander un devis", "inquiry": "Envoyer une demande", "bc_home": "Accueil", "bc_products": "Nos produits"}, "de": {"home": "Startseite", "products": "Produkte", "about": "脺ber uns", "quote": "Angebot anfordern", "inquiry": "Anfrage senden", "bc_home": "Startseite", "bc_products": "Unsere Produkte"}, "ja": {"home": "銉涖兗銉?, "products": "瑁藉搧", "about": "浼氱ぞ姒傝", "quote": "瑕嬬銈傘倞渚濋牸", "inquiry": "銇婂晱銇勫悎銈忋仜", "bc_home": "銉涖兗銉?, "bc_products": "瑁藉搧涓€瑕?}, "ar": {"home": "丕賱乇卅賷爻賷丞", "products": "丕賱賲賳鬲噩丕鬲", "about": "賲賳 賳丨賳", "quote": "胤賱亘 毓乇囟 爻毓乇", "inquiry": "廿乇爻丕賱 丕爻鬲賮爻丕乇 丕賱丌賳", "bc_home": "丕賱乇卅賷爻賷丞", "bc_products": "賲賳鬲噩丕鬲賳丕"}};
-const specLabelsI18n = {"en": {"title": "Specifications", "material": "Material", "thickness": "Thickness", "surface": "Surface Finish", "ipRating": "IP Rating", "dimensions": "Dimensions", "brightness": "Brightness", "power": "Power", "accessories": "Optional Accessories"}, "zh": {"title": "瑙勬牸鍙傛暟", "material": "鏉愯川", "thickness": "鍘氬害", "surface": "琛ㄩ潰澶勭悊", "ipRating": "闃叉按绛夌骇", "dimensions": "灏哄", "brightness": "浜害", "power": "鍔熻€?, "accessories": "鍙€夐厤浠?}, "es": {"title": "Especificaciones", "material": "Material", "thickness": "Grosor", "surface": "Acabado superficial", "ipRating": "Grado IP", "dimensions": "Dimensiones", "brightness": "Brillo", "power": "Potencia", "accessories": "Accesorios opcionales"}, "fr": {"title": "Sp茅cifications", "material": "Mat茅riau", "thickness": "脡paisseur", "surface": "Finition de surface", "ipRating": "Indice IP", "dimensions": "Dimensions", "brightness": "Luminosit茅", "power": "Puissance", "accessories": "Accessoires optionnels"}, "de": {"title": "Technische Daten", "material": "Material", "thickness": "Dicke", "surface": "Oberfl盲chenveredelung", "ipRating": "IP-Schutzart", "dimensions": "Abmessungen", "brightness": "Helligkeit", "power": "Leistung", "accessories": "Optionales Zubeh枚r"}, "ja": {"title": "浠曟", "material": "鏉愯唱", "thickness": "鍘氥仌", "surface": "琛ㄩ潰鍑︾悊", "ipRating": "IP绛夌礆", "dimensions": "瀵告硶", "brightness": "鏄庛倠銇?, "power": "娑堣不闆诲姏", "accessories": "銈儣銈枫儳銉抽儴鍝?}, "ar": {"title": "丕賱賲賵丕氐賮丕鬲", "material": "丕賱賲丕丿丞", "thickness": "丕賱爻賲丕賰丞", "surface": "鬲卮胤賷亘 丕賱爻胤丨", "ipRating": "丿乇噩丞 丕賱丨賲丕賷丞 IP", "dimensions": "丕賱兀亘毓丕丿", "brightness": "丕賱爻胤賵毓", "power": "丕賱賯丿乇丞", "accessories": "廿賰爻爻賵丕乇丕鬲 丕禺鬲賷丕乇賷丞"}};
-
-const langSelect = document.getElementById('langSelect');
-
-function setLang(lang) {
-  localStorage.setItem('preferredLang', lang);
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
-  // 瀵艰埅
-  const navLinks = document.querySelectorAll('nav a');
-  navLinks[0].textContent = navI18n[lang].home;
-  navLinks[1].textContent = navI18n[lang].products;
-  navLinks[2].textContent = navI18n[lang].about;
-  navLinks[3].textContent = navI18n[lang].quote;
-
-  // 闈㈠寘灞?
-  const bcLinks = document.querySelectorAll('.breadcrumb a');
-  bcLinks[0].textContent = navI18n[lang].bc_home;
-  bcLinks[1].textContent = navI18n[lang].bc_products;
-
-  // 浜у搧鏍囬銆佹弿杩般€佸垎绫?
-  document.querySelector('.info-box h1').textContent = productData.title[lang] || productData.title.en;
-  document.querySelector('.info-box p').textContent = productData.desc[lang] || productData.desc.en;
-  document.querySelector('.info-box .cate').textContent = categoryI18n[lang][productData.category] || productData.category;
-  document.getElementById('inquiryBtn').textContent = navI18n[lang].inquiry;
-  document.querySelector('.img-box img').alt = productData.title[lang] || productData.title.en;
-
-  // 瑙勬牸鍙傛暟琛ㄦ爣棰樺拰鏍囩
-  const specsTitle = document.querySelector('.specs-title');
-  if (specsTitle && specLabelsI18n[lang]) {
-    specsTitle.textContent = specLabelsI18n[lang].title || 'Specifications';
-  }
-  const specRows = document.querySelectorAll('.specs-table tr');
-  const specKeys = Object.keys(productData.specs || {});
-  specRows.forEach((row, idx) => {
-    if (specKeys[idx] && specLabelsI18n[lang] && specLabelsI18n[lang][specKeys[idx]]) {
-      row.querySelector('th').textContent = specLabelsI18n[lang][specKeys[idx]];
+// 多语言切换
+const translations = {
+    en: {
+        "nav.home":"Home",
+        "nav.products":"Products",
+        "nav.projects":"Projects",
+        "nav.about":"About Us",
+        "nav.quote":"Get a Quote",
+        "bc.home":"Home",
+        "bc.products":"Our Products",
+        "bc.title":"Hanging LED Display Screen",
+        "prod.title":"Hanging LED Display Screen",
+        "prod.cate":"LED Display Screen",
+        "prod.desc":"Hanging LED Display Screen with COB packaging, high refresh rate and wide viewing angle. For metro, airport, shopping mall, exhibition hall and conference room information display.",
+        "spec.title":"Specifications",
+        "spec.th.material":"Material",
+        "spec.th.dimensions":"Dimensions",
+        "spec.th.brightness":"Brightness",
+        "spec.th.power":"Power",
+        "spec.val.material":"COB LED modules, ultra-thin borderless design",
+        "spec.val.dimensions":"Length 3-12m, Height 2.5-5m, Thickness 80-120mm",
+        "spec.val.brightness":"High refresh rate, high contrast, wide viewing angle",
+        "spec.val.power":"Low power consumption, long lifespan",
+        "inq.btn":"Send Inquiry Now",
+        "footer.copyright":"All rights reserved.",
+        "footer.insights":"Insights",
+        "footer.privacy":"Privacy Policy"
+    },
+    zh: {
+        "nav.home":"首页",
+        "nav.products":"产品",
+        "nav.projects":"工程案例",
+        "nav.about":"工厂介绍",
+        "nav.quote":"获取报价",
+        "bc.home":"首页",
+        "bc.products":"全部产品",
+        "bc.title":"悬挂式LED显示屏",
+        "prod.title":"悬挂式LED显示屏",
+        "prod.cate":"LED显示屏",
+        "prod.desc":"悬挂式LED显示屏，COB封装，高刷新率、广视角，适用于地铁站、机场、商场、展厅及会议室信息发布。",
+        "spec.title":"规格参数",
+        "spec.th.material":"材质",
+        "spec.th.dimensions":"尺寸",
+        "spec.th.brightness":"亮度",
+        "spec.th.power":"功耗",
+        "spec.val.material":"COB LED 模组，超薄无边框设计",
+        "spec.val.dimensions":"长 3-12m，高 2.5-5m，厚 80-120mm",
+        "spec.val.brightness":"高刷新率，高对比度，广视角",
+        "spec.val.power":"低功耗，长寿命",
+        "inq.btn":"立即发送询价",
+        "footer.copyright":"保留所有权利。",
+        "footer.insights":"行业洞察",
+        "footer.privacy":"隐私政策"
+    },
+    de: {
+        "nav.home":"Startseite",
+        "nav.products":"Produkte",
+        "nav.projects":"Projekte",
+        "nav.about":"Über uns",
+        "nav.quote":"Angebot anfordern",
+        "bc.home":"Startseite",
+        "bc.products":"Unsere Produkte",
+        "bc.title":"Hängende LED-Anzeige",
+        "prod.title":"Hängende LED-Anzeige",
+        "prod.cate":"LED-Display",
+        "prod.desc":"Hängende LED-Anzeige mit COB-Gehäuse, hoher Bildwiederholrate und weitem Betrachtungswinkel. Für Informationsanzeige in U-Bahn, Flughafen, Einkaufszentrum, Ausstellungshalle und Konferenzraum.",
+        "spec.title":"Technische Daten",
+        "spec.th.material":"Material",
+        "spec.th.dimensions":"Abmessungen",
+        "spec.th.brightness":"Helligkeit",
+        "spec.th.power":"Leistung",
+        "spec.val.material":"COB-LED-Module, ultradünnes randloses Design",
+        "spec.val.dimensions":"Länge 3-12m, Höhe 2,5-5m, Tiefe 80-120mm",
+        "spec.val.brightness":"Hohe Bildwiederholrate, hoher Kontrast, weiter Betrachtungswinkel",
+        "spec.val.power":"Geringer Stromverbrauch, lange Lebensdauer",
+        "inq.btn":"Anfrage senden",
+        "footer.copyright":"Alle Rechte vorbehalten.",
+        "footer.insights":"Artikel",
+        "footer.privacy":"Datenschutzerklärung"
+    },
+    es: {
+        "nav.home":"Inicio",
+        "nav.products":"Productos",
+        "nav.projects":"Proyectos",
+        "nav.about":"Nosotros",
+        "nav.quote":"Solicitar precio",
+        "bc.home":"Inicio",
+        "bc.products":"Nuestros productos",
+        "bc.title":"Pantalla LED colgante",
+        "prod.title":"Pantalla LED colgante",
+        "prod.cate":"Pantalla LED",
+        "prod.desc":"Pantalla LED colgante con encapsulado COB, alta frecuencia de actualización y ángulo de visión amplio. Para información en metro, aeropuerto, centro comercial, sala de exposiciones y sala de conferencias.",
+        "spec.title":"Especificaciones",
+        "spec.th.material":"Material",
+        "spec.th.dimensions":"Dimensiones",
+        "spec.th.brightness":"Brillo",
+        "spec.th.power":"Potencia",
+        "spec.val.material":"Módulos LED COB, diseño ultrafino sin bordes",
+        "spec.val.dimensions":"Longitud 3-12m, altura 2,5-5m, grosor 80-120mm",
+        "spec.val.brightness":"Alta frecuencia de actualización, alto contraste, ángulo de visión amplio",
+        "spec.val.power":"Bajo consumo, larga vida útil",
+        "inq.btn":"Enviar consulta",
+        "footer.copyright":"Todos los derechos reservados.",
+        "footer.insights":"Artículos",
+        "footer.privacy":"Política de Privacidad"
+    },
+    fr: {
+        "nav.home":"Accueil",
+        "nav.products":"Produits",
+        "nav.projects":"Projets",
+        "nav.about":"À propos",
+        "nav.quote":"Demander un devis",
+        "bc.home":"Accueil",
+        "bc.products":"Nos produits",
+        "bc.title":"Écran LED suspendu",
+        "prod.title":"Écran LED suspendu",
+        "prod.cate":"Écran LED",
+        "prod.desc":"Écran LED suspendu à encapsulation COB, taux de rafraîchissement élevé et large angle de vision. Pour l'affichage d'informations en métro, aéroport, centre commercial, hall d'exposition et salle de conférence.",
+        "spec.title":"Spécifications",
+        "spec.th.material":"Matériau",
+        "spec.th.dimensions":"Dimensions",
+        "spec.th.brightness":"Luminosité",
+        "spec.th.power":"Puissance",
+        "spec.val.material":"Modules LED COB, design ultra-fin sans bordure",
+        "spec.val.dimensions":"Longueur 3-12m, hauteur 2,5-5m, épaisseur 80-120mm",
+        "spec.val.brightness":"Taux de rafraîchissement élevé, contraste élevé, large angle de vision",
+        "spec.val.power":"Faible consommation, longue durée de vie",
+        "inq.btn":"Envoyer une demande",
+        "footer.copyright":"Tous droits réservés.",
+        "footer.insights":"Articles",
+        "footer.privacy":"Politique de confidentialité"
+    },
+    ja: {
+        "nav.home":"ホーム",
+        "nav.products":"製品",
+        "nav.projects":"導入事例",
+        "nav.about":"会社概要",
+        "nav.quote":"見積もり依頼",
+        "bc.home":"ホーム",
+        "bc.products":"製品一覧",
+        "bc.title":"吊り下げ式LEDディスプレイ",
+        "prod.title":"吊り下げ式LEDディスプレイ",
+        "prod.cate":"LEDディスプレイ",
+        "prod.desc":"吊り下げ式LEDディスプレイ。COBパッケージ、高リフレッシュレート、広視野角。地下鉄・空港・ショッピングモール・展示ホール・会議室での情報表示に。",
+        "spec.title":"仕様",
+        "spec.th.material":"材質",
+        "spec.th.dimensions":"寸法",
+        "spec.th.brightness":"明るさ",
+        "spec.th.power":"消費電力",
+        "spec.val.material":"COB LEDモジュール、超薄型ベゼルレス設計",
+        "spec.val.dimensions":"長さ 3-12m、高さ 2.5-5m、厚さ 80-120mm",
+        "spec.val.brightness":"高リフレッシュレート、高コントラスト、広視野角",
+        "spec.val.power":"低消費電力、長寿命",
+        "inq.btn":"お問い合わせ",
+        "footer.copyright":"無断転載を禁じます。",
+        "footer.insights":"コラム",
+        "footer.privacy":"プライバシーポリシー"
+    },
+    ar: {
+        "nav.home":"الرئيسية",
+        "nav.products":"المنتجات",
+        "nav.projects":"المشاريع",
+        "nav.about":"من نحن",
+        "nav.quote":"طلب عرض سعر",
+        "bc.home":"الرئيسية",
+        "bc.products":"منتجاتنا",
+        "bc.title":"شاشة LED معلقة",
+        "prod.title":"شاشة LED معلقة",
+        "prod.cate":"شاشة LED",
+        "prod.desc":"شاشة LED معلقة بتغليف COB، معدل تحديث مرتفع وزاوية عرض واسعة. لعرض المعلومات في المترو والمطار ومركز التسوق وقاعات المعارض وقاعات الاجتماعات.",
+        "spec.title":"المواصفات",
+        "spec.th.material":"المادة",
+        "spec.th.dimensions":"الأبعاد",
+        "spec.th.brightness":"السطوع",
+        "spec.th.power":"القدرة",
+        "spec.val.material":"وحدات LED COB، تصميم فائق النحافة بلا حدود",
+        "spec.val.dimensions":"الطول 3-12م، الارتفاع 2.5-5م، السماكة 80-120مم",
+        "spec.val.brightness":"معدل تحديث مرتفع، تباين عالٍ، زاوية عرض واسعة",
+        "spec.val.power":"استهلاك منخفض للطاقة، عمر افتراضي طويل",
+        "inq.btn":"إرسال استفسار الآن",
+        "footer.copyright":"جميع الحقوق محفوظة.",
+        "footer.insights":"المقالات",
+        "footer.privacy":"سياسة الخصوصية"
     }
-  });
+};
+function setLang(langKey){
+    const trans = translations[langKey] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(trans[key]) el.innerText = trans[key];
+    });
+    // 图片alt多语言预埋
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    //阿拉伯语RTL双重兜底
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+    }
+}
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', function(){
+    setLang(this.value);
+})
+
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
 }
 
-langSelect.addEventListener('change', () => setLang(langSelect.value));
+const initialLang = getLangFromPath();
+setLang(initialLang);
+langSelect.value = initialLang;
 
-// GDPR Cookie 寮圭獥
+// GDPR Cookie 弹窗
 (function() {
     if (localStorage.getItem('cookieConsent')) return;
     const cookieDiv = document.createElement('div');

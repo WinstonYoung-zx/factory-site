@@ -360,7 +360,7 @@
         <!-- ========== END Factory Gallery ========== -->
         <div class="grid md:grid-cols-3 gap-6 mb-12">
             <div class="flex flex-col">
-                <div class="card-header">Company Profile</div>
+                <div class="card-header" data-i18n="about.card1_header">Company Profile</div>
                 <div class="card-body-primary">
                     <p data-i18n="about.card1_text" class="text-bodyText leading-relaxed">
                         We are a factory specialized in outdoor, airport and urban furniture and metal structure project manufacturing.
@@ -368,7 +368,7 @@
                 </div>
             </div>
             <div class="flex flex-col">
-                <div class="card-header">Our Strength</div>
+                <div class="card-header" data-i18n="about.card2_header">Our Strength</div>
                 <div class="card-body-primary">
                     <ul class="space-y-2.5 text-bodyText">
                         <li data-i18n="about.str1">• Custom steel & aluminum structure solution</li>
@@ -379,7 +379,7 @@
                 </div>
             </div>
             <div class="flex flex-col">
-                <div class="card-header">Quality & Compliance</div>
+                <div class="card-header" data-i18n="about.card3_header">Quality & Compliance</div>
                 <div class="card-body-primary">
                     <ul class="space-y-2 text-sm text-mutedText">
                         <li data-i18n="about.qua1">• Work Safety Production License (China) — licensed manufacturer for metal fabrication</li>
@@ -423,11 +423,11 @@
             <div class="border border-borderGrayBlue rounded-lg p-8 h-full">
                 <h3 data-i18n="about.contact_title" class="text-xl font-bold text-primary mb-6">SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</h3>
                 <ul class="space-y-5 text-bodyText text-base">
-                    <li><strong>Tel:</strong> <a href="tel:+86-21-57223755" class="hover:text-secondaryBlue transition-colors">+86-21-57223755</a></li>
-                    <li><strong>M.P./WhatsApp:</strong> <a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline transition-colors">WhatsApp: +86 193 0117 9802</a></li>
-                    <li><strong>Web:</strong> <a href="https://www.zhanxinglobal.com/" target="_blank" class="hover:text-secondaryBlue transition-colors">https://www.zhanxinglobal.com</a></li>
-                    <li><strong>Addr：</strong> Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District, Shanghai</li>
-                    <li><strong>E‑mail：</strong> <a href="mailto:sales@zhanxinglobal.com" class="hover:text-secondaryBlue transition-colors">sales@zhanxinglobal.com</a></li>
+                    <li><strong data-i18n="contact.tel">Tel:</strong> <a href="tel:+86-21-57223755" class="hover:text-secondaryBlue transition-colors">+86-21-57223755</a></li>
+                    <li><strong data-i18n="contact.mobile">M.P./WhatsApp:</strong> <a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline transition-colors">WhatsApp: +86 193 0117 9802</a></li>
+                    <li><strong data-i18n="contact.web">Web:</strong> <a href="https://www.zhanxinglobal.com/" target="_blank" class="hover:text-secondaryBlue transition-colors">https://www.zhanxinglobal.com</a></li>
+                    <li><strong data-i18n="contact.addr">Addr：</strong> Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District, Shanghai</li>
+                    <li><strong data-i18n="contact.email">E‑mail：</strong> <a href="mailto:sales@zhanxinglobal.com" class="hover:text-secondaryBlue transition-colors">sales@zhanxinglobal.com</a></li>
                 </ul>
             </div>
         </div>
@@ -441,7 +441,7 @@
                         <li><a href="/" data-i18n="nav.home" class="hover:text-white transition-colors">Home</a></li>
                         <li><a href="/products" data-i18n="nav.products" class="hover:text-white transition-colors">Products</a></li>
                         <li><a href="/cases" data-i18n="nav.projects" class="hover:text-white transition-colors">Projects</a></li>
-                        <li><a href="/blog" class="hover:text-white transition-colors">Insights</a></li>
+                        <li><a href="/blog" data-i18n="nav.insights" class="hover:text-white transition-colors">Insights</a></li>
                         <li><a href="/about" data-i18n="nav.about" class="hover:text-white transition-colors">About</a></li>
                         <li><a href="/contact" data-i18n="nav.quote" class="hover:text-white transition-colors">Get a Quote</a></li>
                     </ul>
@@ -449,8 +449,8 @@
                 <div>
                     <h4 data-i18n="footer.contact_title" class="text-xl font-semibold mb-4 text-white">Contact</h4>
                     <ul class="space-y-2">
-                        <li>Tel: +86-21-57223755</li>
-                        <li><a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline transition-colors">WhatsApp: +86 193 0117 9802</a></li>
+                        <li><span data-i18n="contact.tel">Tel:</span> +86-21-57223755</li>
+                        <li><a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline transition-colors"><span data-i18n="contact.whatsapp">WhatsApp:</span> +86 193 0117 9802</a></li>
                         <li><a href="mailto:sales@zhanxinglobal.com" class="hover:text-white transition-colors">sales@zhanxinglobal.com</a></li>
                     </ul>
                 </div>
@@ -507,6 +507,16 @@ const translations = {
         "about.mini3_title":"Full compliance & testing",
         "about.mini3_text":"Complete certification package, material traceability, welding qualification and third‑party test reports available for tender & export projects.",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
+        "about.card1_header":"Company Profile",
+        "about.card2_header":"Our Strength",
+        "about.card3_header":"Quality & Compliance",
+        "contact.tel":"Tel:",
+        "contact.mobile":"M.P./WhatsApp:",
+        "contact.web":"Web:",
+        "contact.addr":"Addr：",
+        "contact.email":"E‑mail：",
+        "contact.whatsapp":"WhatsApp:",
+        "nav.insights":"Insights",
         "footer.nav_title":"Navigation",
         "footer.contact_title":"Contact",
         "footer.copyright_title":"Copyright",
@@ -515,6 +525,7 @@ const translations = {
     zh: {
         "nav.home":"首页",
         "nav.products":"产品",
+        "nav.projects":"项目",
         "nav.about":"关于我们",
         "nav.quote":"获取报价",
         "about.meta_title":"关于我们 - 上海崭鑫智能设备",
@@ -555,6 +566,16 @@ const translations = {
         "about.mini3_title":"完整资质与检测",
         "about.mini3_text":"全套证书包、材料溯源、焊接评定、第三方检测报告，满足投标与出口项目要求。",
         "about.contact_title":"上海崭鑫智能设备有限公司",
+        "about.card1_header":"公司简介",
+        "about.card2_header":"我们的优势",
+        "about.card3_header":"质量与合规",
+        "contact.tel":"电话：",
+        "contact.mobile":"手机/WhatsApp：",
+        "contact.web":"网址：",
+        "contact.addr":"地址：",
+        "contact.email":"邮箱：",
+        "contact.whatsapp":"WhatsApp：",
+        "nav.insights":"见解",
         "footer.nav_title":"导航",
         "footer.contact_title":"联系我们",
         "footer.copyright_title":"版权信息",
@@ -563,6 +584,7 @@ const translations = {
     fr: {
         "nav.home":"Accueil",
         "nav.products":"Produits",
+        "nav.projects":"Projets",
         "nav.about":"À propos",
         "nav.quote":"Demander un devis",
         "about.meta_title":"À propos de nous - ZHANXIN Intelligent Equipment",
@@ -603,6 +625,16 @@ const translations = {
         "about.mini3_title":"Conformité et essais complets",
         "about.mini3_text":"Dossier de certification complet, traçabilité matière, qualifications soudure et rapports d'essais tiers pour appels d'offres et export.",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
+        "about.card1_header":"Profil de l'entreprise",
+        "about.card2_header":"Nos atouts",
+        "about.card3_header":"Qualité & conformité",
+        "contact.tel":"Tél. :",
+        "contact.mobile":"Mobile/WhatsApp :",
+        "contact.web":"Site web :",
+        "contact.addr":"Adresse :",
+        "contact.email":"E-mail :",
+        "contact.whatsapp":"WhatsApp :",
+        "nav.insights":"Actualités",
         "footer.nav_title":"Navigation",
         "footer.contact_title":"Contact",
         "footer.copyright_title":"Copyright",
@@ -611,6 +643,7 @@ const translations = {
     de: {
         "nav.home":"Startseite",
         "nav.products":"Produkte",
+        "nav.projects":"Projekte",
         "nav.about":"Über uns",
         "nav.quote":"Angebot anfordern",
         "about.meta_title":"Über uns - ZHANXIN Intelligent Equipment",
@@ -651,6 +684,16 @@ const translations = {
         "about.mini3_title":"Vollständige Konformität & Prüfungen",
         "about.mini3_text":"Vollständiges Zertifikatspaket, Materialrückverfolgbarkeit, Schweißqualifikationen und Drittprüfberichte für Ausschreibungen und Exportprojekte.",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
+        "about.card1_header":"Unternehmensprofil",
+        "about.card2_header":"Unsere Stärken",
+        "about.card3_header":"Qualität & Konformität",
+        "contact.tel":"Tel.:",
+        "contact.mobile":"Mobil/WhatsApp:",
+        "contact.web":"Web:",
+        "contact.addr":"Adresse:",
+        "contact.email":"E-Mail:",
+        "contact.whatsapp":"WhatsApp:",
+        "nav.insights":"Einblicke",
         "footer.nav_title":"Navigation",
         "footer.contact_title":"Kontakt",
         "footer.copyright_title":"Urheberrecht",
@@ -659,6 +702,7 @@ const translations = {
     ja: {
         "nav.home":"ホーム",
         "nav.products":"製品",
+        "nav.projects":"事例",
         "nav.about":"会社概要",
         "nav.quote":"見積もり依頼",
         "about.meta_title":"会社概要 - ZHANXIN Intelligent Equipment",
@@ -699,6 +743,16 @@ const translations = {
         "about.mini3_title":"完全な適合性と試験",
         "about.mini3_text":"証明書一式、材料トレーサビリティ、溶接資格、第三者試験レポート。入札・輸出案件に対応。",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
+        "about.card1_header":"会社概要",
+        "about.card2_header":"当社の強み",
+        "about.card3_header":"品質とコンプライアンス",
+        "contact.tel":"TEL：",
+        "contact.mobile":"携帯/WhatsApp：",
+        "contact.web":"Web：",
+        "contact.addr":"住所：",
+        "contact.email":"メール：",
+        "contact.whatsapp":"WhatsApp：",
+        "nav.insights":"インサイト",
         "footer.nav_title":"ナビゲーション",
         "footer.contact_title":"お問い合わせ",
         "footer.copyright_title":"著作権",
@@ -707,6 +761,7 @@ const translations = {
     es: {
         "nav.home":"Inicio",
         "nav.products":"Productos",
+        "nav.projects":"Proyectos",
         "nav.about":"Nosotros",
         "nav.quote":"Solicitar cotización",
         "about.meta_title":"Sobre Nosotros - ZHANXIN Intelligent Equipment",
@@ -747,6 +802,16 @@ const translations = {
         "about.mini3_title":"Cumplimiento completo y ensayos",
         "about.mini3_text":"Paquete completo de certificados, trazabilidad de materiales, cualificaciones de soldadura e informes de laboratorio tercero para licitaciones y exportación.",
         "about.contact_title":"SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.",
+        "about.card1_header":"Perfil de la empresa",
+        "about.card2_header":"Nuestras fortalezas",
+        "about.card3_header":"Calidad y cumplimiento",
+        "contact.tel":"Tel:",
+        "contact.mobile":"Móvil/WhatsApp:",
+        "contact.web":"Web:",
+        "contact.addr":"Dirección:",
+        "contact.email":"Correo electrónico:",
+        "contact.whatsapp":"WhatsApp:",
+        "nav.insights":"Artículos",
         "footer.nav_title":"Navegación",
         "footer.contact_title":"Contacto",
         "footer.copyright_title":"Derechos de autor",
@@ -755,6 +820,7 @@ const translations = {
     ar: {
         "nav.home":"الرئيسية",
         "nav.products":"المنتجات",
+        "nav.projects":"المشاريع",
         "nav.about":"من نحن",
         "nav.quote":"طلب عرض سعر",
         "about.meta_title":"من نحن - ZHANXIN Intelligent Equipment",
@@ -795,6 +861,16 @@ const translations = {
         "about.mini3_title":"الامتثال الكامل والاختبارات",
         "about.mini3_text":"حزمة شهادات كاملة، تتبع المواد، تأهيل اللحام، تقارير اختبار طرف ثالث للمناقصات ومشاريع التصدير.",
         "about.contact_title":"شركة SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT المحدودة",
+        "about.card1_header":"نبذة عن الشركة",
+        "about.card2_header":"نقاط قوتنا",
+        "about.card3_header":"الجودة والامتثال",
+        "contact.tel":"هاتف:",
+        "contact.mobile":"جوال/واتساب:",
+        "contact.web":"الموقع:",
+        "contact.addr":"العنوان:",
+        "contact.email":"البريد الإلكتروني:",
+        "contact.whatsapp":"واتساب:",
+        "nav.insights":"رؤى",
         "footer.nav_title":"التصفح",
         "footer.contact_title":"اتصل بنا",
         "footer.copyright_title":"حقوق النشر",
@@ -826,7 +902,20 @@ const langSelect = document.getElementById('langSelect');
 langSelect.addEventListener('change', function(){
     setLang(this.value);
 });
-setLang('en');
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
+}
+const initialLang = getLangFromPath();
+setLang(initialLang);
+langSelect.value = initialLang;
 // ========= Factory Carousel + Lightbox Script =========
 document.addEventListener('DOMContentLoaded', function(){
     const carousel = document.getElementById('factoryCarousel');

@@ -140,11 +140,11 @@ footer a{color:#ffb040;text-decoration:none;}
     </a>
   </div>
   <nav>
-    <a href="/">Home</a>
-    <a href="/products" class="active">Products</a>
-    <a href="/cases">Projects</a>
-    <a href="/about">About Us</a>
-    <a href="/contact">Get a Quote</a>
+    <a href="/" data-i18n="nav.home">Home</a>
+    <a href="/products" class="active" data-i18n="nav.products">Products</a>
+    <a href="/cases" data-i18n="nav.projects">Projects</a>
+    <a href="/about" data-i18n="nav.about">About Us</a>
+    <a href="/contact" data-i18n="nav.quote">Get a Quote</a>
   </nav>
   <select class="lang-select" id="langSelect">
     <option value="en">English</option>
@@ -157,37 +157,37 @@ footer a{color:#ffb040;text-decoration:none;}
   </select>
 </header>
 <div class="breadcrumb">
-  <a href="/">Home</a>
+  <a href="/" data-i18n="bc.home">Home</a>
   <span>›</span>
-  <a href="/products">Our Products</a>
+  <a href="/products" data-i18n="bc.products">Our Products</a>
   <span>›</span>
-  <span>Frameless Tension Fabric Light Box</span>
+  <span data-i18n="bc.title">Frameless Tension Fabric Light Box</span>
 </div>
 <div class="container">
   <div class="img-box">
-    <img src="/uploads/frameless-lightbox-front.jpg?v=20261020" alt="Frameless Tension Fabric Light Box" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
+    <img src="/uploads/frameless-lightbox-front.jpg?v=20261020" data-i18n-alt="prod.title" alt="Frameless Tension Fabric Light Box" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
   </div>
   <div class="info-box">
-    <h1>Frameless Tension Fabric Light Box</h1>
-    <span class="cate">Light Box</span>
-    <p>Frameless tension fabric light box with slim design, ideal for metro, airport, shopping mall, supermarket and underground parking advertising &amp; lighting.</p>
-    
+    <h1 data-i18n="prod.title">Frameless Tension Fabric Light Box</h1>
+    <span class="cate" data-i18n="prod.cate">Light Box</span>
+    <p data-i18n="prod.desc">Frameless tension fabric light box with slim design, ideal for metro, airport, shopping mall, supermarket and underground parking advertising &amp; lighting.</p>
+
     <div class="specs-box">
-      <h2 class="specs-title">Specifications</h2>
+      <h2 class="specs-title" data-i18n="spec.title">Specifications</h2>
       <table class="specs-table">
-<tr><th>Material</th><td>Aluminum profile 6063, tension fabric front, aluminum back panel</td></tr>
-<tr><th>Thickness</th><td>Frame wall ≥2mm</td></tr>
-<tr><th>Surface Finish</th><td>Reflective film or white powder coating on back panel</td></tr>
-<tr><th>Dimensions</th><td>Depth 120-150mm, custom size</td></tr>
-<tr><th>Brightness</th><td>3000±500 Lux, uniformity &gt;85%</td></tr>
-<tr><th>Power</th><td>&lt;45 W/sqm</td></tr>
+<tr><th data-i18n="spec.th.material">Material</th><td data-i18n="spec.val.material">Aluminum profile 6063, tension fabric front, aluminum back panel</td></tr>
+<tr><th data-i18n="spec.th.thickness">Thickness</th><td data-i18n="spec.val.thickness">Frame wall ≥2mm</td></tr>
+<tr><th data-i18n="spec.th.surface">Surface Finish</th><td data-i18n="spec.val.surface">Reflective film or white powder coating on back panel</td></tr>
+<tr><th data-i18n="spec.th.dimensions">Dimensions</th><td data-i18n="spec.val.dimensions">Depth 120-150mm, custom size</td></tr>
+<tr><th data-i18n="spec.th.brightness">Brightness</th><td data-i18n="spec.val.brightness">3000±500 Lux, uniformity &gt;85%</td></tr>
+<tr><th data-i18n="spec.th.power">Power</th><td data-i18n="spec.val.power">&lt;45 W/sqm</td></tr>
       </table>
     </div>
-    <a href="/contact" class="btn-inquiry" id="inquiryBtn">Send Inquiry Now</a>
+    <a href="/contact" class="btn-inquiry" id="inquiryBtn" data-i18n="inq.btn">Send Inquiry Now</a>
   </div>
 </div>
 <footer>
-  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/blog">Insights</a> &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a></p>
+  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. <span data-i18n="footer.copyright">All rights reserved.</span> <a href="/blog" data-i18n="footer.insights">Insights</a> &nbsp;·&nbsp; <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a></p>
 </footer>
 <script>
 // GA4 跟踪 Send Inquiry 按钮点击
@@ -199,52 +199,259 @@ document.getElementById('inquiryBtn').addEventListener('click', function() {
 });
 
 // 多语言切换
-const productData = {"slug": "frameless-tension-lightbox", "category": "lightbox", "image": "/uploads/frameless-lightbox-front.jpg", "title": {"en": "Frameless Tension Fabric Light Box", "zh": "无边框卡布灯箱", "es": "Caja de luz tensora sin marco", "fr": "Caisson lumineux tendu sans cadre", "de": "Randloser Textil-Leuchtkasten", "ja": "フレームレステンションライトボックス", "ar": "صندوق ضوئي قماشي بدون إطار"}, "desc": {"en": "Frameless tension fabric light box with slim design, ideal for metro, airport, shopping mall, supermarket and underground parking advertising & lighting.", "zh": "无边框卡布灯箱，轻薄设计，适用于地铁、机场、商场、超市及地下停车场广告宣传及照明。", "es": "Caja de luz tensora sin marco con diseño delgado, ideal para publicidad e iluminación en metro, aeropuerto, centro comercial, supermercado y parking.", "fr": "Caisson lumineux tendu sans cadre avec design fin, idéal pour la publicité et l'éclairage en métro, aéroport, centre commercial, supermarché et parking.", "de": "Randloser Textil-Leuchtkasten mit schlankem Design, ideal für Werbung und Beleuchtung in U-Bahn, Flughafen, Einkaufszentrum, Supermarkt und Parkhaus.", "ja": "フレームレステンションライトボックス、スリムデザイン、地下鉄・空港・ショッピングモール・スーパー・地下駐車場の広告・照明に最適。", "ar": "صندوق ضوئي قماشي بدون إطار بتصميم نحيف، مثالي للإعلانات والإضاءة في المترو والمطار ومركز التسوق والسوبر ماركت ومواقف السيارات تحت الأرض."}, "specs": {"material": "Aluminum profile 6063, tension fabric front, aluminum back panel", "thickness": "Frame wall ≥2mm", "surface": "Reflective film or white powder coating on back panel", "dimensions": "Depth 120-150mm, custom size", "brightness": "3000±500 Lux, uniformity >85%", "power": "<45 W/sqm"}};
-const categoryI18n = {"en": {"lightbox": "Light Box", "sign": "Wayfinding Signage", "display": "LED Display Screen", "bus": "Bus Shelter", "custom-steel-aluminum": "Custom Metal Structure", "other": "Other Products"}, "zh": {"lightbox": "灯箱", "sign": "导向标识", "display": "LED显示屏", "bus": "公交候车亭", "custom-steel-aluminum": "定制金属结构", "other": "其他产品"}, "es": {"lightbox": "Caja de luz", "sign": "Señalización de orientación", "display": "Pantalla LED", "bus": "Refugio de autobús", "custom-steel-aluminum": "Estructura metálica personalizada", "other": "Otros productos"}, "fr": {"lightbox": "Caisson lumineux", "sign": "Signalétique d'orientation", "display": "Écran LED", "bus": "Abri bus", "custom-steel-aluminum": "Structure métallique sur mesure", "other": "Autres produits"}, "de": {"lightbox": "Leuchtkasten", "sign": "Leitsystem-Schilder", "display": "LED-Displays", "bus": "Bushaltestelle", "custom-steel-aluminum": "Kundenspezifische Metallkonstruktion", "other": "Sonstige Produkte"}, "ja": {"lightbox": "ライトボックス", "sign": "案内サイン", "display": "LEDディスプレイ", "bus": "バス待合所", "custom-steel-aluminum": "特注金属構造物", "other": "その他製品"}, "ar": {"lightbox": "صندوق ضوئي", "sign": "لوحات الإرشاد", "display": "شاشات LED", "bus": "ملجأ الحافلات", "custom-steel-aluminum": "هياكل معدنية مخصصة", "other": "منتجات أخرى"}};
-const navI18n = {"en": {"home": "Home", "products": "Products", "about": "About Us", "quote": "Get a Quote", "inquiry": "Send Inquiry Now", "bc_home": "Home", "bc_products": "Our Products"}, "zh": {"home": "首页", "products": "产品", "about": "关于我们", "quote": "获取报价", "inquiry": "立即发送询价", "bc_home": "首页", "bc_products": "全部产品"}, "es": {"home": "Inicio", "products": "Productos", "about": "Nosotros", "quote": "Solicitar precio", "inquiry": "Enviar consulta", "bc_home": "Inicio", "bc_products": "Nuestros productos"}, "fr": {"home": "Accueil", "products": "Produits", "about": "À propos", "quote": "Demander un devis", "inquiry": "Envoyer une demande", "bc_home": "Accueil", "bc_products": "Nos produits"}, "de": {"home": "Startseite", "products": "Produkte", "about": "Über uns", "quote": "Angebot anfordern", "inquiry": "Anfrage senden", "bc_home": "Startseite", "bc_products": "Unsere Produkte"}, "ja": {"home": "ホーム", "products": "製品", "about": "会社概要", "quote": "見積もり依頼", "inquiry": "お問い合わせ", "bc_home": "ホーム", "bc_products": "製品一覧"}, "ar": {"home": "الرئيسية", "products": "المنتجات", "about": "من نحن", "quote": "طلب عرض سعر", "inquiry": "إرسال استفسار الآن", "bc_home": "الرئيسية", "bc_products": "منتجاتنا"}};
-const specLabelsI18n = {"en": {"title": "Specifications", "material": "Material", "thickness": "Thickness", "surface": "Surface Finish", "ipRating": "IP Rating", "dimensions": "Dimensions", "brightness": "Brightness", "power": "Power", "accessories": "Optional Accessories"}, "zh": {"title": "规格参数", "material": "材质", "thickness": "厚度", "surface": "表面处理", "ipRating": "防水等级", "dimensions": "尺寸", "brightness": "亮度", "power": "功耗", "accessories": "可选配件"}, "es": {"title": "Especificaciones", "material": "Material", "thickness": "Grosor", "surface": "Acabado superficial", "ipRating": "Grado IP", "dimensions": "Dimensiones", "brightness": "Brillo", "power": "Potencia", "accessories": "Accesorios opcionales"}, "fr": {"title": "Spécifications", "material": "Matériau", "thickness": "Épaisseur", "surface": "Finition de surface", "ipRating": "Indice IP", "dimensions": "Dimensions", "brightness": "Luminosité", "power": "Puissance", "accessories": "Accessoires optionnels"}, "de": {"title": "Technische Daten", "material": "Material", "thickness": "Dicke", "surface": "Oberflächenveredelung", "ipRating": "IP-Schutzart", "dimensions": "Abmessungen", "brightness": "Helligkeit", "power": "Leistung", "accessories": "Optionales Zubehör"}, "ja": {"title": "仕様", "material": "材質", "thickness": "厚さ", "surface": "表面処理", "ipRating": "IP等級", "dimensions": "寸法", "brightness": "明るさ", "power": "消費電力", "accessories": "オプション部品"}, "ar": {"title": "المواصفات", "material": "المادة", "thickness": "السماكة", "surface": "تشطيب السطح", "ipRating": "درجة الحماية IP", "dimensions": "الأبعاد", "brightness": "السطوع", "power": "القدرة", "accessories": "إكسسوارات اختيارية"}};
-
-const langSelect = document.getElementById('langSelect');
-
-function setLang(lang) {
-  localStorage.setItem('preferredLang', lang);
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
-  // 导航
-  const navLinks = document.querySelectorAll('nav a');
-  navLinks[0].textContent = navI18n[lang].home;
-  navLinks[1].textContent = navI18n[lang].products;
-  navLinks[2].textContent = navI18n[lang].about;
-  navLinks[3].textContent = navI18n[lang].quote;
-
-  // 面包屑
-  const bcLinks = document.querySelectorAll('.breadcrumb a');
-  bcLinks[0].textContent = navI18n[lang].bc_home;
-  bcLinks[1].textContent = navI18n[lang].bc_products;
-
-  // 产品标题、描述、分类
-  document.querySelector('.info-box h1').textContent = productData.title[lang] || productData.title.en;
-  document.querySelector('.info-box p').textContent = productData.desc[lang] || productData.desc.en;
-  document.querySelector('.info-box .cate').textContent = categoryI18n[lang][productData.category] || productData.category;
-  document.getElementById('inquiryBtn').textContent = navI18n[lang].inquiry;
-  document.querySelector('.img-box img').alt = productData.title[lang] || productData.title.en;
-
-  // 规格参数表标题和标签
-  const specsTitle = document.querySelector('.specs-title');
-  if (specsTitle && specLabelsI18n[lang]) {
-    specsTitle.textContent = specLabelsI18n[lang].title || 'Specifications';
-  }
-  const specRows = document.querySelectorAll('.specs-table tr');
-  const specKeys = Object.keys(productData.specs || {});
-  specRows.forEach((row, idx) => {
-    if (specKeys[idx] && specLabelsI18n[lang] && specLabelsI18n[lang][specKeys[idx]]) {
-      row.querySelector('th').textContent = specLabelsI18n[lang][specKeys[idx]];
+const translations = {
+    en: {
+        "nav.home":"Home",
+        "nav.products":"Products",
+        "nav.projects":"Projects",
+        "nav.about":"About Us",
+        "nav.quote":"Get a Quote",
+        "bc.home":"Home",
+        "bc.products":"Our Products",
+        "bc.title":"Frameless Tension Fabric Light Box",
+        "prod.title":"Frameless Tension Fabric Light Box",
+        "prod.cate":"Light Box",
+        "prod.desc":"Frameless tension fabric light box with slim design, ideal for metro, airport, shopping mall, supermarket and underground parking advertising & lighting.",
+        "spec.title":"Specifications",
+        "spec.th.material":"Material",
+        "spec.th.thickness":"Thickness",
+        "spec.th.surface":"Surface Finish",
+        "spec.th.dimensions":"Dimensions",
+        "spec.th.brightness":"Brightness",
+        "spec.th.power":"Power",
+        "spec.val.material":"Aluminum profile 6063, tension fabric front, aluminum back panel",
+        "spec.val.thickness":"Frame wall ≥2mm",
+        "spec.val.surface":"Reflective film or white powder coating on back panel",
+        "spec.val.dimensions":"Depth 120-150mm, custom size",
+        "spec.val.brightness":"3000±500 Lux, uniformity >85%",
+        "spec.val.power":"<45 W/sqm",
+        "inq.btn":"Send Inquiry Now",
+        "footer.copyright":"All rights reserved.",
+        "footer.insights":"Insights",
+        "footer.privacy":"Privacy Policy"
+    },
+    zh: {
+        "nav.home":"首页",
+        "nav.products":"产品",
+        "nav.projects":"工程案例",
+        "nav.about":"工厂介绍",
+        "nav.quote":"获取报价",
+        "bc.home":"首页",
+        "bc.products":"全部产品",
+        "bc.title":"无边框卡布灯箱",
+        "prod.title":"无边框卡布灯箱",
+        "prod.cate":"灯箱",
+        "prod.desc":"无边框卡布灯箱，轻薄设计，适用于地铁、机场、商场、超市及地下停车场广告宣传及照明。",
+        "spec.title":"规格参数",
+        "spec.th.material":"材质",
+        "spec.th.thickness":"厚度",
+        "spec.th.surface":"表面处理",
+        "spec.th.dimensions":"尺寸",
+        "spec.th.brightness":"亮度",
+        "spec.th.power":"功耗",
+        "spec.val.material":"6063 铝型材，卡布画面，铝背板",
+        "spec.val.thickness":"框壁 ≥2mm",
+        "spec.val.surface":"背板反光膜或白色喷塑",
+        "spec.val.dimensions":"厚度 120-150mm，尺寸定制",
+        "spec.val.brightness":"3000±500 Lux，均匀度 >85%",
+        "spec.val.power":"<45 W/㎡",
+        "inq.btn":"立即发送询价",
+        "footer.copyright":"保留所有权利。",
+        "footer.insights":"行业洞察",
+        "footer.privacy":"隐私政策"
+    },
+    de: {
+        "nav.home":"Startseite",
+        "nav.products":"Produkte",
+        "nav.projects":"Projekte",
+        "nav.about":"Über uns",
+        "nav.quote":"Angebot anfordern",
+        "bc.home":"Startseite",
+        "bc.products":"Unsere Produkte",
+        "bc.title":"Randloser Textil-Leuchtkasten",
+        "prod.title":"Randloser Textil-Leuchtkasten",
+        "prod.cate":"Leuchtkasten",
+        "prod.desc":"Randloser Textil-Leuchtkasten mit schlankem Design, ideal für Werbung und Beleuchtung in U-Bahn, Flughafen, Einkaufszentrum, Supermarkt und Tiefgarage.",
+        "spec.title":"Technische Daten",
+        "spec.th.material":"Material",
+        "spec.th.thickness":"Dicke",
+        "spec.th.surface":"Oberflächenveredelung",
+        "spec.th.dimensions":"Abmessungen",
+        "spec.th.brightness":"Helligkeit",
+        "spec.th.power":"Leistung",
+        "spec.val.material":"Aluminiumprofil 6063, Textilfront, Aluminium-Rückwand",
+        "spec.val.thickness":"Rahmenwand ≥2mm",
+        "spec.val.surface":"Reflexfolie oder weiße Pulverbeschichtung auf der Rückwand",
+        "spec.val.dimensions":"Tiefe 120-150mm, Sondermaß",
+        "spec.val.brightness":"3000±500 Lux, Gleichmäßigkeit >85%",
+        "spec.val.power":"<45 W/m²",
+        "inq.btn":"Anfrage senden",
+        "footer.copyright":"Alle Rechte vorbehalten.",
+        "footer.insights":"Artikel",
+        "footer.privacy":"Datenschutzerklärung"
+    },
+    es: {
+        "nav.home":"Inicio",
+        "nav.products":"Productos",
+        "nav.projects":"Proyectos",
+        "nav.about":"Nosotros",
+        "nav.quote":"Solicitar precio",
+        "bc.home":"Inicio",
+        "bc.products":"Nuestros productos",
+        "bc.title":"Caja de luz tensora sin marco",
+        "prod.title":"Caja de luz tensora sin marco",
+        "prod.cate":"Caja de luz",
+        "prod.desc":"Caja de luz tensora sin marco con diseño fino, ideal para publicidad e iluminación en metro, aeropuerto, centro comercial, supermercado y parking subterráneo.",
+        "spec.title":"Especificaciones",
+        "spec.th.material":"Material",
+        "spec.th.thickness":"Grosor",
+        "spec.th.surface":"Acabado superficial",
+        "spec.th.dimensions":"Dimensiones",
+        "spec.th.brightness":"Brillo",
+        "spec.th.power":"Potencia",
+        "spec.val.material":"Perfil de aluminio 6063, frente de tela tensada, panel trasero de aluminio",
+        "spec.val.thickness":"Pared del marco ≥2mm",
+        "spec.val.surface":"Película reflectante o recubrimiento en polvo blanco en el panel trasero",
+        "spec.val.dimensions":"Profundidad 120-150mm, tamaño personalizado",
+        "spec.val.brightness":"3000±500 Lux, uniformidad >85%",
+        "spec.val.power":"<45 W/m²",
+        "inq.btn":"Enviar consulta",
+        "footer.copyright":"Todos los derechos reservados.",
+        "footer.insights":"Artículos",
+        "footer.privacy":"Política de Privacidad"
+    },
+    fr: {
+        "nav.home":"Accueil",
+        "nav.products":"Produits",
+        "nav.projects":"Projets",
+        "nav.about":"À propos",
+        "nav.quote":"Demander un devis",
+        "bc.home":"Accueil",
+        "bc.products":"Nos produits",
+        "bc.title":"Caisson lumineux tendu sans cadre",
+        "prod.title":"Caisson lumineux tendu sans cadre",
+        "prod.cate":"Caisson lumineux",
+        "prod.desc":"Caisson lumineux tendu sans cadre au design fin, idéal pour la publicité et l'éclairage en métro, aéroport, centre commercial, supermarché et parking souterrain.",
+        "spec.title":"Spécifications",
+        "spec.th.material":"Matériau",
+        "spec.th.thickness":"Épaisseur",
+        "spec.th.surface":"Finition de surface",
+        "spec.th.dimensions":"Dimensions",
+        "spec.th.brightness":"Luminosité",
+        "spec.th.power":"Puissance",
+        "spec.val.material":"Profilé aluminium 6063, face en tissu tendu, panneau arrière en aluminium",
+        "spec.val.thickness":"Paroi du cadre ≥2mm",
+        "spec.val.surface":"Film réfléchissant ou poudre blanche sur le panneau arrière",
+        "spec.val.dimensions":"Profondeur 120-150mm, taille sur mesure",
+        "spec.val.brightness":"3000±500 Lux, uniformité >85%",
+        "spec.val.power":"<45 W/m²",
+        "inq.btn":"Envoyer une demande",
+        "footer.copyright":"Tous droits réservés.",
+        "footer.insights":"Articles",
+        "footer.privacy":"Politique de confidentialité"
+    },
+    ja: {
+        "nav.home":"ホーム",
+        "nav.products":"製品",
+        "nav.projects":"導入事例",
+        "nav.about":"会社概要",
+        "nav.quote":"見積もり依頼",
+        "bc.home":"ホーム",
+        "bc.products":"製品一覧",
+        "bc.title":"フレームレステンションライトボックス",
+        "prod.title":"フレームレステンションライトボックス",
+        "prod.cate":"ライトボックス",
+        "prod.desc":"フレームレステンションライトボックス、スリム設計。地下鉄・空港・ショッピングモール・スーパー・地下駐車場の広告・照明に最適です。",
+        "spec.title":"仕様",
+        "spec.th.material":"材質",
+        "spec.th.thickness":"厚さ",
+        "spec.th.surface":"表面処理",
+        "spec.th.dimensions":"寸法",
+        "spec.th.brightness":"明るさ",
+        "spec.th.power":"消費電力",
+        "spec.val.material":"6063アルミ型材、テンションファブリック前面、アルミ背板",
+        "spec.val.thickness":"フレーム板厚 ≥2mm",
+        "spec.val.surface":"背板に反射フィルムまたは白色粉体塗装",
+        "spec.val.dimensions":"奥行 120-150mm、サイズ特注",
+        "spec.val.brightness":"3000±500 Lux、均斉度 >85%",
+        "spec.val.power":"<45 W/㎡",
+        "inq.btn":"お問い合わせ",
+        "footer.copyright":"無断転載を禁じます。",
+        "footer.insights":"コラム",
+        "footer.privacy":"プライバシーポリシー"
+    },
+    ar: {
+        "nav.home":"الرئيسية",
+        "nav.products":"المنتجات",
+        "nav.projects":"المشاريع",
+        "nav.about":"من نحن",
+        "nav.quote":"طلب عرض سعر",
+        "bc.home":"الرئيسية",
+        "bc.products":"منتجاتنا",
+        "bc.title":"صندوق ضوئي قماشي بدون إطار",
+        "prod.title":"صندوق ضوئي قماشي بدون إطار",
+        "prod.cate":"صندوق ضوئي",
+        "prod.desc":"صندوق ضوئي قماشي بدون إطار بتصميم نحيف، مثالي للإعلانات والإضاءة في المترو والمطار ومركز التسوق والسوبر ماركت ومواقف السيارات تحت الأرض.",
+        "spec.title":"المواصفات",
+        "spec.th.material":"المادة",
+        "spec.th.thickness":"السماكة",
+        "spec.th.surface":"تشطيب السطح",
+        "spec.th.dimensions":"الأبعاد",
+        "spec.th.brightness":"السطوع",
+        "spec.th.power":"القدرة",
+        "spec.val.material":"مقاطع ألمنيوم 6063، واجهة قماش مشدود، لوحة خلفية ألمنيوم",
+        "spec.val.thickness":"جدار الإطار ≥2mm",
+        "spec.val.surface":"فيلم عاكس أو طلاء مسحوق أبيض على اللوحة الخلفية",
+        "spec.val.dimensions":"العمق 120-150mm، مقاس مخصص",
+        "spec.val.brightness":"3000±500 لوكس، تجانس >85%",
+        "spec.val.power":"<45 واط/م²",
+        "inq.btn":"إرسال استفسار الآن",
+        "footer.copyright":"جميع الحقوق محفوظة.",
+        "footer.insights":"المقالات",
+        "footer.privacy":"سياسة الخصوصية"
     }
-  });
+};
+function setLang(langKey){
+    const trans = translations[langKey] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(trans[key]) el.innerText = trans[key];
+    });
+    // 图片alt多语言预埋
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    //阿拉伯语RTL双重兜底
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+    }
+}
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', function(){
+    setLang(this.value);
+})
+
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
 }
 
-langSelect.addEventListener('change', () => setLang(langSelect.value));
+const initialLang = getLangFromPath();
+setLang(initialLang);
+langSelect.value = initialLang;
 
 // GDPR Cookie 弹窗
 (function() {

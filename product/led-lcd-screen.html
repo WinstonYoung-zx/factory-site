@@ -126,11 +126,11 @@ footer a{color:#ffb040;text-decoration:none;}
     </a>
   </div>
   <nav>
-    <a href="/">Home</a>
-    <a href="/products" class="active">Products</a>
-    <a href="/cases">Projects</a>
-    <a href="/about">About Us</a>
-    <a href="/contact">Get a Quote</a>
+    <a href="/" data-i18n="nav.home">Home</a>
+    <a href="/products" class="active" data-i18n="nav.products">Products</a>
+    <a href="/cases" data-i18n="nav.projects">Projects</a>
+    <a href="/about" data-i18n="nav.about">About Us</a>
+    <a href="/contact" data-i18n="nav.quote">Get a Quote</a>
   </nav>
   <select class="lang-select" id="langSelect">
     <option value="en">English</option>
@@ -143,43 +143,43 @@ footer a{color:#ffb040;text-decoration:none;}
   </select>
 </header>
 <div class="breadcrumb">
-  <a href="/">Home</a>
+  <a href="/" data-i18n="bc.home">Home</a>
   <span>›</span>
-  <a href="/products">Our Products</a>
+  <a href="/products" data-i18n="bc.products">Our Products</a>
   <span>›</span>
-  <span>LCD Advertising Machine</span>
+  <span data-i18n="bc.title">LCD Advertising Machine</span>
 </div>
 <div class="container">
   <div class="img-box">
-    <img id="mainImg" src="/uploads/led-lcd-airport.jpg?v=20261102" alt="LCD Advertising Machine" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
+    <img id="mainImg" src="/uploads/led-lcd-airport.jpg?v=20261102" data-i18n-alt="prod.title" alt="LCD Advertising Machine" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
   </div>
   <div class="info-box">
-    <h1>LCD Advertising Machine</h1>
-    <span class="cate">LCD Display Screen</span>
-    <p>Freestanding or recessed LCD advertising machine, compatible with 55-98 inch LCD screens. Adaptable to different installation environments as a freestanding floor unit or a recessed unit.</p>
-    
+    <h1 data-i18n="prod.title">LCD Advertising Machine</h1>
+    <span class="cate" data-i18n="prod.cate">LCD Display Screen</span>
+    <p data-i18n="prod.desc">Freestanding or recessed LCD advertising machine, compatible with 55-98 inch LCD screens. Adaptable to different installation environments as a freestanding floor unit or a recessed unit.</p>
+
     <div class="specs-box">
-      <h2 class="specs-title">Specifications</h2>
+      <h2 class="specs-title" data-i18n="spec.title">Specifications</h2>
       <table class="specs-table">
-<tr><th>Screen Size</th><td>Compatible with 55-98 inch LCD screens</td></tr>
-<tr><th>Installation</th><td>Freestanding or recessed mounting</td></tr>
-<tr><th>Material</th><td>Aluminum/steel housing, LCD panel</td></tr>
+<tr><th data-i18n="spec.th.screenSize">Screen Size</th><td data-i18n="spec.val.screenSize">Compatible with 55-98 inch LCD screens</td></tr>
+<tr><th data-i18n="spec.th.installation">Installation</th><td data-i18n="spec.val.installation">Freestanding or recessed mounting</td></tr>
+<tr><th data-i18n="spec.th.material">Material</th><td data-i18n="spec.val.material">Aluminum/steel housing, LCD panel</td></tr>
       </table>
     </div>
-    <a href="/contact" class="btn-inquiry" id="inquiryBtn">Send Inquiry Now</a>
+    <a href="/contact" class="btn-inquiry" id="inquiryBtn" data-i18n="inq.btn">Send Inquiry Now</a>
   </div>
 </div>
 <section style="max-width:1400px;margin:2.5rem auto 0;padding:0 5%;">
   <div style="border:1px solid #D9DEE3;border-radius:8px;overflow:hidden;">
-    <h2 style="font-size:1.1rem;font-weight:600;color:#0F2A44;background:#f7f8fa;padding:0.8rem 1.2rem;border-bottom:1px solid #D9DEE3;margin:0;">Related articles</h2>
+    <h2 style="font-size:1.1rem;font-weight:600;color:#0F2A44;background:#f7f8fa;padding:0.8rem 1.2rem;border-bottom:1px solid #D9DEE3;margin:0;" data-i18n="related.title">Related articles</h2>
     <ul style="list-style:none;padding:0.8rem 1.2rem;margin:0;">
-      <li style="padding:0.55rem 0;border-bottom:1px solid #f0f1f3;"><a href="/blog/outdoor-led-display-selection-guide" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;">Outdoor LED display specification guide</a></li>
-      <li style="padding:0.55rem 0;"><a href="/blog/led-vs-lcd-outdoor-display-choice" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;">LED vs LCD: choosing screen technology</a></li>
+      <li style="padding:0.55rem 0;border-bottom:1px solid #f0f1f3;"><a href="/blog/outdoor-led-display-selection-guide" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;" data-i18n="related.1">Outdoor LED display specification guide</a></li>
+      <li style="padding:0.55rem 0;"><a href="/blog/led-vs-lcd-outdoor-display-choice" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;" data-i18n="related.2">LED vs LCD: choosing screen technology</a></li>
     </ul>
   </div>
 </section>
 <footer>
-  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/blog">Insights</a> &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a></p>
+  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. <span data-i18n="footer.copyright">All rights reserved.</span> <a href="/blog" data-i18n="footer.insights">Insights</a> &nbsp;·&nbsp; <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a></p>
 </footer>
 <script>
 // GA4 跟踪 Send Inquiry 按钮点击
@@ -191,60 +191,238 @@ document.getElementById('inquiryBtn').addEventListener('click', function() {
 });
 
 // 多语言切换
-const productData = {"slug": "led-lcd-screen", "category": "display", "image": "/uploads/led-lcd-airport.jpg", "title": {"en": "LCD Advertising Machine", "zh": "LCD广告机", "es": "Pantalla LCD publicitaria", "fr": "Écran LCD publicitaire", "de": "LCD-Werbedisplay", "ja": "LCD広告機", "ar": "شاشة إعلانية LCD"}, "desc": {"en": "Freestanding or recessed LCD advertising machine, compatible with 55-98 inch LCD screens. Adaptable to different installation environments as a freestanding floor unit or a recessed unit.", "zh": "立式或嵌入式LCD广告机，适配55-98英寸LCD屏，可根据安装环境灵活选择立式或嵌入式安装。", "es": "Pantalla LCD publicitaria de pie o empotrada, compatible con pantallas LCD de 55-98 pulgadas. Se adapta a distintos entornos de instalación, en versión de pie o empotrada.", "fr": "Écran LCD publicitaire autoportant ou encastré, compatible avec les écrans LCD de 55-98 pouces. S'adapte à différents environnements d'installation, en version autoportante ou encastrée.", "de": "Frei stehendes oder eingelassenes LCD-Werbedisplay, kompatibel mit 55-98 Zoll LCD-Bildschirmen. Je nach Einbauumgebung flexibel als Standgerät oder integrierte Lösung einsetzbar.", "ja": "自立式・埋込式LCD広告機。55-98インチのLCD画面に対応し、設置環境に応じて自立式または埋込式を柔軟に選択できます。", "ar": "شاشة إعلانية LCD قائمة بذاتها أو مدمجة، متوافقة مع شاشات LCD مقاس 55-98 بوصة، قابلة للتكيف مع بيئات التثبيت المختلفة كنظام قائم أو مدمج."}, "specs": {"screenSize": {"en": "Compatible with 55-98 inch LCD screens", "zh": "适配55-98英寸LCD屏", "es": "Compatible con pantallas LCD de 55-98 pulgadas", "fr": "Compatible avec écrans LCD 55-98 pouces", "de": "Kompatibel mit 55-98 Zoll LCD-Bildschirmen", "ja": "55-98インチLCD画面対応", "ar": "متوافقة مع شاشات LCD مقاس 55-98 بوصة"}, "installation": {"en": "Freestanding or recessed mounting", "zh": "立式或嵌入式安装", "es": "Instalación de pie o empotrada", "fr": "Montage autoportant ou encastré", "de": "Stand- oder Einbaumontage", "ja": "自立式または埋込式設置", "ar": "تركيب قائم أو مدمج"}, "material": {"en": "Aluminum/steel housing, LCD panel", "zh": "铝/钢外壳，LCD面板", "es": "Carcasa de aluminio/acero, panel LCD", "fr": "Boîtier aluminium/acier, panneau LCD", "de": "Aluminium-/Stahlgehäuse, LCD-Panel", "ja": "アルミ・スチール筐体、LCDパネル", "ar": "هيكل ألمنيوم/فولاذ، لوحة LCD"}}};
-const categoryI18n = {"en": {"lightbox": "Light Box", "sign": "Wayfinding Signage", "display": "LED Display Screen", "bus": "Bus Shelter", "custom-steel-aluminum": "Custom Metal Structure", "other": "Other Products"}, "zh": {"lightbox": "灯箱", "sign": "导向标识", "display": "LED显示屏", "bus": "公交候车亭", "custom-steel-aluminum": "定制金属结构", "other": "其他产品"}, "es": {"lightbox": "Caja de luz", "sign": "Señalización de orientación", "display": "Pantalla LED", "bus": "Refugio de autobús", "custom-steel-aluminum": "Estructura metálica personalizada", "other": "Otros productos"}, "fr": {"lightbox": "Caisson lumineux", "sign": "Signalétique d'orientation", "display": "Écran LED", "bus": "Abri bus", "custom-steel-aluminum": "Structure métallique sur mesure", "other": "Autres produits"}, "de": {"lightbox": "Leuchtkasten", "sign": "Leitsystem-Schilder", "display": "LED-Displays", "bus": "Bushaltestelle", "custom-steel-aluminum": "Kundenspezifische Metallkonstruktion", "other": "Sonstige Produkte"}, "ja": {"lightbox": "ライトボックス", "sign": "案内サイン", "display": "LEDディスプレイ", "bus": "バス待合所", "custom-steel-aluminum": "特注金属構造物", "other": "その他製品"}, "ar": {"lightbox": "صندوق ضوئي", "sign": "لوحات الإرشاد", "display": "شاشات LED", "bus": "ملجأ الحافلات", "custom-steel-aluminum": "هياكل معدنية مخصصة", "other": "منتجات أخرى"}};
-const navI18n = {"en": {"home": "Home", "products": "Products", "about": "About Us", "quote": "Get a Quote", "inquiry": "Send Inquiry Now", "bc_home": "Home", "bc_products": "Our Products"}, "zh": {"home": "首页", "products": "产品", "about": "关于我们", "quote": "获取报价", "inquiry": "立即发送询价", "bc_home": "首页", "bc_products": "全部产品"}, "es": {"home": "Inicio", "products": "Productos", "about": "Nosotros", "quote": "Solicitar precio", "inquiry": "Enviar consulta", "bc_home": "Inicio", "bc_products": "Nuestros productos"}, "fr": {"home": "Accueil", "products": "Produits", "about": "À propos", "quote": "Demander un devis", "inquiry": "Envoyer une demande", "bc_home": "Accueil", "bc_products": "Nos produits"}, "de": {"home": "Startseite", "products": "Produkte", "about": "Über uns", "quote": "Angebot anfordern", "inquiry": "Anfrage senden", "bc_home": "Startseite", "bc_products": "Unsere Produkte"}, "ja": {"home": "ホーム", "products": "製品", "about": "会社概要", "quote": "見積もり依頼", "inquiry": "お問い合わせ", "bc_home": "ホーム", "bc_products": "製品一覧"}, "ar": {"home": "الرئيسية", "products": "المنتجات", "about": "من نحن", "quote": "طلب عرض سعر", "inquiry": "إرسال استفسار الآن", "bc_home": "الرئيسية", "bc_products": "منتجاتنا"}};
-const specLabelsI18n = {"en": {"title": "Specifications", "material": "Material", "screenSize": "Screen Size", "installation": "Installation", "thickness": "Thickness", "surface": "Surface Finish", "ipRating": "IP Rating", "dimensions": "Dimensions", "brightness": "Brightness", "power": "Power", "accessories": "Optional Accessories"}, "zh": {"title": "规格参数", "material": "材质", "screenSize": "屏幕尺寸", "installation": "安装方式", "thickness": "厚度", "surface": "表面处理", "ipRating": "防水等级", "dimensions": "尺寸", "brightness": "亮度", "power": "功耗", "accessories": "可选配件"}, "es": {"title": "Especificaciones", "material": "Material", "screenSize": "Tamaño de pantalla", "installation": "Instalación", "thickness": "Grosor", "surface": "Acabado superficial", "ipRating": "Grado IP", "dimensions": "Dimensiones", "brightness": "Brillo", "power": "Potencia", "accessories": "Accesorios opcionales"}, "fr": {"title": "Spécifications", "material": "Matériau", "screenSize": "Taille d'écran", "installation": "Installation", "thickness": "Épaisseur", "surface": "Finition de surface", "ipRating": "Indice IP", "dimensions": "Dimensions", "brightness": "Luminosité", "power": "Puissance", "accessories": "Accessoires optionnels"}, "de": {"title": "Technische Daten", "material": "Material", "screenSize": "Bildschirmgröße", "installation": "Montage", "thickness": "Dicke", "surface": "Oberflächenveredelung", "ipRating": "IP-Schutzart", "dimensions": "Abmessungen", "brightness": "Helligkeit", "power": "Leistung", "accessories": "Optionales Zubehör"}, "ja": {"title": "仕様", "material": "材質", "screenSize": "画面サイズ", "installation": "設置方式", "thickness": "厚さ", "surface": "表面処理", "ipRating": "IP等級", "dimensions": "寸法", "brightness": "明るさ", "power": "消費電力", "accessories": "オプション部品"}, "ar": {"title": "المواصفات", "material": "المادة", "screenSize": "حجم الشاشة", "installation": "طريقة التركيب", "thickness": "السماكة", "surface": "تشطيب السطح", "ipRating": "درجة الحماية IP", "dimensions": "الأبعاد", "brightness": "السطوع", "power": "القدرة", "accessories": "إكسسوارات اختيارية"}};
-
-const langSelect = document.getElementById('langSelect');
-
-function setLang(lang) {
-  localStorage.setItem('preferredLang', lang);
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
-  // 导航
-  const navLinks = document.querySelectorAll('nav a');
-  navLinks[0].textContent = navI18n[lang].home;
-  navLinks[1].textContent = navI18n[lang].products;
-  navLinks[2].textContent = navI18n[lang].about;
-  navLinks[3].textContent = navI18n[lang].quote;
-
-  // 面包屑
-  const bcLinks = document.querySelectorAll('.breadcrumb a');
-  bcLinks[0].textContent = navI18n[lang].bc_home;
-  bcLinks[1].textContent = navI18n[lang].bc_products;
-
-  // 产品标题、描述、分类
-  document.querySelector('.info-box h1').textContent = productData.title[lang] || productData.title.en;
-  document.querySelector('.info-box p').textContent = productData.desc[lang] || productData.desc.en;
-  document.querySelector('.info-box .cate').textContent = categoryI18n[lang][productData.category] || productData.category;
-  document.getElementById('inquiryBtn').textContent = navI18n[lang].inquiry;
-  document.querySelector('.img-box img').alt = productData.title[lang] || productData.title.en;
-
-  // 规格参数表标题和标签
-  const specsTitle = document.querySelector('.specs-title');
-  if (specsTitle && specLabelsI18n[lang]) {
-    specsTitle.textContent = specLabelsI18n[lang].title || 'Specifications';
-  }
-  const specRows = document.querySelectorAll('.specs-table tr');
-  const specKeys = Object.keys(productData.specs || {});
-  specRows.forEach((row, idx) => {
-    const key = specKeys[idx];
-    if (key) {
-      if (specLabelsI18n[lang] && specLabelsI18n[lang][key]) {
-        row.querySelector('th').textContent = specLabelsI18n[lang][key];
-      }
-      const v = productData.specs[key];
-      const td = row.querySelector('td');
-      if (td && v) {
-        td.textContent = (typeof v === 'string') ? v : (v[lang] || v.en || '');
-      }
+const translations = {
+    en: {
+        "nav.home":"Home",
+        "nav.products":"Products",
+        "nav.projects":"Projects",
+        "nav.about":"About Us",
+        "nav.quote":"Get a Quote",
+        "bc.home":"Home",
+        "bc.products":"Our Products",
+        "bc.title":"LCD Advertising Machine",
+        "prod.title":"LCD Advertising Machine",
+        "prod.cate":"LCD Display Screen",
+        "prod.desc":"Freestanding or recessed LCD advertising machine, compatible with 55-98 inch LCD screens. Adaptable to different installation environments as a freestanding floor unit or a recessed unit.",
+        "spec.title":"Specifications",
+        "spec.th.screenSize":"Screen Size",
+        "spec.th.installation":"Installation",
+        "spec.th.material":"Material",
+        "spec.val.screenSize":"Compatible with 55-98 inch LCD screens",
+        "spec.val.installation":"Freestanding or recessed mounting",
+        "spec.val.material":"Aluminum/steel housing, LCD panel",
+        "inq.btn":"Send Inquiry Now",
+        "related.title":"Related articles",
+        "related.1":"Outdoor LED display specification guide",
+        "related.2":"LED vs LCD: choosing screen technology",
+        "footer.copyright":"All rights reserved.",
+        "footer.insights":"Insights",
+        "footer.privacy":"Privacy Policy"
+    },
+    zh: {
+        "nav.home":"首页",
+        "nav.products":"产品",
+        "nav.projects":"工程案例",
+        "nav.about":"工厂介绍",
+        "nav.quote":"获取报价",
+        "bc.home":"首页",
+        "bc.products":"全部产品",
+        "bc.title":"LCD广告机",
+        "prod.title":"LCD广告机",
+        "prod.cate":"LCD显示屏",
+        "prod.desc":"立式或嵌入式LCD广告机，适配55-98英寸LCD屏，可根据安装环境灵活选择立式或嵌入式安装。",
+        "spec.title":"规格参数",
+        "spec.th.screenSize":"屏幕尺寸",
+        "spec.th.installation":"安装方式",
+        "spec.th.material":"材质",
+        "spec.val.screenSize":"适配55-98英寸LCD屏",
+        "spec.val.installation":"立式或嵌入式安装",
+        "spec.val.material":"铝/钢外壳，LCD面板",
+        "inq.btn":"立即发送询价",
+        "related.title":"相关文章",
+        "related.1":"户外LED显示屏选型指南",
+        "related.2":"LED 与 LCD：屏幕技术选型",
+        "footer.copyright":"保留所有权利。",
+        "footer.insights":"行业洞察",
+        "footer.privacy":"隐私政策"
+    },
+    de: {
+        "nav.home":"Startseite",
+        "nav.products":"Produkte",
+        "nav.projects":"Projekte",
+        "nav.about":"Über uns",
+        "nav.quote":"Angebot anfordern",
+        "bc.home":"Startseite",
+        "bc.products":"Unsere Produkte",
+        "bc.title":"LCD-Werbedisplay",
+        "prod.title":"LCD-Werbedisplay",
+        "prod.cate":"LCD-Display",
+        "prod.desc":"Frei stehendes oder eingelassenes LCD-Werbedisplay, kompatibel mit 55-98 Zoll LCD-Bildschirmen. Je nach Einbauumgebung als Standgerät oder integrierte Lösung einsetzbar.",
+        "spec.title":"Technische Daten",
+        "spec.th.screenSize":"Bildschirmgröße",
+        "spec.th.installation":"Montage",
+        "spec.th.material":"Material",
+        "spec.val.screenSize":"Kompatibel mit 55-98 Zoll LCD-Bildschirmen",
+        "spec.val.installation":"Stand- oder Einbaumontage",
+        "spec.val.material":"Aluminium-/Stahlgehäuse, LCD-Panel",
+        "inq.btn":"Anfrage senden",
+        "related.title":"Verwandte Artikel",
+        "related.1":"Leitfaden zu Außen-LED-Displays",
+        "related.2":"LED vs. LCD: Wahl der Bildschirmtechnologie",
+        "footer.copyright":"Alle Rechte vorbehalten.",
+        "footer.insights":"Artikel",
+        "footer.privacy":"Datenschutzerklärung"
+    },
+    es: {
+        "nav.home":"Inicio",
+        "nav.products":"Productos",
+        "nav.projects":"Proyectos",
+        "nav.about":"Nosotros",
+        "nav.quote":"Solicitar precio",
+        "bc.home":"Inicio",
+        "bc.products":"Nuestros productos",
+        "bc.title":"Pantalla LCD publicitaria",
+        "prod.title":"Pantalla LCD publicitaria",
+        "prod.cate":"Pantalla LCD",
+        "prod.desc":"Pantalla LCD publicitaria de pie o empotrada, compatible con pantallas LCD de 55-98 pulgadas. Se adapta a distintos entornos de instalación, en versión de pie o empotrada.",
+        "spec.title":"Especificaciones",
+        "spec.th.screenSize":"Tamaño de pantalla",
+        "spec.th.installation":"Instalación",
+        "spec.th.material":"Material",
+        "spec.val.screenSize":"Compatible con pantallas LCD de 55-98 pulgadas",
+        "spec.val.installation":"Instalación de pie o empotrada",
+        "spec.val.material":"Carcasa de aluminio/acero, panel LCD",
+        "inq.btn":"Enviar consulta",
+        "related.title":"Artículos relacionados",
+        "related.1":"Guía de especificaciones para pantallas LED exteriores",
+        "related.2":"LED frente a LCD: elección de la tecnología de pantalla",
+        "footer.copyright":"Todos los derechos reservados.",
+        "footer.insights":"Artículos",
+        "footer.privacy":"Política de Privacidad"
+    },
+    fr: {
+        "nav.home":"Accueil",
+        "nav.products":"Produits",
+        "nav.projects":"Projets",
+        "nav.about":"À propos",
+        "nav.quote":"Demander un devis",
+        "bc.home":"Accueil",
+        "bc.products":"Nos produits",
+        "bc.title":"Écran LCD publicitaire",
+        "prod.title":"Écran LCD publicitaire",
+        "prod.cate":"Écran LCD",
+        "prod.desc":"Écran LCD publicitaire autoportant ou encastré, compatible avec les écrans LCD de 55-98 pouces. S'adapte à différents environnements d'installation, en version autoportante ou encastrée.",
+        "spec.title":"Spécifications",
+        "spec.th.screenSize":"Taille d'écran",
+        "spec.th.installation":"Installation",
+        "spec.th.material":"Matériau",
+        "spec.val.screenSize":"Compatible avec les écrans LCD de 55-98 pouces",
+        "spec.val.installation":"Montage autoportant ou encastré",
+        "spec.val.material":"Boîtier aluminium/acier, panneau LCD",
+        "inq.btn":"Envoyer une demande",
+        "related.title":"Articles connexes",
+        "related.1":"Guide des spécifications des écrans LED extérieurs",
+        "related.2":"LED ou LCD : choisir la technologie d'écran",
+        "footer.copyright":"Tous droits réservés.",
+        "footer.insights":"Articles",
+        "footer.privacy":"Politique de confidentialité"
+    },
+    ja: {
+        "nav.home":"ホーム",
+        "nav.products":"製品",
+        "nav.projects":"導入事例",
+        "nav.about":"会社概要",
+        "nav.quote":"見積もり依頼",
+        "bc.home":"ホーム",
+        "bc.products":"製品一覧",
+        "bc.title":"LCD広告機",
+        "prod.title":"LCD広告機",
+        "prod.cate":"LCDディスプレイ",
+        "prod.desc":"自立式・埋込式LCD広告機。55-98インチのLCD画面に対応し、設置環境に応じて自立式または埋込式を柔軟に選択できます。",
+        "spec.title":"仕様",
+        "spec.th.screenSize":"画面サイズ",
+        "spec.th.installation":"設置方式",
+        "spec.th.material":"材質",
+        "spec.val.screenSize":"55-98インチLCD画面対応",
+        "spec.val.installation":"自立式または埋込式設置",
+        "spec.val.material":"アルミ・スチール筐体、LCDパネル",
+        "inq.btn":"お問い合わせ",
+        "related.title":"関連記事",
+        "related.1":"屋外用LEDディスプレイ仕様ガイド",
+        "related.2":"LEDとLCD：画面技術の選び方",
+        "footer.copyright":"無断転載を禁じます。",
+        "footer.insights":"コラム",
+        "footer.privacy":"プライバシーポリシー"
+    },
+    ar: {
+        "nav.home":"الرئيسية",
+        "nav.products":"المنتجات",
+        "nav.projects":"المشاريع",
+        "nav.about":"من نحن",
+        "nav.quote":"طلب عرض سعر",
+        "bc.home":"الرئيسية",
+        "bc.products":"منتجاتنا",
+        "bc.title":"شاشة إعلانية LCD",
+        "prod.title":"شاشة إعلانية LCD",
+        "prod.cate":"شاشة LCD",
+        "prod.desc":"شاشة إعلانية LCD قائمة بذاتها أو مدمجة، متوافقة مع شاشات LCD مقاس 55-98 بوصة، قابلة للتكيف مع بيئات التثبيت المختلفة كنظام قائم أو مدمج.",
+        "spec.title":"المواصفات",
+        "spec.th.screenSize":"حجم الشاشة",
+        "spec.th.installation":"طريقة التركيب",
+        "spec.th.material":"المادة",
+        "spec.val.screenSize":"متوافقة مع شاشات LCD مقاس 55-98 بوصة",
+        "spec.val.installation":"تركيب قائم أو مدمج",
+        "spec.val.material":"هيكل ألمنيوم/فولاذ، لوحة LCD",
+        "inq.btn":"إرسال استفسار الآن",
+        "related.title":"مقالات ذات صلة",
+        "related.1":"دليل مواصفات شاشات LED الخارجية",
+        "related.2":"LED مقابل LCD: اختيار تقنية الشاشة",
+        "footer.copyright":"جميع الحقوق محفوظة.",
+        "footer.insights":"المقالات",
+        "footer.privacy":"سياسة الخصوصية"
     }
-  });
+};
+function setLang(langKey){
+    const trans = translations[langKey] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(trans[key]) el.innerText = trans[key];
+    });
+    // 图片alt多语言预埋
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    //阿拉伯语RTL双重兜底
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+    }
+}
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', function(){
+    setLang(this.value);
+})
+
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
 }
 
-langSelect.addEventListener('change', () => setLang(langSelect.value));
+const initialLang = getLangFromPath();
+setLang(initialLang);
+langSelect.value = initialLang;
 
 // 选项卡图片自动轮播（图列表集中管理，以后增加图片只需在 galleryImages 追加一项）
 const galleryImages = [

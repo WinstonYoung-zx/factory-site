@@ -92,10 +92,10 @@ footer a{color:#ffb040;text-decoration:none;}
     </a>
   </div>
   <nav>
-    <a href="/">Home</a>
-    <a href="/products">Products</a>
-    <a href="/about">About Us</a>
-    <a href="/contact">Get a Quote</a>
+    <a href="/" data-i18n="nav.home">Home</a>
+    <a href="/products" data-i18n="nav.products">Products</a>
+    <a href="/about" data-i18n="nav.about">About Us</a>
+    <a href="/contact" data-i18n="nav.quote">Get a Quote</a>
   </nav>
   <select class="lang-select" id="langSelect">
     <option value="en">English</option>
@@ -108,81 +108,322 @@ footer a{color:#ffb040;text-decoration:none;}
   </select>
 </header>
 <div class="breadcrumb">
-  <a href="/">Home</a>
+  <a href="/" data-i18n="bc.home">Home</a>
   <span>›</span>
-  <span>Certificates</span>
+  <span data-i18n="bc.title">Certificates</span>
 </div>
 <div class="page-header">
-  <h1>Certificates & Qualifications</h1>
-  <p>Our company has established ISO 9001 quality management system, ISO 14001 environmental management system and ISO 45001 occupational health and safety management system. Recertification is currently in progress. We also hold safety production license and construction qualification certificates.</p>
+  <h1 data-i18n="page.title">Certificates & Qualifications</h1>
+  <p data-i18n="page.desc">Our company has established ISO 9001 quality management system, ISO 14001 environmental management system and ISO 45001 occupational health and safety management system. Recertification is currently in progress. We also hold safety production license and construction qualification certificates.</p>
 </div>
 <div class="certs-grid">
   <div class="cert-card">
     <img src="/uploads/iso9001-en.jpg" alt="ISO 9001 Certificate">
     <div class="cert-body">
-      <h3>ISO 9001:2015</h3>
-      <p>Quality Management System Certificate</p>
+      <h3 data-i18n="cert1.title">ISO 9001:2015</h3>
+      <p data-i18n="cert1.desc">Quality Management System Certificate</p>
     </div>
   </div>
   <div class="cert-card">
     <img src="/uploads/iso14001-en.jpg" alt="ISO 14001 Certificate">
     <div class="cert-body">
-      <h3>ISO 14001:2015</h3>
-      <p>Environmental Management System Certificate</p>
+      <h3 data-i18n="cert2.title">ISO 14001:2015</h3>
+      <p data-i18n="cert2.desc">Environmental Management System Certificate</p>
     </div>
   </div>
   <div class="cert-card">
     <img src="/uploads/iso45001-en.jpg" alt="ISO 45001 Certificate">
     <div class="cert-body">
-      <h3>ISO 45001:2018</h3>
-      <p>Occupational Health & Safety Management System</p>
+      <h3 data-i18n="cert3.title">ISO 45001:2018</h3>
+      <p data-i18n="cert3.desc">Occupational Health & Safety Management System</p>
     </div>
   </div>
   <div class="cert-card">
     <img src="/uploads/safety-production-certificate.jpg" alt="Safety Production License">
     <div class="cert-body">
-      <h3>Safety Production License</h3>
-      <p>Work Safety Production License (China)</p>
+      <h3 data-i18n="cert4.title">Safety Production License</h3>
+      <p data-i18n="cert4.desc">Work Safety Production License (China)</p>
     </div>
   </div>
   <div class="cert-card">
     <img src="/uploads/construction-certificate.jpg" alt="Construction Qualification Certificate">
     <div class="cert-body">
-      <h3>Construction Qualification</h3>
-      <p>Metal Structure Construction Qualification Certificate</p>
+      <h3 data-i18n="cert5.title">Construction Qualification</h3>
+      <p data-i18n="cert5.desc">Metal Structure Construction Qualification Certificate</p>
     </div>
   </div>
   <div class="cert-card">
     <img src="/uploads/environment-inspection-report1.jpg" alt="Environmental Inspection Report 1">
     <div class="cert-body">
-      <h3>Environmental Inspection Report</h3>
-      <p>Third-party environmental inspection report</p>
+      <h3 data-i18n="cert.env.title">Environmental Inspection Report</h3>
+      <p data-i18n="cert.env.desc">Third-party environmental inspection report</p>
     </div>
   </div>
   <div class="cert-card">
     <img src="/uploads/environment-inspection-report2.jpg" alt="Environmental Inspection Report 2">
     <div class="cert-body">
-      <h3>Environmental Inspection Report</h3>
-      <p>Third-party environmental inspection report</p>
+      <h3 data-i18n="cert.env.title">Environmental Inspection Report</h3>
+      <p data-i18n="cert.env.desc">Third-party environmental inspection report</p>
     </div>
   </div>
   <div class="cert-card">
     <img src="/uploads/environment-inspection-report3.jpg" alt="Environmental Inspection Report 3">
     <div class="cert-body">
-      <h3>Environmental Inspection Report</h3>
-      <p>Third-party environmental inspection report</p>
+      <h3 data-i18n="cert.env.title">Environmental Inspection Report</h3>
+      <p data-i18n="cert.env.desc">Third-party environmental inspection report</p>
     </div>
   </div>
 </div>
 <div class="cta-section">
-  <h2>Need full certificate copies?</h2>
-  <p>Contact us to request high-resolution certificate copies for your procurement or project submission.</p>
-  <a href="/contact" class="btn btn-primary">Request Copies</a>
+  <h2 data-i18n="cta.title">Need full certificate copies?</h2>
+  <p data-i18n="cta.desc">Contact us to request high-resolution certificate copies for your procurement or project submission.</p>
+  <a href="/contact" class="btn btn-primary" data-i18n="cta.btn">Request Copies</a>
 </div>
 <footer>
-  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/blog">Insights</a> &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a></p>
+  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. <span data-i18n="footer.copyright">All rights reserved.</span> <a href="/blog" data-i18n="footer.insights">Insights</a> &nbsp;·&nbsp; <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a></p>
 </footer>
 <script>
+// 多语言切换
+const translations = {
+    en: {
+        "nav.home":"Home",
+        "nav.products":"Products",
+        "nav.about":"About Us",
+        "nav.quote":"Get a Quote",
+        "bc.home":"Home",
+        "bc.title":"Certificates",
+        "page.title":"Certificates & Qualifications",
+        "page.desc":"Our company has established ISO 9001 quality management system, ISO 14001 environmental management system and ISO 45001 occupational health and safety management system. Recertification is currently in progress. We also hold safety production license and construction qualification certificates.",
+        "cert1.title":"ISO 9001:2015",
+        "cert1.desc":"Quality Management System Certificate",
+        "cert2.title":"ISO 14001:2015",
+        "cert2.desc":"Environmental Management System Certificate",
+        "cert3.title":"ISO 45001:2018",
+        "cert3.desc":"Occupational Health & Safety Management System",
+        "cert4.title":"Safety Production License",
+        "cert4.desc":"Work Safety Production License (China)",
+        "cert5.title":"Construction Qualification",
+        "cert5.desc":"Metal Structure Construction Qualification Certificate",
+        "cert.env.title":"Environmental Inspection Report",
+        "cert.env.desc":"Third-party environmental inspection report",
+        "cta.title":"Need full certificate copies?",
+        "cta.desc":"Contact us to request high-resolution certificate copies for your procurement or project submission.",
+        "cta.btn":"Request Copies",
+        "footer.copyright":"All rights reserved.",
+        "footer.insights":"Insights",
+        "footer.privacy":"Privacy Policy"
+    },
+    zh: {
+        "nav.home":"首页",
+        "nav.products":"产品",
+        "nav.about":"工厂介绍",
+        "nav.quote":"获取报价",
+        "bc.home":"首页",
+        "bc.title":"资质证书",
+        "page.title":"资质证书",
+        "page.desc":"我司已建立 ISO 9001 质量管理体系、ISO 14001 环境管理体系及 ISO 45001 职业健康安全管理体系，复审认证正在进行中。我司另持有安全生产许可证及建筑企业资质证书。",
+        "cert1.title":"ISO 9001:2015",
+        "cert1.desc":"质量管理体系认证证书",
+        "cert2.title":"ISO 14001:2015",
+        "cert2.desc":"环境管理体系认证证书",
+        "cert3.title":"ISO 45001:2018",
+        "cert3.desc":"职业健康安全管理体系",
+        "cert4.title":"安全生产许可证",
+        "cert4.desc":"安全生产许可证（中国）",
+        "cert5.title":"建筑企业资质",
+        "cert5.desc":"金属结构施工资质证书",
+        "cert.env.title":"环境检测报告",
+        "cert.env.desc":"第三方环境检测报告",
+        "cta.title":"需要完整证书副本？",
+        "cta.desc":"请联系我们，索取用于采购或项目投标的高清证书副本。",
+        "cta.btn":"索取副本",
+        "footer.copyright":"保留所有权利。",
+        "footer.insights":"行业洞察",
+        "footer.privacy":"隐私政策"
+    },
+    es: {
+        "nav.home":"Inicio",
+        "nav.products":"Productos",
+        "nav.about":"Nosotros",
+        "nav.quote":"Solicitar precio",
+        "bc.home":"Inicio",
+        "bc.title":"Certificados",
+        "page.title":"Certificados y Calificaciones",
+        "page.desc":"Nuestra empresa ha establecido el sistema de gestión de calidad ISO 9001, el sistema de gestión ambiental ISO 14001 y el sistema de gestión de seguridad y salud ocupacional ISO 45001. La recertificación está en curso. También contamos con licencia de producción de seguridad y certificados de cualificación de construcción.",
+        "cert1.title":"ISO 9001:2015",
+        "cert1.desc":"Certificado del sistema de gestión de calidad",
+        "cert2.title":"ISO 14001:2015",
+        "cert2.desc":"Certificado del sistema de gestión ambiental",
+        "cert3.title":"ISO 45001:2018",
+        "cert3.desc":"Sistema de gestión de seguridad y salud ocupacional",
+        "cert4.title":"Licencia de producción de seguridad",
+        "cert4.desc":"Licencia de producción de seguridad laboral (China)",
+        "cert5.title":"Cualificación de construcción",
+        "cert5.desc":"Certificado de cualificación de construcción de estructuras metálicas",
+        "cert.env.title":"Informe de inspección ambiental",
+        "cert.env.desc":"Informe de inspección ambiental de terceros",
+        "cta.title":"¿Necesita copias completas de los certificados?",
+        "cta.desc":"Contáctenos para solicitar copias de certificados en alta resolución para su compra o presentación de proyecto.",
+        "cta.btn":"Solicitar copias",
+        "footer.copyright":"Todos los derechos reservados.",
+        "footer.insights":"Artículos",
+        "footer.privacy":"Política de Privacidad"
+    },
+    fr: {
+        "nav.home":"Accueil",
+        "nav.products":"Produits",
+        "nav.about":"À propos",
+        "nav.quote":"Demander un devis",
+        "bc.home":"Accueil",
+        "bc.title":"Certificats",
+        "page.title":"Certificats et Qualifications",
+        "page.desc":"Notre entreprise a mis en place le système de management de la qualité ISO 9001, le système de management environnemental ISO 14001 et le système de management de la santé et sécurité au travail ISO 45001. La recertification est en cours. Nous détenons également une licence de production de sécurité et des certificats de qualification de construction.",
+        "cert1.title":"ISO 9001:2015",
+        "cert1.desc":"Certificat du système de management de la qualité",
+        "cert2.title":"ISO 14001:2015",
+        "cert2.desc":"Certificat du système de management environnemental",
+        "cert3.title":"ISO 45001:2018",
+        "cert3.desc":"Système de management de la santé et sécurité au travail",
+        "cert4.title":"Licence de production de sécurité",
+        "cert4.desc":"Licence de production de sécurité du travail (Chine)",
+        "cert5.title":"Qualification de construction",
+        "cert5.desc":"Certificat de qualification de construction de structures métalliques",
+        "cert.env.title":"Rapport d'inspection environnementale",
+        "cert.env.desc":"Rapport d'inspection environnementale tiers",
+        "cta.title":"Besoin de copies complètes des certificats ?",
+        "cta.desc":"Contactez-nous pour demander des copies de certificats en haute résolution pour votre achat ou la soumission de votre projet.",
+        "cta.btn":"Demander des copies",
+        "footer.copyright":"Tous droits réservés.",
+        "footer.insights":"Articles",
+        "footer.privacy":"Politique de confidentialité"
+    },
+    de: {
+        "nav.home":"Startseite",
+        "nav.products":"Produkte",
+        "nav.about":"Über uns",
+        "nav.quote":"Angebot anfordern",
+        "bc.home":"Startseite",
+        "bc.title":"Zertifikate",
+        "page.title":"Zertifikate & Qualifikationen",
+        "page.desc":"Unser Unternehmen hat das ISO 9001 Qualitätsmanagementsystem, das ISO 14001 Umweltmanagementsystem und das ISO 45001 Arbeitsschutzmanagementsystem eingeführt. Die Rezertifizierung ist derzeit in Bearbeitung. Außerdem besitzen wir eine Sicherheits-Produktionslizenz und Bauqualifikationszertifikate.",
+        "cert1.title":"ISO 9001:2015",
+        "cert1.desc":"Zertifikat des Qualitätsmanagementsystems",
+        "cert2.title":"ISO 14001:2015",
+        "cert2.desc":"Zertifikat des Umweltmanagementsystems",
+        "cert3.title":"ISO 45001:2018",
+        "cert3.desc":"Arbeitsschutzmanagementsystem",
+        "cert4.title":"Sicherheits-Produktionslizenz",
+        "cert4.desc":"Arbeitssicherheits-Produktionslizenz (China)",
+        "cert5.title":"Bauqualifikation",
+        "cert5.desc":"Bauqualifikationszertifikat für Metallkonstruktionen",
+        "cert.env.title":"Umweltinspektionsbericht",
+        "cert.env.desc":"Externer Umweltinspektionsbericht",
+        "cta.title":"Benötigen Sie vollständige Zertifikatskopien?",
+        "cta.desc":"Kontaktieren Sie uns, um hochauflösende Zertifikatskopien für Ihre Beschaffung oder Projekteinreichung anzufordern.",
+        "cta.btn":"Kopien anfordern",
+        "footer.copyright":"Alle Rechte vorbehalten.",
+        "footer.insights":"Artikel",
+        "footer.privacy":"Datenschutzerklärung"
+    },
+    ja: {
+        "nav.home":"ホーム",
+        "nav.products":"製品",
+        "nav.about":"会社概要",
+        "nav.quote":"見積もり依頼",
+        "bc.home":"ホーム",
+        "bc.title":"資格・認証",
+        "page.title":"資格・認証",
+        "page.desc":"当社は ISO 9001 品質マネジメントシステム、ISO 14001 環境マネジメントシステム、ISO 45001 労働安全衛生マネジメントシステムを構築しており、再認証を進行中です。また、安全生産許可証および建設業資格証も保有しています。",
+        "cert1.title":"ISO 9001:2015",
+        "cert1.desc":"品質マネジメントシステム登録証",
+        "cert2.title":"ISO 14001:2015",
+        "cert2.desc":"環境マネジメントシステム登録証",
+        "cert3.title":"ISO 45001:2018",
+        "cert3.desc":"労働安全衛生マネジメントシステム",
+        "cert4.title":"安全生産許可証",
+        "cert4.desc":"労働安全生産許可証（中国）",
+        "cert5.title":"建設業資格",
+        "cert5.desc":"金属構造物施工資格証",
+        "cert.env.title":"環境検査報告書",
+        "cert.env.desc":"第三者機関による環境検査報告書",
+        "cta.title":"証明書の完全コピーが必要ですか？",
+        "cta.desc":"調達やプロジェクト提出向けの高解像度の証明書コピーが必要でしたらお問い合わせください。",
+        "cta.btn":"コピーを請求",
+        "footer.copyright":"無断転載を禁じます。",
+        "footer.insights":"コラム",
+        "footer.privacy":"プライバシーポリシー"
+    },
+    ar: {
+        "nav.home":"الرئيسية",
+        "nav.products":"المنتجات",
+        "nav.about":"من نحن",
+        "nav.quote":"طلب عرض سعر",
+        "bc.home":"الرئيسية",
+        "bc.title":"الشهادات",
+        "page.title":"الشهادات والمؤهلات",
+        "page.desc":"أسست شركتنا نظام إدارة الجودة ISO 9001 ونظام الإدارة البيئية ISO 14001 ونظام إدارة الصحة والسلامة المهنية ISO 45001. إعادة الاعتماد جارية حاليًا. كما نحمل رخصة إنتاج سلامة وشهادات تأهيل إنشائي.",
+        "cert1.title":"ISO 9001:2015",
+        "cert1.desc":"شهادة نظام إدارة الجودة",
+        "cert2.title":"ISO 14001:2015",
+        "cert2.desc":"شهادة نظام الإدارة البيئية",
+        "cert3.title":"ISO 45001:2018",
+        "cert3.desc":"نظام إدارة الصحة والسلامة المهنية",
+        "cert4.title":"رخصة الإنتاج الآمن",
+        "cert4.desc":"رخصة إنتاج سلامة العمل (الصين)",
+        "cert5.title":"التأهيل الإنشائي",
+        "cert5.desc":"شهادة تأهيل إنشاء الهياكل المعدنية",
+        "cert.env.title":"تقرير الفحص البيئي",
+        "cert.env.desc":"تقرير فحص بيئي من جهة خارجية",
+        "cta.title":"هل تحتاج إلى نسخ كاملة من الشهادات؟",
+        "cta.desc":"تواصل معنا لطلب نسخ عالية الدقة من الشهادات لشرائك أو تقديم مشروعك.",
+        "cta.btn":"طلب النسخ",
+        "footer.copyright":"جميع الحقوق محفوظة.",
+        "footer.insights":"المقالات",
+        "footer.privacy":"سياسة الخصوصية"
+    }
+};
+function setLang(langKey){
+    const trans = translations[langKey] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(trans[key]) el.innerText = trans[key];
+    });
+    // 图片alt多语言预埋
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    //阿拉伯语RTL双重兜底
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+    }
+}
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', function(){
+    setLang(this.value);
+})
+
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
+}
+
+const initialLang = getLangFromPath();
+setLang(initialLang);
+langSelect.value = initialLang;
+
 // GDPR Cookie 弹窗
 (function() {
     if (localStorage.getItem('cookieConsent')) return;

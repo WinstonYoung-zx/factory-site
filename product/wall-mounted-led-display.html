@@ -130,11 +130,11 @@ footer a{color:#ffb040;text-decoration:none;}
     </a>
   </div>
   <nav>
-    <a href="/">Home</a>
-    <a href="/products" class="active">Products</a>
-    <a href="/cases">Projects</a>
-    <a href="/about">About Us</a>
-    <a href="/contact">Get a Quote</a>
+    <a href="/" data-i18n="nav.home">Home</a>
+    <a href="/products" class="active" data-i18n="nav.products">Products</a>
+    <a href="/cases" data-i18n="nav.projects">Projects</a>
+    <a href="/about" data-i18n="nav.about">About Us</a>
+    <a href="/contact" data-i18n="nav.quote">Get a Quote</a>
   </nav>
   <select class="lang-select" id="langSelect">
     <option value="en">English</option>
@@ -147,44 +147,44 @@ footer a{color:#ffb040;text-decoration:none;}
   </select>
 </header>
 <div class="breadcrumb">
-  <a href="/">Home</a>
+  <a href="/" data-i18n="bc.home">Home</a>
   <span>›</span>
-  <a href="/products">Our Products</a>
+  <a href="/products" data-i18n="bc.products">Our Products</a>
   <span>›</span>
-  <span>Wall-mounted LED Display Screen</span>
+  <span data-i18n="bc.title">Wall-mounted LED Display Screen</span>
 </div>
 <div class="container">
   <div class="img-box">
-    <img src="/uploads/wall-mounted-led.jpg?v=20261020" alt="Wall-mounted LED Display Screen" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
+    <img src="/uploads/wall-mounted-led.jpg?v=20261020" data-i18n-alt="prod.title" alt="Wall-mounted LED Display Screen" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
   </div>
   <div class="info-box">
-    <h1>Wall-mounted LED Display Screen</h1>
-    <span class="cate">LED Display Screen</span>
-    <p>Wall-mounted LED display screen with COB packaging, high refresh rate and wide viewing angle. For metro, airport, shopping mall, exhibition hall and conference room information display.</p>
-    
+    <h1 data-i18n="prod.title">Wall-mounted LED Display Screen</h1>
+    <span class="cate" data-i18n="prod.cate">LED Display Screen</span>
+    <p data-i18n="prod.desc">Wall-mounted LED display screen with COB packaging, high refresh rate and wide viewing angle. For metro, airport, shopping mall, exhibition hall and conference room information display.</p>
+
     <div class="specs-box">
-      <h2 class="specs-title">Specifications</h2>
+      <h2 class="specs-title" data-i18n="spec.title">Specifications</h2>
       <table class="specs-table">
-<tr><th>Material</th><td>Standard LED modules, COB packaging</td></tr>
-<tr><th>Dimensions</th><td>Pixel pitch P1.2-P2.5, custom size from standard modules</td></tr>
-<tr><th>Brightness</th><td>High refresh rate, high contrast, wide viewing angle</td></tr>
-<tr><th>Power</th><td>Low power consumption, long lifespan</td></tr>
+<tr><th data-i18n="spec.th.material">Material</th><td data-i18n="spec.val.material">Standard LED modules, COB packaging</td></tr>
+<tr><th data-i18n="spec.th.dimensions">Dimensions</th><td data-i18n="spec.val.dimensions">Pixel pitch P1.2-P2.5, custom size from standard modules</td></tr>
+<tr><th data-i18n="spec.th.brightness">Brightness</th><td data-i18n="spec.val.brightness">High refresh rate, high contrast, wide viewing angle</td></tr>
+<tr><th data-i18n="spec.th.power">Power</th><td data-i18n="spec.val.power">Low power consumption, long lifespan</td></tr>
       </table>
     </div>
-    <a href="/contact" class="btn-inquiry" id="inquiryBtn">Send Inquiry Now</a>
+    <a href="/contact" class="btn-inquiry" id="inquiryBtn" data-i18n="inq.btn">Send Inquiry Now</a>
   </div>
 </div>
 <section style="max-width:1400px;margin:2.5rem auto 0;padding:0 5%;">
   <div style="border:1px solid #D9DEE3;border-radius:8px;overflow:hidden;">
-    <h2 style="font-size:1.1rem;font-weight:600;color:#0F2A44;background:#f7f8fa;padding:0.8rem 1.2rem;border-bottom:1px solid #D9DEE3;margin:0;">Related articles</h2>
+    <h2 style="font-size:1.1rem;font-weight:600;color:#0F2A44;background:#f7f8fa;padding:0.8rem 1.2rem;border-bottom:1px solid #D9DEE3;margin:0;" data-i18n="related.title">Related articles</h2>
     <ul style="list-style:none;padding:0.8rem 1.2rem;margin:0;">
-      <li style="padding:0.55rem 0;border-bottom:1px solid #f0f1f3;"><a href="/blog/outdoor-led-display-selection-guide" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;">Outdoor LED display specification guide</a></li>
-      <li style="padding:0.55rem 0;"><a href="/blog/led-vs-lcd-outdoor-display-choice" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;">LED vs LCD: choosing screen technology</a></li>
+      <li style="padding:0.55rem 0;border-bottom:1px solid #f0f1f3;"><a href="/blog/outdoor-led-display-selection-guide" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;" data-i18n="related.1">Outdoor LED display specification guide</a></li>
+      <li style="padding:0.55rem 0;"><a href="/blog/led-vs-lcd-outdoor-display-choice" style="color:#0F2A44;text-decoration:none;font-size:1rem;line-height:1.5;" data-i18n="related.2">LED vs LCD: choosing screen technology</a></li>
     </ul>
   </div>
 </section>
 <footer>
-  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. All rights reserved. <a href="/blog">Insights</a> &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a></p>
+  <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. <span data-i18n="footer.copyright">All rights reserved.</span> <a href="/blog" data-i18n="footer.insights">Insights</a> &nbsp;·&nbsp; <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a></p>
 </footer>
 <script>
 // GA4 跟踪 Send Inquiry 按钮点击
@@ -196,52 +196,252 @@ document.getElementById('inquiryBtn').addEventListener('click', function() {
 });
 
 // 多语言切换
-const productData = {"slug": "wall-mounted-led-display", "category": "display", "image": "/uploads/wall-mounted-led.jpg", "title": {"en": "Wall-mounted LED Display Screen", "zh": "壁挂式LED广告屏", "es": "Pantalla LED montada en pared", "fr": "Écran LED mural", "de": "Wandmontierte LED-Anzeige", "ja": "壁取り付け型LEDディスプレイ", "ar": "شاشة LED مثبتة على الحائط"}, "desc": {"en": "Wall-mounted LED display screen with COB packaging, high refresh rate and wide viewing angle. For metro, airport, shopping mall, exhibition hall and conference room information display.", "zh": "壁挂式LED广告屏，COB封装，高刷新率、广视角，适用于地铁站、机场、商场、展厅及会议室信息发布。", "es": "Pantalla LED montada en pared con encapsulado COB, alta frecuencia de actualización y ángulo de visión amplio. Para metro, aeropuerto, centro comercial, sala de exposiciones y sala de conferencias.", "fr": "Écran LED mural avec encapsulation COB, taux de rafraîchissement élevé et large angle de vision. Pour métro, aéroport, centre commercial, hall d'exposition et salle de conférence.", "de": "Wandmontierte LED-Anzeige mit COB-Gehäuse, hoher Bildwiederholrate und weitem Betrachtungswinkel. Für U-Bahn, Flughafen, Einkaufszentrum, Ausstellungshalle und Konferenzraum.", "ja": "壁取り付け型LEDディスプレイ、COBパッケージ、高リフレッシュレート・広視野角、地下鉄・空港・ショッピングモール・展示ホール・会議室の情報表示用。", "ar": "شاشة LED مثبتة على الحائط بتغليف COB، معدل تحديث عالي وزاوية رؤية واسعة. للمترو والمطار ومركز التسوق وقاعة العرض وغرفة الاجتماعات."}, "specs": {"material": "Standard LED modules, COB packaging", "dimensions": "Pixel pitch P1.2-P2.5, custom size from standard modules", "brightness": "High refresh rate, high contrast, wide viewing angle", "power": "Low power consumption, long lifespan"}};
-const categoryI18n = {"en": {"lightbox": "Light Box", "sign": "Wayfinding Signage", "display": "LED Display Screen", "bus": "Bus Shelter", "custom-steel-aluminum": "Custom Metal Structure", "other": "Other Products"}, "zh": {"lightbox": "灯箱", "sign": "导向标识", "display": "LED显示屏", "bus": "公交候车亭", "custom-steel-aluminum": "定制金属结构", "other": "其他产品"}, "es": {"lightbox": "Caja de luz", "sign": "Señalización de orientación", "display": "Pantalla LED", "bus": "Refugio de autobús", "custom-steel-aluminum": "Estructura metálica personalizada", "other": "Otros productos"}, "fr": {"lightbox": "Caisson lumineux", "sign": "Signalétique d'orientation", "display": "Écran LED", "bus": "Abri bus", "custom-steel-aluminum": "Structure métallique sur mesure", "other": "Autres produits"}, "de": {"lightbox": "Leuchtkasten", "sign": "Leitsystem-Schilder", "display": "LED-Displays", "bus": "Bushaltestelle", "custom-steel-aluminum": "Kundenspezifische Metallkonstruktion", "other": "Sonstige Produkte"}, "ja": {"lightbox": "ライトボックス", "sign": "案内サイン", "display": "LEDディスプレイ", "bus": "バス待合所", "custom-steel-aluminum": "特注金属構造物", "other": "その他製品"}, "ar": {"lightbox": "صندوق ضوئي", "sign": "لوحات الإرشاد", "display": "شاشات LED", "bus": "ملجأ الحافلات", "custom-steel-aluminum": "هياكل معدنية مخصصة", "other": "منتجات أخرى"}};
-const navI18n = {"en": {"home": "Home", "products": "Products", "about": "About Us", "quote": "Get a Quote", "inquiry": "Send Inquiry Now", "bc_home": "Home", "bc_products": "Our Products"}, "zh": {"home": "首页", "products": "产品", "about": "关于我们", "quote": "获取报价", "inquiry": "立即发送询价", "bc_home": "首页", "bc_products": "全部产品"}, "es": {"home": "Inicio", "products": "Productos", "about": "Nosotros", "quote": "Solicitar precio", "inquiry": "Enviar consulta", "bc_home": "Inicio", "bc_products": "Nuestros productos"}, "fr": {"home": "Accueil", "products": "Produits", "about": "À propos", "quote": "Demander un devis", "inquiry": "Envoyer une demande", "bc_home": "Accueil", "bc_products": "Nos produits"}, "de": {"home": "Startseite", "products": "Produkte", "about": "Über uns", "quote": "Angebot anfordern", "inquiry": "Anfrage senden", "bc_home": "Startseite", "bc_products": "Unsere Produkte"}, "ja": {"home": "ホーム", "products": "製品", "about": "会社概要", "quote": "見積もり依頼", "inquiry": "お問い合わせ", "bc_home": "ホーム", "bc_products": "製品一覧"}, "ar": {"home": "الرئيسية", "products": "المنتجات", "about": "من نحن", "quote": "طلب عرض سعر", "inquiry": "إرسال استفسار الآن", "bc_home": "الرئيسية", "bc_products": "منتجاتنا"}};
-const specLabelsI18n = {"en": {"title": "Specifications", "material": "Material", "thickness": "Thickness", "surface": "Surface Finish", "ipRating": "IP Rating", "dimensions": "Dimensions", "brightness": "Brightness", "power": "Power", "accessories": "Optional Accessories"}, "zh": {"title": "规格参数", "material": "材质", "thickness": "厚度", "surface": "表面处理", "ipRating": "防水等级", "dimensions": "尺寸", "brightness": "亮度", "power": "功耗", "accessories": "可选配件"}, "es": {"title": "Especificaciones", "material": "Material", "thickness": "Grosor", "surface": "Acabado superficial", "ipRating": "Grado IP", "dimensions": "Dimensiones", "brightness": "Brillo", "power": "Potencia", "accessories": "Accesorios opcionales"}, "fr": {"title": "Spécifications", "material": "Matériau", "thickness": "Épaisseur", "surface": "Finition de surface", "ipRating": "Indice IP", "dimensions": "Dimensions", "brightness": "Luminosité", "power": "Puissance", "accessories": "Accessoires optionnels"}, "de": {"title": "Technische Daten", "material": "Material", "thickness": "Dicke", "surface": "Oberflächenveredelung", "ipRating": "IP-Schutzart", "dimensions": "Abmessungen", "brightness": "Helligkeit", "power": "Leistung", "accessories": "Optionales Zubehör"}, "ja": {"title": "仕様", "material": "材質", "thickness": "厚さ", "surface": "表面処理", "ipRating": "IP等級", "dimensions": "寸法", "brightness": "明るさ", "power": "消費電力", "accessories": "オプション部品"}, "ar": {"title": "المواصفات", "material": "المادة", "thickness": "السماكة", "surface": "تشطيب السطح", "ipRating": "درجة الحماية IP", "dimensions": "الأبعاد", "brightness": "السطوع", "power": "القدرة", "accessories": "إكسسوارات اختيارية"}};
-
-const langSelect = document.getElementById('langSelect');
-
-function setLang(lang) {
-  localStorage.setItem('preferredLang', lang);
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
-  // 导航
-  const navLinks = document.querySelectorAll('nav a');
-  navLinks[0].textContent = navI18n[lang].home;
-  navLinks[1].textContent = navI18n[lang].products;
-  navLinks[2].textContent = navI18n[lang].about;
-  navLinks[3].textContent = navI18n[lang].quote;
-
-  // 面包屑
-  const bcLinks = document.querySelectorAll('.breadcrumb a');
-  bcLinks[0].textContent = navI18n[lang].bc_home;
-  bcLinks[1].textContent = navI18n[lang].bc_products;
-
-  // 产品标题、描述、分类
-  document.querySelector('.info-box h1').textContent = productData.title[lang] || productData.title.en;
-  document.querySelector('.info-box p').textContent = productData.desc[lang] || productData.desc.en;
-  document.querySelector('.info-box .cate').textContent = categoryI18n[lang][productData.category] || productData.category;
-  document.getElementById('inquiryBtn').textContent = navI18n[lang].inquiry;
-  document.querySelector('.img-box img').alt = productData.title[lang] || productData.title.en;
-
-  // 规格参数表标题和标签
-  const specsTitle = document.querySelector('.specs-title');
-  if (specsTitle && specLabelsI18n[lang]) {
-    specsTitle.textContent = specLabelsI18n[lang].title || 'Specifications';
-  }
-  const specRows = document.querySelectorAll('.specs-table tr');
-  const specKeys = Object.keys(productData.specs || {});
-  specRows.forEach((row, idx) => {
-    if (specKeys[idx] && specLabelsI18n[lang] && specLabelsI18n[lang][specKeys[idx]]) {
-      row.querySelector('th').textContent = specLabelsI18n[lang][specKeys[idx]];
+const translations = {
+    en: {
+        "nav.home":"Home",
+        "nav.products":"Products",
+        "nav.projects":"Projects",
+        "nav.about":"About Us",
+        "nav.quote":"Get a Quote",
+        "bc.home":"Home",
+        "bc.products":"Our Products",
+        "bc.title":"Wall-mounted LED Display Screen",
+        "prod.title":"Wall-mounted LED Display Screen",
+        "prod.cate":"LED Display Screen",
+        "prod.desc":"Wall-mounted LED display screen with COB packaging, high refresh rate and wide viewing angle. For metro, airport, shopping mall, exhibition hall and conference room information display.",
+        "spec.title":"Specifications",
+        "spec.th.material":"Material",
+        "spec.th.dimensions":"Dimensions",
+        "spec.th.brightness":"Brightness",
+        "spec.th.power":"Power",
+        "spec.val.material":"Standard LED modules, COB packaging",
+        "spec.val.dimensions":"Pixel pitch P1.2-P2.5, custom size from standard modules",
+        "spec.val.brightness":"High refresh rate, high contrast, wide viewing angle",
+        "spec.val.power":"Low power consumption, long lifespan",
+        "inq.btn":"Send Inquiry Now",
+        "related.title":"Related articles",
+        "related.1":"Outdoor LED display specification guide",
+        "related.2":"LED vs LCD: choosing screen technology",
+        "footer.copyright":"All rights reserved.",
+        "footer.insights":"Insights",
+        "footer.privacy":"Privacy Policy"
+    },
+    zh: {
+        "nav.home":"首页",
+        "nav.products":"产品",
+        "nav.projects":"工程案例",
+        "nav.about":"工厂介绍",
+        "nav.quote":"获取报价",
+        "bc.home":"首页",
+        "bc.products":"全部产品",
+        "bc.title":"壁挂式LED广告屏",
+        "prod.title":"壁挂式LED广告屏",
+        "prod.cate":"LED显示屏",
+        "prod.desc":"壁挂式LED广告屏，COB封装，高刷新率、广视角，适用于地铁站、机场、商场、展厅及会议室信息发布。",
+        "spec.title":"规格参数",
+        "spec.th.material":"材质",
+        "spec.th.dimensions":"尺寸",
+        "spec.th.brightness":"亮度",
+        "spec.th.power":"功耗",
+        "spec.val.material":"标准 LED 模组，COB 封装",
+        "spec.val.dimensions":"点间距 P1.2-P2.5，标准模组定制尺寸",
+        "spec.val.brightness":"高刷新率，高对比度，广视角",
+        "spec.val.power":"低功耗，寿命长",
+        "inq.btn":"立即发送询价",
+        "related.title":"相关文章",
+        "related.1":"户外 LED 显示屏选型指南",
+        "related.2":"LED 与 LCD：屏幕技术选型",
+        "footer.copyright":"保留所有权利。",
+        "footer.insights":"行业洞察",
+        "footer.privacy":"隐私政策"
+    },
+    es: {
+        "nav.home":"Inicio",
+        "nav.products":"Productos",
+        "nav.projects":"Proyectos",
+        "nav.about":"Nosotros",
+        "nav.quote":"Solicitar precio",
+        "bc.home":"Inicio",
+        "bc.products":"Nuestros productos",
+        "bc.title":"Pantalla LED montada en pared",
+        "prod.title":"Pantalla LED montada en pared",
+        "prod.cate":"Pantalla LED",
+        "prod.desc":"Pantalla LED montada en pared con encapsulado COB, alta frecuencia de actualización y ángulo de visión amplio. Para metro, aeropuerto, centro comercial, sala de exposiciones y sala de conferencias.",
+        "spec.title":"Especificaciones",
+        "spec.th.material":"Material",
+        "spec.th.dimensions":"Dimensiones",
+        "spec.th.brightness":"Brillo",
+        "spec.th.power":"Potencia",
+        "spec.val.material":"Módulos LED estándar, encapsulado COB",
+        "spec.val.dimensions":"Paso de píxel P1.2-P2.5, tamaño personalizado con módulos estándar",
+        "spec.val.brightness":"Alta frecuencia de actualización, alto contraste, ángulo de visión amplio",
+        "spec.val.power":"Bajo consumo, larga vida útil",
+        "inq.btn":"Enviar consulta",
+        "related.title":"Artículos relacionados",
+        "related.1":"Guía de especificaciones de pantallas LED exteriores",
+        "related.2":"LED frente a LCD: elegir la tecnología de pantalla",
+        "footer.copyright":"Todos los derechos reservados.",
+        "footer.insights":"Artículos",
+        "footer.privacy":"Política de Privacidad"
+    },
+    fr: {
+        "nav.home":"Accueil",
+        "nav.products":"Produits",
+        "nav.projects":"Projets",
+        "nav.about":"À propos",
+        "nav.quote":"Demander un devis",
+        "bc.home":"Accueil",
+        "bc.products":"Nos produits",
+        "bc.title":"Écran LED mural",
+        "prod.title":"Écran LED mural",
+        "prod.cate":"Écran LED",
+        "prod.desc":"Écran LED mural avec encapsulation COB, taux de rafraîchissement élevé et large angle de vision. Pour métro, aéroport, centre commercial, hall d'exposition et salle de conférence.",
+        "spec.title":"Spécifications",
+        "spec.th.material":"Matériau",
+        "spec.th.dimensions":"Dimensions",
+        "spec.th.brightness":"Luminosité",
+        "spec.th.power":"Puissance",
+        "spec.val.material":"Modules LED standard, encapsulation COB",
+        "spec.val.dimensions":"Pas de pixel P1.2-P2.5, taille personnalisée avec modules standard",
+        "spec.val.brightness":"Taux de rafraîchissement élevé, contraste élevé, large angle de vision",
+        "spec.val.power":"Faible consommation, longue durée de vie",
+        "inq.btn":"Envoyer une demande",
+        "related.title":"Articles connexes",
+        "related.1":"Guide des spécifications des écrans LED extérieurs",
+        "related.2":"LED contre LCD : choisir la technologie d'écran",
+        "footer.copyright":"Tous droits réservés.",
+        "footer.insights":"Articles",
+        "footer.privacy":"Politique de confidentialité"
+    },
+    de: {
+        "nav.home":"Startseite",
+        "nav.products":"Produkte",
+        "nav.projects":"Projekte",
+        "nav.about":"Über uns",
+        "nav.quote":"Angebot anfordern",
+        "bc.home":"Startseite",
+        "bc.products":"Unsere Produkte",
+        "bc.title":"Wandmontierte LED-Anzeige",
+        "prod.title":"Wandmontierte LED-Anzeige",
+        "prod.cate":"LED-Displays",
+        "prod.desc":"Wandmontierte LED-Anzeige mit COB-Gehäuse, hoher Bildwiederholrate und weitem Betrachtungswinkel. Für U-Bahn, Flughafen, Einkaufszentrum, Ausstellungshalle und Konferenzraum.",
+        "spec.title":"Technische Daten",
+        "spec.th.material":"Material",
+        "spec.th.dimensions":"Abmessungen",
+        "spec.th.brightness":"Helligkeit",
+        "spec.th.power":"Leistung",
+        "spec.val.material":"Standard-LED-Module, COB-Gehäuse",
+        "spec.val.dimensions":"Pixelabstand P1,2-P2,5, kundenspezifische Größe aus Standardmodulen",
+        "spec.val.brightness":"Hohe Bildwiederholrate, hoher Kontrast, weiter Betrachtungswinkel",
+        "spec.val.power":"Niedriger Stromverbrauch, lange Lebensdauer",
+        "inq.btn":"Anfrage senden",
+        "related.title":"Verwandte Artikel",
+        "related.1":"Leitfaden für Outdoor-LED-Display-Spezifikationen",
+        "related.2":"LED vs. LCD: Display-Technologie wählen",
+        "footer.copyright":"Alle Rechte vorbehalten.",
+        "footer.insights":"Artikel",
+        "footer.privacy":"Datenschutzerklärung"
+    },
+    ja: {
+        "nav.home":"ホーム",
+        "nav.products":"製品",
+        "nav.projects":"導入事例",
+        "nav.about":"会社概要",
+        "nav.quote":"見積もり依頼",
+        "bc.home":"ホーム",
+        "bc.products":"製品一覧",
+        "bc.title":"壁取り付け型LEDディスプレイ",
+        "prod.title":"壁取り付け型LEDディスプレイ",
+        "prod.cate":"LEDディスプレイ",
+        "prod.desc":"壁取り付け型LEDディスプレイ、COBパッケージ、高リフレッシュレート・広視野角、地下鉄・空港・ショッピングモール・展示ホール・会議室の情報表示用。",
+        "spec.title":"仕様",
+        "spec.th.material":"材質",
+        "spec.th.dimensions":"寸法",
+        "spec.th.brightness":"明るさ",
+        "spec.th.power":"消費電力",
+        "spec.val.material":"標準 LEDモジュール、COBパッケージ",
+        "spec.val.dimensions":"ピクセルピッチ P1.2-P2.5、標準モジュールによる特注サイズ",
+        "spec.val.brightness":"高リフレッシュレート、高コントラスト、広視野角",
+        "spec.val.power":"低消費電力、長寿命",
+        "inq.btn":"お問い合わせ",
+        "related.title":"関連記事",
+        "related.1":"屋外用LEDディスプレイ仕様ガイド",
+        "related.2":"LED と LCD：ディスプレイ技術の選び方",
+        "footer.copyright":"無断転載を禁じます。",
+        "footer.insights":"コラム",
+        "footer.privacy":"プライバシーポリシー"
+    },
+    ar: {
+        "nav.home":"الرئيسية",
+        "nav.products":"المنتجات",
+        "nav.projects":"المشاريع",
+        "nav.about":"من نحن",
+        "nav.quote":"طلب عرض سعر",
+        "bc.home":"الرئيسية",
+        "bc.products":"منتجاتنا",
+        "bc.title":"شاشة LED مثبتة على الحائط",
+        "prod.title":"شاشة LED مثبتة على الحائط",
+        "prod.cate":"شاشات LED",
+        "prod.desc":"شاشة LED مثبتة على الحائط بتغليف COB، معدل تحديث عالي وزاوية رؤية واسعة. للمترو والمطار ومركز التسوق وقاعة العرض وغرفة الاجتماعات.",
+        "spec.title":"المواصفات",
+        "spec.th.material":"المادة",
+        "spec.th.dimensions":"الأبعاد",
+        "spec.th.brightness":"السطوع",
+        "spec.th.power":"القدرة",
+        "spec.val.material":"وحدات LED قياسية، تغليف COB",
+        "spec.val.dimensions":"درجة البكسل P1.2-P2.5، حجم مخصص من وحدات قياسية",
+        "spec.val.brightness":"معدل تحديث عالي، تباين عالٍ، زاوية رؤية واسعة",
+        "spec.val.power":"استهلاك منخفض للطاقة، عمر افتراضي طويل",
+        "inq.btn":"إرسال استفسار الآن",
+        "related.title":"مقالات ذات صلة",
+        "related.1":"دليل مواصفات شاشات LED الخارجية",
+        "related.2":"LED مقابل LCD: اختيار تقنية الشاشة",
+        "footer.copyright":"جميع الحقوق محفوظة.",
+        "footer.insights":"المقالات",
+        "footer.privacy":"سياسة الخصوصية"
     }
-  });
+};
+function setLang(langKey){
+    const trans = translations[langKey] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(trans[key]) el.innerText = trans[key];
+    });
+    // 图片alt多语言预埋
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    //阿拉伯语RTL双重兜底
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+    }
+}
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', function(){
+    setLang(this.value);
+})
+
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
 }
 
-langSelect.addEventListener('change', () => setLang(langSelect.value));
+const initialLang = getLangFromPath();
+setLang(initialLang);
+langSelect.value = initialLang;
 
 // GDPR Cookie 弹窗
 (function() {
