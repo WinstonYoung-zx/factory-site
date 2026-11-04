@@ -1193,6 +1193,10 @@ document.querySelector('.float-inquiry')?.addEventListener('click', function() {
         'event_category': 'button_click',
         'event_label': 'products_page_float_inquiry'
     });
+    gtag('event', 'generate_lead', {
+        'event_category': 'inquiry',
+        'event_label': 'products_float_inquiry'
+    });
 });
 </script>
 <script>
