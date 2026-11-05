@@ -1187,7 +1187,7 @@ function renderProducts(){
       card.className = "product-card";
       card.onclick = function() { window.location.href = "/product/" + slug; };
       card.innerHTML =
-        '<img src="' + escapeHtml(imgSrc) + '" alt="' + escapeHtml(titleText) + '" loading="lazy" onerror="this.src=\'https://via.placeholder.com/600x400?text=No+Image\'">' +
+        '<img src="' + escapeHtml(imgSrc) + '" alt="' + escapeHtml(titleText) + '" loading="lazy" onerror="this.src=\'/uploads/no-image.jpg\'">' +
         '<div class="card-body">' +
         '<h3>' + escapeHtml(titleText) + '</h3>' +
         '<p>' + escapeHtml(descText) + '</p>' +

@@ -528,7 +528,7 @@ async function loadDetail(){
 
     box.innerHTML = `
       <div class="img-box">
-        <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(title)}" onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
+        <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(title)}" onerror="this.src='/uploads/no-image.jpg'">
       </div>
       <div class="info-box">
         <h1>${escapeHtml(title)}</h1>
