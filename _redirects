@@ -44,6 +44,9 @@
 /contact/ja /contact 200
 /contact/ar /contact 200
 
+# 误输 /en 重定向到英文首页（英文版在根路径 /）
+/en  /  301
+
 # 现有规则
 /product  /product.html  200
 /admin/*  /admin/index.html  200
