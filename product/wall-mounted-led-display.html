@@ -183,6 +183,30 @@ footer a{color:#ffb040;text-decoration:none;}
     </ul>
   </div>
 </section>
+<section style="max-width:1400px;margin:2.5rem auto 0;padding:0 5%;">
+  <div style="border:1px solid #D9DEE3;border-radius:8px;overflow:hidden;margin-bottom:2rem;">
+    <h2 style="font-size:1.1rem;font-weight:600;color:#0F2A44;background:#f7f8fa;padding:0.8rem 1.2rem;border-bottom:1px solid #D9DEE3;margin:0;" data-i18n="feat.title">Key Features</h2>
+    <ul style="padding:1rem 2.4rem;margin:0;list-style:disc;color:#333;">
+      <li style="padding:0.3rem 0;font-size:0.95rem;line-height:1.6;" data-i18n="feat.1"></li>
+      <li style="padding:0.3rem 0;font-size:0.95rem;line-height:1.6;" data-i18n="feat.2"></li>
+      <li style="padding:0.3rem 0;font-size:0.95rem;line-height:1.6;" data-i18n="feat.3"></li>
+      <li style="padding:0.3rem 0;font-size:0.95rem;line-height:1.6;" data-i18n="feat.4"></li>
+      <li style="padding:0.3rem 0;font-size:0.95rem;line-height:1.6;" data-i18n="feat.5"></li>
+      <li style="padding:0.3rem 0;font-size:0.95rem;line-height:1.6;" data-i18n="feat.6"></li>
+    </ul>
+  </div>
+  <div style="border:1px solid #D9DEE3;border-radius:8px;overflow:hidden;">
+    <h2 style="font-size:1.1rem;font-weight:600;color:#0F2A44;background:#f7f8fa;padding:0.8rem 1.2rem;border-bottom:1px solid #D9DEE3;margin:0;" data-i18n="faq.title">FAQ</h2>
+    <div style="padding:1rem 1.4rem;">
+      <p style="margin:0.6rem 0 0.2rem;font-weight:600;color:#0F2A44;font-size:0.95rem;" data-i18n="faq.1q"></p>
+      <p style="margin:0 0 1rem;color:#444;font-size:0.95rem;line-height:1.6;" data-i18n="faq.1a"></p>
+      <p style="margin:0.6rem 0 0.2rem;font-weight:600;color:#0F2A44;font-size:0.95rem;" data-i18n="faq.2q"></p>
+      <p style="margin:0 0 1rem;color:#444;font-size:0.95rem;line-height:1.6;" data-i18n="faq.2a"></p>
+      <p style="margin:0.6rem 0 0.2rem;font-weight:600;color:#0F2A44;font-size:0.95rem;" data-i18n="faq.3q"></p>
+      <p style="margin:0 0 1rem;color:#444;font-size:0.95rem;line-height:1.6;" data-i18n="faq.3a"></p>
+    </div>
+  </div>
+</section>
 <footer>
   <p>© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. <span data-i18n="footer.copyright">All rights reserved.</span> <a href="/blog" data-i18n="footer.insights">Insights</a> &nbsp;·&nbsp; <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a></p>
 </footer>
@@ -198,6 +222,20 @@ document.getElementById('inquiryBtn').addEventListener('click', function() {
 // 多语言切换
 const translations = {
     en: {
+        "feat.title":"Key Features",
+        "feat.1":"Outdoor LED screens built to your pixel pitch and size specification",
+        "feat.2":"LCD advertising displays in standard commercial sizes",
+        "feat.3":"IP65 enclosure, tested to IEC 60529",
+        "feat.4":"Fabricated steel pole, wall frame or free-standing base",
+        "feat.5":"Anti-glare and vandal-resistant front glass",
+        "feat.6":"Thermal management designed for your local climate",
+        "faq.title":"FAQ",
+        "faq.1q":"Can you supply the screen only, without the structure?",
+        "faq.1a":"Yes. Many clients have their own mounting design. We can supply the display and enclosure, and ship fixing details for your structure.",
+        "faq.2q":"What about after-sales and spare parts?",
+        "faq.2a":"We ship a spare module set with each order and provide remote technical support.",
+        "faq.3q":"Do you handle content management software?",
+        "faq.3a":"The display accepts standard content management systems — we provide the interface documentation.",
         "nav.home":"Home",
         "nav.products":"Products",
         "nav.projects":"Projects",
@@ -227,6 +265,20 @@ const translations = {
         "footer.privacy":"Privacy Policy"
     },
     zh: {
+        "feat.title":"关键特性",
+        "feat.1":"户外 LED 屏按您指定的像素间距与尺寸定制",
+        "feat.2":"标准商用尺寸的 LCD 广告显示屏",
+        "feat.3":"IP65 防护外壳，按 IEC 60529 测试",
+        "feat.4":"定制钢制立柱、墙面框架或落地底座",
+        "feat.5":"防眩光、抗破坏的正面玻璃",
+        "feat.6":"针对当地气候设计的热管理方案",
+        "faq.title":"常见问题",
+        "faq.1q":"你们可以只供应屏幕、不供应结构吗？",
+        "faq.1a":"可以。许多客户有自己的安装设计。我们可以供应显示屏与外壳，并提供适配贵方结构的固定件细节。",
+        "faq.2q":"售后与备件如何？",
+        "faq.2a":"每批订单随附一套备用模组，并提供远程技术支持。",
+        "faq.3q":"你们处理内容管理软件吗？",
+        "faq.3a":"显示屏兼容标准内容管理系统——我们提供接口文档。",
         "nav.home":"首页",
         "nav.products":"产品",
         "nav.projects":"工程案例",
@@ -256,6 +308,20 @@ const translations = {
         "footer.privacy":"隐私政策"
     },
     es: {
+        "feat.title":"Características clave",
+        "feat.1":"Pantallas LED exteriores según su paso de píxel y tamaño",
+        "feat.2":"Pantallas LCD publicitarias en tamaños comerciales estándar",
+        "feat.3":"Carcasa IP65, probada según IEC 60529",
+        "feat.4":"Poste de acero, marco de pared o base autoportante fabricados",
+        "feat.5":"Vidrio frontal antirreflejo y antivandálico",
+        "feat.6":"Gestión térmica diseñada para su clima local",
+        "faq.title":"Preguntas frecuentes",
+        "faq.1q":"¿Pueden suministrar solo la pantalla, sin la estructura?",
+        "faq.1a":"Sí. Muchos clientes tienen su propio diseño de montaje. Podemos suministrar la pantalla y la carcasa, y enviar los detalles de fijación para su estructura.",
+        "faq.2q":"¿Qué pasa con la posventa y los repuestos?",
+        "faq.2a":"Enviamos un juego de módulos de repuesto con cada pedido y proporcionamos soporte técnico remoto.",
+        "faq.3q":"¿Manejan el software de gestión de contenido?",
+        "faq.3a":"La pantalla acepta sistemas estándar de gestión de contenido — proporcionamos la documentación de interfaz.",
         "nav.home":"Inicio",
         "nav.products":"Productos",
         "nav.projects":"Proyectos",
@@ -285,6 +351,20 @@ const translations = {
         "footer.privacy":"Política de Privacidad"
     },
     fr: {
+        "feat.title":"Caractéristiques clés",
+        "feat.1":"Écrans LED extérieurs selon votre pas de pixel et taille",
+        "feat.2":"Écrans publicitaires LCD en tailles commerciales standard",
+        "feat.3":"Enceinte IP65, testée selon IEC 60529",
+        "feat.4":"Poteau en acier, cadre mural ou base autoportante fabriqués",
+        "feat.5":"Verre frontal antireflet et antivandale",
+        "feat.6":"Gestion thermique conçue pour votre climat local",
+        "faq.title":"FAQ",
+        "faq.1q":"Pouvez-vous fournir uniquement l'écran, sans la structure ?",
+        "faq.1a":"Oui. Beaucoup de clients ont leur propre conception de montage. Nous pouvons fournir l'écran et l'enceinte, et expédier les détails de fixation pour votre structure.",
+        "faq.2q":"Qu'en est-il de l'après-vente et des pièces de rechange ?",
+        "faq.2a":"Nous expédions un jeu de modules de rechange avec chaque commande et fournissons un support technique à distance.",
+        "faq.3q":"Gérez-vous le logiciel de gestion de contenu ?",
+        "faq.3a":"L'écran accepte les systèmes standard de gestion de contenu — nous fournissons la documentation d'interface.",
         "nav.home":"Accueil",
         "nav.products":"Produits",
         "nav.projects":"Projets",
@@ -314,6 +394,20 @@ const translations = {
         "footer.privacy":"Politique de confidentialité"
     },
     de: {
+        "feat.title":"Wichtige Merkmale",
+        "feat.1":"Outdoor-LED-Bildschirme nach Ihrem Pixelabstand und Ihrer Größe",
+        "feat.2":"LCD-Werbedisplays in handelsüblichen Größen",
+        "feat.3":"IP65-Gehäuse, geprüft nach IEC 60529",
+        "feat.4":"Gefertigter Stahlmast, Wandrahmen oder freistehende Basis",
+        "feat.5":"Blendschutz- und vandalismusbeständiges Frontglas",
+        "feat.6":"Thermomanagement für Ihr lokales Klima",
+        "faq.title":"FAQ",
+        "faq.1q":"Können Sie nur den Bildschirm ohne Struktur liefern?",
+        "faq.1a":"Ja. Viele Kunden haben ihr eigenes Montagekonzept. Wir liefern Display und Gehäuse und senden die Befestigungsdetails für Ihre Struktur.",
+        "faq.2q":"Wie ist es mit After-Sales und Ersatzteilen?",
+        "faq.2a":"Wir liefern mit jeder Bestellung einen Ersatzmodulsatz und bieten Remote-Support.",
+        "faq.3q":"Übernehmen Sie Content-Management-Software?",
+        "faq.3a":"Das Display akzeptiert standardmäßige CMS — wir liefern die Schnittstellendokumentation.",
         "nav.home":"Startseite",
         "nav.products":"Produkte",
         "nav.projects":"Projekte",
@@ -343,6 +437,20 @@ const translations = {
         "footer.privacy":"Datenschutzerklärung"
     },
     ja: {
+        "feat.title":"主な特徴",
+        "feat.1":"お客様のピクセルピッチとサイズに合わせた屋外用LEDスクリーン",
+        "feat.2":"標準商用サイズのLCD広告ディスプレイ",
+        "feat.3":"IEC 60529で試験済みのIP65筐体",
+        "feat.4":"製作したスチールポール、壁面フレーム、自立ベース",
+        "feat.5":"防眩・防犯フロントガラス",
+        "feat.6":"現地の気候に合わせた熱管理設計",
+        "faq.title":"よくある質問",
+        "faq.1q":"スクリーンのみ、構造なしで供給できますか？",
+        "faq.1a":"はい。多くのお客様が独自の取付設計をお持ちです。ディスプレイと筐体を供給し、貴社構造用の固定詳細を同梱します。",
+        "faq.2q":"アフターサービスとスペアパーツは？",
+        "faq.2a":"各注文に予備モジュール一式を同梱し、リモート技術サポートを提供します。",
+        "faq.3q":"コンテンツ管理ソフトウェアに対応していますか？",
+        "faq.3a":"ディスプレイは標準的なコンテンツ管理システムに対応—インターフェースドキュメントを提供します。",
         "nav.home":"ホーム",
         "nav.products":"製品",
         "nav.projects":"導入事例",
@@ -372,6 +480,20 @@ const translations = {
         "footer.privacy":"プライバシーポリシー"
     },
     ar: {
+        "feat.title":"الخصائص الرئيسية",
+        "feat.1":"شاشات LED خارجية حسب درجة البكسل والحجم الذي تحدده",
+        "feat.2":"شاشات إعلانات LCD بالأحجام التجارية القياسية",
+        "feat.3":"هيكل بدرجة IP65، تم اختباره وفق IEC 60529",
+        "feat.4":"عمود فولاذي أو إطار جداري أو قاعدة قائمة بذاتها مصنعة",
+        "feat.5":"زجاج أمامي مقاوم للتوهج والتخريب",
+        "feat.6":"إدارة حرارية مصممة لمناخكم المحلي",
+        "faq.title":"الأسئلة الشائعة",
+        "faq.1q":"هل يمكنكم توريد الشاشة فقط دون الهيكل؟",
+        "faq.1a":"نعم. العديد من العملاء لديهم تصميم تركيب خاص بهم. يمكننا توريد الشاشة والهيكل، وشحن تفاصيل التثبيت لهيكلكم.",
+        "faq.2q":"ماذا عن ما بعد البيع وقطع الغيار؟",
+        "faq.2a":"نرسل مجموعة وحدات احتياطية مع كل طلب ونوفر دعمًا فنيًا عن بعد.",
+        "faq.3q":"هل تتعاملون مع برامج إدارة المحتوى؟",
+        "faq.3a":"الشاشة متوافقة مع أنظمة إدارة المحتوى القياسية — نوفر وثائق الواجهة.",
         "nav.home":"الرئيسية",
         "nav.products":"المنتجات",
         "nav.projects":"المشاريع",
