@@ -1,10 +1,11 @@
 # 多语言 URL 重写规则（放在最前面，优先匹配）
-/zh / 200
-/es / 200
-/fr / 200
-/de / 200
-/ja / 200
-/ar / 200
+# 根级语言版首页 → 服务端直出的语言文件（保留 /zh 等 URL）
+/zh /zh.html 200
+/es /es.html 200
+/fr /fr.html 200
+/de /de.html 200
+/ja /ja.html 200
+/ar /ar.html 200
 
 /products/zh /products 200
 /products/es /products 200
