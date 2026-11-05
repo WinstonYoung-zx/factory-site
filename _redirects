@@ -1,11 +1,6 @@
-# 多语言 URL 重写规则（放在最前面，优先匹配）
-# 根级语言版首页 → 服务端直出的语言文件（保留 /zh 等 URL）
-/zh /zh.html 200
-/es /es.html 200
-/fr /fr.html 200
-/de /de.html 200
-/ja /ja.html 200
-/ar /ar.html 200
+# 多语言 URL 重写规则
+# 根级语言版首页 /zh /de /es /fr /ja /ar → 由 Cloudflare Pages 目录索引原生提供
+# （zh/index.html 等），无需 rewrite 规则，避免 /zh → /zh.html 二次评估循环。
 
 /products/zh /products 200
 /products/es /products 200
