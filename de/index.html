@@ -86,7 +86,7 @@
             color:#fff;
         }
         .logo-text span{
-            color:#ff7800;
+            color:#d35400;
         }
         .logo-link{
             text-decoration:none;
@@ -112,7 +112,7 @@
             font-size:14px;
         }
         .footer-info a{
-            color:#ff7800;
+            color:#d35400;
             text-decoration:none;
         }
         .footer-info a:hover{
@@ -175,7 +175,7 @@
         <ul class="nav-links">
             <li><a href="/" data-i18n="nav.home">Startseite</a></li>
             <li><a href="/products" data-i18n="nav.products">Produkte</a></li>
-            <li><a href="/cases" data-i18n="nav.projects">Projekte</a></li>
+            <li><a href="/cases">Projekte</a></li>
             <li><a href="/about" data-i18n="nav.about">Über uns</a></li>
             <li><a href="/#inquiry" data-i18n="nav.quote">Angebot anfordern</a></li>
         </ul>
@@ -226,6 +226,14 @@
         <span class="dot" data-index="2"></span>
     </div>
 </section>
+<section class="stats-bar">
+    <div class="container stats-grid">
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">Fertigungserfahrung</div></div>
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">Werkstattfläche (m²)</div></div>
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">Exportländer</div></div>
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">Container pro Jahr</div></div>
+    </div>
+</section>
 <section class="features">
     <div class="container">
         <div class="features-grid">
@@ -246,7 +254,8 @@
 </section>
 <!-- ✅ 已经替换为合规安全版本的Quality & Compliance -->
 <section class="compliance container">
-    <h2 class="section-title" data-i18n="compliance.title">Qualität & Konformität</h2>
+    <span class="kicker">Belege statt Behauptungen</span>
+        <h2 class="section-title" data-i18n="compliance.title">Qualität & Konformität</h2>
     <ul>
         <li data-i18n="compliance.li1">Produktionssicherheitslizenz (China) — zugelassener Hersteller für Metallkonstruktionen</li>
         <li data-i18n="compliance.li2">Qualitätsmanagementsystem gemäß ISO 9001 / 14001 / 45001 eingerichtet; Rezertifizierung läuft</li>
@@ -260,10 +269,12 @@
     </ul>
 </section>
 <section class="products container" id="products">
-    <h2 class="section-title" data-i18n="product.title">Unsere Produkte</h2>
+    <span class="kicker">Was wir fertigen</span>
+        <h2 class="section-title" data-i18n="product.title">Unsere Produkte</h2>
     <div class="product-grid">
         <div class="product-card">
-            <a href="/product/frameless-tension-lightbox" style="text-decoration:none;color:inherit;">
+            <a href="/product/frameless-tension-lightbox">
+                <img src="/uploads/lightbox.jpg" alt="Advertising lightbox" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.lightbox">Werbeleuchtkasten</h3>
                 <p data-i18n="prod.lightbox_desc">Individueller Leuchtkasten für gewerbliche Beschilderung</p>
@@ -271,7 +282,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/wayfinding-signage" style="text-decoration:none;color:inherit;">
+            <a href="/product/wayfinding-signage">
+                <img src="/uploads/signage.jpg" alt="Wayfinding signage" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.sign">Wegweiser</h3>
                 <p data-i18n="prod.sign_desc">Richtungsweisende Metallschilder</p>
@@ -279,7 +291,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/bus-shelter" style="text-decoration:none;color:inherit;">
+            <a href="/product/bus-shelter">
+                <img src="/uploads/busshelter.jpg" alt="Bus shelter" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.bus">Bushäuschen</h3>
                 <p data-i18n="prod.bus_desc">Stadtmöbel für Bushaltestellen</p>
@@ -287,7 +300,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/led-lcd-screen" style="text-decoration:none;color:inherit;">
+            <a href="/product/led-lcd-screen">
+                <img src="/uploads/led-lcd-airport.jpg" alt="LED and LCD display" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.led">LED & LCD Displays</h3>
                 <p data-i18n="prod.led_desc">LED Bildschirm, LCD Werbedisplay</p>
@@ -295,7 +309,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/custom-steel-aluminum-structure" style="text-decoration:none;color:inherit;">
+            <a href="/product/custom-steel-aluminum-structure">
+                <img src="/uploads/metal-struct.jpg" alt="Metal structure" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.metal">Metallkonstruktion</h3>
                 <p data-i18n="prod.metal_desc">Individuelle Metall‑ und Stahlbaufertigung</p>
@@ -303,7 +318,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/other-products" style="text-decoration:none;color:inherit;">
+            <a href="/product/other-products">
+                <img src="/uploads/busshelter-smart-carousel.jpg" alt="Urban furniture" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.other">Weitere</h3>
                 <p data-i18n="prod.other_desc">Andere individuelle Stadtmöbel‑Produkte</p>
@@ -312,69 +328,77 @@
         </div>
     </div>
 </section>
-<section class="why-us container" style="padding:3rem 0;">
-    <h2 class="section-title" data-i18n="whyus.title">Warum Wir</h2>
+<section class="why-us container">
+    <span class="kicker">Warum Kunden bleiben</span>
+        <h2 class="section-title" data-i18n="whyus.title">Warum Wir</h2>
     <div class="features-grid">
-        <a href="/cases" style="text-decoration:none;color:inherit;">
-            <div class="feature-card" style="text-align:center;padding:2rem 1.5rem;border:1px solid #D9DEE3;border-radius:12px;transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/cases">
+            <div class="feature-card">
                 <h3 data-i18n="whyus.projects.title">Unsere Projekte</h3>
                 <p data-i18n="whyus.projects.desc">Gelieferte Projekte für U-Bahn, Flughafen, Einkaufszentrum und Stadtmöbel weltweit</p>
             </div>
         </a>
-        <a href="/certificates" style="text-decoration:none;color:inherit;">
-            <div class="feature-card" style="text-align:center;padding:2rem 1.5rem;border:1px solid #D9DEE3;border-radius:12px;transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/certificates">
+            <div class="feature-card">
                 <h3 data-i18n="whyus.certs.title">Zertifizierungen</h3>
                 <p data-i18n="whyus.certs.desc">Qualitätsmanagementsystem etabliert gemäß ISO 9001 / 14001 / 45001; Zielmarkt-Zertifizierungen pro Projekt arrangierbar</p>
             </div>
         </a>
-        <a href="/faq" style="text-decoration:none;color:inherit;">
-            <div class="feature-card" style="text-align:center;padding:2rem 1.5rem;border:1px solid #D9DEE3;border-radius:12px;transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/faq">
+            <div class="feature-card">
                 <h3 data-i18n="whyus.faq.title">FAQ</h3>
                 <p data-i18n="whyus.faq.desc">Finden Sie Antworten zu MOQ, Individualisierung, Lieferzeit, Zahlung und Garantie</p>
             </div>
         </a>
     </div>
 </section>
-<section class="container" style="padding:5rem 0;">
-    <h2 class="section-title" data-i18n="blog.title">Neueste Artikel</h2>
+<section class="section blog-latest container">
+    <span class="kicker">Aktuelle Einblicke</span>
+        <h2 class="section-title" data-i18n="blog.title">Neueste Artikel</h2>
     <div class="product-grid">
         <div class="product-card">
-            <a href="/blog/gulf-conformity-saso-saber-ecas-g-mark-guide" style="text-decoration:none;color:inherit;display:block;">
-                <img src="/uploads/blog/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg" loading="lazy" data-i18n-alt="blog.t1" alt="Golf-Konformität für Golf-Projekte: SASO, SABER, ECAS und G-Mark erklärt" style="width:100%;height:180px;object-fit:cover;display:block;">
+            <a href="/blog/gulf-conformity-saso-saber-ecas-g-mark-guide">
+                <img src="/uploads/blog/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg" loading="lazy" data-i18n-alt="blog.t1" alt="Golf-Konformität für Golf-Projekte: SASO, SABER, ECAS und G-Mark erklärt">
                 <div class="card-body">
                     <h3 data-i18n="blog.t1">Golf-Konformität für Golf-Projekte: SASO, SABER, ECAS und G-Mark erklärt</h3>
-                    <p style="color:#cdd6e0;font-size:0.85rem;margin:0;">2026-11-05</p>
+                    <p>2026-11-05</p>
                 </div>
             </a>
         </div>
         <div class="product-card">
-            <a href="/blog/ce-marking-process-eu-export-structures" style="text-decoration:none;color:inherit;display:block;">
-                <img src="/uploads/blog/ce-marking-process-eu-export-structures.jpg" loading="lazy" data-i18n-alt="blog.t2" alt="CE-Kennzeichnung für den Export in die EU" style="width:100%;height:180px;object-fit:cover;display:block;">
+            <a href="/blog/ce-marking-process-eu-export-structures">
+                <img src="/uploads/blog/ce-marking-process-eu-export-structures.jpg" loading="lazy" data-i18n-alt="blog.t2" alt="CE-Kennzeichnung für den Export in die EU">
                 <div class="card-body">
                     <h3 data-i18n="blog.t2">CE-Kennzeichnung für den Export in die EU</h3>
-                    <p style="color:#cdd6e0;font-size:0.85rem;margin:0;">2026-11-05</p>
+                    <p>2026-11-05</p>
                 </div>
             </a>
         </div>
         <div class="product-card">
-            <a href="/blog/airport-terminal-wayfinding-signage-planning" style="text-decoration:none;color:inherit;display:block;">
-                <img src="/uploads/blog/airport-terminal-wayfinding-signage-planning.jpg" loading="lazy" data-i18n-alt="blog.t3" alt="Leitsysteme für Flughafenterminals" style="width:100%;height:180px;object-fit:cover;display:block;">
+            <a href="/blog/airport-terminal-wayfinding-signage-planning">
+                <img src="/uploads/blog/airport-terminal-wayfinding-signage-planning.jpg" loading="lazy" data-i18n-alt="blog.t3" alt="Leitsysteme für Flughafenterminals">
                 <div class="card-body">
                     <h3 data-i18n="blog.t3">Leitsysteme für Flughafenterminals</h3>
-                    <p style="color:#cdd6e0;font-size:0.85rem;margin:0;">2026-11-05</p>
+                    <p>2026-11-05</p>
                 </div>
             </a>
         </div>
     </div>
 </section>
 <section class="factory" id="about">
-    <div class="container">
-        <h2 class="section-title" data-i18n="about.title">Unsere Fabrik</h2>
-        <p data-i18n="about.desc">Professioneller Hersteller von Stadtmöbeln, Metallkonstruktionen, Werbeschildern und Displaygeräten. Individuelle Planung, Fertigung und weltweite Lieferung für Kunden aus Europa, Nahem Osten und Amerika.</p>
+    <div class="container factory-grid">
+        <img src="/uploads/factory-wide.jpg" alt="Zhanxin metal fabrication workshop, Shanghai" loading="lazy">
+        <div>
+            <span class="kicker" style="text-align:left;">In der Werkstatt</span>
+            <h2 class="section-title" data-i18n="about.title" style="text-align:left;">Unsere Fabrik</h2>
+            <p data-i18n="about.desc">Professioneller Hersteller von Stadtmöbeln, Metallkonstruktionen, Werbeschildern und Displaygeräten. Individuelle Planung, Fertigung und weltweite Lieferung für Kunden aus Europa, Nahem Osten und Amerika.</p>
+            <a href="/about" class="btn-ghost">Über das Unternehmen</a>
+        </div>
     </div>
 </section>
 <section class="inquiry container" id="inquiry">
-    <h2 class="section-title" data-i18n="inq.title">Anfrage senden</h2>
+    <span class="kicker">Projekt starten</span>
+        <h2 class="section-title" data-i18n="inq.title">Anfrage senden</h2>
     <div class="form-box">
         <form id="inquiryForm">
             <div class="form-group">
@@ -451,7 +475,7 @@
             </div>
             <div class="form-group" style="display:flex;align-items:flex-start;gap:8px;margin:1rem 0;">
                 <input type="checkbox" name="privacy_consent" id="privacyConsent" required style="margin-top:4px;">
-                <label for="privacyConsent" style="font-size:0.9rem;line-height:1.5;"><span data-i18n="inq.privacy1">Ich stimme der </span><a href="/privacy" style="color:#ff7800;" data-i18n="inq.privacy_link">Datenschutzerklärung</a><span data-i18n="inq.privacy2"> zu und erkläre mich mit der Verarbeitung meiner Daten für Anfragezwecke einverstanden.</span></label>
+                <label for="privacyConsent" style="font-size:0.9rem;line-height:1.5;"><span data-i18n="inq.privacy1">Ich stimme der </span><a href="/privacy" style="color:#d35400;" data-i18n="inq.privacy_link">Datenschutzerklärung</a><span data-i18n="inq.privacy2"> zu und erkläre mich mit der Verarbeitung meiner Daten für Anfragezwecke einverstanden.</span></label>
             </div>
             <!-- Turnstile Sitekey沿用你现有 -->
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu" data-theme="light"></div>
@@ -466,14 +490,14 @@
             © 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. <span data-i18n="footer.copyright">Alle Rechte vorbehalten.</span>
         </div>
         <div class="footer-nav" style="margin:16px 0;line-height:2;font-size:14px;">
-            <a href="/" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.home">Startseite</a>
-            <a href="/products" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.products">Produkte</a>
-            <a href="/cases" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.cases">Projekte</a>
-            <a href="/blog" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.insights">Artikel</a>
-            <a href="/certificates" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.certs">Zertifikate</a>
-            <a href="/faq" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.faq">FAQ</a>
-            <a href="/about" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.about">Über uns</a>
-            <a href="/contact" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.contact">Kontakt</a>
+            <a href="/" style="color:#e67e22;text-decoration:none;margin:0 12px;" data-i18n="footer.home">Startseite</a>
+            <a href="/products" style="color:#e67e22;text-decoration:none;margin:0 12px;" data-i18n="footer.products">Produkte</a>
+            <a href="/cases">Projekte</a>
+            <a href="/blog" style="color:#e67e22;text-decoration:none;margin:0 12px;" data-i18n="footer.insights">Artikel</a>
+            <a href="/certificates">Zertifikate</a>
+            <a href="/faq">FAQ</a>
+            <a href="/about" style="color:#e67e22;text-decoration:none;margin:0 12px;" data-i18n="footer.about">Über uns</a>
+            <a href="/contact" style="color:#e67e22;text-decoration:none;margin:0 12px;" data-i18n="footer.contact">Kontakt</a>
         </div>
         <div class="footer-info">
             <p><strong>SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</strong></p>
@@ -1245,13 +1269,13 @@ mobileBtn.addEventListener('click', ()=>{
     
     const cookieDiv = document.createElement('div');
     cookieDiv.id = 'cookie-consent';
-    cookieDiv.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0F2A44;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
+    cookieDiv.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0f3460;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
     cookieDiv.innerHTML = `
         <div style="flex:1;min-width:250px;font-size:14px;">
             We use cookies to improve your experience and analyse site traffic. Click "Accept" to consent to analytics cookies, or continue browsing without tracking.
-            <a href="/privacy" style="color:#ff7800;margin-left:5px;">Privacy Policy</a>
+            <a href="/privacy" style="color:#d35400;margin-left:5px;">Privacy Policy</a>
         </div>
-        <button id="cookie-accept" style="background:#ff7800;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>
+        <button id="cookie-accept" style="background:#d35400;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>
     `;
     document.body.appendChild(cookieDiv);
     

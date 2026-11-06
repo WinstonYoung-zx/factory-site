@@ -35,7 +35,7 @@
     </script>
     <title>ZHANXIN GLOBAL‑Metal Structure & Outdoor, Urban and Airport Furniture Manufacturer</title>
     <meta name="description" content="Manufacturer of advertising light boxes, guide signs, LED/LCD screens, bus shelters & metal structures, outdoor, urban and airport furniture, export to Europe, Middle East & America.">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="canonical" href="https://www.zhanxinglobal.com/">
     <meta property="og:locale" content="en_US">
     <link rel="alternate" hreflang="en" href="https://www.zhanxinglobal.com/">
@@ -100,100 +100,15 @@
     </script>
     <!-- Cloudflare Turnstile -->
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <style>
-        /* Logo：图片优先，文字作为降级备用 */
-        .logo-text{
-            display:none;
-            font-size:28px;
-            font-weight:bold;
-            color:#fff;
-        }
-        .logo-text span{
-            color:#ff7800;
-        }
-        .logo-link{
-            text-decoration:none;
-            display:flex;
-            align-items:center;
-            gap:8px;
-        }
-        .site-logo {
-            height: 44px;
-            width: auto;
-            display:block;
-            object-fit:contain;
-        }
-        /* 移动端缩小logo */
-        @media (max-width:768px){
-            .site-logo {
-                height:36px;
-            }
-        }
-        .footer-info {
-            margin-top:16px;
-            line-height:1.8;
-            font-size:14px;
-        }
-        .footer-info a{
-            color:#ff7800;
-            text-decoration:none;
-        }
-        .footer-info a:hover{
-            text-decoration:underline;
-        }
-        .social-links{
-            margin-top:12px;
-        }
-        .social-links a{
-            display:inline-block;
-            margin-right:12px;
-            color:#fff;
-        }
-        /* 表单提示文字颜色 */
-        #formTip {
-            margin-top:1rem;
-        }
-        #formTip.success {
-            color:#72e072;
-        }
-        #formTip.error {
-            color:#ff8888;
-        }
-        .cf-turnstile {
-            margin: 1rem 0;
-        }
-        button.btn:disabled{
-            opacity:0.6;
-            cursor:not-allowed;
-        }
-        .form-group{
-            margin-bottom:1rem;
-        }
-        /* 保证banner H1/H2视觉字号一致 */
-        .slide-text-wrap h1,
-        .slide-text-wrap h2{
-            font-size: clamp(1.8rem,4vw,2.8rem);
-            margin:0 0 1rem;
-        }
-        .compliance{
-            padding:3rem 0;
-        }
-        .compliance ul{
-            padding-left:1.2rem;
-            line-height:1.75;
-        }
-        .compliance li{
-            margin-bottom:0.6rem;
-        }
-    </style>
+    
 </head>
 <body>
 <header>
     <div class="container nav-wrap">
         <a href="/" class="logo-link">
             <!-- 图片Logo启用，如果图片404，注释img，打开下面文字 -->
-            <img id="headerLogo" class="site-logo" src="./uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo">
-            <!-- <span class="logo-text">ZHAN<span>XIN</span></span> -->
+            <!-- 白版 Logo 待补；暂用文字 Logo 保证深蓝导航可读 -->
+            <span class="logo-text" style="display:block;font-size:22px;letter-spacing:0.04em;">ZHAN<span>XIN</span> GLOBAL</span>
         </a>
         <ul class="nav-links">
             <li><a href="/" data-i18n="nav.home">Home</a></li>
@@ -249,6 +164,15 @@
         <span class="dot" data-index="2"></span>
     </div>
 </section>
+<!-- 数字条：4 项数据待业务提供真实值（成立年份/车间面积/出口国家数/年出货柜量），不得编造 -->
+<section class="stats-bar">
+    <div class="container stats-grid">
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">Manufacturing experience</div></div>
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">Workshop area (m²)</div></div>
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">Export countries</div></div>
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">Containers shipped / year</div></div>
+    </div>
+</section>
 <section class="features">
     <div class="container">
         <div class="features-grid">
@@ -269,7 +193,8 @@
 </section>
 <!-- ✅ 已经替换为合规安全版本的Quality & Compliance -->
 <section class="compliance container">
-    <h2 class="section-title" data-i18n="compliance.title">Quality & Compliance</h2>
+    <span class="kicker">Evidence, not claims</span>
+        <h2 class="section-title" data-i18n="compliance.title">Quality & Compliance</h2>
     <ul>
         <li data-i18n="compliance.li1">Work Safety Production License (China) — licensed manufacturer for metal fabrication</li>
         <li data-i18n="compliance.li2">Quality management system established in accordance with ISO 9001 / 14001 / 45001 standards; recertification underway</li>
@@ -283,10 +208,13 @@
     </ul>
 </section>
 <section class="products container" id="products">
-    <h2 class="section-title" data-i18n="product.title">Our Products</h2>
+    <span class="kicker">What we build</span>
+        <h2 class="section-title" data-i18n="product.title">Our Products</h2>
+        <p class="section-intro">Custom-manufactured to your drawings, shipped from our own workshop in Shanghai.</p>
     <div class="product-grid">
         <div class="product-card">
-            <a href="/product/frameless-tension-lightbox" style="text-decoration:none;color:inherit;">
+            <a href="/product/frameless-tension-lightbox">
+                <img src="./uploads/lightbox.jpg" alt="Advertising light box" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.lightbox">Advertising Lightbox</h3>
                 <p data-i18n="prod.lightbox_desc">Custom advertising light box for commercial signage</p>
@@ -294,7 +222,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/wayfinding-signage" style="text-decoration:none;color:inherit;">
+            <a href="/product/wayfinding-signage">
+                <img src="./uploads/signage.jpg" alt="Wayfinding signage" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.sign">Guide Sign</h3>
                 <p data-i18n="prod.sign_desc">Directional signage & wayfinding metal signs</p>
@@ -302,7 +231,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/bus-shelter" style="text-decoration:none;color:inherit;">
+            <a href="/product/bus-shelter">
+                <img src="./uploads/busshelter.jpg" alt="Bus shelter" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.bus">Bus Shelter</h3>
                 <p data-i18n="prod.bus_desc">City furniture bus stop waiting shelter</p>
@@ -310,7 +240,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/led-lcd-screen" style="text-decoration:none;color:inherit;">
+            <a href="/product/led-lcd-screen">
+                <img src="./uploads/led-lcd-airport.jpg" alt="LED and LCD advertising display" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.led">LED & LCD Display</h3>
                 <p data-i18n="prod.led_desc">LED screen, LCD advertising display machine</p>
@@ -318,7 +249,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/custom-steel-aluminum-structure" style="text-decoration:none;color:inherit;">
+            <a href="/product/custom-steel-aluminum-structure">
+                <img src="./uploads/metal-struct.jpg" alt="Custom metal structure" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.metal">Metal Structure</h3>
                 <p data-i18n="prod.metal_desc">Custom metal fabrication & steel structure</p>
@@ -326,7 +258,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/other-products" style="text-decoration:none;color:inherit;">
+            <a href="/product/other-products">
+                <img src="./uploads/busshelter-smart-carousel.jpg" alt="Urban furniture" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.other">Others</h3>
                 <p data-i18n="prod.other_desc">Other customized urban furniture products</p>
@@ -335,69 +268,77 @@
         </div>
     </div>
 </section>
-<section class="why-us container" style="padding:3rem 0;">
-    <h2 class="section-title" data-i18n="whyus.title">Why Choose Us</h2>
+<section class="why-us container">
+    <span class="kicker">Why buyers stay</span>
+        <h2 class="section-title" data-i18n="whyus.title">Why Choose Us</h2>
     <div class="features-grid">
-        <a href="/cases" style="text-decoration:none;color:inherit;">
-            <div class="feature-card" style="text-align:center;padding:2rem 1.5rem;border:1px solid #D9DEE3;border-radius:12px;transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/cases">
+            <div class="feature-card">
                 <h3 data-i18n="whyus.projects.title">Our Projects</h3>
                 <p data-i18n="whyus.projects.desc">Delivered projects for metro, airport, shopping mall and urban furniture worldwide</p>
             </div>
         </a>
-        <a href="/certificates" style="text-decoration:none;color:inherit;">
-            <div class="feature-card" style="text-align:center;padding:2rem 1.5rem;border:1px solid #D9DEE3;border-radius:12px;transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/certificates">
+            <div class="feature-card">
                 <h3 data-i18n="whyus.certs.title">Certifications</h3>
                 <p data-i18n="whyus.certs.desc">Quality management system established in accordance with ISO 9001 / 14001 / 45001; target-market certifications arranged per project</p>
             </div>
         </a>
-        <a href="/faq" style="text-decoration:none;color:inherit;">
-            <div class="feature-card" style="text-align:center;padding:2rem 1.5rem;border:1px solid #D9DEE3;border-radius:12px;transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/faq">
+            <div class="feature-card">
                 <h3 data-i18n="whyus.faq.title">FAQ</h3>
                 <p data-i18n="whyus.faq.desc">Find answers to MOQ, customization, lead time, payment and warranty questions</p>
             </div>
         </a>
     </div>
 </section>
-<section class="container" style="padding:5rem 0;">
-    <h2 class="section-title" data-i18n="blog.title">Latest articles</h2>
+<section class="section blog-latest container">
+    <span class="kicker">Latest insights</span>
+        <h2 class="section-title" data-i18n="blog.title">Latest articles</h2>
     <div class="product-grid">
         <div class="product-card">
-            <a href="/blog/gulf-conformity-saso-saber-ecas-g-mark-guide" style="text-decoration:none;color:inherit;display:block;">
-                <img src="/uploads/blog/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg" loading="lazy" data-i18n-alt="blog.t1" alt="Gulf Conformity for Gulf Projects: SASO, SABER, ECAS and G-Mark Explained" style="width:100%;height:180px;object-fit:cover;display:block;">
+            <a href="/blog/gulf-conformity-saso-saber-ecas-g-mark-guide">
+                <img src="/uploads/blog/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg" loading="lazy" data-i18n-alt="blog.t1" alt="Gulf Conformity for Gulf Projects: SASO, SABER, ECAS and G-Mark Explained">
                 <div class="card-body">
                     <h3 data-i18n="blog.t1">Gulf Conformity for Gulf Projects: SASO, SABER, ECAS and G-Mark Explained</h3>
-                    <p style="color:#cdd6e0;font-size:0.85rem;margin:0;">2026-11-04</p>
+                    <p>2026-11-04</p>
                 </div>
             </a>
         </div>
         <div class="product-card">
-            <a href="/blog/ce-marking-process-eu-export-structures" style="text-decoration:none;color:inherit;display:block;">
-                <img src="/uploads/blog/ce-marking-process-eu-export-structures.jpg" loading="lazy" data-i18n-alt="blog.t2" alt="CE Marking for Export into the EU" style="width:100%;height:180px;object-fit:cover;display:block;">
+            <a href="/blog/ce-marking-process-eu-export-structures">
+                <img src="/uploads/blog/ce-marking-process-eu-export-structures.jpg" loading="lazy" data-i18n-alt="blog.t2" alt="CE Marking for Export into the EU">
                 <div class="card-body">
                     <h3 data-i18n="blog.t2">CE Marking for Export into the EU</h3>
-                    <p style="color:#cdd6e0;font-size:0.85rem;margin:0;">2026-11-04</p>
+                    <p>2026-11-04</p>
                 </div>
             </a>
         </div>
         <div class="product-card">
-            <a href="/blog/airport-terminal-wayfinding-signage-planning" style="text-decoration:none;color:inherit;display:block;">
-                <img src="/uploads/blog/airport-terminal-wayfinding-signage-planning.jpg" loading="lazy" data-i18n-alt="blog.t3" alt="Airport Terminal Wayfinding" style="width:100%;height:180px;object-fit:cover;display:block;">
+            <a href="/blog/airport-terminal-wayfinding-signage-planning">
+                <img src="/uploads/blog/airport-terminal-wayfinding-signage-planning.jpg" loading="lazy" data-i18n-alt="blog.t3" alt="Airport Terminal Wayfinding">
                 <div class="card-body">
                     <h3 data-i18n="blog.t3">Airport Terminal Wayfinding</h3>
-                    <p style="color:#cdd6e0;font-size:0.85rem;margin:0;">2026-11-04</p>
+                    <p>2026-11-04</p>
                 </div>
             </a>
         </div>
     </div>
 </section>
 <section class="factory" id="about">
-    <div class="container">
-        <h2 class="section-title" data-i18n="about.title">Our Factory</h2>
-        <p data-i18n="about.desc">We are a professional manufacturer for city furniture, metal structures, advertising signage and display equipment. We support full custom design, production and global delivery for Europe, Middle East and America clients.</p>
+    <div class="container factory-grid">
+        <img src="./uploads/factory-wide.jpg" alt="Zhanxin metal fabrication workshop, Shanghai" loading="lazy">
+        <div>
+            <span class="kicker" style="text-align:left;">Inside the workshop</span>
+            <h2 class="section-title" data-i18n="about.title" style="text-align:left;">Our Factory</h2>
+            <p data-i18n="about.desc">We are a professional manufacturer for city furniture, metal structures, advertising signage and display equipment. We support full custom design, production and global delivery for Europe, Middle East and America clients.</p>
+            <a href="/about" class="btn-ghost">About the company</a>
+        </div>
     </div>
 </section>
 <section class="inquiry container" id="inquiry">
-    <h2 class="section-title" data-i18n="inq.title">Send Your Inquiry</h2>
+    <span class="kicker">Start your project</span>
+        <h2 class="section-title" data-i18n="inq.title">Send Your Inquiry</h2>
     <div class="form-box">
         <form id="inquiryForm">
             <div class="form-group">
@@ -474,7 +415,7 @@
             </div>
             <div class="form-group" style="display:flex;align-items:flex-start;gap:8px;margin:1rem 0;">
                 <input type="checkbox" name="privacy_consent" id="privacyConsent" required style="margin-top:4px;">
-                <label for="privacyConsent" style="font-size:0.9rem;line-height:1.5;"><span data-i18n="inq.privacy1">I agree to the </span><a href="/privacy" style="color:#ff7800;" data-i18n="inq.privacy_link">Privacy Policy</a><span data-i18n="inq.privacy2"> and consent to my data being processed for inquiry purposes.</span></label>
+                <label for="privacyConsent" style="font-size:0.9rem;line-height:1.5;"><span data-i18n="inq.privacy1">I agree to the </span><a href="/privacy" style="color:var(--accent-text);" data-i18n="inq.privacy_link">Privacy Policy</a><span data-i18n="inq.privacy2"> and consent to my data being processed for inquiry purposes.</span></label>
             </div>
             <!-- Turnstile Sitekey沿用你现有 -->
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu" data-theme="light"></div>
@@ -488,15 +429,15 @@
         <div class="copyright">
             © 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. <span data-i18n="footer.copyright">All rights reserved.</span>
         </div>
-        <div class="footer-nav" style="margin:16px 0;line-height:2;font-size:14px;">
-            <a href="/" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.home">Home</a>
-            <a href="/products" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.products">Products</a>
-            <a href="/cases" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.cases">Cases</a>
-            <a href="/blog" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.insights">Insights</a>
-            <a href="/certificates" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.certs">Certificates</a>
-            <a href="/faq" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.faq">FAQ</a>
-            <a href="/about" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.about">About Us</a>
-            <a href="/contact" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.contact">Contact</a>
+        <div class="footer-nav">
+            <a href="/" data-i18n="footer.home">Home</a>
+            <a href="/products" data-i18n="footer.products">Products</a>
+            <a href="/cases" data-i18n="footer.cases">Cases</a>
+            <a href="/blog" data-i18n="footer.insights">Insights</a>
+            <a href="/certificates" data-i18n="footer.certs">Certificates</a>
+            <a href="/faq" data-i18n="footer.faq">FAQ</a>
+            <a href="/about" data-i18n="footer.about">About Us</a>
+            <a href="/contact" data-i18n="footer.contact">Contact</a>
         </div>
         <div class="footer-info">
             <p><strong>SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</strong></p>
@@ -1272,9 +1213,9 @@ mobileBtn.addEventListener('click', ()=>{
     cookieDiv.innerHTML = `
         <div style="flex:1;min-width:250px;font-size:14px;">
             We use cookies to improve your experience and analyse site traffic. Click "Accept" to consent to analytics cookies, or continue browsing without tracking.
-            <a href="/privacy" style="color:#ff7800;margin-left:5px;">Privacy Policy</a>
+            <a href="/privacy" style="color:var(--accent-text);margin-left:5px;">Privacy Policy</a>
         </div>
-        <button id="cookie-accept" style="background:#ff7800;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>
+        <button id="cookie-accept" style="background:var(--accent);color:#07203b;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>
     `;
     document.body.appendChild(cookieDiv);
     

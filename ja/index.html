@@ -86,7 +86,7 @@
             color:#fff;
         }
         .logo-text span{
-            color:#ff7800;
+            color:#d35400;
         }
         .logo-link{
             text-decoration:none;
@@ -112,7 +112,7 @@
             font-size:14px;
         }
         .footer-info a{
-            color:#ff7800;
+            color:#d35400;
             text-decoration:none;
         }
         .footer-info a:hover{
@@ -175,7 +175,7 @@
         <ul class="nav-links">
             <li><a href="/" data-i18n="nav.home">ホーム</a></li>
             <li><a href="/products" data-i18n="nav.products">製品</a></li>
-            <li><a href="/cases" data-i18n="nav.projects">導入事例</a></li>
+            <li><a href="/cases">導入事例</a></li>
             <li><a href="/about" data-i18n="nav.about">会社紹介</a></li>
             <li><a href="/#inquiry" data-i18n="nav.quote">見積もり依頼</a></li>
         </ul>
@@ -226,6 +226,14 @@
         <span class="dot" data-index="2"></span>
     </div>
 </section>
+<section class="stats-bar">
+    <div class="container stats-grid">
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">製造経験</div></div>
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">工場面積（m²）</div></div>
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">輸出先の国数</div></div>
+        <div><div class="stat-num">[FILL]</div><div class="stat-label">年間出荷コンテナ数</div></div>
+    </div>
+</section>
 <section class="features">
     <div class="container">
         <div class="features-grid">
@@ -246,7 +254,8 @@
 </section>
 <!-- ✅ 已经替换为合规安全版本的Quality & Compliance -->
 <section class="compliance container">
-    <h2 class="section-title" data-i18n="compliance.title">品質とコンプライアンス</h2>
+    <span class="kicker">主張ではなく証拠</span>
+        <h2 class="section-title" data-i18n="compliance.title">品質とコンプライアンス</h2>
     <ul>
         <li data-i18n="compliance.li1">生産安全許可証（中国）— 金属加工メーカーとしての許可を取得</li>
         <li data-i18n="compliance.li2">ISO 9001 / 14001 / 45001 に基づく品質マネジメントシステムを構築済み。再認証手続きを進めています</li>
@@ -260,10 +269,12 @@
     </ul>
 </section>
 <section class="products container" id="products">
-    <h2 class="section-title" data-i18n="product.title">製品一覧</h2>
+    <span class="kicker">私たちがつくるもの</span>
+        <h2 class="section-title" data-i18n="product.title">製品一覧</h2>
     <div class="product-grid">
         <div class="product-card">
-            <a href="/product/frameless-tension-lightbox" style="text-decoration:none;color:inherit;">
+            <a href="/product/frameless-tension-lightbox">
+                <img src="/uploads/lightbox.jpg" alt="Advertising lightbox" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.lightbox">広告ライトボックス</h3>
                 <p data-i18n="prod.lightbox_desc">業務用カスタムライトボックス</p>
@@ -271,7 +282,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/wayfinding-signage" style="text-decoration:none;color:inherit;">
+            <a href="/product/wayfinding-signage">
+                <img src="/uploads/signage.jpg" alt="Wayfinding signage" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.sign">案内標識</h3>
                 <p data-i18n="prod.sign_desc">誘導サイン、金属製案内看板</p>
@@ -279,7 +291,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/bus-shelter" style="text-decoration:none;color:inherit;">
+            <a href="/product/bus-shelter">
+                <img src="/uploads/busshelter.jpg" alt="Bus shelter" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.bus">バス待合シェルター</h3>
                 <p data-i18n="prod.bus_desc">都市家具 バス停シェルター</p>
@@ -287,7 +300,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/led-lcd-screen" style="text-decoration:none;color:inherit;">
+            <a href="/product/led-lcd-screen">
+                <img src="/uploads/led-lcd-airport.jpg" alt="LED and LCD display" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.led">LED・LCD広告ディスプレイ</h3>
                 <p data-i18n="prod.led_desc">LEDパネル、LCD広告機</p>
@@ -295,7 +309,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/custom-steel-aluminum-structure" style="text-decoration:none;color:inherit;">
+            <a href="/product/custom-steel-aluminum-structure">
+                <img src="/uploads/metal-struct.jpg" alt="Metal structure" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.metal">金属構造物</h3>
                 <p data-i18n="prod.metal_desc">オーダーメイド鉄骨・金属加工</p>
@@ -303,7 +318,8 @@
             </a>
         </div>
         <div class="product-card">
-            <a href="/product/other-products" style="text-decoration:none;color:inherit;">
+            <a href="/product/other-products">
+                <img src="/uploads/busshelter-smart-carousel.jpg" alt="Urban furniture" loading="lazy">
             <div class="card-body">
                 <h3 data-i18n="prod.other">その他</h3>
                 <p data-i18n="prod.other_desc">その他カスタム都市家具製品</p>
@@ -312,69 +328,77 @@
         </div>
     </div>
 </section>
-<section class="why-us container" style="padding:3rem 0;">
-    <h2 class="section-title" data-i18n="whyus.title">選ばれる理由</h2>
+<section class="why-us container">
+    <span class="kicker">選ばれる理由</span>
+        <h2 class="section-title" data-i18n="whyus.title">選ばれる理由</h2>
     <div class="features-grid">
-        <a href="/cases" style="text-decoration:none;color:inherit;">
-            <div class="feature-card" style="text-align:center;padding:2rem 1.5rem;border:1px solid #D9DEE3;border-radius:12px;transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/cases">
+            <div class="feature-card">
                 <h3 data-i18n="whyus.projects.title">導入事例</h3>
                 <p data-i18n="whyus.projects.desc">地下鉄、空港、ショッピングモール、都市家具の世界各国プロジェクト実績</p>
             </div>
         </a>
-        <a href="/certificates" style="text-decoration:none;color:inherit;">
-            <div class="feature-card" style="text-align:center;padding:2rem 1.5rem;border:1px solid #D9DEE3;border-radius:12px;transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/certificates">
+            <div class="feature-card">
                 <h3 data-i18n="whyus.certs.title">認証資格</h3>
                 <p data-i18n="whyus.certs.desc">ISO 9001 / 14001 / 45001 に基づき確立された品質マネジメントシステム；対象市場の認証はプロジェクト単位で手配可能</p>
             </div>
         </a>
-        <a href="/faq" style="text-decoration:none;color:inherit;">
-            <div class="feature-card" style="text-align:center;padding:2rem 1.5rem;border:1px solid #D9DEE3;border-radius:12px;transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/faq">
+            <div class="feature-card">
                 <h3 data-i18n="whyus.faq.title">よくある質問</h3>
                 <p data-i18n="whyus.faq.desc">最小ロット、カスタム、納期、支払い、保証に関する質問にお答えします</p>
             </div>
         </a>
     </div>
 </section>
-<section class="container" style="padding:5rem 0;">
-    <h2 class="section-title" data-i18n="blog.title">最新記事</h2>
+<section class="section blog-latest container">
+    <span class="kicker">最新の知見</span>
+        <h2 class="section-title" data-i18n="blog.title">最新記事</h2>
     <div class="product-grid">
         <div class="product-card">
-            <a href="/blog/gulf-conformity-saso-saber-ecas-g-mark-guide" style="text-decoration:none;color:inherit;display:block;">
-                <img src="/uploads/blog/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg" loading="lazy" data-i18n-alt="blog.t1" alt="湾岸プロジェクトの適合性：SASO、SABER、ECAS、G-Mark の解説" style="width:100%;height:180px;object-fit:cover;display:block;">
+            <a href="/blog/gulf-conformity-saso-saber-ecas-g-mark-guide">
+                <img src="/uploads/blog/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg" loading="lazy" data-i18n-alt="blog.t1" alt="湾岸プロジェクトの適合性：SASO、SABER、ECAS、G-Mark の解説">
                 <div class="card-body">
                     <h3 data-i18n="blog.t1">湾岸プロジェクトの適合性：SASO、SABER、ECAS、G-Mark の解説</h3>
-                    <p style="color:#cdd6e0;font-size:0.85rem;margin:0;">2026-11-05</p>
+                    <p>2026-11-05</p>
                 </div>
             </a>
         </div>
         <div class="product-card">
-            <a href="/blog/ce-marking-process-eu-export-structures" style="text-decoration:none;color:inherit;display:block;">
-                <img src="/uploads/blog/ce-marking-process-eu-export-structures.jpg" loading="lazy" data-i18n-alt="blog.t2" alt="EU 輸出のための CE マーキング" style="width:100%;height:180px;object-fit:cover;display:block;">
+            <a href="/blog/ce-marking-process-eu-export-structures">
+                <img src="/uploads/blog/ce-marking-process-eu-export-structures.jpg" loading="lazy" data-i18n-alt="blog.t2" alt="EU 輸出のための CE マーキング">
                 <div class="card-body">
                     <h3 data-i18n="blog.t2">EU 輸出のための CE マーキング</h3>
-                    <p style="color:#cdd6e0;font-size:0.85rem;margin:0;">2026-11-05</p>
+                    <p>2026-11-05</p>
                 </div>
             </a>
         </div>
         <div class="product-card">
-            <a href="/blog/airport-terminal-wayfinding-signage-planning" style="text-decoration:none;color:inherit;display:block;">
-                <img src="/uploads/blog/airport-terminal-wayfinding-signage-planning.jpg" loading="lazy" data-i18n-alt="blog.t3" alt="空港ターミナルの案内サイン" style="width:100%;height:180px;object-fit:cover;display:block;">
+            <a href="/blog/airport-terminal-wayfinding-signage-planning">
+                <img src="/uploads/blog/airport-terminal-wayfinding-signage-planning.jpg" loading="lazy" data-i18n-alt="blog.t3" alt="空港ターミナルの案内サイン">
                 <div class="card-body">
                     <h3 data-i18n="blog.t3">空港ターミナルの案内サイン</h3>
-                    <p style="color:#cdd6e0;font-size:0.85rem;margin:0;">2026-11-05</p>
+                    <p>2026-11-05</p>
                 </div>
             </a>
         </div>
     </div>
 </section>
 <section class="factory" id="about">
-    <div class="container">
-        <h2 class="section-title" data-i18n="about.title">工場紹介</h2>
-        <p data-i18n="about.desc">都市家具、金属構造物、広告標識、ディスプレイ機器の専門メーカー。カスタム設計・製造し、欧州・中東・米国顧客向けにグローバル納品可能。</p>
+    <div class="container factory-grid">
+        <img src="/uploads/factory-wide.jpg" alt="Zhanxin metal fabrication workshop, Shanghai" loading="lazy">
+        <div>
+            <span class="kicker" style="text-align:left;">工場の中</span>
+            <h2 class="section-title" data-i18n="about.title" style="text-align:left;">工場紹介</h2>
+            <p data-i18n="about.desc">都市家具、金属構造物、広告標識、ディスプレイ機器の専門メーカー。カスタム設計・製造し、欧州・中東・米国顧客向けにグローバル納品可能。</p>
+            <a href="/about" class="btn-ghost">会社概要</a>
+        </div>
     </div>
 </section>
 <section class="inquiry container" id="inquiry">
-    <h2 class="section-title" data-i18n="inq.title">お問い合わせ</h2>
+    <span class="kicker">プロジェクトを始める</span>
+        <h2 class="section-title" data-i18n="inq.title">お問い合わせ</h2>
     <div class="form-box">
         <form id="inquiryForm">
             <div class="form-group">
@@ -451,7 +475,7 @@
             </div>
             <div class="form-group" style="display:flex;align-items:flex-start;gap:8px;margin:1rem 0;">
                 <input type="checkbox" name="privacy_consent" id="privacyConsent" required style="margin-top:4px;">
-                <label for="privacyConsent" style="font-size:0.9rem;line-height:1.5;"><span data-i18n="inq.privacy1">当社の</span><a href="/privacy" style="color:#ff7800;" data-i18n="inq.privacy_link">プライバシーポリシー</a><span data-i18n="inq.privacy2">に同意し、お問い合わせ処理のためのデータ利用に同意します。</span></label>
+                <label for="privacyConsent" style="font-size:0.9rem;line-height:1.5;"><span data-i18n="inq.privacy1">当社の</span><a href="/privacy" style="color:#d35400;" data-i18n="inq.privacy_link">プライバシーポリシー</a><span data-i18n="inq.privacy2">に同意し、お問い合わせ処理のためのデータ利用に同意します。</span></label>
             </div>
             <!-- Turnstile Sitekey沿用你现有 -->
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu" data-theme="light"></div>
@@ -466,14 +490,14 @@
             © 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT CO.,LTD. <span data-i18n="footer.copyright">無断転載を禁じます。</span>
         </div>
         <div class="footer-nav" style="margin:16px 0;line-height:2;font-size:14px;">
-            <a href="/" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.home">ホーム</a>
-            <a href="/products" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.products">製品</a>
-            <a href="/cases" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.cases">導入事例</a>
-            <a href="/blog" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.insights">コラム</a>
-            <a href="/certificates" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.certs">認証・資格</a>
-            <a href="/faq" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.faq">よくある質問</a>
-            <a href="/about" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.about">会社紹介</a>
-            <a href="/contact" style="color:#ffb040;text-decoration:none;margin:0 12px;" data-i18n="footer.contact">お問い合わせ</a>
+            <a href="/" style="color:#e67e22;text-decoration:none;margin:0 12px;" data-i18n="footer.home">ホーム</a>
+            <a href="/products" style="color:#e67e22;text-decoration:none;margin:0 12px;" data-i18n="footer.products">製品</a>
+            <a href="/cases">導入事例</a>
+            <a href="/blog" style="color:#e67e22;text-decoration:none;margin:0 12px;" data-i18n="footer.insights">コラム</a>
+            <a href="/certificates">認証・資格</a>
+            <a href="/faq">よくある質問</a>
+            <a href="/about" style="color:#e67e22;text-decoration:none;margin:0 12px;" data-i18n="footer.about">会社紹介</a>
+            <a href="/contact" style="color:#e67e22;text-decoration:none;margin:0 12px;" data-i18n="footer.contact">お問い合わせ</a>
         </div>
         <div class="footer-info">
             <p><strong>SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</strong></p>
@@ -1245,13 +1269,13 @@ mobileBtn.addEventListener('click', ()=>{
     
     const cookieDiv = document.createElement('div');
     cookieDiv.id = 'cookie-consent';
-    cookieDiv.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0F2A44;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
+    cookieDiv.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0f3460;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
     cookieDiv.innerHTML = `
         <div style="flex:1;min-width:250px;font-size:14px;">
             We use cookies to improve your experience and analyse site traffic. Click "Accept" to consent to analytics cookies, or continue browsing without tracking.
-            <a href="/privacy" style="color:#ff7800;margin-left:5px;">Privacy Policy</a>
+            <a href="/privacy" style="color:#d35400;margin-left:5px;">Privacy Policy</a>
         </div>
-        <button id="cookie-accept" style="background:#ff7800;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>
+        <button id="cookie-accept" style="background:#d35400;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>
     `;
     document.body.appendChild(cookieDiv);
     

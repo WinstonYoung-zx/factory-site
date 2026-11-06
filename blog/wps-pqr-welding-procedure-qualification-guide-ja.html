@@ -52,7 +52,7 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "WPS だけで十分ですか、それとも PQR も必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "両方を求めましょう。WPS は指示であり、PQR はその指示が健全な継手を生むという証拠です。PQR の裏付けがない WPS は通常、認定ではなくテンプレートです。"}}, {"@type": "Question", "name": "なぜ 1 つの WPS ですべてをカバーできないのですか？", "acceptedAnswer": {"@type": "Answer", "text": "認定は、材料グループ、板厚、プロセス、姿勢、継手タイプなどの変数によって範囲が定められます。忙しい加工注文では、複数の手順が必要になるのが正当です。"}}, {"@type": "Question", "name": "特定の溶接プロセスを指定できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。時には指定すべきです。後に露出するアルミニウムに TIG を指定するのは一般的で、MAG より外観がきれいになります。"}}, {"@type": "Question", "name": "非破壊検査を要求すべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "影響度の高い作業では、その通りです。方法と受入水準——目視（ISO 17637）、浸透探傷、磁粉探傷、超音波探傷——を指定してください。規格と受入基準なしの「NDT 必須」は試験可能な要件ではありません。"}}, {"@type": "Question", "name": "第三者検査の費用は誰が負担しますか？", "acceptedAnswer": {"@type": "Answer", "text": "通常は購入者です。検査員は購入者のために行動するからです。大規模なプログラムではその費用に見合う価値があります。生産開始前ではなく、前に手配してください。"}}]}
 </script>
-<style>:root{--primary:#0F2A44;--accent:#ff7800;--light:#f8f9fa;--dark:#222;--border-gray:#D9DEE3;--footer-bg:#0B1F33;}
+<style>:root{--primary:#0f3460;--accent:#d35400;--light:#f8f9fa;--dark:#222;--border-gray:#e2e8f0;--footer-bg:#07203b;}
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
 body{color:var(--dark);background:#fff;}
 a{color:var(--primary);}
@@ -100,7 +100,7 @@ tbody tr:nth-child(even){background:#fcfcfd;}
 .related ul{margin-left:1.2rem;line-height:1.9;}
 footer{background:var(--footer-bg);color:#cccccc;padding:2.2rem 5%;margin-top:4rem;}
 footer .f-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center;}
-footer a{color:#ffb040;text-decoration:none;}
+footer a{color:#e67e22;text-decoration:none;}
 @media(max-width:768px){header{flex-direction:column;align-items:flex-start;}nav{gap:1.2rem;}.wrap{padding:2rem 6% 3rem;}h1{font-size:1.6rem;}}</style>
 <script type="application/ld+json">
 {
@@ -152,7 +152,7 @@ footer a{color:#ffb040;text-decoration:none;}
 <h1>WPS、PQR、溶接士資格：RFQ で実際に求めるべきこと</h1>
 <div class="byline">2026-11-05 · 読了約8分 · Engineering Team, ZhanXin</div>
 <figure class="hero">
-<img src="/uploads/blog/wps-pqr-welding-procedure-qualification-guide.jpg?v=20261108" alt="中国の工場で WPS 文書を近くに置きながら鋼製フレーム継手を製作する溶接士" loading="lazy" class="hero-img" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent('<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;600&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;#0F2A44&quot;/><text x=&quot;50%&quot; y=&quot;50%&quot; fill=&quot;#ffffff&quot; font-size=&quot;34&quot; font-family=&quot;Arial&quot; text-anchor=&quot;middle&quot;>Article image pending</text></svg>')">
+<img src="/uploads/blog/wps-pqr-welding-procedure-qualification-guide.jpg?v=20261108" alt="中国の工場で WPS 文書を近くに置きながら鋼製フレーム継手を製作する溶接士" loading="lazy" class="hero-img" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent('<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;600&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;#0f3460&quot;/><text x=&quot;50%&quot; y=&quot;50%&quot; fill=&quot;#ffffff&quot; font-size=&quot;34&quot; font-family=&quot;Arial&quot; text-anchor=&quot;middle&quot;>Article image pending</text></svg>')">
 <figcaption>中国の工場で WPS 文書を脇に鋼製フレーム継手を溶接する作業員</figcaption>
 </figure>
 <article>
@@ -292,9 +292,9 @@ footer a{color:#ffb040;text-decoration:none;}
   if (localStorage.getItem('cookieConsent')) return;
   var box = document.createElement('div');
   box.id = 'cookie-consent';
-  box.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0F2A44;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
+  box.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0f3460;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
   box.innerHTML = '<div style="flex:1;min-width:250px;font-size:14px;">' + "\u5f53\u30b5\u30a4\u30c8\u3067\u306f\u3001\u304a\u5ba2\u69d8\u306e\u4f53\u9a13\u5411\u4e0a\u3068\u30b5\u30a4\u30c8\u30c8\u30e9\u30d5\u30a3\u30c3\u30af\u5206\u6790\u306e\u305f\u3081\u306b Cookie \u3092\u4f7f\u7528\u3057\u307e\u3059\u3002\u300c\u540c\u610f\u3059\u308b\u300d\u3092\u30af\u30ea\u30c3\u30af\u3059\u308b\u3068\u5206\u6790\u7528 Cookie \u306b\u540c\u610f\u3044\u305f\u3060\u3044\u305f\u3082\u306e\u3068\u307f\u306a\u3057\u307e\u3059\u3002\u30c8\u30e9\u30c3\u30ad\u30f3\u30b0\u306a\u3057\u3067\u95b2\u89a7\u3092\u7d9a\u3051\u308b\u3053\u3068\u3082\u3067\u304d\u307e\u3059\u3002" + '</div>' +
-    '<button id="cookie-accept" style="background:#ff7800;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">' + "\u540c\u610f\u3059\u308b" + '</button>';
+    '<button id="cookie-accept" style="background:#d35400;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">' + "\u540c\u610f\u3059\u308b" + '</button>';
   document.body.appendChild(box);
   document.getElementById('cookie-accept').addEventListener('click', function() {
     localStorage.setItem('cookieConsent', 'true');

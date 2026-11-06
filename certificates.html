@@ -46,7 +46,7 @@
 <meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/iso9001-en.jpg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <style>
-:root{--primary:#0F2A44;--accent:#ff7800;--light:#f8f9fa;--dark:#222;--border-gray:#D9DEE3;--footer-bg:#0B1F33;}
+:root{--primary:#0f3460;--accent:#d35400;--light:#f8f9fa;--dark:#222;--border-gray:#e2e8f0;--footer-bg:#07203b;}
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
 body{color:var(--dark);background:#fff;}
 header{background-color:var(--primary);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;flex-wrap:wrap;gap:1rem;}
@@ -67,7 +67,7 @@ select,select option {color:#222;background:#fff;}
 .page-header p{color:#666;line-height:1.8;font-size:1.05rem;}
 .certs-grid{max-width:1200px;margin:0 auto;padding:2rem 5%;display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:2rem;}
 .cert-card{border:1px solid var(--border-gray);border-radius:12px;overflow:hidden;text-align:center;transition:transform 0.2s, box-shadow 0.2s;background:#fff;}
-.cert-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(15,42,68,0.12);}
+.cert-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(15,52,96,0.12);}
 .cert-card img{width:100%;height:auto;max-height:500px;object-fit:contain;display:block;background:#fff;cursor:pointer;padding:1rem;}
 .cert-body{padding:1.2rem;}
 .cert-body h3{color:var(--primary);font-size:1.1rem;margin-bottom:0.3rem;}
@@ -79,7 +79,7 @@ select,select option {color:#222;background:#fff;}
 .btn-primary{background:var(--accent);color:#fff;}
 .btn:hover{opacity:0.9;}
 footer{background:var(--footer-bg);color:#cccccc;text-align:center;padding:2.2rem 5%;margin-top:5rem;}
-footer a{color:#ffb040;text-decoration:none;}
+footer a{color:#e67e22;text-decoration:none;}
 @media(max-width:768px){header{flex-direction:column;align-items:flex-start;}.logo img{max-height:36px;}.certs-grid{grid-template-columns:1fr;}}
 </style>
 <script type="application/ld+json">
@@ -214,8 +214,8 @@ footer a{color:#ffb040;text-decoration:none;}
     if (localStorage.getItem('cookieConsent')) return;
     const cookieDiv = document.createElement('div');
     cookieDiv.id = 'cookie-consent';
-    cookieDiv.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0F2A44;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
-    cookieDiv.innerHTML = '<div style="flex:1;min-width:250px;font-size:14px;">We use cookies to improve your experience. Click "Accept" to allow analytics tracking, or continue browsing without tracking.<a href="/privacy" style="color:#ff7800;margin-left:5px;">Privacy Policy</a></div><button id="cookie-accept" style="background:#ff7800;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>';
+    cookieDiv.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0f3460;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
+    cookieDiv.innerHTML = '<div style="flex:1;min-width:250px;font-size:14px;">We use cookies to improve your experience. Click "Accept" to allow analytics tracking, or continue browsing without tracking.<a href="/privacy" style="color:#d35400;margin-left:5px;">Privacy Policy</a></div><button id="cookie-accept" style="background:#d35400;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button>';
     document.body.appendChild(cookieDiv);
     document.getElementById('cookie-accept').addEventListener('click', function() {
         localStorage.setItem('cookieConsent', 'true');
