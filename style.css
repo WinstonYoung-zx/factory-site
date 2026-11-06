@@ -180,7 +180,7 @@ header {
     background: var(--primary); color: #fff;
     padding: 2rem 0;
 }
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: center; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center; max-width: 860px; margin: 0 auto; }
 .stat-num { font-size: 2rem; font-weight: 700; color: var(--accent-text); line-height: 1.2; }
 .stat-label { font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-top: 0.25rem; }
 
