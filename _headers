@@ -15,3 +15,13 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), fullscreen=(self)
   Cache-Control: no-store
+
+# 索引与订阅类文件必须短缓存，否则站点地图与 RSS 更新会被边缘缓存锁住
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/feed.xml
+  Cache-Control: public, max-age=1800
