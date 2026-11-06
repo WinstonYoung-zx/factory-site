@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ZHANXIN GLOBAL - Engineering Notes</title>
+    <link>https://www.zhanxinglobal.com/blog</link>
+    <atom:link href="https://www.zhanxinglobal.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Field notes on outdoor light boxes, wayfinding signage, bus shelters, LED/LCD displays and metal structures for export projects: materials, IP ratings, certification routes and container loading.</description>
+    <language>en</language>
+    <lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Gulf Conformity for Gulf Projects: SASO, SABER, ECAS and G-Mark Explained</title>
+      <link>https://www.zhanxinglobal.com/blog/gulf-conformity-saso-saber-ecas-g-mark-guide</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/gulf-conformity-saso-saber-ecas-g-mark-guide</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Compliance</category>
+      <description>Which Gulf scheme applies to your shipment, why consignment certificates differ from factory ones, and how to avoid containers waiting for paperwork.</description>
+    </item>
+    <item>
+      <title>CE Marking for Export into the EU: What Actually Happens, and Who Carries the Obligation</title>
+      <link>https://www.zhanxinglobal.com/blog/ce-marking-process-eu-export-structures</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/ce-marking-process-eu-export-structures</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Compliance</category>
+      <description>CE is a declaration you make, not a certificate you receive. Who holds the obligation, what the file must contain, and what delays shipments.</description>
+    </item>
+    <item>
+      <title>Airport Terminal Wayfinding: How to Plan Sign Structures That Still Work After Handover</title>
+      <link>https://www.zhanxinglobal.com/blog/airport-terminal-wayfinding-signage-planning</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/airport-terminal-wayfinding-signage-planning</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Application</category>
+      <description>How to specify terminal wayfinding that survives authority review and stays serviceable: legibility, fire class, modularity, airside maintenance.</description>
+    </item>
+    <item>
+      <title>LED or LCD? Choosing the Right Screen Technology for Outdoor and Semi-Outdoor Sites</title>
+      <link>https://www.zhanxinglobal.com/blog/led-vs-lcd-outdoor-display-choice</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/led-vs-lcd-outdoor-display-choice</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Technical</category>
+      <description>Where large-format LED beats LCD outdoors and where it does not: size limits, sunlight damage, viewing distance, service life and running cost.</description>
+    </item>
+    <item>
+      <title>How Many Units Fit in a 20'GP? Loading Estimates for Light Boxes and Bus Shelters</title>
+      <link>https://www.zhanxinglobal.com/blog/container-loading-estimate-light-box-bus-shelter</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/container-loading-estimate-light-box-bus-shelter</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Procurement</category>
+      <description>Units per container is a function of unit size and packing volume, not a fixed number. How to estimate light box and bus shelter loading by dimension.</description>
+    </item>
+    <item>
+      <title>Outdoor LED Display Specification: Brightness, Pixel Pitch, Heat and Access</title>
+      <link>https://www.zhanxinglobal.com/blog/outdoor-led-display-selection-guide</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/outdoor-led-display-selection-guide</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Technical</category>
+      <description>How to specify an outdoor LED screen: brightness in real sunlight, pixel pitch against viewing distance, thermal design and service access.</description>
+    </item>
+    <item>
+      <title>WPS, PQR and Welder Qualification: What Your RFQ Should Actually Ask For</title>
+      <link>https://www.zhanxinglobal.com/blog/wps-pqr-welding-procedure-qualification-guide</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/wps-pqr-welding-procedure-qualification-guide</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Compliance</category>
+      <description>WPS, PQR and welder qualification: what each one is, when it matters, and the variables to check before accepting welding documentation.</description>
+    </item>
+    <item>
+      <title>EN 10204 Material Certificates Explained: 2.1, 2.2, 3.1 and 3.2 Compared</title>
+      <link>https://www.zhanxinglobal.com/blog/en-10204-3-1-material-certificate-guide</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/en-10204-3-1-material-certificate-guide</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Compliance</category>
+      <description>What each EN 10204 inspection document proves, why type 3.1 is not third-party, and how to read one line by line before you accept it.</description>
+    </item>
+    <item>
+      <title>Smart Bus Shelter Specification Checklist: Every Option You Need to Decide Before Requesting a Quote</title>
+      <link>https://www.zhanxinglobal.com/blog/smart-bus-shelter-configuration-checklist</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/smart-bus-shelter-configuration-checklist</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Application</category>
+      <description>A complete configuration checklist for urban shelter procurement: structure, glazing, lighting, smart modules, power, compliance, packing and installation support.</description>
+    </item>
+    <item>
+      <title>Outdoor Light Box Materials: Aluminium Profile vs Galvanized Steel (and When Neither Is Right)</title>
+      <link>https://www.zhanxinglobal.com/blog/outdoor-light-box-material-comparison</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/outdoor-light-box-material-comparison</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Technical</category>
+      <description>A practical material comparison for outdoor light boxes and display frames: strength, corrosion, weight, tooling economics and 10-year cost of ownership.</description>
+    </item>
+    <item>
+      <title>IP Ratings for Outdoor Displays and Enclosures: Choosing Between IP54, IP65, IP66 and IP67</title>
+      <link>https://www.zhanxinglobal.com/blog/ip-rating-guide-outdoor-light-box-led-display</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/ip-rating-guide-outdoor-light-box-led-display</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Technical</category>
+      <description>How to read IEC 60529 ratings, why IP67 does not replace IP66, and how to specify enclosure protection for outdoor light boxes and LED screens.</description>
+    </item>
+    <item>
+      <title>EN 1090 Execution Classes EXC1 to EXC4: What Buyers Outside the EU Need to Know</title>
+      <link>https://www.zhanxinglobal.com/blog/en-1090-execution-classes-exc1-exc4</link>
+      <guid isPermaLink="true">https://www.zhanxinglobal.com/blog/en-1090-execution-classes-exc1-exc4</guid>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Compliance</category>
+      <description>How EN 1090 execution classes are determined, who decides them, and what EXC1 to EXC4 actually require from a metal fabricator exporting to the EU.</description>
+    </item>
+  </channel>
+</rss>
