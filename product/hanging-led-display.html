@@ -3,34 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2X92ECKW5"></script>
+<!-- Google tag (gtag.js) - 地区化 Consent Mode v2：EEA/UK/CH 默认拒绝并弹窗，其他地区默认放行 -->
 <script>
+(function () {
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'analytics_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'functionality_storage': 'granted',
-    'personalization_storage': 'denied',
-    'security_storage': 'granted',
-    'wait_for_update': 500
-  });
-  gtag('js', new Date());
-  gtag('config', 'G-L2X92ECKW5');
-  // 若此前已同意过，恢复为 granted
-  if (localStorage.getItem('cookieConsent') === 'true') {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'analytics_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'functionality_storage': 'granted',
-      'personalization_storage': 'granted',
-      'security_storage': 'granted'
-    });
+  window.gtag = function () { window.dataLayer.push(arguments); };
+
+  var ID = 'G-L2X92ECKW5';
+
+  var RESTRICTED = { AT:1,BE:1,BG:1,HR:1,CY:1,CZ:1,DK:1,EE:1,FI:1,FR:1,DE:1,GR:1,HU:1,IE:1,
+                     IT:1,LV:1,LT:1,LU:1,MT:1,NL:1,PL:1,PT:1,RO:1,SK:1,SI:1,ES:1,SE:1,
+                     IS:1,LI:1,NO:1,GB:1,CH:1 };
+
+  var GRANTED = { ad_storage:'granted', analytics_storage:'granted', ad_user_data:'granted',
+                  ad_personalization:'granted', functionality_storage:'granted',
+                  personalization_storage:'granted', security_storage:'granted' };
+  var DENIED  = { ad_storage:'denied', analytics_storage:'denied', ad_user_data:'denied',
+                  ad_personalization:'denied', functionality_storage:'granted',
+                  personalization_storage:'denied', security_storage:'granted',
+                  wait_for_update: 1000 };
+
+  var saved = null;
+  try { saved = localStorage.getItem('cookieConsent'); } catch (e) {}
+
+  function loadTag() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+    document.head.appendChild(s);
+    window.gtag('js', new Date());
+    window.gtag('config', ID);
   }
+
+  function decide(country) {
+    var restricted = !country || country === 'XX' || country === 'T1' || RESTRICTED[country] === 1;
+    window.__zxGeoEU = restricted;
+    if (restricted) {
+      window.gtag('consent', 'default', DENIED);
+      if (saved === 'true') window.gtag('consent', 'update', GRANTED);
+    } else {
+      window.gtag('consent', 'default', GRANTED);
+    }
+    loadTag();
+    document.dispatchEvent(new CustomEvent('zx:consent-ready', { detail: { restricted: restricted, country: country } }));
+  }
+
+  var done = false;
+  function finish(c) { if (done) return; done = true; decide(c); }
+
+  try {
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 800) : null;
+    fetch('/cdn-cgi/trace', ctrl ? { signal: ctrl.signal } : {})
+      .then(function (r) { return r.text(); })
+      .then(function (t) {
+        if (timer) clearTimeout(timer);
+        var arr = t.split(String.fromCharCode(10));
+        var c = '';
+        for (var k = 0; k < arr.length; k++) {
+          if (arr[k].indexOf('loc=') === 0) { c = arr[k].slice(4, 6); break; }
+        }
+        finish(c);
+      })
+      .catch(function () { if (timer) clearTimeout(timer); finish(''); });
+  } catch (e) { finish(''); }
+})();
 </script>
 <title>Hanging LED Display Screen | ZHANXIN GLOBAL</title>
 <meta name="description" content="Hanging LED Display Screen with COB packaging, high refresh rate and wide viewing angle. For metro, airport, shopping mall, exhibition hall and conference room information display.">
@@ -620,5 +657,48 @@ langSelect.value = initialLang;
 })();
 </script>
 <a class="wa-float" href="https://wa.me/8619301179802?text=Hello%20ZHANXIN%2C%20I%27d%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.3.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-3.5-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.6.8 1.9.9.3.1.5.2.5.4.1.2.1.9-.2 1.5z"/></svg></a>
+<script>
+// ========== Cookie 同意弹窗（仅 EEA/UK/CH 显示） ==========
+
+(function() {
+  if (localStorage.getItem('cookieConsent')) return;
+
+  var GRANTED = {
+    'ad_storage': 'granted', 'analytics_storage': 'granted', 'ad_user_data': 'granted',
+    'ad_personalization': 'granted', 'functionality_storage': 'granted',
+    'personalization_storage': 'granted', 'security_storage': 'granted'
+  };
+
+  function showBanner() {
+    if (window.__zxGeoEU !== true) return;
+    if (document.getElementById('cookie-consent')) return;
+
+    var box = document.createElement('div');
+    box.id = 'cookie-consent';
+    box.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0f3460;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
+    box.innerHTML = '<div style="flex:1;min-width:250px;font-size:14px;">We use cookies to analyse site traffic. Choose "Accept" to allow analytics cookies, or "Decline" to keep browsing without tracking. <a href="/privacy" style="color:#d35400;margin-left:5px;">Privacy Policy</a></div>' +
+      '<div style="display:flex;gap:8px;"><button id="cookie-decline" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.5);padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Decline</button>' +
+      '<button id="cookie-accept" style="background:#d35400;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button></div>';
+    document.body.appendChild(box);
+
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'true');
+      if (typeof gtag === 'function') gtag('consent', 'update', GRANTED);
+      document.getElementById('cookie-consent').remove();
+    });
+
+    document.getElementById('cookie-decline').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'false');
+      document.getElementById('cookie-consent').remove();
+    });
+  }
+
+  if (window.__zxGeoEU === undefined) {
+    document.addEventListener('zx:consent-ready', showBanner);
+  } else {
+    showBanner();
+  }
+})();
+</script>
 </body>
 </html>
