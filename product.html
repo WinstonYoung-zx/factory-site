@@ -496,7 +496,7 @@ const slug = urlParams.get("slug");
 const box = document.getElementById("detailBox");
 async function loadDetail(){
   try{
-    const res = await fetch("/content/product-index.json?v=20261101");
+    const res = await fetch("/content/product-index.json?v=20261108");
     if(!res.ok) throw new Error();
     const list = await res.json();
     const item = list.find(p=>(p.slug || p.title?.en?.toLowerCase().replace(/\s+/g,"-")) === slug);
@@ -507,7 +507,8 @@ async function loadDetail(){
     const title = item.title?.[currentLang] || item.title?.en || "";
     const desc = item.desc?.[currentLang] || item.desc?.en || "";
     const showCategory = categoryI18n[currentLang][item.category] || item.category;
-    const imgSrc = (item.image || "/uploads/placeholder.jpg?v=20261108") + "?v=20261020";
+    const rawImg = item.image || "/uploads/placeholder.jpg";
+            const imgSrc = rawImg + (rawImg.indexOf("?") > -1 ? "&" : "?") + "v=20261108";
 
     // 动态更新 SEO meta 标签
     document.title = title + " | ZHANXIN";

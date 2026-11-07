@@ -1201,7 +1201,8 @@ function renderProducts(){
     grouped[cat].forEach(item=>{
       const titleText = item.title?.[currentLang] || item.title?.en || "";
       const descText = item.desc?.[currentLang] || item.desc?.en || "";
-      const imgSrc = (item.image || "/uploads/placeholder.jpg?v=20261108") + "?v=20261020";
+      const rawImg = item.image || "/uploads/placeholder.jpg";
+      const imgSrc = rawImg + (rawImg.indexOf("?") > -1 ? "&" : "?") + "v=20261108";
       const slug = item.slug || (titleText).toLowerCase().replace(/\s+/g,"-");
       const card = document.createElement("div");
       card.className = "product-card";
@@ -1238,7 +1239,7 @@ productSearch.addEventListener("input",function(){
 // ========= 核心修改：请求 /content/product-index.json =========
 async function loadProducts(){
   try{
-    const res = await fetch("/content/product-index.json?v=20261101");
+    const res = await fetch("/content/product-index.json?v=20261108");
     if(!res.ok) throw new Error("json load fail");
     allProducts = await res.json();
     renderCategoryOptions(allProducts);

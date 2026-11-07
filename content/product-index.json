@@ -94,7 +94,7 @@
   {
     "slug": "outdoor-tension-lightbox",
     "category": "lightbox",
-    "image": "/uploads/outdoor-lightbox-2.jpg?v=20261107",
+    "image": "/uploads/outdoor-lightbox-2.jpg",
     "title": {
       "en": "Outdoor Tension Fabric Light Box",
       "zh": "户外拉布灯箱",
@@ -355,7 +355,7 @@
   {
     "slug": "other-products",
     "category": "other",
-    "image": "/uploads/others-charging-column-2.jpg?v=20261107",
+    "image": "/uploads/others-charging-column-2.jpg",
     "title": {
       "en": "Other Products",
       "zh": "其他产品",
