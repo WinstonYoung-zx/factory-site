@@ -263,9 +263,11 @@ window.onTurnstileError = function (code) {
 // 移动端菜单开关逻辑
 const mobileBtn = document.querySelector('.mobile-menu-btn');
 const navList = document.querySelector('.nav-links');
-mobileBtn.addEventListener('click', ()=>{
-  navList.classList.toggle('mobile-open');
-})
+if (mobileBtn && typeof mobileBtn.addEventListener === 'function' && navList) {
+  mobileBtn.addEventListener('click', ()=>{
+    navList.classList.toggle('mobile-open');
+  });
+}
 // 多语言翻译
 const translations = {
 en: {

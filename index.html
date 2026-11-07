@@ -314,7 +314,7 @@ window.onTurnstileError = function (code) {
     <div class="product-grid">
         <div class="product-card">
             <a href="/blog/gulf-conformity-saso-saber-ecas-g-mark-guide">
-                <img src="/uploads/blog/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg?v=20261108" loading="lazy" data-i18n-alt="blog.t1" alt="Gulf Conformity for Gulf Projects: SASO, SABER, ECAS and G-Mark Explained" width="900" height="506" srcset="/uploads/r400/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg?v=20261108 400w, /uploads/r800/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg?v=20261108 800w, /uploads/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg?v=20261108 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                <img src="/uploads/blog/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg?v=20261108" loading="lazy" data-i18n-alt="blog.t1" alt="Gulf Conformity for Gulf Projects: SASO, SABER, ECAS and G-Mark Explained" width="900" height="506" srcset="/uploads/r400/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg?v=20261108 400w, /uploads/r800/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg?v=20261108 800w, /uploads/blog/gulf-conformity-saso-saber-ecas-g-mark-guide.jpg?v=20261108 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
                 <div class="card-body">
                     <h3 data-i18n="blog.t1">Gulf Conformity for Gulf Projects: SASO, SABER, ECAS and G-Mark Explained</h3>
                     <p>2026-11-04</p>
@@ -323,7 +323,7 @@ window.onTurnstileError = function (code) {
         </div>
         <div class="product-card">
             <a href="/blog/ce-marking-process-eu-export-structures">
-                <img src="/uploads/blog/ce-marking-process-eu-export-structures.jpg?v=20261108" loading="lazy" data-i18n-alt="blog.t2" alt="CE Marking for Export into the EU" width="800" height="450" srcset="/uploads/r400/ce-marking-process-eu-export-structures.jpg?v=20261108 400w, /uploads/ce-marking-process-eu-export-structures.jpg?v=20261108 800w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                <img src="/uploads/blog/ce-marking-process-eu-export-structures.jpg?v=20261108" loading="lazy" data-i18n-alt="blog.t2" alt="CE Marking for Export into the EU" width="800" height="450" srcset="/uploads/r400/ce-marking-process-eu-export-structures.jpg?v=20261108 400w, /uploads/blog/ce-marking-process-eu-export-structures.jpg?v=20261108 800w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
                 <div class="card-body">
                     <h3 data-i18n="blog.t2">CE Marking for Export into the EU</h3>
                     <p>2026-11-04</p>
@@ -332,7 +332,7 @@ window.onTurnstileError = function (code) {
         </div>
         <div class="product-card">
             <a href="/blog/airport-terminal-wayfinding-signage-planning">
-                <img src="/uploads/blog/airport-terminal-wayfinding-signage-planning.jpg?v=20261108" loading="lazy" data-i18n-alt="blog.t3" alt="Airport Terminal Wayfinding" width="1200" height="691" srcset="/uploads/r400/airport-terminal-wayfinding-signage-planning.jpg?v=20261108 400w, /uploads/r800/airport-terminal-wayfinding-signage-planning.jpg?v=20261108 800w, /uploads/airport-terminal-wayfinding-signage-planning.jpg?v=20261108 1200w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                <img src="/uploads/blog/airport-terminal-wayfinding-signage-planning.jpg?v=20261108" loading="lazy" data-i18n-alt="blog.t3" alt="Airport Terminal Wayfinding" width="1200" height="691" srcset="/uploads/r400/airport-terminal-wayfinding-signage-planning.jpg?v=20261108 400w, /uploads/r800/airport-terminal-wayfinding-signage-planning.jpg?v=20261108 800w, /uploads/blog/airport-terminal-wayfinding-signage-planning.jpg?v=20261108 1200w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
                 <div class="card-body">
                     <h3 data-i18n="blog.t3">Airport Terminal Wayfinding</h3>
                     <p>2026-11-04</p>
@@ -1215,9 +1215,13 @@ langSelect.value = initialLang;
 // ========== 新增移动端菜单逻辑 ==========
 const mobileBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
-mobileBtn.addEventListener('click', ()=>{
-    navLinks.classList.toggle('mobile-open');
-})
+if (mobileBtn && typeof mobileBtn.addEventListener === 'function' && navLinks) {
+    mobileBtn.addEventListener('click', ()=>{
+        navLinks.classList.toggle('mobile-open');
+    });
+} else if (mobileBtn) {
+    console.warn('[menu] unexpected target type:', Object.prototype.toString.call(mobileBtn));
+}
 
 // ========== GDPR Cookie 同意弹窗 ==========
 (function() {
