@@ -564,26 +564,30 @@ document.querySelector("#inquiryForm").addEventListener("submit", async function
     submitBtn.disabled = true;
     tipDom.className = "";
     tipDom.innerText = "Submitting...";
-    const formDataObj = {};
+    // 用 FormData 直传，附件真实上传（不再只传文件名）
+    const upForm = new FormData();
     const formElems = new FormData(this);
-    let attachFileName = "";
+    let attachSize = 0;
     formElems.forEach((val, key) => {
         if(key === "attach"){
-            if(val.name) attachFileName = val.name;
+            if(val && val.name){ upForm.append("attach", val); attachSize = val.size; }
         }else{
-            formDataObj[key] = val.trim();
+            upForm.append(key, String(val).trim());
         }
     });
-    formDataObj.attachFileName = attachFileName;
-    formDataObj.turnstileToken = document.querySelector('input[name="cf-turnstile-response"]')?.value || "";
+    if(attachSize > 20 * 1024 * 1024){
+        tipDom.className = "";
+        tipDom.innerText = "File is larger than 20MB. Please email it to sales@zhanxinglobal.com.";
+        submitBtn.disabled = false;
+        return;
+    }
+    upForm.append("turnstileToken", document.querySelector('input[name="cf-turnstile-response"]')?.value || "");
+    upForm.append("lang", document.documentElement.lang || "en");
     const workerUrl = "https://zhanxin-form.shzxin-cn.workers.dev";
     try {
         const res = await fetch(workerUrl, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formDataObj)
+            body: upForm
         });
         const ret = await res.json();
         if (ret.success) {
