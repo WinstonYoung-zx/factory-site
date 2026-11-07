@@ -165,6 +165,17 @@
 .wa-float:active{transform:scale(.95);}
 @media (max-width:768px){.wa-float{right:14px;bottom:14px;width:48px;height:48px;}}
 </style>
+<script>
+window.onTurnstileError = function (code) {
+  console.warn('[Turnstile] error code:', code);
+  var tip = document.querySelector('#formTip');
+  if (tip) {
+    tip.className = 'error';
+    tip.innerText = "人机验证加载失败（错误码 " + code + "）。请刷新页面重试；如仍无法显示，可直接邮件联系 sales@zhanxinglobal.com 提交询盘。";
+  }
+  return true;
+};
+</script>
 </head>
 <body>
 <header>
@@ -478,7 +489,7 @@
                 <label for="privacyConsent" style="font-size:0.9rem;line-height:1.5;"><span data-i18n="inq.privacy1">我同意</span><a href="/privacy" style="color:#d35400;" data-i18n="inq.privacy_link">隐私政策</a><span data-i18n="inq.privacy2">，并同意我的数据被用于询盘处理。</span></label>
             </div>
             <!-- Turnstile Sitekey沿用你现有 -->
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu" data-theme="light"></div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu" data-error-callback="onTurnstileError" data-theme="light"></div>
             <button id="submitBtn" type="submit" class="btn" data-i18n="inq.submit">提交询盘</button>
         </form>
         <div id="formTip" style="margin-top:1rem;"></div>

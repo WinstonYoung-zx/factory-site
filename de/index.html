@@ -170,6 +170,17 @@
 .wa-float:active{transform:scale(.95);}
 @media (max-width:768px){.wa-float{right:14px;bottom:14px;width:48px;height:48px;}}
 </style>
+<script>
+window.onTurnstileError = function (code) {
+  console.warn('[Turnstile] error code:', code);
+  var tip = document.querySelector('#formTip');
+  if (tip) {
+    tip.className = 'error';
+    tip.innerText = "Verification could not load (code " + code + "). Please refresh the page and try again, or email sales@zhanxinglobal.com with your inquiry directly.";
+  }
+  return true;
+};
+</script>
 </head>
 <body>
 <header>
@@ -483,7 +494,7 @@
                 <label for="privacyConsent" style="font-size:0.9rem;line-height:1.5;"><span data-i18n="inq.privacy1">Ich stimme der </span><a href="/privacy" style="color:#d35400;" data-i18n="inq.privacy_link">Datenschutzerklärung</a><span data-i18n="inq.privacy2"> zu und erkläre mich mit der Verarbeitung meiner Daten für Anfragezwecke einverstanden.</span></label>
             </div>
             <!-- Turnstile Sitekey沿用你现有 -->
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu" data-theme="light"></div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu" data-error-callback="onTurnstileError" data-theme="light"></div>
             <button id="submitBtn" type="submit" class="btn" data-i18n="inq.submit">Absenden</button>
         </form>
         <div id="formTip" style="margin-top:1rem;"></div>
