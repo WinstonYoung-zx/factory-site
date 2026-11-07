@@ -4,10 +4,78 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), fullscreen=(self)
-  Cache-Control: public, max-age=0, must-revalidate
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.jsdelivr.net https://challenges.cloudflare.com https://*.challenges.cloudflare.com https://static.cloudflareinsights.com 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://maps.googleapis.com https://*.google.com https://challenges.cloudflare.com https://*.challenges.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' data: blob: https://cms-gateway.shzxin-cn.workers.dev https://zhanxin-form.shzxin-cn.workers.dev https://*.shzxin-cn.workers.dev https://api.github.com https://*.workers.dev https://maps.googleapis.com https://challenges.cloudflare.com https://*.challenges.cloudflare.com https://*.google-analytics.com https://*.analytics.google.com https://googletagmanager.com; frame-src https://www.google.com https://www.google.cn https://challenges.cloudflare.com https://*.challenges.cloudflare.com; font-src 'self' https://fonts.gstatic.com; worker-src 'self' blob: https://challenges.cloudflare.com https://*.challenges.cloudflare.com; object-src 'none'; base-uri 'self';
+
+# 注意：Cloudflare Pages 会把所有匹配到的规则叠加，同一个头出现两段时浏览器只取第一个值。
+# 所以这里不再给 /* 设 Cache-Control，改为按路径精确下发，避免把长缓存规则压成 0。
+
+/
+  Cache-Control: public, max-age=600, must-revalidate
+
+/about
+  Cache-Control: public, max-age=600, must-revalidate
+
+/contact
+  Cache-Control: public, max-age=600, must-revalidate
+
+/products
+  Cache-Control: public, max-age=600, must-revalidate
+
+/product
+  Cache-Control: public, max-age=600, must-revalidate
+
+/cases
+  Cache-Control: public, max-age=600, must-revalidate
+
+/certificates
+  Cache-Control: public, max-age=600, must-revalidate
+
+/faq
+  Cache-Control: public, max-age=600, must-revalidate
+
+/privacy
+  Cache-Control: public, max-age=600, must-revalidate
+
+/blog
+  Cache-Control: public, max-age=600, must-revalidate
+
+/blog/*
+  Cache-Control: public, max-age=600, must-revalidate
+
+/product/*
+  Cache-Control: public, max-age=600, must-revalidate
+
+/zh/*
+  Cache-Control: public, max-age=600, must-revalidate
+
+/de/*
+  Cache-Control: public, max-age=600, must-revalidate
+
+/es/*
+  Cache-Control: public, max-age=600, must-revalidate
+
+/fr/*
+  Cache-Control: public, max-age=600, must-revalidate
+
+/ja/*
+  Cache-Control: public, max-age=600, must-revalidate
+
+/ar/*
+  Cache-Control: public, max-age=600, must-revalidate
+
+/style.css
+  Cache-Control: public, max-age=86400
+
+/style-light.css
+  Cache-Control: public, max-age=86400
+
+/style-dark-backup.css
+  Cache-Control: public, max-age=86400
+
+# 图片与静态资源：长缓存（文件名带 ?v= 版本参数，改图时换版本号即可）
 /uploads/*
   Cache-Control: public, max-age=2592000
+
 /admin/*
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
