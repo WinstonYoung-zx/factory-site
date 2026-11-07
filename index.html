@@ -111,7 +111,6 @@
 </style>
 <script>
 window.onTurnstileError = function (code) {
-  console.warn('[Turnstile] error code:', code);
   var tip = document.querySelector('#formTip');
   if (tip) {
     tip.className = 'error';
