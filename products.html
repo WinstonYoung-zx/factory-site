@@ -40,11 +40,11 @@
 <meta property="og:url" content="https://www.zhanxinglobal.com/products">
 <meta property="og:title" content="Products | ZHANXIN GLOBAL">
 <meta property="og:description" content="Bus shelter, advertising light box, wayfinding signage, LED-LCD display, custom metal-structure manufacturer">
-<meta property="og:image" content="https://www.zhanxinglobal.com/uploads/outdoor-lightbox-2.jpg?v=20261107">
+<meta property="og:image" content="https://www.zhanxinglobal.com/uploads/outdoor-lightbox-2.jpg?v=20261108">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Products | ZHANXIN GLOBAL">
 <meta name="twitter:description" content="Bus shelter, advertising light box, wayfinding signage, LED-LCD display, custom metal-structure manufacturer">
-<meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/factory-wide.jpg">
+<meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/factory-wide.jpg?v=20261108">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -342,14 +342,34 @@ footer a:hover{
   .float-inquiry{right:15px;bottom:20px;font-size:0.9rem;padding:10px 16px;}
   .filter-panel{padding:1.2rem;}
 }
+
+/* === 移动端统一菜单按钮（2026-11-07） === */
+.mobile-menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.55);color:inherit;border-radius:6px;padding:8px 14px;font-size:15px;line-height:1.2;cursor:pointer;}
+@media (max-width:768px){
+  header{flex-direction:row;flex-wrap:wrap;align-items:center;}
+  header nav{display:none;width:100%;flex-direction:column;gap:.75rem;}
+  header nav.mobile-open{display:flex;}
+  .mobile-menu-btn{display:block;margin-left:auto;}
+}
+
+/* === 移动端浮动 WhatsApp（2026-11-07） === */
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:999;width:52px;height:52px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);text-decoration:none;}
+.wa-float:active{transform:scale(.95);}
+@media (max-width:768px){.wa-float{right:14px;bottom:14px;width:48px;height:48px;}}
+
+.wa-float{bottom:84px;}
+@media (max-width:768px){.wa-float{bottom:80px;}}
 </style>
 </head>
 <body>
 <header>
   <div class="header-logo-wrap">
-    <img id="site-logo" src="/uploads/logo-zhanxin-blue.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" data-i18n-alt="site.logoAlt" alt="ZHANXIN GLOBAL" width="180" height="48">
+    <img id="site-logo" src="/uploads/logo-zhanxin-blue.png?v=20261108" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" data-i18n-alt="site.logoAlt" alt="ZHANXIN GLOBAL" width="320" height="106">
     <span class="logo-text-fallback">ZHANXIN GLOBAL</span>
   </div>
+  <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776; Menu</button>
   <nav>
     <a href="/" data-i18n="nav.home">Home</a>
     <a href="/products" class="active" data-i18n="nav.products">Products</a>
@@ -393,7 +413,7 @@ footer a:hover{
       <h2 class="category-title" data-i18n="products.cat.lightbox">Light Box</h2>
       <div class="product-grid">
         <div class="product-card">
-          <img src="/uploads/recessed-lightbox.jpg?v=20261020" alt="Wall-mounted Recessed Light Box" loading="lazy">
+          <img src="/uploads/recessed-lightbox.jpg?v=20261108" alt="Wall-mounted Recessed Light Box" loading="lazy" width="1200" height="900">
           <div class="card-body">
             <h3 data-i18n="products.card.recessedLightbox.title">Wall-mounted Recessed Light Box</h3>
             <p data-i18n="products.card.recessedLightbox.desc">Aluminum profile frame, 6mm glass panel, galvanized steel back panel, powder coated. For metro, airport, shopping mall advertising.</p>
@@ -401,7 +421,7 @@ footer a:hover{
           </div>
         </div>
         <div class="product-card">
-          <img src="/uploads/frameless-lightbox-front.jpg?v=20261020" alt="Frameless Tension Fabric Light Box" loading="lazy">
+          <img src="/uploads/frameless-lightbox-front.jpg?v=20261108" alt="Frameless Tension Fabric Light Box" loading="lazy" width="900" height="675">
           <div class="card-body">
             <h3 data-i18n="products.card.framelessTension.title">Frameless Tension Fabric Light Box</h3>
             <p data-i18n="products.card.framelessTension.desc">Aluminum profile 6063, slim frameless design, brightness 3000±500Lux. For metro, airport, shopping mall, supermarket advertising.</p>
@@ -409,7 +429,7 @@ footer a:hover{
           </div>
         </div>
         <div class="product-card">
-          <img src="/uploads/recessed-tension-lightbox.jpg?v=20261020" alt="Recessed Tension Fabric Light Box" loading="lazy">
+          <img src="/uploads/recessed-tension-lightbox.jpg?v=20261108" alt="Recessed Tension Fabric Light Box" loading="lazy" width="800" height="600">
           <div class="card-body">
             <h3 data-i18n="products.card.recessedTension.title">Recessed Tension Fabric Light Box</h3>
             <p data-i18n="products.card.recessedTension.desc">Large format recessed light box, aluminum frame 6063, mirror stainless steel ceiling. For metro, airport, large venues advertising.</p>
@@ -418,8 +438,8 @@ footer a:hover{
         </div>
         <div class="product-card">
           <div style="display:flex;flex-direction:column;gap:2px;">
-            <img src="/uploads/outdoor-lightbox-2.jpg?v=20261107" alt="Outdoor Tension Fabric Light Box - Night View" loading="lazy" style="height:180px;">
-            <img src="/uploads/outdoor-lightbox-1.jpg?v=20261020" alt="Outdoor Tension Fabric Light Box - Toll Station" loading="lazy" style="height:180px;">
+            <img src="/uploads/outdoor-lightbox-2.jpg?v=20261108" alt="Outdoor Tension Fabric Light Box - Night View" loading="lazy" style="height:180px;" width="1200" height="442">
+            <img src="/uploads/outdoor-lightbox-1.jpg?v=20261108" alt="Outdoor Tension Fabric Light Box - Toll Station" loading="lazy" style="height:180px;" width="1200" height="470">
           </div>
           <div class="card-body">
             <h3 data-i18n="products.card.outdoorTension.title">Outdoor Tension Fabric Light Box</h3>
@@ -428,7 +448,7 @@ footer a:hover{
           </div>
         </div>
         <div class="product-card">
-          <img src="/uploads/pillar-lightbox.jpg?v=20261020" alt="Pillar-wrapped Light Box" loading="lazy">
+          <img src="/uploads/pillar-lightbox.jpg?v=20261108" alt="Pillar-wrapped Light Box" loading="lazy" width="700" height="449">
           <div class="card-body">
             <h3 data-i18n="products.card.pillarWrapped.title">Pillar-wrapped Light Box</h3>
             <p data-i18n="products.card.pillarWrapped.desc">Custom size to fit any pillar, aluminum 6063, LED backlight with Osram/Philips chips. For metro, railway station, airport.</p>
@@ -443,7 +463,7 @@ footer a:hover{
       <h2 class="category-title" data-i18n="products.cat.sign">Wayfinding Signage</h2>
       <div class="product-grid">
         <div class="product-card">
-          <img src="/uploads/signage.jpg?v=20261020" alt="Wayfinding Signage" loading="lazy">
+          <img src="/uploads/signage.jpg?v=20261108" alt="Wayfinding Signage" loading="lazy" width="800" height="1067">
           <div class="card-body">
             <h3 data-i18n="products.card.wayfinding.title">Wayfinding Signage</h3>
             <p data-i18n="products.card.wayfinding.desc">Outdoor, airport and urban furniture, directional signage, metal sign structure for city projects</p>
@@ -451,7 +471,7 @@ footer a:hover{
           </div>
         </div>
         <div class="product-card">
-          <img src="/uploads/hanging-sign.jpg?v=20261020" alt="Hanging Wayfinding Sign" loading="lazy">
+          <img src="/uploads/hanging-sign.jpg?v=20261108" alt="Hanging Wayfinding Sign" loading="lazy" width="900" height="540">
           <div class="card-body">
             <h3 data-i18n="products.card.hangingSign.title">Hanging Wayfinding Sign</h3>
             <p data-i18n="products.card.hangingSign.desc">Aluminum profile frame 6063T5, 3mm PC panel. For metro, airport, shopping mall, parking wayfinding.</p>
@@ -466,7 +486,7 @@ footer a:hover{
       <h2 class="category-title" data-i18n="products.cat.display">Display Screen</h2>
       <div class="product-grid">
         <div class="product-card">
-          <img src="/uploads/wall-mounted-led.jpg?v=20261020" alt="Wall-mounted LED Display Screen" loading="lazy">
+          <img src="/uploads/wall-mounted-led.jpg?v=20261108" alt="Wall-mounted LED Display Screen" loading="lazy" width="1000" height="624">
           <div class="card-body">
             <h3 data-i18n="products.card.wallLed.title">Wall-mounted LED Display Screen</h3>
             <p data-i18n="products.card.wallLed.desc">Pixel pitch P1.2-P2.5, COB packaging, custom size. High refresh rate, wide viewing angle. For metro, airport, exhibition hall.</p>
@@ -474,7 +494,7 @@ footer a:hover{
           </div>
         </div>
         <div class="product-card">
-          <img src="/uploads/ledscreen.jpg?v=20261020" alt="LED / LCD Screen" loading="lazy">
+          <img src="/uploads/ledscreen.jpg?v=20261108" alt="LED / LCD Screen" loading="lazy" width="800" height="600">
           <div class="card-body">
             <h3 data-i18n="products.card.ledLcd.title">LED / LCD Screen</h3>
             <p data-i18n="products.card.ledLcd.desc">Outdoor, airport and urban furniture, 61-96 inch LED & LCD screen metal frames, our core advantage</p>
@@ -482,7 +502,7 @@ footer a:hover{
           </div>
         </div>
         <div class="product-card">
-          <img src="/uploads/pillar-led-display.jpg?v=20261020" alt="Pillar-wrapped LED Display" loading="lazy">
+          <img src="/uploads/pillar-led-display.jpg?v=20261108" alt="Pillar-wrapped LED Display" loading="lazy" width="900" height="514">
           <div class="card-body">
             <h3 data-i18n="products.card.pillarLed.title">Pillar-wrapped LED Display</h3>
             <p data-i18n="products.card.pillarLed.desc">COB packaging, borderless splicing, pixel pitch P1.2-P2.5. For metro, airport, high-speed rail station and large venues.</p>
@@ -490,7 +510,7 @@ footer a:hover{
           </div>
         </div>
         <div class="product-card">
-          <img src="/uploads/hanging-led-display.jpg?v=20261020" alt="Hanging LED Display Screen" loading="lazy">
+          <img src="/uploads/hanging-led-display.jpg?v=20261108" alt="Hanging LED Display Screen" loading="lazy" width="968" height="553">
           <div class="card-body">
             <h3 data-i18n="products.card.hangingLed.title">Hanging LED Display Screen</h3>
             <p data-i18n="products.card.hangingLed.desc">Ultra-thin borderless design, COB packaging, pixel pitch P1.2-P2.5. For airport, high-speed rail station and large venue advertising.</p>
@@ -505,7 +525,7 @@ footer a:hover{
       <h2 class="category-title" data-i18n="products.cat.bus">Bus Shelter</h2>
       <div class="product-grid">
         <div class="product-card">
-          <img src="/uploads/busshelter.jpg?v=20261020" alt="Bus Shelter" loading="lazy">
+          <img src="/uploads/busshelter.jpg?v=20261108" alt="Bus Shelter" loading="lazy" width="900" height="625">
           <div class="card-body">
             <h3 data-i18n="products.card.busShelter.title">Bus Shelter</h3>
             <p data-i18n="products.card.busShelter.desc">Outdoor, airport and urban furniture, outdoor waiting bus shelter with advertising panel</p>
@@ -520,7 +540,7 @@ footer a:hover{
       <h2 class="category-title" data-i18n="products.cat.custom">Custom Metal Structure</h2>
       <div class="product-grid">
         <div class="product-card">
-          <img src="/uploads/metal-struct.jpg?v=20261020" alt="Custom Steel & Aluminum Structure" loading="lazy">
+          <img src="/uploads/metal-struct.jpg?v=20261108" alt="Custom Steel & Aluminum Structure" loading="lazy" width="1000" height="750">
           <div class="card-body">
             <h3 data-i18n="products.card.customSteel.title">Custom Steel & Aluminum Structure</h3>
             <p data-i18n="products.card.customSteel.desc">Outdoor, airport and urban furniture, OEM custom metal fabrication, steel & aluminum structures</p>
@@ -535,7 +555,7 @@ footer a:hover{
       <h2 class="category-title" data-i18n="products.cat.other">Other Products</h2>
       <div class="product-grid">
         <div class="product-card">
-          <img src="/uploads/others-charging-column-2.jpg?v=20261107" alt="Other Products" loading="lazy">
+          <img src="/uploads/others-charging-column-2.jpg?v=20261108" alt="Other Products" loading="lazy" width="900" height="600">
           <div class="card-body">
             <h3 data-i18n="products.card.other.title">Other Products</h3>
             <p data-i18n="products.card.other.desc">Outdoor, airport and urban furniture, custom outdoor, airport and urban furniture manufacturing</p>
@@ -1181,13 +1201,13 @@ function renderProducts(){
     grouped[cat].forEach(item=>{
       const titleText = item.title?.[currentLang] || item.title?.en || "";
       const descText = item.desc?.[currentLang] || item.desc?.en || "";
-      const imgSrc = (item.image || "/uploads/placeholder.jpg") + "?v=20261020";
+      const imgSrc = (item.image || "/uploads/placeholder.jpg?v=20261108") + "?v=20261020";
       const slug = item.slug || (titleText).toLowerCase().replace(/\s+/g,"-");
       const card = document.createElement("div");
       card.className = "product-card";
       card.onclick = function() { window.location.href = "/product/" + slug; };
       card.innerHTML =
-        '<img src="' + escapeHtml(imgSrc) + '" alt="' + escapeHtml(titleText) + '" loading="lazy" onerror="this.src=\'/uploads/no-image.jpg\'">' +
+        '<img src="' + escapeHtml(imgSrc) + '" alt="' + escapeHtml(titleText) + '" loading="lazy" onerror="this.src=\'/uploads/no-image.jpg?v=20261108\'">' +
         '<div class="card-body">' +
         '<h3>' + escapeHtml(titleText) + '</h3>' +
         '<p>' + escapeHtml(descText) + '</p>' +
@@ -1268,5 +1288,19 @@ document.querySelector('.float-inquiry')?.addEventListener('click', function() {
     });
 })();
 </script>
+
+<script>
+/* 移动端菜单按钮（2026-11-07） */
+(function(){
+  var btn = document.querySelector('.mobile-menu-btn');
+  var nav = document.querySelector('header nav');
+  if(!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('mobile-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
+</script>
+<a class="wa-float" href="https://wa.me/8619301179802?text=Hello%20ZHANXIN%2C%20I%27d%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.3.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-3.5-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.6.8 1.9.9.3.1.5.2.5.4.1.2.1.9-.2 1.5z"/></svg></a>
 </body>
 </html>

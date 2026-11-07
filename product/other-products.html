@@ -39,18 +39,18 @@
 <meta property="og:url" content="https://www.zhanxinglobal.com/product/other-products">
 <meta property="og:title" content="Other Products">
 <meta property="og:description" content="Custom outdoor, airport and urban furniture manufacturing service, covering various product types beyond our main product line.">
-<meta property="og:image" content="https://www.zhanxinglobal.com/uploads/others-charging-column-2.jpg?v=20261107">
+<meta property="og:image" content="https://www.zhanxinglobal.com/uploads/others-charging-column-2.jpg?v=20261108">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Other Products">
 <meta name="twitter:description" content="Custom outdoor, airport and urban furniture manufacturing service, covering various product types beyond our main product line.">
-<meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/others-charging-column-2.jpg?v=20261107">
+<meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/others-charging-column-2.jpg?v=20261108">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Other Products",
   "description": "Custom outdoor, airport and urban furniture manufacturing service, covering various product types beyond our main product line.",
-  "image": "https://www.zhanxinglobal.com/uploads/others-charging-column-2.jpg?v=20261107",
+  "image": "https://www.zhanxinglobal.com/uploads/others-charging-column-2.jpg?v=20261108",
   "url": "https://www.zhanxinglobal.com/product/other-products",
   "category": "Other Products",
   "manufacturer": {
@@ -109,16 +109,33 @@ footer a{color:#e67e22;text-decoration:none;}
 [dir="rtl"] .breadcrumb,[dir="rtl"] .info-box{text-align:right;}
 [dir="rtl"] .container{grid-template-columns:1fr 1fr;direction:rtl;}
 @media(max-width:768px){header{flex-direction:column;align-items:flex-start;}.logo img{max-height:36px;}.container{grid-template-columns:1fr;padding:2rem 3%;gap:2rem;}}
+
+/* === 移动端统一菜单按钮（2026-11-07） === */
+.mobile-menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.55);color:inherit;border-radius:6px;padding:8px 14px;font-size:15px;line-height:1.2;cursor:pointer;}
+@media (max-width:768px){
+  header{flex-direction:row;flex-wrap:wrap;align-items:center;}
+  header nav{display:none;width:100%;flex-direction:column;gap:.75rem;}
+  header nav.mobile-open{display:flex;}
+  .mobile-menu-btn{display:block;margin-left:auto;}
+}
+
+/* === 移动端浮动 WhatsApp（2026-11-07） === */
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:999;width:52px;height:52px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);text-decoration:none;}
+.wa-float:active{transform:scale(.95);}
+@media (max-width:768px){.wa-float{right:14px;bottom:14px;width:48px;height:48px;}}
 </style>
 </head>
 <body>
 <header>
   <div class="header-logo-wrap">
     <a href="/" class="logo">
-      <img src="/uploads/logo-zhanxin-blue.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" alt="ZHANXIN GLOBAL">
+      <img src="/uploads/logo-zhanxin-blue.png?v=20261108" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" alt="ZHANXIN GLOBAL" width="320" height="106">
       <span class="logo-text-fallback">ZHANXIN GLOBAL</span>
     </a>
   </div>
+  <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776; Menu</button>
   <nav>
     <a href="/" data-i18n="nav.home">Home</a>
     <a href="/products" class="active" data-i18n="nav.products">Products</a>
@@ -145,7 +162,7 @@ footer a{color:#e67e22;text-decoration:none;}
 </div>
 <div class="container">
   <div class="img-box">
-    <img src="/uploads/others-charging-column-2.jpg?v=20261107" data-i18n-alt="prod.title" alt="Other Products" onerror="this.src='/uploads/no-image.jpg'">
+    <img src="/uploads/others-charging-column-2.jpg?v=20261108" data-i18n-alt="prod.title" alt="Other Products" onerror="this.src='/uploads/no-image.jpg?v=20261108'" width="900" height="600" srcset="/uploads/r400/others-charging-column-2.jpg?v=20261108 400w, /uploads/r800/others-charging-column-2.jpg?v=20261108 800w, /uploads/others-charging-column-2.jpg?v=20261108 900w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
   </div>
   <div class="info-box">
     <h1 data-i18n="prod.title">Other Products</h1>
@@ -525,5 +542,19 @@ langSelect.value = initialLang;
     });
 })();
 </script>
+
+<script>
+/* 移动端菜单按钮（2026-11-07） */
+(function(){
+  var btn = document.querySelector('.mobile-menu-btn');
+  var nav = document.querySelector('header nav');
+  if(!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('mobile-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
+</script>
+<a class="wa-float" href="https://wa.me/8619301179802?text=Hello%20ZHANXIN%2C%20I%27d%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.3.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-3.5-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.6.8 1.9.9.3.1.5.2.5.4.1.2.1.9-.2 1.5z"/></svg></a>
 </body>
 </html>

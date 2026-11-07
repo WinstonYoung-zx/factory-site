@@ -349,3 +349,14 @@ footer {
 /* Compat: pages using .logo wrapper without a size class */
 .logo { display: flex; align-items: center; text-decoration: none; }
 header img { max-height: 44px; width: auto !important; display: block; object-fit: contain; }
+
+/* === 移动端优化（2026-11-07）：banner 桌面/手机分级加载 ===
+   CSS 背景图不受 lazy loading 保护，手机端原来也下载 1600px 全图；768px 以下换 760px 版本。 */
+.slide-item.banner-1 { background-image: url('uploads/banner1.jpg?v=20261108'); }
+.slide-item.banner-2 { background-image: url('uploads/banner2.jpg?v=20261108'); }
+.slide-item.banner-3 { background-image: url('uploads/banner3.jpg?v=20261108'); }
+@media (max-width: 768px) {
+    .slide-item.banner-1 { background-image: url('uploads/banner1-mobile.jpg?v=20261108'); }
+    .slide-item.banner-2 { background-image: url('uploads/banner2-mobile.jpg?v=20261108'); }
+    .slide-item.banner-3 { background-image: url('uploads/banner3-mobile.jpg?v=20261108'); }
+}

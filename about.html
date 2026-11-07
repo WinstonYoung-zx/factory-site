@@ -39,7 +39,7 @@
 <meta property="og:url" content="https://www.zhanxinglobal.com/about">
 <meta property="og:title" content="About Us - ZHANXIN GLOBAL">
 <meta property="og:description" content="Shanghai Zhanxin Intelligent Equipment Co., Ltd. Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects">
-<meta property="og:image" content="https://www.zhanxinglobal.com/uploads/metal-struct.jpg">
+<meta property="og:image" content="https://www.zhanxinglobal.com/uploads/metal-struct.jpg?v=20261108">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:locale:alternate" content="fr_FR">
@@ -50,7 +50,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Us - ZHANXIN GLOBAL">
 <meta name="twitter:description" content="Shanghai Zhanxin Intelligent Equipment Co., Ltd. Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects">
-<meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/factory-wide.jpg">
+<meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/factory-wide.jpg?v=20261108">
 <link rel="canonical" href="https://www.zhanxinglobal.com/about">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -224,6 +224,13 @@
         max-width:95%;
         max-height:95vh;
     }
+
+/* === 移动端浮动 WhatsApp（2026-11-07） === */
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:999;width:52px;height:52px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);text-decoration:none;}
+.wa-float:active{transform:scale(.95);}
+@media (max-width:768px){.wa-float{right:14px;bottom:14px;width:48px;height:48px;}}
 </style>
 <script type="application/ld+json">
 {
@@ -233,7 +240,7 @@
       "@type":"Organization",
       "name":"Shanghai Zhanxin Intelligent Equipment Co., Ltd.",
       "url":"https://www.zhanxinglobal.com/about",
-      "logo":"https://www.zhanxinglobal.com/uploads/logo-zhanxin-blue.png",
+      "logo":"https://www.zhanxinglobal.com/uploads/logo-zhanxin-blue.png?v=20261108",
       "foundingDate":"2023-08",
       "email":"sales@zhanxinglobal.com",
       "description":"Manufacturer of metal structures, advertising light boxes, LED display frames and bus shelters for outdoor, airport and urban furniture projects.",
@@ -254,14 +261,25 @@
   ]
 }
 </script>
+
+<style>
+/* === 移动端统一菜单按钮（2026-11-07, about 页 Tailwind 变体） === */
+.mobile-menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.55);color:#fff;border-radius:6px;padding:8px 14px;font-size:15px;line-height:1.2;cursor:pointer;}
+@media (max-width:768px){
+  header nav{display:none !important;width:100%;flex-direction:column !important;gap:.9rem !important;margin-top:.8rem;}
+  header nav.mobile-open{display:flex !important;}
+  .mobile-menu-btn{display:block;}
+}
+</style>
 </head>
 <body>
     <header class="w-full shadow-md" style="background-color: #0f3460;">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <a href="/" class="flex items-center gap-2">
-                    <img src="/uploads/logo-zhanxin-blue.png" alt="ZHANXIN Logo" class="h-9">
+                    <img src="/uploads/logo-zhanxin-blue.png?v=20261108" alt="ZHANXIN Logo" class="h-9" width="320" height="106">
                 </a>
+                <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776; Menu</button>
                 <nav style="display: flex; align-items: center; gap: 2rem; font-size: 1rem;">
                     <a href="/" data-i18n="nav.home" class="text-white hover:text-accent transition-colors">Home</a>
                     <a href="/products" data-i18n="nav.products" class="text-white hover:text-accent transition-colors">Products</a>
@@ -289,7 +307,7 @@
             <p data-i18n="about.page_subtitle" class="text-lg text-mutedText mt-3 max-w-4xl mx-auto">Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects</p>
         </section>
         <div class="w-full rounded-lg overflow-hidden mb-12">
-            <img src="/uploads/factory-wide.jpg" data-i18n-alt="about.factory_img_alt" alt="Zhanxin manufacturing workshop" class="w-full h-auto object-cover">
+            <img src="/uploads/factory-wide.jpg?v=20261108" data-i18n-alt="about.factory_img_alt" alt="Zhanxin manufacturing workshop" class="w-full h-auto object-cover" width="1200" height="675">
         </div>
         <!-- NEW: Our Story Section -->
         <section class="mb-12">
@@ -306,8 +324,8 @@
                 <div class="flex transition-transform duration-700 ease-in-out" id="factoryCarousel">
                     <!-- 轮播项目 1：生产车间 -->
                     <div class="w-full flex-shrink-0 relative aspect-[16/9]">
-                        <a href="/uploads/factory/factory-01.jpg?v=2" class="factory-lightbox block w-full h-full">
-                            <img src="/uploads/factory/factory-01-thumb.jpg?v=2" data-i18n-alt="about.gal1_alt" alt="Production Workshop" loading="lazy" class="w-full h-full object-cover">
+                        <a href="/uploads/factory/factory-01.jpg?v=20261108" class="factory-lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory-01-thumb.jpg?v=20261108" data-i18n-alt="about.gal1_alt" alt="Production Workshop" loading="lazy" class="w-full h-full object-cover" width="800" height="450">
                             <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
                                 <span data-i18n="about.gal1_caption" class="text-lg font-medium">Production Workshop</span>
                             </div>
@@ -315,8 +333,8 @@
                     </div>
                     <!-- 轮播项目 2：激光切割机 -->
                     <div class="w-full flex-shrink-0 relative aspect-[16/9]">
-                        <a href="/uploads/factory/factory-02.jpg?v=2" class="factory-lightbox block w-full h-full">
-                            <img src="/uploads/factory/factory-02-thumb.jpg?v=2" data-i18n-alt="about.gal2_alt" alt="Laser Cutting Machine" loading="lazy" class="w-full h-full object-cover">
+                        <a href="/uploads/factory/factory-02.jpg?v=20261108" class="factory-lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory-02-thumb.jpg?v=20261108" data-i18n-alt="about.gal2_alt" alt="Laser Cutting Machine" loading="lazy" class="w-full h-full object-cover" width="800" height="450">
                             <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
                                 <span data-i18n="about.gal2_caption" class="text-lg font-medium">Laser Cutting Machine</span>
                             </div>
@@ -324,8 +342,8 @@
                     </div>
                     <!-- 轮播项目 3：CNC切割加工区 -->
                     <div class="w-full flex-shrink-0 relative aspect-[16/9]">
-                        <a href="/uploads/factory/factory-03.jpg?v=2" class="factory-lightbox block w-full h-full">
-                            <img src="/uploads/factory/factory-03-thumb.jpg?v=2" data-i18n-alt="about.gal3_alt" alt="Semi-finished Storage Area" loading="lazy" class="w-full h-full object-cover">
+                        <a href="/uploads/factory/factory-03.jpg?v=20261108" class="factory-lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory-03-thumb.jpg?v=20261108" data-i18n-alt="about.gal3_alt" alt="Semi-finished Storage Area" loading="lazy" class="w-full h-full object-cover" width="800" height="600">
                             <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
                                 <span data-i18n="about.gal3_caption" class="text-lg font-medium">Semi-finished Storage Area</span>
                             </div>
@@ -333,8 +351,8 @@
                     </div>
                     <!-- 轮播项目 4：LED灯箱组装产线 -->
                     <div class="w-full flex-shrink-0 relative aspect-[16/9]">
-                        <a href="/uploads/factory/factory-04.jpg?v=2" class="factory-lightbox block w-full h-full">
-                            <img src="/uploads/factory/factory-04-thumb.jpg?v=2" data-i18n-alt="about.gal4_alt" alt="LED Light Box Assembly Line" loading="lazy" class="w-full h-full object-cover">
+                        <a href="/uploads/factory/factory-04.jpg?v=20261108" class="factory-lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory-04-thumb.jpg?v=20261108" data-i18n-alt="about.gal4_alt" alt="LED Light Box Assembly Line" loading="lazy" class="w-full h-full object-cover" width="800" height="450">
                             <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
                                 <span data-i18n="about.gal4_caption" class="text-lg font-medium">LED Light Box Assembly Line</span>
                             </div>
@@ -342,8 +360,8 @@
                     </div>
                     <!-- 轮播项目 5：喷涂烤漆生产线 -->
                     <div class="w-full flex-shrink-0 relative aspect-[16/9]">
-                        <a href="/uploads/factory/factory-05.jpg?v=2" class="factory-lightbox block w-full h-full">
-                            <img src="/uploads/factory/factory-05-thumb.jpg?v=2" data-i18n-alt="about.gal5_alt" alt="Powder Coating Line" loading="lazy" class="w-full h-full object-cover">
+                        <a href="/uploads/factory/factory-05.jpg?v=20261108" class="factory-lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory-05-thumb.jpg?v=20261108" data-i18n-alt="about.gal5_alt" alt="Powder Coating Line" loading="lazy" class="w-full h-full object-cover" width="800" height="450">
                             <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
                                 <span data-i18n="about.gal5_caption" class="text-lg font-medium">Powder Coating Line</span>
                             </div>
@@ -1079,5 +1097,19 @@ document.addEventListener('click', function(e) {
     }
 });
 </script>
+
+<script>
+/* 移动端菜单按钮（2026-11-07） */
+(function(){
+  var btn = document.querySelector('.mobile-menu-btn');
+  var nav = document.querySelector('header nav');
+  if(!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('mobile-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
+</script>
+<a class="wa-float" href="https://wa.me/8619301179802?text=Hello%20ZHANXIN%2C%20I%27d%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.3.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-3.5-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.6.8 1.9.9.3.1.5.2.5.4.1.2.1.9-.2 1.5z"/></svg></a>
 </body>
 </html>

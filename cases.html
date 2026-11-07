@@ -39,11 +39,11 @@
 <meta property="og:url" content="https://www.zhanxinglobal.com/cases">
 <meta property="og:title" content="Selected Projects — Airports, Transit & Street Furniture">
 <meta property="og:description" content="Bus shelters, light boxes, wayfinding and metal structures delivered to airports, transit operators and cities in Europe, the Middle East and the Americas. Client names withheld under NDA — references available on request.">
-<meta property="og:image" content="https://www.zhanxinglobal.com/uploads/metro-lightbox-installed.jpg">
+<meta property="og:image" content="https://www.zhanxinglobal.com/uploads/metro-lightbox-installed.jpg?v=20261108">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Selected Projects — Airports, Transit & Street Furniture">
 <meta name="twitter:description" content="Bus shelters, light boxes, wayfinding and metal structures delivered to airports, transit operators and cities in Europe, the Middle East and the Americas. Client names withheld under NDA — references available on request.">
-<meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/factory-wide.jpg">
+<meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/factory-wide.jpg?v=20261108">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <style>
 :root{--primary:#0f3460;--accent:#d35400;--light:#f8f9fa;--dark:#222;--border-gray:#e2e8f0;--footer-bg:#07203b;}
@@ -82,6 +82,22 @@ select,select option {color:#222;background:#fff;}
 footer{background:var(--footer-bg);color:#cccccc;text-align:center;padding:2.2rem 5%;margin-top:5rem;}
 footer a{color:#e67e22;text-decoration:none;}
 @media(max-width:768px){header{flex-direction:column;align-items:flex-start;}.logo img{max-height:36px;}.cases-grid{grid-template-columns:1fr;}}
+
+/* === 移动端统一菜单按钮（2026-11-07） === */
+.mobile-menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.55);color:inherit;border-radius:6px;padding:8px 14px;font-size:15px;line-height:1.2;cursor:pointer;}
+@media (max-width:768px){
+  header{flex-direction:row;flex-wrap:wrap;align-items:center;}
+  header nav{display:none;width:100%;flex-direction:column;gap:.75rem;}
+  header nav.mobile-open{display:flex;}
+  .mobile-menu-btn{display:block;margin-left:auto;}
+}
+
+/* === 移动端浮动 WhatsApp（2026-11-07） === */
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:999;width:52px;height:52px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);text-decoration:none;}
+.wa-float:active{transform:scale(.95);}
+@media (max-width:768px){.wa-float{right:14px;bottom:14px;width:48px;height:48px;}}
 </style>
 <script type="application/ld+json">
 {
@@ -108,10 +124,11 @@ footer a{color:#e67e22;text-decoration:none;}
 <header>
   <div class="header-logo-wrap">
     <a href="/" class="logo">
-      <img src="/uploads/logo-zhanxin-blue.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" alt="ZHANXIN GLOBAL">
+      <img src="/uploads/logo-zhanxin-blue.png?v=20261108" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" alt="ZHANXIN GLOBAL" width="320" height="106">
       <span class="logo-text-fallback">ZHANXIN GLOBAL</span>
     </a>
   </div>
+  <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776; Menu</button>
   <nav>
     <a href="/" data-i18n="nav.home">Home</a>
     <a href="/products" data-i18n="nav.products">Products</a>
@@ -145,9 +162,9 @@ footer a{color:#e67e22;text-decoration:none;}
 <div class="cases-grid">
   <div class="case-card" style="grid-column: span 2;">
     <div class="project-carousel" style="position: relative; overflow: hidden; aspect-ratio: 3/2;">
-      <img src="/uploads/metro-lightbox-installed.jpg" alt="Metro Light Box Installed" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;">
-      <img src="/uploads/metro-lightbox-production.jpg" alt="Metro Light Box Production" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
-      <img src="/uploads/metro-lightbox-products.jpg" alt="Metro Light Box Products" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <img src="/uploads/metro-lightbox-installed.jpg?v=20261108" alt="Metro Light Box Installed" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;" width="1200" height="900">
+      <img src="/uploads/metro-lightbox-production.jpg?v=20261108" alt="Metro Light Box Production" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="700" height="525">
+      <img src="/uploads/metro-lightbox-products.jpg?v=20261108" alt="Metro Light Box Products" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="1200" height="900">
       <div style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:8px;">
         <span class="carousel-dot active" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.8; cursor:pointer;"></span>
         <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
@@ -162,11 +179,11 @@ footer a{color:#e67e22;text-decoration:none;}
   </div>
   <div class="case-card" style="grid-column: span 2;">
     <div class="project-carousel" style="position: relative; overflow: hidden; aspect-ratio: 3/2;">
-      <img src="/uploads/wayfinding-taizhou-airport.jpg" alt="Taizhou Airport Wayfinding" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;">
-      <img src="/uploads/wayfinding-metro-exit.jpg" alt="Metro Exit Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
-      <img src="/uploads/wayfinding-hub-hanging.jpg" alt="Hub Hanging Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
-      <img src="/uploads/wayfinding-metro-standing.jpg" alt="Metro Standing Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
-      <img src="/uploads/wayfinding-platform-exit.jpg" alt="Station Platform Exit Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <img src="/uploads/wayfinding-taizhou-airport.jpg?v=20261108" alt="Taizhou Airport Wayfinding" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;" width="1000" height="576">
+      <img src="/uploads/wayfinding-metro-exit.jpg?v=20261108" alt="Metro Exit Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="1000" height="484">
+      <img src="/uploads/wayfinding-hub-hanging.jpg?v=20261108" alt="Hub Hanging Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="900" height="599">
+      <img src="/uploads/wayfinding-metro-standing.jpg?v=20261108" alt="Metro Standing Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="1000" height="666">
+      <img src="/uploads/wayfinding-platform-exit.jpg?v=20261108" alt="Station Platform Exit Wayfinding" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="800" height="600">
       <div style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:8px;">
         <span class="carousel-dot active" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.8; cursor:pointer;"></span>
         <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
@@ -183,12 +200,12 @@ footer a{color:#e67e22;text-decoration:none;}
   </div>
   <div class="case-card" style="grid-column: span 2;">
     <div class="project-carousel" style="position: relative; overflow: hidden; aspect-ratio: 3/2;">
-      <img src="/uploads/led-chengdu-stand.jpg" alt="Chengdu Stand LED Display" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;">
-      <img src="/uploads/led-station-pillars.jpg" alt="High-speed Rail Station LED Pillars" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
-      <img src="/uploads/led-airport-arrival.jpg" alt="Airport Arrival LED Display" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
-      <img src="/uploads/led-airport-mall.jpg" alt="Airport Mall LED Billboard" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
-      <img src="/uploads/led-airport-lcd.jpg" alt="Airport Lounge LCD Display" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
-      <img src="/uploads/led-parking-esg.jpg" alt="Parking Garage ESG LED Display" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <img src="/uploads/led-chengdu-stand.jpg?v=20261108" alt="Chengdu Stand LED Display" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;" width="700" height="507">
+      <img src="/uploads/led-station-pillars.jpg?v=20261108" alt="High-speed Rail Station LED Pillars" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="900" height="472">
+      <img src="/uploads/led-airport-arrival.jpg?v=20261108" alt="Airport Arrival LED Display" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="700" height="552">
+      <img src="/uploads/led-airport-mall.jpg?v=20261108" alt="Airport Mall LED Billboard" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="700" height="525">
+      <img src="/uploads/led-airport-lcd.jpg?v=20261108" alt="Airport Lounge LCD Display" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="800" height="600">
+      <img src="/uploads/led-parking-esg.jpg?v=20261108" alt="Parking Garage ESG LED Display" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="700" height="525">
       <div style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:8px;">
         <span class="carousel-dot active" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.8; cursor:pointer;"></span>
         <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
@@ -206,9 +223,9 @@ footer a{color:#e67e22;text-decoration:none;}
   </div>
   <div class="case-card" style="grid-column: span 2;">
     <div class="project-carousel" style="position: relative; overflow: hidden; aspect-ratio: 3/2;">
-      <img src="/uploads/busshelter-battery.jpg" alt="City Bus Shelter Product" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;">
-      <img src="/uploads/busshelter-smart-carousel.jpg" alt="City Bus Shelter Diagram" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
-      <img src="/uploads/busshelter-ship.jpg" alt="City Bus Shelter Shipping" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <img src="/uploads/busshelter-battery.jpg?v=20261108" alt="City Bus Shelter Product" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;" width="800" height="556">
+      <img src="/uploads/busshelter-smart-carousel.jpg?v=20261108" alt="City Bus Shelter Diagram" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="1000" height="695">
+      <img src="/uploads/busshelter-ship.jpg?v=20261108" alt="City Bus Shelter Shipping" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="850" height="1132">
       <div style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:8px;">
         <span class="carousel-dot active" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.8; cursor:pointer;"></span>
         <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
@@ -223,9 +240,9 @@ footer a{color:#e67e22;text-decoration:none;}
   </div>
   <div class="case-card" style="grid-column: span 2;">
     <div class="project-carousel" style="position: relative; overflow: hidden; aspect-ratio: 3/2;">
-      <img src="/uploads/others-charging-column-2.jpg?v=20261107" alt="Airport Charging Column" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;">
-      <img src="/uploads/others-tunnel-screen.jpg" alt="Metro Tunnel Large Format Screen" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
-      <img src="/uploads/others-station-ad.jpg" alt="Metro Station Advertising Screen" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;">
+      <img src="/uploads/others-charging-column-2.jpg?v=20261108" alt="Airport Charging Column" class="carousel-slide active" style="width:100%; height:100%; object-fit:cover; position:absolute; transition: opacity 0.5s;" width="900" height="600">
+      <img src="/uploads/others-tunnel-screen.jpg?v=20261108" alt="Metro Tunnel Large Format Screen" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="700" height="467">
+      <img src="/uploads/others-station-ad.jpg?v=20261108" alt="Metro Station Advertising Screen" class="carousel-slide" style="width:100%; height:100%; object-fit:cover; position:absolute; opacity:0; transition: opacity 0.5s;" width="800" height="533">
       <div style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:8px;">
         <span class="carousel-dot active" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.8; cursor:pointer;"></span>
         <span class="carousel-dot" style="width:10px; height:10px; border-radius:50%; background:#fff; opacity:0.4; cursor:pointer;"></span>
@@ -665,5 +682,19 @@ const initialLang = getLangFromPath();
 setLang(initialLang);
 langSelect.value = initialLang;
 </script>
+
+<script>
+/* 移动端菜单按钮（2026-11-07） */
+(function(){
+  var btn = document.querySelector('.mobile-menu-btn');
+  var nav = document.querySelector('header nav');
+  if(!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('mobile-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
+</script>
+<a class="wa-float" href="https://wa.me/8619301179802?text=Hello%20ZHANXIN%2C%20I%27d%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.3.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-3.5-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.6.8 1.9.9.3.1.5.2.5.4.1.2.1.9-.2 1.5z"/></svg></a>
 </body>
 </html>
