@@ -671,7 +671,7 @@ function setLang(lang) {
   langSelect.value = lang;
   loadDetail();
 }
-langSelect.addEventListener("change", ()=>setLang(langSelect.value));
+langSelect.addEventListener("change", ()=>window.ZX_LANG?ZX_LANG.apply(langSelect.value):window.ZX_LANG?ZX_LANG.apply(langSelect.value):setLang(langSelect.value));
 setLang(currentLang);
 </script>
 <script>

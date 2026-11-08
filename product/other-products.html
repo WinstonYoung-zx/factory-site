@@ -514,7 +514,7 @@ const translations = {
     }
 };
 function setLang(langKey){
-    const trans = translations[langKey] || translations.en;
+    const trans = translations[langKey] || translations.en || {};
     document.querySelectorAll('[data-i18n]').forEach(el=>{
         const key = el.getAttribute('data-i18n');
         if(trans[key]) el.innerText = trans[key];
@@ -536,7 +536,7 @@ function setLang(langKey){
 }
 const langSelect = document.getElementById('langSelect');
 langSelect.addEventListener('change', function(){
-    setLang(this.value);
+    window.ZX_LANG?ZX_LANG.apply(this.value):window.ZX_LANG?ZX_LANG.apply(this.value):setLang(this.value);
 })
 
 // 根据 URL 路径自动切换语言

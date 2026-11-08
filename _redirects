@@ -2,47 +2,43 @@
 # 根级语言版首页 /zh /de /es /fr /ja /ar → 由 Cloudflare Pages 目录索引原生提供
 # （zh/index.html 等），无需 rewrite 规则，避免 /zh → /zh.html 二次评估循环。
 
-/products/zh /products 200
-/products/es /products 200
-/products/fr /products 200
-/products/de /products 200
-/products/ja /products 200
-/products/ar /products 200
-
-/cases/zh /cases 200
-/cases/es /cases 200
-/cases/fr /cases 200
-/cases/de /cases 200
-/cases/ja /cases 200
-/cases/ar /cases 200
-
-/certificates/zh /certificates 200
-/certificates/es /certificates 200
-/certificates/fr /certificates 200
-/certificates/de /certificates 200
-/certificates/ja /certificates 200
-/certificates/ar /certificates 200
-
-/faq/zh /faq 200
-/faq/es /faq 200
-/faq/fr /faq 200
-/faq/de /faq 200
-/faq/ja /faq 200
-/faq/ar /faq 200
-
-/about/zh /about 200
-/about/es /about 200
-/about/fr /about 200
-/about/de /about 200
-/about/ja /about 200
-/about/ar /about 200
-
-/contact/zh /contact 200
-/contact/es /contact 200
-/contact/fr /contact 200
-/contact/de /contact 200
-/contact/ja /contact 200
-/contact/ar /contact 200
+# 旧形态 /<page>/<lang>（内容其实是英文页）→ 301 到真正的语言版本，消除重复内容
+/about/zh  /zh/about/  301
+/about/de  /de/about/  301
+/about/es  /es/about/  301
+/about/fr  /fr/about/  301
+/about/ja  /ja/about/  301
+/about/ar  /ar/about/  301
+/contact/zh  /zh/contact/  301
+/contact/de  /de/contact/  301
+/contact/es  /es/contact/  301
+/contact/fr  /fr/contact/  301
+/contact/ja  /ja/contact/  301
+/contact/ar  /ar/contact/  301
+/products/zh  /zh/products/  301
+/products/de  /de/products/  301
+/products/es  /es/products/  301
+/products/fr  /fr/products/  301
+/products/ja  /ja/products/  301
+/products/ar  /ar/products/  301
+/cases/zh  /cases  301
+/cases/de  /cases  301
+/cases/es  /cases  301
+/cases/fr  /cases  301
+/cases/ja  /cases  301
+/cases/ar  /cases  301
+/certificates/zh  /certificates  301
+/certificates/de  /certificates  301
+/certificates/es  /certificates  301
+/certificates/fr  /certificates  301
+/certificates/ja  /certificates  301
+/certificates/ar  /certificates  301
+/faq/zh  /faq  301
+/faq/de  /faq  301
+/faq/es  /faq  301
+/faq/fr  /faq  301
+/faq/ja  /faq  301
+/faq/ar  /faq  301
 
 # 误输 /en 重定向到英文首页（英文版在根路径 /）
 /en  /  301

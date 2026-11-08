@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) - 地区化 Consent Mode v2：EEA/UK/CH 默认拒绝并弹窗，其他地区默认放行 -->
+<script>
+(function () {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+
+  var ID = 'G-L2X92ECKX5';
+
+  var RESTRICTED = { AT:1,BE:1,BG:1,HR:1,CY:1,CZ:1,DK:1,EE:1,FI:1,FR:1,DE:1,GR:1,HU:1,IE:1,
+                     IT:1,LV:1,LT:1,LU:1,MT:1,NL:1,PL:1,PT:1,RO:1,SK:1,SI:1,ES:1,SE:1,
+                     IS:1,LI:1,NO:1,GB:1,CH:1 };
+
+  var GRANTED = { ad_storage:'granted', analytics_storage:'granted', ad_user_data:'granted',
+                  ad_personalization:'granted', functionality_storage:'granted',
+                  personalization_storage:'granted', security_storage:'granted' };
+  var DENIED  = { ad_storage:'denied', analytics_storage:'denied', ad_user_data:'denied',
+                  ad_personalization:'denied', functionality_storage:'granted',
+                  personalization_storage:'denied', security_storage:'granted',
+                  wait_for_update: 1000 };
+
+  var saved = null;
+  try { saved = localStorage.getItem('cookieConsent'); } catch (e) {}
+
+  function loadTag() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+    document.head.appendChild(s);
+    window.gtag('js', new Date());
+    window.gtag('config', ID);
+  }
+
+  function decide(country) {
+    var restricted = !country || country === 'XX' || country === 'T1' || RESTRICTED[country] === 1;
+    window.__zxGeoEU = restricted;
+    if (restricted) {
+      window.gtag('consent', 'default', DENIED);
+      if (saved === 'true') window.gtag('consent', 'update', GRANTED);
+    } else {
+      window.gtag('consent', 'default', GRANTED);
+    }
+    loadTag();
+    document.dispatchEvent(new CustomEvent('zx:consent-ready', { detail: { restricted: restricted, country: country } }));
+  }
+
+  var done = false;
+  function finish(c) { if (done) return; done = true; decide(c); }
+
+  try {
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 800) : null;
+    fetch('/cdn-cgi/trace', ctrl ? { signal: ctrl.signal } : {})
+      .then(function (r) { return r.text(); })
+      .then(function (t) {
+        if (timer) clearTimeout(timer);
+        var arr = t.split(String.fromCharCode(10));
+        var c = '';
+        for (var k = 0; k < arr.length; k++) {
+          if (arr[k].indexOf('loc=') === 0) { c = arr[k].slice(4, 6); break; }
+        }
+        finish(c);
+      })
+      .catch(function () { if (timer) clearTimeout(timer); finish(''); });
+  } catch (e) { finish(''); }
+})();
+</script>
+<title>Fabricant de caissons lumineux et structures métal | ZHANXIN</title>
+<meta name="description" content="Shanghai Zhanxin : usine de caissons lumineux, abris voyageurs, signalétique et structures acier. Certificats EN 10204, export UE et Moyen-Orient.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.zhanxinglobal.com/fr/about/">
+<meta property="og:title" content="Fabricant de caissons lumineux et structures métal | ZHANXIN">
+<meta property="og:description" content="Shanghai Zhanxin : usine de caissons lumineux, abris voyageurs, signalétique et structures acier. Certificats EN 10204, export UE et Moyen-Orient.">
+<meta property="og:image" content="https://www.zhanxinglobal.com/uploads/metal-struct.jpg?v=20261108">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fabricant de caissons lumineux et structures métal | ZHANXIN">
+<meta name="twitter:description" content="Shanghai Zhanxin : usine de caissons lumineux, abris voyageurs, signalétique et structures acier. Certificats EN 10204, export UE et Moyen-Orient.">
+<meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/factory-wide.jpg?v=20261108">
+<link rel="canonical" href="https://www.zhanxinglobal.com/fr/about/">
+    <link rel="alternate" hreflang="en" href="https://www.zhanxinglobal.com/about">
+    <link rel="alternate" hreflang="zh" href="https://www.zhanxinglobal.com/zh/about/">
+    <link rel="alternate" hreflang="de" href="https://www.zhanxinglobal.com/de/about/">
+    <link rel="alternate" hreflang="es" href="https://www.zhanxinglobal.com/es/about/">
+    <link rel="alternate" hreflang="fr" href="https://www.zhanxinglobal.com/fr/about/">
+    <link rel="alternate" hreflang="ja" href="https://www.zhanxinglobal.com/ja/about/">
+    <link rel="alternate" hreflang="ar" href="https://www.zhanxinglobal.com/ar/about/">
+    <link rel="alternate" hreflang="x-default" href="https://www.zhanxinglobal.com/about">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        background-color: #ffffff;
+        color: #333333;
+        font-family: 'Inter', sans-serif;
+    }
+    /* ===== 原生CSS替代Tailwind类 ===== */
+    .container { width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .max-w-6xl { max-width: 72rem; }
+    .max-w-4xl { max-width: 56rem; }
+    .w-full { width: 100%; }
+    .h-full { height: 100%; }
+    .h-auto { height: auto; }
+    .h-9 { height: 2.75rem; width: auto; }
+    .bg-primary { background-color: #0f3460; }
+    .text-primary { color: #0f3460; }
+    .text-accent { color: #e67e22; }
+    .bg-accent { background-color: #e67e22; }
+    .text-white { color: #ffffff; }
+    .text-gray-300 { color: #d1d5db; }
+    .text-mutedText { color: #666666; }
+    .text-bodyText { color: #333333; }
+    .text-secondaryBlue { color: #1367B2; }
+    .bg-gray-100 { background-color: #f3f4f6; }
+    .bg-footerBg { background-color: #07203b; }
+    .border-borderGrayBlue { border-color: #e2e8f0; }
+    .border-accent { border-color: #e67e22; }
+    .border-b-2 { border-bottom-width: 2px; }
+    .border { border-width: 1px; }
+    .shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); }
+    .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+    .overflow-hidden { overflow: hidden; }
+    .transition-colors { transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out; }
+    .transition-all { transition: all 0.3s ease; }
+    .duration-300 { transition-duration: 300ms; }
+    .duration-700 { transition-duration: 700ms; }
+    .ease-in-out { transition-timing-function: ease-in-out; }
+    .hover\:text-accent:hover { color: #e67e22; }
+    .hover\:underline:hover { text-decoration: underline; }
+    .hover\:bg-white:hover { background-color: #ffffff; }
+    .hover\:shadow-lg:hover { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+    .hover\:text-white:hover { color: #ffffff; }
+    .hover\:text-secondaryBlue:hover { color: #1367B2; }
+    .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+    .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+    .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+    .text-base { font-size: 1rem; line-height: 1.5rem; }
+    .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+    .font-bold { font-weight: 700; }
+    .font-semibold { font-weight: 600; }
+    .font-medium { font-weight: 500; }
+    .leading-relaxed { line-height: 1.625; }
+    .mb-3 { margin-bottom: 0.75rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-10 { margin-bottom: 2.5rem; }
+    .mb-12 { margin-bottom: 3rem; }
+    .mt-3 { margin-top: 0.75rem; }
+    .mt-8 { margin-top: 2rem; }
+    .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+    .py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+    .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    .py-14 { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+    .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .p-5 { padding: 1.25rem; }
+    .p-6 { padding: 1.5rem; }
+    .p-8 { padding: 2rem; }
+    .pb-1 { padding-bottom: 0.25rem; }
+    .grid { display: grid; }
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .gap-2 { gap: 0.5rem; }
+    .gap-2\.5 { gap: 0.625rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .flex-shrink-0 { flex-shrink: 0; }
+    .items-center { align-items: center; }
+    .items-stretch { align-items: stretch; }
+    .justify-center { justify-content: center; }
+    .justify-between { justify-content: space-between; }
+    .flex-grow { flex-grow: 1; }
+    .text-center { text-align: center; }
+    .rounded-lg { border-radius: 0.5rem; }
+    .rounded-xl { border-radius: 0.75rem; }
+    .rounded-full { border-radius: 9999px; }
+    .absolute { position: absolute; }
+    .relative { position: relative; }
+    .bottom-0 { bottom: 0; }
+    .left-0 { left: 0; }
+    .top-1\/2 { top: 50%; }
+    .-translate-y-1\/2 { transform: translateY(-50%); }
+    .left-3 { left: 0.75rem; }
+    .right-3 { right: 0.75rem; }
+    .w-2\.5 { width: 0.625rem; }
+    .w-5 { width: 1.25rem; }
+    .w-8 { width: 2rem; }
+    .w-10 { width: 2.5rem; }
+    .h-2\.5 { height: 0.625rem; }
+    .h-5 { height: 1.25rem; }
+    .h-10 { height: 2.5rem; }
+    .bg-white\/70 { background-color: rgba(255,255,255,0.7); }
+    .z-10 { z-index: 10; }
+    .space-y-2 > * + * { margin-top: 0.5rem; }
+    .space-y-2\.5 > * + * { margin-top: 0.625rem; }
+    .space-y-5 > * + * { margin-top: 1.25rem; }
+    .aspect-\[16\/9\] { aspect-ratio: 16/9; }
+    .bg-gradient-to-t { background-image: linear-gradient(to top, var(--tw-gradient-stops)); }
+    .from-black\/80 { --tw-gradient-from: rgba(0,0,0,0.8); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0,0,0,0)); }
+    .via-black\/40 { --tw-gradient-stops: var(--tw-gradient-from), rgba(0,0,0,0.4), var(--tw-gradient-to, rgba(0,0,0,0)); }
+    .to-transparent { --tw-gradient-to: transparent; }
+    .block { display: block; }
+    @media (min-width: 768px) {
+        .md\:flex { display: flex; }
+        .md\:hidden { display: none; }
+        .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .md\:left-5 { left: 1.25rem; }
+        .md\:right-5 { right: 1.25rem; }
+        .md\:w-12 { width: 3rem; }
+        .md\:h-12 { height: 3rem; }
+    }
+    .card-header {
+        background-color: #0f3460;
+        color:#ffffff;
+        padding:12px 20px;
+        font-weight:600;
+        font-size:1.1rem;
+        border-radius: 8px 8px 0 0;
+    }
+    .card-body-primary {
+        border:1px solid #e2e8f0;
+        border-top:none;
+        padding:24px;
+        border-radius:0 0 8px 8px;
+        height:100%;
+    }
+    .card-mini {
+        border:1px solid #e2e8f0;
+        border-radius:8px;
+        padding:26px;
+        background:#fff;
+        height:100%;
+        transition: 0.3s ease all;
+    }
+    .card-mini:hover {
+        box-shadow: 0 8px 20px rgba(15,52,96,0.08);
+        transform: translateY(-4px);
+    }
+    /* 灯箱全局样式 */
+    #lightbox{
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,0.92);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:9999;
+        cursor:pointer;
+        padding:1rem;
+    }
+    #lightbox img{
+        max-width:95%;
+        max-height:95vh;
+    }
+
+/* === 移动端浮动 WhatsApp（2026-11-07） === */
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:999;width:52px;height:52px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);text-decoration:none;}
+.wa-float:active{transform:scale(.95);}
+@media (max-width:768px){.wa-float{right:14px;bottom:14px;width:48px;height:48px;}}
+
+/* === 统一 header logo 尺寸（与 /style.css 对齐：桌面 44px / 移动 36px） === */
+header img { max-height: 44px; width: auto !important; display: block; object-fit: contain; }
+@media (max-width: 768px) { header img { max-height: 36px; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "name":"Shanghai Zhanxin Intelligent Equipment Co., Ltd.",
+      "url":"https://www.zhanxinglobal.com/about",
+      "logo":"https://www.zhanxinglobal.com/uploads/logo-zhanxin-blue.png?v=20261108",
+      "foundingDate":"2023-08",
+      "email":"sales@zhanxinglobal.com",
+      "description":"Manufacturer of metal structures, advertising light boxes, LED display frames and bus shelters for outdoor, airport and urban furniture projects.",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District",
+        "addressLocality":"Shanghai",
+        "addressRegion":"Shanghai",
+        "postalCode":"201502",
+        "addressCountry":"CN"
+      }
+    },
+    {
+      "@type":"AboutPage",
+      "name":"About ZHANXIN GLOBAL",
+      "url":"https://www.zhanxinglobal.com/about"
+    }
+  ]
+}
+</script>
+
+<style>
+/* === 移动端统一菜单按钮（2026-11-07, about 页 Tailwind 变体） === */
+.mobile-menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.55);color:#fff;border-radius:6px;padding:8px 14px;font-size:15px;line-height:1.2;cursor:pointer;}
+@media (max-width:768px){
+  header nav{display:none !important;width:100%;flex-direction:column !important;gap:.9rem !important;margin-top:.8rem;}
+  header nav.mobile-open{display:flex !important;}
+  .mobile-menu-btn{display:block;}
+}
+
+/* ===== 补齐缺失的 Tailwind 等价类（2026-11-08）：轮播宽高比、箭头定位、段落间距 ===== */
+.aspect-\[16\/9\] { aspect-ratio: 16 / 9; }
+.object-cover { object-fit: cover; }
+.top-1\/2 { top: 50%; }
+.-translate-y-1\/2 { transform: translateY(-50%); }
+.bg-white\/70 { background-color: rgba(255,255,255,0.7); }
+.bg-white { background-color: #fff; }
+.rounded { border-radius: 0.25rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.gap-2\.5 { gap: 0.625rem; }
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.space-y-2\.5 > * + * { margin-top: 0.625rem; }
+.space-y-5 > * + * { margin-top: 1.25rem; }
+.transition-transform { transition-property: transform; }
+.hover\:text-white:hover { color: #fff; }
+.hover\:text-accent:hover { color: #e67e22; }
+.hover\:text-secondaryBlue:hover { color: #1367B2; }
+.hover\:bg-white:hover { background-color: #fff; }
+.hover\:shadow-lg:hover { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); }
+.hover\:underline:hover { text-decoration: underline; }
+@media (max-width: 768px) {
+    .aspect-\[16\/9\] { aspect-ratio: 4 / 3; }
+}
+</style>
+</head>
+<body>
+    <header class="w-full shadow-md" style="background-color: #0f3460;">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/fr/" class="flex items-center gap-2">
+                    <img src="/uploads/logo-zhanxin-blue.png?v=20261108" alt="ZHANXIN Logo" class="h-9" width="320" height="106">
+                </a>
+                <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">&#9776; Menu</button>
+                <nav style="display: flex; align-items: center; gap: 2rem; font-size: 1rem;">
+                    <a href="/fr/" data-i18n="nav.home" class="text-white hover:text-accent transition-colors">Accueil</a>
+                    <a href="/fr/products/" data-i18n="nav.products" class="text-white hover:text-accent transition-colors">Produits</a>
+                    <a href="/cases" data-i18n="nav.projects" class="text-white hover:text-accent transition-colors">Projets</a>
+                    <a href="/fr/about/" data-i18n="nav.about" class="text-white font-semibold border-b-2 border-accent pb-1">À propos</a>
+                    <a href="/fr/contact/" data-i18n="nav.quote" class="text-white hover:text-accent transition-colors">Demander un devis</a>
+                </nav>
+                <div>
+                    <select id="langSelect" class="text-sm rounded px-2 py-1 bg-white border border-borderGrayBlue">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                        <option value="fr" selected>Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                        <option value="es">Español</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto px-6 py-14 max-w-6xl">
+        <section class="mb-10 text-center">
+            <h1 data-i18n="about.page_title" class="text-[clamp(1.8rem,4vw,2.4rem)] font-bold text-primary">À propos de SHANGHAI ZHANXIN</h1>
+            <p data-i18n="about.page_subtitle" class="text-lg text-mutedText mt-3 max-w-4xl mx-auto">Fabricant fiable pour les projets de mobilier extérieur, aéroportuaire, urbain et structures métalliques</p>
+        </section>
+        <div class="w-full rounded-lg overflow-hidden mb-12">
+            <img src="/uploads/factory-wide.jpg?v=20261108" data-i18n-alt="about.factory_img_alt" alt="Atelier de fabrication Zhanxin" class="w-full h-auto object-cover" width="1200" height="675" loading="lazy">
+        </div>
+        <!-- NEW: Our Story Section -->
+        <section class="mb-12">
+            <h2 data-i18n="about.story_title" class="text-2xl font-bold text-primary mb-4">Notre histoire</h2>
+            <p data-i18n="about.story_text" class="text-bodyText leading-relaxed">Fondée en août 2023, Shanghai Zhanxin Intelligent Equipment Co., Ltd. est un fabricant spécialisé dans les structures métalliques, caissons lumineux publicitaires, cadres pour écrans LED et abris bus. Notre équipe principale a travaillé pour des leaders mondiaux du secteur. Nous apportons des décennies d'expérience en ingénierie et gestion de projets pour la fabrication métallique sur mesure de mobilier urbain, équipements aéroportuaires et structures de support pour grands écrans pour nos clients internationaux.</p>
+        </section>
+        <!-- ========== Factory Gallery 工厂轮播板块【新5张轮播图】 ========== -->
+        <section class="mb-12">
+            <h2 data-i18n="about.factory_gallery_title" class="text-2xl font-bold text-primary mb-4 text-center">Galerie de l'usine</h2>
+            <p data-i18n="about.factory_gallery_sub" class="text-mutedText text-center mb-8">Atelier de production avancé, équipements et processus de contrôle qualité</p>
+            <div class="relative overflow-hidden rounded-xl shadow-lg bg-gray-100" id="factoryCarouselWrap">
+                <div class="flex transition-transform duration-700 ease-in-out" id="factoryCarousel">
+                    <!-- 轮播项目 1：生产车间 -->
+                    <div class="w-full flex-shrink-0 relative aspect-[16/9]">
+                        <a href="/uploads/factory/factory-01.jpg?v=20261108" class="factory-lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory-01-thumb.jpg?v=20261108" data-i18n-alt="about.gal1_alt" alt="Atelier de production" loading="lazy" class="w-full h-full object-cover" width="800" height="450">
+                            <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
+                                <span data-i18n="about.gal1_caption" class="text-lg font-medium">Atelier de production</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 轮播项目 2：激光切割机 -->
+                    <div class="w-full flex-shrink-0 relative aspect-[16/9]">
+                        <a href="/uploads/factory/factory-02.jpg?v=20261108" class="factory-lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory-02-thumb.jpg?v=20261108" data-i18n-alt="about.gal2_alt" alt="Machine de découpe laser" loading="lazy" class="w-full h-full object-cover" width="800" height="450">
+                            <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
+                                <span data-i18n="about.gal2_caption" class="text-lg font-medium">Machine de découpe laser</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 轮播项目 3：CNC切割加工区 -->
+                    <div class="w-full flex-shrink-0 relative aspect-[16/9]">
+                        <a href="/uploads/factory/factory-03.jpg?v=20261108" class="factory-lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory-03-thumb.jpg?v=20261108" data-i18n-alt="about.gal3_alt" alt="Zone de stockage semi-fini" loading="lazy" class="w-full h-full object-cover" width="800" height="600">
+                            <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
+                                <span data-i18n="about.gal3_caption" class="text-lg font-medium">Zone de stockage semi-fini</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 轮播项目 4：LED灯箱组装产线 -->
+                    <div class="w-full flex-shrink-0 relative aspect-[16/9]">
+                        <a href="/uploads/factory/factory-04.jpg?v=20261108" class="factory-lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory-04-thumb.jpg?v=20261108" data-i18n-alt="about.gal4_alt" alt="Ligne d'assemblage de caissons lumineux LED" loading="lazy" class="w-full h-full object-cover" width="800" height="450">
+                            <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
+                                <span data-i18n="about.gal4_caption" class="text-lg font-medium">Ligne d'assemblage de caissons lumineux LED</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 轮播项目 5：喷涂烤漆生产线 -->
+                    <div class="w-full flex-shrink-0 relative aspect-[16/9]">
+                        <a href="/uploads/factory/factory-05.jpg?v=20261108" class="factory-lightbox block w-full h-full">
+                            <img src="/uploads/factory/factory-05-thumb.jpg?v=20261108" data-i18n-alt="about.gal5_alt" alt="Ligne de revêtement par poudre" loading="lazy" class="w-full h-full object-cover" width="800" height="450">
+                            <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
+                                <span data-i18n="about.gal5_caption" class="text-lg font-medium">Ligne de revêtement par poudre</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Prev / Next Button -->
+                <button id="carouselPrev" class="absolute top-1/2 -translate-y-1/2 left-3 md:left-5 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/70 hover:bg-white hover:shadow-lg text-primary text-xl flex items-center justify-center z-10 transition-all duration-300">&lsaquo;</button>
+                <button id="carouselNext" class="absolute top-1/2 -translate-y-1/2 right-3 md:right-5 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/70 hover:bg-white hover:shadow-lg text-primary text-xl flex items-center justify-center z-10 transition-all duration-300">&rsaquo;</button>
+                <!-- Dots Container -->
+                <div class="flex justify-center gap-2.5 py-5" id="carouselDots"></div>
+            </div>
+        </section>
+        <!-- ========== END Factory Gallery ========== -->
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="flex flex-col">
+                <div class="card-header" data-i18n="about.card1_header">Profil de l'entreprise</div>
+                <div class="card-body-primary">
+                    <p data-i18n="about.card1_text" class="text-bodyText leading-relaxed">Nous sommes une usine spécialisée dans la fabrication de mobilier extérieur, aéroportuaire, urbain et structures métalliques pour projets. Notre équipe centrale est issue d'un fabricant leader du secteur, avec en moyenne 20 ans d'expérience en caissons lumineux, signalétique, abris de bus et structures métalliques.</p>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="card-header" data-i18n="about.card2_header">Nos atouts</div>
+                <div class="card-body-primary">
+                    <ul class="space-y-2.5 text-bodyText">
+                        <li data-i18n="about.str1">Solution de structure acier et aluminium sur mesure</li>
+                        <li data-i18n="about.str2">Structure de support pour écrans LED/LCD grand format</li>
+                        <li data-i18n="about.str3">Mobilier urbain &amp; aéroportuaire et abri-bus</li>
+                        <li data-i18n="about.str4">Support OEM &amp; ODM pour acheteurs du monde entier</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="card-header" data-i18n="about.card3_header">Qualité &amp; conformité</div>
+                <div class="card-body-primary">
+                    <ul class="space-y-2 text-sm text-mutedText">
+                        <li data-i18n="about.qua1">Licence de production de sécurité au travail (Chine) — fabricant agréé pour la fabrication métallique</li>
+                        <li data-i18n="about.qua2">Système de gestion qualité conforme à ISO 9001 / 14001 / 45001</li>
+                        <li data-i18n="about.qua3">Contrôle matière entrante, contrôle en cours et inspection finale 100% avant expédition</li>
+                        <li data-i18n="about.qua4">Certificats matériaux EN 10204 &amp; 3.1 fournis par l'aciérie</li>
+                        <li data-i18n="about.qua5">Qualification procédé soudage (WPS/PQR) et enregistrements qualification soudeurs disponibles</li>
+                        <li data-i18n="about.qua6">Rapports laboratoire tiers (IEC 60529) pour enceintes extérieures sur demande projet</li>
+                        <li data-i18n="about.qua7">Inspection avant expédition par tiers possible à la demande de l'acheteur</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="card-mini flex flex-col">
+                <div class="flex items-center gap-2 mb-3">
+                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <h4 data-i18n="about.mini1_title" class="font-semibold text-primary">Fabrication et production sur mesure</h4>
+                </div>
+                <p data-i18n="about.mini1_text" class="text-sm text-mutedText leading-relaxed flex-grow">Nous offrons un service complet de fabrication métallique sur mesure: plans techniques, coupe, soudure, traitement de surface et assemblage final.</p>
+            </div>
+            <div class="card-mini flex flex-col">
+                <div class="flex items-center gap-2 mb-3">
+                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <h4 data-i18n="about.mini2_title" class="font-semibold text-primary">Solutions techniques personnalisées</h4>
+                </div>
+                <p data-i18n="about.mini2_text" class="text-sm text-mutedText leading-relaxed flex-grow">Notre bureau d'étude conçoit selon chaque projet. OEM/ODM flexible pour répondre aux exigences locales des projets urbains et aéroportuaires.</p>
+            </div>
+            <div class="card-mini flex flex-col">
+                <div class="flex items-center gap-2 mb-3">
+                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <h4 data-i18n="about.mini3_title" class="font-semibold text-primary">Conformité et essais complets</h4>
+                </div>
+                <p data-i18n="about.mini3_text" class="text-sm text-mutedText leading-relaxed flex-grow">Dossier de certification complet, traçabilité matière, qualifications soudure et rapports d'essais tiers pour appels d'offres et export.</p>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 items-stretch">
+            <div class="rounded-lg overflow-hidden border border-borderGrayBlue">
+                <iframe title="Shanghai Zhanxin factory location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.806466665293!2d121.05610507459158!3d30.89207457791617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b2e614fbbfa149%3A0x189a3684b8d9e343!2s3%2C%201275%20Qianming%20E%20Rd%2C%20Jin%20Shan%20Qu%2C%20Shang%20Hai%20Shi%2C%20China%2C%20201502!5e0!3m2!1sen!2sus!4v1792156311648!5m2!1sen!2sus" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            <div class="border border-borderGrayBlue rounded-lg p-8 h-full">
+                <h3 data-i18n="about.contact_title" class="text-xl font-bold text-primary mb-6">SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</h3>
+                <ul class="space-y-5 text-bodyText text-base">
+                    <li><strong data-i18n="contact.tel">Tél. :</strong> <a href="tel:+86-21-57223755" class="hover:text-secondaryBlue transition-colors">+86-21-57223755</a></li>
+                    <li><strong data-i18n="contact.mobile">Mobile/WhatsApp :</strong> <a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline transition-colors">WhatsApp: +86 193 0117 9802</a></li>
+                    <li><strong data-i18n="contact.web">Site web :</strong> <a href="https://www.zhanxinglobal.com/" target="_blank" class="hover:text-secondaryBlue transition-colors">https://www.zhanxinglobal.com</a></li>
+                    <li><strong data-i18n="contact.addr">Adresse :</strong> Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District, Shanghai</li>
+                    <li><strong data-i18n="contact.email">E-mail :</strong> <a href="mailto:sales@zhanxinglobal.com" class="hover:text-secondaryBlue transition-colors">sales@zhanxinglobal.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-footerBg text-gray-300 py-10">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 data-i18n="footer.nav_title" class="text-xl font-semibold mb-4 text-white">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/fr/" data-i18n="nav.home" class="hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="/fr/products/" data-i18n="nav.products" class="hover:text-white transition-colors">Produits</a></li>
+                        <li><a href="/cases" data-i18n="nav.projects" class="hover:text-white transition-colors">Projets</a></li>
+                        <li><a href="/blog/index-fr" data-i18n="nav.insights" class="hover:text-white transition-colors">Actualités</a></li>
+                        <li><a href="/fr/about/" data-i18n="nav.about" class="hover:text-white transition-colors">À propos</a></li>
+                        <li><a href="/fr/contact/" data-i18n="nav.quote" class="hover:text-white transition-colors">Demander un devis</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 data-i18n="footer.contact_title" class="text-xl font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><span data-i18n="contact.tel">Tél. :</span> +86-21-57223755</li>
+                        <li><a href="https://wa.me/8619301179802" target="_blank" class="text-accent hover:underline transition-colors"><span data-i18n="contact.whatsapp">WhatsApp :</span> +86 193 0117 9802</a></li>
+                        <li><a href="mailto:sales@zhanxinglobal.com" class="hover:text-white transition-colors">sales@zhanxinglobal.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 data-i18n="footer.copyright_title" class="text-xl font-semibold mb-4 text-white">Copyright</h4>
+                    <p data-i18n="footer.copyright_text" class="text-sm">© 2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="/assets/i18n-loader.js?v=20261108"></script>
+<script src="/assets/i18n/fr.js?v=20261108"></script>
+<script>
+
+function setLang(langKey){
+    const trans = translations[langKey] || translations.en || {};
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(trans[key]) el.innerText = trans[key];
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+        const key = el.getAttribute('data-i18n-alt');
+        if(trans[key]) el.alt = trans[key];
+    });
+    document.documentElement.lang = langKey;
+    if(langKey === 'ar'){
+        document.documentElement.dir = "rtl";
+        document.body.style.direction = "rtl";
+        document.getElementById('factoryCarouselWrap').style.direction="rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+        document.body.style.direction = "ltr";
+        document.getElementById('factoryCarouselWrap').style.direction="ltr";
+    }
+}
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', function(){
+    window.ZX_LANG?ZX_LANG.apply(this.value):setLang(this.value);
+});
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
+}
+const initialLang = getLangFromPath();
+setLang(initialLang);
+langSelect.value = initialLang;
+// ========= Factory Carousel + Lightbox Script =========
+document.addEventListener('DOMContentLoaded', function(){
+    const carousel = document.getElementById('factoryCarousel');
+    const carouselWrap = document.getElementById('factoryCarouselWrap');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const dotsWrapper = document.getElementById('carouselDots');
+    const slideCount = carousel.children.length;
+    let currentIndex = 0;
+    let autoPlayTimer;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    // 生成圆点指示器
+    for(let i=0; i<slideCount; i++){
+        const dot = document.createElement('button');
+        dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${i===0 ? 'bg-accent w-8' : 'bg-gray-300'}`;
+        dot.dataset.index = i;
+        dot.addEventListener('click',()=>{
+            goToSlide(i);
+            resetAutoPlay();
+        })
+        dotsWrapper.appendChild(dot);
+    }
+    const dots = dotsWrapper.querySelectorAll('button');
+    function updateCarousel(){
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot,idx)=>{
+            if(idx === currentIndex){
+                dot.classList.add('bg-accent','w-8');
+                dot.classList.remove('bg-gray-300');
+            }else{
+                dot.classList.remove('bg-accent','w-8');
+                dot.classList.add('bg-gray-300');
+            }
+        })
+    }
+    function goToSlide(index){
+        //边界保护，禁止越界
+        if(index <0) index = 0;
+        if(index >= slideCount) index = slideCount -1;
+        currentIndex = index;
+        updateCarousel();
+    }
+    function nextSlide(){
+        if(currentIndex < slideCount -1){
+            goToSlide(currentIndex +1);
+        }else{
+            goToSlide(0);
+        }
+    }
+    function prevSlide(){
+        if(currentIndex > 0){
+            goToSlide(currentIndex -1);
+        }else{
+            goToSlide(slideCount -1);
+        }
+    }
+    function startAutoPlay(){
+        autoPlayTimer = setInterval(nextSlide,8000);
+    }
+    function stopAutoPlay(){
+        clearInterval(autoPlayTimer);
+    }
+    function resetAutoPlay(){
+        stopAutoPlay();
+        startAutoPlay();
+    }
+    prevBtn.addEventListener('click',()=>{
+        prevSlide();
+        resetAutoPlay();
+    })
+    nextBtn.addEventListener('click',()=>{
+        nextSlide();
+        resetAutoPlay();
+    })
+    //鼠标悬浮暂停轮播
+    carouselWrap.addEventListener('mouseenter', stopAutoPlay);
+    carouselWrap.addEventListener('mouseleave', startAutoPlay);
+    //移动端触摸滑动
+    carouselWrap.addEventListener('touchstart', e=>{
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoPlay();
+    },{passive:true});
+    carouselWrap.addEventListener('touchend', e=>{
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if(Math.abs(diff)>50){
+            if(diff>0) nextSlide();
+            else prevSlide();
+        }
+        resetAutoPlay();
+    },{passive:true});
+    startAutoPlay();
+    // Lightbox大图弹窗，ESC关闭
+    const lightboxLinks = document.querySelectorAll('.factory-lightbox');
+    function createLightbox(src){
+        const lb = document.createElement('div');
+        lb.id = 'lightbox';
+        const img = document.createElement('img');
+        img.src = src;
+        lb.appendChild(img);
+        document.body.appendChild(lb);
+        lb.onclick = ()=> lb.remove();
+        function escClose(e){
+            if(e.key === 'Escape'){
+                lb.remove();
+                document.removeEventListener('keydown',escClose);
+            }
+        }
+        document.addEventListener('keydown',escClose);
+    }
+    lightboxLinks.forEach(link=>{
+        link.addEventListener('click',function(e){
+            e.preventDefault();
+            const imgSrc = this.getAttribute('href');
+            createLightbox(imgSrc);
+        })
+    })
+})
+</script>
+<script>
+// ========== Cookie 同意弹窗（仅 EEA/UK/CH 显示） ==========
+
+(function() {
+  if (localStorage.getItem('cookieConsent')) return;
+
+  var GRANTED = {
+    'ad_storage': 'granted', 'analytics_storage': 'granted', 'ad_user_data': 'granted',
+    'ad_personalization': 'granted', 'functionality_storage': 'granted',
+    'personalization_storage': 'granted', 'security_storage': 'granted'
+  };
+
+  function showBanner() {
+    if (window.__zxGeoEU !== true) return;
+    if (document.getElementById('cookie-consent')) return;
+
+    var box = document.createElement('div');
+    box.id = 'cookie-consent';
+    box.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0f3460;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
+    box.innerHTML = '<div style="flex:1;min-width:250px;font-size:14px;">We use cookies to analyse site traffic. Choose "Accept" to allow analytics cookies, or "Decline" to keep browsing without tracking. <a href="/privacy" style="color:#d35400;margin-left:5px;">Privacy Policy</a></div>' +
+      '<div style="display:flex;gap:8px;"><button id="cookie-decline" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.5);padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Decline</button>' +
+      '<button id="cookie-accept" style="background:#d35400;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button></div>';
+    document.body.appendChild(box);
+
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'true');
+      if (typeof gtag === 'function') gtag('consent', 'update', GRANTED);
+      document.getElementById('cookie-consent').remove();
+    });
+
+    document.getElementById('cookie-decline').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'false');
+      document.getElementById('cookie-consent').remove();
+    });
+  }
+
+  if (window.__zxGeoEU === undefined) {
+    document.addEventListener('zx:consent-ready', showBanner);
+  } else {
+    showBanner();
+  }
+})();
+</script>
+<script>
+// GA4 转化事件跟踪（Get a Quote / WhatsApp / Email）
+document.addEventListener('click', function(e) {
+    var el = e.target.closest('a,button');
+    if (!el) return;
+    var t = (el.textContent || '').trim();
+    var href = el.getAttribute('href') || '';
+    if (/Get a Quote|Send Inquiry|Contact Us/i.test(t) || href === '/contact' || href === '/#inquiry') {
+        gtag('event', 'inquiry_click', {'event_category':'button_click','event_label':document.title});
+        return;
+    }
+    if (/whatsapp|wa\.me/i.test(href) || /WhatsApp/i.test(t)) {
+        gtag('event', 'whatsapp_click', {'event_category':'contact_click','event_label':'whatsapp'});
+        return;
+    }
+    if (/^mailto:/i.test(href)) {
+        gtag('event', 'email_click', {'event_category':'contact_click','event_label':'email'});
+    }
+});
+</script>
+
+<script>
+/* 移动端菜单按钮（2026-11-07） */
+(function(){
+  var btn = document.querySelector('.mobile-menu-btn');
+  var nav = document.querySelector('header nav');
+  if(!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('mobile-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
+</script>
+<a class="wa-float" href="https://wa.me/8619301179802?text=Hello%20ZHANXIN%2C%20I%27d%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.3.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-3.5-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.6.8 1.9.9.3.1.5.2.5.4.1.2.1.9-.2 1.5z"/></svg></a>
+</body>
+</html>

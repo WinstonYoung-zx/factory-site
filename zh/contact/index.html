@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) - 地区化 Consent Mode v2：EEA/UK/CH 默认拒绝并弹窗，其他地区默认放行 -->
+<script>
+(function () {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+
+  var ID = 'G-L2X92ECKX5';
+
+  var RESTRICTED = { AT:1,BE:1,BG:1,HR:1,CY:1,CZ:1,DK:1,EE:1,FI:1,FR:1,DE:1,GR:1,HU:1,IE:1,
+                     IT:1,LV:1,LT:1,LU:1,MT:1,NL:1,PL:1,PT:1,RO:1,SK:1,SI:1,ES:1,SE:1,
+                     IS:1,LI:1,NO:1,GB:1,CH:1 };
+
+  var GRANTED = { ad_storage:'granted', analytics_storage:'granted', ad_user_data:'granted',
+                  ad_personalization:'granted', functionality_storage:'granted',
+                  personalization_storage:'granted', security_storage:'granted' };
+  var DENIED  = { ad_storage:'denied', analytics_storage:'denied', ad_user_data:'denied',
+                  ad_personalization:'denied', functionality_storage:'granted',
+                  personalization_storage:'denied', security_storage:'granted',
+                  wait_for_update: 1000 };
+
+  var saved = null;
+  try { saved = localStorage.getItem('cookieConsent'); } catch (e) {}
+
+  function loadTag() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+    document.head.appendChild(s);
+    window.gtag('js', new Date());
+    window.gtag('config', ID);
+  }
+
+  function decide(country) {
+    var restricted = !country || country === 'XX' || country === 'T1' || RESTRICTED[country] === 1;
+    window.__zxGeoEU = restricted;
+    if (restricted) {
+      window.gtag('consent', 'default', DENIED);
+      if (saved === 'true') window.gtag('consent', 'update', GRANTED);
+    } else {
+      window.gtag('consent', 'default', GRANTED);
+    }
+    loadTag();
+    document.dispatchEvent(new CustomEvent('zx:consent-ready', { detail: { restricted: restricted, country: country } }));
+  }
+
+  var done = false;
+  function finish(c) { if (done) return; done = true; decide(c); }
+
+  try {
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 800) : null;
+    fetch('/cdn-cgi/trace', ctrl ? { signal: ctrl.signal } : {})
+      .then(function (r) { return r.text(); })
+      .then(function (t) {
+        if (timer) clearTimeout(timer);
+        var arr = t.split(String.fromCharCode(10));
+        var c = '';
+        for (var k = 0; k < arr.length; k++) {
+          if (arr[k].indexOf('loc=') === 0) { c = arr[k].slice(4, 6); break; }
+        }
+        finish(c);
+      })
+      .catch(function () { if (timer) clearTimeout(timer); finish(''); });
+  } catch (e) { finish(''); }
+})();
+</script>
+<title>联系我们｜获取灯箱与钢结构报价 | 崭鑫</title>
+<meta name="description" content="灯箱、候车亭、钢结构件询价：发送图纸与数量，通常 24 小时内回复报价。上海工厂直供，支持 OEM/ODM 与出口单证。">
+<link rel="canonical" href="https://www.zhanxinglobal.com/zh/contact/">
+    <link rel="alternate" hreflang="en" href="https://www.zhanxinglobal.com/contact">
+    <link rel="alternate" hreflang="zh" href="https://www.zhanxinglobal.com/zh/contact/">
+    <link rel="alternate" hreflang="de" href="https://www.zhanxinglobal.com/de/contact/">
+    <link rel="alternate" hreflang="es" href="https://www.zhanxinglobal.com/es/contact/">
+    <link rel="alternate" hreflang="fr" href="https://www.zhanxinglobal.com/fr/contact/">
+    <link rel="alternate" hreflang="ja" href="https://www.zhanxinglobal.com/ja/contact/">
+    <link rel="alternate" hreflang="ar" href="https://www.zhanxinglobal.com/ar/contact/">
+    <link rel="alternate" hreflang="x-default" href="https://www.zhanxinglobal.com/contact">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.zhanxinglobal.com/zh/contact/">
+<meta property="og:title" content="联系我们｜获取灯箱与钢结构报价 | 崭鑫">
+<meta property="og:description" content="灯箱、候车亭、钢结构件询价：发送图纸与数量，通常 24 小时内回复报价。上海工厂直供，支持 OEM/ODM 与出口单证。">
+<meta property="og:image" content="https://www.zhanxinglobal.com/uploads/factory-wide.jpg?v=20261108">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="联系我们｜获取灯箱与钢结构报价 | 崭鑫">
+<meta name="twitter:description" content="灯箱、候车亭、钢结构件询价：发送图纸与数量，通常 24 小时内回复报价。上海工厂直供，支持 OEM/ODM 与出口单证。">
+<meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/factory-wide.jpg?v=20261108">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/style.css">
+<style>
+/* === 移动端浮动 WhatsApp（2026-11-07） === */
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:999;width:52px;height:52px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);text-decoration:none;}
+.wa-float:active{transform:scale(.95);}
+@media (max-width:768px){.wa-float{right:14px;bottom:14px;width:48px;height:48px;}}
+</style>
+<script>
+window.onTurnstileError = function (code) {
+  var tip = document.querySelector('#formTip');
+  if (tip) {
+    tip.className = 'error';
+    tip.innerText = "Verification could not load (code " + code + "). Please refresh the page and try again, or email sales@zhanxinglobal.com with your inquiry directly.";
+  }
+  return true;
+};
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "name":"Shanghai Zhanxin Intelligent Equipment Co., Ltd.",
+      "alternateName":"ZHANXIN GLOBAL",
+      "url":"https://www.zhanxinglobal.com",
+      "logo":"https://www.zhanxinglobal.com/uploads/logo-zhanxin-blue.png?v=20261108",
+      "foundingDate":"2023-08",
+      "email":"sales@zhanxinglobal.com",
+      "telephone":"+86-21-57223755",
+      "description":"Manufacturer of metal structures, advertising light boxes, LED display frames and bus shelters for outdoor, airport and urban furniture projects.",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District",
+        "addressLocality":"Shanghai",
+        "addressRegion":"Shanghai",
+        "postalCode":"201502",
+        "addressCountry":"CN"
+      },
+      "contactPoint":[
+        {
+          "@type":"ContactPoint",
+          "contactType":"sales",
+          "telephone":"+86-21-57223755",
+          "email":"sales@zhanxinglobal.com",
+          "availableLanguage":["en","zh","de","fr","es","ja","ar"],
+          "areaServed":"Worldwide"
+        }
+      ]
+    },
+    {
+      "@type":"ContactPage",
+      "name":"Contact ZHANXIN GLOBAL",
+      "url":"https://www.zhanxinglobal.com/contact",
+      "about":{"@type":"Organization","name":"Shanghai Zhanxin Intelligent Equipment Co., Ltd."}
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- 头部导航 -->
+<header>
+  <div class="container nav-wrap">
+    <a href="/zh/" class="logo">
+      <img src="/uploads/logo-zhanxin-blue.png?v=20261108" alt="ZHANXIN Logo" width="320" height="106">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/zh/" data-i18n="nav.home">首页</a></li>
+      <li><a href="/zh/products/" data-i18n="nav.products">产品</a></li>
+      <li><a href="/cases" data-i18n="nav.projects">工程案例</a></li>
+      <li><a href="/zh/about/" data-i18n="nav.about">工厂介绍</a></li>
+      <li><a href="/zh/contact/" data-i18n="nav.quote">获取报价</a></li>
+    </ul>
+    <select id="langSelect" class="lang-switch">
+      <option value="en">English</option>
+      <option value="zh" selected>中文</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ja">日本語</option>
+      <option value="es">Español</option>
+      <option value="ar">العربية</option>
+    </select>
+    <button class="mobile-menu-btn">☰</button>
+  </div>
+</header>
+<main class="container page-content">
+  <h1 data-i18n="contact.title">联系我们</h1>
+  <div class="contact-grid">
+    <div class="contact-form-card">
+      <h2 data-i18n="contact.formTitle">发送询盘</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label data-i18n="inq.company">公司名称</label>
+          <input type="text" name="company" required>
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.name">联系人</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.country">国家</label>
+          <select name="country" required>
+            <option value="" data-i18n="form.countryPlaceholder">-- 请选择国家/地区 --</option>
+            <!-- Europe -->
+            <option value="Austria">Austria</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="Greece">Greece</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Italy">Italy</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Norway">Norway</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Romania">Romania</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Spain">Spain</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <!-- North America -->
+            <option value="Canada">Canada</option>
+            <option value="United States">United States</option>
+            <!-- Latin America -->
+            <option value="Brazil">Brazil</option>
+            <option value="Chile">Chile</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Peru">Peru</option>
+            <!-- Middle East -->
+            <option value="Bahrain">Bahrain</option>
+            <option value="Israel">Israel</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Oman">Oman</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="United Arab Emirates">United Arab Emirates</option>
+            <!-- Asia Pacific -->
+            <option value="Australia">Australia</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Japan">Japan</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Singapore">Singapore</option>
+            <option value="South Korea">South Korea</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Vietnam">Vietnam</option>
+            <!-- Africa -->
+            <option value="Egypt">Egypt</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.phone">WhatsApp / 联系电话</label>
+          <input type="tel" name="phone" placeholder="+XX ......">
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.email">邮箱</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.product">意向产品</label>
+          <input type="text" name="product">
+        </div>
+        <!-- 附件上传 -->
+        <div class="form-group">
+          <label data-i18n="inq.attachLabel">图纸/参考文件（最大20MB，图纸/PDF/图片/压缩包）</label>
+          <div class="file-upload-wrap">
+            <input type="file" id="attachFile" name="attach" accept=".pdf,.dwg,.dxf,.step,.stp,.igs,.iges,.zip,.rar,.7z,.jpg,.jpeg,.png,.xlsx" hidden>
+            <button type="button" class="file-btn" id="selectFileBtn" data-i18n="inq.selectFile">选择文件</button>
+            <span class="file-name" id="fileNameText" data-i18n="inq.noFile">未选择文件</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="inq.msg">留言/需求说明</label>
+          <textarea name="msg" rows="5"></textarea>
+        </div>
+        <!-- Cloudflare Turnstile -->
+        <div class="form-group">
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAFYHVZ7gzDBGAiWu"></div>
+        </div>
+        <!-- GDPR 隐私同意 -->
+        <div class="form-group" style="display:flex;align-items:flex-start;gap:8px;margin-bottom:16px;">
+          <input type="checkbox" id="privacyConsent" required style="margin-top:3px;">
+          <label for="privacyConsent" style="font-size:0.9rem;color:#555;cursor:pointer;">
+            <span data-i18n="inq.consent">我同意</span>
+            <a href="/privacy" target="_blank" style="color:var(--primary);text-decoration:underline;" data-i18n="inq.privacyPolicy">隐私政策</a>
+            <span data-i18n="inq.consentEnd">并同意我的数据被用于询盘沟通。</span>
+          </label>
+        </div>
+        <button type="submit" class="submit-btn" data-i18n="inq.submit">提交询盘</button>
+      </form>
+    </div>
+    <div class="contact-info-card">
+      <h2 data-i18n="contact.infoTitle">联系信息</h2>
+      <p><strong>SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</strong></p>
+      <p><span data-i18n="contact.tel">电话：</span> <a href="tel:+86-21-57223755">+86-21-57223755</a></p>
+      <p><span data-i18n="contact.mobile">手机/WhatsApp：</span> <a href="https://wa.me/8619301179802" target="_blank"><span data-i18n="contact.whatsapp">WhatsApp：</span> +86 193 0117 9802</a></p>
+      <p><span data-i18n="contact.web">网址：</span> <a href="https://www.zhanxinglobal.com/" target="_blank">www.zhanxinglobal.com</a></p>
+      <p><span data-i18n="contact.addr">地址：</span> Building 1st, Left Hand, No. 1275 Qianming East Road, Fengjing Town, Jinshan District, Shanghai</p>
+      <p><span data-i18n="contact.email">邮箱：</span> <a href="mailto:sales@zhanxinglobal.com">sales@zhanxinglobal.com</a></p>
+      <div class="social-links">
+        <a href="https://wa.me/8619301179802" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-wrap">
+    <div class="footer-col">
+      <h3>ZHANXIN</h3>
+      <p data-i18n="footer.desc">户外、机场及城市家具与金属结构制造商。</p>
+    </div>
+    <div class="footer-col">
+      <h3 data-i18n="footer.nav">导航</h3>
+      <a href="/zh/" data-i18n="nav.home">首页</a>
+      <a href="/zh/products/" data-i18n="nav.products">产品</a>
+      <a href="/cases" data-i18n="nav.projects">工程案例</a>
+      <a href="/blog/index-zh" data-i18n="nav.insights">见解</a>
+      <a href="/zh/about/" data-i18n="nav.about">工厂介绍</a>
+      <a href="/zh/contact/" data-i18n="nav.quote">获取报价</a>
+    </div>
+    <div class="footer-col">
+      <h3 data-i18n="footer.contact">联系我们</h3>
+      <p><strong>SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd.</strong></p>
+      <p><span data-i18n="contact.tel">电话：</span> <a href="tel:+86-21-57223755">+86-21-57223755</a></p>
+      <p><span data-i18n="contact.mobile">手机/WhatsApp：</span> <a href="https://wa.me/8619301179802" target="_blank"><span data-i18n="contact.whatsapp">WhatsApp：</span> +86 193 0117 9802</a></p>
+      <p><span data-i18n="contact.email">邮箱：</span> <a href="mailto:sales@zhanxinglobal.com">sales@zhanxinglobal.com</a></p>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>©2026 SHANGHAI ZHANXIN INTELLIGENT EQUIPMENT Co.,Ltd. <a href="/privacy" data-i18n="footer.privacy">隐私政策</a></p>
+  </div>
+</footer>
+<!-- Turnstile 官方api.js 脚本，放在body末尾 -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="/assets/i18n-loader.js?v=20261108"></script>
+<script src="/assets/i18n/zh.js?v=20261108"></script>
+<script>
+// 移动端菜单开关逻辑
+const mobileBtn = document.querySelector('.mobile-menu-btn');
+const navList = document.querySelector('.nav-links');
+if (mobileBtn && typeof mobileBtn.addEventListener === 'function' && navList) {
+  mobileBtn.addEventListener('click', ()=>{
+    navList.classList.toggle('mobile-open');
+  });
+}
+// 多语言翻译
+
+// 根据 URL 路径自动切换语言
+function getLangFromPath() {
+    const path = window.location.pathname;
+    if (path.startsWith('/zh')) return 'zh';
+    if (path.startsWith('/es')) return 'es';
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/de')) return 'de';
+    if (path.startsWith('/ja')) return 'ja';
+    if (path.startsWith('/ar')) return 'ar';
+    return 'en';
+}
+let currentLang = getLangFromPath() || localStorage.getItem("preferredLang") || "en";
+const langSelect = document.getElementById("langSelect");
+function setLang(lang) {
+currentLang = lang;
+localStorage.setItem("preferredLang", lang);
+document.documentElement.lang = lang;
+document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+document.querySelectorAll("[data-i18n]").forEach(el => {
+const key = el.getAttribute("data-i18n");
+if(translations[lang] && translations[lang][key]){
+el.textContent = translations[lang][key];
+}
+});
+langSelect.value = lang;
+}
+langSelect.addEventListener("change", ()=>{
+window.ZX_LANG?ZX_LANG.apply(langSelect.value):setLang(langSelect.value);
+});
+setLang(currentLang);
+// 文件选择按钮逻辑
+const selectFileBtn = document.getElementById("selectFileBtn");
+const attachFile = document.getElementById("attachFile");
+const fileNameText = document.getElementById("fileNameText");
+selectFileBtn.onclick = ()=> attachFile.click();
+attachFile.onchange = function(){
+if(this.files.length>0){
+fileNameText.textContent = this.files[0].name;
+}else{
+fileNameText.textContent = translations[currentLang]["inq.noFile"];
+}
+}
+// ========== 表单提交对接 zhanxin-form Worker ==========
+const contactForm = document.getElementById("contactForm");
+contactForm.addEventListener("submit", async function(e){
+  e.preventDefault();
+  const formData = new FormData(contactForm);
+  const token = formData.get("cf-turnstile-response");
+  if(!token){
+    alert(currentLang==="zh"?"请先完成人机验证！":"Please complete human verification first!");
+    return;
+  }
+  const workerApiUrl = "https://zhanxin-form.shzxin-cn.workers.dev/inquiry";
+  try{
+    const res = await fetch(workerApiUrl,{
+      method:"POST",
+      body:formData
+    });
+    const result = await res.json();
+    if(res.ok){
+      // GA4 转化事件：表单提交成功
+      gtag('event', 'generate_lead', {
+        'event_category': 'inquiry',
+        'event_label': 'contact_form',
+        'country': formData.get('country') || '',
+        'product_interest': formData.get('product') || ''
+      });
+      alert(currentLang==="zh"?"提交成功！":"Inquiry sent successfully!");
+      contactForm.reset();
+      fileNameText.textContent = translations[currentLang]["inq.noFile"];
+    }else{
+      alert(currentLang==="zh"?"提交失败，请重试！":"Failed to send, please try again.");
+    }
+  }catch(err){
+    alert(currentLang==="zh"?"网络错误！":"Network error!");
+  }
+})
+
+// ========== GA4 转化事件埋点 ==========
+// WhatsApp 点击
+document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(link => {
+  link.addEventListener('click', () => {
+    gtag('event', 'whatsapp_click', {
+      'event_category': 'contact',
+      'event_label': link.href
+    });
+  });
+});
+// 邮件点击
+document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+  link.addEventListener('click', () => {
+    gtag('event', 'email_click', {
+      'event_category': 'contact',
+      'event_label': link.href
+    });
+  });
+});
+// 电话点击
+document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+  link.addEventListener('click', () => {
+    gtag('event', 'phone_click', {
+      'event_category': 'contact',
+      'event_label': link.href
+    });
+  });
+});
+</script>
+<script>
+// ========== Cookie 同意弹窗（仅 EEA/UK/CH 显示） ==========
+
+(function() {
+  if (localStorage.getItem('cookieConsent')) return;
+
+  var GRANTED = {
+    'ad_storage': 'granted', 'analytics_storage': 'granted', 'ad_user_data': 'granted',
+    'ad_personalization': 'granted', 'functionality_storage': 'granted',
+    'personalization_storage': 'granted', 'security_storage': 'granted'
+  };
+
+  function showBanner() {
+    if (window.__zxGeoEU !== true) return;
+    if (document.getElementById('cookie-consent')) return;
+
+    var box = document.createElement('div');
+    box.id = 'cookie-consent';
+    box.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0f3460;color:#fff;padding:15px 20px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 -2px 10px rgba(0,0,0,0.2);';
+    box.innerHTML = '<div style="flex:1;min-width:250px;font-size:14px;">We use cookies to analyse site traffic. Choose "Accept" to allow analytics cookies, or "Decline" to keep browsing without tracking. <a href="/privacy" style="color:#d35400;margin-left:5px;">Privacy Policy</a></div>' +
+      '<div style="display:flex;gap:8px;"><button id="cookie-decline" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.5);padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Decline</button>' +
+      '<button id="cookie-accept" style="background:#d35400;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:14px;">Accept</button></div>';
+    document.body.appendChild(box);
+
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'true');
+      if (typeof gtag === 'function') gtag('consent', 'update', GRANTED);
+      document.getElementById('cookie-consent').remove();
+    });
+
+    document.getElementById('cookie-decline').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'false');
+      document.getElementById('cookie-consent').remove();
+    });
+  }
+
+  if (window.__zxGeoEU === undefined) {
+    document.addEventListener('zx:consent-ready', showBanner);
+  } else {
+    showBanner();
+  }
+})();
+</script>
+<a class="wa-float" href="https://wa.me/8619301179802?text=Hello%20ZHANXIN%2C%20I%27d%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.3.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-3.5-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.6.8 1.9.9.3.1.5.2.5.4.1.2.1.9-.2 1.5z"/></svg></a>
+</body>
+</html>
