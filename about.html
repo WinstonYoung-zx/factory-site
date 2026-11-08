@@ -69,11 +69,11 @@
   } catch (e) { finish(''); }
 })();
 </script>
-<title data-i18n="about.meta_title">About Us - ZHANXIN GLOBAL</title>
+<title data-i18n="about.meta_title">About ZHANXIN GLOBAL | Metal Structure Manufacturer</title>
 <meta name="description" data-i18n="about.meta_desc" content="Shanghai Zhanxin Intelligent Equipment Co., Ltd. Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.zhanxinglobal.com/about">
-<meta property="og:title" content="About Us - ZHANXIN GLOBAL">
+<meta property="og:title" content="About ZHANXIN GLOBAL | Metal Structure Manufacturer">
 <meta property="og:description" content="Shanghai Zhanxin Intelligent Equipment Co., Ltd. Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects">
 <meta property="og:image" content="https://www.zhanxinglobal.com/uploads/metal-struct.jpg?v=20261108">
 <meta property="og:locale" content="en_US">
@@ -84,7 +84,7 @@
 <meta property="og:locale:alternate" content="es_ES">
 <meta property="og:locale:alternate" content="ar_AR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About Us - ZHANXIN GLOBAL">
+<meta name="twitter:title" content="About ZHANXIN GLOBAL | Metal Structure Manufacturer">
 <meta name="twitter:description" content="Shanghai Zhanxin Intelligent Equipment Co., Ltd. Reliable manufacturer for outdoor, airport and urban furniture & metal structure projects">
 <meta name="twitter:image" content="https://www.zhanxinglobal.com/uploads/factory-wide.jpg?v=20261108">
 <link rel="canonical" href="https://www.zhanxinglobal.com/about">
@@ -106,7 +106,7 @@
     .w-full { width: 100%; }
     .h-full { height: 100%; }
     .h-auto { height: auto; }
-    .h-9 { height: 2.25rem; width: auto; }
+    .h-9 { height: 2.75rem; width: auto; }
     .bg-primary { background-color: #0f3460; }
     .text-primary { color: #0f3460; }
     .text-accent { color: #e67e22; }
@@ -267,6 +267,10 @@
   box-shadow:0 4px 12px rgba(0,0,0,.25);text-decoration:none;}
 .wa-float:active{transform:scale(.95);}
 @media (max-width:768px){.wa-float{right:14px;bottom:14px;width:48px;height:48px;}}
+
+/* === 统一 header logo 尺寸（与 /style.css 对齐：桌面 44px / 移动 36px） === */
+header img { max-height: 44px; width: auto !important; display: block; object-fit: contain; }
+@media (max-width: 768px) { header img { max-height: 36px; } }
 </style>
 <script type="application/ld+json">
 {
@@ -305,6 +309,30 @@
   header nav{display:none !important;width:100%;flex-direction:column !important;gap:.9rem !important;margin-top:.8rem;}
   header nav.mobile-open{display:flex !important;}
   .mobile-menu-btn{display:block;}
+}
+
+/* ===== 补齐缺失的 Tailwind 等价类（2026-11-08）：轮播宽高比、箭头定位、段落间距 ===== */
+.aspect-\[16\/9\] { aspect-ratio: 16 / 9; }
+.object-cover { object-fit: cover; }
+.top-1\/2 { top: 50%; }
+.-translate-y-1\/2 { transform: translateY(-50%); }
+.bg-white\/70 { background-color: rgba(255,255,255,0.7); }
+.bg-white { background-color: #fff; }
+.rounded { border-radius: 0.25rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.gap-2\.5 { gap: 0.625rem; }
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.space-y-2\.5 > * + * { margin-top: 0.625rem; }
+.space-y-5 > * + * { margin-top: 1.25rem; }
+.transition-transform { transition-property: transform; }
+.hover\:text-white:hover { color: #fff; }
+.hover\:text-accent:hover { color: #e67e22; }
+.hover\:text-secondaryBlue:hover { color: #1367B2; }
+.hover\:bg-white:hover { background-color: #fff; }
+.hover\:shadow-lg:hover { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); }
+.hover\:underline:hover { text-decoration: underline; }
+@media (max-width: 768px) {
+    .aspect-\[16\/9\] { aspect-ratio: 4 / 3; }
 }
 </style>
 </head>
