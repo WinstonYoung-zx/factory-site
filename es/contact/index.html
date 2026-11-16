@@ -272,6 +272,20 @@ window.onTurnstileError = function (code) {
           <label data-i18n="inq.product">Producto de interés</label>
           <input type="text" name="product">
         </div>
+        <div class="form-group">
+          <label data-i18n="inq.source">¿Cómo nos conoció?</label>
+          <select name="source">
+            <option value="" data-i18n="inq.sourcePh">-- Seleccione --</option>
+            <option value="google" data-i18n="inq.src.google">Búsqueda en Google</option>
+            <option value="linkedin" data-i18n="inq.src.linkedin">LinkedIn</option>
+            <option value="b2b" data-i18n="inq.src.b2b">Plataforma B2B (Alibaba, Made-in-China, etc.)</option>
+            <option value="exhibition" data-i18n="inq.src.exhibition">Feria / Exposición</option>
+            <option value="referral" data-i18n="inq.src.referral">Recomendación de cliente o socio</option>
+            <option value="youtube" data-i18n="inq.src.youtube">YouTube</option>
+            <option value="social" data-i18n="inq.src.social">Otras redes sociales</option>
+            <option value="other" data-i18n="inq.src.other">Otro</option>
+          </select>
+        </div>
         <!-- 附件上传 -->
         <div class="form-group">
           <label data-i18n="inq.attachLabel">Planos / Archivo referencia (Máx 20MB, planos/pdf/imágenes/archivos)</label>
@@ -422,7 +436,8 @@ contactForm.addEventListener("submit", async function(e){
         'event_category': 'inquiry',
         'event_label': 'contact_form',
         'country': formData.get('country') || '',
-        'product_interest': formData.get('product') || ''
+        'product_interest': formData.get('product') || '',
+        'lead_source': formData.get('source') || ''
       });
       alert(currentLang==="zh"?"提交成功！":"Inquiry sent successfully!");
       contactForm.reset();
