@@ -285,6 +285,7 @@ header {
 .contact-info-card p { margin-bottom: 10px; color: var(--ink); }
 .contact-info-card a { color: var(--accent); }
 .file-upload-wrap { display: flex; gap: 10px; align-items: center; }
+input[type="file"][hidden] { display: none !important; }
 .file-btn {
     background: var(--accent); color: #07203b; font-weight: 600;
     border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;
