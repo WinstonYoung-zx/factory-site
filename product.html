@@ -543,7 +543,7 @@ async function loadDetail(){
     const title = item.title?.[currentLang] || item.title?.en || "";
     const desc = item.desc?.[currentLang] || item.desc?.en || "";
     const showCategory = categoryI18n[currentLang][item.category] || item.category;
-    const rawImg = item.image || "/uploads/placeholder.jpg";
+    const rawImg = item.image || "/uploads/placeholder.webp";
             const imgSrc = rawImg + (rawImg.indexOf("?") > -1 ? "&" : "?") + "v=20261108";
 
     // 动态更新 SEO meta 标签
@@ -582,7 +582,7 @@ async function loadDetail(){
 
     box.innerHTML = `
       <div class="img-box">
-        <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(title)}" onerror="this.src='/uploads/no-image.jpg?v=20261108'">
+        <img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(title)}" onerror="this.src='/uploads/no-image.webp?v=20261108'">
       </div>
       <div class="info-box">
         <h1>${escapeHtml(title)}</h1>
@@ -607,7 +607,7 @@ async function loadDetail(){
         "@type": "Product",
         "name": title,
         "description": desc,
-        "image": "https://www.zhanxinglobal.com" + (item.image || "/uploads/placeholder.jpg?v=20261108"),
+        "image": "https://www.zhanxinglobal.com" + (item.image || "/uploads/placeholder.webp?v=20261108"),
         "url": "https://www.zhanxinglobal.com/product?slug=" + slug,
         "category": showCategory,
         "manufacturer": {
