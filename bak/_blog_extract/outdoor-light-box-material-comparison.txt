@@ -1,0 +1,93 @@
+Outdoor Light Box Materials: Aluminium Profile vs Galvanized Steel (and When Neither Is Right)
+==============================================================================================
+
+The material decision behind an outdoor light box frame is usually made before anyone thinks much about it — an aluminium profile is standard for frames, galvanized steel is standard for back panels, and that is that. It works well often enough.
+But the standard combination is not optimal for every installation. In coastal environments, at very large sizes, in high-traffic public locations, or at low order volumes, choosing differently changes both service life and unit cost materially. This article sets out what actually differs between the candidate materials and how to decide.
+### The candidates
+Four materials cover essentially all outdoor light box and display frame construction.
+MaterialTypical gradeWhere it usually appears
+Aluminium extrusion | 6063-T5 / 6063-T6 | Frame sections, door profiles, hinge and gasket channels |
+Hot-dip galvanized steel | S235 / S275 / S355 per EN 10025 | Back panels, large structural frames, concealed carcasses |
+Stainless steel | 1.4301 (304) / 1.4401 (316) | Coastal fixings, exposed hardware, vandal-resistant elements |
+Aluminium honeycomb panel | Al skin + Al core | Large flat back panels where flatness matters |
+### What the numbers say
+PropertyAluminium 6063-T5Galvanized mild steel (S275)Stainless 304
+Density (g/cm³) | 2.70 | 7.85 | 7.9 |
+Typical yield strength (MPa) | ~145 (T5); higher for T6 (~180), varies with section thickness | ~275 | ~205 |
+Elastic modulus (GPa) | ~69 | ~200 | ~194 |
+Thermal conductivity (W/m·K) | ~200 | ~50 | ~16 |
+Natural corrosion behaviour | Forms protective oxide film | Sacrificial protection from zinc layer | Passive chromium oxide layer |
+Typical fabrication | Extrusion, cutting, CNC, welding (MIG/TIG) | Cutting, bending, welding, easy field repair | Cutting, forming, welding with care |
+Values are indicative for initial selection; project values must be taken from mill certificates supplied to EN 10204.
+Three things in that table drive almost every real decision.
+### 1. Stiffness, not strength, is usually the binding constraint
+Aluminium's elastic modulus is roughly one third that of steel. If you replace a steel member with an aluminium one of identical section geometry, you get about one third of the stiffness, regardless of the yield strength of the alloy. Aluminium sections are redesigned, not substituted: deeper sections, internal ribs, larger moment of inertia.
+This matters for large-format units. A pillar-wrapped light box around 1.5–3 m wide by 2.5–5 m high relies on section depth to resist flexing, because a visible bow across a tension fabric face ruins the appearance even when nothing has structurally failed.
+### 2. Weight changes every downstream cost
+A correctly redesigned aluminium part typically weighs 40–60% less than the steel equivalent. That reduction compounds: lower shipping cost per unit, higher loading density per container, fewer installation crew hours, and reduced requirement for lifting equipment and ground works.
+Our standard minimum order quantity is one 20'GP container, so packing density is not an academic consideration — it directly determines whether a project clears the container efficiently or pays for air.
+### 3. Thermal conductivity cuts both ways
+Aluminium conducts heat about four times better than steel. For LED-illuminated units this is genuinely useful: the frame acts as a heat sink and helps move heat away from the LED boards and driver. The same property makes aluminium more prone to thermal bridging, where heat flows out through the frame and cold spots form internally — one pathway to the condensation discussed in our IP rating guide.
+Stainless sits at the opposite extreme and is generally chosen for corrosion rather than for any thermal reason.
+### Corrosion: the environment decides
+Selecting on strength alone is how frames fail early. Ask three questions about the installation site.
+Is it coastal or otherwise chloride-exposed? Road de-icing salt, swimming pool plant, and industrial atmospheres count alongside sea air. Chlorides attack both aluminium and steel, but behave differently: aluminium tends toward localised pitting, while zinc sacrificial protection is consumed faster. In these locations stainless, preferably 316 rather than 304, is indicated for fixings and exposed elements.
+Is regular washing likely? Pressure washing damages coatings far faster than rain does. This interacts with the enclosure rating — see the discussion of IP66 in the IP guide.
+Can the frame dry out? Units that stay wet are the ones that fail. Details that trap water against a horizontal surface, or that prevent drainage at the bottom member, shorten life irrespective of material choice.
+### Surface treatments
+TreatmentTypical useStandard reference
+Polyester powder coating, standard | Most architectural work | Qualicoat Class 1 / GSB / AAMA 2604 |
+Polyester powder coating, enhanced durability | High UV exposure, coastal | Qualicoat Class 2 or Seaside class |
+PVDF / fluoropolymer coating | Curtain wall and prestige façades | AAMA 2605 |
+Anodic oxidation | Aluminium requiring a metallic finish | Qualanod, typical AA15 to AA25 thickness classes |
+Hot-dip galvanizing | Steel carcasses | ISO 1461, coating thickness governed by section thickness |
+For steel, understand that the zinc layer provides cathodic protection: it corrodes preferentially, and it protects small exposed cut edges within a limited distance. Large cut or drilled areas need zinc-rich repair treatment. In any specification, ask for the coating thickness in microns and confirm it against the section thickness in ISO 1461.
+### The galvanic corrosion trap
+Aluminium and steel in direct contact in the presence of an electrolyte form a galvanic cell, and the aluminium corrodes. Mixed-metal assemblies need isolation: nylon or plastic washers and bushes at fixings, isolating shims, and coating at contact faces.
+This is exactly why the combination most commonly used in our own units works: an aluminium 6063 profile frame carries the door geometry and gasket channels, while a galvanized steel, aluminium or honeycomb aluminium back panel closes the carcass — with the interface detailed to keep the metals separated. The combination is deliberate, and specifying it well is what keeps it durable.
+### Tooling economics: the factor procurement rarely asks about
+Aluminium profiles are produced by extrusion. Each new section requires a die, typically costing a modest four-figure amount and taking a couple of weeks to produce and trial.
+That has a clear consequence for order size:
+ScenarioBetter choice
+One-off structure, custom size, no repeat | Fabricated steel — no tooling cost, shorter start-up |
+Repeated units in volume | Aluminium extrusion — tooling amortised, lower unit labour, integrated features |
+Complex features needed (hinge channels, gasket grooves, cable channels) | Aluminium — these are extruded in, not added later |
+Very large single panels requiring flatness | Honeycomb aluminium panel or stiffened steel |
+The ability to extrude features into the profile is underrated. A channel for a silicone gasket, a groove for a hinge, a raceway for cabling, and a lip for the diffuser all come out of the die. Achieving the same in fabricated steel means additional parts, additional welds, additional sealing operations, and more places to leak.
+### Ten-year cost, not unit cost
+Comparing quotes per kilogram or per unit favours steel almost every time, and usually gives the wrong answer. Consider the whole life:
+Cost elementAluminiumGalvanized steel
+Material per kg | 2–3× higher | Low |
+Tooling for new sections | Die cost required | None |
+Unit fabrication labour at volume | Lower (features integrated) | Higher (more assembly) |
+Freight and handling | Lighter, denser packing | Heavier |
+Installation labour | Lighter assemblies | May need equipment |
+Coastal corrosion performance | Good with correct coating class | Good, but zinc consumed over time |
+Field modification / repair | Requires aluminium welding capability | Straightforward |
+In benign inland environments with a modest order quantity, fabricated steel often wins honestly. In coastal sites, in high-volume repeat runs, and wherever integrated sealing detail matters, aluminium wins comfortably.
+### A short decision guide
+- The unit is small, one-off, inland, and price-sensitive → fabricated galvanized steel.
+- The unit is large, has a visible face that must stay flat, or needs gasketed sealing → aluminium profile frame with a panel back.
+- Coastal, de-iced, or swim-pool environment → aluminium with marine-class coating, or stainless for fixings and exposed elements; specify it explicitly.
+- Repeat order across many identical units → aluminium extrusion; amortise one die across the run.
+- Public space with impact risk → specify IK08 or higher along with the material; neither choice implies impact resistance.
+### Frequently asked questions
+### Can aluminium simply replace a steel section of the same size?
+Not without redesigning the section. Equal geometry gives roughly one third of the stiffness. The replacement is a deeper or ribbed profile, not the same drawing in another material.
+### Is galvanized steel always cheaper?
+Per kilogram, yes, and usually per unit as well for one-off work. Over a full shipping container of repeated units, or once coating-per hour performance is considered, aluminium frequently ends up competitive or better.
+### Do I need stainless everywhere in coastal areas?
+Usually not — specify it for the elements that are most exposed and hardest to replace: fasteners, hinges, and external brackets. Using 316 throughout is rarely necessary and is very expensive.
+### Which is easier to repair on site?
+Steel. It can be cut, welded and touched up with routine site skills and zinc-rich paint. Aluminium needs appropriate welding capability and, for appearance, likely a replacement section.
+### What should I ask for in the quotation?
+Material grade to a named standard, coating specification including class and micron thickness, the salt spray test standard and hours, and the gasket material specification. Those four items say far more about likely service life than the material name alone.
+### Sources buyers can check
+- EN 10025 — Hot rolled products of structural steels
+- ISO 1461 — Hot dip galvanized coatings on fabricated iron and steel articles
+- Qualicoat / Qualanod — Quality label specifications for aluminium coating and anodising
+- ISO 9227 — Corrosion tests in artificial atmospheres, salt spray tests
+- EN 10204 — Metallic products, types of inspection documents
+### Next step
+Send us the installation environment, the unit size range, and the expected order quantity across the project lifetime. We will recommend a frame structure and coating specification against those three inputs rather than defaulting to whichever material we machined last.
+Request a quotation → contact our engineering team

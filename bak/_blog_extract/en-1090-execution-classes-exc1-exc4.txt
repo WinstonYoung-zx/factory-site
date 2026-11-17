@@ -1,0 +1,87 @@
+EN 1090 Execution Classes EXC1 to EXC4: What Buyers Outside the EU Need to Know
+===============================================================================
+
+If you are buying fabricated steel or aluminium components for a project in the European Union, you will meet EN 1090 early in the conversation. It usually appears as a single line in an enquiry: "Supplier must be EN 1090 certified."
+That one line causes more confusion than almost anything else in our inbox — because EN 1090 is not one certificate, and being "EN 1090 certified" is not a single state you either have or lack. It is a system: a set of execution classes, an audit of the factory that made the parts, and a conformity route defined by whoever designed the structure.
+This article explains how the classes are set, what each level actually demands from a fabricator, and what you should ask for in a quotation. It is written for procurement teams and project managers outside the EU who need to supply into it.
+### What EN 1090 actually is
+EN 1090 is the harmonised European standard for the execution (fabrication and erection) of steel and aluminium structures. It has three parts:
+PartScope
+EN 1090-1 | Requirements for conformity assessment of structural components. This is the part that governs CE marking. |
+EN 1090-2 | Technical requirements for steel structures. |
+EN 1090-3 | Technical requirements for aluminium structures. |
+Under the EU Construction Products Regulation, structural steel and aluminium components placed on the EU market are required to carry CE marking, and EN 1090-1 is the route by which conformity is demonstrated. A manufacturer cannot simply declare compliance; it must operate a documented Factory Production Control (FPC) system that is audited by an EU notified body, which issues an FPC certificate. Only then can the manufacturer issue a Declaration of Performance (DoP) and apply the CE mark.
+Because those obligations attach to defined economic operators rather than to a factory in the abstract, it is worth settling early who signs what — we set that out in our CE marking process guide.
+Note for 2026 projects. Regulation (EU) 2024/3110 replaced the previous Construction Products Regulation (EU) No 305/2011 and applies from January 2026. Where your project involves CE-marked structural components, confirm the current applicable text and standard references with your notified body or responsible designer before finalising procurement documents.
+### The four execution classes
+EN 1090 defines four execution classes, EXC1 through EXC4. The class sets the level of quality control required across the whole fabrication process: welding supervision, material traceability, dimensional tolerances, surface preparation, inspection, and documentation.
+Higher class = more control = more documentation = higher cost. It does not mean "better built" in a general sense. A component correctly made to EXC2 is not inferior to one made to EXC3; it simply serves a structure with lower consequences of failure.
+Here is the practical meaning of each level.
+ClassTypical applicationWhat it implies
+EXC1 | Non-critical, lightly loaded agricultural or storage structures; some secondary components | Basic control. Tolerances and documentation kept light. Welding coordination generally not mandatory. |
+EXC2 | The default class for ordinary buildings and most architectural metalwork — including frames for shelters, canopies, signage structures, and display units | Documented welding coordination, traceable materials, defined inspection regime. This is where most commercial work sits. |
+EXC3 | Structures where failure would have serious consequences: bridges, grandstands, public buildings with higher occupancy, masts and towers | Comprehensive welding coordination, stricter tolerances, expanded NDT requirements, formally qualified personnel. |
+EXC4 | Structures with extreme consequence or special service conditions — long-span bridges, offshore structures, certain nuclear and special-use applications | Additional requirements agreed case by case between designer and fabricator, on top of EXC3. |
+Most buyers over-specify. For architectural metalwork — bus shelters, wayfinding structures, display frames — EXC2 (sometimes EXC1 for small non-load-bearing items) is usually what the structural designer has in mind. Asking for EXC3 without a corresponding structural reason adds cost and lead time without adding safety.
+### Who decides the execution class — this is the part people get wrong
+The execution class is determined by the project's responsible designer, not by the fabricator, and not freely by the buyer.
+EN 1090 sets the class from three inputs:
+- Consequence class — how serious failure would be (CC1, CC2, or CC3, per EN 1990).
+- Service category — whether the structure sees essentially static loading (SR1) or fatigue-relevant loading such as traffic, crowd-induced vibration, wind cycling, or fluctuating water loading (SR2).
+- Production category — whether the components come from a shop that specialises in metalworking (PC2) or one where metal work is incidental to other activities (PC1).
+The simplified relationship looks like this:
+Consequence classService categoryTypical resulting class
+CC1 | SR1 | EXC1 |
+CC2 | SR1 | EXC2 |
+CC2 | SR2 | EXC2 to EXC3 |
+CC3 | SR1 or SR2 | EXC3 to EXC4 |
+The full determination uses the tables in EN 1090-2 (steel) and EN 1090-3 (aluminium). Always rely on those tables and your designer's specification rather than on any simplified chart, including this one.
+Three practical consequences follow from this:
+- If your specification does not state an execution class, ask the designer to state one. A fabricator quoting without a declared class is guessing, and so are you.
+- A fabricator quoting "EN 1090 certified" without naming the class has told you very little. The class is what defines scope.
+- If you raise the class to seem cautious, you will be quoted for it. Ask for the class the structure actually needs.
+### Is EN 1090 even applicable to your parts?
+This is a genuinely common source of wasted effort.
+EN 1090 covers structural components — load-bearing parts that form part of a building or civil engineering works, or that are placed on the EU market as construction products. Purely non-structural architectural elements frequently fall outside its scope and are instead governed by product-specific requirements (electrical safety for illuminated units, for example, or glass standards).
+In our own product range the split is clear:
+ProductStructural aspect
+Bus shelter frames, Platform canopy frames | Load-bearing. Normally within EN 1090 scope, typically EXC2. |
+Large-format display and light box framing | Depends entirely on how it is mounted. A ground-standing frame carrying wind load is structural; a wall-recessed unit fixed to a building is usually not. |
+Wayfinding signage structures | Varies with size and mounting. Tall ground-mounted structures usually are structural; small wall-mounted signs usually are not. |
+Getting this classification right at enquiry stage can remove weeks of confusion later. Bring a rough loading case and mounting description to the first conversation.
+### What to ask a supplier: the document checklist
+Whether or not the fabricator holds an EU notified body certificate, these documents tell you what you are actually buying. All of them are things a capable shop can produce; none require guessing at what "certified" means.
+1. Factory Production Control certificate — issued by an EU notified body, and it must state the standard (EN 1090-1), the execution class(es) covered, the product scope, and the certificate expiry. Check all four. A certificate that does not name the class or scope is close to worthless for your project.
+2. Declaration of Performance — the formal statement of what each component delivers, referenced to essential characteristics. Required for CE marking.
+3. Welding coordination evidence — the qualification of the responsible welding coordinator, per EN ISO 14731. Commonly: a specific-level coordinator is expected for EXC2 work, and a comprehensive-level coordinator for EXC3 and EXC4. Confirm the level your project actually requires.
+4. WPS and PQR, plus welder qualifications — see WPS, PQR and Welder Qualification Explained for how to review these; the Welding Procedure Specification and its supporting Procedure Qualification Record show that the joint design has actually been qualified rather than assumed. Welder qualification certificates should be current and matched to the process and position.
+5. Material certificates to EN 10204 — covered in detail in our EN 10204 certificate guide; in practice you want 3.1, meaning the inspection document is validated by the manufacturer's authorised inspection representative who is independent of the production department. Type 2.2 (a statement of compliance without an independent inspection result) is sometimes all that is available for stock items, but ask explicitly and know which you are receiving.
+6. Traceability records — heat or cast number from the raw material through to the finished component. This is the single best indicator that a workshop really operates a control system rather than a certificate folder.
+7. Inspection and test records — dimensional checks, coating thickness readings, and salt spray or other durability test results where the environment justifies them.
+### A word on cost and honesty
+Here is something we would rather tell you upfront than have you discover later.
+We are a Shanghai-based fabricator, established in August 2023, supplying light boxes, wayfinding structures, LED display framing, bus shelters, and custom steel and aluminium assemblies to Europe, the Middle East and the Americas. We hold ISO 9001, ISO 14001 and ISO 45001 quality management certifications (currently completing our recertification cycle), and we routinely provide EN 10204 3.1 material certificates, qualified WPS/PQR with welder qualifications, third-party coating thickness and salt spray testing, and IEC 60529 IP protection test reports, with pre-shipment inspection available through a third party.
+What we do not do is claim blanket CE coverage for products we cannot evidence.
+For projects requiring destination-market certification — EN 1090, CE, UL, SASO, ECAS or G-Mark — we handle it project by project, with the required testing performed by a laboratory nominated by the buyer or by the buyer's appointed notified body. That is a slower route than buying from a fabricator who already holds the certificate for exactly your product scope and class. It is also a transparent one, and it is usually the only honest option available to a specialist shop working across varied product types.
+If your project genuinely requires an existing notified body FPC certificate for a named class, tell us that in the first email. We will either confirm we can arrange it, or tell you quickly who can — saving both of us weeks.
+### Frequently asked questions
+### Is EN 1090 the same as CE marking?
+No. EN 1090-1 is the route to CE marking for structural steel and aluminium components. The standard defines how conformity is assessed; CE is the mark that results when it has been.
+### Can a supplier outside the EU be EN 1090 compliant?
+Yes. Notified body FPC certification is available to non-EU manufacturers, and many hold it. What matters to you is whether the certificate covers your product scope and your required execution class, and whether it is current.
+### Do I always need the highest execution class?
+No, and specifying too high is a common and avoidable cost. The class follows the structural consequence. Ask your designer for the specified class and procurement documents that quote it.
+### What if my structure is aluminium, not steel?
+Same structure of classes and same conformity route, but the technical requirements come from EN 1090-3 rather than EN 1090-2. Make sure any certificate you are shown names the aluminium part.
+### We are not supplying into the EU. Do we still care?
+Often yes. Many Middle East and international tenders reference EN 1090 as a proxy for fabrication quality even where CE marking is not legally required. In those cases the documentation matter more than the mark.
+### Sources buyers can check
+- EN 1090-1 — Requirements for conformity assessment of structural components
+- EN 1090-2 (steel) / EN 1090-3 (aluminium) — Technical requirements, including the execution class tables
+- EN 1990 — Basis of structural design, including consequence classes
+- EN ISO 14731 — Welding coordination, tasks and responsibilities
+- EN 10204 — Metallic products, types of inspection documents
+- Regulation (EU) 2024/3110 — Construction Products Regulation applicable from 2026
+### Next step
+If you have a fabrication enquiry with a specified execution class, send us the drawings, the loading case, and your required documentation list. Standard shop drawings are returned within two working days of enquiry; production lead time is 25 to 35 working days after deposit and drawing approval.
+Request a quotation → contact our engineering team

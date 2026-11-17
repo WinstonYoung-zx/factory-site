@@ -1,0 +1,90 @@
+WPS, PQR and Welder Qualification: What Your RFQ Should Actually Ask For
+========================================================================
+
+Welding documentation requests are frequently written by copying a previous tender without understanding what is being asked for. The result is either a stack of irrelevant paperwork or, worse, no paperwork at all for the joints that actually carry load.
+There is a reason the documents exist, and it is not bureaucratic. Welding is a special process. Once a joint is finished and painted, its internal quality cannot be verified by looking at it. A fillet weld that looks perfect externally can be barely fused underneath. So the industry does not inspect finished welds into submission — it qualifies the method, qualifies the person, and supervises them.
+Three documents make up that system, and they are routinely confused with one another.
+### The three documents
+DocumentWhat it isWho issues itAnalogy
+WPS — Welding Procedure Specification | The instruction sheet telling a welder how to make a specific joint: method, filler, position, parameters, preheat | The manufacturer | The recipe |
+PQR (also WPQR) — Procedure Qualification Record | The recorded evidence that following that recipe produced a joint that passed testing | The manufacturer, from actual physical testing | The test bake you did before writing the recipe down |
+WPQ — Welder Performance Qualification (often called welder quals) | Proof that a specific named person can execute the procedure competently | Following witnessed testing of that person | The cook's certificate |
+The relationship runs one way: the PQR comes first. You test a joint, record the results, and only then write a production WPS supported by that record. A WPS with no supporting PQR is a guess written down.
+Then a qualified welder — with a current WPQ — follows the WPS.
+Here is the trap: having all three documents does not guarantee the welder on your job followed the WPS that afternoon. Documentation proves capability. Supervision proves execution. That is what welding coordination under ISO 14731 exists for.
+### When these documents actually matter
+Not every welded product needs a qualified procedure. A decorative sheet-metal trim assembled with light fillet welds and carrying no load does not warrant ISO 15614 testing, and specifying it there just adds cost.
+A rough decision guide:
+SituationWhat you should require
+Load-bearing structural members, connections subject to wind or crowd loading | Qualified WPS with supporting PQR; welders holding current WPQ |
+Work under EN 1090 at EXC2 or above | The above, plus documented welding coordination — see our EN 1090 execution class guide |
+Fatigue-loaded details — vehicle impact, rotating equipment, repeatedly loaded barriers | Additional attention to detail category and possibly NDT beyond visual |
+Thin non-load-bearing cosmetic assemblies | Fabricator's standard procedures usually sufficient; ask for welder quals only |
+With street furniture in particular, the fatigue case deserves a thought. A bus shelter frame does not see much dead load, but it sees constant wind cycling over decades. A marginally fused fillet at a base connection is exactly where a fatigue crack starts. That is why shelter frames are not a trivial welding job, even though they look like one.
+### The governing standards
+StandardScope
+ISO 15607 | General rules for specifying and qualifying welding procedures |
+ISO 15614-1 | Welding procedure test — arc and gas welding of steels |
+ISO 15614-2 | Welding procedure test — arc welding of aluminium and its alloys |
+ISO/TR 15608 | Metallic materials grouping system |
+ISO 9606-1 | Welder qualification testing — steels |
+ISO 9606-2 | Welder qualification testing — aluminium and aluminium alloys |
+ISO 6947 | Welding positions |
+ISO 14731 | Welding coordination — tasks and responsibilities |
+### Reading a WPS: the variables worth checking
+You do not need to be a welding engineer to review a WPS usefully. Most errors buyers would care about show up in this list.
+Welding process. Referenced by ISO 4063 number: 111 is manual metal arc, 135 is MAG with active gas, 141 is TIG. Note that aluminium is normally TIG or MIG — a steel procedure with a different process number does not transfer.
+Parent material group. Per ISO/TR 15608, structural steels commonly fall in group 1, while aluminium alloys fall in groups 21, 22 and 23 depending on whether they are pure, non-heat-treatable or heat-treatable. 6063 sits in group 23. A qualification for one group does not automatically cover another.
+Thickness range covered. This is the one most often quietly mismatched. A PQR tested on 10 mm plate typically covers a defined range either side — not unlimited thickness. If your frame uses 4 mm and 12 mm sections, verify both are inside the qualified range, or that two procedures exist.
+Joint type and preparation. Fillet, single-V, double-V. Butt joints and fillet welds are qualified separately in important respects.
+Filler metal designation. A consumable that matches the parent group and any toughness requirement.
+Shielding gas and flow rate.
+Electrical parameters and polarity. Range of current and voltage, plus transfer mode for MAG.
+Preheat and interpass temperature. More critical than it looks, particularly for thicker steel sections where hydrogen cracking is a real risk.
+Welding position. Per ISO 6947: PA flat, PB horizontal-vertical fillet, PC horizontal, PD horizontal-overhead fillet, PE overhead, PF vertical upward. A qualification covering only PA will not legitimate overhead site welding.
+Heat input limits or run-out length per pass. Relevant where distortion control and mechanical properties matter.
+### Validity: the point nearly everyone gets wrong
+Here is a question that comes up in almost every tender clarification:
+"Your PQR is four years old. Please provide an updated one."
+A PQR does not expire.
+A PQR is a historical fact: on this date, this joint was made under these conditions and passed these tests. That statement does not become false with time. Re-testing a procedure because the calendar moved is not required by ISO 15614.
+Welder qualifications do have validity. Under ISO 9606, a welder qualification is generally valid for two years from the test date, and may be extended in six-month increments provided the employer (or the responsible body) confirms the welder has continued to work within the qualified range during that period. Allow the confirmation to lapse and the qualification ceases to be valid.
+Conflating these two leads to two opposite errors:
+- Buyers reject perfectly acceptable PQRs for age — adding cost and delay for no reason.
+- Buyers accept welder qualification records without checking whether the six-month employer confirmations are being maintained — accepting certificates that quietly expired.
+Ask for the welder's certificate plus the most recent extension confirmation. That second sheet is the one most suppliers leave out.
+### The documentation checklist for your RFQ
+ItemAsk forNotes
+WPS for the joints in your scope | Yes | Should reference your actual joint types and thicknesses |
+Supporting PQR | Yes | Check that it covers the same material group and thickness range |
+Welder names and current WPQ | Yes | With the latest extension confirmation |
+Welding coordinator's qualification | Yes for EXC2 and above | Per ISO 14731; commonly a specific level for EXC2, comprehensive for EXC3 and EXC4 |
+NDT reports if specified | Where applicable | Visual inspection to ISO 17637; MT, PT, UT to their own standards depending on joint criticality |
+Repair rate or repair procedure | Worth asking | Every shop has repairs. The interesting question is whether they are documented and controlled |
+Material certificates | Yes | See our EN 10204 certificate guide |
+### What we provide, and what we do not
+We supply light boxes, wayfinding structures, LED display framing, bus shelters and custom steel and aluminium assemblies from Shanghai, exporting to Europe, the Middle East and the Americas. We are ISO 9001, ISO 14001 and ISO 45001 certified, currently completing our recertification cycle.
+For welding documentation we routinely provide qualified WPS with supporting PQR and welder qualification records, alongside EN 10204 3.1 material certificates, third-party coating thickness and salt spray testing, and IEC 60529 IP reports. Third-party pre-shipment inspection can be arranged.
+Being straight about scope: we do not claim to hold every destination-market approval. EN 1090, CE, UL, SASO, ECAS and G-Mark are handled project by project, with testing carried out by a laboratory nominated by the buyer or by a notified body you appoint. We are a young company — established August 2023 — and we would rather tell you that in the first email than have it discovered during evaluation.
+What we do bring is that our welding is documented rather than assumed, and we will show you the records before you commit.
+### Frequently asked questions
+### Is a WPS enough, or do I need the PQR too?
+Ask for both. The WPS is the instruction; the PQR is the evidence that the instruction produces a sound joint. A WPS without a PQR support is usually a template rather than a qualification.
+### Why does one WPS not cover everything?
+Qualifications are scoped by material group, thickness, process, position and joint type, among other variables. A busy fabrication order can legitimately need several procedures.
+### Can I ask for a specific welding process?
+Yes, and sometimes you should. Specifying TIG for exposed aluminium that will be visible afterwards is common, as it gives a cleaner appearance than MAG.
+### Should I require non-destructive testing?
+For higher consequence work, yes. Specify the method and acceptance level — visual (ISO 17637), penetrant, magnetic particle or ultrasonic — because "NDT required" without a standard and acceptance criterion is not a testable requirement.
+### Who pays for third-party inspection?
+Usually the buyer, since the inspector acts for you. It is worth the cost on larger programmes. Arrange it before production begins, not after.
+### Sources buyers can check
+- ISO 15607 and ISO 15614 series — Welding procedure specification and qualification
+- ISO 9606-1 and -2 — Welder qualification testing for steels and aluminium
+- ISO/TR 15608 — Metallic materials grouping system
+- ISO 6947 — Welding positions
+- ISO 14731 — Welding coordination
+- ISO 17637 — Visual testing of fusion-welded joints
+### Next step
+Send us your drawings with the load-bearing joints marked, and we will quote with the procedure coverage and welder documentation stated explicitly rather than hidden behind a generic compliance statement.
+Request a quotation → contact our engineering team

@@ -1,0 +1,133 @@
+Smart Bus Shelter Specification Checklist: Every Option You Need to Decide Before Requesting a Quote
+====================================================================================================
+
+Most shelter projects do not go wrong during manufacture. They go wrong during specification.
+A municipality issues an enquiry for "a bus shelter, 6 metres, with a light box". Three suppliers quote. The quotes differ by a factor of two. Nobody can tell whether the difference is in the roof glazing, the frame coating, the electrical installation, or simply in what each supplier assumed would be included. Then the first change order arrives for a drainage detail nobody had discussed, and the budget moves.
+The cure is tedious and unglamorous: decide every option before you ask for the price. This checklist exists so you can do that. Work through it once, save it as your standard enquiry form, and use it every time. It is written for municipal procurement officers, transport operators, and contractors putting shelters into a wider streetscape package.
+We build to whatever you specify. We have delivered 200+ sets of urban shelters, alongside metro light box programmes exceeding 600 sets, so we tend to see the same decision points repeatedly. Below is the full list.
+### 1. Structure and dimensions
+DecisionCommon optionsWhat affects the choice
+Frame material | Aluminium profile / galvanized steel / stainless elements | Environment, budget, weight limits at the site |
+Overall length | Commonly 4–8 m | Platform length, how many people must be sheltered |
+Depth | Commonly 1.2–1.8 m | Available footway width — check against accessibility requirements |
+Clear height | Commonly 2.4–3.0 m | Advert panel size and any national requirement |
+Roof form | Flat / single pitch / barrel | Drainage behaviour and local design codes |
+Roof glazing | Solid polycarbonate / laminated glass / aluminium panel | Impact risk, UV life, acoustic behaviour in rain |
+Fixing method | Base-plate anchors onto existing slab / cast-in foundation | Whether groundworks are in your scope |
+Ask early about wind and snow loading. A shelter is a light structure with a large surface area, which makes wind the governing case. We design to the parameters you provide, so the project needs a stated basic wind velocity or reference to the applicable national annex of EN 1991-1-4, and similarly for snow to EN 1991-1-3. If you cannot supply these, tell us the city and we will tell you what we need — but it should be settled before manufacture, not after.
+Frame selection follows the same reasoning as our light box material comparison: aluminium profile for repeat units and integrated gasket channels, fabricated galvanized steel for one-off sizes and heavy-duty sites.
+### 2. Advertising panel or light box
+DecisionOptionsNotes
+Panel count | One / two, or none | Double-sided panels increase wind loading |
+Poster size | Set by your poster standard | We build the frame and door around your poster dimensions, not the reverse |
+Illumination | LED edge-lit or back-lit | Back-lit gives better uniformity on tension fabric; specify if uniformity matters |
+Light source | Osram / Philips / Nichia or equivalent | State if you have a preference |
+Driver | 100–240 V wide input, Meanwell or equivalent | Wide input helps in regions with unstable supply |
+Changing mechanism | Static frame / scrolling system | Scrolling increases cost, servicing needs and power draw |
+Face material | Tension fabric / glass / polycarbonate | Glass for vandal resistance — pair with an IK rating |
+Sealing | Referenced to your IP requirement | Minimum IP65 outdoor; IP66 where washing is routine |
+State the poster size first. Nearly every layout conversation downstream depends on it, and it is the most common missing item in enquiries we receive.
+### 3. Smart and electrical modules
+This is where "smart shelter" budgets either come together or fall apart. Every module has power, data and servicing consequences — specify each one deliberately.
+ModuleDecideNotes
+Arrival / information display | None / simple next-bus LED board / full-screen RTPI display | Full RTPI requires integration with local transport data feeds. Confirm who supplies the feed and the interface protocol |
+Charging provision | None / USB outlets / wireless pad / AC socket | Specify the standard — regional plug and socket standards differ |
+Wi-Fi access point | Yes / No | Who is the carrier, and who carries the recurring cost? |
+CCTV | Provision only / camera supplied / full recording system | Often excluded from shelter scope — clarify explicitly |
+Emergency call point | Yes / No | Usually tied to a city-wide monitoring centre |
+Lighting control | Photocell / timer / remote | Photocell plus timer is the common default |
+Environmental sensors | PM, noise, temperature | Data platform ownership needs deciding |
+Wayfinding display | Printed panel / electronic screen | See our metro and airport wayfinding work |
+Seating | Bench length and material; anti-homeless design if required | A frequent source of late changes |
+Other furniture | Litter bin, planter, bicycle stand | Include in the same enquiry to avoid separate freight |
+### 4. Power supply and distribution
+Decide this early, because it affects whether this is a fabrication project or a utility-coordination project.
+- Mains supply or solar? Mains is straightforward where a duct exists. Solar with battery storage makes sense where trenching is expensive, but battery sizing depends on the display load and local conditions — and there will be recurring battery replacement around every few years.
+- Who provides the electrical connection to the site? Usually outside a shelter supplier's scope; state it clearly in the enquiry either way.
+- Distribution board and protection — RCD or RCBO protection, earthing arrangement, and surge protection if the area has lightning exposure.
+- Cable routing — concealed within the section, or surface conduit. Concealed routing must be designed into the profile.
+- Panel location — integrated into the unit, or a separate external enclosure with its own IP rating.
+### 5. Accessibility and safety
+Frequently reviewed late, and one of the areas most likely to require rework:
+- Wheelchair turning space, confirmed against local accessibility regulations
+- Tactile ground surface indicators at the boarding area
+- Contrasting colour elements for partially sighted passengers
+- Anti-slip floor specification on the platform or base plate
+- Clear line of sight for approaching drivers
+- Lighting levels sufficient for personal safety at night
+### 6. Compliance and documentation
+Requirements differ by destination, and this line item is often stated too vaguely to quote.
+Destination marketCommonly required
+European Union | CE marking route for the structural frame; the route depends on whether the frame is load-bearing — see our guide to EN 1090 execution classes |
+Middle East | SASO, ECAS, or G-Mark depending on the country programme |
+North America | UL or ETL listing for electrical assemblies |
+Any destination | Electrical safety standard for luminaires, typically per IEC or EN 60598 series |
+Also decide whether you require: EN 10204 3.1 material certificates, WPS/PQR and welder qualification records, third-party coating thickness and salt spray testing, or third-party pre-shipment inspection. We can arrange any of these; they add cost and lead time, so they belong in the original enquiry rather than a change order.
+### 7. Packing, shipping and installation
+Shelters are bulky and relatively light, so freight is driven by volume rather than weight.
+- Knock-down or pre-assembled? Knock-down shipping dramatically improves container utilisation and is the default for volume orders; pre-assembled units reduce site labour but occupy far more space.
+- Container planning — we will provide a packing plan showing units per 20'GP or 40'HC once dimensions are fixed.
+- Installation — we do not send crews overseas. What we provide is detailed installation drawings, a printed manual, and remote video support during installation. This should be stated in your bid documents so nobody assumes otherwise.
+- Spare parts — ask for a recommended spares list at quotation stage. Ordering single replacement panels later is expensive and slow.
+Full terms are covered in our FAQ: minimum order quantity is one 20'GP container, lead time is 25 to 35 working days after deposit and drawing approval, and payment is T/T with 30% deposit and 70% before shipment.
+### Copy-paste enquiry template
+Replace the bracketed items and send. Everything here materially affects the quotation.
+1. Type and quantity
+Shelter length / depth / clear height: [ ]
+Quantity this order: [ ]
+Expected repeat over project life: [ ]
+2. Site conditions
+City, country: [ ]
+Basic wind velocity / applicable code: [ ]
+Snow load if applicable: [ ]
+Coastal or de-iced road exposure: [ yes / no ]
+3. Frame and finish
+Frame material: [ aluminium / galvanized steel / stainless elements ]
+Coating specification: [ standard polyester / marine class / other ]
+Colour reference (RAL or equivalent): [ ]
+4. Roof and panels
+Roof glazing material: [ ]
+Side panel material: [ ]
+5. Advertising panel
+Poster size: [ ]
+Single or double sided: [ ]
+Scrolling or static: [ ]
+IP requirement: [ IP65 / IP66 / other ]
+6. Smart modules
+Arrival display: [ none / LED board / full RTPI ]
+Data feed responsibility: [ buyer / supplier / third party ]
+Charging provision: [ none / USB / wireless / AC socket ]
+Other: [ Wi-Fi / CCTV / sensors / emergency call ]
+7. Power
+Supply type: [ mains / solar with battery ]
+Volts and frequency: [ ]
+Electrical connection to site: [ buyer scope / supplier scope ]
+8. Accessibility requirements
+Applicable regulation: [ ]
+Wheelchair turning space required: [ yes / no ]
+Tactile indicators: [ yes / no ]
+9. Compliance documents required
+[ ] EN 10204 3.1 material certificates
+[ ] WPS / PQR with welder qualifications
+[ ] Third-party coating thickness test
+[ ] Salt spray test (ISO 9227), hours: [ ]
+[ ] Third-party pre-shipment inspection
+[ ] Destination certification: [ none / EN 1090 / CE / UL / SASO / ECAS / G-Mark ]
+10. Commercial
+Target delivery port: [ ]
+Requested delivery date: [ ]
+Spare parts required: [ yes / no ]
+### Frequently asked questions
+### What is the minimum order quantity?
+One 20'GP container. Shelter components pack efficiently when knocked down, so this typically works out reasonably even for mid-sized programmes. See our FAQ.
+### How long does production take?
+25 to 35 working days after deposit and drawing approval. Drawing approval is often the longest phase in practice, which is why a complete enquiry like the template above saves real time.
+### Can you integrate with our local transport data feed?
+We can accept most standard protocols, but the feed itself — and any recurring data charges — must be arranged with your transport operator. Tell us the interface at enquiry stage.
+### Do you install overseas?
+No. We supply installation drawings, a manual, and remote video support during installation.
+### Can we order additional furniture in the same shipment?
+Yes, and it usually makes sense to — combining bins, benches and planters into one container spreads freight across the whole package.
+### Next step
+Send the completed template and we will return shop drawings within two working days, followed by a quotation itemised against the same structure so you can compare it line for line with other bids.
+Request a quotation → contact our engineering team

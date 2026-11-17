@@ -1,0 +1,119 @@
+Outdoor LED Display Specification: Brightness, Pixel Pitch, Heat and Access
+===========================================================================
+
+Outdoor LED display enquiries usually arrive in the form "we need a 6 m² screen." That is an incomplete specification, and quoting against it forces every supplier to fill the gaps differently — which is exactly why quotes for apparently similar screens differ by large margins.
+Four variables determine almost everything about cost, service life and fitness for purpose: brightness, pixel pitch, thermal design, and how the thing will be serviced. This article walks through each, with the decision logic that actually applies on site.
+### 1. Brightness: match it to the light, not to the brochure
+Brightness is specified in nits (cd/m²). What matters is the ambient light the screen has to compete with, and the single largest variable is whether the sun reaches it.
+InstallationTypical brightness rangeNotes
+Indoor, controlled lighting | 600–1,200 nits | Higher than needed creates glare complaints |
+Semi-outdoor, permanently shaded or under canopy | 2,500–3,500 nits | Shaded concourses and arcades |
+That second row is exactly where an LCD unit belongs rather than an LED wall — see our LED versus LCD guide for how the decision falls in practice.
+Outdoor with intermittent sun4,000–5,500 nitsMost street-facing installations
+Higher is not automatically better. Three reasons:
+- Night-time over-brightness is a genuine complaint generator. A screen specified to defeat midday sun will be unpleasant after dark. Cities increasingly regulate this, and some outright reject applications. Automatic dimming on a schedule or ambient sensor is not optional — specify it.
+- LEDs depreciate. Output falls gradually over operating hours. Sensible specifications state the initial brightness and require the supplier to confirm the figure retained after a stated number of hours, so both parties know what "5,000 nits" refers to in year three.
+- Brightness costs power and heat. Every extra nit is additional electrical load, additional heat to reject, and additional running cost.
+Ask explicitly for the automatic brightness control method and whether scheduled step-downs are possible. It is one of the cheapest things to get right in design and one of the most awkward to retrofit.
+### 2. Pixel pitch: driven by viewing distance
+Pixel pitch is the distance between LED clusters, in millimetres. Smaller pitch means more resolution, more LEDs, and substantially more cost.
+Cost does not scale linearly with pitch. Halving the pitch roughly quadruples the LED count, which drives driver count, power, control hardware and failure rate. Paying for resolution nobody can perceive is one of the most common ways these budgets overspend.
+A working rule of thumb:
+Minimum comfortable viewing distance ≈ pitch in millimetres, expressed in metres.
+Best image quality ≈ 2 to 3 times that figure.
+So a P10 panel has a minimum distance around 10 m; a P4 around 4 m. Below those distances the image looks granular.
+PitchMinimum viewing distanceTypical application
+P2.5 – P3 | ~2.5–3 m | Indoor lobbies, retail windows, close-view concourses |
+P4 | ~4 m | Covered plazas, station interiors |
+P6 | ~6 m | Canopy-mounted displays, mid-distance exterior viewing |
+P8 – P10 | ~8–10 m | Roadside, building façade at distance, large platforms |
+P10+ | 10 m and beyond | Long-distance viewing, large-format advertising |
+For most outdoor public installations the viewing distance is comfortably beyond 10 m, which is why very fine pitch rarely pays off outdoors. If someone quotes you P3 for an exterior elevation, ask what viewing distance it was selected for.
+Specify the viewing distance, not the pitch. Give your supplier the range at which the audience actually stands or passes, and let them select the pitch. You will usually get a cheaper screen that looks identical in use.
+### 3. Access and maintenance: decide this before the structure is designed
+This is the decision that most often gets discovered too late, and it is expensive to reverse because it dictates the physical depth behind the screen.
+Access typeRequirementConsequence
+Front service | Modules removable from the viewing face, using tools or magnetic fixtures | Minimal rear clearance needed — can sit close to a wall or structure. More complex modules, and generally higher unit cost |
+Rear service | A technician accesses modules from behind through a plenum or walkway | Needs meaningful rear clearance, typically several hundred millimetres plus removable panels. Simpler modules, usually cheaper |
+If the screen is going on a solid wall, in a recess, or wrapped around a column, rear access may be impossible — which forces a front-service design. If it is free-standing or mounted in an open frame with access behind, rear service may be simpler and cheaper.
+Two things to settle with whoever designs the supporting structure:
+- Where will failed modules be replaced from? A screen mounted at height needs a lift plan or permanent access gantry.
+- What is the spare parts position? Ask for a recommended spares schedule at quotation — commonly a small percentage of modules, one or two power supplies, and a receiving card. Ordering single modules later is slow and disproportionately expensive.
+For enclosure protection against water and impact — and the additional ratings besides —see our IP rating guide. At street level specify an IK rating alongside the IP rating; neither implies the other.
+### 4. Thermal design: where outdoor screens actually die
+Heat is the dominant life-limiting factor for outdoor LED, ahead of water ingress. A dark-coloured housing in direct sun gains a great deal of heat before you even account for the electronics; internal cabinet temperatures well above ambient are normal, and "ambient + solar gain" is the number that matters.
+The consequences are cumulative and expensive: accelerated LED output depreciation, early driver and capacitor failure, colour shift between cabinets, and in bad cases thermal shutdown during peak heat.
+Three thermal approaches:
+ApproachTypical useTrade-off
+Natural convection via heatsink fins | Small displays, mild climates | No moving parts, no maintenance, limited capacity |
+Forced air with filtered fans | Mid-size installations | Effective, but filters need cleaning on a schedule — missed maintenance negates it |
+Air conditioning integrated into the cabinet | Large displays, hot climates | Best temperature control; adds power draw, cost and a service item with mechanical wear |
+For installations in hot regions, derate deliberately. Gulf and similar climates combine high ambient temperature with intense solar load. Specify the maximum ambient operating temperature your site requires — naming figures such as 45 °C or 50 °C — rather than accepting a generic outdoor rating, and ask how output is managed at the top of that range.
+Two supporting points:
+- Cabinet material matters. Aluminium conducts heat several times better than steel, which is one reason aluminium cabinet sections are favoured for LED housings — the same property discussed in our material comparison.
+- Leave the ventilation paths clear. Enclosures get boxed in during installation. Specify that the air path survives the finished build.
+### 5. Electrical and control
+- Power supply — wide input range (100–240 V) helps where the supply is unstable. Confirm the required nominal voltage and frequency for your country at enquiry stage.
+- Protection — overcurrent protection, earthing arrangement, and surge protection. Lightning exposure and unstable grids both argue for surge protection; replacement of a whole display after a storm is a well-documented failure pattern.
+- Consumption estimate — ask for typical and maximum draw, then size cabling and supply accordingly. Maximum draw matters for the upstream breaker.
+- Control architecture — decide between synchronous control (content mirrors a live source) and asynchronous (content stored and played from internal memory, updated over network or USB). Many installations need only asynchronous, and specifying synchronous raises cost unnecessarily.
+- Monitoring — worthwhile and usually inexpensive: cabinet temperature alarms, fan failure alerts, and pixel or module fault reporting turn emergency call-outs into scheduled maintenance.
+### 6. Compliance
+MarketCommonly required
+European Union | CE marking covering EMC and low voltage; RoHS for material restrictions |
+North America | UL or ETL listing for electrical safety |
+Middle East | SASO, ECAS or G-Mark depending on country programme |
+All outdoor installs | IP rating front and rear (typically IP65 front), plus IK08+ at street level |
+Any destination | Wiring regulations to local code; confirm the standards before quoting |
+We build to whatever you specify and supply documentation to match, but we do not hold blanket destination certificates — an approach we have written about honestly in the EN 1090 guide. Where a project requires certification, we handle it project by project with testing by a laboratory you nominate, which is slower than buying from a supplier who already holds the approval for exactly your product category, and more transparent.
+### Specification checklist
+1. Location and mounting
+Indoor / semi-outdoor / fully outdoor: [ ]
+Sun exposure, and for how many hours: [ ]
+Max ambient temperature at site: [ ]
+Mounting type: [ wall / column wrap / hung / free-standing / embedded ]
+Rear clearance available: [ mm ]
+Front or rear service: [ ]
+2. Visual
+Viewing distance range: [ m to m ]
+Minimum audience distance: [ m ]
+Screen size (W x H): [ ]
+Aspect ratio constraint: [ ]
+3. Optical
+Required brightness: [ nits ]
+Automatic dimming required: [ yes / no ]
+Night-time brightness limit if regulated: [ ]
+4. Ratings
+IP rating front / rear: [ ]
+IK rating: [ ]
+Coastal or de-icing salt exposure: [ yes / no ]
+5. Electrical
+Supply voltage and frequency: [ ]
+Control type: [ synchronous / asynchronous ]
+Monitoring required: [ temp / fan / module fault ]
+6. Compliance
+Required certification: [ CE / UL / ETL / SASO / ECAS / G-Mark ]
+Language of documentation: [ ]
+7. Commercial
+Quantity: [ ]
+Spare parts required: [ yes / no ]
+Delivery port and requested date: [ ]
+### Frequently asked questions
+### Higher brightness always gives a better picture, right?
+No. Excess brightness at night causes glare complaints and may breach local regulation. Specify brightness for the daytime condition and require automatic dimming after dark.
+### Do I need a fine pixel pitch outdoors?
+Rarely. Outdoor audiences are usually 10 m or more from the screen, where P8 to P10 is appropriate. Fine pitch outdoors mainly increases cost, power and heat.
+### Can the screen go directly against a wall?
+Yes, but only with a front-service design. Decide before the housing is built — retrofitting access is expensive.
+### How long do outdoor LEDs last?
+Output depreciates gradually rather than failing suddenly. Ask what output is retained after a stated operating-hour figure, and compare answers on that basis rather than on headline lifetime claims.
+### What about displays in very hot climates?
+Specify the maximum ambient operating temperature rather than accepting a generic outdoor rating, and expect either forced-air or conditioned cooling. Heat, more than rain, determines service life.
+### Sources buyers can check
+- IEC 60529 — Degrees of protection provided by enclosures (IP Code)
+- IEC 62262 — Degrees of protection against mechanical impacts (IK Code)
+- IEC 62341 series — Organic light emitting diode (OLED) displays (context for LED module testing)
+- EN 55032 / EN 55035 — EMC emissions and immunity for multimedia equipment
+### Next step
+Tell us the mounting situation, the viewing distance range and the site's maximum ambient temperature. Those three answers determine the whole design; everything else follows from them.
+Request a quotation → contact our engineering team

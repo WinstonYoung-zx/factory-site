@@ -1,0 +1,78 @@
+CE Marking for Export into the EU: What Actually Happens, and Who Carries the Obligation
+========================================================================================
+
+"Send us your CE certificate" is one of the most frequently exchanged sentences in export procurement, and one of the least useful — because it rests on a misunderstanding.
+CE is not a certificate issued to you. It is a declaration you make, backed by a documented process. A factory does not "hold CE" any more than it holds honesty. What it can hold is the evidence that supports a specific declaration for a specific product against a specific legal requirement.
+That distinction determines everything downstream: who signs, who is liable, what the file must contain, and how long it takes before anything ships.
+### First question: which route applies?
+There is no single CE route. The applicable legal instrument depends on what the product is. For the kind of work we do, three family routes matter.
+Product familyTypical EU legal basisWhat it drives
+Load-bearing steel or aluminium structural components placed permanently in works | Construction Products Regulation (EU) 305/2011 with EN 1090-1 as harmonised standard | Factory Production Control certification by a notified body, Declaration of Performance, CE label |
+Non-structural units not covered by a harmonised construction standard — many freestanding street furniture items | Often outside CPR; then General Product Safety Regulation (EU) 2023/988 plus national requirements | Safety documentation, instructions in the destination language, traceability |
+Illuminated units, screens and powered equipment | LVD 2014/35/EU, EMC 2014/30/EU, RoHS 2011/65/EU; ErP requirements for light sources; RED if radio is included | Technical file, test evidence, EU declaration of conformity |
+This is why "do you have CE?" cannot be answered with a yes or no. The honest answer is always: for which product, under which instrument, declared by whom, for which market?
+### Second question: who is legally on the hook?
+This is the part most often discovered too late, and it is the single most valuable thing to settle in the first email.
+Under the CPR and the various product directives, responsibilities attach to defined economic operators: the manufacturer, an authorised representative established in the Union, the importer, and the distributor. For a manufacturer established outside the EU, the obligations of CE marking generally cannot be discharged alone — someone established in the Union carries part of the duty, and by default that is the importer.
+In practice that means:
+ArrangementReality
+Non-EU factory sells to an EU buyer who resells under their own name | The EU buyer may be treated as importer and often takes on manufacturer-level obligations |
+Non-EU factory appoints an EU authorised representative | Representative holds specific duties under mandate; factory retains product responsibility |
+Unit is designed and built for one identified works, by a party also responsible for installing it | A narrower route may be available under CPR for custom-made non-series products — confirm with your responsible designer, do not assume it applies |
+None of this is paperwork theatre. It determines who signs the Declaration of Performance, whose name appears on the label, who keeps the technical file for the required period, and who answers when an authority asks a question three years later.
+Ask your supplier two things: what exactly can they provide, and what exactly do they expect you to provide. Vague answers at this stage predict problems at customs.
+### What the evidence file actually contains
+For structural steel and aluminium under EN 1090-1, expect these to be requested:
+ElementNotes
+Declaration of Performance | Declares the essential characteristics stated in EN 1090-1, including tolerance class, execution class achieved, welding-related performance and durability method |
+Factory Production Control (FPC) documentation | The system describing how quality is maintained — not the same thing as ISO 9001, though they overlap |
+FPC certification by a notified body | Mandatory under EN 1090-1 for most cases; assessed at the factory |
+Welding coordination and qualification | Welding coordination per ISO 14731; WPS qualified by PQR; welders qualified per ISO 9606 — see our WPS and PQR guide |
+Material traceability | EN 10204 certificates and a marking transfer process through cutting and fabrication |
+Durability evidence | Coating specification and thickness records, salt spray testing per ISO 9227, or declared alternative protection method |
+The label itself | Prescribed content, applied to the product or accompanying documentation, in the language of the destination market |
+Note the interaction with execution class: the level of documentation and inspection follows the declared class. Declaring a higher class than your process supports is worse than declaring honestly, because the audit and any future claim will find the gap. We set out how class is selected in our EN 1090 execution class guide.
+### Realistic timelines
+This is where many schedules break. None of the following is a formality:
+StepRough reality
+Gap analysis against the applicable instrument | Depends how much documented process already exists |
+Building or upgrading FPC documentation | Usually the longest internal task, not the audit |
+Qualifying procedures and personnel (WPS/PQR, welder qualification) | Some steps involve testing that cannot be compressed |
+Notified body assessment and certification | Involves scheduling external auditors |
+Project-specific declaration and labelling | Fast once the system exists |
+Two honest conclusions follow. First: if your project needs a route that nobody has put in place yet, that is a programme item to start months before shipment, not a clause to add to the purchase order. Second: where the requirement arises infrequently, the route most projects actually use is to have it handled project by project, typically with testing performed by a laboratory nominated by the buyer, rather than maintaining certification that sits idle between orders.
+### Six mistakes that cost schedules
+1. Assuming ISO 9001 equals CE. It does not. ISO 9001 certifies a quality management system; it does not demonstrate conformity to a specific product instrument, and no notified body will accept it as a substitute for product-specific assessment.
+2. Accepting a test report as proof of conformity. A report states what was measured on the samples submitted. It is evidence within the file, not the file. Confirm the laboratory's status and that the samples represent your production.
+3. Using stale declared performance. Declarations reference characteristics determined at the time of assessment. Change your coating system, your material source or your welding process, and you have arguably changed the basis of the declaration. Record change, then re-assess.
+4. Confusing the two names on the documents. A test report naming one entity and a declaration signed by another raises questions immediately. Keep the chain coherent: who made it, who tested it, who declared it, who imported it.
+5. Ignoring language requirements. Instructions and safety information in the destination market's language are not optional extras.
+6. Declaring everything "NPD". Some characteristics may legitimately be declared as "no performance determined", where the instrument allows it. Declaring everything NPD tends to read as an incomplete technical file, and some contracting authorities reject it outright. Use it deliberately and sparingly.
+### How we handle this
+We are a Shanghai-based fabricator established in August 2023. Let us be precise about where we stand, because this is the question underneath most enquiries:
+- We do not claim certifications we cannot evidence. If a catalogue or website promises CE across a whole range from a non-EU manufacturer, be sceptical.
+- Destination-market approvals — EN 1090, CE, UL, SASO, ECAS, G-Mark and others — are arranged project by project, with testing performed by a laboratory you nominate. You keep control of the evidence.
+- What we supply on every structural order regardless of route is the documentation set that any route needs: EN 10204 material certificates, weld procedure and qualification records, coating thickness and salt spray testing per ISO 9227, dimensional inspection reports, and third-party pre-shipment inspection when you want it.
+- We will tell you in writing which obligations sit with us and which must sit with your EU entity. That sentence prevents more disputes than any other part of an enquiry.
+Two further practical notes. We did not exist a decade ago, so judge us on the evidence package rather than on tenure — it either holds up or it does not. And we do not send installation crews overseas; installation drawings, manuals and remote video support are what we provide, and stating that plainly in your bid documents avoids assumptions on site.
+### Frequently asked questions
+### Can you send me a CE certificate?
+No one can, in the sense usually meant. What exists is a declaration of conformity or performance, supported by documented evidence and — for structural components — notified body assessment. The useful question is what route applies to your product and who signs.
+### Who signs the declaration for our project?
+Usually the party established in the EU that places the product on the market: your entity, your authorised representative, or a party that takes on the manufacturer's obligations. Agree this in writing before production.
+### How long does the EN 1090 route take?
+Long enough to be a programme item. The slow part is usually building the documented production control system and completing qualifications, not booking the audit. Start the conversation before drawings are frozen, not after.
+### Is CE needed for illuminated light boxes and screens?
+Different instruments apply — typically electrical safety, electromagnetic compatibility and substance restrictions, plus any local requirements — rather than the construction products route. Confirm per product.
+### What if we only need this for one project?
+Then a project-specific route is usually more sensible than maintaining ongoing certification. Tell us early so the evidence can be built into the production schedule rather than bolted on.
+### Sources buyers can check
+- Regulation (EU) 305/2011 — Construction Products Regulation
+- EN 1090-1 — Execution of steel structures and aluminium structures, requirements for conformity assessment of structural components
+- Regulation (EU) 2023/988 — General Product Safety Regulation
+- Directive 2014/35/EU (LVD), 2014/30/EU (EMC), 2011/65/EU (RoHS)
+- ISO 14731 — Welding coordination, tasks and responsibilities
+- ISO 9606 — Qualification testing of welders
+### Next step
+Tell us the product, the destination market, and how you intend to place it on the market — as buyer, reseller under your own name, or through a representative. We will return a clear split of obligations and a documentation schedule.
+Request a quotation → contact our engineering team

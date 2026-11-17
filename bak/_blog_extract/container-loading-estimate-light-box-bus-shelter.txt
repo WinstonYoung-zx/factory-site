@@ -1,0 +1,122 @@
+How Many Units Fit in a 20'GP? Loading Estimates for Light Boxes and Bus Shelters
+=================================================================================
+
+When a buyer asks how many units ship in one container, they are rarely asking about curiosity. They are doing arithmetic on landed cost — and they are right to, because for products in this category freight is a large share of what actually arrives at site.
+Our minimum order quantity is one 20'GP container, which makes this question the natural next one. This article explains how the numbers are derived, why these particular products almost always run out of space rather than weight, and which packing decisions move the answer most.
+A caveat up front, and an important one: every figure below is illustrative, and — critically — units per container cannot be stated without knowing the unit dimensions. The same container holds several hundred compact signs or a single large shelter. Treat the numbers here as a method for estimating your own count, then ask for a packing plan for your specific order rather than relying on a rule of thumb.
+### Start from the container itself
+These are the commonly published internal dimensions. Individual containers vary slightly, and shipping lines publish their own figures.
+ContainerInternal lengthInternal widthInternal heightNominal volumeTypical payload
+20'GP | ~5,898 mm | ~2,352 mm | ~2,393 mm | ~33 m³ | ~28,000 kg |
+40'GP | ~12,032 mm | ~2,352 mm | ~2,393 mm | ~67 m³ | ~26,500 kg |
+40'HC | ~12,032 mm | ~2,352 mm | ~2,698 mm | ~76 m³ | ~26,500 kg |
+Note the door opening on a 20'GP is typically around 2,340 mm wide by 2,280 mm high — narrower and lower than the interior. Anything rigid and near full width has to pass that opening, and this single fact constrains a surprising number of packing plans.
+### The decisive fact: this is bulky cargo, not heavy cargo
+A light box or a shelter frame is mostly air. A 20'GP will carry around 28 tonnes, but it only holds 33 cubic metres.
+That mismatch explains everything about how these shipments behave:
+You will fill the container's volume while it is still carrying well under its weight limit.
+If this were steel plate or machinery, the opposite would be true — weight would be the binding constraint and volume the slack. For our products, volume is the scarce resource, which leads to a straightforward conclusion:
+Every cubic metre you can remove from each unit is worth roughly the same as cash, because it lets another unit into the same freight bill.
+This is why knock-down packing dominates in this industry, and why it should be settled during design rather than discovered at the loading bay.
+### Knock-down versus assembled
+Consider a mid-size shelter, say around 6 m long by 1.5 m deep by 2.8 m high.
+ApproachRough volumetric behaviourTypical outcome
+Shipped assembled | Each unit occupies its full external envelope; units cannot be stacked or nested | Very few units per container. Freight per unit is high |
+Shipped knocked down (KD) | Roof panels, glazing, columns and beams flat-pack and nest in shared crates | Materially more units per container |
+The precise multiple depends heavily on how well parts nest, but it is common for KD packing to change the unit freight cost by a large factor, not a rounding error. If you are comparing two quotes with different packing assumptions, you are not comparing like with like — check this before concluding that one supplier is expensive.
+The trade-off is real, though, and it belongs to your budget, not the supplier's: KD shipping shifts labour from our factory to your site. You will need assembly time, a crew, lifting equipment and clear instructions. Pre-assembled units reduce site work and skill requirements but cost more to ship. Decide based on your local labour cost and the availability of skilled installation crews.
+### Loading quantity is a function of unit size — there is no single number
+"How many units fit in a 20'GP?" has no fixed answer, and this is the single most important thing to understand before comparing freight quotations. A compact hanging sign and a full bus shelter differ by two orders of magnitude in packed volume, so any figure quoted without the unit size attached to it is meaningless.
+What you can do reliably is convert your unit dimensions into a packed volume, then divide it into the container.
+### The calculation
+Units per container ≈ usable container volume ÷ packed volume per unit × loading efficiency
+InputTypical valueWhere it comes from
+Usable volume, 20'GP | ~28 m³ | ~33 m³ nominal, less loading loss |
+Usable volume, 40'HC | ~64 m³ | ~76 m³ nominal, less loading loss |
+Loading efficiency | 0.75–0.85 | Higher for uniform cartons, lower for mixed crate sizes |
+Packed volume per unit | Product-specific | From your packing specification, not your drawing dimensions |
+### Turning drawing dimensions into packed volume
+The conversion depends on which kind of structure you are shipping:
+Structure typeExamplesHow packed volume behavesPractical rule
+Flat-panel units | Recessed light boxes, tension fabric boxes, hanging wayfinding signs | KD crates stack face to face, so per-unit volume collapses toward panel area × small allowance | Packed volume ≈ panel area × (unit depth + 80–120 mm allowance), shared across every unit in the stack |
+Frame structures | Bus shelters, canopy and post assemblies | Long members dictate orientation; void between parts adds up | Packed volume ≈ Σ component volumes × 1.3–1.5 |
+Assembled units | Anything shipped built up | Nothing nests or stacks | Packed volume ≈ external length × width × height |
+### Indicative quantities by packed volume
+The ranges below are deliberately wide. They exist to show how fast the count moves as the unit grows, not to be quoted back to us.
+Packed volume per unitWhat that typically corresponds to20'GP (~28 m³ usable)40'HC (~64 m³ usable)
+~0.05 m³ | Small hanging wayfinding sign, 1 m class, flat-packed | 400–500 | 900–1,100 |
+~0.15 m³ | Single-face light box around 1.2 × 1.8 m, KD | 130–160 | 300–380 |
+~0.5 m³ | Large pillar-wrapped light box, KD | 40–50 | 90–110 |
+~2 m³ | Bus shelter shipped as sub-assemblies, KD | 10–14 | 22–30 |
+~10 m³ | Bus shelter shipped upright, largely built | 2–3 | 5–6 |
+~25 m³ | Bus shelter shipped fully assembled | 1 | 2 |
+Read that table from top to bottom and the pattern is obvious: multiply packed volume by ten and you divide the unit count by roughly ten. Freight per unit moves in the opposite direction, which is why the product size decision and the packing decision should be made together, during design.
+### Three worked examples
+Example 1 — a mid-size recessed light box, KD versus assembled
+Unit size: L 2,000 × H 1,600 × D 150 mm.
+StepAssembledKnocked down
+Envelope | 2.0 × 1.6 × 0.15 = 0.48 m³ | — |
+Packed volume per unit | ~0.62 m³ with crate allowance | ~0.22 m³ as a share of a shared crate |
+20'GP estimate | 28 ÷ 0.62 ≈ 45 → ~40 units after efficiency | 28 ÷ 0.22 ≈ 127 → ~100 units after efficiency |
+Same product, same order, roughly a 2.5× swing in what one container carries.
+Example 2 — when the unit is larger than the box
+A pillar-wrapped light box may be specified up to around 3 m wide by 5 m high. The interior height of a 20'GP is about 2,393 mm and the door opening lower still. Anything taller than that cannot stand upright in the container no matter how much volume is free. It has to travel as a horizontal split (upper and lower sections joined on site) or flat-packed. This is purely a function of unit size, and it is why tall units are quoted as KD by default.
+Example 3 — when the unit is longer than the box
+Hanging LED structures can be specified from 3 m up to 12 m in length. Anything approaching or exceeding 5,898 mm leaves no margin at all along a 20'GP. Such units are produced as bolted sections, which restores margin and usually improves the count — but it adds a splice detail that has to be engineered and sealed, not improvised.
+Ask us for a packing plan with your actual unit dimensions and we will return the real count for both 20'GP and 40'HC, along with a loading diagram.
+### Six factors that change the count
+1. Unit external dimensions. The dominant variable. Packed volume scales with the panel area of a light box or the envelope of a shelter, and the unit count moves in inverse proportion. Two buyers quoting "one container" can be discussing forty units or four.
+2. Nesting geometry. Parts designed to stack inside one another beat parts that merely sit side by side. This is a design decision made weeks before shipping.
+3. The longest single part. A shelter may flat-pack beautifully, but if it has a rigid 5.8 m roof beam, that beam dictates orientation along the container's length. Anything approaching 5,898 mm leaves essentially no margin and can create loading problems.
+4. Packaging specification. Cartons on pallets, wooden crates, and returnable steel stillage each consume different amounts of space. We will recommend one based on your product and route.
+5. Protection level. Marine-grade packing means edge protection, vapour barriers and blocking. Under-specify and you save a little volume while risking salt-air corrosion and impact damage on a six-week voyage.
+6. Door opening limits. Already noted, but it bears repeating — a rigid item slightly wider than about 2,340 mm will not enter through the doors of a standard container no matter how much interior space remains.
+### The three items that catch buyers out
+These are not about volume, but they are the most common causes of unexpected cost and delay.
+### Lithium batteries change the shipping class
+If your shelters include solar storage, backup batteries, or any rechargeable cell, the consignment may become dangerous goods. Lithium batteries ship under UN3480 (batteries alone) or UN3481 (batteries packed with or contained in equipment).
+That typically means dangerous goods booking, a packing declaration, test summary documentation, and possible surcharges or stowage restrictions. It does not make the project unworkable, but it changes both cost and schedule, so it has to be declared during quotation.
+This is one reason we ask about power configuration early in our shelter configuration checklist rather than at order confirmation.
+### Solid wood packing needs ISPM 15
+Any solid wood packaging material — crates, pallets, dunnage — normally requires treatment to ISPM 15, evidenced by the stamped mark. Untreated wood is a frequent cause of quarantine rejection and forced re-packing at destination, which is expensive and slow. Engineered wood products such as plywood are generally treated differently, but you should confirm rather than assume.
+Confirm your packing specification with your freight forwarder before production, not after.
+### Demurrage and detention are calendar costs
+Container free time is limited. Once it expires, storage charges accrue daily. It sounds obvious, but container dwell caused by documentation errors or site unreadiness is one of the largest avoidable costs in this kind of project.
+### What to ask your supplier
+Request these before you commit, and request them in writing:
+ItemWhy it matters
+Packing plan / loading diagram | The only answer that reflects your actual order |
+Units per container, stated for each container type and each unit size | A single number across mixed sizes is meaningless; lets you compare freight across 20'GP and 40'HC properly |
+Net and gross weight per unit | Needed for customs and for your own handling plan |
+Packed dimensions per crate | Required if you are planning site access or storage |
+Packaging description | Determines whether ISPM 15 applies |
+Whether any consignment contains lithium batteries | Determines whether dangerous goods rules apply |
+Recommended spares shipped in the same container | Far cheaper to ship now than later |
+Sometimes a 40'HC costs meaningfully less per unit than 20'GP because the volume roughly doubles while the freight rate rises far less. It is always worth asking for the comparison. If you use the extra space, mixing related items — shelters with benches, bins and planters — into a single shipment spreads freight across the whole package.
+### How we handle shipment
+We manufacture light boxes, wayfinding structures, LED display framing, bus shelters and custom assemblies from Shanghai, exporting to Europe, the Middle East and the Americas.
+- Standard terms — production in 25 to 35 working days after deposit and drawing approval; payment by T/T with 30% deposit and 70% before shipment; minimum quantity one 20'GP container.
+- Packing — knocked-down as standard for volume orders, with a packing plan provided before despatch.
+- Installation — we do not send crews overseas. We supply installation drawings, a printed manual and remote video support during installation. Please state this in your own bid documents so nobody assumes otherwise.
+We would rather discuss these constraints during drawing than discover them at the loading bay — tell us your port, your site's labour situation and whether anything in the consignment carries a battery, and the rest usually follows without drama.
+### Frequently asked questions
+### How many units fit in a 20'GP?
+It depends primarily on the external size of each unit and secondarily on how it is packed. Convert your unit dimensions into a packed volume and divide it into roughly 28 m³ of usable space. Across our product range the answer spans from a hundred-plus compact signs down to one fully assembled shelter, so always state unit size when you ask.
+### Why is the minimum order one container?
+Because less-than-container-load shipping on bulky goods tends to cost disproportionately more per unit and carries higher damage risk.
+### Is knocked-down always better?
+Usually for freight, not always overall. It moves assembly labour to your site. Compare against your local labour cost and crew capability.
+### Can I mix products in one container?
+Yes, and it often improves unit economics. Ask us to combine related street furniture into one shipment.
+### Does weight ever matter?
+Rarely for these products, which is why the useful question is always "how many cubic metres," not "how many kilos."
+### What happens if my shelter has solar panels and batteries?
+Declare it early. Batteries may bring the consignment into dangerous goods rules, affecting cost, booking and transit time.
+### Sources buyers can check
+- ISO 668 — Series 1 freight containers, classification, dimensions and ratings
+- ISPM 15 — Regulation of wood packaging material in international trade
+- UN Model Regulations, UN3480 and UN3481 — Lithium battery transport requirements
+- Incoterms rules, published by the International Chamber of Commerce
+### Next step
+Send us product types, quantities and destination port, along with your preferred installation approach, and we will return a packing plan and a units-per-container figure for both 20'GP and 40'HC.
+Request a quotation → contact our engineering team

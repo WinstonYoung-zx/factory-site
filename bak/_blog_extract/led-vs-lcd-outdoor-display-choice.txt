@@ -1,0 +1,82 @@
+LED or LCD? Choosing the Right Screen Technology for Outdoor and Semi-Outdoor Sites
+===================================================================================
+
+"We need a screen for the concourse" is not yet a specification. The first decision underneath it is LED or LCD, and getting it wrong is expensive in both directions: overspending on an LED wall where an LCD kiosk would do, or installing a bright LCD panel that looks washed out and fails early.
+The two technologies are frequently quoted as interchangeable. They are not. They fail in different ways, at different times, for different reasons — and those differences map cleanly onto the physical conditions of your site.
+### The short answer
+Site conditionUsually the better choiceWhy
+Single-panel display up to around 98 inches, indoor or sheltered | LCD | Lower cost, finer image at close range, simpler service — replace the unit |
+Anything larger than about 100 inches | LED | LCD panels stop around that size; above it you are tiling panels and paying for visible bezels |
+Direct sun on the screen face | LED | Much higher output available, and no panel blackening risk from heat |
+Close reading distance (under about 3 m) | LCD | Fine text needs resolution per square metre that would be costly in LED |
+Long-distance viewing (over 8–10 m) | LED | Fine resolution is wasted at distance; size and brightness carry the message |
+Curved, column-wrapped or irregular shapes | LED | Modularity allows curvature and non-rectangular layouts |
+Tightest possible capital budget, sheltered location | LCD | Cheaper per installed unit for small sizes |
+Two of those rows do most of the work: size sets a hard boundary, and sunlight decides most of what remains.
+### 1. Size: the boundary is physical, not commercial
+LCD panels are manufactured in fixed sizes. In commercial digital signage, the practical ceiling for a single reliable panel is around 98 inches — roughly 2.2 m diagonal, about 1.2 m by 2.2 m. Beyond that you are no longer buying a display; you are buying a video wall, which means multiple panels, a controller, calibration, and bezels.
+Bezels are the visible seams between those panels. Even narrow-bezel video walls carry a few millimetres of interruption, and across a large installation the eye finds them immediately. For brand imagery or architectural video this is often unacceptable.
+LED has no such boundary. It is built from modular cabinets, so size is a design choice rather than a catalogue selection — which is why our hanging structures run from 3 m to 12 m in length and column-wrapped units follow the geometry of the column rather than fighting it. Curvature is possible because the modules follow the frame that we build.
+The practical consequence: once your requirement exceeds roughly 100 inches, the LED conversation stops being about whether LED is affordable and becomes about pitch and brightness, which is a different and more tractable discussion. We covered that selection logic in our outdoor LED specification guide.
+### 2. Sunlight: brightness plus a failure mode buyers do not expect
+Brightness matters, but the harder problem is thermal.
+LCD panels contain a liquid crystal layer with a clearing temperature. If the panel surface gets hot enough — direct sun on a dark enclosure can take it there quickly in summer — the crystal layer darkens irregularly. The term used in the trade is isotropic blackening or sun blemish: patches of discolouration that appear while hot and may or may not fully recover. It is not covered by warranty arguments about defects, because it is a specification issue, not a manufacturing one.
+High-brightness LCD panels typically deliver around 2,500 to 3,500 nits. That is plenty under canopy and in shaded concourses, and marginal in full afternoon sun. LED modules for genuinely sun-exposed positions routinely run 5,500 nits and above.
+Mitigation exists for LCD — air-gapped anti-reflective glass, active cooling, sun shields, orientation away from direct exposure — and each adds cost and depth. Ask yourself whether you are paying to make the wrong technology survive.
+ConditionLCD behaviourLED behaviour
+Shaded concourse, under canopy | Excellent | More than needed |
+Sheltered street elevation with reflected light | Good with high-brightness panel | Good |
+Direct sun for several hours daily | Requires active cooling, AR glass, careful orientation; residual risk of panel darkening | Designed for it; specify brightness and thermal design |
+Behind glass in a shopfront window | Commonly used, watch internal heat build-up | Rarely necessary |
+Whatever you choose, the enclosure decides whether the electronics survive. That is the subject of our IP rating guide for outdoor light boxes and displays — IP65 on the front face alone does not protect a cabinet whose rear sits in a warm, unventilated void.
+### 3. Viewing distance and content type
+Resolution that nobody can perceive is money spent with no return.
+The working rule we use is the same one from the LED guide: minimum comfortable viewing distance in metres is roughly the pixel pitch in millimetres. For LCD, pitch is effectively fixed and fine — you are always looking at millimetre-scale pixels on a 4K panel — so LCD wins wherever the audience stands close.
+Map it to content:
+ContentImplication
+Timetables, wayfinding text, price lists, dense graphics viewed within 2–3 m | LCD. Readability per unit cost is hard to beat |
+Brand video, promotional imagery, architectural content at 10 m plus | LED. Size and luminosity carry it; fine detail is invisible at that range |
+Mixed: headline visuals plus a legible sidebar of live data | Usually LED at coarser pitch for the whole face, or two separate zones considered separately |
+A useful test: stand where your quietest, closest viewer will stand and ask what the smallest text is that must be readable. If the answer is body text at two metres, you are specifying an LCD or a very fine-pitch LED with the budget that implies.
+### 4. Service life, spares and what happens in year four
+This is where the two technologies diverge most, and where the savings on an LCD purchase are sometimes reversed.
+LCD. The backlight gradually dims; manufacturers commonly state around 50,000 hours to half brightness, though this varies with heat, which is exactly why a hot site shortens it. When the panel fails it is usually replaced as a unit. The hidden risk is model obsolescence: consumer-derived large-format panels rotate on roughly annual cycles. In year four, the exact model may be unavailable, and a replacement of nominally the same size may not fit your enclosure or match colour.
+Practical response for LCD: buy one spare unit with the project, or specify available headroom in the enclosure for a different successor model, and accept that colour matching between old and new units in a tiled wall is rarely perfect.
+LED. Modules are individually replaceable, so a failure is a local repair rather than a whole-unit swap — provided you can reach it. That is why access is a design-stage decision, not an installation-stage one; see the access section of our LED specification guide. LED also usually quotes a longer nominal life, commonly around 100,000 hours, though here too heat is the dominant variable and the figure should always be tied to a stated brightness-retention point.
+Practical response for LED: buy spare modules and one spare driver per cabinet type in the first shipment. Doing this later means paying air freight and duties on a handful of small parts.
+### 5. Running cost
+Power is the recurring line most specifications ignore.
+LED consumption depends heavily on pitch, brightness setting and content — dark content on a dimmed screen draws far less than white content at full output. Rather than asking for a single wattage figure, ask for typical consumption at your specified brightness with representative content, plus the figure at night after automatic dimming. Then compare against alternatives on the same basis.
+Automatic dimming matters more than most buyers expect. A screen sized to beat the sun and then left at full output overnight wastes energy, generates complaints, and in a growing number of cities invites regulatory attention.
+LCD generally draws less per unit at small sizes, which reinforces its advantage there. Compare per square metre of display area rather than per screen, or the comparison is meaningless.
+### 6. Physical protection in public space
+Public-realm installations get hit. The relevant rating for mechanical impact resistance is IK, defined in IEC 62262, and it should be specified alongside IP — the two are different things and neither implies the other.
+RequirementTypical specification
+Water and dust ingress | IP65 for exposed faces; confirm whether rear access voids need their own rating |
+Mechanical impact | IK08 for normal public areas; IK10 where vandalism is expected |
+Front face glazing | Laminated or tempered with anti-reflective treatment where reflections compete with content |
+Security | Lockable enclosure, concealed fasteners, no external cable access |
+Glazing adds a second consideration: every layer between the viewer and the image costs contrast and adds reflection. This is why enclosures with AR glass and an air gap cost more but look markedly better in bright environments.
+### How we handle this
+We build both technologies, in Shanghai, for export to Europe, the Middle East and the Americas: LCD kiosks and recessed units in the 55 to 98 inch class, and LED structures that are wall-mounted, column-wrapped or suspended. Because we make the enclosures ourselves, the structure is configured to each site rather than adapted from a catalogue — which matters most where the interesting problems are: column geometry, sun orientation, rear access depth.
+Two things we would rather state plainly. We were established in August 2023, so judge us on the evidence package rather than on tenure — material certificates, weld procedure records, coating thickness and salt spray results per ISO 9227, and IP test reports per IEC 60529 are available with orders. And we do not claim certifications we cannot evidence: destination-market approvals such as EN 1090, CE, UL, SASO, ECAS or G-Mark are arranged project by project, with testing performed by a laboratory you nominate.
+For screens specifically, tell us three things in the first email and the rest of the specification usually follows quickly: where the sun falls at the worst hour, how far the closest viewer stands, and what you will do in year four when something fails.
+### Frequently asked questions
+### Can I use LCD outdoors in direct sun?
+Sometimes, with high-brightness panels, active cooling, air-gapped AR glass and careful orientation — but the thermal risk remains and the cost approaches LED. For anything sun-facing for several hours a day, LED is usually the safer specification.
+### Is a video wall the same as an LED wall?
+No. A video wall tiles multiple LCD panels, so bezels remain visible and the overall brightness is lower. It is a valid choice for sheltered indoor feature walls where cost matters.
+### Which costs less overall?
+Below roughly 100 inches in a sheltered location, LCD almost always. Above that, LED typically becomes competitive once you price the enclosure, structural support and servicing — though the honest answer requires comparing your actual site conditions.
+### How long should these last?
+Nominal figures — around 50,000 hours for LCD backlights to half brightness and around 100,000 hours for LED — are meaningful only when tied to retained brightness and to operating temperature. Ask what the stated figure refers to.
+### What spares should I buy now?
+For LED: spare modules and one spare driver per cabinet type. For LCD: at least one complete spare unit per model, bought with the original shipment. Both are far cheaper to ship inside your main container.
+### Sources buyers can check
+- IEC 60529 — Degrees of protection provided by enclosures (IP code)
+- IEC 62262 — Degrees of protection provided by enclosures against mechanical impacts (IK code)
+- IEC 62341 / manufacturer data — OLED and LCD lifetime measurement conventions
+- ISO 9227 — Corrosion tests in artificial atmospheres, salt spray tests
+### Next step
+Send us the installation environment, the closest viewing distance, and whether the screen face sees direct sun — and we will return a technology recommendation with the reasoning, not just a quotation.
+Request a quotation → contact our engineering team

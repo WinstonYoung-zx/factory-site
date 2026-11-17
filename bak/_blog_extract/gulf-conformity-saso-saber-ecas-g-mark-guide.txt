@@ -1,0 +1,90 @@
+Gulf Conformity for Gulf Projects: SASO, SABER, ECAS and G-Mark Explained
+=========================================================================
+
+Gulf projects are among the most rewarding and the most paperwork-sensitive we supply. The physical product is rarely the problem; what holds containers at port is almost always a certificate that should have been arranged before the vessel sailed.
+Four names come up in every Gulf enquiry — SASO, SABER, ECAS, G-Mark — and they are routinely used as if they were interchangeable. They are not even the same kind of thing. Sorting them out takes about fifteen minutes and prevents most clearance problems.
+### The four names, sorted
+NameWhat it actually isWhere it applies
+SASO | Saudi Standards, Metrology and Quality Organization — the standards body issuing Saudi technical regulations | Saudi Arabia |
+SABER | The Saudi online platform through which conformity certificates are applied for and issued | Saudi Arabia |
+ECAS | Emirates Conformity Assessment Scheme — the UAE conformity programme operated by the ministry responsible for industry | United Arab Emirates |
+G-Mark | The Gulf conformity mark, administered within the GCC framework through GSO (GCC Standardization Organization) | Across participating Gulf states, for regulated product categories |
+So: SASO is an organisation and SABER is its platform; ECAS is a national programme; G-Mark is a mark. Asking "do you have G-Mark?" mixes a category of question with a category of answer, which is why nobody gets a straight reply.
+### Start with the HS code, not with the regulation list
+The single most useful first step is mechanical:
+Establish the HS (customs) code for each line item, then check whether that code is on the destination's regulated list.
+If a product is not regulated under the applicable technical regulation, none of these schemes apply to it, and the whole conversation ends there. If it is regulated, the code also tells you which route applies. Doing this in the first week saves weeks later.
+For the product families we supply, the practical split is usually:
+FamilyTypical driver in the Gulf
+Structural steel or aluminium assemblies | Often outside the electrical regimes; governed by municipal or project specifications, authority approvals and structural requirements rather than consumer-product conformity schemes |
+Illuminated units and light boxes | Electrical safety and — importantly — energy efficiency labelling requirements come into play once the product contains light sources |
+LED displays and powered equipment | Electrical safety and electromagnetic compatibility; check whether the specific category falls under the Gulf low-voltage regime |
+Anything with radio modules or wireless control | Additional equipment-approval considerations apply, entirely separate from conformity marking |
+Where Equipment registration applies — low-voltage appliances and similar categories under the Gulf low-voltage technical regulation — a G-Mark route with a conformity certificate from an approved body may be required. That phrase "may be required" is deliberate: the regulated product list, and the scope within it, changes. Check it rather than remember it.
+### The distinction that matters most: product vs consignment
+European practice has trained buyers to think of certification as a property of the factory. Gulf practice is largely shipment-bound. This is the source of most schedule failures.
+Saudi Arabia (SABER) typically involves two stages:
+StageApplies toRoughly speaking
+Product Certificate of Conformity | The product type | Issued for a defined period following review of technical documentation and test reports |
+Shipment Certificate of Conformity | Each consignment | Applied for per shipment, referencing invoice, packing list and transport documents |
+The consequence: you can hold valid product documentation and still be unable to clear a shipment because nobody applied for the shipment certificate before arrival. It is administrative, not technical — which is exactly why it is easy to overlook and expensive to discover.
+UAE (ECAS) follows a similar logic of conformity assessment leading to clearance documentation, often requiring a locally registered importer to act as applicant.
+Make both stages explicit line items in your project programme with named owners. If nobody owns the consignment certificate date, assume it will be late.
+### Who can apply: the importer question
+Most Gulf conformity routes require an applicant established in the destination market, generally your importer or their authorised representative. Two design and commercial consequences follow early:
+- Decide who the applicant is before production. The applicant's details appear on documentation; changing them mid-project is re-submission, not a name swap.
+- Details must be consistent everywhere. The commercial invoice, packing list, certificate application, transport documents and product labelling should all agree on importer name, country of origin, item descriptions and quantities. Inconsistency is the most common reason a compliant shipment still gets held.
+### Documentation you will be asked for
+Expect a coherent pack rather than a single document. The following is typical, not exhaustive:
+ItemWhy it is requested
+Test reports from an accredited or approved laboratory | Evidence for the technical regulation concerned |
+Product technical file with drawings and bills of materials | Demonstrates what was actually tested matches what ships |
+Manufacturing quality documentation | Often requested as evidence of consistency — see the kinds of records described in our EU CE process article |
+Material evidence | EN 10204 certificates and traceability records |
+Photographs and identification marks of shipped units | Lets inspectors match documents to goods |
+Arabic labelling and instructions | A substantive requirement, not a translation afterthought; plan label artwork early |
+Invoice, packing list, bill of lading, certificate of origin | Referenced by the consignment certificate |
+One practical detail that repeatedly causes trouble: product identification marks. If units carry no serial or marking scheme, inspectors cannot match paperwork to goods, and a physical inspection may be triggered. Decide the marking format during drawing.
+### Where the cost actually lands
+It is rarely the fee. The costs that hurt are calendar costs:
+- Certificate timing relative to vessel schedule. A consignment certificate arriving after the ship costs days, not dollars.
+- Re-testing after a design change. A LED driver substitution, a different light source, or a coating change can invalidate the basis of a test report. Sequence a change control: tell us about substitutions before they happen, not after.
+- Demurrage. Container free time is short; delay compounds daily. We set out how container dwell becomes cost in our loading and freight guide.
+- Re-labelling at destination. Correcting labels after arrival is the most expensive way to fix a translation issue.
+Plan the conformity steps backwards from the vessel date.
+### Practical differences worth knowing before you specify
+Heat is a design input, not a finishing touch. Gulf ambient conditions involve high solar load and airborne dust and salt in coastal cities. What that means in practice:
+ConsiderationWhy it is different here
+Brightness and automatic dimming | High ambient light year round; but night dimming still required — see our LED selection guide |
+Sealing against dust | Ingress protection has to be considered together with drainage and filter maintenance |
+Corrosion protection | Coastal exposure raises the performance demanded of coating systems; marine-grade specification and evidence such as ISO 9227 testing becomes commercially relevant |
+Thermal management | Enclosures must reject heat while facing sun — discussed in the IP rating guide |
+Project approvals may exceed product conformity. Municipal authorities and developers frequently require their own structural and finish approvals over and above the national scheme. Structural packages often involve execution class considerations of the kind covered in our EN 1090 execution class guide even though EN 1090 is a European instrument — the engineering discipline transfers, and consultants in the region often ask for it.
+### How we handle this
+We supply fabricated assemblies, illuminated units and bus shelter structures from Shanghai to Gulf destinations, and we prefer to state plainly what we can and cannot do:
+- We do not claim certificates we cannot evidence. If a supplier promises SASO, ECAS or G-Mark coverage across a whole catalogue from outside the region, ask to see the certificate and its scope.
+- Conformity routes are handled project by project, usually with your nominated importer as applicant and testing at a laboratory you choose.
+- What we supply regardless of route is the underlying evidence: material certificates, weld documentation, coating thickness and salt spray testing, IP test reports, dimensional inspection records, and unit marking schemes agreed at drawing stage.
+- We do not send installation crews overseas. Installation drawings, manuals and remote video support are what we provide — please reflect that in your bid documents.
+- We were established in August 2023. Judge us on the evidence package, which either stands up or does not; we would rather you check it than take our word for it.
+If you can give us three things early — the HS codes you expect to use, who will act as importer, and your vessel date — the paperwork usually stops being interesting, which is the desired outcome.
+### Frequently asked questions
+### Is G-Mark the same as SASO?
+No. G-Mark is a Gulf-wide conformity mark applicable to regulated categories; SASO is Saudi Arabia's standards organisation and SABER is its certificate platform. They can both appear in one project, or neither may apply.
+### Do we need a product certificate and a shipment certificate?
+In Saudi Arabia, typically yes: one covering the product type and one per consignment. The shipment certificate is the one that is forgotten most often.
+### Can the factory apply on our behalf?
+Usually the applicant must be established in the destination market. Plan for your importer or their representative to be the applicant, and keep their details consistent across all documents.
+### How early should we start?
+As soon as the HS codes are known. Conformity sits alongside production, not after it; the slowest part is usually compiling test evidence, not submitting the application.
+### Does Arabic labelling have to be printed rather than stuck on?
+Assume it must be durable and integral to the product rather than applied later. Confirm the specific requirement for your category before artwork is finalised.
+### Sources buyers can check
+- SASO — Saudi Standards, Metrology and Quality Organization technical regulations and the SABER platform
+- GSO — GCC Standardization Organization, Gulf technical regulations including the low-voltage regime and the G-Mark framework
+- UAE Ministry of Industry and Advanced Technology — Emirates Conformity Assessment Scheme (ECAS)
+- IEC 60529 — Degrees of protection provided by enclosures (IP code)
+- ISO 9227 — Corrosion tests in artificial atmospheres, salt spray tests
+### Next step
+Send us your destination, expected HS codes, importer details and target vessel date. We will tell you which items in your scope are likely regulated, which are not, and what documentation we can prepare from our side.
+Request a quotation → contact our engineering team

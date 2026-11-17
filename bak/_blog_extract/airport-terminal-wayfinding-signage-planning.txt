@@ -1,0 +1,93 @@
+Airport Terminal Wayfinding: How to Plan Sign Structures That Still Work After Handover
+=======================================================================================
+
+Airport wayfinding is not sign making. It is crowd management using objects — and it is judged under the harshest conditions any signage faces: tired passengers, rolling luggage blocking sightlines, mixed languages, tight connection times, and an authority that will inspect the installation against a documents package before it lets you switch it on.
+Most wayfinding failures are not failures of manufacture. They are failures of planning: the sign is legible but placed where nobody looks, or it is beautiful but requires a security escort and a scaffold to change one panel. This article runs through the decisions that determine which of those you end up with.
+### Start from the passenger's decision points, not the product list
+Specifying by product type — "we need hanging signs, standing signs, totems" — produces installations that are tidy and ineffective. Specify by the moment when the passenger must decide something, then ask what they need to see at that moment and nothing else.
+Journey pointThe decision the passenger is makingWhat the sign has to supply
+Curbside / drop-off | Which door serves my airline | Large airline identifiers at distance, before luggage is lifted from the car |
+Entrance / hall | Am I in the right terminal | Terminal identity plus immediate directional confirmation |
+Check-in hall | Where is my row | High-level row identifiers readable across the hall, not at the queue |
+Security entrance | Do I belong in this queue | Eligibility and restriction messages, not directions |
+Airside retail spine | Which way to my gate | Frequent directional repetition; every junction gets one |
+Gate hold room | Is this my gate | Large flight information and gate identity at close range |
+Arrivals / baggage | Which belt, then which exit | Belt numbers above the crowd line, then onward transport modes |
+Landside interchange | Which mode, which platform | Mode symbols per ISO 7001 with multi-language support |
+Note what is missing from most tender documents: repetition. A directional sign that appears once is a sign that gets missed by anyone whose attention was on their boarding pass. Plan decision points, then budget for repeated delivery of the same message at each junction.
+### Legibility: three numbers worth arguing about
+### Reading distance sets the character height
+A working rule used widely in wayfinding design:
+Cap height in millimetres ≈ viewing distance in metres × 3.3
+That is roughly one inch of letter height per twenty-five feet, and it assumes good contrast and a clean background. So a sign read from 30 m wants around 100 mm cap height; an overhead directional panel read from 60 m across a retail spine wants around 200 mm.
+The important step is being explicit about where the decision happens. If passengers must commit to a direction thirty metres before the junction, then that is the reading distance — regardless of how close they eventually pass to the sign. This single clarification changes sign sizes more than any aesthetic preference.
+### Mounting height and the cone of vision
+Overhead signs installed above 2.3 m clear height (typical clear height for circulation areas) push themselves out of the comfort cone of vision for anyone at close range. The usual consequences:
+ProblemTypical cause
+Sign ignored at close range | Too high above eye level; viewer's natural sight cone is roughly 15° above horizontal |
+Sign read too late to act on | Installed directly above the junction rather than upstream of the decision point |
+Message lost in visual clutter | Competing retail signage at the same height and similar luminance |
+Placement upstream of the junction matters more than size. A smaller sign thirty metres before the decision beats a large one over the junction itself.
+### Contrast, not decoration
+Contrast is what makes text legible, and unlike colour preference it can be measured. Rather than specifying colour by name, specify the luminance contrast between text and background and hold it consistently across the whole scheme. Dark text on white, or white on dark, both work; mid-tone combinations — pale grey text on a lighter grey panel, or a branded colour pair chosen by a marketing department without a contrast test — are the usual reason passengers walk past a sign and ask staff instead.
+### Symbols before words
+International terminals rely on graphical symbols because passengers may share no language. The relevant references are ISO 7001 (registered public information symbols, including pictograms for transport modes and facilities) and ISO 7010 (safety signs) with national schemes such as the ADA Standards for Accessible Design in the United States. ISO 28564 covers guidance for public information systems as a whole.
+Three practical rules follow:
+- Use registered symbols rather than drawing your own. Familiarity is the property that makes a symbol work; a bespoke pictogram is a picture passengers must learn.
+- Text supports the symbol; it does not replace it. Where two languages are required, order them consistently and check that neither column wraps into an unreadable stack at your chosen character height.
+- Keep the symbol set small. A library of thirty symbols used consistently beats eighty used inconsistently.
+Where accessibility regulations apply, they govern both content and physical form — character proportions, contrast ratios, mounting heights and protruding-object limits. Confirm which rules apply in your jurisdiction during design, because they are expensive to retro-fit into manufactured units.
+### Materials and fire classification inside a terminal
+Interior finishes in transport buildings must demonstrate reaction to fire behaviour. In Europe this is expressed through EN 13501-1 Euroclass ratings (for example B-s1, d0, addressing flame spread, smoke production and flaming droplets — consult your designer for the class your authority requires). Panels, diffusers, fabrics and any internal cabling or insulation therefore cannot be selected on appearance alone.
+This shapes materials more than buyers expect:
+ElementSelection pressure
+Illuminated panel face | Polycarbonate or acrylic with a declared fire performance, not generic sheet |
+Tension fabric faces | Fabric with a documented fire classification, not any printable textile |
+Frame | Aluminium such as EN AW-6063 T5 is common; its advantage is low weight and clean extrusion geometry |
+Internal components | LED drivers and wiring need accessible ratings and serviceable routing |
+Outdoor approaches from the kerb to the terminal are a different problem again — weather sealing and corrosion take priority, which is where material choice interacts with both weight and lifetime cost. Our light box material comparison covers that trade-off in detail.
+Large cantilevered or ground-standing structures introduce a further layer: anything carrying significant load or spanning above people needs structural verification, and in Europe that conversation usually arrives at execution classes. See our EN 1090 execution class guide for how that scoping works.
+### Design for the fourth year, not the handover day
+Terminals change constantly: airlines move, retail units are re-let, security layouts are revised. Signs that cannot absorb change become a permanent operating cost.
+1. Make messages replaceable. For gate identifiers, belt numbers and tenant lists, use slides, cassettes or magnetic faces that can be swapped from the front without removing the unit from the ceiling.
+2. Understand what airside maintenance actually costs. Reaching a sign in a secure area usually means permits, escorts, night work inside a restricted window, and sometimes closing a lane. A sign that needs two escorted technicians costs a multiple of one that a single technician can open from a step ladder. This is a specification issue and it should be written into the tender.
+3. Expect either illumination or lighting-level interaction. Internally illuminated units typically run at highly uniform output — our standard hanging wayfinding units are specified above 800 lux with 3 mm polycarbonate faces and aluminium 6063-T5 frames — but the surrounding terminal lighting matters too. Glare on a glossy face will erase content faster than any lack of output. Specify anti-glare face treatment where bright lighting crosses the sign.
+4. Buy spares in the original shipment. A single replacement driver or face panel shipped later costs more than the part. See our container loading guide for why this is particularly true for bulky enclosures.
+5. Build a mock-up. One full-size illuminated unit installed temporarily on site settles more arguments about size, contrast and glare than any drawing. It is the cheapest insurance in the whole package.
+### What airport authorities will ask for
+Expect a submission package, usually reviewed before manufacture is authorised. Having it ready shortens the schedule considerably:
+DocumentWhy it is requested
+General arrangement and setting-out drawings | Confirms sightlines and clearances |
+Structural calculation for large or suspended units | Demonstrates capacity and suspension method suitability |
+Reaction-to-fire classification sheets per EN 13501-1 | Confirms interior material compliance |
+Photometric data and uniformity figures | Confirms legibility without glare complaints |
+IP rating evidence per IEC 60529 for kerbside units | Confirms weather performance |
+Ingress-proof suspension and safety secondary restraint details | Required for anything overhead in public circulation |
+Maintenance and spares schedule | Required by the operator before handover |
+Method statement for installation in live terminal | Required where work happens next to passengers |
+Ask early which of these your authority wants signed by a licensed engineer in the destination country. That requirement, if it exists, belongs in the first programme review — not in the week before shipment.
+### How we handle this
+We manufacture wayfinding structures, hanging directional units, illuminated light boxes and custom metal assemblies from Shanghai for export to Europe, the Middle East and the Americas. Thin, long-format hanging units are a particular strength — typically 1 to 3 m long by 330 to 500 mm high, with very shallow depth for ceiling-void constraints — but most terminal packages mix several families, and we build the whole set so detailing is consistent.
+We prefer to be direct about our position in the market. We were established in August 2023, so rather than relying on tenure, we supply an evidence package with every order: EN 10204 material certificates, weld documentation, coating thickness and salt spray testing per ISO 9227, and IP testing where applicable. And we do not claim certifications we cannot evidence — EN 1090, CE, UL, SASO, ECAS and G-Mark are handled project by project with testing at a laboratory you nominate. We also do not send installation crews overseas; we provide installation drawings, manuals and remote video support, which you should state in your own bid documents so no stage is left ambiguous.
+For airports specifically, the earliest useful conversation is about change: what will you need to alter in year four, and how will you get permission to reach it?
+### Frequently asked questions
+### Can one sign serve both languages?
+Yes, provided the character height survives the addition. Two-language layouts often need a longer panel than expected — decide this before fixing panel sizes.
+### How bright should an illuminated directional sign be?
+Specify uniformity and contrast rather than peak output. Output well above the ambient level creates glare, which reads worse than a dimmer, evenly lit face.
+### Are photoluminescent exit signs affected?
+Different requirement entirely. Safety signage follows safety standards and national fire codes; wayfinding is a separate system that must not conflict visually with it.
+### Who approves the final layout?
+Usually the airport's wayfinding consultant or operations team, supported by the authority's engineering reviewer. Getting both in one early meeting prevents most late redesign.
+### What is the most common mistake?
+Placing signs at the junction rather than upstream of the decision point, and specifying panels that cannot be changed without taking the unit down.
+### Sources buyers can check
+- ISO 7001 — Graphical symbols for public information; registered symbols
+- ISO 7010 — Graphical symbols, safety colours and safety signs
+- ISO 28564 — Public information guidance systems
+- ADA Standards for Accessible Design — character proportions, contrast and mounting requirements (United States)
+- EN 13501-1 — Fire classification of construction products and building elements
+- IEC 60529 — Degrees of protection provided by enclosures (IP code)
+### Next step
+Send us your terminal drawings with passenger routes marked, along with the change scenarios you expect over five years, and we will return a structural and illumination proposal that accounts for both.
+Request a quotation → contact our engineering team
